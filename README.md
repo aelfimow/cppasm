@@ -1,2 +1,2 @@
 # cppasm
-A set of C++ classes experimenting with assembly source code generation
+A library of C++ classes for experimenting with assembly source code generation for x86 CPUs.

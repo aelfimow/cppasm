@@ -33,6 +33,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_ADC.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ADCX.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MONITOR.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MOV.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_XOR.o
 CPPASM_OBJ += ${OBJDIR}/Sreg.o
 CPPASM_OBJ += ${OBJDIR}/m8.o
 CPPASM_OBJ += ${OBJDIR}/m16.o
@@ -69,6 +70,7 @@ all:
 	$(CXX) -c Instruction_ADCX.cpp -o ${OBJDIR}/Instruction_ADCX.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MONITOR.cpp -o ${OBJDIR}/Instruction_MONITOR.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
+	$(CXX) -c Instruction_XOR.cpp -o ${OBJDIR}/Instruction_XOR.o ${CXXFLAGS}
 	$(CXX) -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	$(CXX) -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	$(CXX) -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}

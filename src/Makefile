@@ -11,7 +11,7 @@ ASFLAGS32 += -march=corei7
 ASFLAGS64  = --64
 ASFLAGS64 += -march=corei7
 
-OBJDIR = .
+OBJDIR = ./obj
 
 CPPASM_OBJ  = ${OBJDIR}/r8.o
 CPPASM_OBJ += ${OBJDIR}/r16.o

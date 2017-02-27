@@ -155,3 +155,5 @@ Instruction_MONITOR MONITOR(asmout);
 Instruction_MOV MOV(asmout);
 Instruction_RET RET(asmout);
 Instruction_XOR XOR(asmout);
+
+Keyword_label label;

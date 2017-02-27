@@ -30,6 +30,7 @@
 #include "m64.h"
 #include "cr.h"
 #include "dr.h"
+#include "label.h"
 #include "section.h"
 
 #include "Instruction_AAA.h"
@@ -197,5 +198,7 @@ extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
 extern Instruction_RET RET;
 extern Instruction_XOR XOR;
+
+extern Keyword_label label;
 
 #endif

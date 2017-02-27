@@ -3,19 +3,19 @@
 #else
 #define LABEL_H
 
-class label
+class Keyword_label
 {
     public:
-        label();
+        Keyword_label();
 
-        label(const label &instance) = delete;
-        label(const label &&instance) = delete;
-        label &operator=(const label &instance) = delete;
-        label &operator=(const label &&instance) = delete;
+        Keyword_label(const Keyword_label &instance) = delete;
+        Keyword_label(const Keyword_label &&instance) = delete;
+        Keyword_label &operator=(const Keyword_label &instance) = delete;
+        Keyword_label &operator=(const Keyword_label &&instance) = delete;
 
         void operator()(const std::string &name);
 
-        ~label();
+        ~Keyword_label();
 };
 
 #endif

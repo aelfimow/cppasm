@@ -2,15 +2,15 @@
 #include <string>
 #include "label.h"
 
-label::label()
+Keyword_label::Keyword_label()
 {
 }
 
-void label::operator()(const std::string &name)
+void Keyword_label::operator()(const std::string &name)
 {
     std::cout << name << ":" << std::endl;
 }
 
-label::~label()
+Keyword_label::~Keyword_label()
 {
 }

@@ -46,12 +46,14 @@ CPPASM_OBJ += ${OBJDIR}/disp16.o
 CPPASM_OBJ += ${OBJDIR}/disp32.o
 CPPASM_OBJ += ${OBJDIR}/cr.o
 CPPASM_OBJ += ${OBJDIR}/dr.o
+CPPASM_OBJ += ${OBJDIR}/label.o
 CPPASM_OBJ += ${OBJDIR}/section.o
 CPPASM_OBJ += ${OBJDIR}/cppasm.o
 CPPASM_OBJ += ${OBJDIR}/asmstream.o
 
 all:
 	$(CXX) -c asmstream.cpp -o ${OBJDIR}/asmstream.o ${CXXFLAGS}
+	$(CXX) -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}
 	$(CXX) -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	$(CXX) -c cr.cpp -o ${OBJDIR}/cr.o ${CXXFLAGS}
 	$(CXX) -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}

@@ -38,8 +38,10 @@
 #include "Instruction_AAS.h"
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
+#include "Instruction_CPUID.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
+#include "Instruction_XOR.h"
 
 extern asmstream asmout;
 
@@ -189,7 +191,9 @@ extern Instruction_AAM AAM;
 extern Instruction_AAS AAS;
 extern Instruction_ADC ADC;
 extern Instruction_ADCX ADCX;
+extern Instruction_CPUID CPUID;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
+extern Instruction_XOR XOR;
 
 #endif

@@ -41,6 +41,7 @@
 #include "Instruction_CPUID.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
+#include "Instruction_RET.h"
 #include "Instruction_XOR.h"
 
 extern asmstream asmout;
@@ -194,6 +195,7 @@ extern Instruction_ADCX ADCX;
 extern Instruction_CPUID CPUID;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
+extern Instruction_RET RET;
 extern Instruction_XOR XOR;
 
 #endif

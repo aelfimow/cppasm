@@ -153,4 +153,5 @@ Instruction_ADCX ADCX(asmout);
 Instruction_CPUID CPUID(asmout);
 Instruction_MONITOR MONITOR(asmout);
 Instruction_MOV MOV(asmout);
+Instruction_RET RET(asmout);
 Instruction_XOR XOR(asmout);

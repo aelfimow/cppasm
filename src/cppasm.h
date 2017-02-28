@@ -44,6 +44,9 @@
 #include "Instruction_CPUID.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
+#include "Instruction_PUSH.h"
+#include "Instruction_PUSHA.h"
+#include "Instruction_PUSHF.h"
 #include "Instruction_RET.h"
 #include "Instruction_XOR.h"
 
@@ -198,6 +201,10 @@ extern Instruction_ADCX ADCX;
 extern Instruction_CPUID CPUID;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
+extern Instruction_PUSH PUSH;
+extern Instruction_PUSHA PUSHA;
+extern Instruction_PUSHA PUSHAD; // Same as PUSHA
+extern Instruction_PUSHF PUSHF;
 extern Instruction_RET RET;
 extern Instruction_XOR XOR;
 

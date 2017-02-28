@@ -34,6 +34,9 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_ADCX.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_CPUID.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MONITOR.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MOV.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_PUSH.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_PUSHA.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_PUSHF.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_RET.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_XOR.o
 CPPASM_OBJ += ${OBJDIR}/Sreg.o
@@ -79,6 +82,9 @@ all:
 	$(CXX) -c Instruction_CPUID.cpp -o ${OBJDIR}/Instruction_CPUID.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MONITOR.cpp -o ${OBJDIR}/Instruction_MONITOR.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
+	$(CXX) -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}
+	$(CXX) -c Instruction_PUSHA.cpp -o ${OBJDIR}/Instruction_PUSHA.o ${CXXFLAGS}
+	$(CXX) -c Instruction_PUSHF.cpp -o ${OBJDIR}/Instruction_PUSHF.o ${CXXFLAGS}
 	$(CXX) -c Instruction_RET.cpp -o ${OBJDIR}/Instruction_RET.o ${CXXFLAGS}
 	$(CXX) -c Instruction_XOR.cpp -o ${OBJDIR}/Instruction_XOR.o ${CXXFLAGS}
 	$(CXX) -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}

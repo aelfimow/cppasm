@@ -156,5 +156,6 @@ Instruction_MOV MOV(asmout);
 Instruction_RET RET(asmout);
 Instruction_XOR XOR(asmout);
 
+Keyword_comment comment;
 Keyword_global global;
 Keyword_label label;

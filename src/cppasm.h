@@ -30,6 +30,7 @@
 #include "m64.h"
 #include "cr.h"
 #include "dr.h"
+#include "comment.h"
 #include "global.h"
 #include "label.h"
 #include "section.h"
@@ -200,6 +201,7 @@ extern Instruction_MOV MOV;
 extern Instruction_RET RET;
 extern Instruction_XOR XOR;
 
+extern Keyword_comment comment;
 extern Keyword_global global;
 extern Keyword_label label;
 

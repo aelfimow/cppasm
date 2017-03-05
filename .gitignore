@@ -1,1 +1,4 @@
 src/obj/*.o
+examples/cpuid/*.o
+examples/cpuid/*.exe
+examples/cpuid/result/*.o

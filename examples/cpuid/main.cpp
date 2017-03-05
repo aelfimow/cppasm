@@ -20,21 +20,22 @@ try
 
     label(execute_cpuid);
 
-    PUSH(RBX);      // this register must be saved (and restored later)
+    r64 &reg_to_save = RBX;
+    PUSH(reg_to_save);  // this register must be saved (and restored later)
 
     MOV(EAX, ECX);  // cmd1
     MOV(ECX, EDX);  // cmd2
 
     CPUID();
 
-    /*
-    mov %eax, (%r8)     # save result in p_output
-    mov %ebx, 4(%r8)
-    mov %ecx, 8(%r8)
-    mov %edx, 12(%r8)
+    m64 buffer(R8);
 
-    POP(RBX);       // restore register
-    */
+    MOV(buffer, RAX);
+    MOV(buffer, RBX);
+    MOV(buffer, RCX);
+    MOV(buffer, RDX);
+
+    POP(reg_to_save);   // restore register
 
     RET();
 

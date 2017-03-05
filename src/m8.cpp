@@ -4,6 +4,13 @@
 #include "m.h"
 #include "m8.h"
 
+m8::m8(const reg &base) :
+    m(),
+    m_str { "" }
+{
+    m_str = "(" + base.name() + ")";
+}
+
 m8::m8(const reg &base, const reg &index) :
     m(),
     m_str { "" }

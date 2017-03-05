@@ -6,6 +6,7 @@
 class m64 : public m
 {
     public:
+        explicit m64(const reg &base);
         explicit m64(const reg &base, const reg &index);
         explicit m64(const reg &base, const reg &index, size_t scale);
 

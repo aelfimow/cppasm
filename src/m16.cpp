@@ -4,6 +4,13 @@
 #include "m.h"
 #include "m16.h"
 
+m16::m16(const reg &base) :
+    m(),
+    m_str { "" }
+{
+    m_str = "(" + base.name() + ")";
+}
+
 m16::m16(const reg &base, const reg &index) :
     m(),
     m_str { "" }

@@ -4,6 +4,13 @@
 #include "m.h"
 #include "m64.h"
 
+m64::m64(const reg &base) :
+    m(),
+    m_str { "" }
+{
+    m_str = "(" + base.name() + ")";
+}
+
 m64::m64(const reg &base, const reg &index) :
     m(),
     m_str { "" }

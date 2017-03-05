@@ -6,6 +6,7 @@
 class m16 : public m
 {
     public:
+        explicit m16(const reg &base);
         explicit m16(const reg &base, const reg &index);
         explicit m16(const reg &base, const reg &index, size_t scale);
 

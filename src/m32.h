@@ -6,6 +6,7 @@
 class m32 : public m
 {
     public:
+        explicit m32(const reg &base);
         explicit m32(const reg &base, const reg &index);
         explicit m32(const reg &base, const reg &index, size_t scale);
 

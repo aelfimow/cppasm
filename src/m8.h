@@ -6,6 +6,7 @@
 class m8 : public m
 {
     public:
+        explicit m8(const reg &base);
         explicit m8(const reg &base, const reg &index);
         explicit m8(const reg &base, const reg &index, size_t scale);
 

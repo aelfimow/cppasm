@@ -4,6 +4,13 @@
 #include "m.h"
 #include "m32.h"
 
+m32::m32(const reg &base) :
+    m(),
+    m_str { "" }
+{
+    m_str = "(" + base.name() + ")";
+}
+
 m32::m32(const reg &base, const reg &index) :
     m(),
     m_str { "" }

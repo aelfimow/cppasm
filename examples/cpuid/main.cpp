@@ -28,11 +28,19 @@ try
 
     CPUID();
 
-    m64 buffer(R8);
+    r64 &buffer_reg = R8;
+    imm8 step { 8 };
+    m64 buffer(buffer_reg);
 
     MOV(buffer, RAX);
+    ADD(buffer_reg, step);
+
     MOV(buffer, RBX);
+    ADD(buffer_reg, step);
+
     MOV(buffer, RCX);
+    ADD(buffer_reg, step);
+
     MOV(buffer, RDX);
 
     POP(reg_to_save);   // restore register

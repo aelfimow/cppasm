@@ -6,8 +6,11 @@ execute_cpuid:
 	mov %edx, %ecx
 	cpuid
 	mov %rax, (%r8)
+	add $0x08, %r8
 	mov %rbx, (%r8)
+	add $0x08, %r8
 	mov %rcx, (%r8)
+	add $0x08, %r8
 	mov %rdx, (%r8)
 	pop %rbx
 	retq

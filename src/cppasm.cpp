@@ -153,6 +153,7 @@ Instruction_ADCX ADCX(asmout);
 Instruction_CPUID CPUID(asmout);
 Instruction_MONITOR MONITOR(asmout);
 Instruction_MOV MOV(asmout);
+Instruction_POP POP(asmout);
 Instruction_PUSH PUSH(asmout);
 Instruction_PUSHA PUSHA(asmout);
 Instruction_PUSHA PUSHAD(asmout);

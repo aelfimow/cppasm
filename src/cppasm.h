@@ -41,6 +41,7 @@
 #include "Instruction_AAS.h"
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
+#include "Instruction_ADD.h"
 #include "Instruction_CPUID.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
@@ -199,6 +200,7 @@ extern Instruction_AAM AAM;
 extern Instruction_AAS AAS;
 extern Instruction_ADC ADC;
 extern Instruction_ADCX ADCX;
+extern Instruction_ADD ADD;
 extern Instruction_CPUID CPUID;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;

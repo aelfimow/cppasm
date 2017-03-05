@@ -8,7 +8,7 @@ Keyword_global::Keyword_global()
 
 void Keyword_global::operator()(const std::string &name)
 {
-    std::cout << "global " << name << std::endl;
+    std::cout << ".global " << name << std::endl;
 }
 
 Keyword_global::~Keyword_global()

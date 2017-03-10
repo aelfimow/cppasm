@@ -12,6 +12,10 @@ try
 
     // Function name to be generated
     const std::string execute_cpuid { "execute_cpuid" };
+    comment("void execute_cpuid(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output)");
+    comment("cmd1 is in %ecx");
+    comment("cmd2 is in %edx");
+    comment("p_output is in %r8");
 
     global(execute_cpuid);
 

@@ -50,6 +50,7 @@
 #include "Instruction_PUSHA.h"
 #include "Instruction_PUSHF.h"
 #include "Instruction_RET.h"
+#include "Instruction_Shift.h"
 #include "Instruction_STC.h"
 #include "Instruction_STD.h"
 #include "Instruction_STI.h"
@@ -213,6 +214,10 @@ extern Instruction_PUSHA PUSHA;
 extern Instruction_PUSHA PUSHAD; // Same as PUSHA
 extern Instruction_PUSHF PUSHF;
 extern Instruction_RET RET;
+extern Instruction_Shift SAL;
+extern Instruction_Shift SAR;
+extern Instruction_Shift SHL;
+extern Instruction_Shift SHR;
 extern Instruction_STC STC;
 extern Instruction_STD STD;
 extern Instruction_STI STI;

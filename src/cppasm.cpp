@@ -160,6 +160,9 @@ Instruction_PUSHA PUSHA(asmout);
 Instruction_PUSHA PUSHAD(asmout);
 Instruction_PUSHF PUSHF(asmout);
 Instruction_RET RET(asmout);
+Instruction_STC STC(asmout);
+Instruction_STD STD(asmout);
+Instruction_STI STI(asmout);
 Instruction_XOR XOR(asmout);
 
 Keyword_comment comment;

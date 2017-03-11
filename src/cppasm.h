@@ -50,6 +50,9 @@
 #include "Instruction_PUSHA.h"
 #include "Instruction_PUSHF.h"
 #include "Instruction_RET.h"
+#include "Instruction_STC.h"
+#include "Instruction_STD.h"
+#include "Instruction_STI.h"
 #include "Instruction_XOR.h"
 
 extern asmstream asmout;
@@ -210,6 +213,9 @@ extern Instruction_PUSHA PUSHA;
 extern Instruction_PUSHA PUSHAD; // Same as PUSHA
 extern Instruction_PUSHF PUSHF;
 extern Instruction_RET RET;
+extern Instruction_STC STC;
+extern Instruction_STD STD;
+extern Instruction_STI STI;
 extern Instruction_XOR XOR;
 
 extern Keyword_comment comment;

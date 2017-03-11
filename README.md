@@ -1,6 +1,6 @@
 # cppasm
 A library of C++ classes for experimenting with assembly source code
-generation for x86 CPUs in AT&T.
+generation for x86 CPUs (in AT&T syntax).
 
 The idea behind this library is to encapsulate every instruction and CPU register
 in its own class. Every class name can be found in the Intel's developer's manuals, e.g.

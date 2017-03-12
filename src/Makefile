@@ -25,6 +25,7 @@ CPPASM_OBJ += ${OBJDIR}/imm16.o
 CPPASM_OBJ += ${OBJDIR}/imm32.o
 CPPASM_OBJ += ${OBJDIR}/imm64.o
 CPPASM_OBJ += ${OBJDIR}/Instruction.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_NoOperands.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAA.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAD.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAM.o
@@ -80,6 +81,7 @@ all:
 	$(CXX) -c m64.cpp -o ${OBJDIR}/m64.o ${CXXFLAGS}
 	$(CXX) -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
 	$(CXX) -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
+	$(CXX) -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAA.cpp -o ${OBJDIR}/Instruction_AAA.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAD.cpp -o ${OBJDIR}/Instruction_AAD.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAM.cpp -o ${OBJDIR}/Instruction_AAM.o ${CXXFLAGS}

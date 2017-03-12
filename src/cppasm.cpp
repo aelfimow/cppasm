@@ -144,7 +144,7 @@ dr DR5("%dr5");
 dr DR6("%dr6");
 dr DR7("%dr7");
 
-Instruction_AAA AAA { asmout };
+Instruction_NoOperands AAA { asmout, "aaa" };
 Instruction_AAD AAD { asmout };
 Instruction_AAM AAM { asmout };
 Instruction_AAS AAS { asmout };

@@ -43,6 +43,7 @@
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
 #include "Instruction_CPUID.h"
+#include "Instruction_Jcc.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
 #include "Instruction_POP.h"
@@ -206,6 +207,39 @@ extern Instruction_ADC ADC;
 extern Instruction_ADCX ADCX;
 extern Instruction_ADD ADD;
 extern Instruction_CPUID CPUID;
+extern Instruction_Jcc JA;
+extern Instruction_Jcc JAE;
+extern Instruction_Jcc JB;
+extern Instruction_Jcc JBE;
+extern Instruction_Jcc JC;
+extern Instruction_Jcc JCXZ;
+extern Instruction_Jcc JECXZ;
+extern Instruction_Jcc JRCXZ;
+extern Instruction_Jcc JE;
+extern Instruction_Jcc JG;
+extern Instruction_Jcc JGE;
+extern Instruction_Jcc JL;
+extern Instruction_Jcc JLE;
+extern Instruction_Jcc JNA;
+extern Instruction_Jcc JNAE;
+extern Instruction_Jcc JNB;
+extern Instruction_Jcc JNBE;
+extern Instruction_Jcc JNC;
+extern Instruction_Jcc JNE;
+extern Instruction_Jcc JNG;
+extern Instruction_Jcc JNGE;
+extern Instruction_Jcc JNL;
+extern Instruction_Jcc JNLE;
+extern Instruction_Jcc JNO;
+extern Instruction_Jcc JNP;
+extern Instruction_Jcc JNS;
+extern Instruction_Jcc JNZ;
+extern Instruction_Jcc JO;
+extern Instruction_Jcc JP;
+extern Instruction_Jcc JPE;
+extern Instruction_Jcc JPO;
+extern Instruction_Jcc JS;
+extern Instruction_Jcc JZ;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
 extern Instruction_POP POP;

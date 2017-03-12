@@ -35,6 +35,7 @@
 #include "label.h"
 #include "section.h"
 
+#include "Instruction_NoOperands.h"
 #include "Instruction_AAA.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
@@ -207,6 +208,9 @@ extern Instruction_ADC ADC;
 extern Instruction_ADCX ADCX;
 extern Instruction_ADD ADD;
 extern Instruction_CPUID CPUID;
+extern Instruction_NoOperands FNOP;
+extern Instruction_NoOperands FTST;
+extern Instruction_NoOperands HLT;
 extern Instruction_Jcc JA;
 extern Instruction_Jcc JAE;
 extern Instruction_Jcc JB;

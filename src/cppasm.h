@@ -38,7 +38,6 @@
 #include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
-#include "Instruction_AAS.h"
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
@@ -202,7 +201,7 @@ extern dr DR7;
 extern Instruction_NoOperands AAA;
 extern Instruction_AAD AAD;
 extern Instruction_AAM AAM;
-extern Instruction_AAS AAS;
+extern Instruction_NoOperands AAS;
 extern Instruction_ADC ADC;
 extern Instruction_ADCX ADCX;
 extern Instruction_ADD ADD;

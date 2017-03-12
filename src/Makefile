@@ -28,7 +28,6 @@ CPPASM_OBJ += ${OBJDIR}/Instruction.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_NoOperands.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAD.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAM.o
-CPPASM_OBJ += ${OBJDIR}/Instruction_AAS.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ADC.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ADCX.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ADD.o
@@ -83,7 +82,6 @@ all:
 	$(CXX) -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAD.cpp -o ${OBJDIR}/Instruction_AAD.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAM.cpp -o ${OBJDIR}/Instruction_AAM.o ${CXXFLAGS}
-	$(CXX) -c Instruction_AAS.cpp -o ${OBJDIR}/Instruction_AAS.o ${CXXFLAGS}
 	$(CXX) -c Instruction_ADC.cpp -o ${OBJDIR}/Instruction_ADC.o ${CXXFLAGS}
 	$(CXX) -c Instruction_ADCX.cpp -o ${OBJDIR}/Instruction_ADCX.o ${CXXFLAGS}
 	$(CXX) -c Instruction_ADD.cpp -o ${OBJDIR}/Instruction_ADD.o ${CXXFLAGS}

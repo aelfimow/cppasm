@@ -51,9 +51,6 @@
 #include "Instruction_PUSHF.h"
 #include "Instruction_RET.h"
 #include "Instruction_Shift.h"
-#include "Instruction_STC.h"
-#include "Instruction_STD.h"
-#include "Instruction_STI.h"
 #include "Instruction_XOR.h"
 
 extern asmstream asmout;
@@ -260,9 +257,9 @@ extern Instruction_Shift SAL;
 extern Instruction_Shift SAR;
 extern Instruction_Shift SHL;
 extern Instruction_Shift SHR;
-extern Instruction_STC STC;
-extern Instruction_STD STD;
-extern Instruction_STI STI;
+extern Instruction_NoOperands STC;
+extern Instruction_NoOperands STD;
+extern Instruction_NoOperands STI;
 extern Instruction_XOR XOR;
 
 extern Keyword_comment comment;

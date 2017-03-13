@@ -206,9 +206,9 @@ Instruction_Shift SAL { asmout, "sal" };
 Instruction_Shift SAR { asmout, "sar" };
 Instruction_Shift SHL { asmout, "shl" };
 Instruction_Shift SHR { asmout, "shr" };
-Instruction_STC STC { asmout };
-Instruction_STD STD { asmout };
-Instruction_STI STI { asmout };
+Instruction_NoOperands STC { asmout, "stc" };
+Instruction_NoOperands STD { asmout, "std" };
+Instruction_NoOperands STI { asmout, "sti" };
 Instruction_XOR XOR { asmout };
 
 Keyword_comment comment;

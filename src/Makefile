@@ -5,12 +5,6 @@ CXXFLAGS += -pedantic
 CXXFLAGS += -Weffc++
 CXXFLAGS += -std=c++11
 
-ASFLAGS32  = --32
-ASFLAGS32 += -march=corei7
-
-ASFLAGS64  = --64
-ASFLAGS64 += -march=corei7
-
 OBJDIR = ./obj
 
 CPPASM_OBJ  = ${OBJDIR}/r8.o
@@ -106,17 +100,3 @@ all:
 	$(CXX) -c imm64.cpp -o ${OBJDIR}/imm64.o ${CXXFLAGS}
 	$(CXX) -c cppasm.cpp -o ${OBJDIR}/cppasm.o ${CXXFLAGS}
 	@echo "No errors"
-
-.PHONY: test32
-test32:
-	$(CXX) -c test32.cpp -o test32/test32.o ${CXXFLAGS}
-	$(CXX) test32/test32.o ${CPPASM_OBJ} -o test32/test32.exe ${CXXFLAGS}
-	.\\test32\\test32.exe > test32/test32.s
-	$(AS) test32/test32.s ${ASFLAGS32} -o test32/test32.o
-
-.PHONY: test64
-test64:
-	$(CXX) -c test64.cpp -o test64/test64.o ${CXXFLAGS}
-	$(CXX) test64/test64.o ${CPPASM_OBJ} -o test64/test64.exe ${CXXFLAGS}
-	.\\test64\\test64.exe > test64/test64.s
-	$(AS) test64/test64.s ${ASFLAGS64} -o test64/test64.o

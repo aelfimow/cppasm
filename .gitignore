@@ -2,3 +2,11 @@ src/obj/*.o
 examples/cpuid/*.o
 examples/cpuid/*.exe
 examples/cpuid/result/*.o
+src/tmp.o
+src/tmp.s
+tests/output/test32.o
+tests/output/test32.s
+tests/output/test64.o
+tests/output/test64.s
+tests/test32.exe
+tests/test64.exe

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2C8CE025-D5FB-4DF9-B138-3C45871E9D6C}</ProjectGuid>
+    <RootNamespace>test64</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>..\..\src;$(VC_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\asmstream.cpp" />
+    <ClCompile Include="..\..\src\comment.cpp" />
+    <ClCompile Include="..\..\src\cppasm.cpp" />
+    <ClCompile Include="..\..\src\cr.cpp" />
+    <ClCompile Include="..\..\src\disp16.cpp" />
+    <ClCompile Include="..\..\src\disp32.cpp" />
+    <ClCompile Include="..\..\src\disp8.cpp" />
+    <ClCompile Include="..\..\src\dr.cpp" />
+    <ClCompile Include="..\..\src\global.cpp" />
+    <ClCompile Include="..\..\src\imm16.cpp" />
+    <ClCompile Include="..\..\src\imm32.cpp" />
+    <ClCompile Include="..\..\src\imm64.cpp" />
+    <ClCompile Include="..\..\src\imm8.cpp" />
+    <ClCompile Include="..\..\src\Instruction.cpp" />
+    <ClCompile Include="..\..\src\Instruction_AAD.cpp" />
+    <ClCompile Include="..\..\src\Instruction_AAM.cpp" />
+    <ClCompile Include="..\..\src\Instruction_ADC.cpp" />
+    <ClCompile Include="..\..\src\Instruction_ADCX.cpp" />
+    <ClCompile Include="..\..\src\Instruction_ADD.cpp" />
+    <ClCompile Include="..\..\src\Instruction_CPUID.cpp" />
+    <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
+    <ClCompile Include="..\..\src\Instruction_MONITOR.cpp" />
+    <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
+    <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
+    <ClCompile Include="..\..\src\Instruction_POP.cpp" />
+    <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
+    <ClCompile Include="..\..\src\Instruction_PUSHA.cpp" />
+    <ClCompile Include="..\..\src\Instruction_PUSHF.cpp" />
+    <ClCompile Include="..\..\src\Instruction_RET.cpp" />
+    <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
+    <ClCompile Include="..\..\src\Instruction_XOR.cpp" />
+    <ClCompile Include="..\..\src\label.cpp" />
+    <ClCompile Include="..\..\src\m16.cpp" />
+    <ClCompile Include="..\..\src\m32.cpp" />
+    <ClCompile Include="..\..\src\m64.cpp" />
+    <ClCompile Include="..\..\src\m8.cpp" />
+    <ClCompile Include="..\..\src\mm.cpp" />
+    <ClCompile Include="..\..\src\r16.cpp" />
+    <ClCompile Include="..\..\src\r32.cpp" />
+    <ClCompile Include="..\..\src\r64.cpp" />
+    <ClCompile Include="..\..\src\r8.cpp" />
+    <ClCompile Include="..\..\src\section.cpp" />
+    <ClCompile Include="..\..\src\Sreg.cpp" />
+    <ClCompile Include="..\..\src\xmm.cpp" />
+    <ClCompile Include="..\..\src\ymm.cpp" />
+    <ClCompile Include="..\..\tests\test64.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\asmstream.h" />
+    <ClInclude Include="..\..\src\comment.h" />
+    <ClInclude Include="..\..\src\cppasm.h" />
+    <ClInclude Include="..\..\src\cr.h" />
+    <ClInclude Include="..\..\src\disp16.h" />
+    <ClInclude Include="..\..\src\disp32.h" />
+    <ClInclude Include="..\..\src\disp8.h" />
+    <ClInclude Include="..\..\src\dr.h" />
+    <ClInclude Include="..\..\src\global.h" />
+    <ClInclude Include="..\..\src\imm16.h" />
+    <ClInclude Include="..\..\src\imm32.h" />
+    <ClInclude Include="..\..\src\imm64.h" />
+    <ClInclude Include="..\..\src\imm8.h" />
+    <ClInclude Include="..\..\src\Instruction.h" />
+    <ClInclude Include="..\..\src\Instruction_AAD.h" />
+    <ClInclude Include="..\..\src\Instruction_AAM.h" />
+    <ClInclude Include="..\..\src\Instruction_ADC.h" />
+    <ClInclude Include="..\..\src\Instruction_ADCX.h" />
+    <ClInclude Include="..\..\src\Instruction_ADD.h" />
+    <ClInclude Include="..\..\src\Instruction_CPUID.h" />
+    <ClInclude Include="..\..\src\Instruction_Jcc.h" />
+    <ClInclude Include="..\..\src\Instruction_MONITOR.h" />
+    <ClInclude Include="..\..\src\Instruction_MOV.h" />
+    <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
+    <ClInclude Include="..\..\src\Instruction_POP.h" />
+    <ClInclude Include="..\..\src\Instruction_PUSH.h" />
+    <ClInclude Include="..\..\src\Instruction_PUSHA.h" />
+    <ClInclude Include="..\..\src\Instruction_PUSHF.h" />
+    <ClInclude Include="..\..\src\Instruction_RET.h" />
+    <ClInclude Include="..\..\src\Instruction_Shift.h" />
+    <ClInclude Include="..\..\src\Instruction_XOR.h" />
+    <ClInclude Include="..\..\src\label.h" />
+    <ClInclude Include="..\..\src\m.h" />
+    <ClInclude Include="..\..\src\m16.h" />
+    <ClInclude Include="..\..\src\m32.h" />
+    <ClInclude Include="..\..\src\m64.h" />
+    <ClInclude Include="..\..\src\m8.h" />
+    <ClInclude Include="..\..\src\mm.h" />
+    <ClInclude Include="..\..\src\r16.h" />
+    <ClInclude Include="..\..\src\r32.h" />
+    <ClInclude Include="..\..\src\r64.h" />
+    <ClInclude Include="..\..\src\r8.h" />
+    <ClInclude Include="..\..\src\reg.h" />
+    <ClInclude Include="..\..\src\section.h" />
+    <ClInclude Include="..\..\src\Sreg.h" />
+    <ClInclude Include="..\..\src\xmm.h" />
+    <ClInclude Include="..\..\src\ymm.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

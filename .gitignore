@@ -10,3 +10,6 @@ tests/output/test64.o
 tests/output/test64.s
 tests/test32.exe
 tests/test64.exe
+VisualStudio2017/test32/.vs
+VisualStudio2017/test32/test32.vcxproj.filters
+VisualStudio2017/test32/test32.vcxproj.user

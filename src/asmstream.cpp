@@ -8,7 +8,7 @@ asmstream::asmstream()
 
 void asmstream::operator<<(const Instruction &instr)
 {
-    std::cout << "\t" << instr.to_str() << std::endl;
+    std::cout << "\t" << instr.to_str().c_str() << std::endl;
 }
 
 asmstream::~asmstream()

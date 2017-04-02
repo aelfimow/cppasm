@@ -132,6 +132,7 @@
     <ClCompile Include="..\..\src\Instruction_ADC.cpp" />
     <ClCompile Include="..\..\src\Instruction_ADCX.cpp" />
     <ClCompile Include="..\..\src\Instruction_ADD.cpp" />
+    <ClCompile Include="..\..\src\Instruction_CLFLUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_CPUID.cpp" />
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MONITOR.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="..\..\src\Instruction_ADC.h" />
     <ClInclude Include="..\..\src\Instruction_ADCX.h" />
     <ClInclude Include="..\..\src\Instruction_ADD.h" />
+    <ClInclude Include="..\..\src\Instruction_CLFLUSH.h" />
     <ClInclude Include="..\..\src\Instruction_CPUID.h" />
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_MONITOR.h" />

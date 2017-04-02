@@ -41,6 +41,7 @@
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
+#include "Instruction_CLFLUSH.h"
 #include "Instruction_CPUID.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_MONITOR.h"
@@ -208,6 +209,7 @@ extern Instruction_NoOperands CLD;
 extern Instruction_NoOperands CLI;
 extern Instruction_NoOperands CLTS;
 extern Instruction_NoOperands CMC;
+extern Instruction_CLFLUSH CLFLUSH;
 extern Instruction_CPUID CPUID;
 extern Instruction_NoOperands FNOP;
 extern Instruction_NoOperands FTST;

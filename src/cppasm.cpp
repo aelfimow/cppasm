@@ -154,6 +154,7 @@ Instruction_ADD ADD { asmout };
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands CLC { asmout, "clc" };
 Instruction_NoOperands CLD { asmout, "cld" };
+Instruction_CLFLUSH CLFLUSH { asmout };
 Instruction_NoOperands CLI { asmout, "cli" };
 Instruction_NoOperands CLTS { asmout, "clts" };
 Instruction_NoOperands CMC { asmout, "cmc" };

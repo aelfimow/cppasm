@@ -16,3 +16,7 @@ VisualStudio2017/test32/test32.vcxproj.user
 VisualStudio2017/test64/.vs/
 VisualStudio2017/test64/Debug/
 VisualStudio2017/test64/test64.vcxproj.filters
+VisualStudio2017/test32/Debug
+examples/clflush/gen_clflush.exe
+examples/clflush/main.o
+examples/clflush/result/clflush_func.o

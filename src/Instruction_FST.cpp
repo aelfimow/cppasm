@@ -5,6 +5,7 @@
 #include "m.h"
 #include "m32.h"
 #include "m64.h"
+#include "m80.h"
 #include "Instruction_FST.h"
 
 Instruction_FST::Instruction_FST(asmstream &s, std::string mnem) :
@@ -23,6 +24,13 @@ void Instruction_FST::operator()(const m32 &op)
 void Instruction_FST::operator()(const m64 &op)
 {
     std::string mnem { m_mnem + "l" };
+    Instruction instr { mnem, op.to_str() };
+    m_asmout << instr;
+}
+
+void Instruction_FST::operator()(const m80 &op)
+{
+    std::string mnem { m_mnem + op.postfix() };
     Instruction instr { mnem, op.to_str() };
     m_asmout << instr;
 }

@@ -28,6 +28,7 @@
 #include "m16.h"
 #include "m32.h"
 #include "m64.h"
+#include "m80.h"
 #include "cr.h"
 #include "dr.h"
 #include "comment.h"

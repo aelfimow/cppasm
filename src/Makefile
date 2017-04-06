@@ -70,6 +70,7 @@ all:
 	$(CXX) -c m16.cpp -o ${OBJDIR}/m16.o ${CXXFLAGS}
 	$(CXX) -c m32.cpp -o ${OBJDIR}/m32.o ${CXXFLAGS}
 	$(CXX) -c m64.cpp -o ${OBJDIR}/m64.o ${CXXFLAGS}
+	$(CXX) -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	$(CXX) -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
 	$(CXX) -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	$(CXX) -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}

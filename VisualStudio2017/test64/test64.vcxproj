@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\src\Instruction_ADD.cpp" />
     <ClCompile Include="..\..\src\Instruction_CLFLUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_CPUID.cpp" />
+    <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MONITOR.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="..\..\src\m32.cpp" />
     <ClCompile Include="..\..\src\m64.cpp" />
     <ClCompile Include="..\..\src\m8.cpp" />
+    <ClCompile Include="..\..\src\m80.cpp" />
     <ClCompile Include="..\..\src\mm.cpp" />
     <ClCompile Include="..\..\src\r16.cpp" />
     <ClCompile Include="..\..\src\r32.cpp" />
@@ -183,6 +185,7 @@
     <ClInclude Include="..\..\src\Instruction_ADD.h" />
     <ClInclude Include="..\..\src\Instruction_CLFLUSH.h" />
     <ClInclude Include="..\..\src\Instruction_CPUID.h" />
+    <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_MONITOR.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
@@ -200,6 +203,7 @@
     <ClInclude Include="..\..\src\m32.h" />
     <ClInclude Include="..\..\src\m64.h" />
     <ClInclude Include="..\..\src\m8.h" />
+    <ClInclude Include="..\..\src\m80.h" />
     <ClInclude Include="..\..\src\mm.h" />
     <ClInclude Include="..\..\src\r16.h" />
     <ClInclude Include="..\..\src\r32.h" />

@@ -171,6 +171,8 @@ Instruction_NoOperands FSCALE { asmout, "fscale" };
 Instruction_NoOperands FSIN { asmout, "fsin" };
 Instruction_NoOperands FSINCOS { asmout, "fsincos" };
 Instruction_NoOperands FSQRT { asmout, "fsqrt" };
+Instruction_FST FST { asmout, "fst" };
+Instruction_FST FSTP { asmout, "fstp" };
 Instruction_NoOperands FTST { asmout, "ftst" };
 Instruction_NoOperands HLT { asmout, "hlt" };
 Instruction_Jcc JA { asmout, "ja" };

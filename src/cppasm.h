@@ -43,6 +43,7 @@
 #include "Instruction_ADD.h"
 #include "Instruction_CLFLUSH.h"
 #include "Instruction_CPUID.h"
+#include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
@@ -223,6 +224,8 @@ extern Instruction_NoOperands FSCALE;
 extern Instruction_NoOperands FSIN;
 extern Instruction_NoOperands FSINCOS;
 extern Instruction_NoOperands FSQRT;
+extern Instruction_FST FST;
+extern Instruction_FST FSTP;
 extern Instruction_NoOperands FTST;
 extern Instruction_NoOperands HLT;
 extern Instruction_Jcc JA;

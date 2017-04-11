@@ -2,6 +2,7 @@
 #include "Instruction.h"
 #include "asmstream.h"
 #include "reg.h"
+#include "st.h"
 #include "m.h"
 #include "m32.h"
 #include "m64.h"
@@ -32,6 +33,12 @@ void Instruction_FST::operator()(const m80 &op)
 {
     std::string mnem { m_mnem + op.postfix() };
     Instruction instr { mnem, op.to_str() };
+    m_asmout << instr;
+}
+
+void Instruction_FST::operator()(const st &op)
+{
+    Instruction instr { m_mnem, op.name() };
     m_asmout << instr;
 }
 

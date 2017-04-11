@@ -17,6 +17,7 @@ class Instruction_FST
         void operator()(const m32 &op);
         void operator()(const m64 &op);
         void operator()(const m80 &op);
+        void operator()(const st &op);
 
         ~Instruction_FST();
 

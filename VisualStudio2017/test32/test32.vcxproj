@@ -159,6 +159,7 @@
     <ClCompile Include="..\..\src\r8.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\Sreg.cpp" />
+    <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\src\xmm.cpp" />
     <ClCompile Include="..\..\src\ymm.cpp" />
     <ClCompile Include="..\..\tests\test32.cpp" />
@@ -212,6 +213,7 @@
     <ClInclude Include="..\..\src\reg.h" />
     <ClInclude Include="..\..\src\section.h" />
     <ClInclude Include="..\..\src\Sreg.h" />
+    <ClInclude Include="..\..\src\st.h" />
     <ClInclude Include="..\..\src\xmm.h" />
     <ClInclude Include="..\..\src\ymm.h" />
   </ItemGroup>

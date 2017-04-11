@@ -48,6 +48,7 @@ CPPASM_OBJ += ${OBJDIR}/disp16.o
 CPPASM_OBJ += ${OBJDIR}/disp32.o
 CPPASM_OBJ += ${OBJDIR}/cr.o
 CPPASM_OBJ += ${OBJDIR}/dr.o
+CPPASM_OBJ += ${OBJDIR}/st.o
 CPPASM_OBJ += ${OBJDIR}/comment.o
 CPPASM_OBJ += ${OBJDIR}/global.o
 CPPASM_OBJ += ${OBJDIR}/label.o
@@ -63,6 +64,7 @@ all:
 	$(CXX) -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	$(CXX) -c cr.cpp -o ${OBJDIR}/cr.o ${CXXFLAGS}
 	$(CXX) -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}
+	$(CXX) -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}
 	$(CXX) -c disp8.cpp -o ${OBJDIR}/disp8.o ${CXXFLAGS}
 	$(CXX) -c disp16.cpp -o ${OBJDIR}/disp16.o ${CXXFLAGS}
 	$(CXX) -c disp32.cpp -o ${OBJDIR}/disp32.o ${CXXFLAGS}

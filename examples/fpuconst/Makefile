@@ -19,13 +19,13 @@ all: compile link generate check
 	@echo "No errors"
 
 compile:
-	$(CXX) -c main.cpp -o main.o -I../../src ${CXXFLAGS}
+	$(CXX) -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
 
 link:
-	$(CXX) main.o ${CPPASM_OBJ} -o gen.exe ${CXXFLAGS}
+	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	.\\gen.exe > result/fpuconst.s
+	.\\generate.exe > result/fpuconst.s
 
 check:
 	$(AS) result/fpuconst.s ${ASFLAGS64} -o result/fpuconst.o

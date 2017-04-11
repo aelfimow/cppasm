@@ -31,6 +31,7 @@
 #include "m80.h"
 #include "cr.h"
 #include "dr.h"
+#include "st.h"
 #include "comment.h"
 #include "global.h"
 #include "label.h"
@@ -197,6 +198,8 @@ extern dr DR4;
 extern dr DR5;
 extern dr DR6;
 extern dr DR7;
+
+extern st ST;
 
 extern Instruction_NoOperands AAA;
 extern Instruction_AAD AAD;

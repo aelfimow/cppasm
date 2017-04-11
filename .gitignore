@@ -22,4 +22,6 @@ examples/clflush/main.o
 examples/clflush/result/clflush_func.o
 examples/fpuconst/generate.exe
 examples/fpuconst/generate.o
-examples/fpuconst/result/fpuconst.o
+examples/fpuconst/example.exe
+examples/fpuconst/example.o
+examples/fpuconst/fpuconst.o

@@ -20,6 +20,6 @@ VisualStudio2017/test32/Debug
 examples/clflush/gen_clflush.exe
 examples/clflush/main.o
 examples/clflush/result/clflush_func.o
-examples/fpuconst/gen.exe
-examples/fpuconst/main.o
+examples/fpuconst/generate.exe
+examples/fpuconst/generate.o
 examples/fpuconst/result/fpuconst.o

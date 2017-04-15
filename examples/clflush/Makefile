@@ -14,18 +14,27 @@ CPPASM_OBJ = ../../src/obj/*.o
 .PHONY: link
 .PHONY: generate
 .PHONY: check
+.PHONY: link_example
+.PHONY: run_example
 
-all: compile link generate check
+all: compile link generate check link_example run_example
 	@echo "No errors"
 
 compile:
-	$(CXX) -c main.cpp -o main.o -I../../src ${CXXFLAGS}
+	$(CXX) -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
+	$(CXX) -c example.cpp -o example.o ${CXXFLAGS}
 
 link:
-	$(CXX) main.o ${CPPASM_OBJ} -o gen_clflush.exe ${CXXFLAGS}
+	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	.\\gen_clflush.exe > result/clflush_func.s
+	generate.exe > result/clflush_func.s
 
 check:
-	$(AS) result/clflush_func.s ${ASFLAGS64} -o result/clflush_func.o
+	$(AS) result/clflush_func.s ${ASFLAGS64} -o clflush_func.o
+
+link_example:
+	$(CXX) example.o clflush_func.o -o example.exe ${CXXFLAGS}
+
+run_example:
+	example.exe

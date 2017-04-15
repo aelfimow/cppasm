@@ -1,7 +1,4 @@
 src/obj/*.o
-examples/cpuid/*.o
-examples/cpuid/*.exe
-examples/cpuid/result/*.o
 src/tmp.o
 src/tmp.s
 tests/output/test32.o
@@ -17,11 +14,9 @@ VisualStudio2017/test64/.vs/
 VisualStudio2017/test64/Debug/
 VisualStudio2017/test64/test64.vcxproj.filters
 VisualStudio2017/test32/Debug
-examples/clflush/gen_clflush.exe
-examples/clflush/main.o
-examples/clflush/result/clflush_func.o
-examples/fpuconst/generate.exe
-examples/fpuconst/generate.o
-examples/fpuconst/example.exe
-examples/fpuconst/example.o
-examples/fpuconst/fpuconst.o
+examples/cpuid/*.o
+examples/cpuid/*.exe
+examples/fpuconst/*.o
+examples/fpuconst/*.exe
+examples/clflush/*.o
+examples/clflush/*.exe

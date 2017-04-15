@@ -15,8 +15,9 @@ CPPASM_OBJ = ../../src/obj/*.o
 .PHONY: generate
 .PHONY: check
 .PHONY: link_example
+.PHONY: run_example
 
-all: compile link generate check link_example
+all: compile link generate check link_example run_example
 	@echo "No errors"
 
 compile:
@@ -27,10 +28,13 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	.\\generate.exe > result/cpuid_func.s
+	generate.exe > result/cpuid_func.s
 
 check:
 	$(AS) result/cpuid_func.s ${ASFLAGS64} -o cpuid_func.o
 
 link_example:
-	$(CXX) example.o cpuid_func.o ${CPPASM_OBJ} -o example.exe ${CXXFLAGS}
+	$(CXX) example.o cpuid_func.o -o example.exe ${CXXFLAGS}
+
+run_example:
+	example.exe

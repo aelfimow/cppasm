@@ -141,8 +141,6 @@
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
-    <ClCompile Include="..\..\src\Instruction_PUSHA.cpp" />
-    <ClCompile Include="..\..\src\Instruction_PUSHF.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_XOR.cpp" />
@@ -193,8 +191,6 @@
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
-    <ClInclude Include="..\..\src\Instruction_PUSHA.h" />
-    <ClInclude Include="..\..\src\Instruction_PUSHF.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_XOR.h" />

@@ -230,6 +230,10 @@ Instruction_Shift SHR { asmout, "shr" };
 Instruction_NoOperands STC { asmout, "stc" };
 Instruction_NoOperands STD { asmout, "std" };
 Instruction_NoOperands STI { asmout, "sti" };
+Instruction_NoOperands SYSCALL { asmout, "syscall" };
+Instruction_NoOperands SYSENTER { asmout, "sysenter" };
+Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
+Instruction_NoOperands SYSRET { asmout, "sysret" };
 Instruction_XOR XOR { asmout };
 
 Keyword_comment comment;

@@ -283,6 +283,10 @@ extern Instruction_Shift SHR;
 extern Instruction_NoOperands STC;
 extern Instruction_NoOperands STD;
 extern Instruction_NoOperands STI;
+extern Instruction_NoOperands SYSCALL;
+extern Instruction_NoOperands SYSENTER;
+extern Instruction_NoOperands SYSEXIT;
+extern Instruction_NoOperands SYSRET;
 extern Instruction_XOR XOR;
 
 extern Keyword_comment comment;

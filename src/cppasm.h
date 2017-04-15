@@ -51,8 +51,6 @@
 #include "Instruction_MOV.h"
 #include "Instruction_POP.h"
 #include "Instruction_PUSH.h"
-#include "Instruction_PUSHA.h"
-#include "Instruction_PUSHF.h"
 #include "Instruction_RET.h"
 #include "Instruction_Shift.h"
 #include "Instruction_XOR.h"
@@ -268,10 +266,15 @@ extern Instruction_Jcc JZ;
 extern Instruction_MONITOR MONITOR;
 extern Instruction_MOV MOV;
 extern Instruction_POP POP;
+extern Instruction_NoOperands POPA;
+extern Instruction_NoOperands POPAD;
+extern Instruction_NoOperands POPF;
+extern Instruction_NoOperands POPFD;
+extern Instruction_NoOperands POPFQ;
 extern Instruction_PUSH PUSH;
-extern Instruction_PUSHA PUSHA;
-extern Instruction_PUSHA PUSHAD; // Same as PUSHA
-extern Instruction_PUSHF PUSHF;
+extern Instruction_NoOperands PUSHA;
+extern Instruction_NoOperands PUSHAD;
+extern Instruction_NoOperands PUSHF;
 extern Instruction_RET RET;
 extern Instruction_Shift SAL;
 extern Instruction_Shift SAR;

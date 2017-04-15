@@ -14,18 +14,23 @@ CPPASM_OBJ = ../../src/obj/*.o
 .PHONY: link
 .PHONY: generate
 .PHONY: check
+.PHONY: link_example
 
-all: compile link generate check
+all: compile link generate check link_example
 	@echo "No errors"
 
 compile:
-	$(CXX) -c main.cpp -o main.o -I../../src ${CXXFLAGS}
+	$(CXX) -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
+	$(CXX) -c example.cpp -o example.o ${CXXFLAGS}
 
 link:
-	$(CXX) main.o ${CPPASM_OBJ} -o gen_cpuid.exe ${CXXFLAGS}
+	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	.\\gen_cpuid.exe > result/cpuid_func.s
+	.\\generate.exe > result/cpuid_func.s
 
 check:
-	$(AS) result/cpuid_func.s ${ASFLAGS64} -o result/cpuid_func.o
+	$(AS) result/cpuid_func.s ${ASFLAGS64} -o cpuid_func.o
+
+link_example:
+	$(CXX) example.o cpuid_func.o ${CPPASM_OBJ} -o example.exe ${CXXFLAGS}

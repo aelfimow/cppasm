@@ -288,6 +288,7 @@ extern Instruction_NoOperands SYSENTER;
 extern Instruction_NoOperands SYSEXIT;
 extern Instruction_NoOperands SYSRET;
 extern Instruction_NoOperands UD;
+extern Instruction_NoOperands UD1;
 extern Instruction_NoOperands UD2;
 extern Instruction_XOR XOR;
 

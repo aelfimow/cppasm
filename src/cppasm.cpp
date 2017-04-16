@@ -224,6 +224,7 @@ Instruction_NoOperands PUSHAD { asmout, "pushal" };
 Instruction_NoOperands PUSHF { asmout, "pushf" };
 Instruction_NoOperands RDPMC { asmout, "rdpmc" };
 Instruction_NoOperands RDTSC { asmout, "rdtsc" };
+Instruction_NoOperands RDTSCP { asmout, "rdtscp" };
 Instruction_RET RET { asmout };
 Instruction_Shift SAL { asmout, "sal" };
 Instruction_Shift SAR { asmout, "sar" };

@@ -278,6 +278,7 @@ extern Instruction_NoOperands PUSHAD;
 extern Instruction_NoOperands PUSHF;
 extern Instruction_NoOperands RDPMC;
 extern Instruction_NoOperands RDTSC;
+extern Instruction_NoOperands RDTSCP;
 extern Instruction_RET RET;
 extern Instruction_Shift SAL;
 extern Instruction_Shift SAR;

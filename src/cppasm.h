@@ -53,6 +53,7 @@
 #include "Instruction_PUSH.h"
 #include "Instruction_RET.h"
 #include "Instruction_Shift.h"
+#include "Instruction_TEST.h"
 #include "Instruction_XOR.h"
 
 extern asmstream asmout;
@@ -287,6 +288,7 @@ extern Instruction_NoOperands SYSCALL;
 extern Instruction_NoOperands SYSENTER;
 extern Instruction_NoOperands SYSEXIT;
 extern Instruction_NoOperands SYSRET;
+extern Instruction_TEST TEST;
 extern Instruction_NoOperands UD;
 extern Instruction_NoOperands UD1;
 extern Instruction_NoOperands UD2;

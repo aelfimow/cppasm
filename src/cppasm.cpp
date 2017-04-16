@@ -234,6 +234,7 @@ Instruction_NoOperands SYSCALL { asmout, "syscall" };
 Instruction_NoOperands SYSENTER { asmout, "sysenter" };
 Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
 Instruction_NoOperands SYSRET { asmout, "sysret" };
+Instruction_TEST TEST { asmout };
 Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction_NoOperands UD1 { asmout, "ud1" };
 Instruction_NoOperands UD2 { asmout, "ud2" };

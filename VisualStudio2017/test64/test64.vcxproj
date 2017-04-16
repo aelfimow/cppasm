@@ -143,6 +143,7 @@
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
+    <ClCompile Include="..\..\src\Instruction_TEST.cpp" />
     <ClCompile Include="..\..\src\Instruction_XOR.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\m16.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
+    <ClInclude Include="..\..\src\Instruction_TEST.h" />
     <ClInclude Include="..\..\src\Instruction_XOR.h" />
     <ClInclude Include="..\..\src\label.h" />
     <ClInclude Include="..\..\src\m.h" />

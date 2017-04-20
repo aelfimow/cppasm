@@ -45,7 +45,6 @@
 #include "Instruction_ADD.h"
 #include "Instruction_CLFLUSH.h"
 #include "Instruction_CMOVx.h"
-#include "Instruction_CPUID.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_MONITOR.h"
@@ -245,7 +244,7 @@ extern Instruction_CMOVx CMOVPE;
 extern Instruction_CMOVx CMOVPO;
 extern Instruction_CMOVx CMOVS;
 extern Instruction_CMOVx CMOVZ;
-extern Instruction_CPUID CPUID;
+extern Instruction_NoOperands CPUID;
 extern Instruction_NoOperands FLD1;
 extern Instruction_NoOperands FLDL2T;
 extern Instruction_NoOperands FLDL2E;

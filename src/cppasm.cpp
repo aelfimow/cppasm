@@ -190,7 +190,7 @@ Instruction_CMOVx CMOVZ { asmout, "cmovz" };
 Instruction_NoOperands CLI { asmout, "cli" };
 Instruction_NoOperands CLTS { asmout, "clts" };
 Instruction_NoOperands CMC { asmout, "cmc" };
-Instruction_CPUID CPUID { asmout };
+Instruction_NoOperands CPUID { asmout, "cpuid" };
 Instruction_NoOperands FLD1 { asmout, "fld1" };
 Instruction_NoOperands FLDL2T { asmout, "fldl2t" };
 Instruction_NoOperands FLDL2E { asmout, "fldl2e" };

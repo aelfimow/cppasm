@@ -6,14 +6,15 @@
 #include "m.h"
 #include "Instruction_CLFLUSH.h"
 
-Instruction_CLFLUSH::Instruction_CLFLUSH(asmstream &s) :
-    m_asmout(s)
+Instruction_CLFLUSH::Instruction_CLFLUSH(asmstream &s, const std::string mnem) :
+    m_asmout { s },
+    m_mnem { mnem }
 {
 }
 
 void Instruction_CLFLUSH::operator()(const m &op1)
 {
-    Instruction instr { "clflush", op1.to_str() };
+    Instruction instr { m_mnem, op1.to_str() };
     m_asmout << instr;
 }
 

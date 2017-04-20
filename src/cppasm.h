@@ -214,6 +214,7 @@ extern Instruction_NoOperands CLI;
 extern Instruction_NoOperands CLTS;
 extern Instruction_NoOperands CMC;
 extern Instruction_CLFLUSH CLFLUSH;
+extern Instruction_CLFLUSH CLFLUSHOPT;
 extern Instruction_CPUID CPUID;
 extern Instruction_NoOperands FLD1;
 extern Instruction_NoOperands FLDL2T;

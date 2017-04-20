@@ -6,7 +6,7 @@
 class Instruction_CLFLUSH
 {
     public:
-        Instruction_CLFLUSH(asmstream &s);
+        Instruction_CLFLUSH(asmstream &s, const std::string mnem);
 
         Instruction_CLFLUSH() = delete;
         Instruction_CLFLUSH(const Instruction_CLFLUSH &instance) = delete;
@@ -20,6 +20,7 @@ class Instruction_CLFLUSH
 
     private:
         asmstream &m_asmout;
+        const std::string m_mnem;
 };
 
 #endif

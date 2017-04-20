@@ -249,6 +249,8 @@ extern Instruction_NoOperands CWD;
 extern Instruction_NoOperands CDQ;
 extern Instruction_NoOperands CQO;
 extern Instruction_NoOperands EMMS;
+extern Instruction_NoOperands F2XM1;
+extern Instruction_NoOperands FABS;
 extern Instruction_NoOperands FLD1;
 extern Instruction_NoOperands FLDL2T;
 extern Instruction_NoOperands FLDL2E;

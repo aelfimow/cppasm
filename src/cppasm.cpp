@@ -195,6 +195,8 @@ Instruction_NoOperands CWD { asmout, "cwtd" };
 Instruction_NoOperands CDQ { asmout, "cltd" };
 Instruction_NoOperands CQO { asmout, "cqto" };
 Instruction_NoOperands EMMS { asmout, "emms" };
+Instruction_NoOperands F2XM1 { asmout, "f2xm1" };
+Instruction_NoOperands FABS { asmout, "fabs" };
 Instruction_NoOperands FLD1 { asmout, "fld1" };
 Instruction_NoOperands FLDL2T { asmout, "fldl2t" };
 Instruction_NoOperands FLDL2E { asmout, "fldl2e" };

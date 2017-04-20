@@ -3,15 +3,12 @@
 #include "st.h"
 
 st::st() :
-    m_name { }
+    m_name { "%st(0)" }
 {
 }
 
-st::~st()
-{
-}
-
-st &st::operator()(size_t i)
+st::st(size_t i) :
+    m_name { "" }
 {
     if (i > 7)
     {
@@ -23,8 +20,17 @@ st &st::operator()(size_t i)
     ss << "%st(" << i << ")";
 
     m_name = ss.str();
+}
 
-    return *this;
+st::~st()
+{
+}
+
+st st::operator()(size_t i)
+{
+    st st_i { i };
+
+    return st_i;
 }
 
 std::string st::name() const

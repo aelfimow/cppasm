@@ -44,6 +44,7 @@
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
 #include "Instruction_CLFLUSH.h"
+#include "Instruction_CMOVx.h"
 #include "Instruction_CPUID.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
@@ -215,6 +216,35 @@ extern Instruction_NoOperands CLTS;
 extern Instruction_NoOperands CMC;
 extern Instruction_CLFLUSH CLFLUSH;
 extern Instruction_CLFLUSH CLFLUSHOPT;
+extern Instruction_CMOVx CMOVA;
+extern Instruction_CMOVx CMOVAE;
+extern Instruction_CMOVx CMOVB;
+extern Instruction_CMOVx CMOVBE;
+extern Instruction_CMOVx CMOVC;
+extern Instruction_CMOVx CMOVE;
+extern Instruction_CMOVx CMOVG;
+extern Instruction_CMOVx CMOVGE;
+extern Instruction_CMOVx CMOVL;
+extern Instruction_CMOVx CMOVLE;
+extern Instruction_CMOVx CMOVNA;
+extern Instruction_CMOVx CMOVNAE;
+extern Instruction_CMOVx CMOVNBE;
+extern Instruction_CMOVx CMOVNC;
+extern Instruction_CMOVx CMOVNE;
+extern Instruction_CMOVx CMOVNG;
+extern Instruction_CMOVx CMOVNGE;
+extern Instruction_CMOVx CMOVNL;
+extern Instruction_CMOVx CMOVNLE;
+extern Instruction_CMOVx CMOVNO;
+extern Instruction_CMOVx CMOVNP;
+extern Instruction_CMOVx CMOVNS;
+extern Instruction_CMOVx CMOVNZ;
+extern Instruction_CMOVx CMOVO;
+extern Instruction_CMOVx CMOVP;
+extern Instruction_CMOVx CMOVPE;
+extern Instruction_CMOVx CMOVPO;
+extern Instruction_CMOVx CMOVS;
+extern Instruction_CMOVx CMOVZ;
 extern Instruction_CPUID CPUID;
 extern Instruction_NoOperands FLD1;
 extern Instruction_NoOperands FLDL2T;

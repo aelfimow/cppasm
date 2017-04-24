@@ -29,41 +29,59 @@ void Instruction_NOP::operator()(size_t bytes)
     {
         case 0:
         case 1:
-            Instruction instr { "nop" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { "nop" };
+                m_asmout << instr;
+                break;
+            }
         case 2:
-            Instruction instr { ".byte 0x66, 0x90" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x66, 0x90" };
+                m_asmout << instr;
+                break;
+            }
         case 3:
-            Instruction instr { ".byte 0x0F, 0x1F, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x0F, 0x1F, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 4:
-            Instruction instr { ".byte 0x0F, 0x1F, 0x40, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x0F, 0x1F, 0x40, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 5:
-            Instruction instr { ".byte 0x0F, 0x1F, 0x44, 0x00, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x0F, 0x1F, 0x44, 0x00, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 6:
-            Instruction instr { ".byte 0x66, 0x0F, 0x1F, 0x44, 0x00, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x66, 0x0F, 0x1F, 0x44, 0x00, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 7:
-            Instruction instr { ".byte 0x0F, 0x1F, 0x80, 0x00, 0x00, 0x00, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x0F, 0x1F, 0x80, 0x00, 0x00, 0x00, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 8:
-            Instruction instr { ".byte 0x0F, 0x1F, 0x84, 0x00, 0x00, 0x00, 0x00, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x0F, 0x1F, 0x84, 0x00, 0x00, 0x00, 0x00, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         case 9:
-            Instruction instr { ".byte 0x66, 0x0F, 0x1F, 0x84, 0x00, 0x00, 0x00, 0x00, 0x00" };
-            m_asmout << instr;
-            break;
+            {
+                Instruction instr { ".byte 0x66, 0x0F, 0x1F, 0x84, 0x00, 0x00, 0x00, 0x00, 0x00" };
+                m_asmout << instr;
+                break;
+            }
         default:
             throw std::invalid_argument("Multi-byte NOP: invalid bytes argument");
     }

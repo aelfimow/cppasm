@@ -29,7 +29,6 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_CLFLUSH.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_CMOVx.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_FST.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Jcc.o
-CPPASM_OBJ += ${OBJDIR}/Instruction_MONITOR.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MOV.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_POP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_PUSH.o
@@ -84,7 +83,6 @@ all:
 	$(CXX) -c Instruction_CMOVx.cpp -o ${OBJDIR}/Instruction_CMOVx.o ${CXXFLAGS}
 	$(CXX) -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Jcc.cpp -o ${OBJDIR}/Instruction_Jcc.o ${CXXFLAGS}
-	$(CXX) -c Instruction_MONITOR.cpp -o ${OBJDIR}/Instruction_MONITOR.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
 	$(CXX) -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}

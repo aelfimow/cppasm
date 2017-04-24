@@ -47,7 +47,6 @@
 #include "Instruction_CMOVx.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
-#include "Instruction_MONITOR.h"
 #include "Instruction_MOV.h"
 #include "Instruction_POP.h"
 #include "Instruction_PUSH.h"
@@ -317,7 +316,7 @@ extern Instruction_Jcc JPE;
 extern Instruction_Jcc JPO;
 extern Instruction_Jcc JS;
 extern Instruction_Jcc JZ;
-extern Instruction_MONITOR MONITOR;
+extern Instruction_NoOperands MONITOR;
 extern Instruction_MOV MOV;
 extern Instruction_POP POP;
 extern Instruction_NoOperands POPA;

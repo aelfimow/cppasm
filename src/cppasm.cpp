@@ -263,7 +263,7 @@ Instruction_Jcc JPE { asmout, "jpe" };
 Instruction_Jcc JPO { asmout, "jpo" };
 Instruction_Jcc JS { asmout, "js" };
 Instruction_Jcc JZ { asmout, "jz" };
-Instruction_MONITOR MONITOR { asmout };
+Instruction_NoOperands MONITOR { asmout, "monitor" };
 Instruction_MOV MOV { asmout };
 Instruction_POP POP { asmout };
 Instruction_NoOperands POPA { asmout, "popa" };

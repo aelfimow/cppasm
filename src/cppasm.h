@@ -48,6 +48,7 @@
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_MOV.h"
+#include "Instruction_NOP.h"
 #include "Instruction_POP.h"
 #include "Instruction_PUSH.h"
 #include "Instruction_RET.h"
@@ -318,6 +319,7 @@ extern Instruction_Jcc JS;
 extern Instruction_Jcc JZ;
 extern Instruction_NoOperands MONITOR;
 extern Instruction_MOV MOV;
+extern Instruction_NOP NOP;
 extern Instruction_POP POP;
 extern Instruction_NoOperands POPA;
 extern Instruction_NoOperands POPAD;

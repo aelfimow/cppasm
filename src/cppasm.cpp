@@ -265,6 +265,7 @@ Instruction_Jcc JS { asmout, "js" };
 Instruction_Jcc JZ { asmout, "jz" };
 Instruction_NoOperands MONITOR { asmout, "monitor" };
 Instruction_MOV MOV { asmout };
+Instruction_NOP NOP { asmout };
 Instruction_POP POP { asmout };
 Instruction_NoOperands POPA { asmout, "popa" };
 Instruction_NoOperands POPAD { asmout, "popal" };

@@ -138,6 +138,7 @@
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
+    <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
+    <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />

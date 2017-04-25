@@ -52,6 +52,7 @@
 #include "Instruction_POP.h"
 #include "Instruction_PUSH.h"
 #include "Instruction_RET.h"
+#include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_TEST.h"
 #include "Instruction_XOR.h"
@@ -334,6 +335,36 @@ extern Instruction_NoOperands RDPMC;
 extern Instruction_NoOperands RDTSC;
 extern Instruction_NoOperands RDTSCP;
 extern Instruction_RET RET;
+extern Instruction_SETcc SETA;
+extern Instruction_SETcc SETAE;
+extern Instruction_SETcc SETB;
+extern Instruction_SETcc SETBE;
+extern Instruction_SETcc SETC;
+extern Instruction_SETcc SETE;
+extern Instruction_SETcc SETG;
+extern Instruction_SETcc SETGE;
+extern Instruction_SETcc SETL;
+extern Instruction_SETcc SETLE;
+extern Instruction_SETcc SETNA;
+extern Instruction_SETcc SETNAE;
+extern Instruction_SETcc SETNB;
+extern Instruction_SETcc SETNBE;
+extern Instruction_SETcc SETNC;
+extern Instruction_SETcc SETNE;
+extern Instruction_SETcc SETNG;
+extern Instruction_SETcc SETNGE;
+extern Instruction_SETcc SETNL;
+extern Instruction_SETcc SETNLE;
+extern Instruction_SETcc SETNO;
+extern Instruction_SETcc SETNP;
+extern Instruction_SETcc SETNS;
+extern Instruction_SETcc SETNZ;
+extern Instruction_SETcc SETO;
+extern Instruction_SETcc SETP;
+extern Instruction_SETcc SETPE;
+extern Instruction_SETcc SETPO;
+extern Instruction_SETcc SETS;
+extern Instruction_SETcc SETZ;
 extern Instruction_Shift SAL;
 extern Instruction_Shift SAR;
 extern Instruction_Shift SHL;

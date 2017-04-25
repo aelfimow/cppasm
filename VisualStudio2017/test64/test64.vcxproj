@@ -142,6 +142,7 @@
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
+    <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_TEST.cpp" />
     <ClCompile Include="..\..\src\Instruction_XOR.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
+    <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_TEST.h" />
     <ClInclude Include="..\..\src\Instruction_XOR.h" />

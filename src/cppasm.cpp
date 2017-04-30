@@ -274,6 +274,7 @@ Instruction_Jcc JPE { asmout, "jpe" };
 Instruction_Jcc JPO { asmout, "jpo" };
 Instruction_Jcc JS { asmout, "js" };
 Instruction_Jcc JZ { asmout, "jz" };
+Instruction_RET RET { asmout };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };
@@ -353,13 +354,15 @@ Instruction_NoOperands HLT { asmout, "hlt" };
 Instruction_NoOperands RDPMC { asmout, "rdpmc" };
 Instruction_NoOperands RDTSC { asmout, "rdtsc" };
 Instruction_NoOperands RDTSCP { asmout, "rdtscp" };
-Instruction_NoOperands SYSCALL { asmout, "syscall" };
-Instruction_NoOperands SYSRET { asmout, "sysret" };
 Instruction_NoOperands SYSENTER { asmout, "sysenter" };
 Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
 
+// SSE3 agent synchronization instructions
 Instruction_NoOperands MONITOR { asmout, "monitor" };
-Instruction_RET RET { asmout };
+
+// 64-bit mode instructions
+Instruction_NoOperands SYSCALL { asmout, "syscall" };
+Instruction_NoOperands SYSRET { asmout, "sysret" };
 
 Keyword_comment comment;
 Keyword_global global;

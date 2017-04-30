@@ -329,6 +329,7 @@ extern Instruction_Jcc JPE;
 extern Instruction_Jcc JPO;
 extern Instruction_Jcc JS;
 extern Instruction_Jcc JZ;
+extern Instruction_RET RET;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;
@@ -408,13 +409,15 @@ extern Instruction_NoOperands HLT;
 extern Instruction_NoOperands RDPMC;
 extern Instruction_NoOperands RDTSC;
 extern Instruction_NoOperands RDTSCP;
-extern Instruction_NoOperands SYSCALL;
-extern Instruction_NoOperands SYSRET;
 extern Instruction_NoOperands SYSENTER;
 extern Instruction_NoOperands SYSEXIT;
 
+// SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;
-extern Instruction_RET RET;
+
+// 64-bit mode instructions
+extern Instruction_NoOperands SYSCALL;
+extern Instruction_NoOperands SYSRET;
 
 extern Keyword_comment comment;
 extern Keyword_global global;

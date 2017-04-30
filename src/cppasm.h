@@ -201,21 +201,8 @@ extern dr DR7;
 
 extern st ST;
 
-extern Instruction_NoOperands AAA;
-extern Instruction_AAD AAD;
-extern Instruction_AAM AAM;
-extern Instruction_NoOperands AAS;
-extern Instruction_ADC ADC;
-extern Instruction_ADCX ADCX;
-extern Instruction_ADD ADD;
-extern Instruction_NoOperands CLAC;
-extern Instruction_NoOperands CLC;
-extern Instruction_NoOperands CLD;
-extern Instruction_NoOperands CLI;
-extern Instruction_NoOperands CLTS;
-extern Instruction_NoOperands CMC;
-extern Instruction_CLFLUSH CLFLUSH;
-extern Instruction_CLFLUSH CLFLUSHOPT;
+// Data transfer instructions
+extern Instruction_MOV MOV;
 extern Instruction_CMOVx CMOVA;
 extern Instruction_CMOVx CMOVAE;
 extern Instruction_CMOVx CMOVB;
@@ -245,46 +232,70 @@ extern Instruction_CMOVx CMOVPE;
 extern Instruction_CMOVx CMOVPO;
 extern Instruction_CMOVx CMOVS;
 extern Instruction_CMOVx CMOVZ;
-extern Instruction_NoOperands CPUID;
+extern Instruction_PUSH PUSH;
+extern Instruction_NoOperands PUSHA;
+extern Instruction_NoOperands PUSHAD;
+extern Instruction_POP POP;
+extern Instruction_NoOperands POPA;
+extern Instruction_NoOperands POPAD;
 extern Instruction_NoOperands CWD;
 extern Instruction_NoOperands CDQ;
 extern Instruction_NoOperands CQO;
-extern Instruction_NoOperands EMMS;
-extern Instruction_NoOperands F2XM1;
-extern Instruction_NoOperands FABS;
-extern Instruction_NoOperands FCHS;
-extern Instruction_NoOperands FCLEX;
-extern Instruction_NoOperands FNCLEX;
-extern Instruction_NoOperands FCOS;
-extern Instruction_NoOperands FDECSTP;
-extern Instruction_NoOperands FINCSTP;
-extern Instruction_NoOperands FINIT;
-extern Instruction_NoOperands FNINIT;
-extern Instruction_NoOperands FLD1;
-extern Instruction_NoOperands FLDL2T;
-extern Instruction_NoOperands FLDL2E;
-extern Instruction_NoOperands FLDPI;
-extern Instruction_NoOperands FLDLG2;
-extern Instruction_NoOperands FLDLN2;
-extern Instruction_NoOperands FLDZ;
-extern Instruction_NoOperands FNOP;
-extern Instruction_NoOperands FPATAN;
-extern Instruction_NoOperands FPREM;
-extern Instruction_NoOperands FPREM1;
-extern Instruction_NoOperands FPTAN;
-extern Instruction_NoOperands FRNDINT;
-extern Instruction_NoOperands FSCALE;
-extern Instruction_NoOperands FSIN;
-extern Instruction_NoOperands FSINCOS;
-extern Instruction_NoOperands FSQRT;
-extern Instruction_FST FST;
-extern Instruction_FST FSTP;
-extern Instruction_NoOperands FTST;
-extern Instruction_NoOperands FXAM;
-extern Instruction_NoOperands FXTRACT;
-extern Instruction_NoOperands FYL2X;
-extern Instruction_NoOperands FYL2XP1;
-extern Instruction_NoOperands HLT;
+
+// Binary arithmetic instructions
+extern Instruction_ADD ADD;
+extern Instruction_ADC ADC;
+extern Instruction_ADCX ADCX;
+
+// Decimal arithmetic instructions
+extern Instruction_NoOperands AAA;
+extern Instruction_AAD AAD;
+extern Instruction_AAM AAM;
+extern Instruction_NoOperands AAS;
+
+// Logical instructions
+extern Instruction_XOR XOR;
+
+// Shift and rotate instructions
+extern Instruction_Shift SAL;
+extern Instruction_Shift SAR;
+extern Instruction_Shift SHL;
+extern Instruction_Shift SHR;
+
+// Bit and byte instructions
+extern Instruction_SETcc SETA;
+extern Instruction_SETcc SETAE;
+extern Instruction_SETcc SETB;
+extern Instruction_SETcc SETBE;
+extern Instruction_SETcc SETC;
+extern Instruction_SETcc SETE;
+extern Instruction_SETcc SETG;
+extern Instruction_SETcc SETGE;
+extern Instruction_SETcc SETL;
+extern Instruction_SETcc SETLE;
+extern Instruction_SETcc SETNA;
+extern Instruction_SETcc SETNAE;
+extern Instruction_SETcc SETNB;
+extern Instruction_SETcc SETNBE;
+extern Instruction_SETcc SETNC;
+extern Instruction_SETcc SETNE;
+extern Instruction_SETcc SETNG;
+extern Instruction_SETcc SETNGE;
+extern Instruction_SETcc SETNL;
+extern Instruction_SETcc SETNLE;
+extern Instruction_SETcc SETNO;
+extern Instruction_SETcc SETNP;
+extern Instruction_SETcc SETNS;
+extern Instruction_SETcc SETNZ;
+extern Instruction_SETcc SETO;
+extern Instruction_SETcc SETP;
+extern Instruction_SETcc SETPE;
+extern Instruction_SETcc SETPO;
+extern Instruction_SETcc SETS;
+extern Instruction_SETcc SETZ;
+extern Instruction_TEST TEST;
+
+// Control transfer instructions
 extern Instruction_Jcc JA;
 extern Instruction_Jcc JAE;
 extern Instruction_Jcc JB;
@@ -318,69 +329,92 @@ extern Instruction_Jcc JPE;
 extern Instruction_Jcc JPO;
 extern Instruction_Jcc JS;
 extern Instruction_Jcc JZ;
-extern Instruction_NoOperands MONITOR;
-extern Instruction_MOV MOV;
-extern Instruction_NOP NOP;
-extern Instruction_POP POP;
-extern Instruction_NoOperands POPA;
-extern Instruction_NoOperands POPAD;
+
+// Flag control (EFLAG) instructions
+extern Instruction_NoOperands CLC;
+extern Instruction_NoOperands CLD;
+extern Instruction_NoOperands CLI;
+extern Instruction_NoOperands CMC;
+extern Instruction_NoOperands PUSHF;
 extern Instruction_NoOperands POPF;
 extern Instruction_NoOperands POPFD;
 extern Instruction_NoOperands POPFQ;
-extern Instruction_PUSH PUSH;
-extern Instruction_NoOperands PUSHA;
-extern Instruction_NoOperands PUSHAD;
-extern Instruction_NoOperands PUSHF;
-extern Instruction_NoOperands RDPMC;
-extern Instruction_NoOperands RDTSC;
-extern Instruction_NoOperands RDTSCP;
-extern Instruction_RET RET;
-extern Instruction_SETcc SETA;
-extern Instruction_SETcc SETAE;
-extern Instruction_SETcc SETB;
-extern Instruction_SETcc SETBE;
-extern Instruction_SETcc SETC;
-extern Instruction_SETcc SETE;
-extern Instruction_SETcc SETG;
-extern Instruction_SETcc SETGE;
-extern Instruction_SETcc SETL;
-extern Instruction_SETcc SETLE;
-extern Instruction_SETcc SETNA;
-extern Instruction_SETcc SETNAE;
-extern Instruction_SETcc SETNB;
-extern Instruction_SETcc SETNBE;
-extern Instruction_SETcc SETNC;
-extern Instruction_SETcc SETNE;
-extern Instruction_SETcc SETNG;
-extern Instruction_SETcc SETNGE;
-extern Instruction_SETcc SETNL;
-extern Instruction_SETcc SETNLE;
-extern Instruction_SETcc SETNO;
-extern Instruction_SETcc SETNP;
-extern Instruction_SETcc SETNS;
-extern Instruction_SETcc SETNZ;
-extern Instruction_SETcc SETO;
-extern Instruction_SETcc SETP;
-extern Instruction_SETcc SETPE;
-extern Instruction_SETcc SETPO;
-extern Instruction_SETcc SETS;
-extern Instruction_SETcc SETZ;
-extern Instruction_Shift SAL;
-extern Instruction_Shift SAR;
-extern Instruction_Shift SHL;
-extern Instruction_Shift SHR;
 extern Instruction_NoOperands STC;
-extern Instruction_NoOperands STD;
 extern Instruction_NoOperands STI;
-extern Instruction_NoOperands SYSCALL;
-extern Instruction_NoOperands SYSENTER;
-extern Instruction_NoOperands SYSEXIT;
-extern Instruction_NoOperands SYSRET;
-extern Instruction_TEST TEST;
+extern Instruction_NoOperands STD;
+
+// Miscelleneous instructions
+extern Instruction_NOP NOP;
 extern Instruction_NoOperands UD;
 extern Instruction_NoOperands UD1;
 extern Instruction_NoOperands UD2;
-extern Instruction_XOR XOR;
+extern Instruction_NoOperands CPUID;
+extern Instruction_CLFLUSH CLFLUSH;
+extern Instruction_CLFLUSH CLFLUSHOPT;
+
+// x87 FPU data transfer instructions
+extern Instruction_FST FST;
+extern Instruction_FST FSTP;
+
+// x87 FPU basic arithmetic instructions
+extern Instruction_NoOperands FPREM;
+extern Instruction_NoOperands FPREM1;
+extern Instruction_NoOperands FABS;
+extern Instruction_NoOperands FCHS;
+extern Instruction_NoOperands FRNDINT;
+extern Instruction_NoOperands FSCALE;
+extern Instruction_NoOperands FSQRT;
+extern Instruction_NoOperands FXTRACT;
+
+// x87 FPU comparison instructions
+extern Instruction_NoOperands FTST;
+extern Instruction_NoOperands FXAM;
+
+// x87 FPU transcendental instructions
+extern Instruction_NoOperands FSIN;
+extern Instruction_NoOperands FSINCOS;
+extern Instruction_NoOperands FCOS;
+extern Instruction_NoOperands FPTAN;
+extern Instruction_NoOperands FPATAN;
+extern Instruction_NoOperands F2XM1;
+extern Instruction_NoOperands FYL2X;
+extern Instruction_NoOperands FYL2XP1;
+
+// x87 FPU load constants instructions
+extern Instruction_NoOperands FLD1;
+extern Instruction_NoOperands FLDL2T;
+extern Instruction_NoOperands FLDL2E;
+extern Instruction_NoOperands FLDPI;
+extern Instruction_NoOperands FLDLG2;
+extern Instruction_NoOperands FLDLN2;
+extern Instruction_NoOperands FLDZ;
+
+// x87 FPU control instructions
+extern Instruction_NoOperands FINCSTP;
+extern Instruction_NoOperands FDECSTP;
+extern Instruction_NoOperands FINIT;
+extern Instruction_NoOperands FNINIT;
+extern Instruction_NoOperands FCLEX;
+extern Instruction_NoOperands FNCLEX;
+extern Instruction_NoOperands FNOP;
+
+// MMX state management instructions
+extern Instruction_NoOperands EMMS;
+
+// System instructions
+extern Instruction_NoOperands CLAC;
+extern Instruction_NoOperands CLTS;
+extern Instruction_NoOperands HLT;
+extern Instruction_NoOperands RDPMC;
+extern Instruction_NoOperands RDTSC;
+extern Instruction_NoOperands RDTSCP;
+extern Instruction_NoOperands SYSCALL;
+extern Instruction_NoOperands SYSRET;
+extern Instruction_NoOperands SYSENTER;
+extern Instruction_NoOperands SYSEXIT;
+
+extern Instruction_NoOperands MONITOR;
+extern Instruction_RET RET;
 
 extern Keyword_comment comment;
 extern Keyword_global global;

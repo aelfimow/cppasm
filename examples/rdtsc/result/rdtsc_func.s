@@ -8,5 +8,5 @@ rdtsc_func:
 	pop %rbx
 	rdtsc
 	shl $0x20, %rdx
-	xor %rdx, %rax
+	or %rdx, %rax
 	retq

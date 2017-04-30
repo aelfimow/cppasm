@@ -37,7 +37,7 @@ try
     imm8 bits_to_shift { 32 };
     SHL(RDX, bits_to_shift);
 
-    XOR(RAX, RDX);
+    OR(RAX, RDX);
 
     RET();
 

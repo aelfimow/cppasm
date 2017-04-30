@@ -252,6 +252,8 @@ extern Instruction_NoOperands AAA;
 extern Instruction_AAD AAD;
 extern Instruction_AAM AAM;
 extern Instruction_NoOperands AAS;
+extern Instruction_NoOperands DAA;
+extern Instruction_NoOperands DAS;
 
 // Logical instructions
 extern Instruction_XOR XOR;

@@ -197,6 +197,8 @@ Instruction_NoOperands AAA { asmout, "aaa" };
 Instruction_AAD AAD { asmout };
 Instruction_AAM AAM { asmout };
 Instruction_NoOperands AAS { asmout, "aas" };
+Instruction_NoOperands DAA { asmout, "daa" };
+Instruction_NoOperands DAS { asmout, "das" };
 
 // Logical instructions
 Instruction_XOR XOR { asmout };

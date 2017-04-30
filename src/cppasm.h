@@ -47,6 +47,7 @@
 #include "Instruction_CMOVx.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
+#include "Instruction_Logical.h"
 #include "Instruction_MOV.h"
 #include "Instruction_NOP.h"
 #include "Instruction_POP.h"
@@ -55,7 +56,6 @@
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_TEST.h"
-#include "Instruction_XOR.h"
 
 extern asmstream asmout;
 
@@ -256,7 +256,9 @@ extern Instruction_NoOperands DAA;
 extern Instruction_NoOperands DAS;
 
 // Logical instructions
-extern Instruction_XOR XOR;
+extern Instruction_Logical AND;
+extern Instruction_Logical OR;
+extern Instruction_Logical XOR;
 
 // Shift and rotate instructions
 extern Instruction_Shift SAL;

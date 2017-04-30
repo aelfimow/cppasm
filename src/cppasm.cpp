@@ -359,6 +359,7 @@ Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
 
 // SSE3 agent synchronization instructions
 Instruction_NoOperands MONITOR { asmout, "monitor" };
+Instruction_NoOperands MWAIT { asmout, "mwait" };
 
 // 64-bit mode instructions
 Instruction_NoOperands SYSCALL { asmout, "syscall" };

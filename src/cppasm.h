@@ -414,6 +414,7 @@ extern Instruction_NoOperands SYSEXIT;
 
 // SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;
+extern Instruction_NoOperands MWAIT;
 
 // 64-bit mode instructions
 extern Instruction_NoOperands SYSCALL;

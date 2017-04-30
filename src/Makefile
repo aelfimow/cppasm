@@ -38,7 +38,6 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_RET.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_SETcc.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Shift.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_TEST.o
-CPPASM_OBJ += ${OBJDIR}/Instruction_XOR.o
 CPPASM_OBJ += ${OBJDIR}/Sreg.o
 CPPASM_OBJ += ${OBJDIR}/m8.o
 CPPASM_OBJ += ${OBJDIR}/m16.o
@@ -95,7 +94,6 @@ all:
 	$(CXX) -c Instruction_SETcc.cpp -o ${OBJDIR}/Instruction_SETcc.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Shift.cpp -o ${OBJDIR}/Instruction_Shift.o ${CXXFLAGS}
 	$(CXX) -c Instruction_TEST.cpp -o ${OBJDIR}/Instruction_TEST.o ${CXXFLAGS}
-	$(CXX) -c Instruction_XOR.cpp -o ${OBJDIR}/Instruction_XOR.o ${CXXFLAGS}
 	$(CXX) -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	$(CXX) -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	$(CXX) -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}

@@ -136,6 +136,7 @@
     <ClCompile Include="..\..\src\Instruction_CMOVx.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
+    <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
@@ -145,7 +146,6 @@
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_TEST.cpp" />
-    <ClCompile Include="..\..\src\Instruction_XOR.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\m16.cpp" />
     <ClCompile Include="..\..\src\m32.cpp" />
@@ -188,6 +188,7 @@
     <ClInclude Include="..\..\src\Instruction_CMOVx.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
+    <ClInclude Include="..\..\src\Instruction_Logical.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
@@ -197,7 +198,6 @@
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_TEST.h" />
-    <ClInclude Include="..\..\src\Instruction_XOR.h" />
     <ClInclude Include="..\..\src\label.h" />
     <ClInclude Include="..\..\src\m.h" />
     <ClInclude Include="..\..\src\m16.h" />

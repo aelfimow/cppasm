@@ -20,3 +20,5 @@ examples/fpuconst/*.o
 examples/fpuconst/*.exe
 examples/clflush/*.o
 examples/clflush/*.exe
+examples/rdtsc/*.o
+examples/rdtsc/*.exe

@@ -43,6 +43,7 @@
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
+#include "Instruction_BSWAP.h"
 #include "Instruction_CLFLUSH.h"
 #include "Instruction_CMOVx.h"
 #include "Instruction_FST.h"
@@ -246,6 +247,7 @@ extern Instruction_NoOperands CQO;
 extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
 extern Instruction_XCHG XCHG;
+extern Instruction_BSWAP BSWAP;
 
 // Binary arithmetic instructions
 extern Instruction_ADD ADD;

@@ -189,6 +189,7 @@ Instruction_NoOperands CQO { asmout, "cqto" };
 Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout };
+Instruction_BSWAP BSWAP { asmout };
 
 // Binary arithmetic instructions
 Instruction_ADD ADD { asmout };

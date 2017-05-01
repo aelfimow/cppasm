@@ -49,6 +49,7 @@
 #include "Instruction_Jcc.h"
 #include "Instruction_Logical.h"
 #include "Instruction_MOV.h"
+#include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_POP.h"
 #include "Instruction_PUSH.h"
@@ -241,6 +242,8 @@ extern Instruction_NoOperands POPAD;
 extern Instruction_NoOperands CWD;
 extern Instruction_NoOperands CDQ;
 extern Instruction_NoOperands CQO;
+extern Instruction_MovWithExt MOVSX;
+extern Instruction_MovWithExt MOVZX;
 
 // Binary arithmetic instructions
 extern Instruction_ADD ADD;

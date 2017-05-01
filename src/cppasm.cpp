@@ -186,6 +186,8 @@ Instruction_NoOperands POPAD { asmout, "popal" };
 Instruction_NoOperands CWD { asmout, "cwtd" };
 Instruction_NoOperands CDQ { asmout, "cltd" };
 Instruction_NoOperands CQO { asmout, "cqto" };
+Instruction_MovWithExt MOVSX { asmout, "movs" };
+Instruction_MovWithExt MOVZX { asmout, "movz" };
 
 // Binary arithmetic instructions
 Instruction_ADD ADD { asmout };

@@ -138,6 +138,7 @@
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
+    <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
@@ -190,6 +191,7 @@
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_Logical.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
+    <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />

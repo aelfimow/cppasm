@@ -57,6 +57,7 @@
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_TEST.h"
+#include "Instruction_XCHG.h"
 
 extern asmstream asmout;
 
@@ -244,6 +245,7 @@ extern Instruction_NoOperands CDQ;
 extern Instruction_NoOperands CQO;
 extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
+extern Instruction_XCHG XCHG;
 
 // Binary arithmetic instructions
 extern Instruction_ADD ADD;

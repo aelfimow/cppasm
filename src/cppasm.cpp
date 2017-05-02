@@ -191,6 +191,7 @@ Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout };
 Instruction_BSWAP BSWAP { asmout };
 Instruction_XADD XADD { asmout };
+Instruction_CMPXCHG CMPXCHG { asmout };
 
 // Binary arithmetic instructions
 Instruction_ADD ADD { asmout };

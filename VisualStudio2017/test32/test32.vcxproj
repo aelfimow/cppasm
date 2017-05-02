@@ -152,6 +152,7 @@
     <ClCompile Include="..\..\src\Instruction_XADD.cpp" />
     <ClCompile Include="..\..\src\Instruction_XCHG.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
+    <ClCompile Include="..\..\src\m128.cpp" />
     <ClCompile Include="..\..\src\m16.cpp" />
     <ClCompile Include="..\..\src\m32.cpp" />
     <ClCompile Include="..\..\src\m64.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="..\..\src\Instruction_XCHG.h" />
     <ClInclude Include="..\..\src\label.h" />
     <ClInclude Include="..\..\src\m.h" />
+    <ClInclude Include="..\..\src\m128.h" />
     <ClInclude Include="..\..\src\m16.h" />
     <ClInclude Include="..\..\src\m32.h" />
     <ClInclude Include="..\..\src\m64.h" />

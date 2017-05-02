@@ -29,6 +29,7 @@
 #include "m32.h"
 #include "m64.h"
 #include "m80.h"
+#include "m128.h"
 #include "cr.h"
 #include "dr.h"
 #include "st.h"
@@ -47,6 +48,8 @@
 #include "Instruction_CLFLUSH.h"
 #include "Instruction_CMOVx.h"
 #include "Instruction_CMPXCHG.h"
+#include "Instruction_CMPXCHG8B.h"
+#include "Instruction_CMPXCHG16B.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_Logical.h"
@@ -252,6 +255,8 @@ extern Instruction_XCHG XCHG;
 extern Instruction_BSWAP BSWAP;
 extern Instruction_XADD XADD;
 extern Instruction_CMPXCHG CMPXCHG;
+extern Instruction_CMPXCHG8B CMPXCHG8B;
+extern Instruction_CMPXCHG16B CMPXCHG16B;
 
 // Binary arithmetic instructions
 extern Instruction_ADD ADD;

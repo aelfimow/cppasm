@@ -192,6 +192,8 @@ Instruction_XCHG XCHG { asmout };
 Instruction_BSWAP BSWAP { asmout };
 Instruction_XADD XADD { asmout };
 Instruction_CMPXCHG CMPXCHG { asmout };
+Instruction_CMPXCHG8B CMPXCHG8B { asmout };
+Instruction_CMPXCHG16B CMPXCHG16B { asmout };
 
 // Binary arithmetic instructions
 Instruction_ADD ADD { asmout };

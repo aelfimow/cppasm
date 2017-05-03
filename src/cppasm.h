@@ -121,23 +121,6 @@ extern r32 R13D;
 extern r32 R14D;
 extern r32 R15D;
 
-extern r32 EAX;
-extern r32 EBX;
-extern r32 ECX;
-extern r32 EDX;
-extern r32 EBP;
-extern r32 ESI;
-extern r32 EDI;
-extern r32 ESP;
-extern r32 R8D;
-extern r32 R9D;
-extern r32 R10D;
-extern r32 R11D;
-extern r32 R12D;
-extern r32 R13D;
-extern r32 R14D;
-extern r32 R15D;
-
 extern r64 RAX;
 extern r64 RBX;
 extern r64 RCX;

@@ -22,3 +22,5 @@ examples/clflush/*.o
 examples/clflush/*.exe
 examples/rdtsc/*.o
 examples/rdtsc/*.exe
+examples/xorshift-rng/*.o
+examples/xorshift-rng/*.exe

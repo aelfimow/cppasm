@@ -287,6 +287,8 @@ Instruction_Jcc JPO { asmout, "jpo" };
 Instruction_Jcc JS { asmout, "js" };
 Instruction_Jcc JZ { asmout, "jz" };
 Instruction_RET RET { asmout };
+Instruction_ENTER ENTER { asmout };
+Instruction_NoOperands LEAVE { asmout, "leave" };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };

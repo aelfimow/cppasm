@@ -138,6 +138,7 @@
     <ClCompile Include="..\..\src\Instruction_CMPXCHG.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG16B.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG8B.cpp" />
+    <ClCompile Include="..\..\src\Instruction_ENTER.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="..\..\src\Instruction_CMPXCHG.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG16B.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG8B.h" />
+    <ClInclude Include="..\..\src\Instruction_ENTER.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_Logical.h" />

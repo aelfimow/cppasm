@@ -265,6 +265,10 @@ extern Instruction_Shift SAL;
 extern Instruction_Shift SAR;
 extern Instruction_Shift SHL;
 extern Instruction_Shift SHR;
+extern Instruction_Shift RCL;
+extern Instruction_Shift RCR;
+extern Instruction_Shift ROL;
+extern Instruction_Shift ROR;
 
 // Bit and byte instructions
 extern Instruction_SETcc SETA;

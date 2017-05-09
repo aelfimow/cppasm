@@ -218,6 +218,10 @@ Instruction_Shift SAL { asmout, "sal" };
 Instruction_Shift SAR { asmout, "sar" };
 Instruction_Shift SHL { asmout, "shl" };
 Instruction_Shift SHR { asmout, "shr" };
+Instruction_Shift RCL { asmout, "rcl" };
+Instruction_Shift RCR { asmout, "rcr" };
+Instruction_Shift ROL { asmout, "rol" };
+Instruction_Shift ROR { asmout, "ror" };
 
 // Bit and byte instructions
 Instruction_SETcc SETA { asmout, "seta" };

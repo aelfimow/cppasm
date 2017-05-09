@@ -62,6 +62,7 @@
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
+#include "Instruction_ShiftDouble.h"
 #include "Instruction_TEST.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
@@ -269,6 +270,8 @@ extern Instruction_Shift RCL;
 extern Instruction_Shift RCR;
 extern Instruction_Shift ROL;
 extern Instruction_Shift ROR;
+extern Instruction_ShiftDouble SHLD;
+extern Instruction_ShiftDouble SHRD;
 
 // Bit and byte instructions
 extern Instruction_SETcc SETA;

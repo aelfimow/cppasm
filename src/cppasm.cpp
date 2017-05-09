@@ -222,6 +222,8 @@ Instruction_Shift RCL { asmout, "rcl" };
 Instruction_Shift RCR { asmout, "rcr" };
 Instruction_Shift ROL { asmout, "rol" };
 Instruction_Shift ROR { asmout, "ror" };
+Instruction_ShiftDouble SHLD { asmout, "shld" };
+Instruction_ShiftDouble SHRD { asmout, "shrd" };
 
 // Bit and byte instructions
 Instruction_SETcc SETA { asmout, "seta" };

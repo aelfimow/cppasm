@@ -9,6 +9,7 @@ class Instruction
         explicit Instruction(const std::string &mnem);
         explicit Instruction(const std::string &mnem, const std::string &op);
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2);
+        explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3);
 
         Instruction() = delete;
         Instruction(const Instruction &instance) = delete;
@@ -21,7 +22,7 @@ class Instruction
         ~Instruction();
 
     private:
-        std::string m_str;
+        const std::string m_str;
 };
 
 #endif

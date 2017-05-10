@@ -11,18 +11,18 @@ try
     argv = argv;
 
     // Function name to be generated
-    const std::string execute_cpuid { "execute_cpuid" };
-    comment("void execute_cpuid(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output)");
+    const std::string func_name { "execute_cpuid" };
+    comment("void " + func_name + "(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output)");
     comment("cmd1 is in %ecx");
     comment("cmd2 is in %edx");
     comment("p_output is in %r8");
 
-    global(execute_cpuid);
+    global(func_name);
 
     section code { ".text" };
     code.start();
 
-    label(execute_cpuid);
+    label(func_name);
 
     r64 &reg_to_save = RBX;
     PUSH(reg_to_save);  // this register must be saved (and restored later)
@@ -32,19 +32,23 @@ try
 
     CPUID();
 
-    r64 &buffer_reg = R8;
-    imm8 step { 8 };
-    m64 buffer(buffer_reg);
+    size_t offset { 0 };
+    size_t step { 8 };
+    m64 buffer { R8 };
 
+    buffer.disp(offset);
     MOV(buffer, RAX);
-    ADD(buffer_reg, step);
 
+    offset += step;
+    buffer.disp(offset);
     MOV(buffer, RBX);
-    ADD(buffer_reg, step);
 
+    offset += step;
+    buffer.disp(offset);
     MOV(buffer, RCX);
-    ADD(buffer_reg, step);
 
+    offset += step;
+    buffer.disp(offset);
     MOV(buffer, RDX);
 
     POP(reg_to_save);   // restore register

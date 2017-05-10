@@ -10,11 +10,8 @@ execute_cpuid:
 	mov %edx, %ecx
 	cpuid
 	mov %rax, (%r8)
-	add $0x08, %r8
-	mov %rbx, (%r8)
-	add $0x08, %r8
-	mov %rcx, (%r8)
-	add $0x08, %r8
-	mov %rdx, (%r8)
+	mov %rbx, 8(%r8)
+	mov %rcx, 16(%r8)
+	mov %rdx, 24(%r8)
 	pop %rbx
 	retq

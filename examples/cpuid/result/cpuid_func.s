@@ -1,13 +1,13 @@
-# void execute_cpuid(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output)
-# cmd1 is in %ecx
-# cmd2 is in %edx
+# void execute_cpuid(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output)
+# cmd1 is in %rcx
+# cmd2 is in %rdx
 # p_output is in %r8
 .global execute_cpuid
 .section .text
 execute_cpuid:
 	push %rbx
-	mov %ecx, %eax
-	mov %edx, %ecx
+	mov %rcx, %rax
+	mov %rdx, %rcx
 	cpuid
 	mov %rax, (%r8)
 	mov %rbx, 8(%r8)

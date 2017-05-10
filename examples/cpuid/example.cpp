@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <stdexcept>
 
-extern "C" void execute_cpuid(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output);
+extern "C" void execute_cpuid(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output);
 
 int main(int argc, char *argv[])
 try
@@ -10,7 +10,7 @@ try
     argc = argc;
     argv = argv;
 
-    uint32_t buffer[4U];
+    uint64_t buffer[4U];
 
     execute_cpuid(0, 0, buffer);
 

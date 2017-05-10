@@ -12,9 +12,9 @@ try
 
     // Function name to be generated
     const std::string func_name { "execute_cpuid" };
-    comment("void " + func_name + "(uint32_t cmd1, uint32_t cmd2, uint32_t *p_output)");
-    comment("cmd1 is in %ecx");
-    comment("cmd2 is in %edx");
+    comment("void " + func_name + "(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output)");
+    comment("cmd1 is in %rcx");
+    comment("cmd2 is in %rdx");
     comment("p_output is in %r8");
 
     global(func_name);
@@ -27,8 +27,8 @@ try
     r64 &reg_to_save = RBX;
     PUSH(reg_to_save);  // this register must be saved (and restored later)
 
-    MOV(EAX, ECX);  // cmd1
-    MOV(ECX, EDX);  // cmd2
+    MOV(RAX, RCX);  // cmd1
+    MOV(RCX, RDX);  // cmd2
 
     CPUID();
 

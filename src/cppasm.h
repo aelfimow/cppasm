@@ -53,6 +53,7 @@
 #include "Instruction_ENTER.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
+#include "Instruction_LEA.h"
 #include "Instruction_Logical.h"
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
@@ -358,6 +359,7 @@ extern Instruction_NoOperands STI;
 extern Instruction_NoOperands STD;
 
 // Miscelleneous instructions
+extern Instruction_LEA LEA;
 extern Instruction_NOP NOP;
 extern Instruction_NoOperands UD;
 extern Instruction_NoOperands UD1;

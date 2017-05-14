@@ -310,6 +310,7 @@ Instruction_NoOperands STI { asmout, "sti" };
 Instruction_NoOperands STD { asmout, "std" };
 
 // Miscelleneous instructions
+Instruction_LEA LEA { asmout };
 Instruction_NOP NOP { asmout };
 Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction_NoOperands UD1 { asmout, "ud1" };

@@ -148,6 +148,7 @@
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
+    <ClCompile Include="..\..\src\Instruction_PREFETCH.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
@@ -211,6 +212,7 @@
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
+    <ClInclude Include="..\..\src\Instruction_PREFETCH.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />

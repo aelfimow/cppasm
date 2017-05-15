@@ -319,6 +319,12 @@ Instruction_NoOperands CPUID { asmout, "cpuid" };
 Instruction_NoOperands XLAT { asmout, "xlat" };
 Instruction_CLFLUSH CLFLUSH { asmout, "clflush" };
 Instruction_CLFLUSH CLFLUSHOPT { asmout, "clflushopt" };
+Instruction_PREFETCH PREFETCHT0 { asmout, "prefetchnta" };
+Instruction_PREFETCH PREFETCHT1 { asmout, "prefetchnta" };
+Instruction_PREFETCH PREFETCHT2 { asmout, "prefetchnta" };
+Instruction_PREFETCH PREFETCHNTA { asmout, "prefetchnta" };
+Instruction_PREFETCH PREFETCHW { asmout, "prefetchw" };
+Instruction_PREFETCH PREFETCHWT1 { asmout, "prefetchwt1" };
 
 // x87 FPU data transfer instructions
 Instruction_FST FST { asmout, "fst" };

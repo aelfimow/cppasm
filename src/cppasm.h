@@ -59,6 +59,7 @@
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_POP.h"
+#include "Instruction_PREFETCH.h"
 #include "Instruction_PUSH.h"
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
@@ -368,6 +369,12 @@ extern Instruction_NoOperands CPUID;
 extern Instruction_NoOperands XLAT;
 extern Instruction_CLFLUSH CLFLUSH;
 extern Instruction_CLFLUSH CLFLUSHOPT;
+extern Instruction_PREFETCH PREFETCHT0;
+extern Instruction_PREFETCH PREFETCHT1;
+extern Instruction_PREFETCH PREFETCHT2;
+extern Instruction_PREFETCH PREFETCHNTA;
+extern Instruction_PREFETCH PREFETCHW;
+extern Instruction_PREFETCH PREFETCHWT1;
 
 // x87 FPU data transfer instructions
 extern Instruction_FST FST;

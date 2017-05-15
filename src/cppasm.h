@@ -365,6 +365,7 @@ extern Instruction_NoOperands UD;
 extern Instruction_NoOperands UD1;
 extern Instruction_NoOperands UD2;
 extern Instruction_NoOperands CPUID;
+extern Instruction_NoOperands XLAT;
 extern Instruction_CLFLUSH CLFLUSH;
 extern Instruction_CLFLUSH CLFLUSHOPT;
 

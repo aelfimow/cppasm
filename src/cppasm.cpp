@@ -316,6 +316,7 @@ Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction_NoOperands UD1 { asmout, "ud1" };
 Instruction_NoOperands UD2 { asmout, "ud2" };
 Instruction_NoOperands CPUID { asmout, "cpuid" };
+Instruction_NoOperands XLAT { asmout, "xlat" };
 Instruction_CLFLUSH CLFLUSH { asmout, "clflush" };
 Instruction_CLFLUSH CLFLUSHOPT { asmout, "clflushopt" };
 

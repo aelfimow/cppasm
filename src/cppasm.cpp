@@ -226,6 +226,10 @@ Instruction_ShiftDouble SHLD { asmout, "shld" };
 Instruction_ShiftDouble SHRD { asmout, "shrd" };
 
 // Bit and byte instructions
+Instruction_BitTest BT { asmout, "bt" };
+Instruction_BitTest BTC { asmout, "btc" };
+Instruction_BitTest BTR { asmout, "btr" };
+Instruction_BitTest BTS { asmout, "bts" };
 Instruction_SETcc SETA { asmout, "seta" };
 Instruction_SETcc SETAE { asmout, "setae" };
 Instruction_SETcc SETB { asmout, "setb" };

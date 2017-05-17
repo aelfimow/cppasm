@@ -44,6 +44,7 @@
 #include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
 #include "Instruction_ADD.h"
+#include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
 #include "Instruction_BSWAP.h"
 #include "Instruction_CLFLUSH.h"
@@ -281,6 +282,8 @@ extern Instruction_BitTest BT;
 extern Instruction_BitTest BTC;
 extern Instruction_BitTest BTR;
 extern Instruction_BitTest BTS;
+extern Instruction_BitScan BSF;
+extern Instruction_BitScan BSR;
 extern Instruction_SETcc SETA;
 extern Instruction_SETcc SETAE;
 extern Instruction_SETcc SETB;

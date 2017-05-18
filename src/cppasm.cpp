@@ -265,6 +265,7 @@ Instruction_SETcc SETZ { asmout, "setz" };
 Instruction_TEST TEST { asmout };
 
 // Control transfer instructions
+Instruction_JMP JMP { asmout, "jmp" };
 Instruction_Jcc JA { asmout, "ja" };
 Instruction_Jcc JAE { asmout, "jae" };
 Instruction_Jcc JB { asmout, "jb" };

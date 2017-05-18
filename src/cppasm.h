@@ -55,6 +55,7 @@
 #include "Instruction_ENTER.h"
 #include "Instruction_FST.h"
 #include "Instruction_Jcc.h"
+#include "Instruction_JMP.h"
 #include "Instruction_LEA.h"
 #include "Instruction_Logical.h"
 #include "Instruction_MOV.h"
@@ -317,6 +318,7 @@ extern Instruction_SETcc SETZ;
 extern Instruction_TEST TEST;
 
 // Control transfer instructions
+extern Instruction_JMP JMP;
 extern Instruction_Jcc JA;
 extern Instruction_Jcc JAE;
 extern Instruction_Jcc JB;

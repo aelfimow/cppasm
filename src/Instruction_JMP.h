@@ -16,6 +16,15 @@ class Instruction_JMP
 
         void operator()(std::string label_str);
 
+        void operator()(const r16 &op1);
+        void operator()(const m16 &op1);
+
+        void operator()(const r32 &op1);
+        void operator()(const m32 &op1);
+
+        void operator()(const r64 &op1);
+        void operator()(const m64 &op1);
+
         ~Instruction_JMP();
 
     private:

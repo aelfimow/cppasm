@@ -319,6 +319,7 @@ extern Instruction_TEST TEST;
 
 // Control transfer instructions
 extern Instruction_JMP JMP;
+extern Instruction_JMP JMP_FAR;
 extern Instruction_Jcc JA;
 extern Instruction_Jcc JAE;
 extern Instruction_Jcc JB;

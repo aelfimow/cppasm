@@ -134,6 +134,7 @@
     <ClCompile Include="..\..\src\Instruction_ADD.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitScan.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitTest.cpp" />
+    <ClCompile Include="..\..\src\Instruction_BOUND.cpp" />
     <ClCompile Include="..\..\src\Instruction_Branch.cpp" />
     <ClCompile Include="..\..\src\Instruction_BSWAP.cpp" />
     <ClCompile Include="..\..\src\Instruction_CLFLUSH.cpp" />
@@ -204,6 +205,7 @@
     <ClInclude Include="..\..\src\Instruction_ADD.h" />
     <ClInclude Include="..\..\src\Instruction_BitScan.h" />
     <ClInclude Include="..\..\src\Instruction_BitTest.h" />
+    <ClInclude Include="..\..\src\Instruction_BOUND.h" />
     <ClInclude Include="..\..\src\Instruction_Branch.h" />
     <ClInclude Include="..\..\src\Instruction_BSWAP.h" />
     <ClInclude Include="..\..\src\Instruction_CLFLUSH.h" />

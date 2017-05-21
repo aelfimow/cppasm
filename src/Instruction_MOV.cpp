@@ -22,7 +22,7 @@
 #include "Instruction_MOV.h"
 
 Instruction_MOV::Instruction_MOV(asmstream &s) :
-    m_asmout(s)
+    m_asmout { s }
 {
 }
 

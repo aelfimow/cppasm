@@ -54,6 +54,7 @@
 #include "Instruction_CMPXCHG16B.h"
 #include "Instruction_ENTER.h"
 #include "Instruction_FST.h"
+#include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_JMP.h"
 #include "Instruction_LEA.h"
@@ -358,6 +359,8 @@ extern Instruction_Jcc JZ;
 extern Instruction_RET RET;
 extern Instruction_ENTER ENTER;
 extern Instruction_NoOperands LEAVE;
+extern Instruction_INT INT;
+extern Instruction_NoOperands INTO;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

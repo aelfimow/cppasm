@@ -304,6 +304,8 @@ Instruction_Jcc JZ { asmout, "jz" };
 Instruction_RET RET { asmout };
 Instruction_ENTER ENTER { asmout };
 Instruction_NoOperands LEAVE { asmout, "leave" };
+Instruction_INT INT { asmout };
+Instruction_NoOperands INTO { asmout, "into" };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };

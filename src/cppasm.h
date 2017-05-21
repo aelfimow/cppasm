@@ -357,6 +357,8 @@ extern Instruction_Jcc JPE;
 extern Instruction_Jcc JPO;
 extern Instruction_Jcc JS;
 extern Instruction_Jcc JZ;
+extern Instruction_Branch CALL;
+extern Instruction_Branch CALL_FAR;
 extern Instruction_RET RET;
 extern Instruction_ENTER ENTER;
 extern Instruction_NoOperands LEAVE;

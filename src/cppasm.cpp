@@ -301,6 +301,8 @@ Instruction_Jcc JPE { asmout, "jpe" };
 Instruction_Jcc JPO { asmout, "jpo" };
 Instruction_Jcc JS { asmout, "js" };
 Instruction_Jcc JZ { asmout, "jz" };
+Instruction_Branch CALL { asmout, "call" };
+Instruction_Branch CALL_FAR { asmout, "lcall" };
 Instruction_RET RET { asmout };
 Instruction_ENTER ENTER { asmout };
 Instruction_NoOperands LEAVE { asmout, "leave" };

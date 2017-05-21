@@ -309,6 +309,9 @@ Instruction_NoOperands INTO { asmout, "into" };
 Instruction_NoOperands IRET { asmout, "iret" };
 Instruction_NoOperands IRETD { asmout, "iretl" };
 Instruction_NoOperands IRETQ { asmout, "iretq" };
+Instruction_LOOPcc LOOP { asmout, "loop" };
+Instruction_LOOPcc LOOPE { asmout, "loope" };
+Instruction_LOOPcc LOOPNE { asmout, "loopne" };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };

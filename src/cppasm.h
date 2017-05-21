@@ -59,6 +59,7 @@
 #include "Instruction_JMP.h"
 #include "Instruction_LEA.h"
 #include "Instruction_Logical.h"
+#include "Instruction_LOOPcc.h"
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
@@ -364,6 +365,9 @@ extern Instruction_NoOperands INTO;
 extern Instruction_NoOperands IRET;
 extern Instruction_NoOperands IRETD;
 extern Instruction_NoOperands IRETQ;
+extern Instruction_LOOPcc LOOP;
+extern Instruction_LOOPcc LOOPE;
+extern Instruction_LOOPcc LOOPNE;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

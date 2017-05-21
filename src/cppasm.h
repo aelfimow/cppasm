@@ -46,6 +46,7 @@
 #include "Instruction_ADD.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
+#include "Instruction_Branch.h"
 #include "Instruction_BSWAP.h"
 #include "Instruction_CLFLUSH.h"
 #include "Instruction_CMOVx.h"
@@ -56,7 +57,6 @@
 #include "Instruction_FST.h"
 #include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
-#include "Instruction_JMP.h"
 #include "Instruction_LEA.h"
 #include "Instruction_Logical.h"
 #include "Instruction_LOOPcc.h"
@@ -322,8 +322,8 @@ extern Instruction_SETcc SETZ;
 extern Instruction_TEST TEST;
 
 // Control transfer instructions
-extern Instruction_JMP JMP;
-extern Instruction_JMP JMP_FAR;
+extern Instruction_Branch JMP;
+extern Instruction_Branch JMP_FAR;
 extern Instruction_Jcc JA;
 extern Instruction_Jcc JAE;
 extern Instruction_Jcc JB;

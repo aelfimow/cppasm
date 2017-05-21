@@ -212,6 +212,7 @@ Instruction_NoOperands DAS { asmout, "das" };
 Instruction_Logical AND { asmout, "and" };
 Instruction_Logical OR { asmout, "or" };
 Instruction_Logical XOR { asmout, "xor" };
+Instruction_NOT NOT { asmout };
 
 // Shift and rotate instructions
 Instruction_Shift SAL { asmout, "sal" };

@@ -368,6 +368,8 @@ extern Instruction_NoOperands IRETQ;
 extern Instruction_LOOPcc LOOP;
 extern Instruction_LOOPcc LOOPE;
 extern Instruction_LOOPcc LOOPNE;
+extern Instruction_LOOPcc LOOPZ;
+extern Instruction_LOOPcc LOOPNZ;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

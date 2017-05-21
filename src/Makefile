@@ -42,6 +42,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_Logical.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MOV.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MovWithExt.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_NOP.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_NOT.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_POP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_PREFETCH.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_PUSH.o
@@ -113,6 +114,7 @@ all:
 	$(CXX) -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
 	$(CXX) -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
+	$(CXX) -c Instruction_NOT.cpp -o ${OBJDIR}/Instruction_NOT.o ${CXXFLAGS}
 	$(CXX) -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_PREFETCH.cpp -o ${OBJDIR}/Instruction_PREFETCH.o ${CXXFLAGS}
 	$(CXX) -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}

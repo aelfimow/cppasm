@@ -35,6 +35,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_CMPXCHG8B.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_CMPXCHG16B.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ENTER.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_FST.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_INT.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Jcc.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_JMP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_LEA.o
@@ -107,6 +108,7 @@ all:
 	$(CXX) -c Instruction_CMPXCHG16B.cpp -o ${OBJDIR}/Instruction_CMPXCHG16B.o ${CXXFLAGS}
 	$(CXX) -c Instruction_ENTER.cpp -o ${OBJDIR}/Instruction_ENTER.o ${CXXFLAGS}
 	$(CXX) -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
+	$(CXX) -c Instruction_INT.cpp -o ${OBJDIR}/Instruction_INT.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Jcc.cpp -o ${OBJDIR}/Instruction_Jcc.o ${CXXFLAGS}
 	$(CXX) -c Instruction_JMP.cpp -o ${OBJDIR}/Instruction_JMP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_LEA.cpp -o ${OBJDIR}/Instruction_LEA.o ${CXXFLAGS}

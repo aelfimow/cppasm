@@ -9,7 +9,7 @@
 #include "m32.h"
 #include "Instruction_BOUND.h"
 
-Instruction_BOUND::Instruction_BOUND(asmstream &s, std::string mnem) :
+Instruction_BOUND::Instruction_BOUND(asmstream &s) :
     m_asmout { s },
     m_mnem { "BOUND" }
 {

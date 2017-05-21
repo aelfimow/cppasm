@@ -27,6 +27,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_ADCX.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_ADD.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_BitScan.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_BitTest.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_BOUND.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Branch.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_BSWAP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_CLFLUSH.o
@@ -101,6 +102,7 @@ all:
 	$(CXX) -c Instruction_ADD.cpp -o ${OBJDIR}/Instruction_ADD.o ${CXXFLAGS}
 	$(CXX) -c Instruction_BitScan.cpp -o ${OBJDIR}/Instruction_BitScan.o ${CXXFLAGS}
 	$(CXX) -c Instruction_BitTest.cpp -o ${OBJDIR}/Instruction_BitTest.o ${CXXFLAGS}
+	$(CXX) -c Instruction_BOUND.cpp -o ${OBJDIR}/Instruction_BOUND.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Branch.cpp -o ${OBJDIR}/Instruction_Branch.o ${CXXFLAGS}
 	$(CXX) -c Instruction_BSWAP.cpp -o ${OBJDIR}/Instruction_BSWAP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_CLFLUSH.cpp -o ${OBJDIR}/Instruction_CLFLUSH.o ${CXXFLAGS}

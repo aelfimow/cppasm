@@ -306,6 +306,9 @@ Instruction_ENTER ENTER { asmout };
 Instruction_NoOperands LEAVE { asmout, "leave" };
 Instruction_INT INT { asmout };
 Instruction_NoOperands INTO { asmout, "into" };
+Instruction_NoOperands IRET { asmout, "iret" };
+Instruction_NoOperands IRETD { asmout, "iretl" };
+Instruction_NoOperands IRETQ { asmout, "iretq" };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };

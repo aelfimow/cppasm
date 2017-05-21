@@ -361,6 +361,9 @@ extern Instruction_ENTER ENTER;
 extern Instruction_NoOperands LEAVE;
 extern Instruction_INT INT;
 extern Instruction_NoOperands INTO;
+extern Instruction_NoOperands IRET;
+extern Instruction_NoOperands IRETD;
+extern Instruction_NoOperands IRETQ;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

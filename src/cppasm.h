@@ -46,6 +46,7 @@
 #include "Instruction_ADD.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
+#include "Instruction_BOUND.h"
 #include "Instruction_Branch.h"
 #include "Instruction_BSWAP.h"
 #include "Instruction_CLFLUSH.h"
@@ -372,6 +373,7 @@ extern Instruction_LOOPcc LOOPE;
 extern Instruction_LOOPcc LOOPNE;
 extern Instruction_LOOPcc LOOPZ;
 extern Instruction_LOOPcc LOOPNZ;
+extern Instruction_BOUND BOUND;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

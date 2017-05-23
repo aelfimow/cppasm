@@ -327,6 +327,10 @@ Instruction_NoOperands CMPSB { asmout, "cmpsb" };
 Instruction_NoOperands CMPSW { asmout, "cmpsw" };
 Instruction_NoOperands CMPSD { asmout, "cmpsl" };
 Instruction_NoOperands CMPSQ { asmout, "cmpsq" };
+Instruction_NoOperands SCASB { asmout, "scasb" };
+Instruction_NoOperands SCASW { asmout, "scasw" };
+Instruction_NoOperands SCASD { asmout, "scasl" };
+Instruction_NoOperands SCASQ { asmout, "scasq" };
 
 // I/O instructions
 Instruction_IN IN { asmout };

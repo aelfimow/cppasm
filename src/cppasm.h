@@ -386,6 +386,10 @@ extern Instruction_NoOperands CMPSB;
 extern Instruction_NoOperands CMPSW;
 extern Instruction_NoOperands CMPSD;
 extern Instruction_NoOperands CMPSQ;
+extern Instruction_NoOperands SCASB;
+extern Instruction_NoOperands SCASW;
+extern Instruction_NoOperands SCASD;
+extern Instruction_NoOperands SCASQ;
 
 // I/O instructions
 extern Instruction_IN IN;

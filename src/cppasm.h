@@ -56,6 +56,7 @@
 #include "Instruction_CMPXCHG16B.h"
 #include "Instruction_ENTER.h"
 #include "Instruction_FST.h"
+#include "Instruction_IN.h"
 #include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_LEA.h"
@@ -65,6 +66,7 @@
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_NOT.h"
+#include "Instruction_OUT.h"
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
 #include "Instruction_PUSH.h"
@@ -376,9 +378,11 @@ extern Instruction_LOOPcc LOOPNZ;
 extern Instruction_BOUND BOUND;
 
 // I/O instructions
+extern Instruction_IN IN;
 extern Instruction_NoOperands INSB;
 extern Instruction_NoOperands INSW;
 extern Instruction_NoOperands INSD;
+extern Instruction_OUT OUT;
 extern Instruction_NoOperands OUTSB;
 extern Instruction_NoOperands OUTSW;
 extern Instruction_NoOperands OUTSD;

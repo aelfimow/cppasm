@@ -318,6 +318,12 @@ Instruction_LOOPcc LOOPZ { asmout, "loopz" };
 Instruction_LOOPcc LOOPNZ { asmout, "loopnz" };
 Instruction_BOUND BOUND { asmout };
 
+// String instructions
+Instruction_NoOperands MOVSB { asmout, "movsb" };
+Instruction_NoOperands MOVSW { asmout, "movsw" };
+Instruction_NoOperands MOVSD { asmout, "movsl" };
+Instruction_NoOperands MOVSQ { asmout, "movsq" };
+
 // I/O instructions
 Instruction_IN IN { asmout };
 Instruction_NoOperands INSB { asmout, "insb" };

@@ -377,6 +377,12 @@ extern Instruction_LOOPcc LOOPZ;
 extern Instruction_LOOPcc LOOPNZ;
 extern Instruction_BOUND BOUND;
 
+// String instructions
+extern Instruction_NoOperands MOVSB;
+extern Instruction_NoOperands MOVSW;
+extern Instruction_NoOperands MOVSD;
+extern Instruction_NoOperands MOVSQ;
+
 // I/O instructions
 extern Instruction_IN IN;
 extern Instruction_NoOperands INSB;

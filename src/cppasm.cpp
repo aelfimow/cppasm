@@ -333,6 +333,8 @@ Instruction_NoOperands CLC { asmout, "clc" };
 Instruction_NoOperands CLD { asmout, "cld" };
 Instruction_NoOperands CLI { asmout, "cli" };
 Instruction_NoOperands CMC { asmout, "cmc" };
+Instruction_NoOperands LAHF { asmout, "lahf" };
+Instruction_NoOperands SAHF { asmout, "sahf" };
 Instruction_NoOperands PUSHF { asmout, "pushf" };
 Instruction_NoOperands POPF { asmout, "popf" };
 Instruction_NoOperands POPFD { asmout, "popfl" };

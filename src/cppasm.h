@@ -392,6 +392,8 @@ extern Instruction_NoOperands CLC;
 extern Instruction_NoOperands CLD;
 extern Instruction_NoOperands CLI;
 extern Instruction_NoOperands CMC;
+extern Instruction_NoOperands LAHF;
+extern Instruction_NoOperands SAHF;
 extern Instruction_NoOperands PUSHF;
 extern Instruction_NoOperands POPF;
 extern Instruction_NoOperands POPFD;

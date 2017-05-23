@@ -331,6 +331,10 @@ Instruction_NoOperands SCASB { asmout, "scasb" };
 Instruction_NoOperands SCASW { asmout, "scasw" };
 Instruction_NoOperands SCASD { asmout, "scasl" };
 Instruction_NoOperands SCASQ { asmout, "scasq" };
+Instruction_NoOperands LODSB { asmout, "lodsb" };
+Instruction_NoOperands LODSW { asmout, "lodsw" };
+Instruction_NoOperands LODSD { asmout, "lodsl" };
+Instruction_NoOperands LODSQ { asmout, "lodsq" };
 
 // I/O instructions
 Instruction_IN IN { asmout };

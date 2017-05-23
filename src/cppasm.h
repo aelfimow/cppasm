@@ -390,6 +390,10 @@ extern Instruction_NoOperands SCASB;
 extern Instruction_NoOperands SCASW;
 extern Instruction_NoOperands SCASD;
 extern Instruction_NoOperands SCASQ;
+extern Instruction_NoOperands LODSB;
+extern Instruction_NoOperands LODSW;
+extern Instruction_NoOperands LODSD;
+extern Instruction_NoOperands LODSQ;
 
 // I/O instructions
 extern Instruction_IN IN;

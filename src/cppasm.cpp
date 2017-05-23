@@ -318,6 +318,14 @@ Instruction_LOOPcc LOOPZ { asmout, "loopz" };
 Instruction_LOOPcc LOOPNZ { asmout, "loopnz" };
 Instruction_BOUND BOUND { asmout };
 
+// I/O instructions
+Instruction_NoOperands INSB { asmout, "insb" };
+Instruction_NoOperands INSW { asmout, "insw" };
+Instruction_NoOperands INSD { asmout, "insl" };
+Instruction_NoOperands OUTSB { asmout, "outsb" };
+Instruction_NoOperands OUTSW { asmout, "outsw" };
+Instruction_NoOperands OUTSD { asmout, "outsl" };
+
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };
 Instruction_NoOperands CLD { asmout, "cld" };

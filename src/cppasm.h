@@ -375,6 +375,14 @@ extern Instruction_LOOPcc LOOPZ;
 extern Instruction_LOOPcc LOOPNZ;
 extern Instruction_BOUND BOUND;
 
+// I/O instructions
+extern Instruction_NoOperands INSB;
+extern Instruction_NoOperands INSW;
+extern Instruction_NoOperands INSD;
+extern Instruction_NoOperands OUTSB;
+extern Instruction_NoOperands OUTSW;
+extern Instruction_NoOperands OUTSD;
+
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;
 extern Instruction_NoOperands CLD;

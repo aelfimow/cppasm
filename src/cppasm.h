@@ -394,6 +394,10 @@ extern Instruction_NoOperands LODSB;
 extern Instruction_NoOperands LODSW;
 extern Instruction_NoOperands LODSD;
 extern Instruction_NoOperands LODSQ;
+extern Instruction_NoOperands STOSB;
+extern Instruction_NoOperands STOSW;
+extern Instruction_NoOperands STOSD;
+extern Instruction_NoOperands STOSQ;
 
 // I/O instructions
 extern Instruction_IN IN;

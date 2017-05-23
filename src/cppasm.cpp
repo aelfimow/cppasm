@@ -335,6 +335,10 @@ Instruction_NoOperands LODSB { asmout, "lodsb" };
 Instruction_NoOperands LODSW { asmout, "lodsw" };
 Instruction_NoOperands LODSD { asmout, "lodsl" };
 Instruction_NoOperands LODSQ { asmout, "lodsq" };
+Instruction_NoOperands STOSB { asmout, "stosb" };
+Instruction_NoOperands STOSW { asmout, "stosw" };
+Instruction_NoOperands STOSD { asmout, "stosl" };
+Instruction_NoOperands STOSQ { asmout, "stosq" };
 
 // I/O instructions
 Instruction_IN IN { asmout };

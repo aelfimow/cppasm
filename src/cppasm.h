@@ -382,6 +382,10 @@ extern Instruction_NoOperands MOVSB;
 extern Instruction_NoOperands MOVSW;
 extern Instruction_NoOperands MOVSD;
 extern Instruction_NoOperands MOVSQ;
+extern Instruction_NoOperands CMPSB;
+extern Instruction_NoOperands CMPSW;
+extern Instruction_NoOperands CMPSD;
+extern Instruction_NoOperands CMPSQ;
 
 // I/O instructions
 extern Instruction_IN IN;

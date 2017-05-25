@@ -72,6 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>..\..\src;$(VC_IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)..\..\src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -163,6 +166,7 @@
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
+    <ClCompile Include="..\..\src\Instruction_StringOp.cpp" />
     <ClCompile Include="..\..\src\Instruction_TEST.cpp" />
     <ClCompile Include="..\..\src\Instruction_XADD.cpp" />
     <ClCompile Include="..\..\src\Instruction_XCHG.cpp" />
@@ -236,6 +240,7 @@
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />
+    <ClInclude Include="..\..\src\Instruction_StringOp.h" />
     <ClInclude Include="..\..\src\Instruction_TEST.h" />
     <ClInclude Include="..\..\src\Instruction_XADD.h" />
     <ClInclude Include="..\..\src\Instruction_XCHG.h" />

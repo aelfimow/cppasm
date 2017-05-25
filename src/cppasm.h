@@ -70,6 +70,7 @@
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
 #include "Instruction_PUSH.h"
+#include "Instruction_REP.h"
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
@@ -399,6 +400,11 @@ extern Instruction_StringOp STOSB;
 extern Instruction_StringOp STOSW;
 extern Instruction_StringOp STOSD;
 extern Instruction_StringOp STOSQ;
+extern Instruction_REP REP;
+extern Instruction_REP REPE;
+extern Instruction_REP REPZ;
+extern Instruction_REP REPNE;
+extern Instruction_REP REPNZ;
 
 // I/O instructions
 extern Instruction_IN IN;

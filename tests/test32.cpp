@@ -97,6 +97,88 @@ try
 
     MONITOR();
 
+    {
+        REP(MOVSB);
+        REP(MOVSW);
+        REP(MOVSD);
+        REP(CMPSB);
+        REP(CMPSW);
+        REP(CMPSD);
+        REP(SCASB);
+        REP(SCASW);
+        REP(SCASD);
+        REP(LODSB);
+        REP(LODSW);
+        REP(LODSD);
+        REP(STOSB);
+        REP(STOSW);
+        REP(STOSD);
+
+        REPZ(MOVSB);
+        REPZ(MOVSW);
+        REPZ(MOVSD);
+        REPZ(CMPSB);
+        REPZ(CMPSW);
+        REPZ(CMPSD);
+        REPZ(SCASB);
+        REPZ(SCASW);
+        REPZ(SCASD);
+        REPZ(LODSB);
+        REPZ(LODSW);
+        REPZ(LODSD);
+        REPZ(STOSB);
+        REPZ(STOSW);
+        REPZ(STOSD);
+
+        REPE(MOVSB);
+        REPE(MOVSW);
+        REPE(MOVSD);
+        REPE(CMPSB);
+        REPE(CMPSW);
+        REPE(CMPSD);
+        REPE(SCASB);
+        REPE(SCASW);
+        REPE(SCASD);
+        REPE(LODSB);
+        REPE(LODSW);
+        REPE(LODSD);
+        REPE(STOSB);
+        REPE(STOSW);
+        REPE(STOSD);
+
+        REPNZ(MOVSB);
+        REPNZ(MOVSW);
+        REPNZ(MOVSD);
+        REPNZ(CMPSB);
+        REPNZ(CMPSW);
+        REPNZ(CMPSD);
+        REPNZ(SCASB);
+        REPNZ(SCASW);
+        REPNZ(SCASD);
+        REPNZ(LODSB);
+        REPNZ(LODSW);
+        REPNZ(LODSD);
+        REPNZ(STOSB);
+        REPNZ(STOSW);
+        REPNZ(STOSD);
+
+        REPNE(MOVSB);
+        REPNE(MOVSW);
+        REPNE(MOVSD);
+        REPNE(CMPSB);
+        REPNE(CMPSW);
+        REPNE(CMPSD);
+        REPNE(SCASB);
+        REPNE(SCASW);
+        REPNE(SCASD);
+        REPNE(LODSB);
+        REPNE(LODSW);
+        REPNE(LODSD);
+        REPNE(STOSB);
+        REPNE(STOSW);
+        REPNE(STOSD);
+    }
+
     return EXIT_SUCCESS;
 }
 catch (...)

@@ -15,7 +15,12 @@ class asmstream
 
         void operator<<(const Instruction &instr);
 
+        void prefix(std::string str);
+
         ~asmstream();
+
+    private:
+        bool m_prefix;
 };
 
 #endif

@@ -4,7 +4,7 @@
 #include "Instruction_NoOperands.h"
 
 Instruction_NoOperands::Instruction_NoOperands(asmstream &s, const std::string mnem) :
-    m_asmout(s),
+    m_asmout { s },
     m_mnem { mnem }
 {
 }

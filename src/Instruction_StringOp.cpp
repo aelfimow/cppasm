@@ -4,7 +4,7 @@
 #include "Instruction_StringOp.h"
 
 Instruction_StringOp::Instruction_StringOp(asmstream &s, const std::string mnem) :
-    m_asmout(s),
+    m_asmout { s },
     m_mnem { mnem }
 {
 }

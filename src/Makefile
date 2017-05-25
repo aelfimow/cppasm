@@ -41,6 +41,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_IN.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_INT.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Jcc.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_LEA.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_LoadFarPointer.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Logical.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_LOOPcc.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_MOV.o
@@ -120,6 +121,7 @@ all:
 	$(CXX) -c Instruction_INT.cpp -o ${OBJDIR}/Instruction_INT.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Jcc.cpp -o ${OBJDIR}/Instruction_Jcc.o ${CXXFLAGS}
 	$(CXX) -c Instruction_LEA.cpp -o ${OBJDIR}/Instruction_LEA.o ${CXXFLAGS}
+	$(CXX) -c Instruction_LoadFarPointer.cpp -o ${OBJDIR}/Instruction_LoadFarPointer.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Logical.cpp -o ${OBJDIR}/Instruction_Logical.o ${CXXFLAGS}
 	$(CXX) -c Instruction_LOOPcc.cpp -o ${OBJDIR}/Instruction_LOOPcc.o ${CXXFLAGS}
 	$(CXX) -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}

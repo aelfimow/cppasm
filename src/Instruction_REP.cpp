@@ -12,6 +12,7 @@ Instruction_REP::Instruction_REP(asmstream &s, const std::string mnem) :
 
 void Instruction_REP::operator()(Instruction_StringOp &StrOp)
 {
+    m_asmout.prefix(m_mnem);
     StrOp();
 }
 

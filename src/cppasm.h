@@ -60,6 +60,7 @@
 #include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_LEA.h"
+#include "Instruction_LoadFarPointer.h"
 #include "Instruction_Logical.h"
 #include "Instruction_LOOPcc.h"
 #include "Instruction_MOV.h"
@@ -430,6 +431,13 @@ extern Instruction_NoOperands POPFQ;
 extern Instruction_NoOperands STC;
 extern Instruction_NoOperands STI;
 extern Instruction_NoOperands STD;
+
+// Segment register instructions
+extern Instruction_LoadFarPointer LDS;
+extern Instruction_LoadFarPointer LES;
+extern Instruction_LoadFarPointer LFS;
+extern Instruction_LoadFarPointer LGS;
+extern Instruction_LoadFarPointer LSS;
 
 // Miscelleneous instructions
 extern Instruction_LEA LEA;

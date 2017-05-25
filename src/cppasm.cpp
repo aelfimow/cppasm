@@ -370,6 +370,13 @@ Instruction_NoOperands STC { asmout, "stc" };
 Instruction_NoOperands STI { asmout, "sti" };
 Instruction_NoOperands STD { asmout, "std" };
 
+// Segment register instructions
+Instruction_LoadFarPointer LDS { asmout, "lds" };
+Instruction_LoadFarPointer LES { asmout, "les" };
+Instruction_LoadFarPointer LFS { asmout, "lfs" };
+Instruction_LoadFarPointer LGS { asmout, "lgs" };
+Instruction_LoadFarPointer LSS { asmout, "lss" };
+
 // Miscelleneous instructions
 Instruction_LEA LEA { asmout };
 Instruction_NOP NOP { asmout };

@@ -41,9 +41,8 @@
 #include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
-#include "Instruction_ADC.h"
 #include "Instruction_ADCX.h"
-#include "Instruction_ADD.h"
+#include "Instruction_Arithmetic.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
 #include "Instruction_BOUND.h"
@@ -258,8 +257,11 @@ extern Instruction_CMPXCHG8B CMPXCHG8B;
 extern Instruction_CMPXCHG16B CMPXCHG16B;
 
 // Binary arithmetic instructions
-extern Instruction_ADD ADD;
-extern Instruction_ADC ADC;
+extern Instruction_Arithmetic ADD;
+extern Instruction_Arithmetic ADC;
+extern Instruction_Arithmetic SUB;
+extern Instruction_Arithmetic SBB;
+extern Instruction_Arithmetic CMP;
 extern Instruction_ADCX ADCX;
 
 // Decimal arithmetic instructions

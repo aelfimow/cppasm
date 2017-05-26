@@ -196,8 +196,11 @@ Instruction_CMPXCHG8B CMPXCHG8B { asmout };
 Instruction_CMPXCHG16B CMPXCHG16B { asmout };
 
 // Binary arithmetic instructions
-Instruction_ADD ADD { asmout };
-Instruction_ADC ADC { asmout };
+Instruction_Arithmetic ADD { asmout, "add" };
+Instruction_Arithmetic ADC { asmout, "adc" };
+Instruction_Arithmetic SUB { asmout, "sub" };
+Instruction_Arithmetic SBB { asmout, "sbb" };
+Instruction_Arithmetic CMP { asmout, "cmp" };
 Instruction_ADCX ADCX { asmout };
 
 // Decimal arithmetic instructions

@@ -41,7 +41,7 @@
 #include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
-#include "Instruction_ADCX.h"
+#include "Instruction_ADX.h"
 #include "Instruction_Arithmetic.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
@@ -262,7 +262,8 @@ extern Instruction_Arithmetic ADC;
 extern Instruction_Arithmetic SUB;
 extern Instruction_Arithmetic SBB;
 extern Instruction_Arithmetic CMP;
-extern Instruction_ADCX ADCX;
+extern Instruction_ADX ADCX;
+extern Instruction_ADX ADOX;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;

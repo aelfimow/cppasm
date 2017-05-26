@@ -201,7 +201,8 @@ Instruction_Arithmetic ADC { asmout, "adc" };
 Instruction_Arithmetic SUB { asmout, "sub" };
 Instruction_Arithmetic SBB { asmout, "sbb" };
 Instruction_Arithmetic CMP { asmout, "cmp" };
-Instruction_ADCX ADCX { asmout };
+Instruction_ADX ADCX { asmout, "adcx" };
+Instruction_ADX ADOX { asmout, "adox" };
 
 // Decimal arithmetic instructions
 Instruction_NoOperands AAA { asmout, "aaa" };

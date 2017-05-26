@@ -22,7 +22,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_NoOperands.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAD.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_AAM.o
-CPPASM_OBJ += ${OBJDIR}/Instruction_ADCX.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_ADX.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_Arithmetic.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_BitScan.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_BitTest.o
@@ -101,7 +101,7 @@ all:
 	$(CXX) -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAD.cpp -o ${OBJDIR}/Instruction_AAD.o ${CXXFLAGS}
 	$(CXX) -c Instruction_AAM.cpp -o ${OBJDIR}/Instruction_AAM.o ${CXXFLAGS}
-	$(CXX) -c Instruction_ADCX.cpp -o ${OBJDIR}/Instruction_ADCX.o ${CXXFLAGS}
+	$(CXX) -c Instruction_ADX.cpp -o ${OBJDIR}/Instruction_ADX.o ${CXXFLAGS}
 	$(CXX) -c Instruction_Arithmetic.cpp -o ${OBJDIR}/Instruction_Arithmetic.o ${CXXFLAGS}
 	$(CXX) -c Instruction_BitScan.cpp -o ${OBJDIR}/Instruction_BitScan.o ${CXXFLAGS}
 	$(CXX) -c Instruction_BitTest.cpp -o ${OBJDIR}/Instruction_BitTest.o ${CXXFLAGS}

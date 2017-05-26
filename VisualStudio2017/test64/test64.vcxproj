@@ -132,7 +132,7 @@
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\Instruction_AAD.cpp" />
     <ClCompile Include="..\..\src\Instruction_AAM.cpp" />
-    <ClCompile Include="..\..\src\Instruction_ADCX.cpp" />
+    <ClCompile Include="..\..\src\Instruction_ADX.cpp" />
     <ClCompile Include="..\..\src\Instruction_Arithmetic.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitScan.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitTest.cpp" />
@@ -207,7 +207,7 @@
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction_AAD.h" />
     <ClInclude Include="..\..\src\Instruction_AAM.h" />
-    <ClInclude Include="..\..\src\Instruction_ADCX.h" />
+    <ClInclude Include="..\..\src\Instruction_ADX.h" />
     <ClInclude Include="..\..\src\Instruction_Arithmetic.h" />
     <ClInclude Include="..\..\src\Instruction_BitScan.h" />
     <ClInclude Include="..\..\src\Instruction_BitTest.h" />

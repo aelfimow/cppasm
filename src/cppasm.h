@@ -62,6 +62,7 @@
 #include "Instruction_LoadFarPointer.h"
 #include "Instruction_Logical.h"
 #include "Instruction_LOOPcc.h"
+#include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
@@ -264,6 +265,10 @@ extern Instruction_Arithmetic SBB;
 extern Instruction_Arithmetic CMP;
 extern Instruction_ADX ADCX;
 extern Instruction_ADX ADOX;
+extern Instruction_MemOperand MUL;
+extern Instruction_MemOperand IMUL;
+extern Instruction_MemOperand DIV;
+extern Instruction_MemOperand IDIV;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;

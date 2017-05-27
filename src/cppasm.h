@@ -66,7 +66,6 @@
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
-#include "Instruction_NOT.h"
 #include "Instruction_OUT.h"
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
@@ -286,7 +285,7 @@ extern Instruction_NoOperands DAS;
 extern Instruction_Logical AND;
 extern Instruction_Logical OR;
 extern Instruction_Logical XOR;
-extern Instruction_NOT NOT;
+extern Instruction_RegMemOperand NOT;
 
 // Shift and rotate instructions
 extern Instruction_Shift SAL;

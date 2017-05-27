@@ -158,7 +158,6 @@
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_NOT.cpp" />
     <ClCompile Include="..\..\src\Instruction_OUT.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_PREFETCH.cpp" />
@@ -235,7 +234,6 @@
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
-    <ClInclude Include="..\..\src\Instruction_NOT.h" />
     <ClInclude Include="..\..\src\Instruction_OUT.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_PREFETCH.h" />

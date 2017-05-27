@@ -52,6 +52,7 @@ CPPASM_OBJ += ${OBJDIR}/Instruction_OUT.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_POP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_PREFETCH.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_PUSH.o
+CPPASM_OBJ += ${OBJDIR}/Instruction_RegMemOperand.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_REP.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_RET.o
 CPPASM_OBJ += ${OBJDIR}/Instruction_SETcc.o
@@ -132,6 +133,7 @@ all:
 	$(CXX) -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_PREFETCH.cpp -o ${OBJDIR}/Instruction_PREFETCH.o ${CXXFLAGS}
 	$(CXX) -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}
+	$(CXX) -c Instruction_RegMemOperand.cpp -o ${OBJDIR}/Instruction_RegMemOperand.o ${CXXFLAGS}
 	$(CXX) -c Instruction_REP.cpp -o ${OBJDIR}/Instruction_REP.o ${CXXFLAGS}
 	$(CXX) -c Instruction_RET.cpp -o ${OBJDIR}/Instruction_RET.o ${CXXFLAGS}
 	$(CXX) -c Instruction_SETcc.cpp -o ${OBJDIR}/Instruction_SETcc.o ${CXXFLAGS}

@@ -271,6 +271,8 @@ extern Instruction_RegMemOperand IMUL;
 extern Instruction_RegMemOperand DIV;
 extern Instruction_RegMemOperand IDIV;
 extern Instruction_RegMemOperand NEG;
+extern Instruction_RegMemOperand INC;
+extern Instruction_RegMemOperand DEC;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;

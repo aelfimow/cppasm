@@ -207,6 +207,7 @@ Instruction_RegMemOperand MUL { asmout, "mul" };
 Instruction_RegMemOperand IMUL { asmout, "imul" };
 Instruction_RegMemOperand DIV { asmout, "div" };
 Instruction_RegMemOperand IDIV { asmout, "idiv" };
+Instruction_RegMemOperand NEG { asmout, "neg" };
 
 // Decimal arithmetic instructions
 Instruction_NoOperands AAA { asmout, "aaa" };

@@ -203,10 +203,10 @@ Instruction_Arithmetic SBB { asmout, "sbb" };
 Instruction_Arithmetic CMP { asmout, "cmp" };
 Instruction_ADX ADCX { asmout, "adcx" };
 Instruction_ADX ADOX { asmout, "adox" };
-Instruction_MemOperand MUL { asmout, "mul" };
-Instruction_MemOperand IMUL { asmout, "imul" };
-Instruction_MemOperand DIV { asmout, "div" };
-Instruction_MemOperand IDIV { asmout, "idiv" };
+Instruction_RegMemOperand MUL { asmout, "mul" };
+Instruction_RegMemOperand IMUL { asmout, "imul" };
+Instruction_RegMemOperand DIV { asmout, "div" };
+Instruction_RegMemOperand IDIV { asmout, "idiv" };
 
 // Decimal arithmetic instructions
 Instruction_NoOperands AAA { asmout, "aaa" };

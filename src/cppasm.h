@@ -71,6 +71,7 @@
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
 #include "Instruction_PUSH.h"
+#include "Instruction_RegMemOperand.h"
 #include "Instruction_REP.h"
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
@@ -265,10 +266,10 @@ extern Instruction_Arithmetic SBB;
 extern Instruction_Arithmetic CMP;
 extern Instruction_ADX ADCX;
 extern Instruction_ADX ADOX;
-extern Instruction_MemOperand MUL;
-extern Instruction_MemOperand IMUL;
-extern Instruction_MemOperand DIV;
-extern Instruction_MemOperand IDIV;
+extern Instruction_RegMemOperand MUL;
+extern Instruction_RegMemOperand IMUL;
+extern Instruction_RegMemOperand DIV;
+extern Instruction_RegMemOperand IDIV;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;

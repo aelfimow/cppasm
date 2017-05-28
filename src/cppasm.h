@@ -534,6 +534,8 @@ extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands CLTS;
 extern Instruction_NoOperands HLT;
 extern Instruction_NoOperands RSM;
+extern Instruction_NoOperands RDMSR;
+extern Instruction_NoOperands WRMSR;
 extern Instruction_NoOperands RDPMC;
 extern Instruction_NoOperands RDTSC;
 extern Instruction_NoOperands RDTSCP;

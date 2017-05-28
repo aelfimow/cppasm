@@ -70,6 +70,7 @@
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
 #include "Instruction_PUSH.h"
+#include "Instruction_RDRAND.h"
 #include "Instruction_RegMemOperand.h"
 #include "Instruction_REP.h"
 #include "Instruction_RET.h"
@@ -466,6 +467,10 @@ extern Instruction_PREFETCH PREFETCHT2;
 extern Instruction_PREFETCH PREFETCHNTA;
 extern Instruction_PREFETCH PREFETCHW;
 extern Instruction_PREFETCH PREFETCHWT1;
+
+// Random number generator instructions
+extern Instruction_RDRAND RDRAND;
+extern Instruction_RDRAND RDSEED;
 
 // x87 FPU data transfer instructions
 extern Instruction_FST FST;

@@ -405,6 +405,10 @@ Instruction_PREFETCH PREFETCHNTA { asmout, "prefetchnta" };
 Instruction_PREFETCH PREFETCHW { asmout, "prefetchw" };
 Instruction_PREFETCH PREFETCHWT1 { asmout, "prefetchwt1" };
 
+// Random number generator instructions
+Instruction_RDRAND RDRAND { asmout, "rdrand" };
+Instruction_RDRAND RDSEED { asmout, "rdseed" };
+
 // x87 FPU data transfer instructions
 Instruction_FST FST { asmout, "fst" };
 Instruction_FST FSTP { asmout, "fstp" };

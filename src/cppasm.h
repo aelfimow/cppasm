@@ -70,6 +70,7 @@
 #include "Instruction_OUT.h"
 #include "Instruction_POP.h"
 #include "Instruction_PREFETCH.h"
+#include "Instruction_Prefix.h"
 #include "Instruction_PUSH.h"
 #include "Instruction_RDRAND.h"
 #include "Instruction_RegMemOperand.h"
@@ -532,6 +533,8 @@ extern Instruction_NoOperands EMMS;
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands CLTS;
+extern Instruction_MemOperand INVLPG;
+extern Instruction_Prefix LOCK;
 extern Instruction_NoOperands HLT;
 extern Instruction_NoOperands RSM;
 extern Instruction_NoOperands RDMSR;

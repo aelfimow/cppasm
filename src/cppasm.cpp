@@ -468,6 +468,8 @@ Instruction_NoOperands EMMS { asmout, "emms" };
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands CLTS { asmout, "clts" };
+Instruction_MemOperand INVLPG { asmout, "invlpg" };
+Instruction_Prefix LOCK { asmout, "lock" };
 Instruction_NoOperands HLT { asmout, "hlt" };
 Instruction_NoOperands RSM { asmout, "rsm" };
 Instruction_NoOperands RDMSR { asmout, "rdmsr" };

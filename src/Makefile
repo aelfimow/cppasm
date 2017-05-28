@@ -37,6 +37,7 @@ all:
 	${CXX} -c Instruction_CMPXCHG16B.cpp -o ${OBJDIR}/Instruction_CMPXCHG16B.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG8B.cpp -o ${OBJDIR}/Instruction_CMPXCHG8B.o ${CXXFLAGS}
 	${CXX} -c Instruction_ENTER.cpp -o ${OBJDIR}/Instruction_ENTER.o ${CXXFLAGS}
+	${CXX} -c Instruction_FSGSBASE.cpp -o ${OBJDIR}/Instruction_FSGSBASE.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	${CXX} -c Instruction_IN.cpp -o ${OBJDIR}/Instruction_IN.o ${CXXFLAGS}
 	${CXX} -c Instruction_INT.cpp -o ${OBJDIR}/Instruction_INT.o ${CXXFLAGS}

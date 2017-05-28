@@ -54,6 +54,7 @@ all:
 	${CXX} -c Instruction_OUT.cpp -o ${OBJDIR}/Instruction_OUT.o ${CXXFLAGS}
 	${CXX} -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	${CXX} -c Instruction_PREFETCH.cpp -o ${OBJDIR}/Instruction_PREFETCH.o ${CXXFLAGS}
+	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}
 	${CXX} -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}
 	${CXX} -c Instruction_RDRAND.cpp -o ${OBJDIR}/Instruction_RDRAND.o ${CXXFLAGS}
 	${CXX} -c Instruction_RegMemOperand.cpp -o ${OBJDIR}/Instruction_RegMemOperand.o ${CXXFLAGS}

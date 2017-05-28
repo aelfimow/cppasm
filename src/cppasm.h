@@ -54,6 +54,7 @@
 #include "Instruction_CMPXCHG8B.h"
 #include "Instruction_CMPXCHG16B.h"
 #include "Instruction_ENTER.h"
+#include "Instruction_FSGSBASE.h"
 #include "Instruction_FST.h"
 #include "Instruction_IN.h"
 #include "Instruction_INT.h"
@@ -542,6 +543,10 @@ extern Instruction_MemOperand XRSTORS64;
 extern Instruction_MemOperand XSAVES;
 extern Instruction_MemOperand XSAVES64;
 extern Instruction_NoOperands XSETBV;
+extern Instruction_FSGSBASE RDFSBASE;
+extern Instruction_FSGSBASE RDGSBASE;
+extern Instruction_FSGSBASE WRFSBASE;
+extern Instruction_FSGSBASE WRGSBASE;
 
 // SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;

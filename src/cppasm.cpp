@@ -479,6 +479,10 @@ Instruction_MemOperand XRSTORS64 { asmout, "xrstors64" };
 Instruction_MemOperand XSAVES { asmout, "xsaves" };
 Instruction_MemOperand XSAVES64 { asmout, "xsaves64" };
 Instruction_NoOperands XSETBV { asmout, "xsetbv" };
+Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
+Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };
+Instruction_FSGSBASE WRFSBASE { asmout, "wrfsbase" };
+Instruction_FSGSBASE WRGSBASE { asmout, "wrgsbase" };
 
 // SSE3 agent synchronization instructions
 Instruction_NoOperands MONITOR { asmout, "monitor" };

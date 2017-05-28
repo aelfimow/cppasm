@@ -533,6 +533,8 @@ extern Instruction_NoOperands EMMS;
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands CLTS;
+extern Instruction_NoOperands INVD;
+extern Instruction_NoOperands WBINVD;
 extern Instruction_MemOperand INVLPG;
 extern Instruction_Prefix LOCK;
 extern Instruction_NoOperands HLT;

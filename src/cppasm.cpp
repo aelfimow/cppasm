@@ -405,6 +405,13 @@ Instruction_PREFETCH PREFETCHNTA { asmout, "prefetchnta" };
 Instruction_PREFETCH PREFETCHW { asmout, "prefetchw" };
 Instruction_PREFETCH PREFETCHWT1 { asmout, "prefetchwt1" };
 
+// User mode extended state save/restore instructions
+Instruction_MemOperand XSAVE { asmout, "xsave" };
+Instruction_MemOperand XSAVEC { asmout, "xsavec" };
+Instruction_MemOperand XSAVEOPT { asmout, "xsaveopt" };
+Instruction_MemOperand XRSTOR { asmout, "xrstor" };
+Instruction_MemOperand XGETBV { asmout, "xgetbv" };
+
 // Random number generator instructions
 Instruction_RDRAND RDRAND { asmout, "rdrand" };
 Instruction_RDRAND RDSEED { asmout, "rdseed" };

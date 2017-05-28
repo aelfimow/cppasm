@@ -468,6 +468,13 @@ extern Instruction_PREFETCH PREFETCHNTA;
 extern Instruction_PREFETCH PREFETCHW;
 extern Instruction_PREFETCH PREFETCHWT1;
 
+// User mode extended state save/restore instructions
+extern Instruction_MemOperand XSAVE;
+extern Instruction_MemOperand XSAVEC;
+extern Instruction_MemOperand XSAVEOPT;
+extern Instruction_MemOperand XRSTOR;
+extern Instruction_MemOperand XGETBV;
+
 // Random number generator instructions
 extern Instruction_RDRAND RDRAND;
 extern Instruction_RDRAND RDSEED;

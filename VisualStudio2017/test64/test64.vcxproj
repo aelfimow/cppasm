@@ -162,6 +162,7 @@
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_PREFETCH.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
+    <ClCompile Include="..\..\src\Instruction_RDRAND.cpp" />
     <ClCompile Include="..\..\src\Instruction_RegMemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
@@ -238,6 +239,7 @@
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_PREFETCH.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
+    <ClInclude Include="..\..\src\Instruction_RDRAND.h" />
     <ClInclude Include="..\..\src\Instruction_RegMemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />

@@ -469,6 +469,7 @@ Instruction_NoOperands EMMS { asmout, "emms" };
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands CLTS { asmout, "clts" };
 Instruction_NoOperands HLT { asmout, "hlt" };
+Instruction_NoOperands RSM { asmout, "rsm" };
 Instruction_NoOperands RDPMC { asmout, "rdpmc" };
 Instruction_NoOperands RDTSC { asmout, "rdtsc" };
 Instruction_NoOperands RDTSCP { asmout, "rdtscp" };

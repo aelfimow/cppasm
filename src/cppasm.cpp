@@ -410,7 +410,7 @@ Instruction_MemOperand XSAVE { asmout, "xsave" };
 Instruction_MemOperand XSAVEC { asmout, "xsavec" };
 Instruction_MemOperand XSAVEOPT { asmout, "xsaveopt" };
 Instruction_MemOperand XRSTOR { asmout, "xrstor" };
-Instruction_MemOperand XGETBV { asmout, "xgetbv" };
+Instruction_NoOperands XGETBV { asmout, "xgetbv" };
 
 // Random number generator instructions
 Instruction_RDRAND RDRAND { asmout, "rdrand" };
@@ -474,6 +474,11 @@ Instruction_NoOperands RDTSC { asmout, "rdtsc" };
 Instruction_NoOperands RDTSCP { asmout, "rdtscp" };
 Instruction_NoOperands SYSENTER { asmout, "sysenter" };
 Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
+Instruction_MemOperand XRSTORS { asmout, "xrstors" };
+Instruction_MemOperand XRSTORS64 { asmout, "xrstors64" };
+Instruction_MemOperand XSAVES { asmout, "xsaves" };
+Instruction_MemOperand XSAVES64 { asmout, "xsaves64" };
+Instruction_NoOperands XSETBV { asmout, "xsetbv" };
 
 // SSE3 agent synchronization instructions
 Instruction_NoOperands MONITOR { asmout, "monitor" };

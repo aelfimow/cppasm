@@ -473,7 +473,7 @@ extern Instruction_MemOperand XSAVE;
 extern Instruction_MemOperand XSAVEC;
 extern Instruction_MemOperand XSAVEOPT;
 extern Instruction_MemOperand XRSTOR;
-extern Instruction_MemOperand XGETBV;
+extern Instruction_NoOperands XGETBV;
 
 // Random number generator instructions
 extern Instruction_RDRAND RDRAND;
@@ -537,6 +537,11 @@ extern Instruction_NoOperands RDTSC;
 extern Instruction_NoOperands RDTSCP;
 extern Instruction_NoOperands SYSENTER;
 extern Instruction_NoOperands SYSEXIT;
+extern Instruction_MemOperand XRSTORS;
+extern Instruction_MemOperand XRSTORS64;
+extern Instruction_MemOperand XSAVES;
+extern Instruction_MemOperand XSAVES64;
+extern Instruction_NoOperands XSETBV;
 
 // SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;

@@ -81,6 +81,7 @@
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
 #include "Instruction_TEST.h"
+#include "Instruction_VerifySegment.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
 
@@ -533,6 +534,8 @@ extern Instruction_NoOperands EMMS;
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands CLTS;
+extern Instruction_VerifySegment VERR;
+extern Instruction_VerifySegment VERW;
 extern Instruction_NoOperands INVD;
 extern Instruction_NoOperands WBINVD;
 extern Instruction_MemOperand INVLPG;

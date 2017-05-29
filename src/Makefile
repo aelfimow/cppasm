@@ -48,6 +48,8 @@ all:
 	${CXX} -c Instruction_LOOPcc.cpp -o ${OBJDIR}/Instruction_LOOPcc.o ${CXXFLAGS}
 	${CXX} -c Instruction_MemOperand.cpp -o ${OBJDIR}/Instruction_MemOperand.o ${CXXFLAGS}
 	${CXX} -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
+	${CXX} -c Instruction_MOVD.cpp -o ${OBJDIR}/Instruction_MOVD.o ${CXXFLAGS}
+	${CXX} -c Instruction_MOVQ.cpp -o ${OBJDIR}/Instruction_MOVQ.o ${CXXFLAGS}
 	${CXX} -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
 	${CXX} -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
 	${CXX} -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
@@ -66,6 +68,8 @@ all:
 	${CXX} -c Instruction_ShiftDouble.cpp -o ${OBJDIR}/Instruction_ShiftDouble.o ${CXXFLAGS}
 	${CXX} -c Instruction_StringOp.cpp -o ${OBJDIR}/Instruction_StringOp.o ${CXXFLAGS}
 	${CXX} -c Instruction_TEST.cpp -o ${OBJDIR}/Instruction_TEST.o ${CXXFLAGS}
+	${CXX} -c Instruction_VMOVD.cpp -o ${OBJDIR}/Instruction_VMOVD.o ${CXXFLAGS}
+	${CXX} -c Instruction_VMOVQ.cpp -o ${OBJDIR}/Instruction_VMOVQ.o ${CXXFLAGS}
 	${CXX} -c Instruction_XADD.cpp -o ${OBJDIR}/Instruction_XADD.o ${CXXFLAGS}
 	${CXX} -c Instruction_XCHG.cpp -o ${OBJDIR}/Instruction_XCHG.o ${CXXFLAGS}
 	${CXX} -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}

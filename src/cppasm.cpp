@@ -466,6 +466,10 @@ Instruction_NoOperands FNOP { asmout, "fnop" };
 Instruction_MemOperand FXSAVE { asmout, "fxsave" };
 Instruction_MemOperand FXRSTOR { asmout, "fxrstor" };
 
+// MMX data transfer instructions
+Instruction_MOVD MOVD { asmout, "movd" };
+Instruction_MOVQ MOVQ { asmout, "movq" };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 
@@ -511,6 +515,10 @@ Instruction_NoOperands MWAIT { asmout, "mwait" };
 // 64-bit mode instructions
 Instruction_NoOperands SYSCALL { asmout, "syscall" };
 Instruction_NoOperands SYSRET { asmout, "sysret" };
+
+// AVX
+Instruction_VMOVD VMOVD { asmout, "qmovd" };
+Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
 
 Keyword_comment comment;
 Keyword_global global;

@@ -65,6 +65,8 @@
 #include "Instruction_LOOPcc.h"
 #include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
+#include "Instruction_MOVD.h"
+#include "Instruction_MOVQ.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_OUT.h"
@@ -82,6 +84,8 @@
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
 #include "Instruction_TEST.h"
+#include "Instruction_VMOVD.h"
+#include "Instruction_VMOVQ.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
 
@@ -532,6 +536,10 @@ extern Instruction_NoOperands FNOP;
 extern Instruction_MemOperand FXSAVE;
 extern Instruction_MemOperand FXRSTOR;
 
+// MMX data transfer instructions
+extern Instruction_MOVD MOVD;
+extern Instruction_MOVQ MOVQ;
+
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;
 
@@ -577,6 +585,10 @@ extern Instruction_NoOperands MWAIT;
 // 64-bit mode instructions
 extern Instruction_NoOperands SYSCALL;
 extern Instruction_NoOperands SYSRET;
+
+// AVX
+extern Instruction_VMOVD VMOVD;
+extern Instruction_VMOVQ VMOVQ;
 
 extern Keyword_comment comment;
 extern Keyword_global global;

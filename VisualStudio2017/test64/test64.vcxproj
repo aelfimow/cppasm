@@ -168,6 +168,7 @@
     <ClCompile Include="..\..\src\Instruction_RegMemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
+    <ClCompile Include="..\..\src\Instruction_rm16.cpp" />
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
@@ -248,6 +249,7 @@
     <ClInclude Include="..\..\src\Instruction_RegMemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
+    <ClInclude Include="..\..\src\Instruction_rm16.h" />
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />

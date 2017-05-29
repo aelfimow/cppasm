@@ -534,6 +534,8 @@ extern Instruction_NoOperands EMMS;
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands CLTS;
+extern Instruction_MemOperand LGDT;
+extern Instruction_MemOperand LIDT;
 extern Instruction_VerifySegment VERR;
 extern Instruction_VerifySegment VERW;
 extern Instruction_NoOperands INVD;

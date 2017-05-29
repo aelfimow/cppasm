@@ -468,6 +468,8 @@ Instruction_NoOperands EMMS { asmout, "emms" };
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands CLTS { asmout, "clts" };
+Instruction_MemOperand LGDT { asmout, "lgdt" };
+Instruction_MemOperand LIDT { asmout, "lidt" };
 Instruction_VerifySegment VERR { asmout, "verr" };
 Instruction_VerifySegment VERW { asmout, "verw" };
 Instruction_NoOperands INVD { asmout, "invd" };

@@ -528,6 +528,10 @@ extern Instruction_NoOperands FCLEX;
 extern Instruction_NoOperands FNCLEX;
 extern Instruction_NoOperands FNOP;
 
+// x87 FPU and SIMD state management instructions
+extern Instruction_MemOperand FXSAVE;
+extern Instruction_MemOperand FXRSTOR;
+
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;
 

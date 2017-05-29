@@ -462,6 +462,10 @@ Instruction_NoOperands FCLEX { asmout, "fclex" };
 Instruction_NoOperands FNCLEX { asmout, "fnclex" };
 Instruction_NoOperands FNOP { asmout, "fnop" };
 
+// x87 FPU and SIMD state management instructions
+Instruction_MemOperand FXSAVE { asmout, "fxsave" };
+Instruction_MemOperand FXRSTOR { asmout, "fxrstor" };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 

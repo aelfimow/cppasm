@@ -467,6 +467,7 @@ Instruction_NoOperands EMMS { asmout, "emms" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
+Instruction_NoOperands STAC { asmout, "stac" };
 Instruction_NoOperands CLTS { asmout, "clts" };
 Instruction_MemOperand LGDT { asmout, "lgdt" };
 Instruction_MemOperand LIDT { asmout, "lidt" };
@@ -475,6 +476,7 @@ Instruction_rm16 LLDT { asmout, "lldt" };
 Instruction_rm16 LMSW { asmout, "lmsw" };
 Instruction_rm16 VERR { asmout, "verr" };
 Instruction_rm16 VERW { asmout, "verw" };
+Instruction_rm16 LTR { asmout, "ltr" };
 Instruction_NoOperands INVD { asmout, "invd" };
 Instruction_NoOperands WBINVD { asmout, "wbinvd" };
 Instruction_MemOperand INVLPG { asmout, "invlpg" };

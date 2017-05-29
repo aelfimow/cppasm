@@ -533,6 +533,7 @@ extern Instruction_NoOperands EMMS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;
+extern Instruction_NoOperands STAC;
 extern Instruction_NoOperands CLTS;
 extern Instruction_MemOperand LGDT;
 extern Instruction_MemOperand LIDT;
@@ -541,6 +542,7 @@ extern Instruction_rm16 LLDT;
 extern Instruction_rm16 LMSW;
 extern Instruction_rm16 VERR;
 extern Instruction_rm16 VERW;
+extern Instruction_rm16 LTR;
 extern Instruction_NoOperands INVD;
 extern Instruction_NoOperands WBINVD;
 extern Instruction_MemOperand INVLPG;

@@ -1,4 +1,6 @@
 src/obj/*.o
+src/main.cpp
+src/main.exe
 src/tmp.o
 src/tmp.s
 tests/output/test32.o

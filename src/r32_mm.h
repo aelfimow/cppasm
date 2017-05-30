@@ -8,7 +8,7 @@ class r32_mm
     public:
         r32_mm(asmstream &s, const std::string mnem);
 
-        void operator()(mm &op1, r32 &op2);
+        void operator()(r32 &op1, mm &op2);
 
         virtual ~r32_mm();
 

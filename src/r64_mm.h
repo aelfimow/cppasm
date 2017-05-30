@@ -8,7 +8,7 @@ class r64_mm
     public:
         r64_mm(asmstream &s, const std::string mnem);
 
-        void operator()(mm &op1, r64 &op2);
+        void operator()(r64 &op1, mm &op2);
 
         virtual ~r64_mm();
 

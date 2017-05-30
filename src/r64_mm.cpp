@@ -13,7 +13,7 @@ r64_mm::r64_mm(asmstream &s, const std::string mnem) :
 {
 }
 
-void r64_mm::operator()(mm &op1, r64 &op2)
+void r64_mm::operator()(r64 &op1, mm &op2)
 {
     Instruction instr { m_mnem, op1.name(), op2.name() };
     m_asmout << instr;

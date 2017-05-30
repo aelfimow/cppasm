@@ -13,7 +13,7 @@ r32_mm::r32_mm(asmstream &s, const std::string mnem) :
 {
 }
 
-void r32_mm::operator()(mm &op1, r32 &op2)
+void r32_mm::operator()(r32 &op1, mm &op2)
 {
     Instruction instr { m_mnem, op1.name(), op2.name() };
     m_asmout << instr;

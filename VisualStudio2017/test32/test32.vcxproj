@@ -156,7 +156,6 @@
     <ClCompile Include="..\..\src\Instruction_LOOPcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
-    <ClCompile Include="..\..\src\Instruction_MOVQ.cpp" />
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
     <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
@@ -175,8 +174,6 @@
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
     <ClCompile Include="..\..\src\Instruction_StringOp.cpp" />
     <ClCompile Include="..\..\src\Instruction_TEST.cpp" />
-    <ClCompile Include="..\..\src\Instruction_VMOVD.cpp" />
-    <ClCompile Include="..\..\src\Instruction_VMOVQ.cpp" />
     <ClCompile Include="..\..\src\Instruction_XADD.cpp" />
     <ClCompile Include="..\..\src\Instruction_XCHG.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
@@ -255,7 +252,6 @@
     <ClInclude Include="..\..\src\Instruction_LOOPcc.h" />
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
-    <ClInclude Include="..\..\src\Instruction_MOVQ.h" />
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
     <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
@@ -274,8 +270,6 @@
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />
     <ClInclude Include="..\..\src\Instruction_StringOp.h" />
     <ClInclude Include="..\..\src\Instruction_TEST.h" />
-    <ClInclude Include="..\..\src\Instruction_VMOVD.h" />
-    <ClInclude Include="..\..\src\Instruction_VMOVQ.h" />
     <ClInclude Include="..\..\src\Instruction_x.h" />
     <ClInclude Include="..\..\src\Instruction_XADD.h" />
     <ClInclude Include="..\..\src\Instruction_XCHG.h" />

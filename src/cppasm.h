@@ -50,6 +50,10 @@
 #include "mm_m64.h"
 #include "r64_mm.h"
 #include "m64_mm.h"
+#include "xmm_r64.h"
+#include "xmm_m64.h"
+#include "r64_xmm.h"
+#include "m64_xmm.h"
 
 #include "Instruction_x.h"
 
@@ -80,7 +84,6 @@
 #include "Instruction_LOOPcc.h"
 #include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
-#include "Instruction_MOVQ.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_OUT.h"
@@ -98,8 +101,6 @@
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
 #include "Instruction_TEST.h"
-#include "Instruction_VMOVD.h"
-#include "Instruction_VMOVQ.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
 
@@ -113,6 +114,34 @@ using Instruction_MOVD = Instruction_8
     xmm_m32,
     r32_xmm,
     m32_xmm
+>;
+
+using Instruction_VMOVD = Instruction_4
+<
+    xmm_r32,
+    xmm_m32,
+    r32_xmm,
+    m32_xmm
+>;
+
+using Instruction_MOVQ = Instruction_8
+<
+    mm_r64,
+    mm_m64,
+    r64_mm,
+    m64_mm,
+    xmm_r64,
+    xmm_m64,
+    r64_xmm,
+    m64_xmm
+>;
+
+using Instruction_VMOVQ = Instruction_4
+<
+    xmm_r64,
+    xmm_m64,
+    r64_xmm,
+    m64_xmm
 >;
 
 extern asmstream asmout;

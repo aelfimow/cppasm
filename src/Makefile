@@ -48,7 +48,6 @@ all:
 	${CXX} -c Instruction_LOOPcc.cpp -o ${OBJDIR}/Instruction_LOOPcc.o ${CXXFLAGS}
 	${CXX} -c Instruction_MemOperand.cpp -o ${OBJDIR}/Instruction_MemOperand.o ${CXXFLAGS}
 	${CXX} -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
-	${CXX} -c Instruction_MOVD.cpp -o ${OBJDIR}/Instruction_MOVD.o ${CXXFLAGS}
 	${CXX} -c Instruction_MOVQ.cpp -o ${OBJDIR}/Instruction_MOVQ.o ${CXXFLAGS}
 	${CXX} -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
 	${CXX} -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
@@ -77,15 +76,19 @@ all:
 	${CXX} -c m16.cpp -o ${OBJDIR}/m16.o ${CXXFLAGS}
 	${CXX} -c m32.cpp -o ${OBJDIR}/m32.o ${CXXFLAGS}
 	${CXX} -c m32_mm.cpp -o ${OBJDIR}/m32_mm.o ${CXXFLAGS}
+	${CXX} -c m64_mm.cpp -o ${OBJDIR}/m64_mm.o ${CXXFLAGS}
 	${CXX} -c m64.cpp -o ${OBJDIR}/m64.o ${CXXFLAGS}
 	${CXX} -c m8.cpp -o ${OBJDIR}/m8.o ${CXXFLAGS}
 	${CXX} -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
 	${CXX} -c mm_m32.cpp -o ${OBJDIR}/mm_m32.o ${CXXFLAGS}
+	${CXX} -c mm_m64.cpp -o ${OBJDIR}/mm_m64.o ${CXXFLAGS}
 	${CXX} -c mm_r32.cpp -o ${OBJDIR}/mm_r32.o ${CXXFLAGS}
+	${CXX} -c mm_r64.cpp -o ${OBJDIR}/mm_r64.o ${CXXFLAGS}
 	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
 	${CXX} -c r32_mm.cpp -o ${OBJDIR}/r32_mm.o ${CXXFLAGS}
+	${CXX} -c r64_mm.cpp -o ${OBJDIR}/r64_mm.o ${CXXFLAGS}
 	${CXX} -c r64.cpp -o ${OBJDIR}/r64.o ${CXXFLAGS}
 	${CXX} -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}

@@ -467,7 +467,7 @@ Instruction_MemOperand FXSAVE { asmout, "fxsave" };
 Instruction_MemOperand FXRSTOR { asmout, "fxrstor" };
 
 // MMX data transfer instructions
-Instruction_4<mm_r32, mm_m32, r32_mm, m32_mm> MOVD { asmout, "movd" };
+Instruction_MOVD MOVD { asmout, "movd" };
 Instruction_MOVQ MOVQ { asmout, "movq" };
 
 // MMX state management instructions

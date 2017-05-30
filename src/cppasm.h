@@ -42,6 +42,10 @@
 #include "mm_m32.h"
 #include "r32_mm.h"
 #include "m32_mm.h"
+#include "mm_r64.h"
+#include "mm_m64.h"
+#include "r64_mm.h"
+#include "m64_mm.h"
 
 #include "Instruction_x.h"
 
@@ -72,7 +76,6 @@
 #include "Instruction_LOOPcc.h"
 #include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
-#include "Instruction_MOVD.h"
 #include "Instruction_MOVQ.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
@@ -544,7 +547,8 @@ extern Instruction_MemOperand FXSAVE;
 extern Instruction_MemOperand FXRSTOR;
 
 // MMX data transfer instructions
-extern Instruction_4<mm_r32, mm_m32, r32_mm, m32_mm> MOVD;
+using Instruction_MOVD = Instruction_8<mm_r32, mm_m32, r32_mm, m32_mm, mm_r64, mm_m64, r64_mm, m64_mm>;
+extern Instruction_MOVD MOVD;
 extern Instruction_MOVQ MOVQ;
 
 // MMX state management instructions

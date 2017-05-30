@@ -5,6 +5,24 @@
 
 template
 <
+    class T1
+>
+class Instruction_1 :
+    public T1
+{
+    public:
+        Instruction_1(asmstream &s, const std::string mnem) :
+            T1 { s, mnem }
+        {
+        }
+
+        ~Instruction_1() { };
+
+        using T1::operator();
+};
+
+template
+<
     class T1,
     class T2,
     class T3,

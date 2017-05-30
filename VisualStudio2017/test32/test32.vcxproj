@@ -157,7 +157,6 @@
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
-    <ClCompile Include="..\..\src\Instruction_NoOperands.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_OUT.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
@@ -192,6 +191,7 @@
     <ClCompile Include="..\..\src\mm_m64.cpp" />
     <ClCompile Include="..\..\src\mm_r32.cpp" />
     <ClCompile Include="..\..\src\mm_r64.cpp" />
+    <ClCompile Include="..\..\src\op_none.cpp" />
     <ClCompile Include="..\..\src\r16.cpp" />
     <ClCompile Include="..\..\src\r32.cpp" />
     <ClCompile Include="..\..\src\r32_mm.cpp" />
@@ -253,7 +253,6 @@
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
-    <ClInclude Include="..\..\src\Instruction_NoOperands.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_OUT.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
@@ -290,6 +289,7 @@
     <ClInclude Include="..\..\src\mm_m64.h" />
     <ClInclude Include="..\..\src\mm_r32.h" />
     <ClInclude Include="..\..\src\mm_r64.h" />
+    <ClInclude Include="..\..\src\op_none.h" />
     <ClInclude Include="..\..\src\r16.h" />
     <ClInclude Include="..\..\src\r32.h" />
     <ClInclude Include="..\..\src\r32_mm.h" />

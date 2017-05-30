@@ -38,6 +38,7 @@
 #include "label.h"
 #include "section.h"
 
+#include "op_none.h"
 #include "mm_r32.h"
 #include "mm_m32.h"
 #include "xmm_r32.h"
@@ -57,7 +58,6 @@
 
 #include "Instruction_x.h"
 
-#include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
 #include "Instruction_ADX.h"
@@ -103,6 +103,11 @@
 #include "Instruction_TEST.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
+
+using Instruction_NoOperands = Instruction_1
+<
+    op_none
+>;
 
 using Instruction_MOVD = Instruction_8
 <

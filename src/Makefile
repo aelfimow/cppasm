@@ -49,7 +49,6 @@ all:
 	${CXX} -c Instruction_MemOperand.cpp -o ${OBJDIR}/Instruction_MemOperand.o ${CXXFLAGS}
 	${CXX} -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
 	${CXX} -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
-	${CXX} -c Instruction_NoOperands.cpp -o ${OBJDIR}/Instruction_NoOperands.o ${CXXFLAGS}
 	${CXX} -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
 	${CXX} -c Instruction_OUT.cpp -o ${OBJDIR}/Instruction_OUT.o ${CXXFLAGS}
 	${CXX} -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
@@ -84,6 +83,7 @@ all:
 	${CXX} -c mm_m64.cpp -o ${OBJDIR}/mm_m64.o ${CXXFLAGS}
 	${CXX} -c mm_r32.cpp -o ${OBJDIR}/mm_r32.o ${CXXFLAGS}
 	${CXX} -c mm_r64.cpp -o ${OBJDIR}/mm_r64.o ${CXXFLAGS}
+	${CXX} -c op_none.cpp -o ${OBJDIR}/op_none.o ${CXXFLAGS}
 	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
 	${CXX} -c r32_mm.cpp -o ${OBJDIR}/r32_mm.o ${CXXFLAGS}

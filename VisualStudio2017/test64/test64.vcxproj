@@ -184,8 +184,10 @@
     <ClCompile Include="..\..\src\m16.cpp" />
     <ClCompile Include="..\..\src\m32.cpp" />
     <ClCompile Include="..\..\src\m32_mm.cpp" />
+    <ClCompile Include="..\..\src\m32_xmm.cpp" />
     <ClCompile Include="..\..\src\m64.cpp" />
     <ClCompile Include="..\..\src\m64_mm.cpp" />
+    <ClCompile Include="..\..\src\m64_xmm.cpp" />
     <ClCompile Include="..\..\src\m8.cpp" />
     <ClCompile Include="..\..\src\m80.cpp" />
     <ClCompile Include="..\..\src\mm.cpp" />
@@ -196,13 +198,19 @@
     <ClCompile Include="..\..\src\r16.cpp" />
     <ClCompile Include="..\..\src\r32.cpp" />
     <ClCompile Include="..\..\src\r32_mm.cpp" />
+    <ClCompile Include="..\..\src\r32_xmm.cpp" />
     <ClCompile Include="..\..\src\r64.cpp" />
     <ClCompile Include="..\..\src\r64_mm.cpp" />
+    <ClCompile Include="..\..\src\r64_xmm.cpp" />
     <ClCompile Include="..\..\src\r8.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\Sreg.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\src\xmm.cpp" />
+    <ClCompile Include="..\..\src\xmm_m32.cpp" />
+    <ClCompile Include="..\..\src\xmm_m64.cpp" />
+    <ClCompile Include="..\..\src\xmm_r32.cpp" />
+    <ClCompile Include="..\..\src\xmm_r64.cpp" />
     <ClCompile Include="..\..\src\ymm.cpp" />
     <ClCompile Include="..\..\tests\test64.cpp" />
   </ItemGroup>
@@ -277,8 +285,10 @@
     <ClInclude Include="..\..\src\m16.h" />
     <ClInclude Include="..\..\src\m32.h" />
     <ClInclude Include="..\..\src\m32_mm.h" />
+    <ClInclude Include="..\..\src\m32_xmm.h" />
     <ClInclude Include="..\..\src\m64.h" />
     <ClInclude Include="..\..\src\m64_mm.h" />
+    <ClInclude Include="..\..\src\m64_xmm.h" />
     <ClInclude Include="..\..\src\m8.h" />
     <ClInclude Include="..\..\src\m80.h" />
     <ClInclude Include="..\..\src\mm.h" />
@@ -289,14 +299,20 @@
     <ClInclude Include="..\..\src\r16.h" />
     <ClInclude Include="..\..\src\r32.h" />
     <ClInclude Include="..\..\src\r32_mm.h" />
+    <ClInclude Include="..\..\src\r32_xmm.h" />
     <ClInclude Include="..\..\src\r64.h" />
     <ClInclude Include="..\..\src\r64_mm.h" />
+    <ClInclude Include="..\..\src\r64_xmm.h" />
     <ClInclude Include="..\..\src\r8.h" />
     <ClInclude Include="..\..\src\reg.h" />
     <ClInclude Include="..\..\src\section.h" />
     <ClInclude Include="..\..\src\Sreg.h" />
     <ClInclude Include="..\..\src\st.h" />
     <ClInclude Include="..\..\src\xmm.h" />
+    <ClInclude Include="..\..\src\xmm_m32.h" />
+    <ClInclude Include="..\..\src\xmm_m64.h" />
+    <ClInclude Include="..\..\src\xmm_r32.h" />
+    <ClInclude Include="..\..\src\xmm_r64.h" />
     <ClInclude Include="..\..\src\ymm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

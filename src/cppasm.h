@@ -40,8 +40,12 @@
 
 #include "mm_r32.h"
 #include "mm_m32.h"
+#include "xmm_r32.h"
+#include "xmm_m32.h"
 #include "r32_mm.h"
 #include "m32_mm.h"
+#include "r32_xmm.h"
+#include "m32_xmm.h"
 #include "mm_r64.h"
 #include "mm_m64.h"
 #include "r64_mm.h"
@@ -98,6 +102,18 @@
 #include "Instruction_VMOVQ.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
+
+using Instruction_MOVD = Instruction_8
+<
+    mm_r32,
+    mm_m32,
+    r32_mm,
+    m32_mm,
+    xmm_r32,
+    xmm_m32,
+    r32_xmm,
+    m32_xmm
+>;
 
 extern asmstream asmout;
 
@@ -547,7 +563,6 @@ extern Instruction_MemOperand FXSAVE;
 extern Instruction_MemOperand FXRSTOR;
 
 // MMX data transfer instructions
-using Instruction_MOVD = Instruction_8<mm_r32, mm_m32, r32_mm, m32_mm, mm_r64, mm_m64, r64_mm, m64_mm>;
 extern Instruction_MOVD MOVD;
 extern Instruction_MOVQ MOVQ;
 

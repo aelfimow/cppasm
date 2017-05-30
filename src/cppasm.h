@@ -43,7 +43,7 @@
 #include "r32_mm.h"
 #include "m32_mm.h"
 
-#include <Instruction_x.h>
+#include "Instruction_x.h"
 
 #include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"

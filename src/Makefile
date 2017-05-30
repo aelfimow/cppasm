@@ -76,12 +76,16 @@ all:
 	${CXX} -c m128.cpp -o ${OBJDIR}/m128.o ${CXXFLAGS}
 	${CXX} -c m16.cpp -o ${OBJDIR}/m16.o ${CXXFLAGS}
 	${CXX} -c m32.cpp -o ${OBJDIR}/m32.o ${CXXFLAGS}
+	${CXX} -c m32_mm.cpp -o ${OBJDIR}/m32_mm.o ${CXXFLAGS}
 	${CXX} -c m64.cpp -o ${OBJDIR}/m64.o ${CXXFLAGS}
 	${CXX} -c m8.cpp -o ${OBJDIR}/m8.o ${CXXFLAGS}
 	${CXX} -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
+	${CXX} -c mm_m32.cpp -o ${OBJDIR}/mm_m32.o ${CXXFLAGS}
+	${CXX} -c mm_r32.cpp -o ${OBJDIR}/mm_r32.o ${CXXFLAGS}
 	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
+	${CXX} -c r32_mm.cpp -o ${OBJDIR}/r32_mm.o ${CXXFLAGS}
 	${CXX} -c r64.cpp -o ${OBJDIR}/r64.o ${CXXFLAGS}
 	${CXX} -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}

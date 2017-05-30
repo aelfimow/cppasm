@@ -266,6 +266,7 @@
     <ClInclude Include="..\..\src\Instruction_TEST.h" />
     <ClInclude Include="..\..\src\Instruction_VMOVD.h" />
     <ClInclude Include="..\..\src\Instruction_VMOVQ.h" />
+    <ClInclude Include="..\..\src\Instruction_x.h" />
     <ClInclude Include="..\..\src\Instruction_XADD.h" />
     <ClInclude Include="..\..\src\Instruction_XCHG.h" />
     <ClInclude Include="..\..\src\label.h" />

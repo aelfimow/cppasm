@@ -43,6 +43,8 @@
 #include "r32_mm.h"
 #include "m32_mm.h"
 
+#include <Instruction_x.h>
+
 #include "Instruction_NoOperands.h"
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
@@ -220,29 +222,6 @@ extern dr DR6;
 extern dr DR7;
 
 extern st ST;
-
-template <typename T1, typename T2, typename T3, typename T4> class Instruction_4 :
-    public T1,
-    public T2,
-    public T3,
-    public T4
-{
-    public:
-        Instruction_4(asmstream &s, const std::string mnem) :
-            T1 { s, mnem },
-            T2 { s, mnem },
-            T3 { s, mnem },
-            T4 { s, mnem }
-        {
-        }
-
-        ~Instruction_4() { };
-
-        using T1::operator();
-        using T2::operator();
-        using T3::operator();
-        using T4::operator();
-};
 
 // Data transfer instructions
 extern Instruction_MOV MOV;

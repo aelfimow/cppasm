@@ -189,6 +189,7 @@
     <ClCompile Include="..\..\src\mm.cpp" />
     <ClCompile Include="..\..\src\mm_m32.cpp" />
     <ClCompile Include="..\..\src\mm_m64.cpp" />
+    <ClCompile Include="..\..\src\mm_mm.cpp" />
     <ClCompile Include="..\..\src\mm_r32.cpp" />
     <ClCompile Include="..\..\src\mm_r64.cpp" />
     <ClCompile Include="..\..\src\op_none.cpp" />
@@ -287,6 +288,7 @@
     <ClInclude Include="..\..\src\mm.h" />
     <ClInclude Include="..\..\src\mm_m32.h" />
     <ClInclude Include="..\..\src\mm_m64.h" />
+    <ClInclude Include="..\..\src\mm_mm.h" />
     <ClInclude Include="..\..\src\mm_r32.h" />
     <ClInclude Include="..\..\src\mm_r64.h" />
     <ClInclude Include="..\..\src\op_none.h" />

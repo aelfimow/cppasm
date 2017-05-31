@@ -97,6 +97,7 @@ all:
 	${CXX} -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
 	${CXX} -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}
 	${CXX} -c xmm.cpp -o ${OBJDIR}/xmm.o ${CXXFLAGS}
+	${CXX} -c xmm_m128.cpp -o ${OBJDIR}/xmm_m128.o ${CXXFLAGS}
 	${CXX} -c xmm_m32.cpp -o ${OBJDIR}/xmm_m32.o ${CXXFLAGS}
 	${CXX} -c xmm_m64.cpp -o ${OBJDIR}/xmm_m64.o ${CXXFLAGS}
 	${CXX} -c xmm_r32.cpp -o ${OBJDIR}/xmm_r32.o ${CXXFLAGS}

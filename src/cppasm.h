@@ -640,6 +640,20 @@ extern Instruction_MMX_Op PMULHW;
 extern Instruction_MMX_Op PMULLW;
 extern Instruction_MMX_Op PMADDWD;
 
+// MMX comparison instructions
+extern Instruction_MMX_Op PCMPEQB;
+extern Instruction_MMX_Op PCMPEQW;
+extern Instruction_MMX_Op PCMPEQD;
+extern Instruction_MMX_Op PCMPGTB;
+extern Instruction_MMX_Op PCMPGTW;
+extern Instruction_MMX_Op PCMPGTD;
+
+// MMX logical instructions
+extern Instruction_MMX_Op PAND;
+extern Instruction_MMX_Op PANDN;
+extern Instruction_MMX_Op POR;
+extern Instruction_MMX_Op PXOR;
+
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;
 

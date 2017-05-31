@@ -499,6 +499,20 @@ Instruction_MMX_Op PMULHW  { asmout, "pmulhw"  };
 Instruction_MMX_Op PMULLW  { asmout, "pmullw"  };
 Instruction_MMX_Op PMADDWD { asmout, "pmaddwd" };
 
+// MMX comparison instructions
+Instruction_MMX_Op PCMPEQB { asmout, "pcmpeqb" };
+Instruction_MMX_Op PCMPEQW { asmout, "pcmpeqw" };
+Instruction_MMX_Op PCMPEQD { asmout, "pcmpeqd" };
+Instruction_MMX_Op PCMPGTB { asmout, "pcmpgtb" };
+Instruction_MMX_Op PCMPGTW { asmout, "pcmpgtw" };
+Instruction_MMX_Op PCMPGTD { asmout, "pcmpgtd" };
+
+// MMX logical instructions
+Instruction_MMX_Op PAND  { asmout, "pand"  };
+Instruction_MMX_Op PANDN { asmout, "pandn" };
+Instruction_MMX_Op POR   { asmout, "por"   };
+Instruction_MMX_Op PXOR  { asmout, "pxor"  };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 

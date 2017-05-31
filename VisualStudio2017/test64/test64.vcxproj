@@ -209,6 +209,7 @@
     <ClCompile Include="..\..\src\xmm_m64.cpp" />
     <ClCompile Include="..\..\src\xmm_r32.cpp" />
     <ClCompile Include="..\..\src\xmm_r64.cpp" />
+    <ClCompile Include="..\..\src\xmm_xmm.cpp" />
     <ClCompile Include="..\..\src\ymm.cpp" />
     <ClCompile Include="..\..\tests\test64.cpp" />
   </ItemGroup>
@@ -309,6 +310,7 @@
     <ClInclude Include="..\..\src\xmm_m64.h" />
     <ClInclude Include="..\..\src\xmm_r32.h" />
     <ClInclude Include="..\..\src\xmm_r64.h" />
+    <ClInclude Include="..\..\src\xmm_xmm.h" />
     <ClInclude Include="..\..\src\ymm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

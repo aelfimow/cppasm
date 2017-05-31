@@ -101,5 +101,6 @@ all:
 	${CXX} -c xmm_m64.cpp -o ${OBJDIR}/xmm_m64.o ${CXXFLAGS}
 	${CXX} -c xmm_r32.cpp -o ${OBJDIR}/xmm_r32.o ${CXXFLAGS}
 	${CXX} -c xmm_r64.cpp -o ${OBJDIR}/xmm_r64.o ${CXXFLAGS}
+	${CXX} -c xmm_xmm.cpp -o ${OBJDIR}/xmm_xmm.o ${CXXFLAGS}
 	${CXX} -c ymm.cpp -o ${OBJDIR}/ymm.o ${CXXFLAGS}
 	@echo No errors

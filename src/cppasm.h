@@ -55,6 +55,9 @@
 #include "xmm_m64.h"
 #include "r64_xmm.h"
 #include "m64_xmm.h"
+#include "mm_mm.h"
+#include "xmm_xmm.h"
+#include "xmm_m128.h"
 
 #include "Instruction_x.h"
 
@@ -147,6 +150,30 @@ using Instruction_VMOVQ = Instruction_4
     xmm_m64,
     r64_xmm,
     m64_xmm
+>;
+
+using Instruction_PACKSSWB = Instruction_4
+<
+    mm_mm,
+    mm_m64,
+    xmm_xmm,
+    xmm_m128
+>;
+
+using Instruction_PACKSSDW = Instruction_4
+<
+    mm_mm,
+    mm_m64,
+    xmm_xmm,
+    xmm_m128
+>;
+
+using Instruction_PUNPCK = Instruction_4
+<
+    mm_mm,
+    mm_m64,
+    xmm_xmm,
+    xmm_m128
 >;
 
 extern asmstream asmout;
@@ -599,6 +626,16 @@ extern Instruction_MemOperand FXRSTOR;
 // MMX data transfer instructions
 extern Instruction_MOVD MOVD;
 extern Instruction_MOVQ MOVQ;
+
+// MMX conversion instructions
+extern Instruction_PACKSSWB PACKSSWB;
+extern Instruction_PACKSSDW PACKSSDW;
+extern Instruction_PUNPCK PUNPCKHBW;
+extern Instruction_PUNPCK PUNPCKHWD;
+extern Instruction_PUNPCK PUNPCKHDQ;
+extern Instruction_PUNPCK PUNPCKLBW;
+extern Instruction_PUNPCK PUNPCKLWD;
+extern Instruction_PUNPCK PUNPCKLDQ;
 
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;

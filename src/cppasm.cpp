@@ -470,6 +470,16 @@ Instruction_MemOperand FXRSTOR { asmout, "fxrstor" };
 Instruction_MOVD MOVD { asmout, "movd" };
 Instruction_MOVQ MOVQ { asmout, "movq" };
 
+// MMX conversion instructions
+Instruction_PACKSSWB PACKSSWB { asmout, "packsswb" };
+Instruction_PACKSSDW PACKSSDW { asmout, "packssdw" };
+Instruction_PUNPCK PUNPCKHBW { asmout, "punpckhbw" };
+Instruction_PUNPCK PUNPCKHWD { asmout, "punpckhwd" };
+Instruction_PUNPCK PUNPCKHDQ { asmout, "punpckhdq" };
+Instruction_PUNPCK PUNPCKLBW { asmout, "punpcklbw" };
+Instruction_PUNPCK PUNPCKLWD { asmout, "punpcklwd" };
+Instruction_PUNPCK PUNPCKLDQ { asmout, "punpckldq" };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 

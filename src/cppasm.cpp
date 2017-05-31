@@ -480,6 +480,25 @@ Instruction_MMX_Op PUNPCKLBW { asmout, "punpcklbw" };
 Instruction_MMX_Op PUNPCKLWD { asmout, "punpcklwd" };
 Instruction_MMX_Op PUNPCKLDQ { asmout, "punpckldq" };
 
+// MMX packed arithmetic instructions
+Instruction_MMX_Op PADDB   { asmout, "paddb"   };
+Instruction_MMX_Op PADDW   { asmout, "paddw"   };
+Instruction_MMX_Op PADDD   { asmout, "paddd"   };
+Instruction_MMX_Op PADDSB  { asmout, "paddsb"  };
+Instruction_MMX_Op PADDSW  { asmout, "paddsw"  };
+Instruction_MMX_Op PADDUSB { asmout, "paddusb" };
+Instruction_MMX_Op PADDUSW { asmout, "paddusw" };
+Instruction_MMX_Op PSUBB   { asmout, "psubb"   };
+Instruction_MMX_Op PSUBW   { asmout, "psubw"   };
+Instruction_MMX_Op PSUBD   { asmout, "psubd"   };
+Instruction_MMX_Op PSUBSB  { asmout, "psubsb"  };
+Instruction_MMX_Op PSUBSW  { asmout, "psubsw"  };
+Instruction_MMX_Op PSUBUSB { asmout, "psubusb" };
+Instruction_MMX_Op PSUBUSW { asmout, "psubusw" };
+Instruction_MMX_Op PMULHW  { asmout, "pmulhw"  };
+Instruction_MMX_Op PMULLW  { asmout, "pmullw"  };
+Instruction_MMX_Op PMADDWD { asmout, "pmaddwd" };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 

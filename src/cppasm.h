@@ -621,6 +621,25 @@ extern Instruction_MMX_Op PUNPCKLBW;
 extern Instruction_MMX_Op PUNPCKLWD;
 extern Instruction_MMX_Op PUNPCKLDQ;
 
+// MMX packed arithmetic instructions
+extern Instruction_MMX_Op PADDB;
+extern Instruction_MMX_Op PADDW;
+extern Instruction_MMX_Op PADDD;
+extern Instruction_MMX_Op PADDSB;
+extern Instruction_MMX_Op PADDSW;
+extern Instruction_MMX_Op PADDUSB;
+extern Instruction_MMX_Op PADDUSW;
+extern Instruction_MMX_Op PSUBB;
+extern Instruction_MMX_Op PSUBW;
+extern Instruction_MMX_Op PSUBD;
+extern Instruction_MMX_Op PSUBSB;
+extern Instruction_MMX_Op PSUBSW;
+extern Instruction_MMX_Op PSUBUSB;
+extern Instruction_MMX_Op PSUBUSW;
+extern Instruction_MMX_Op PMULHW;
+extern Instruction_MMX_Op PMULLW;
+extern Instruction_MMX_Op PMADDWD;
+
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;
 

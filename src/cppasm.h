@@ -152,23 +152,7 @@ using Instruction_VMOVQ = Instruction_4
     m64_xmm
 >;
 
-using Instruction_PACKSSWB = Instruction_4
-<
-    mm_mm,
-    mm_m64,
-    xmm_xmm,
-    xmm_m128
->;
-
-using Instruction_PACKSSDW = Instruction_4
-<
-    mm_mm,
-    mm_m64,
-    xmm_xmm,
-    xmm_m128
->;
-
-using Instruction_PUNPCK = Instruction_4
+using Instruction_MMX_Op = Instruction_4
 <
     mm_mm,
     mm_m64,
@@ -628,14 +612,14 @@ extern Instruction_MOVD MOVD;
 extern Instruction_MOVQ MOVQ;
 
 // MMX conversion instructions
-extern Instruction_PACKSSWB PACKSSWB;
-extern Instruction_PACKSSDW PACKSSDW;
-extern Instruction_PUNPCK PUNPCKHBW;
-extern Instruction_PUNPCK PUNPCKHWD;
-extern Instruction_PUNPCK PUNPCKHDQ;
-extern Instruction_PUNPCK PUNPCKLBW;
-extern Instruction_PUNPCK PUNPCKLWD;
-extern Instruction_PUNPCK PUNPCKLDQ;
+extern Instruction_MMX_Op PACKSSWB;
+extern Instruction_MMX_Op PACKSSDW;
+extern Instruction_MMX_Op PUNPCKHBW;
+extern Instruction_MMX_Op PUNPCKHWD;
+extern Instruction_MMX_Op PUNPCKHDQ;
+extern Instruction_MMX_Op PUNPCKLBW;
+extern Instruction_MMX_Op PUNPCKLWD;
+extern Instruction_MMX_Op PUNPCKLDQ;
 
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;

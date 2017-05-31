@@ -59,6 +59,7 @@
 #include "xmm_xmm.h"
 #include "xmm_m128.h"
 
+#include "Operands_x.h"
 #include "Instruction_x.h"
 
 #include "Instruction_AAD.h"
@@ -106,6 +107,9 @@
 #include "Instruction_TEST.h"
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
+
+using mm_imm8 = Operands_reg_imm<mm, imm8>;
+using xmm_imm8 = Operands_reg_imm<xmm, imm8>;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -158,6 +162,16 @@ using Instruction_MMX_Op = Instruction_4
     mm_m64,
     xmm_xmm,
     xmm_m128
+>;
+
+using Instruction_MMX_Shift = Instruction_6
+<
+    mm_mm,
+    mm_m64,
+    xmm_xmm,
+    xmm_m128,
+    mm_imm8,
+    xmm_imm8
 >;
 
 extern asmstream asmout;
@@ -653,6 +667,16 @@ extern Instruction_MMX_Op PAND;
 extern Instruction_MMX_Op PANDN;
 extern Instruction_MMX_Op POR;
 extern Instruction_MMX_Op PXOR;
+
+// MMX shift and rotate instructions
+extern Instruction_MMX_Shift PSLLW;
+extern Instruction_MMX_Shift PSLLD;
+extern Instruction_MMX_Shift PSLLQ;
+extern Instruction_MMX_Shift PSRLW;
+extern Instruction_MMX_Shift PSRLD;
+extern Instruction_MMX_Shift PSRLQ;
+extern Instruction_MMX_Shift PSRAW;
+extern Instruction_MMX_Shift PSRAD;
 
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;

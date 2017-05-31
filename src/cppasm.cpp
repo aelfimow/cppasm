@@ -513,6 +513,16 @@ Instruction_MMX_Op PANDN { asmout, "pandn" };
 Instruction_MMX_Op POR   { asmout, "por"   };
 Instruction_MMX_Op PXOR  { asmout, "pxor"  };
 
+// MMX shift and rotate instructions
+Instruction_MMX_Shift PSLLW { asmout, "psllw" };
+Instruction_MMX_Shift PSLLD { asmout, "pslld" };
+Instruction_MMX_Shift PSLLQ { asmout, "psllq" };
+Instruction_MMX_Shift PSRLW { asmout, "psrlw" };
+Instruction_MMX_Shift PSRLD { asmout, "psrld" };
+Instruction_MMX_Shift PSRLQ { asmout, "psrlq" };
+Instruction_MMX_Shift PSRAW { asmout, "psraw" };
+Instruction_MMX_Shift PSRAD { asmout, "psrad" };
+
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 

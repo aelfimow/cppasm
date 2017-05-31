@@ -293,6 +293,7 @@
     <ClInclude Include="..\..\src\mm_mm.h" />
     <ClInclude Include="..\..\src\mm_r32.h" />
     <ClInclude Include="..\..\src\mm_r64.h" />
+    <ClInclude Include="..\..\src\Operands_x.h" />
     <ClInclude Include="..\..\src\op_none.h" />
     <ClInclude Include="..\..\src\r16.h" />
     <ClInclude Include="..\..\src\r32.h" />

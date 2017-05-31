@@ -81,17 +81,10 @@ all:
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
 	${CXX} -c mm_m32.cpp -o ${OBJDIR}/mm_m32.o ${CXXFLAGS}
 	${CXX} -c mm_m64.cpp -o ${OBJDIR}/mm_m64.o ${CXXFLAGS}
-	${CXX} -c mm_mm.cpp -o ${OBJDIR}/mm_mm.o ${CXXFLAGS}
-	${CXX} -c mm_r32.cpp -o ${OBJDIR}/mm_r32.o ${CXXFLAGS}
-	${CXX} -c mm_r64.cpp -o ${OBJDIR}/mm_r64.o ${CXXFLAGS}
 	${CXX} -c op_none.cpp -o ${OBJDIR}/op_none.o ${CXXFLAGS}
 	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
-	${CXX} -c r32_mm.cpp -o ${OBJDIR}/r32_mm.o ${CXXFLAGS}
-	${CXX} -c r32_xmm.cpp -o ${OBJDIR}/r32_xmm.o ${CXXFLAGS}
 	${CXX} -c r64.cpp -o ${OBJDIR}/r64.o ${CXXFLAGS}
-	${CXX} -c r64_mm.cpp -o ${OBJDIR}/r64_mm.o ${CXXFLAGS}
-	${CXX} -c r64_xmm.cpp -o ${OBJDIR}/r64_xmm.o ${CXXFLAGS}
 	${CXX} -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	${CXX} -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
@@ -100,8 +93,5 @@ all:
 	${CXX} -c xmm_m128.cpp -o ${OBJDIR}/xmm_m128.o ${CXXFLAGS}
 	${CXX} -c xmm_m32.cpp -o ${OBJDIR}/xmm_m32.o ${CXXFLAGS}
 	${CXX} -c xmm_m64.cpp -o ${OBJDIR}/xmm_m64.o ${CXXFLAGS}
-	${CXX} -c xmm_r32.cpp -o ${OBJDIR}/xmm_r32.o ${CXXFLAGS}
-	${CXX} -c xmm_r64.cpp -o ${OBJDIR}/xmm_r64.o ${CXXFLAGS}
-	${CXX} -c xmm_xmm.cpp -o ${OBJDIR}/xmm_xmm.o ${CXXFLAGS}
 	${CXX} -c ymm.cpp -o ${OBJDIR}/ymm.o ${CXXFLAGS}
 	@echo No errors

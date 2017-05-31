@@ -39,24 +39,14 @@
 #include "section.h"
 
 #include "op_none.h"
-#include "mm_r32.h"
 #include "mm_m32.h"
-#include "xmm_r32.h"
 #include "xmm_m32.h"
-#include "r32_mm.h"
 #include "m32_mm.h"
-#include "r32_xmm.h"
 #include "m32_xmm.h"
-#include "mm_r64.h"
 #include "mm_m64.h"
-#include "r64_mm.h"
 #include "m64_mm.h"
-#include "xmm_r64.h"
 #include "xmm_m64.h"
-#include "r64_xmm.h"
 #include "m64_xmm.h"
-#include "mm_mm.h"
-#include "xmm_xmm.h"
 #include "xmm_m128.h"
 
 #include "Operands_x.h"
@@ -108,6 +98,16 @@
 #include "Instruction_XADD.h"
 #include "Instruction_XCHG.h"
 
+using mm_mm = Operands_reg_reg<mm, mm>;
+using r32_mm = Operands_reg_reg<r32, mm>;
+using mm_r32 = Operands_reg_reg<mm, r32>;
+using r64_mm = Operands_reg_reg<r64, mm>;
+using mm_r64 = Operands_reg_reg<mm, r64>;
+using xmm_xmm = Operands_reg_reg<xmm, xmm>;
+using r32_xmm = Operands_reg_reg<r32, xmm>;
+using xmm_r32 = Operands_reg_reg<xmm, r32>;
+using r64_xmm = Operands_reg_reg<r64, xmm>;
+using xmm_r64 = Operands_reg_reg<xmm, r64>;
 using mm_imm8 = Operands_reg_imm<mm, imm8>;
 using xmm_imm8 = Operands_reg_imm<xmm, imm8>;
 

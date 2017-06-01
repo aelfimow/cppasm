@@ -260,9 +260,9 @@ using Instruction_PUSH = Instruction_10
     Operands_mem_postfix<m16>,
     Operands_mem_postfix<m32>,
     Operands_mem_postfix<m64>,
-    Operands_imm_postfix<imm8>,
-    Operands_imm_postfix<imm16>,
-    Operands_imm_postfix<imm32>,
+    Operands_imm<imm8>,
+    Operands_imm<imm16>,
+    Operands_imm<imm32>,
     Operands_reg<Sreg>
 >;
 

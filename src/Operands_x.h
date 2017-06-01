@@ -73,4 +73,39 @@ class Operands_reg_imm
 
 };
 
+template
+<
+    class RegType,
+    class MemType
+>
+class Operands_reg_mem
+{
+    public:
+        Operands_reg_mem(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType &op1, MemType &op2)
+        {
+            Instruction instr { m_mnem, op1.name(), op2.to_str() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_mem() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_mem() = delete;
+        Operands_reg_mem(const Operands_reg_mem &instance) = delete;
+        Operands_reg_mem(const Operands_reg_mem &&instance) = delete;
+        Operands_reg_mem &operator=(const Operands_reg_mem &instance) = delete;
+        Operands_reg_mem &operator=(const Operands_reg_mem &&instance) = delete;
+
+};
+
 #endif

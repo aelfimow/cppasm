@@ -49,7 +49,6 @@
 #include "Instruction_BOUND.h"
 #include "Instruction_Branch.h"
 #include "Instruction_BSWAP.h"
-#include "Instruction_CMOVx.h"
 #include "Instruction_CMPXCHG.h"
 #include "Instruction_CMPXCHG8B.h"
 #include "Instruction_CMPXCHG16B.h"
@@ -242,6 +241,16 @@ using Instruction_AsciiAdj = Instruction_2
 <
     op_none,
     Operands_imm<imm8>
+>;
+
+using Instruction_CMOVx = Instruction_6
+<
+    Operands_reg_reg<r16, r16>,
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_reg_mem<r64, m64>
 >;
 
 extern asmstream asmout;

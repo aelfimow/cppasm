@@ -28,7 +28,6 @@ all:
 	${CXX} -c Instruction_BOUND.cpp -o ${OBJDIR}/Instruction_BOUND.o ${CXXFLAGS}
 	${CXX} -c Instruction_Branch.cpp -o ${OBJDIR}/Instruction_Branch.o ${CXXFLAGS}
 	${CXX} -c Instruction_BSWAP.cpp -o ${OBJDIR}/Instruction_BSWAP.o ${CXXFLAGS}
-	${CXX} -c Instruction_CMOVx.cpp -o ${OBJDIR}/Instruction_CMOVx.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG.cpp -o ${OBJDIR}/Instruction_CMPXCHG.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG16B.cpp -o ${OBJDIR}/Instruction_CMPXCHG16B.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG8B.cpp -o ${OBJDIR}/Instruction_CMPXCHG8B.o ${CXXFLAGS}

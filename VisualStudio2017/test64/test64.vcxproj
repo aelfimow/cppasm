@@ -136,7 +136,6 @@
     <ClCompile Include="..\..\src\Instruction_BOUND.cpp" />
     <ClCompile Include="..\..\src\Instruction_Branch.cpp" />
     <ClCompile Include="..\..\src\Instruction_BSWAP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_CMOVx.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG16B.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG8B.cpp" />
@@ -206,7 +205,6 @@
     <ClInclude Include="..\..\src\Instruction_BOUND.h" />
     <ClInclude Include="..\..\src\Instruction_Branch.h" />
     <ClInclude Include="..\..\src\Instruction_BSWAP.h" />
-    <ClInclude Include="..\..\src\Instruction_CMOVx.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG16B.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG8B.h" />

@@ -143,4 +143,72 @@ class Operands_mem_reg
 
 };
 
+template
+<
+    class MemType
+>
+class Operands_mem
+{
+    public:
+        Operands_mem(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(MemType &op1)
+        {
+            Instruction instr { m_mnem, op1.to_str() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_mem() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_mem() = delete;
+        Operands_mem(const Operands_mem &instance) = delete;
+        Operands_mem(const Operands_mem &&instance) = delete;
+        Operands_mem &operator=(const Operands_mem &instance) = delete;
+        Operands_mem &operator=(const Operands_mem &&instance) = delete;
+
+};
+
+template
+<
+    class RegType
+>
+class Operands_reg
+{
+    public:
+        Operands_reg(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType &op1)
+        {
+            Instruction instr { m_mnem, op1.name() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg() = delete;
+        Operands_reg(const Operands_reg &instance) = delete;
+        Operands_reg(const Operands_reg &&instance) = delete;
+        Operands_reg &operator=(const Operands_reg &instance) = delete;
+        Operands_reg &operator=(const Operands_reg &&instance) = delete;
+
+};
+
 #endif

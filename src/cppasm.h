@@ -67,7 +67,6 @@
 #include "Instruction_OUT.h"
 #include "Instruction_POP.h"
 #include "Instruction_Prefix.h"
-#include "Instruction_PUSH.h"
 #include "Instruction_REP.h"
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
@@ -251,6 +250,20 @@ using Instruction_CMOVx = Instruction_6
     Operands_reg_mem<r32, m32>,
     Operands_reg_reg<r64, r64>,
     Operands_reg_mem<r64, m64>
+>;
+
+using Instruction_PUSH = Instruction_10
+<
+    Operands_reg<r16>,
+    Operands_reg<r32>,
+    Operands_reg<r64>,
+    Operands_mem_postfix<m16>,
+    Operands_mem_postfix<m32>,
+    Operands_mem_postfix<m64>,
+    Operands_imm_postfix<imm8>,
+    Operands_imm_postfix<imm16>,
+    Operands_imm_postfix<imm32>,
+    Operands_reg<Sreg>
 >;
 
 extern asmstream asmout;

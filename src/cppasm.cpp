@@ -177,7 +177,7 @@ Instruction_CMOVx CMOVPE { asmout, "cmovpe" };
 Instruction_CMOVx CMOVPO { asmout, "cmovpo" };
 Instruction_CMOVx CMOVS { asmout, "cmovs" };
 Instruction_CMOVx CMOVZ { asmout, "cmovz" };
-Instruction_PUSH PUSH { asmout };
+Instruction_PUSH PUSH { asmout, "push" };
 Instruction_NoOperands PUSHA { asmout, "pusha" };
 Instruction_NoOperands PUSHAD { asmout, "pushal" };
 Instruction_POP POP { asmout };

@@ -39,15 +39,6 @@
 #include "section.h"
 
 #include "op_none.h"
-#include "mm_m32.h"
-#include "xmm_m32.h"
-#include "m32_mm.h"
-#include "m32_xmm.h"
-#include "mm_m64.h"
-#include "m64_mm.h"
-#include "xmm_m64.h"
-#include "m64_xmm.h"
-#include "xmm_m128.h"
 
 #include "Operands_x.h"
 #include "Instruction_x.h"
@@ -110,6 +101,15 @@ using r64_xmm = Operands_reg_reg<r64, xmm>;
 using xmm_r64 = Operands_reg_reg<xmm, r64>;
 using mm_imm8 = Operands_reg_imm<mm, imm8>;
 using xmm_imm8 = Operands_reg_imm<xmm, imm8>;
+using mm_m32 = Operands_reg_mem<mm, m32>;
+using m32_mm = Operands_reg_mem<m32, mm>;
+using mm_m64 = Operands_reg_mem<mm, m64>;
+using m64_mm = Operands_reg_mem<m64, mm>;
+using xmm_m32 = Operands_reg_mem<xmm, m32>;
+using m32_xmm = Operands_reg_mem<m32, xmm>;
+using xmm_m64 = Operands_reg_mem<xmm, m64>;
+using m64_xmm = Operands_reg_mem<m64, xmm>;
+using xmm_m128 = Operands_reg_mem<xmm, m128>;
 
 using Instruction_NoOperands = Instruction_1
 <

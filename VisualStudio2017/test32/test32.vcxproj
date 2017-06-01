@@ -179,16 +179,10 @@
     <ClCompile Include="..\..\src\m128.cpp" />
     <ClCompile Include="..\..\src\m16.cpp" />
     <ClCompile Include="..\..\src\m32.cpp" />
-    <ClCompile Include="..\..\src\m32_mm.cpp" />
-    <ClCompile Include="..\..\src\m32_xmm.cpp" />
     <ClCompile Include="..\..\src\m64.cpp" />
-    <ClCompile Include="..\..\src\m64_mm.cpp" />
-    <ClCompile Include="..\..\src\m64_xmm.cpp" />
     <ClCompile Include="..\..\src\m8.cpp" />
     <ClCompile Include="..\..\src\m80.cpp" />
     <ClCompile Include="..\..\src\mm.cpp" />
-    <ClCompile Include="..\..\src\mm_m32.cpp" />
-    <ClCompile Include="..\..\src\mm_m64.cpp" />
     <ClCompile Include="..\..\src\op_none.cpp" />
     <ClCompile Include="..\..\src\r16.cpp" />
     <ClCompile Include="..\..\src\r32.cpp" />
@@ -198,9 +192,6 @@
     <ClCompile Include="..\..\src\Sreg.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\src\xmm.cpp" />
-    <ClCompile Include="..\..\src\xmm_m128.cpp" />
-    <ClCompile Include="..\..\src\xmm_m32.cpp" />
-    <ClCompile Include="..\..\src\xmm_m64.cpp" />
     <ClCompile Include="..\..\src\ymm.cpp" />
     <ClCompile Include="..\..\tests\test32.cpp" />
   </ItemGroup>
@@ -270,16 +261,10 @@
     <ClInclude Include="..\..\src\m128.h" />
     <ClInclude Include="..\..\src\m16.h" />
     <ClInclude Include="..\..\src\m32.h" />
-    <ClInclude Include="..\..\src\m32_mm.h" />
-    <ClInclude Include="..\..\src\m32_xmm.h" />
     <ClInclude Include="..\..\src\m64.h" />
-    <ClInclude Include="..\..\src\m64_mm.h" />
-    <ClInclude Include="..\..\src\m64_xmm.h" />
     <ClInclude Include="..\..\src\m8.h" />
     <ClInclude Include="..\..\src\m80.h" />
     <ClInclude Include="..\..\src\mm.h" />
-    <ClInclude Include="..\..\src\mm_m32.h" />
-    <ClInclude Include="..\..\src\mm_m64.h" />
     <ClInclude Include="..\..\src\Operands_x.h" />
     <ClInclude Include="..\..\src\op_none.h" />
     <ClInclude Include="..\..\src\r16.h" />
@@ -291,9 +276,6 @@
     <ClInclude Include="..\..\src\Sreg.h" />
     <ClInclude Include="..\..\src\st.h" />
     <ClInclude Include="..\..\src\xmm.h" />
-    <ClInclude Include="..\..\src\xmm_m128.h" />
-    <ClInclude Include="..\..\src\xmm_m32.h" />
-    <ClInclude Include="..\..\src\xmm_m64.h" />
     <ClInclude Include="..\..\src\ymm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -189,7 +189,7 @@ Instruction_NoOperands CQO { asmout, "cqto" };
 Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout };
-Instruction_BSWAP BSWAP { asmout };
+Instruction_BSWAP BSWAP { asmout, "bswap" };
 Instruction_XADD XADD { asmout };
 Instruction_CMPXCHG CMPXCHG { asmout, "cmpxchg" };
 Instruction_CMPXCHG8B CMPXCHG8B { asmout, "cmpxchg8b" };
@@ -315,7 +315,7 @@ Instruction_Jcc JZ { asmout, "jz" };
 Instruction_Branch CALL { asmout, "call" };
 Instruction_Branch CALL_FAR { asmout, "lcall" };
 Instruction_RET RET { asmout };
-Instruction_ENTER ENTER { asmout };
+Instruction_ENTER ENTER { asmout, "enter" };
 Instruction_NoOperands LEAVE { asmout, "leave" };
 Instruction_INT INT { asmout };
 Instruction_NoOperands INTO { asmout, "into" };
@@ -327,7 +327,7 @@ Instruction_LOOPcc LOOPE { asmout, "loope" };
 Instruction_LOOPcc LOOPNE { asmout, "loopne" };
 Instruction_LOOPcc LOOPZ { asmout, "loopz" };
 Instruction_LOOPcc LOOPNZ { asmout, "loopnz" };
-Instruction_BOUND BOUND { asmout };
+Instruction_BOUND BOUND { asmout, "bound" };
 
 // String instructions
 Instruction_StringOp MOVSB { asmout, "movsb" };

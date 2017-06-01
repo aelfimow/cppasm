@@ -74,6 +74,41 @@ class Operands_imm
 
 template
 <
+    class ImmType1,
+    class ImmType2
+>
+class Operands_imm_imm
+{
+    public:
+        Operands_imm_imm(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(ImmType1 &op1, ImmType2 &op2)
+        {
+            const std::string str { m_mnem + " " + op1.to_str() + ", " + op2.to_str() } ;
+            Instruction instr { str };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_imm_imm() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_imm_imm() = delete;
+        Operands_imm_imm(const Operands_imm_imm &instance) = delete;
+        Operands_imm_imm(const Operands_imm_imm &&instance) = delete;
+        Operands_imm_imm &operator=(const Operands_imm_imm &instance) = delete;
+        Operands_imm_imm &operator=(const Operands_imm_imm &&instance) = delete;
+};
+
+template
+<
     class ImmType
 >
 class Operands_imm_postfix
@@ -348,6 +383,35 @@ class Operands_reg
         Operands_reg &operator=(const Operands_reg &instance) = delete;
         Operands_reg &operator=(const Operands_reg &&instance) = delete;
 
+};
+
+class Operands_string
+{
+    public:
+        Operands_string(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(std::string &op1)
+        {
+            Instruction instr { m_mnem, op1 };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_string() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_string() = delete;
+        Operands_string(const Operands_string &instance) = delete;
+        Operands_string(const Operands_string &&instance) = delete;
+        Operands_string &operator=(const Operands_string &instance) = delete;
+        Operands_string &operator=(const Operands_string &&instance) = delete;
 };
 
 #endif

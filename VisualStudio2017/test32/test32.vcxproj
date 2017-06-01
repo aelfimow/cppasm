@@ -130,11 +130,6 @@
     <ClCompile Include="..\..\src\imm64.cpp" />
     <ClCompile Include="..\..\src\imm8.cpp" />
     <ClCompile Include="..\..\src\Instruction.cpp" />
-    <ClCompile Include="..\..\src\Instruction_BitTest.cpp" />
-    <ClCompile Include="..\..\src\Instruction_BOUND.cpp" />
-    <ClCompile Include="..\..\src\Instruction_Branch.cpp" />
-    <ClCompile Include="..\..\src\Instruction_BSWAP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_ENTER.cpp" />
     <ClCompile Include="..\..\src\Instruction_FSGSBASE.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_IN.cpp" />
@@ -193,11 +188,6 @@
     <ClInclude Include="..\..\src\imm64.h" />
     <ClInclude Include="..\..\src\imm8.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
-    <ClInclude Include="..\..\src\Instruction_BitTest.h" />
-    <ClInclude Include="..\..\src\Instruction_BOUND.h" />
-    <ClInclude Include="..\..\src\Instruction_Branch.h" />
-    <ClInclude Include="..\..\src\Instruction_BSWAP.h" />
-    <ClInclude Include="..\..\src\Instruction_ENTER.h" />
     <ClInclude Include="..\..\src\Instruction_FSGSBASE.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_IN.h" />

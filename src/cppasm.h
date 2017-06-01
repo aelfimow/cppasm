@@ -43,10 +43,6 @@
 #include "Operands_x.h"
 #include "Instruction_x.h"
 
-#include "Instruction_BOUND.h"
-#include "Instruction_Branch.h"
-#include "Instruction_BSWAP.h"
-#include "Instruction_ENTER.h"
 #include "Instruction_FSGSBASE.h"
 #include "Instruction_FST.h"
 #include "Instruction_IN.h"
@@ -311,6 +307,34 @@ using Instruction_BitTest = Instruction_9
     Operands_reg_imm<r16, imm8>,
     Operands_reg_imm<r32, imm8>,
     Operands_reg_imm<r64, imm8>
+>;
+
+using Instruction_BOUND = Instruction_2
+<
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_mem<r32, m32>
+>;
+
+using Instruction_Branch = Instruction_7
+<
+    Operands_string,
+    Operands_reg<r16>,
+    Operands_mem<m16>,
+    Operands_reg<r32>,
+    Operands_mem<m32>,
+    Operands_reg<r64>,
+    Operands_mem<m64>
+>;
+
+using Instruction_BSWAP = Instruction_2
+<
+    Operands_reg<r32>,
+    Operands_reg<r64>
+>;
+
+using Instruction_ENTER = Instruction_1
+<
+    Operands_imm_imm<imm16, imm8>
 >;
 
 extern asmstream asmout;

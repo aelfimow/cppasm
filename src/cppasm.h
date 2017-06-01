@@ -43,15 +43,9 @@
 #include "Operands_x.h"
 #include "Instruction_x.h"
 
-#include "Instruction_ADX.h"
-#include "Instruction_BitScan.h"
-#include "Instruction_BitTest.h"
 #include "Instruction_BOUND.h"
 #include "Instruction_Branch.h"
 #include "Instruction_BSWAP.h"
-#include "Instruction_CMPXCHG.h"
-#include "Instruction_CMPXCHG8B.h"
-#include "Instruction_CMPXCHG16B.h"
 #include "Instruction_ENTER.h"
 #include "Instruction_FSGSBASE.h"
 #include "Instruction_FST.h"
@@ -264,6 +258,59 @@ using Instruction_PUSH = Instruction_10
     Operands_imm<imm16>,
     Operands_imm<imm32>,
     Operands_reg<Sreg>
+>;
+
+using Instruction_ADX = Instruction_4
+<
+    Operands_reg_reg<r32, r32>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_reg_mem<r64, m64>
+>;
+
+using Instruction_CMPXCHG = Instruction_8
+<
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>
+>;
+
+using Instruction_CMPXCHG8B = Instruction_1
+<
+    Operands_mem<m64>
+>;
+
+using Instruction_CMPXCHG16B = Instruction_1
+<
+    Operands_mem<m128>
+>;
+
+using Instruction_BitScan = Instruction_6
+<
+    Operands_reg_reg<r16, r16>,
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_reg_mem<r64, m64>
+>;
+
+using Instruction_BitTest = Instruction_9
+<
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>,
+    Operands_reg_imm<r16, imm8>,
+    Operands_reg_imm<r32, imm8>,
+    Operands_reg_imm<r64, imm8>
 >;
 
 extern asmstream asmout;

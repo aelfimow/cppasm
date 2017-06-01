@@ -22,15 +22,9 @@ all:
 	${CXX} -c imm64.cpp -o ${OBJDIR}/imm64.o ${CXXFLAGS}
 	${CXX} -c imm8.cpp -o ${OBJDIR}/imm8.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
-	${CXX} -c Instruction_ADX.cpp -o ${OBJDIR}/Instruction_ADX.o ${CXXFLAGS}
-	${CXX} -c Instruction_BitScan.cpp -o ${OBJDIR}/Instruction_BitScan.o ${CXXFLAGS}
-	${CXX} -c Instruction_BitTest.cpp -o ${OBJDIR}/Instruction_BitTest.o ${CXXFLAGS}
 	${CXX} -c Instruction_BOUND.cpp -o ${OBJDIR}/Instruction_BOUND.o ${CXXFLAGS}
 	${CXX} -c Instruction_Branch.cpp -o ${OBJDIR}/Instruction_Branch.o ${CXXFLAGS}
 	${CXX} -c Instruction_BSWAP.cpp -o ${OBJDIR}/Instruction_BSWAP.o ${CXXFLAGS}
-	${CXX} -c Instruction_CMPXCHG.cpp -o ${OBJDIR}/Instruction_CMPXCHG.o ${CXXFLAGS}
-	${CXX} -c Instruction_CMPXCHG16B.cpp -o ${OBJDIR}/Instruction_CMPXCHG16B.o ${CXXFLAGS}
-	${CXX} -c Instruction_CMPXCHG8B.cpp -o ${OBJDIR}/Instruction_CMPXCHG8B.o ${CXXFLAGS}
 	${CXX} -c Instruction_ENTER.cpp -o ${OBJDIR}/Instruction_ENTER.o ${CXXFLAGS}
 	${CXX} -c Instruction_FSGSBASE.cpp -o ${OBJDIR}/Instruction_FSGSBASE.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}

@@ -139,7 +139,6 @@
     <ClCompile Include="..\..\src\Instruction_BOUND.cpp" />
     <ClCompile Include="..\..\src\Instruction_Branch.cpp" />
     <ClCompile Include="..\..\src\Instruction_BSWAP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_CLFLUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMOVx.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG.cpp" />
     <ClCompile Include="..\..\src\Instruction_CMPXCHG16B.cpp" />
@@ -150,8 +149,6 @@
     <ClCompile Include="..\..\src\Instruction_IN.cpp" />
     <ClCompile Include="..\..\src\Instruction_INT.cpp" />
     <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
-    <ClCompile Include="..\..\src\Instruction_LEA.cpp" />
-    <ClCompile Include="..\..\src\Instruction_LoadFarPointer.cpp" />
     <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
     <ClCompile Include="..\..\src\Instruction_LOOPcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
@@ -160,14 +157,12 @@
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_OUT.cpp" />
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_PREFETCH.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
     <ClCompile Include="..\..\src\Instruction_RDRAND.cpp" />
     <ClCompile Include="..\..\src\Instruction_RegMemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
-    <ClCompile Include="..\..\src\Instruction_rm16.cpp" />
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
@@ -219,7 +214,6 @@
     <ClInclude Include="..\..\src\Instruction_BOUND.h" />
     <ClInclude Include="..\..\src\Instruction_Branch.h" />
     <ClInclude Include="..\..\src\Instruction_BSWAP.h" />
-    <ClInclude Include="..\..\src\Instruction_CLFLUSH.h" />
     <ClInclude Include="..\..\src\Instruction_CMOVx.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG.h" />
     <ClInclude Include="..\..\src\Instruction_CMPXCHG16B.h" />
@@ -230,8 +224,6 @@
     <ClInclude Include="..\..\src\Instruction_IN.h" />
     <ClInclude Include="..\..\src\Instruction_INT.h" />
     <ClInclude Include="..\..\src\Instruction_Jcc.h" />
-    <ClInclude Include="..\..\src\Instruction_LEA.h" />
-    <ClInclude Include="..\..\src\Instruction_LoadFarPointer.h" />
     <ClInclude Include="..\..\src\Instruction_Logical.h" />
     <ClInclude Include="..\..\src\Instruction_LOOPcc.h" />
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
@@ -240,14 +232,12 @@
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_OUT.h" />
     <ClInclude Include="..\..\src\Instruction_POP.h" />
-    <ClInclude Include="..\..\src\Instruction_PREFETCH.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
     <ClInclude Include="..\..\src\Instruction_RDRAND.h" />
     <ClInclude Include="..\..\src\Instruction_RegMemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
-    <ClInclude Include="..\..\src\Instruction_rm16.h" />
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />

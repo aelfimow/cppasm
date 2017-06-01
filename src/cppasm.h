@@ -52,7 +52,6 @@
 #include "Instruction_BOUND.h"
 #include "Instruction_Branch.h"
 #include "Instruction_BSWAP.h"
-#include "Instruction_CLFLUSH.h"
 #include "Instruction_CMOVx.h"
 #include "Instruction_CMPXCHG.h"
 #include "Instruction_CMPXCHG8B.h"
@@ -63,8 +62,6 @@
 #include "Instruction_IN.h"
 #include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
-#include "Instruction_LEA.h"
-#include "Instruction_LoadFarPointer.h"
 #include "Instruction_Logical.h"
 #include "Instruction_LOOPcc.h"
 #include "Instruction_MemOperand.h"
@@ -73,14 +70,12 @@
 #include "Instruction_NOP.h"
 #include "Instruction_OUT.h"
 #include "Instruction_POP.h"
-#include "Instruction_PREFETCH.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_PUSH.h"
 #include "Instruction_RDRAND.h"
 #include "Instruction_RegMemOperand.h"
 #include "Instruction_REP.h"
 #include "Instruction_RET.h"
-#include "Instruction_rm16.h"
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_ShiftDouble.h"
@@ -172,6 +167,31 @@ using Instruction_MMX_Shift = Instruction_6
     xmm_m128,
     mm_imm8,
     xmm_imm8
+>;
+
+using Instruction_rm16 = Instruction_2
+<
+    Operands_reg<r16>,
+    Operands_mem<m16>
+>;
+
+using Instruction_MemOnly = Instruction_1
+<
+    Operands_mem<m>
+>;
+
+using Instruction_LoadFarPointer = Instruction_3
+<
+    Operands_reg_mem<r16, m>,
+    Operands_reg_mem<r32, m>,
+    Operands_reg_mem<r64, m>
+>;
+
+using Instruction_LEA = Instruction_3
+<
+    Operands_reg_mem<r16, m>,
+    Operands_reg_mem<r32, m>,
+    Operands_reg_mem<r64, m>
 >;
 
 extern asmstream asmout;
@@ -551,14 +571,14 @@ extern Instruction_NoOperands UD1;
 extern Instruction_NoOperands UD2;
 extern Instruction_NoOperands CPUID;
 extern Instruction_NoOperands XLAT;
-extern Instruction_CLFLUSH CLFLUSH;
-extern Instruction_CLFLUSH CLFLUSHOPT;
-extern Instruction_PREFETCH PREFETCHT0;
-extern Instruction_PREFETCH PREFETCHT1;
-extern Instruction_PREFETCH PREFETCHT2;
-extern Instruction_PREFETCH PREFETCHNTA;
-extern Instruction_PREFETCH PREFETCHW;
-extern Instruction_PREFETCH PREFETCHWT1;
+extern Instruction_MemOnly CLFLUSH;
+extern Instruction_MemOnly CLFLUSHOPT;
+extern Instruction_MemOnly PREFETCHT0;
+extern Instruction_MemOnly PREFETCHT1;
+extern Instruction_MemOnly PREFETCHT2;
+extern Instruction_MemOnly PREFETCHNTA;
+extern Instruction_MemOnly PREFETCHW;
+extern Instruction_MemOnly PREFETCHWT1;
 
 // User mode extended state save/restore instructions
 extern Instruction_MemOperand XSAVE;

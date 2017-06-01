@@ -389,21 +389,21 @@ Instruction_LoadFarPointer LGS { asmout, "lgs" };
 Instruction_LoadFarPointer LSS { asmout, "lss" };
 
 // Miscelleneous instructions
-Instruction_LEA LEA { asmout };
+Instruction_LEA LEA { asmout, "lea" };
 Instruction_NOP NOP { asmout };
 Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction_NoOperands UD1 { asmout, "ud1" };
 Instruction_NoOperands UD2 { asmout, "ud2" };
 Instruction_NoOperands CPUID { asmout, "cpuid" };
 Instruction_NoOperands XLAT { asmout, "xlat" };
-Instruction_CLFLUSH CLFLUSH { asmout, "clflush" };
-Instruction_CLFLUSH CLFLUSHOPT { asmout, "clflushopt" };
-Instruction_PREFETCH PREFETCHT0 { asmout, "prefetchnta" };
-Instruction_PREFETCH PREFETCHT1 { asmout, "prefetchnta" };
-Instruction_PREFETCH PREFETCHT2 { asmout, "prefetchnta" };
-Instruction_PREFETCH PREFETCHNTA { asmout, "prefetchnta" };
-Instruction_PREFETCH PREFETCHW { asmout, "prefetchw" };
-Instruction_PREFETCH PREFETCHWT1 { asmout, "prefetchwt1" };
+Instruction_MemOnly CLFLUSH { asmout, "clflush" };
+Instruction_MemOnly CLFLUSHOPT { asmout, "clflushopt" };
+Instruction_MemOnly PREFETCHT0 { asmout, "prefetchnta" };
+Instruction_MemOnly PREFETCHT1 { asmout, "prefetchnta" };
+Instruction_MemOnly PREFETCHT2 { asmout, "prefetchnta" };
+Instruction_MemOnly PREFETCHNTA { asmout, "prefetchnta" };
+Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
+Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
 
 // User mode extended state save/restore instructions
 Instruction_MemOperand XSAVE { asmout, "xsave" };

@@ -47,6 +47,32 @@ template
 <
     class T1,
     class T2,
+    class T3
+>
+class Instruction_3 :
+    public T1,
+    public T2,
+    public T3
+{
+    public:
+        Instruction_3(asmstream &s, const std::string mnem) :
+            T1 { s, mnem },
+            T2 { s, mnem },
+            T3 { s, mnem }
+        {
+        }
+
+        ~Instruction_3() { };
+
+        using T1::operator();
+        using T2::operator();
+        using T3::operator();
+};
+
+template
+<
+    class T1,
+    class T2,
     class T3,
     class T4
 >

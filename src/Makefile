@@ -31,7 +31,6 @@ all:
 	${CXX} -c Instruction_BOUND.cpp -o ${OBJDIR}/Instruction_BOUND.o ${CXXFLAGS}
 	${CXX} -c Instruction_Branch.cpp -o ${OBJDIR}/Instruction_Branch.o ${CXXFLAGS}
 	${CXX} -c Instruction_BSWAP.cpp -o ${OBJDIR}/Instruction_BSWAP.o ${CXXFLAGS}
-	${CXX} -c Instruction_CLFLUSH.cpp -o ${OBJDIR}/Instruction_CLFLUSH.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMOVx.cpp -o ${OBJDIR}/Instruction_CMOVx.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG.cpp -o ${OBJDIR}/Instruction_CMPXCHG.o ${CXXFLAGS}
 	${CXX} -c Instruction_CMPXCHG16B.cpp -o ${OBJDIR}/Instruction_CMPXCHG16B.o ${CXXFLAGS}
@@ -42,8 +41,6 @@ all:
 	${CXX} -c Instruction_IN.cpp -o ${OBJDIR}/Instruction_IN.o ${CXXFLAGS}
 	${CXX} -c Instruction_INT.cpp -o ${OBJDIR}/Instruction_INT.o ${CXXFLAGS}
 	${CXX} -c Instruction_Jcc.cpp -o ${OBJDIR}/Instruction_Jcc.o ${CXXFLAGS}
-	${CXX} -c Instruction_LEA.cpp -o ${OBJDIR}/Instruction_LEA.o ${CXXFLAGS}
-	${CXX} -c Instruction_LoadFarPointer.cpp -o ${OBJDIR}/Instruction_LoadFarPointer.o ${CXXFLAGS}
 	${CXX} -c Instruction_Logical.cpp -o ${OBJDIR}/Instruction_Logical.o ${CXXFLAGS}
 	${CXX} -c Instruction_LOOPcc.cpp -o ${OBJDIR}/Instruction_LOOPcc.o ${CXXFLAGS}
 	${CXX} -c Instruction_MemOperand.cpp -o ${OBJDIR}/Instruction_MemOperand.o ${CXXFLAGS}
@@ -52,14 +49,12 @@ all:
 	${CXX} -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
 	${CXX} -c Instruction_OUT.cpp -o ${OBJDIR}/Instruction_OUT.o ${CXXFLAGS}
 	${CXX} -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
-	${CXX} -c Instruction_PREFETCH.cpp -o ${OBJDIR}/Instruction_PREFETCH.o ${CXXFLAGS}
 	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}
 	${CXX} -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}
 	${CXX} -c Instruction_RDRAND.cpp -o ${OBJDIR}/Instruction_RDRAND.o ${CXXFLAGS}
 	${CXX} -c Instruction_RegMemOperand.cpp -o ${OBJDIR}/Instruction_RegMemOperand.o ${CXXFLAGS}
 	${CXX} -c Instruction_REP.cpp -o ${OBJDIR}/Instruction_REP.o ${CXXFLAGS}
 	${CXX} -c Instruction_RET.cpp -o ${OBJDIR}/Instruction_RET.o ${CXXFLAGS}
-	${CXX} -c Instruction_rm16.cpp -o ${OBJDIR}/Instruction_rm16.o ${CXXFLAGS}
 	${CXX} -c Instruction_SETcc.cpp -o ${OBJDIR}/Instruction_SETcc.o ${CXXFLAGS}
 	${CXX} -c Instruction_Shift.cpp -o ${OBJDIR}/Instruction_Shift.o ${CXXFLAGS}
 	${CXX} -c Instruction_ShiftDouble.cpp -o ${OBJDIR}/Instruction_ShiftDouble.o ${CXXFLAGS}

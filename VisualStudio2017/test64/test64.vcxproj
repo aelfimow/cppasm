@@ -133,7 +133,6 @@
     <ClCompile Include="..\..\src\Instruction_AAD.cpp" />
     <ClCompile Include="..\..\src\Instruction_AAM.cpp" />
     <ClCompile Include="..\..\src\Instruction_ADX.cpp" />
-    <ClCompile Include="..\..\src\Instruction_Arithmetic.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitScan.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitTest.cpp" />
     <ClCompile Include="..\..\src\Instruction_BOUND.cpp" />
@@ -159,8 +158,6 @@
     <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
     <ClCompile Include="..\..\src\Instruction_PUSH.cpp" />
-    <ClCompile Include="..\..\src\Instruction_RDRAND.cpp" />
-    <ClCompile Include="..\..\src\Instruction_RegMemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
     <ClCompile Include="..\..\src\Instruction_RET.cpp" />
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
@@ -208,7 +205,6 @@
     <ClInclude Include="..\..\src\Instruction_AAD.h" />
     <ClInclude Include="..\..\src\Instruction_AAM.h" />
     <ClInclude Include="..\..\src\Instruction_ADX.h" />
-    <ClInclude Include="..\..\src\Instruction_Arithmetic.h" />
     <ClInclude Include="..\..\src\Instruction_BitScan.h" />
     <ClInclude Include="..\..\src\Instruction_BitTest.h" />
     <ClInclude Include="..\..\src\Instruction_BOUND.h" />
@@ -234,8 +230,6 @@
     <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />
     <ClInclude Include="..\..\src\Instruction_PUSH.h" />
-    <ClInclude Include="..\..\src\Instruction_RDRAND.h" />
-    <ClInclude Include="..\..\src\Instruction_RegMemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
     <ClInclude Include="..\..\src\Instruction_RET.h" />
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />

@@ -25,7 +25,6 @@ all:
 	${CXX} -c Instruction_AAD.cpp -o ${OBJDIR}/Instruction_AAD.o ${CXXFLAGS}
 	${CXX} -c Instruction_AAM.cpp -o ${OBJDIR}/Instruction_AAM.o ${CXXFLAGS}
 	${CXX} -c Instruction_ADX.cpp -o ${OBJDIR}/Instruction_ADX.o ${CXXFLAGS}
-	${CXX} -c Instruction_Arithmetic.cpp -o ${OBJDIR}/Instruction_Arithmetic.o ${CXXFLAGS}
 	${CXX} -c Instruction_BitScan.cpp -o ${OBJDIR}/Instruction_BitScan.o ${CXXFLAGS}
 	${CXX} -c Instruction_BitTest.cpp -o ${OBJDIR}/Instruction_BitTest.o ${CXXFLAGS}
 	${CXX} -c Instruction_BOUND.cpp -o ${OBJDIR}/Instruction_BOUND.o ${CXXFLAGS}
@@ -51,8 +50,6 @@ all:
 	${CXX} -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}
 	${CXX} -c Instruction_PUSH.cpp -o ${OBJDIR}/Instruction_PUSH.o ${CXXFLAGS}
-	${CXX} -c Instruction_RDRAND.cpp -o ${OBJDIR}/Instruction_RDRAND.o ${CXXFLAGS}
-	${CXX} -c Instruction_RegMemOperand.cpp -o ${OBJDIR}/Instruction_RegMemOperand.o ${CXXFLAGS}
 	${CXX} -c Instruction_REP.cpp -o ${OBJDIR}/Instruction_REP.o ${CXXFLAGS}
 	${CXX} -c Instruction_RET.cpp -o ${OBJDIR}/Instruction_RET.o ${CXXFLAGS}
 	${CXX} -c Instruction_SETcc.cpp -o ${OBJDIR}/Instruction_SETcc.o ${CXXFLAGS}

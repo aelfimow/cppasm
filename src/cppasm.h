@@ -46,7 +46,6 @@
 #include "Instruction_AAD.h"
 #include "Instruction_AAM.h"
 #include "Instruction_ADX.h"
-#include "Instruction_Arithmetic.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
 #include "Instruction_BOUND.h"
@@ -72,8 +71,6 @@
 #include "Instruction_POP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_PUSH.h"
-#include "Instruction_RDRAND.h"
-#include "Instruction_RegMemOperand.h"
 #include "Instruction_REP.h"
 #include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
@@ -192,6 +189,55 @@ using Instruction_LEA = Instruction_3
     Operands_reg_mem<r16, m>,
     Operands_reg_mem<r32, m>,
     Operands_reg_mem<r64, m>
+>;
+
+using Instruction_RDRAND = Instruction_3
+<
+    Operands_reg<r16>,
+    Operands_reg<r32>,
+    Operands_reg<r64>
+>;
+
+using Instruction_Arithm1 = Instruction_26
+<
+    Operands_reg_imm<r8, imm8>,
+    Operands_mem_imm<m8, imm8>,
+    Operands_reg_imm<r16, imm16>,
+    Operands_mem_imm<m16, imm16>,
+    Operands_reg_imm<r32, imm32>,
+    Operands_mem_imm<m32, imm32>,
+    Operands_reg_imm<r64, imm32>,
+    Operands_mem_imm<m64, imm32>,
+    Operands_reg_imm<r16, imm8>,
+    Operands_mem_imm<m16, imm8>,
+    Operands_reg_imm<r32, imm8>,
+    Operands_mem_imm<m32, imm8>,
+    Operands_reg_imm<r64, imm8>,
+    Operands_mem_imm<m64, imm8>,
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>,
+    Operands_reg_mem<r8, m8>,
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_mem<r64, m64>
+>;
+
+using Instruction_Arithm2 = Instruction_8
+<
+    Operands_reg<r8>,
+    Operands_reg<r16>,
+    Operands_reg<r32>,
+    Operands_reg<r64>,
+    Operands_mem_postfix<m8>,
+    Operands_mem_postfix<m16>,
+    Operands_mem_postfix<m32>,
+    Operands_mem_postfix<m64>
 >;
 
 extern asmstream asmout;
@@ -371,20 +417,20 @@ extern Instruction_CMPXCHG8B CMPXCHG8B;
 extern Instruction_CMPXCHG16B CMPXCHG16B;
 
 // Binary arithmetic instructions
-extern Instruction_Arithmetic ADD;
-extern Instruction_Arithmetic ADC;
-extern Instruction_Arithmetic SUB;
-extern Instruction_Arithmetic SBB;
-extern Instruction_Arithmetic CMP;
+extern Instruction_Arithm1 ADD;
+extern Instruction_Arithm1 ADC;
+extern Instruction_Arithm1 SUB;
+extern Instruction_Arithm1 SBB;
+extern Instruction_Arithm1 CMP;
 extern Instruction_ADX ADCX;
 extern Instruction_ADX ADOX;
-extern Instruction_RegMemOperand MUL;
-extern Instruction_RegMemOperand IMUL;
-extern Instruction_RegMemOperand DIV;
-extern Instruction_RegMemOperand IDIV;
-extern Instruction_RegMemOperand NEG;
-extern Instruction_RegMemOperand INC;
-extern Instruction_RegMemOperand DEC;
+extern Instruction_Arithm2 MUL;
+extern Instruction_Arithm2 IMUL;
+extern Instruction_Arithm2 DIV;
+extern Instruction_Arithm2 IDIV;
+extern Instruction_Arithm2 NEG;
+extern Instruction_Arithm2 INC;
+extern Instruction_Arithm2 DEC;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;
@@ -398,7 +444,7 @@ extern Instruction_NoOperands DAS;
 extern Instruction_Logical AND;
 extern Instruction_Logical OR;
 extern Instruction_Logical XOR;
-extern Instruction_RegMemOperand NOT;
+extern Instruction_Arithm2 NOT;
 
 // Shift and rotate instructions
 extern Instruction_Shift SAL;

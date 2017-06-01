@@ -196,20 +196,20 @@ Instruction_CMPXCHG8B CMPXCHG8B { asmout };
 Instruction_CMPXCHG16B CMPXCHG16B { asmout };
 
 // Binary arithmetic instructions
-Instruction_Arithmetic ADD { asmout, "add" };
-Instruction_Arithmetic ADC { asmout, "adc" };
-Instruction_Arithmetic SUB { asmout, "sub" };
-Instruction_Arithmetic SBB { asmout, "sbb" };
-Instruction_Arithmetic CMP { asmout, "cmp" };
+Instruction_Arithm1 ADD { asmout, "add" };
+Instruction_Arithm1 ADC { asmout, "adc" };
+Instruction_Arithm1 SUB { asmout, "sub" };
+Instruction_Arithm1 SBB { asmout, "sbb" };
+Instruction_Arithm1 CMP { asmout, "cmp" };
 Instruction_ADX ADCX { asmout, "adcx" };
 Instruction_ADX ADOX { asmout, "adox" };
-Instruction_RegMemOperand MUL { asmout, "mul" };
-Instruction_RegMemOperand IMUL { asmout, "imul" };
-Instruction_RegMemOperand DIV { asmout, "div" };
-Instruction_RegMemOperand IDIV { asmout, "idiv" };
-Instruction_RegMemOperand NEG { asmout, "neg" };
-Instruction_RegMemOperand INC { asmout, "inc" };
-Instruction_RegMemOperand DEC { asmout, "dec" };
+Instruction_Arithm2 MUL { asmout, "mul" };
+Instruction_Arithm2 IMUL { asmout, "imul" };
+Instruction_Arithm2 DIV { asmout, "div" };
+Instruction_Arithm2 IDIV { asmout, "idiv" };
+Instruction_Arithm2 NEG { asmout, "neg" };
+Instruction_Arithm2 INC { asmout, "inc" };
+Instruction_Arithm2 DEC { asmout, "dec" };
 
 // Decimal arithmetic instructions
 Instruction_NoOperands AAA { asmout, "aaa" };
@@ -223,7 +223,7 @@ Instruction_NoOperands DAS { asmout, "das" };
 Instruction_Logical AND { asmout, "and" };
 Instruction_Logical OR { asmout, "or" };
 Instruction_Logical XOR { asmout, "xor" };
-Instruction_RegMemOperand NOT { asmout, "not" };
+Instruction_Arithm2 NOT { asmout, "not" };
 
 // Shift and rotate instructions
 Instruction_Shift SAL { asmout, "sal" };

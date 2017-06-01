@@ -22,8 +22,6 @@ all:
 	${CXX} -c imm64.cpp -o ${OBJDIR}/imm64.o ${CXXFLAGS}
 	${CXX} -c imm8.cpp -o ${OBJDIR}/imm8.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
-	${CXX} -c Instruction_AAD.cpp -o ${OBJDIR}/Instruction_AAD.o ${CXXFLAGS}
-	${CXX} -c Instruction_AAM.cpp -o ${OBJDIR}/Instruction_AAM.o ${CXXFLAGS}
 	${CXX} -c Instruction_ADX.cpp -o ${OBJDIR}/Instruction_ADX.o ${CXXFLAGS}
 	${CXX} -c Instruction_BitScan.cpp -o ${OBJDIR}/Instruction_BitScan.o ${CXXFLAGS}
 	${CXX} -c Instruction_BitTest.cpp -o ${OBJDIR}/Instruction_BitTest.o ${CXXFLAGS}

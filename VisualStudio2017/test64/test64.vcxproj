@@ -130,8 +130,6 @@
     <ClCompile Include="..\..\src\imm64.cpp" />
     <ClCompile Include="..\..\src\imm8.cpp" />
     <ClCompile Include="..\..\src\Instruction.cpp" />
-    <ClCompile Include="..\..\src\Instruction_AAD.cpp" />
-    <ClCompile Include="..\..\src\Instruction_AAM.cpp" />
     <ClCompile Include="..\..\src\Instruction_ADX.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitScan.cpp" />
     <ClCompile Include="..\..\src\Instruction_BitTest.cpp" />
@@ -202,8 +200,6 @@
     <ClInclude Include="..\..\src\imm64.h" />
     <ClInclude Include="..\..\src\imm8.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
-    <ClInclude Include="..\..\src\Instruction_AAD.h" />
-    <ClInclude Include="..\..\src\Instruction_AAM.h" />
     <ClInclude Include="..\..\src\Instruction_ADX.h" />
     <ClInclude Include="..\..\src\Instruction_BitScan.h" />
     <ClInclude Include="..\..\src\Instruction_BitTest.h" />

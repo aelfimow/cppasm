@@ -43,8 +43,6 @@
 #include "Operands_x.h"
 #include "Instruction_x.h"
 
-#include "Instruction_AAD.h"
-#include "Instruction_AAM.h"
 #include "Instruction_ADX.h"
 #include "Instruction_BitScan.h"
 #include "Instruction_BitTest.h"
@@ -238,6 +236,12 @@ using Instruction_Arithm2 = Instruction_8
     Operands_mem_postfix<m16>,
     Operands_mem_postfix<m32>,
     Operands_mem_postfix<m64>
+>;
+
+using Instruction_AsciiAdj = Instruction_2
+<
+    op_none,
+    Operands_imm<imm8>
 >;
 
 extern asmstream asmout;
@@ -434,8 +438,8 @@ extern Instruction_Arithm2 DEC;
 
 // Decimal arithmetic instructions
 extern Instruction_NoOperands AAA;
-extern Instruction_AAD AAD;
-extern Instruction_AAM AAM;
+extern Instruction_AsciiAdj AAD;
+extern Instruction_AsciiAdj AAM;
 extern Instruction_NoOperands AAS;
 extern Instruction_NoOperands DAA;
 extern Instruction_NoOperands DAS;

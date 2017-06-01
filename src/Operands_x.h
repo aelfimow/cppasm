@@ -40,6 +40,40 @@ class Operands_reg_reg
 
 template
 <
+    class ImmType
+>
+class Operands_imm
+{
+    public:
+        Operands_imm(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(ImmType &op1)
+        {
+            Instruction instr { m_mnem, op1.to_str() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_imm() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_imm() = delete;
+        Operands_imm(const Operands_imm &instance) = delete;
+        Operands_imm(const Operands_imm &&instance) = delete;
+        Operands_imm &operator=(const Operands_imm &instance) = delete;
+        Operands_imm &operator=(const Operands_imm &&instance) = delete;
+
+};
+
+template
+<
     class RegType,
     class ImmType
 >

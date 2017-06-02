@@ -566,6 +566,11 @@ Instruction_SSE_Arithm1 ANDNPS { asmout, "andnps" };
 Instruction_SSE_Arithm1 ORPS { asmout, "orps" };
 Instruction_SSE_Arithm1 XORPS { asmout, "xorps" };
 
+// SSE shuffle and unpack instructions
+Instruction_SSE_Shuffle SHUFPS { asmout, "shufps" };
+Instruction_SSE_Arithm1 UNPCKHPS { asmout, "unpckhps" };
+Instruction_SSE_Arithm1 UNPCKLPS { asmout, "unpcklps" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

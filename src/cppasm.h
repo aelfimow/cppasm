@@ -398,6 +398,12 @@ using Instruction_SSE_Cmp3 = Instruction_2
     Operands_reg_mem<xmm, m32>
 >;
 
+using Instruction_SSE_Shuffle = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -944,6 +950,11 @@ extern Instruction_SSE_Arithm1 ANDPS;
 extern Instruction_SSE_Arithm1 ANDNPS;
 extern Instruction_SSE_Arithm1 ORPS;
 extern Instruction_SSE_Arithm1 XORPS;
+
+// SSE shuffle and unpack instructions
+extern Instruction_SSE_Shuffle SHUFPS;
+extern Instruction_SSE_Arithm1 UNPCKHPS;
+extern Instruction_SSE_Arithm1 UNPCKLPS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

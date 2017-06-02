@@ -560,6 +560,12 @@ Instruction_SSE_Cmp2 CMPSS { asmout, "cmpss" };
 Instruction_SSE_Cmp3 COMISS { asmout, "comiss" };
 Instruction_SSE_Cmp3 UCOMISS { asmout, "ucomiss" };
 
+// SSE logical instructions
+Instruction_SSE_Arithm1 ANDPS { asmout, "andps" };
+Instruction_SSE_Arithm1 ANDNPS { asmout, "andnps" };
+Instruction_SSE_Arithm1 ORPS { asmout, "orps" };
+Instruction_SSE_Arithm1 XORPS { asmout, "xorps" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

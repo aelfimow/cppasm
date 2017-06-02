@@ -939,6 +939,12 @@ extern Instruction_SSE_Cmp2 CMPSS;
 extern Instruction_SSE_Cmp3 COMISS;
 extern Instruction_SSE_Cmp3 UCOMISS;
 
+// SSE logical instructions
+extern Instruction_SSE_Arithm1 ANDPS;
+extern Instruction_SSE_Arithm1 ANDNPS;
+extern Instruction_SSE_Arithm1 ORPS;
+extern Instruction_SSE_Arithm1 XORPS;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

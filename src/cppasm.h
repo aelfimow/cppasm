@@ -337,6 +337,37 @@ using Instruction_ENTER = Instruction_1
     Operands_imm_imm<imm16, imm8>
 >;
 
+using Instruction_SSE_MOV1 = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m128>,
+    Operands_mem_reg<m128, xmm>
+>;
+
+using Instruction_SSE_MOV2 = Instruction_2
+<
+    Operands_reg_mem<xmm, m64>,
+    Operands_mem_reg<m64, xmm>
+>;
+
+using Instruction_SSE_MOV3 = Instruction_1
+<
+    Operands_reg_reg<xmm, xmm>
+>;
+
+using Instruction_SSE_MOV4 = Instruction_2
+<
+    Operands_reg_reg<r32, xmm>,
+    Operands_reg_reg<r64, xmm>
+>;
+
+using Instruction_SSE_MOV5 = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m32>,
+    Operands_mem_reg<m32, xmm>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -843,6 +874,16 @@ extern Instruction_MMX_Shift PSRAD;
 
 // MMX state management instructions
 extern Instruction_NoOperands EMMS;
+
+// SSE data transfer instructions
+extern Instruction_SSE_MOV1 MOVAPS;
+extern Instruction_SSE_MOV1 MOVUPS;
+extern Instruction_SSE_MOV2 MOVHPS;
+extern Instruction_SSE_MOV2 MOVLPS;
+extern Instruction_SSE_MOV3 MOVLHPS;
+extern Instruction_SSE_MOV3 MOVHLPS;
+extern Instruction_SSE_MOV4 MOVMSKPS;
+extern Instruction_SSE_MOV5 MOVSS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

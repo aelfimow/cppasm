@@ -526,6 +526,16 @@ Instruction_MMX_Shift PSRAD { asmout, "psrad" };
 // MMX state management instructions
 Instruction_NoOperands EMMS { asmout, "emms" };
 
+// SSE data transfer instructions
+Instruction_SSE_MOV1 MOVAPS { asmout, "movaps" };
+Instruction_SSE_MOV1 MOVUPS { asmout, "movups" };
+Instruction_SSE_MOV2 MOVHPS { asmout, "movhps" };
+Instruction_SSE_MOV2 MOVLPS { asmout, "movlps" };
+Instruction_SSE_MOV3 MOVLHPS { asmout, "movlhps" };
+Instruction_SSE_MOV3 MOVHLPS { asmout, "movhlps" };
+Instruction_SSE_MOV4 MOVMSKPS { asmout, "movmskps" };
+Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

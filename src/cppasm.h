@@ -404,6 +404,34 @@ using Instruction_SSE_Shuffle = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
+using Instruction_SSE_Conv1 = Instruction_2
+<
+    Operands_reg_reg<xmm, mm>,
+    Operands_reg_mem<xmm, m64>
+>;
+
+using Instruction_SSE_Conv2 = Instruction_4
+<
+    Operands_reg_reg<xmm, r32>,
+    Operands_reg_mem_postfix<xmm, m32>,
+    Operands_reg_reg<xmm, r64>,
+    Operands_reg_mem_postfix<xmm, m64>
+>;
+
+using Instruction_SSE_Conv3 = Instruction_2
+<
+    Operands_reg_reg<mm, xmm>,
+    Operands_reg_mem<mm, m64>
+>;
+
+using Instruction_SSE_Conv4 = Instruction_4
+<
+    Operands_reg_reg<r32, xmm>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r64, xmm>,
+    Operands_reg_mem<r64, m32>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -955,6 +983,14 @@ extern Instruction_SSE_Arithm1 XORPS;
 extern Instruction_SSE_Shuffle SHUFPS;
 extern Instruction_SSE_Arithm1 UNPCKHPS;
 extern Instruction_SSE_Arithm1 UNPCKLPS;
+
+// SSE convertion instructions
+extern Instruction_SSE_Conv1 CVTPI2PS;
+extern Instruction_SSE_Conv2 CVTSI2SS;
+extern Instruction_SSE_Conv3 CVTPS2PI;
+extern Instruction_SSE_Conv3 CVTTPS2PI;
+extern Instruction_SSE_Conv4 CVTSS2SI;
+extern Instruction_SSE_Conv4 CVTTSS2SI;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -571,6 +571,14 @@ Instruction_SSE_Shuffle SHUFPS { asmout, "shufps" };
 Instruction_SSE_Arithm1 UNPCKHPS { asmout, "unpckhps" };
 Instruction_SSE_Arithm1 UNPCKLPS { asmout, "unpcklps" };
 
+// SSE convertion instructions
+Instruction_SSE_Conv1 CVTPI2PS { asmout, "cvtpi2ps" };
+Instruction_SSE_Conv2 CVTSI2SS { asmout, "cvtsi2ss" };
+Instruction_SSE_Conv3 CVTPS2PI { asmout, "cvtps2pi" };
+Instruction_SSE_Conv3 CVTTPS2PI { asmout, "cvttps2pi" };
+Instruction_SSE_Conv4 CVTSS2SI { asmout, "cvtss2si" };
+Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

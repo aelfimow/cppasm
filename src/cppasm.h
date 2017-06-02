@@ -368,6 +368,18 @@ using Instruction_SSE_MOV5 = Instruction_3
     Operands_mem_reg<m32, xmm>
 >;
 
+using Instruction_SSE_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m128>
+>;
+
+using Instruction_SSE_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m32>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -884,6 +896,24 @@ extern Instruction_SSE_MOV3 MOVLHPS;
 extern Instruction_SSE_MOV3 MOVHLPS;
 extern Instruction_SSE_MOV4 MOVMSKPS;
 extern Instruction_SSE_MOV5 MOVSS;
+
+// SSE packed arithmetic instructions
+extern Instruction_SSE_Arithm1 ADDPS;
+extern Instruction_SSE_Arithm2 ADDSS;
+extern Instruction_SSE_Arithm1 SUBPS;
+extern Instruction_SSE_Arithm2 SUBSS;
+extern Instruction_SSE_Arithm1 MULPS;
+extern Instruction_SSE_Arithm2 MULSS;
+extern Instruction_SSE_Arithm1 DIVPS;
+extern Instruction_SSE_Arithm2 DIVSS;
+extern Instruction_SSE_Arithm1 RCPPS;
+extern Instruction_SSE_Arithm2 RCPSS;
+extern Instruction_SSE_Arithm1 SQRTPS;
+extern Instruction_SSE_Arithm2 SQRTSS;
+extern Instruction_SSE_Arithm1 MAXPS;
+extern Instruction_SSE_Arithm2 MAXSS;
+extern Instruction_SSE_Arithm1 MINPS;
+extern Instruction_SSE_Arithm2 MINSS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

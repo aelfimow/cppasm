@@ -536,6 +536,24 @@ Instruction_SSE_MOV3 MOVHLPS { asmout, "movhlps" };
 Instruction_SSE_MOV4 MOVMSKPS { asmout, "movmskps" };
 Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
 
+// SSE packed arithmetic instructions
+Instruction_SSE_Arithm1 ADDPS { asmout, "addps" };
+Instruction_SSE_Arithm2 ADDSS { asmout, "addss" };
+Instruction_SSE_Arithm1 SUBPS { asmout, "subps" };
+Instruction_SSE_Arithm2 SUBSS { asmout, "subss" };
+Instruction_SSE_Arithm1 MULPS { asmout, "mulps" };
+Instruction_SSE_Arithm2 MULSS { asmout, "mulss" };
+Instruction_SSE_Arithm1 DIVPS { asmout, "divps" };
+Instruction_SSE_Arithm2 DIVSS { asmout, "divss" };
+Instruction_SSE_Arithm1 RCPPS { asmout, "rcpps" };
+Instruction_SSE_Arithm2 RCPSS { asmout, "rcpss" };
+Instruction_SSE_Arithm1 SQRTPS { asmout, "sqrtps" };
+Instruction_SSE_Arithm2 SQRTSS { asmout, "sqrtss" };
+Instruction_SSE_Arithm1 MAXPS { asmout, "maxps" };
+Instruction_SSE_Arithm2 MAXSS { asmout, "maxss" };
+Instruction_SSE_Arithm1 MINPS { asmout, "minps" };
+Instruction_SSE_Arithm2 MINSS { asmout, "minss" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

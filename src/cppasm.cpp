@@ -554,6 +554,12 @@ Instruction_SSE_Arithm2 MAXSS { asmout, "maxss" };
 Instruction_SSE_Arithm1 MINPS { asmout, "minps" };
 Instruction_SSE_Arithm2 MINSS { asmout, "minss" };
 
+// SSE comparison instructions
+Instruction_SSE_Cmp1 CMPPS { asmout, "cmpps" };
+Instruction_SSE_Cmp2 CMPSS { asmout, "cmpss" };
+Instruction_SSE_Cmp3 COMISS { asmout, "comiss" };
+Instruction_SSE_Cmp3 UCOMISS { asmout, "ucomiss" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

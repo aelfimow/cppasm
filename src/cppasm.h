@@ -380,6 +380,24 @@ using Instruction_SSE_Arithm2 = Instruction_2
     Operands_reg_mem<xmm, m32>
 >;
 
+using Instruction_SSE_Cmp1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE_Cmp2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE_Cmp3 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m32>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -914,6 +932,12 @@ extern Instruction_SSE_Arithm1 MAXPS;
 extern Instruction_SSE_Arithm2 MAXSS;
 extern Instruction_SSE_Arithm1 MINPS;
 extern Instruction_SSE_Arithm2 MINSS;
+
+// SSE comparison instructions
+extern Instruction_SSE_Cmp1 CMPPS;
+extern Instruction_SSE_Cmp2 CMPSS;
+extern Instruction_SSE_Cmp3 COMISS;
+extern Instruction_SSE_Cmp3 UCOMISS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

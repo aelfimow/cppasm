@@ -40,6 +40,42 @@ class Operands_reg_reg
 
 template
 <
+    class RegType1,
+    class RegType2,
+    class ImmType
+>
+class Operands_reg_reg_imm
+{
+    public:
+        Operands_reg_reg_imm(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType1 &op1, RegType2 &op2, ImmType op3)
+        {
+            Instruction instr { m_mnem, op1.name(), op2.name(), op3.to_str() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_reg_imm() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_reg_imm() = delete;
+        Operands_reg_reg_imm(const Operands_reg_reg_imm &instance) = delete;
+        Operands_reg_reg_imm(const Operands_reg_reg_imm &&instance) = delete;
+        Operands_reg_reg_imm &operator=(const Operands_reg_reg_imm &instance) = delete;
+        Operands_reg_reg_imm &operator=(const Operands_reg_reg_imm &&instance) = delete;
+
+};
+
+template
+<
     class ImmType
 >
 class Operands_imm
@@ -209,6 +245,42 @@ class Operands_mem_imm
         Operands_mem_imm(const Operands_mem_imm &&instance) = delete;
         Operands_mem_imm &operator=(const Operands_mem_imm &instance) = delete;
         Operands_mem_imm &operator=(const Operands_mem_imm &&instance) = delete;
+
+};
+
+template
+<
+    class RegType,
+    class MemType,
+    class ImmType
+>
+class Operands_reg_mem_imm
+{
+    public:
+        Operands_reg_mem_imm(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType &op1, MemType &op2, ImmType &op3)
+        {
+            Instruction instr { m_mnem, op1.name(), op2.to_str(), op3.to_str() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_mem_imm() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_mem_imm() = delete;
+        Operands_reg_mem_imm(const Operands_reg_mem_imm &instance) = delete;
+        Operands_reg_mem_imm(const Operands_reg_mem_imm &&instance) = delete;
+        Operands_reg_mem_imm &operator=(const Operands_reg_mem_imm &instance) = delete;
+        Operands_reg_mem_imm &operator=(const Operands_reg_mem_imm &&instance) = delete;
 
 };
 

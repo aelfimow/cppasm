@@ -65,7 +65,6 @@
 #include "Instruction_StringOp.h"
 #include "Instruction_TEST.h"
 #include "Instruction_XADD.h"
-#include "Instruction_XCHG.h"
 
 using mm_mm = Operands_reg_reg<mm, mm>;
 using r32_mm = Operands_reg_reg<r32, mm>;
@@ -430,6 +429,22 @@ using Instruction_SSE_Conv4 = Instruction_4
     Operands_reg_mem<r32, m32>,
     Operands_reg_reg<r64, xmm>,
     Operands_reg_mem<r64, m32>
+>;
+
+using Instruction_XCHG = Instruction_12
+<
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_mem<r8, m8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>,
+    Operands_reg_mem<r64, m64>
 >;
 
 extern asmstream asmout;

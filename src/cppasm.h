@@ -43,7 +43,6 @@
 #include "Operands_x.h"
 #include "Instruction_x.h"
 
-#include "Instruction_FSGSBASE.h"
 #include "Instruction_FST.h"
 #include "Instruction_IN.h"
 #include "Instruction_INT.h"
@@ -445,6 +444,12 @@ using Instruction_XCHG = Instruction_12
     Operands_reg_reg<r64, r64>,
     Operands_mem_reg<m64, r64>,
     Operands_reg_mem<r64, m64>
+>;
+
+using Instruction_FSGSBASE = Instruction_2
+<
+    Operands_reg<r32>,
+    Operands_reg<r64>
 >;
 
 extern asmstream asmout;

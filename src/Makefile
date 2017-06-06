@@ -22,7 +22,6 @@ all:
 	${CXX} -c imm64.cpp -o ${OBJDIR}/imm64.o ${CXXFLAGS}
 	${CXX} -c imm8.cpp -o ${OBJDIR}/imm8.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
-	${CXX} -c Instruction_FSGSBASE.cpp -o ${OBJDIR}/Instruction_FSGSBASE.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	${CXX} -c Instruction_IN.cpp -o ${OBJDIR}/Instruction_IN.o ${CXXFLAGS}
 	${CXX} -c Instruction_INT.cpp -o ${OBJDIR}/Instruction_INT.o ${CXXFLAGS}

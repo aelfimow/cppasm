@@ -274,7 +274,7 @@ Instruction_SETcc SETPE { asmout, "setpe" };
 Instruction_SETcc SETPO { asmout, "setpo" };
 Instruction_SETcc SETS { asmout, "sets" };
 Instruction_SETcc SETZ { asmout, "setz" };
-Instruction_TEST TEST { asmout };
+Instruction_TEST TEST { asmout, "test" };
 
 // Control transfer instructions
 Instruction_Branch JMP { asmout, "jmp" };

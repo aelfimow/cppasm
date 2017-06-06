@@ -62,7 +62,6 @@
 #include "Instruction_Shift.h"
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
-#include "Instruction_TEST.h"
 #include "Instruction_XADD.h"
 
 using mm_mm = Operands_reg_reg<mm, mm>;
@@ -450,6 +449,26 @@ using Instruction_FSGSBASE = Instruction_2
 <
     Operands_reg<r32>,
     Operands_reg<r64>
+>;
+
+using Instruction_TEST = Instruction_16
+<
+    Operands_reg_imm<r8, imm8>,
+    Operands_mem_postfix_imm<m8, imm8>,
+    Operands_reg_imm<r16, imm16>,
+    Operands_mem_postfix_imm<m16, imm16>,
+    Operands_reg_imm<r32, imm32>,
+    Operands_mem_postfix_imm<m32, imm32>,
+    Operands_reg_imm<r64, imm32>,
+    Operands_mem_postfix_imm<m64, imm32>,
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>
 >;
 
 extern asmstream asmout;

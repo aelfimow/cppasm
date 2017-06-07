@@ -57,7 +57,6 @@
 #include "Instruction_POP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
-#include "Instruction_RET.h"
 #include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_ShiftDouble.h"
@@ -471,6 +470,12 @@ using Instruction_TEST = Instruction_16
     Operands_mem_reg<m64, r64>
 >;
 
+using Instruction_RET = Instruction_2
+<
+    op_none,
+    Operands_imm<imm16>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -767,6 +772,7 @@ extern Instruction_Jcc JZ;
 extern Instruction_Branch CALL;
 extern Instruction_Branch CALL_FAR;
 extern Instruction_RET RET;
+extern Instruction_RET RET_FAR;
 extern Instruction_ENTER ENTER;
 extern Instruction_NoOperands LEAVE;
 extern Instruction_INT INT;

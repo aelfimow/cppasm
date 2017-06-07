@@ -9,4 +9,4 @@ rdtsc_func:
 	rdtsc
 	shl $0x20, %rdx
 	or %rdx, %rax
-	retq
+	ret

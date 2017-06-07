@@ -14,4 +14,4 @@ execute_cpuid:
 	mov %rcx, 16(%r8)
 	mov %rdx, 24(%r8)
 	pop %rbx
-	retq
+	ret

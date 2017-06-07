@@ -12,4 +12,4 @@ clflush_func:
 	mov (%rdx), %rax
 	clflush (%rcx)
 	clflush (%rdx)
-	retq
+	ret

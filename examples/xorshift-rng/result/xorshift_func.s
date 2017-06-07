@@ -13,7 +13,7 @@ xorshift_func_1_1_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_1_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -28,7 +28,7 @@ xorshift_func_1_1_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_3_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -43,7 +43,7 @@ xorshift_func_1_3_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_7_9(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -58,7 +58,7 @@ xorshift_func_1_7_9:
 	mov %rcx, %rax
 	shl $0x09, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_7_44(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -73,7 +73,7 @@ xorshift_func_1_7_44:
 	mov %rcx, %rax
 	shl $0x2C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_7_46(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -88,7 +88,7 @@ xorshift_func_1_7_46:
 	mov %rcx, %rax
 	shl $0x2E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_9_50(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -103,7 +103,7 @@ xorshift_func_1_9_50:
 	mov %rcx, %rax
 	shl $0x32, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_11_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -118,7 +118,7 @@ xorshift_func_1_11_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_11_50(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -133,7 +133,7 @@ xorshift_func_1_11_50:
 	mov %rcx, %rax
 	shl $0x32, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_13_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -148,7 +148,7 @@ xorshift_func_1_13_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_15_4(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -163,7 +163,7 @@ xorshift_func_1_15_4:
 	mov %rcx, %rax
 	shl $0x04, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_15_63(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -178,7 +178,7 @@ xorshift_func_1_15_63:
 	mov %rcx, %rax
 	shl $0x3F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_19_6(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -193,7 +193,7 @@ xorshift_func_1_19_6:
 	mov %rcx, %rax
 	shl $0x06, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_19_16(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -208,7 +208,7 @@ xorshift_func_1_19_16:
 	mov %rcx, %rax
 	shl $0x10, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_23_14(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -223,7 +223,7 @@ xorshift_func_1_23_14:
 	mov %rcx, %rax
 	shl $0x0E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_23_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -238,7 +238,7 @@ xorshift_func_1_23_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_29_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -253,7 +253,7 @@ xorshift_func_1_29_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_35_5(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -268,7 +268,7 @@ xorshift_func_1_35_5:
 	mov %rcx, %rax
 	shl $0x05, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_35_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -283,7 +283,7 @@ xorshift_func_1_35_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_35_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -298,7 +298,7 @@ xorshift_func_1_35_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_45_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -313,7 +313,7 @@ xorshift_func_1_45_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_51_13(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -328,7 +328,7 @@ xorshift_func_1_51_13:
 	mov %rcx, %rax
 	shl $0x0D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_53_3(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -343,7 +343,7 @@ xorshift_func_1_53_3:
 	mov %rcx, %rax
 	shl $0x03, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_1_59_14(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -358,7 +358,7 @@ xorshift_func_1_59_14:
 	mov %rcx, %rax
 	shl $0x0E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_2_13_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -373,7 +373,7 @@ xorshift_func_2_13_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_2_31_51(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -388,7 +388,7 @@ xorshift_func_2_31_51:
 	mov %rcx, %rax
 	shl $0x33, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_2_31_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -403,7 +403,7 @@ xorshift_func_2_31_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_2_43_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -418,7 +418,7 @@ xorshift_func_2_43_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_2_47_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -433,7 +433,7 @@ xorshift_func_2_47_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_1_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -448,7 +448,7 @@ xorshift_func_3_1_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_5_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -463,7 +463,7 @@ xorshift_func_3_5_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_13_59(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -478,7 +478,7 @@ xorshift_func_3_13_59:
 	mov %rcx, %rax
 	shl $0x3B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_21_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -493,7 +493,7 @@ xorshift_func_3_21_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_25_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -508,7 +508,7 @@ xorshift_func_3_25_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_25_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -523,7 +523,7 @@ xorshift_func_3_25_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_25_56(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -538,7 +538,7 @@ xorshift_func_3_25_56:
 	mov %rcx, %rax
 	shl $0x38, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_29_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -553,7 +553,7 @@ xorshift_func_3_29_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_29_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -568,7 +568,7 @@ xorshift_func_3_29_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_29_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -583,7 +583,7 @@ xorshift_func_3_29_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_35_14(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -598,7 +598,7 @@ xorshift_func_3_35_14:
 	mov %rcx, %rax
 	shl $0x0E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_37_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -613,7 +613,7 @@ xorshift_func_3_37_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_43_4(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -628,7 +628,7 @@ xorshift_func_3_43_4:
 	mov %rcx, %rax
 	shl $0x04, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_43_6(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -643,7 +643,7 @@ xorshift_func_3_43_6:
 	mov %rcx, %rax
 	shl $0x06, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_43_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -658,7 +658,7 @@ xorshift_func_3_43_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_51_16(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -673,7 +673,7 @@ xorshift_func_3_51_16:
 	mov %rcx, %rax
 	shl $0x10, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_53_7(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -688,7 +688,7 @@ xorshift_func_3_53_7:
 	mov %rcx, %rax
 	shl $0x07, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_61_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -703,7 +703,7 @@ xorshift_func_3_61_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_3_61_26(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -718,7 +718,7 @@ xorshift_func_3_61_26:
 	mov %rcx, %rax
 	shl $0x1A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_7_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -733,7 +733,7 @@ xorshift_func_4_7_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_9_13(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -748,7 +748,7 @@ xorshift_func_4_9_13:
 	mov %rcx, %rax
 	shl $0x0D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_15_51(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -763,7 +763,7 @@ xorshift_func_4_15_51:
 	mov %rcx, %rax
 	shl $0x33, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_15_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -778,7 +778,7 @@ xorshift_func_4_15_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_29_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -793,7 +793,7 @@ xorshift_func_4_29_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_29_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -808,7 +808,7 @@ xorshift_func_4_29_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_31_33(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -823,7 +823,7 @@ xorshift_func_4_31_33:
 	mov %rcx, %rax
 	shl $0x21, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_35_15(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -838,7 +838,7 @@ xorshift_func_4_35_15:
 	mov %rcx, %rax
 	shl $0x0F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_35_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -853,7 +853,7 @@ xorshift_func_4_35_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_37_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -868,7 +868,7 @@ xorshift_func_4_37_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_37_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -883,7 +883,7 @@ xorshift_func_4_37_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_41_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -898,7 +898,7 @@ xorshift_func_4_41_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_41_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -913,7 +913,7 @@ xorshift_func_4_41_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_43_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -928,7 +928,7 @@ xorshift_func_4_43_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_43_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -943,7 +943,7 @@ xorshift_func_4_43_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_4_53_7(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -958,7 +958,7 @@ xorshift_func_4_53_7:
 	mov %rcx, %rax
 	shl $0x07, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_9_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -973,7 +973,7 @@ xorshift_func_5_9_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_11_54(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -988,7 +988,7 @@ xorshift_func_5_11_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_15_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1003,7 +1003,7 @@ xorshift_func_5_15_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_17_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1018,7 +1018,7 @@ xorshift_func_5_17_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_23_36(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1033,7 +1033,7 @@ xorshift_func_5_23_36:
 	mov %rcx, %rax
 	shl $0x24, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_33_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1048,7 +1048,7 @@ xorshift_func_5_33_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_41_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1063,7 +1063,7 @@ xorshift_func_5_41_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_45_16(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1078,7 +1078,7 @@ xorshift_func_5_45_16:
 	mov %rcx, %rax
 	shl $0x10, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_47_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1093,7 +1093,7 @@ xorshift_func_5_47_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_53_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1108,7 +1108,7 @@ xorshift_func_5_53_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_59_33(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1123,7 +1123,7 @@ xorshift_func_5_59_33:
 	mov %rcx, %rax
 	shl $0x21, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_59_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1138,7 +1138,7 @@ xorshift_func_5_59_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_5_59_63(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1153,7 +1153,7 @@ xorshift_func_5_59_63:
 	mov %rcx, %rax
 	shl $0x3F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_1_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1168,7 +1168,7 @@ xorshift_func_6_1_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_3_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1183,7 +1183,7 @@ xorshift_func_6_3_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_17_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1198,7 +1198,7 @@ xorshift_func_6_17_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_23_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1213,7 +1213,7 @@ xorshift_func_6_23_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_27_7(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1228,7 +1228,7 @@ xorshift_func_6_27_7:
 	mov %rcx, %rax
 	shl $0x07, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_43_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1243,7 +1243,7 @@ xorshift_func_6_43_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_49_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1258,7 +1258,7 @@ xorshift_func_6_49_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_6_55_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1273,7 +1273,7 @@ xorshift_func_6_55_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_5_41(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1288,7 +1288,7 @@ xorshift_func_7_5_41:
 	mov %rcx, %rax
 	shl $0x29, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_5_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1303,7 +1303,7 @@ xorshift_func_7_5_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_5_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1318,7 +1318,7 @@ xorshift_func_7_5_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_7_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1333,7 +1333,7 @@ xorshift_func_7_7_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_9_38(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1348,7 +1348,7 @@ xorshift_func_7_9_38:
 	mov %rcx, %rax
 	shl $0x26, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_11_10(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1363,7 +1363,7 @@ xorshift_func_7_11_10:
 	mov %rcx, %rax
 	shl $0x0A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_11_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1378,7 +1378,7 @@ xorshift_func_7_11_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_13_58(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1393,7 +1393,7 @@ xorshift_func_7_13_58:
 	mov %rcx, %rax
 	shl $0x3A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_19_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1408,7 +1408,7 @@ xorshift_func_7_19_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_19_54(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1423,7 +1423,7 @@ xorshift_func_7_19_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_23_8(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1438,7 +1438,7 @@ xorshift_func_7_23_8:
 	mov %rcx, %rax
 	shl $0x08, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_25_58(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1453,7 +1453,7 @@ xorshift_func_7_25_58:
 	mov %rcx, %rax
 	shl $0x3A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_27_59(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1468,7 +1468,7 @@ xorshift_func_7_27_59:
 	mov %rcx, %rax
 	shl $0x3B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_33_8(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1483,7 +1483,7 @@ xorshift_func_7_33_8:
 	mov %rcx, %rax
 	shl $0x08, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_41_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1498,7 +1498,7 @@ xorshift_func_7_41_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_43_28(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1513,7 +1513,7 @@ xorshift_func_7_43_28:
 	mov %rcx, %rax
 	shl $0x1C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_51_24(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1528,7 +1528,7 @@ xorshift_func_7_51_24:
 	mov %rcx, %rax
 	shl $0x18, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_7_57_12(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1543,7 +1543,7 @@ xorshift_func_7_57_12:
 	mov %rcx, %rax
 	shl $0x0C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_5_59(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1558,7 +1558,7 @@ xorshift_func_8_5_59:
 	mov %rcx, %rax
 	shl $0x3B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_9_25(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1573,7 +1573,7 @@ xorshift_func_8_9_25:
 	mov %rcx, %rax
 	shl $0x19, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_13_25(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1588,7 +1588,7 @@ xorshift_func_8_13_25:
 	mov %rcx, %rax
 	shl $0x19, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_13_61(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1603,7 +1603,7 @@ xorshift_func_8_13_61:
 	mov %rcx, %rax
 	shl $0x3D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_15_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1618,7 +1618,7 @@ xorshift_func_8_15_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_25_59(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1633,7 +1633,7 @@ xorshift_func_8_25_59:
 	mov %rcx, %rax
 	shl $0x3B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_29_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1648,7 +1648,7 @@ xorshift_func_8_29_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_31_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1663,7 +1663,7 @@ xorshift_func_8_31_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_37_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1678,7 +1678,7 @@ xorshift_func_8_37_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_8_51_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1693,7 +1693,7 @@ xorshift_func_8_51_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_1_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1708,7 +1708,7 @@ xorshift_func_9_1_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_5_36(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1723,7 +1723,7 @@ xorshift_func_9_5_36:
 	mov %rcx, %rax
 	shl $0x24, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_5_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1738,7 +1738,7 @@ xorshift_func_9_5_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_7_18(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1753,7 +1753,7 @@ xorshift_func_9_7_18:
 	mov %rcx, %rax
 	shl $0x12, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_19_18(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1768,7 +1768,7 @@ xorshift_func_9_19_18:
 	mov %rcx, %rax
 	shl $0x12, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_21_11(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1783,7 +1783,7 @@ xorshift_func_9_21_11:
 	mov %rcx, %rax
 	shl $0x0B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_21_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1798,7 +1798,7 @@ xorshift_func_9_21_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_21_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1813,7 +1813,7 @@ xorshift_func_9_21_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_23_57(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1828,7 +1828,7 @@ xorshift_func_9_23_57:
 	mov %rcx, %rax
 	shl $0x39, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_27_10(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1843,7 +1843,7 @@ xorshift_func_9_27_10:
 	mov %rcx, %rax
 	shl $0x0A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_29_12(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1858,7 +1858,7 @@ xorshift_func_9_29_12:
 	mov %rcx, %rax
 	shl $0x0C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_29_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1873,7 +1873,7 @@ xorshift_func_9_29_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_37_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1888,7 +1888,7 @@ xorshift_func_9_37_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_9_41_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1903,7 +1903,7 @@ xorshift_func_9_41_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_10_7_33(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1918,7 +1918,7 @@ xorshift_func_10_7_33:
 	mov %rcx, %rax
 	shl $0x21, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_10_27_59(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1933,7 +1933,7 @@ xorshift_func_10_27_59:
 	mov %rcx, %rax
 	shl $0x3B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_10_53_13(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1948,7 +1948,7 @@ xorshift_func_10_53_13:
 	mov %rcx, %rax
 	shl $0x0D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_5_32(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1963,7 +1963,7 @@ xorshift_func_11_5_32:
 	mov %rcx, %rax
 	shl $0x20, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_5_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1978,7 +1978,7 @@ xorshift_func_11_5_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_5_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -1993,7 +1993,7 @@ xorshift_func_11_5_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_5_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2008,7 +2008,7 @@ xorshift_func_11_5_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_9_14(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2023,7 +2023,7 @@ xorshift_func_11_9_14:
 	mov %rcx, %rax
 	shl $0x0E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_9_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2038,7 +2038,7 @@ xorshift_func_11_9_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_13_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2053,7 +2053,7 @@ xorshift_func_11_13_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_15_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2068,7 +2068,7 @@ xorshift_func_11_15_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_23_42(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2083,7 +2083,7 @@ xorshift_func_11_23_42:
 	mov %rcx, %rax
 	shl $0x2A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_23_56(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2098,7 +2098,7 @@ xorshift_func_11_23_56:
 	mov %rcx, %rax
 	shl $0x38, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_25_48(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2113,7 +2113,7 @@ xorshift_func_11_25_48:
 	mov %rcx, %rax
 	shl $0x30, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_27_26(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2128,7 +2128,7 @@ xorshift_func_11_27_26:
 	mov %rcx, %rax
 	shl $0x1A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_29_14(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2143,7 +2143,7 @@ xorshift_func_11_29_14:
 	mov %rcx, %rax
 	shl $0x0E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_31_18(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2158,7 +2158,7 @@ xorshift_func_11_31_18:
 	mov %rcx, %rax
 	shl $0x12, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_11_53_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2173,7 +2173,7 @@ xorshift_func_11_53_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_1_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2188,7 +2188,7 @@ xorshift_func_12_1_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_3_13(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2203,7 +2203,7 @@ xorshift_func_12_3_13:
 	mov %rcx, %rax
 	shl $0x0D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_3_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2218,7 +2218,7 @@ xorshift_func_12_3_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_7_13(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2233,7 +2233,7 @@ xorshift_func_12_7_13:
 	mov %rcx, %rax
 	shl $0x0D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_11_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2248,7 +2248,7 @@ xorshift_func_12_11_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_25_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2263,7 +2263,7 @@ xorshift_func_12_25_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_39_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2278,7 +2278,7 @@ xorshift_func_12_39_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_12_43_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2293,7 +2293,7 @@ xorshift_func_12_43_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_3_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2308,7 +2308,7 @@ xorshift_func_13_3_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_3_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2323,7 +2323,7 @@ xorshift_func_13_3_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_7_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2338,7 +2338,7 @@ xorshift_func_13_7_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_9_15(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2353,7 +2353,7 @@ xorshift_func_13_9_15:
 	mov %rcx, %rax
 	shl $0x0F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_9_50(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2368,7 +2368,7 @@ xorshift_func_13_9_50:
 	mov %rcx, %rax
 	shl $0x32, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_13_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2383,7 +2383,7 @@ xorshift_func_13_13_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_17_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2398,7 +2398,7 @@ xorshift_func_13_17_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_19_28(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2413,7 +2413,7 @@ xorshift_func_13_19_28:
 	mov %rcx, %rax
 	shl $0x1C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_19_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2428,7 +2428,7 @@ xorshift_func_13_19_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_21_18(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2443,7 +2443,7 @@ xorshift_func_13_21_18:
 	mov %rcx, %rax
 	shl $0x12, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_21_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2458,7 +2458,7 @@ xorshift_func_13_21_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_29_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2473,7 +2473,7 @@ xorshift_func_13_29_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_35_30(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2488,7 +2488,7 @@ xorshift_func_13_35_30:
 	mov %rcx, %rax
 	shl $0x1E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_35_38(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2503,7 +2503,7 @@ xorshift_func_13_35_38:
 	mov %rcx, %rax
 	shl $0x26, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_47_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2518,7 +2518,7 @@ xorshift_func_13_47_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_13_51_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2533,7 +2533,7 @@ xorshift_func_13_51_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_14_13_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2548,7 +2548,7 @@ xorshift_func_14_13_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_14_15_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2563,7 +2563,7 @@ xorshift_func_14_15_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_14_23_33(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2578,7 +2578,7 @@ xorshift_func_14_23_33:
 	mov %rcx, %rax
 	shl $0x21, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_14_31_45(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2593,7 +2593,7 @@ xorshift_func_14_31_45:
 	mov %rcx, %rax
 	shl $0x2D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_14_47_15(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2608,7 +2608,7 @@ xorshift_func_14_47_15:
 	mov %rcx, %rax
 	shl $0x0F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_1_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2623,7 +2623,7 @@ xorshift_func_15_1_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_5_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2638,7 +2638,7 @@ xorshift_func_15_5_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_13_28(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2653,7 +2653,7 @@ xorshift_func_15_13_28:
 	mov %rcx, %rax
 	shl $0x1C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_13_52(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2668,7 +2668,7 @@ xorshift_func_15_13_52:
 	mov %rcx, %rax
 	shl $0x34, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_17_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2683,7 +2683,7 @@ xorshift_func_15_17_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_19_63(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2698,7 +2698,7 @@ xorshift_func_15_19_63:
 	mov %rcx, %rax
 	shl $0x3F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_21_46(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2713,7 +2713,7 @@ xorshift_func_15_21_46:
 	mov %rcx, %rax
 	shl $0x2E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_23_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2728,7 +2728,7 @@ xorshift_func_15_23_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_45_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2743,7 +2743,7 @@ xorshift_func_15_45_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_47_16(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2758,7 +2758,7 @@ xorshift_func_15_47_16:
 	mov %rcx, %rax
 	shl $0x10, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_15_49_26(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2773,7 +2773,7 @@ xorshift_func_15_49_26:
 	mov %rcx, %rax
 	shl $0x1A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_5_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2788,7 +2788,7 @@ xorshift_func_16_5_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_7_39(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2803,7 +2803,7 @@ xorshift_func_16_7_39:
 	mov %rcx, %rax
 	shl $0x27, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_11_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2818,7 +2818,7 @@ xorshift_func_16_11_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_11_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2833,7 +2833,7 @@ xorshift_func_16_11_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_13_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2848,7 +2848,7 @@ xorshift_func_16_13_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_21_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2863,7 +2863,7 @@ xorshift_func_16_21_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_25_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2878,7 +2878,7 @@ xorshift_func_16_25_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_27_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2893,7 +2893,7 @@ xorshift_func_16_27_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_16_47_17(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2908,7 +2908,7 @@ xorshift_func_16_47_17:
 	mov %rcx, %rax
 	shl $0x11, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_15_58(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2923,7 +2923,7 @@ xorshift_func_17_15_58:
 	mov %rcx, %rax
 	shl $0x3A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_23_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2938,7 +2938,7 @@ xorshift_func_17_23_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_23_51(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2953,7 +2953,7 @@ xorshift_func_17_23_51:
 	mov %rcx, %rax
 	shl $0x33, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_23_52(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2968,7 +2968,7 @@ xorshift_func_17_23_52:
 	mov %rcx, %rax
 	shl $0x34, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_27_22(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2983,7 +2983,7 @@ xorshift_func_17_27_22:
 	mov %rcx, %rax
 	shl $0x16, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_45_22(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -2998,7 +2998,7 @@ xorshift_func_17_45_22:
 	mov %rcx, %rax
 	shl $0x16, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_47_28(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3013,7 +3013,7 @@ xorshift_func_17_47_28:
 	mov %rcx, %rax
 	shl $0x1C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_47_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3028,7 +3028,7 @@ xorshift_func_17_47_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_17_47_54(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3043,7 +3043,7 @@ xorshift_func_17_47_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_18_1_25(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3058,7 +3058,7 @@ xorshift_func_18_1_25:
 	mov %rcx, %rax
 	shl $0x19, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_18_3_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3073,7 +3073,7 @@ xorshift_func_18_3_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_18_19_19(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3088,7 +3088,7 @@ xorshift_func_18_19_19:
 	mov %rcx, %rax
 	shl $0x13, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_18_25_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3103,7 +3103,7 @@ xorshift_func_18_25_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_18_41_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3118,7 +3118,7 @@ xorshift_func_18_41_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_7_36(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3133,7 +3133,7 @@ xorshift_func_19_7_36:
 	mov %rcx, %rax
 	shl $0x24, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_7_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3148,7 +3148,7 @@ xorshift_func_19_7_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_13_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3163,7 +3163,7 @@ xorshift_func_19_13_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_15_46(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3178,7 +3178,7 @@ xorshift_func_19_15_46:
 	mov %rcx, %rax
 	shl $0x2E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_21_52(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3193,7 +3193,7 @@ xorshift_func_19_21_52:
 	mov %rcx, %rax
 	shl $0x34, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_25_20(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3208,7 +3208,7 @@ xorshift_func_19_25_20:
 	mov %rcx, %rax
 	shl $0x14, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_41_21(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3223,7 +3223,7 @@ xorshift_func_19_41_21:
 	mov %rcx, %rax
 	shl $0x15, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_19_43_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3238,7 +3238,7 @@ xorshift_func_19_43_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_20_1_31(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3253,7 +3253,7 @@ xorshift_func_20_1_31:
 	mov %rcx, %rax
 	shl $0x1F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_20_5_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3268,7 +3268,7 @@ xorshift_func_20_5_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_1_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3283,7 +3283,7 @@ xorshift_func_21_1_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_9_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3298,7 +3298,7 @@ xorshift_func_21_9_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_13_52(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3313,7 +3313,7 @@ xorshift_func_21_13_52:
 	mov %rcx, %rax
 	shl $0x34, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_15_28(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3328,7 +3328,7 @@ xorshift_func_21_15_28:
 	mov %rcx, %rax
 	shl $0x1C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_15_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3343,7 +3343,7 @@ xorshift_func_21_15_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_17_24(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3358,7 +3358,7 @@ xorshift_func_21_17_24:
 	mov %rcx, %rax
 	shl $0x18, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_17_30(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3373,7 +3373,7 @@ xorshift_func_21_17_30:
 	mov %rcx, %rax
 	shl $0x1E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_17_48(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3388,7 +3388,7 @@ xorshift_func_21_17_48:
 	mov %rcx, %rax
 	shl $0x30, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_32(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3403,7 +3403,7 @@ xorshift_func_21_21_32:
 	mov %rcx, %rax
 	shl $0x20, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3418,7 +3418,7 @@ xorshift_func_21_21_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3433,7 +3433,7 @@ xorshift_func_21_21_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_38(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3448,7 +3448,7 @@ xorshift_func_21_21_38:
 	mov %rcx, %rax
 	shl $0x26, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_40(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3463,7 +3463,7 @@ xorshift_func_21_21_40:
 	mov %rcx, %rax
 	shl $0x28, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_41(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3478,7 +3478,7 @@ xorshift_func_21_21_41:
 	mov %rcx, %rax
 	shl $0x29, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_21_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3493,7 +3493,7 @@ xorshift_func_21_21_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_21_41_23(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3508,7 +3508,7 @@ xorshift_func_21_41_23:
 	mov %rcx, %rax
 	shl $0x17, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_22_3_39(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3523,7 +3523,7 @@ xorshift_func_22_3_39:
 	mov %rcx, %rax
 	shl $0x27, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_9_38(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3538,7 +3538,7 @@ xorshift_func_23_9_38:
 	mov %rcx, %rax
 	shl $0x26, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_9_48(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3553,7 +3553,7 @@ xorshift_func_23_9_48:
 	mov %rcx, %rax
 	shl $0x30, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_9_57(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3568,7 +3568,7 @@ xorshift_func_23_9_57:
 	mov %rcx, %rax
 	shl $0x39, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_13_38(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3583,7 +3583,7 @@ xorshift_func_23_13_38:
 	mov %rcx, %rax
 	shl $0x26, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_13_58(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3598,7 +3598,7 @@ xorshift_func_23_13_58:
 	mov %rcx, %rax
 	shl $0x3A, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_13_61(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3613,7 +3613,7 @@ xorshift_func_23_13_61:
 	mov %rcx, %rax
 	shl $0x3D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_17_25(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3628,7 +3628,7 @@ xorshift_func_23_17_25:
 	mov %rcx, %rax
 	shl $0x19, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_17_54(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3643,7 +3643,7 @@ xorshift_func_23_17_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_17_56(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3658,7 +3658,7 @@ xorshift_func_23_17_56:
 	mov %rcx, %rax
 	shl $0x38, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_17_62(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3673,7 +3673,7 @@ xorshift_func_23_17_62:
 	mov %rcx, %rax
 	shl $0x3E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_41_34(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3688,7 +3688,7 @@ xorshift_func_23_41_34:
 	mov %rcx, %rax
 	shl $0x22, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_23_41_51(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3703,7 +3703,7 @@ xorshift_func_23_41_51:
 	mov %rcx, %rax
 	shl $0x33, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_24_9_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3718,7 +3718,7 @@ xorshift_func_24_9_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_24_11_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3733,7 +3733,7 @@ xorshift_func_24_11_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_24_25_25(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3748,7 +3748,7 @@ xorshift_func_24_25_25:
 	mov %rcx, %rax
 	shl $0x19, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_24_31_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3763,7 +3763,7 @@ xorshift_func_24_31_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_7_46(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3778,7 +3778,7 @@ xorshift_func_25_7_46:
 	mov %rcx, %rax
 	shl $0x2E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_7_49(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3793,7 +3793,7 @@ xorshift_func_25_7_49:
 	mov %rcx, %rax
 	shl $0x31, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_9_39(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3808,7 +3808,7 @@ xorshift_func_25_9_39:
 	mov %rcx, %rax
 	shl $0x27, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_11_57(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3823,7 +3823,7 @@ xorshift_func_25_11_57:
 	mov %rcx, %rax
 	shl $0x39, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_13_29(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3838,7 +3838,7 @@ xorshift_func_25_13_29:
 	mov %rcx, %rax
 	shl $0x1D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_13_39(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3853,7 +3853,7 @@ xorshift_func_25_13_39:
 	mov %rcx, %rax
 	shl $0x27, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_13_62(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3868,7 +3868,7 @@ xorshift_func_25_13_62:
 	mov %rcx, %rax
 	shl $0x3E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_15_47(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3883,7 +3883,7 @@ xorshift_func_25_15_47:
 	mov %rcx, %rax
 	shl $0x2F, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_21_44(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3898,7 +3898,7 @@ xorshift_func_25_21_44:
 	mov %rcx, %rax
 	shl $0x2C, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_27_27(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3913,7 +3913,7 @@ xorshift_func_25_27_27:
 	mov %rcx, %rax
 	shl $0x1B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_27_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3928,7 +3928,7 @@ xorshift_func_25_27_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_33_36(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3943,7 +3943,7 @@ xorshift_func_25_33_36:
 	mov %rcx, %rax
 	shl $0x24, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_25_39_54(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3958,7 +3958,7 @@ xorshift_func_25_39_54:
 	mov %rcx, %rax
 	shl $0x36, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_28_9_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3973,7 +3973,7 @@ xorshift_func_28_9_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_28_11_53(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -3988,7 +3988,7 @@ xorshift_func_28_11_53:
 	mov %rcx, %rax
 	shl $0x35, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_29_27_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4003,7 +4003,7 @@ xorshift_func_29_27_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_31_1_51(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4018,7 +4018,7 @@ xorshift_func_31_1_51:
 	mov %rcx, %rax
 	shl $0x33, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_31_25_37(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4033,7 +4033,7 @@ xorshift_func_31_25_37:
 	mov %rcx, %rax
 	shl $0x25, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_31_27_35(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4048,7 +4048,7 @@ xorshift_func_31_27_35:
 	mov %rcx, %rax
 	shl $0x23, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_33_31_43(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4063,7 +4063,7 @@ xorshift_func_33_31_43:
 	mov %rcx, %rax
 	shl $0x2B, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_33_31_55(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4078,7 +4078,7 @@ xorshift_func_33_31_55:
 	mov %rcx, %rax
 	shl $0x37, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_43_21_46(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4093,7 +4093,7 @@ xorshift_func_43_21_46:
 	mov %rcx, %rax
 	shl $0x2E, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_49_15_61(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4108,7 +4108,7 @@ xorshift_func_49_15_61:
 	mov %rcx, %rax
 	shl $0x3D, %rcx
 	xor %rcx, %rax
-	retq
+	ret
 # uint64_t xorshift_func_55_9_56(uint64_t rng_state)
 # Argument rng_state is in %rcx
 # Return value is in %rax
@@ -4123,4 +4123,4 @@ xorshift_func_55_9_56:
 	mov %rcx, %rax
 	shl $0x38, %rcx
 	xor %rcx, %rax
-	retq
+	ret

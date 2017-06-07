@@ -23,7 +23,7 @@ fpuconst_fp32:
 	fstps (%rcx)
 	add $0x04, %rcx
 	fstps (%rcx)
-	retq
+	ret
 # void fpuconst_fp64(double *p)
 # p is in %rcx
 .global fpuconst_fp64
@@ -48,4 +48,4 @@ fpuconst_fp64:
 	fstpl (%rcx)
 	add $0x08, %rcx
 	fstpl (%rcx)
-	retq
+	ret

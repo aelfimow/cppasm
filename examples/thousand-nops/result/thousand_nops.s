@@ -1003,4 +1003,4 @@ thousand_nops:
 	nopl (%r15, %r13)
 	nopl (%r15, %r14)
 	nopl (%r15, %r15)
-	retq
+	ret

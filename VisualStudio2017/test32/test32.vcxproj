@@ -148,7 +148,6 @@
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
     <ClCompile Include="..\..\src\Instruction_StringOp.cpp" />
-    <ClCompile Include="..\..\src\Instruction_XADD.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\m128.cpp" />
     <ClCompile Include="..\..\src\m16.cpp" />
@@ -203,7 +202,6 @@
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />
     <ClInclude Include="..\..\src\Instruction_StringOp.h" />
     <ClInclude Include="..\..\src\Instruction_x.h" />
-    <ClInclude Include="..\..\src\Instruction_XADD.h" />
     <ClInclude Include="..\..\src\label.h" />
     <ClInclude Include="..\..\src\m.h" />
     <ClInclude Include="..\..\src\m128.h" />

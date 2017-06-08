@@ -61,7 +61,6 @@
 #include "Instruction_Shift.h"
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
-#include "Instruction_XADD.h"
 
 using mm_mm = Operands_reg_reg<mm, mm>;
 using r32_mm = Operands_reg_reg<r32, mm>;
@@ -474,6 +473,18 @@ using Instruction_RET = Instruction_2
 <
     op_none,
     Operands_imm<imm16>
+>;
+
+using Instruction_XADD = Instruction_8
+<
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>
 >;
 
 extern asmstream asmout;

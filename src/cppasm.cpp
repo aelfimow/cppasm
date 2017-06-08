@@ -190,7 +190,7 @@ Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout, "xchg" };
 Instruction_BSWAP BSWAP { asmout, "bswap" };
-Instruction_XADD XADD { asmout };
+Instruction_XADD XADD { asmout, "xadd" };
 Instruction_CMPXCHG CMPXCHG { asmout, "cmpxchg" };
 Instruction_CMPXCHG8B CMPXCHG8B { asmout, "cmpxchg8b" };
 Instruction_CMPXCHG16B CMPXCHG16B { asmout, "cmpxchg16b" };

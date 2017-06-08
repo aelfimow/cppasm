@@ -47,7 +47,6 @@ all:
 	${CXX} -c m8.cpp -o ${OBJDIR}/m8.o ${CXXFLAGS}
 	${CXX} -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
-	${CXX} -c op_none.cpp -o ${OBJDIR}/op_none.o ${CXXFLAGS}
 	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
 	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
 	${CXX} -c r64.cpp -o ${OBJDIR}/r64.o ${CXXFLAGS}

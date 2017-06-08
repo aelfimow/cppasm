@@ -155,7 +155,6 @@
     <ClCompile Include="..\..\src\m8.cpp" />
     <ClCompile Include="..\..\src\m80.cpp" />
     <ClCompile Include="..\..\src\mm.cpp" />
-    <ClCompile Include="..\..\src\op_none.cpp" />
     <ClCompile Include="..\..\src\r16.cpp" />
     <ClCompile Include="..\..\src\r32.cpp" />
     <ClCompile Include="..\..\src\r64.cpp" />
@@ -210,7 +209,6 @@
     <ClInclude Include="..\..\src\m80.h" />
     <ClInclude Include="..\..\src\mm.h" />
     <ClInclude Include="..\..\src\Operands_x.h" />
-    <ClInclude Include="..\..\src\op_none.h" />
     <ClInclude Include="..\..\src\r16.h" />
     <ClInclude Include="..\..\src\r32.h" />
     <ClInclude Include="..\..\src\r64.h" />

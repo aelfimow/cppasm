@@ -38,8 +38,6 @@
 #include "label.h"
 #include "section.h"
 
-#include "op_none.h"
-
 #include "Operands_x.h"
 #include "Instruction_x.h"
 
@@ -64,7 +62,7 @@
 
 using Instruction_NoOperands = Instruction_1
 <
-    op_none
+    Operands_none
 >;
 
 using Instruction_MOVD = Instruction_8
@@ -201,7 +199,7 @@ using Instruction_Arithm2 = Instruction_8
 
 using Instruction_AsciiAdj = Instruction_2
 <
-    op_none,
+    Operands_none,
     Operands_imm<imm8>
 >;
 
@@ -449,7 +447,7 @@ using Instruction_TEST = Instruction_16
 
 using Instruction_RET = Instruction_2
 <
-    op_none,
+    Operands_none,
     Operands_imm<imm16>
 >;
 

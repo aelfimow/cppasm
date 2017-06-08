@@ -3,6 +3,35 @@
 #else
 #define OPERANDS_X_H
 
+class Operands_none
+{
+    public:
+        Operands_none(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()()
+        {
+            Instruction instr { m_mnem };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_none() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_none() = delete;
+        Operands_none(const Operands_none &instance) = delete;
+        Operands_none(const Operands_none &&instance) = delete;
+        Operands_none &operator=(const Operands_none &instance) = delete;
+        Operands_none &operator=(const Operands_none &&instance) = delete;
+};
+
 template
 <
     class RegType1,

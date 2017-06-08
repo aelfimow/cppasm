@@ -33,7 +33,6 @@ all:
 	${CXX} -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
 	${CXX} -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
 	${CXX} -c Instruction_OUT.cpp -o ${OBJDIR}/Instruction_OUT.o ${CXXFLAGS}
-	${CXX} -c Instruction_POP.cpp -o ${OBJDIR}/Instruction_POP.o ${CXXFLAGS}
 	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}
 	${CXX} -c Instruction_REP.cpp -o ${OBJDIR}/Instruction_REP.o ${CXXFLAGS}
 	${CXX} -c Instruction_SETcc.cpp -o ${OBJDIR}/Instruction_SETcc.o ${CXXFLAGS}

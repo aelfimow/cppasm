@@ -54,7 +54,6 @@
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_OUT.h"
-#include "Instruction_POP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
 #include "Instruction_SETcc.h"
@@ -485,6 +484,17 @@ using Instruction_XADD = Instruction_8
     Operands_mem_reg<m32, r32>,
     Operands_reg_reg<r64, r64>,
     Operands_mem_reg<m64, r64>
+>;
+
+using Instruction_POP = Instruction_7
+<
+    Operands_reg<r16>,
+    Operands_mem_postfix<m16>,
+    Operands_reg<r32>,
+    Operands_mem_postfix<m32>,
+    Operands_reg<r64>,
+    Operands_mem_postfix<m64>,
+    Operands_reg<Sreg>
 >;
 
 extern asmstream asmout;

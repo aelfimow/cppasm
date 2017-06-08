@@ -141,7 +141,6 @@
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_OUT.cpp" />
-    <ClCompile Include="..\..\src\Instruction_POP.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
     <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
@@ -194,7 +193,6 @@
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_OUT.h" />
-    <ClInclude Include="..\..\src\Instruction_POP.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
     <ClInclude Include="..\..\src\Instruction_SETcc.h" />

@@ -180,7 +180,7 @@ Instruction_CMOVx CMOVZ { asmout, "cmovz" };
 Instruction_PUSH PUSH { asmout, "push" };
 Instruction_NoOperands PUSHA { asmout, "pusha" };
 Instruction_NoOperands PUSHAD { asmout, "pushal" };
-Instruction_POP POP { asmout };
+Instruction_POP POP { asmout, "pop" };
 Instruction_NoOperands POPA { asmout, "popa" };
 Instruction_NoOperands POPAD { asmout, "popal" };
 Instruction_NoOperands CWD { asmout, "cwtd" };

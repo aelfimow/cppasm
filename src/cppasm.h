@@ -61,27 +61,6 @@
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
 
-using mm_mm = Operands_reg_reg<mm, mm>;
-using r32_mm = Operands_reg_reg<r32, mm>;
-using mm_r32 = Operands_reg_reg<mm, r32>;
-using r64_mm = Operands_reg_reg<r64, mm>;
-using mm_r64 = Operands_reg_reg<mm, r64>;
-using xmm_xmm = Operands_reg_reg<xmm, xmm>;
-using r32_xmm = Operands_reg_reg<r32, xmm>;
-using xmm_r32 = Operands_reg_reg<xmm, r32>;
-using r64_xmm = Operands_reg_reg<r64, xmm>;
-using xmm_r64 = Operands_reg_reg<xmm, r64>;
-using mm_imm8 = Operands_reg_imm<mm, imm8>;
-using xmm_imm8 = Operands_reg_imm<xmm, imm8>;
-using mm_m32 = Operands_reg_mem<mm, m32>;
-using m32_mm = Operands_reg_mem<m32, mm>;
-using mm_m64 = Operands_reg_mem<mm, m64>;
-using m64_mm = Operands_reg_mem<m64, mm>;
-using xmm_m32 = Operands_reg_mem<xmm, m32>;
-using m32_xmm = Operands_reg_mem<m32, xmm>;
-using xmm_m64 = Operands_reg_mem<xmm, m64>;
-using m64_xmm = Operands_reg_mem<m64, xmm>;
-using xmm_m128 = Operands_reg_mem<xmm, m128>;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -90,60 +69,60 @@ using Instruction_NoOperands = Instruction_1
 
 using Instruction_MOVD = Instruction_8
 <
-    mm_r32,
-    mm_m32,
-    r32_mm,
-    m32_mm,
-    xmm_r32,
-    xmm_m32,
-    r32_xmm,
-    m32_xmm
+    Operands_reg_reg<mm, r32>,
+    Operands_reg_mem<mm, m32>,
+    Operands_reg_reg<r32, mm>,
+    Operands_reg_mem<m32, mm>,
+    Operands_reg_reg<xmm, r32>,
+    Operands_reg_mem<xmm, m32>,
+    Operands_reg_reg<r32, xmm>,
+    Operands_reg_mem<m32, xmm>
 >;
 
 using Instruction_VMOVD = Instruction_4
 <
-    xmm_r32,
-    xmm_m32,
-    r32_xmm,
-    m32_xmm
+    Operands_reg_reg<xmm, r32>,
+    Operands_reg_mem<xmm, m32>,
+    Operands_reg_reg<r32, xmm>,
+    Operands_reg_mem<m32, xmm>
 >;
 
 using Instruction_MOVQ = Instruction_8
 <
-    mm_r64,
-    mm_m64,
-    r64_mm,
-    m64_mm,
-    xmm_r64,
-    xmm_m64,
-    r64_xmm,
-    m64_xmm
+    Operands_reg_reg<mm, r64>,
+    Operands_reg_mem<mm, m64>,
+    Operands_reg_reg<r64, mm>,
+    Operands_reg_mem<m64, mm>,
+    Operands_reg_reg<xmm, r64>,
+    Operands_reg_mem<xmm, m64>,
+    Operands_reg_reg<r64, xmm>,
+    Operands_reg_mem<m64, xmm>
 >;
 
 using Instruction_VMOVQ = Instruction_4
 <
-    xmm_r64,
-    xmm_m64,
-    r64_xmm,
-    m64_xmm
+    Operands_reg_reg<xmm, r64>,
+    Operands_reg_mem<xmm, m64>,
+    Operands_reg_reg<r64, xmm>,
+    Operands_reg_mem<m64, xmm>
 >;
 
 using Instruction_MMX_Op = Instruction_4
 <
-    mm_mm,
-    mm_m64,
-    xmm_xmm,
-    xmm_m128
+    Operands_reg_reg<mm, mm>,
+    Operands_reg_mem<mm, m64>,
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m128>
 >;
 
 using Instruction_MMX_Shift = Instruction_6
 <
-    mm_mm,
-    mm_m64,
-    xmm_xmm,
-    xmm_m128,
-    mm_imm8,
-    xmm_imm8
+    Operands_reg_reg<mm, mm>,
+    Operands_reg_mem<mm, m64>,
+    Operands_reg_reg<xmm, xmm>,
+    Operands_reg_mem<xmm, m128>,
+    Operands_reg_imm<mm, imm8>,
+    Operands_reg_imm<xmm, imm8>
 >;
 
 using Instruction_rm16 = Instruction_2

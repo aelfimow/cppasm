@@ -358,7 +358,7 @@ Instruction_REP REPNE { asmout, "repne" };
 Instruction_REP REPNZ { asmout, "repnz" };
 
 // I/O instructions
-Instruction_IN IN { asmout };
+Instruction_IN IN { asmout, "in" };
 Instruction_StringOp INSB { asmout, "insb" };
 Instruction_StringOp INSW { asmout, "insw" };
 Instruction_StringOp INSD { asmout, "insl" };

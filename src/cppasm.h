@@ -46,7 +46,6 @@
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
-#include "Instruction_OUT.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
 #include "Instruction_Shift.h"
@@ -500,6 +499,16 @@ using Instruction_Jcc = Instruction_1
 using Instruction_LOOPcc = Instruction_1
 <
     Operands_string
+>;
+
+using Instruction_OUT = Instruction_6
+<
+    Operands_imm_reg<imm8, r8>,
+    Operands_imm_reg<imm8, r16>,
+    Operands_imm_reg<imm8, r32>,
+    Operands_reg_reg<r16, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_reg_reg<r16, r32>
 >;
 
 extern asmstream asmout;

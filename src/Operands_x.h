@@ -134,8 +134,42 @@ class Operands_imm
         Operands_imm(const Operands_imm &&instance) = delete;
         Operands_imm &operator=(const Operands_imm &instance) = delete;
         Operands_imm &operator=(const Operands_imm &&instance) = delete;
-
 };
+
+template
+<
+    class ImmType,
+    class RegType
+>
+class Operands_imm_reg
+{
+    public:
+        Operands_imm_reg(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(ImmType &op1, RegType &op2)
+        {
+            Instruction instr { m_mnem, op1.to_str(), op2.name() };
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_imm_reg() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_imm_reg() = delete;
+        Operands_imm_reg(const Operands_imm_reg &instance) = delete;
+        Operands_imm_reg(const Operands_imm_reg &&instance) = delete;
+        Operands_imm_reg &operator=(const Operands_imm_reg &instance) = delete;
+        Operands_imm_reg &operator=(const Operands_imm_reg &&instance) = delete;
+};
+
 
 template
 <

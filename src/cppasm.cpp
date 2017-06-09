@@ -362,7 +362,7 @@ Instruction_IN IN { asmout, "in" };
 Instruction_StringOp INSB { asmout, "insb" };
 Instruction_StringOp INSW { asmout, "insw" };
 Instruction_StringOp INSD { asmout, "insl" };
-Instruction_OUT OUT { asmout };
+Instruction_OUT OUT { asmout, "out" };
 Instruction_StringOp OUTSB { asmout, "outsb" };
 Instruction_StringOp OUTSW { asmout, "outsw" };
 Instruction_StringOp OUTSD { asmout, "outsl" };

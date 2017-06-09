@@ -42,7 +42,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_Logical.h"
 #include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
@@ -704,9 +703,9 @@ extern Instruction_NoOperands DAA;
 extern Instruction_NoOperands DAS;
 
 // Logical instructions
-extern Instruction_Logical AND;
-extern Instruction_Logical OR;
-extern Instruction_Logical XOR;
+extern Instruction_Arithm1 AND;
+extern Instruction_Arithm1 OR;
+extern Instruction_Arithm1 XOR;
 extern Instruction_Arithm2 NOT;
 
 // Shift and rotate instructions

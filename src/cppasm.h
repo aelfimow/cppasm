@@ -266,7 +266,7 @@ using Instruction_BitScan = Instruction_6
     Operands_reg_mem<r64, m64>
 >;
 
-using Instruction_BitTest = Instruction_9
+using Instruction_BitTest = Instruction_12
 <
     Operands_reg_reg<r16, r16>,
     Operands_mem_reg<m16, r16>,
@@ -276,7 +276,10 @@ using Instruction_BitTest = Instruction_9
     Operands_mem_reg<m64, r64>,
     Operands_reg_imm<r16, imm8>,
     Operands_reg_imm<r32, imm8>,
-    Operands_reg_imm<r64, imm8>
+    Operands_reg_imm<r64, imm8>,
+    Operands_mem_postfix_imm<m16, imm8>,
+    Operands_mem_postfix_imm<m32, imm8>,
+    Operands_mem_postfix_imm<m64, imm8>
 >;
 
 using Instruction_BOUND = Instruction_2

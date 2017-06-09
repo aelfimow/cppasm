@@ -132,7 +132,6 @@
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
-    <ClCompile Include="..\..\src\Instruction_LOOPcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
@@ -179,7 +178,6 @@
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_Logical.h" />
-    <ClInclude Include="..\..\src\Instruction_LOOPcc.h" />
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_MOV.h" />
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />

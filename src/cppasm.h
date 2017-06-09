@@ -43,7 +43,6 @@
 
 #include "Instruction_FST.h"
 #include "Instruction_Logical.h"
-#include "Instruction_LOOPcc.h"
 #include "Instruction_MemOperand.h"
 #include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
@@ -495,6 +494,11 @@ using Instruction_IN = Instruction_6
 >;
 
 using Instruction_Jcc = Instruction_1
+<
+    Operands_string
+>;
+
+using Instruction_LOOPcc = Instruction_1
 <
     Operands_string
 >;

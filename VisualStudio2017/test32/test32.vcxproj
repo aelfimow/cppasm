@@ -131,7 +131,6 @@
     <ClCompile Include="..\..\src\imm8.cpp" />
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
-    <ClCompile Include="..\..\src\Instruction_Jcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Logical.cpp" />
     <ClCompile Include="..\..\src\Instruction_LOOPcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
@@ -179,7 +178,6 @@
     <ClInclude Include="..\..\src\imm8.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
-    <ClInclude Include="..\..\src\Instruction_Jcc.h" />
     <ClInclude Include="..\..\src\Instruction_Logical.h" />
     <ClInclude Include="..\..\src\Instruction_LOOPcc.h" />
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />

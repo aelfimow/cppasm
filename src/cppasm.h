@@ -54,7 +54,6 @@
 #include "Instruction_OUT.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
-#include "Instruction_SETcc.h"
 #include "Instruction_Shift.h"
 #include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
@@ -472,6 +471,12 @@ using Instruction_POP = Instruction_7
     Operands_reg<r64>,
     Operands_mem_postfix<m64>,
     Operands_reg<Sreg>
+>;
+
+using Instruction_SETcc = Instruction_2
+<
+    Operands_reg<r8>,
+    Operands_mem<m8>
 >;
 
 extern asmstream asmout;

@@ -143,7 +143,6 @@
     <ClCompile Include="..\..\src\Instruction_OUT.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
-    <ClCompile Include="..\..\src\Instruction_SETcc.cpp" />
     <ClCompile Include="..\..\src\Instruction_Shift.cpp" />
     <ClCompile Include="..\..\src\Instruction_ShiftDouble.cpp" />
     <ClCompile Include="..\..\src\Instruction_StringOp.cpp" />
@@ -194,7 +193,6 @@
     <ClInclude Include="..\..\src\Instruction_OUT.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />
-    <ClInclude Include="..\..\src\Instruction_SETcc.h" />
     <ClInclude Include="..\..\src\Instruction_Shift.h" />
     <ClInclude Include="..\..\src\Instruction_ShiftDouble.h" />
     <ClInclude Include="..\..\src\Instruction_StringOp.h" />

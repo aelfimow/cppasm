@@ -43,7 +43,6 @@
 
 #include "Instruction_FST.h"
 #include "Instruction_IN.h"
-#include "Instruction_INT.h"
 #include "Instruction_Jcc.h"
 #include "Instruction_Logical.h"
 #include "Instruction_LOOPcc.h"
@@ -480,6 +479,11 @@ using Instruction_SETcc = Instruction_2
 <
     Operands_reg<r8>,
     Operands_mem<m8>
+>;
+
+using Instruction_INT = Instruction_1
+<
+    Operands_imm<imm8>
 >;
 
 extern asmstream asmout;

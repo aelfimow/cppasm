@@ -318,7 +318,7 @@ Instruction_RET RET { asmout, "ret" };
 Instruction_RET RET_FAR { asmout, "lret" };
 Instruction_ENTER ENTER { asmout, "enter" };
 Instruction_NoOperands LEAVE { asmout, "leave" };
-Instruction_INT INT { asmout };
+Instruction_INT INT { asmout, "int" };
 Instruction_NoOperands INTO { asmout, "into" };
 Instruction_NoOperands IRET { asmout, "iret" };
 Instruction_NoOperands IRETD { asmout, "iretl" };

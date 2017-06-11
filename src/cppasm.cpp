@@ -407,10 +407,10 @@ Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
 Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
 
 // User mode extended state save/restore instructions
-Instruction_MemOperand XSAVE { asmout, "xsave" };
-Instruction_MemOperand XSAVEC { asmout, "xsavec" };
-Instruction_MemOperand XSAVEOPT { asmout, "xsaveopt" };
-Instruction_MemOperand XRSTOR { asmout, "xrstor" };
+Instruction_MemOnly XSAVE { asmout, "xsave" };
+Instruction_MemOnly XSAVEC { asmout, "xsavec" };
+Instruction_MemOnly XSAVEOPT { asmout, "xsaveopt" };
+Instruction_MemOnly XRSTOR { asmout, "xrstor" };
 Instruction_NoOperands XGETBV { asmout, "xgetbv" };
 
 // Random number generator instructions
@@ -464,8 +464,8 @@ Instruction_NoOperands FNCLEX { asmout, "fnclex" };
 Instruction_NoOperands FNOP { asmout, "fnop" };
 
 // x87 FPU and SIMD state management instructions
-Instruction_MemOperand FXSAVE { asmout, "fxsave" };
-Instruction_MemOperand FXRSTOR { asmout, "fxrstor" };
+Instruction_MemOnly FXSAVE { asmout, "fxsave" };
+Instruction_MemOnly FXRSTOR { asmout, "fxrstor" };
 
 // MMX data transfer instructions
 Instruction_MOVD MOVD { asmout, "movd" };
@@ -584,9 +584,9 @@ Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };
 Instruction_NoOperands CLTS { asmout, "clts" };
-Instruction_MemOperand LGDT { asmout, "lgdt" };
-Instruction_MemOperand LIDT { asmout, "lidt" };
-Instruction_MemOperand SIDT { asmout, "sidt" };
+Instruction_MemOnly LGDT { asmout, "lgdt" };
+Instruction_MemOnly LIDT { asmout, "lidt" };
+Instruction_MemOnly SIDT { asmout, "sidt" };
 Instruction_rm16 LLDT { asmout, "lldt" };
 Instruction_rm16 LMSW { asmout, "lmsw" };
 Instruction_rm16 VERR { asmout, "verr" };
@@ -594,7 +594,7 @@ Instruction_rm16 VERW { asmout, "verw" };
 Instruction_rm16 LTR { asmout, "ltr" };
 Instruction_NoOperands INVD { asmout, "invd" };
 Instruction_NoOperands WBINVD { asmout, "wbinvd" };
-Instruction_MemOperand INVLPG { asmout, "invlpg" };
+Instruction_MemOnly INVLPG { asmout, "invlpg" };
 Instruction_Prefix LOCK { asmout, "lock" };
 Instruction_NoOperands HLT { asmout, "hlt" };
 Instruction_NoOperands RSM { asmout, "rsm" };
@@ -605,10 +605,10 @@ Instruction_NoOperands RDTSC { asmout, "rdtsc" };
 Instruction_NoOperands RDTSCP { asmout, "rdtscp" };
 Instruction_NoOperands SYSENTER { asmout, "sysenter" };
 Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
-Instruction_MemOperand XRSTORS { asmout, "xrstors" };
-Instruction_MemOperand XRSTORS64 { asmout, "xrstors64" };
-Instruction_MemOperand XSAVES { asmout, "xsaves" };
-Instruction_MemOperand XSAVES64 { asmout, "xsaves64" };
+Instruction_MemOnly XRSTORS { asmout, "xrstors" };
+Instruction_MemOnly XRSTORS64 { asmout, "xrstors64" };
+Instruction_MemOnly XSAVES { asmout, "xsaves" };
+Instruction_MemOnly XSAVES64 { asmout, "xsaves64" };
 Instruction_NoOperands XSETBV { asmout, "xsetbv" };
 Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
 Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };

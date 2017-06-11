@@ -39,7 +39,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_MemOperand.h"
 #include "Instruction_NOP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
@@ -957,10 +956,10 @@ extern Instruction_MemOnly PREFETCHW;
 extern Instruction_MemOnly PREFETCHWT1;
 
 // User mode extended state save/restore instructions
-extern Instruction_MemOperand XSAVE;
-extern Instruction_MemOperand XSAVEC;
-extern Instruction_MemOperand XSAVEOPT;
-extern Instruction_MemOperand XRSTOR;
+extern Instruction_MemOnly XSAVE;
+extern Instruction_MemOnly XSAVEC;
+extern Instruction_MemOnly XSAVEOPT;
+extern Instruction_MemOnly XRSTOR;
 extern Instruction_NoOperands XGETBV;
 
 // Random number generator instructions
@@ -1014,8 +1013,8 @@ extern Instruction_NoOperands FNCLEX;
 extern Instruction_NoOperands FNOP;
 
 // x87 FPU and SIMD state management instructions
-extern Instruction_MemOperand FXSAVE;
-extern Instruction_MemOperand FXRSTOR;
+extern Instruction_MemOnly FXSAVE;
+extern Instruction_MemOnly FXRSTOR;
 
 // MMX data transfer instructions
 extern Instruction_MOVD MOVD;
@@ -1134,9 +1133,9 @@ extern Instruction_SSE_Conv4 CVTTSS2SI;
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;
 extern Instruction_NoOperands CLTS;
-extern Instruction_MemOperand LGDT;
-extern Instruction_MemOperand LIDT;
-extern Instruction_MemOperand SIDT;
+extern Instruction_MemOnly LGDT;
+extern Instruction_MemOnly LIDT;
+extern Instruction_MemOnly SIDT;
 extern Instruction_rm16 LLDT;
 extern Instruction_rm16 LMSW;
 extern Instruction_rm16 VERR;
@@ -1144,7 +1143,7 @@ extern Instruction_rm16 VERW;
 extern Instruction_rm16 LTR;
 extern Instruction_NoOperands INVD;
 extern Instruction_NoOperands WBINVD;
-extern Instruction_MemOperand INVLPG;
+extern Instruction_MemOnly INVLPG;
 extern Instruction_Prefix LOCK;
 extern Instruction_NoOperands HLT;
 extern Instruction_NoOperands RSM;
@@ -1155,10 +1154,10 @@ extern Instruction_NoOperands RDTSC;
 extern Instruction_NoOperands RDTSCP;
 extern Instruction_NoOperands SYSENTER;
 extern Instruction_NoOperands SYSEXIT;
-extern Instruction_MemOperand XRSTORS;
-extern Instruction_MemOperand XRSTORS64;
-extern Instruction_MemOperand XSAVES;
-extern Instruction_MemOperand XSAVES64;
+extern Instruction_MemOnly XRSTORS;
+extern Instruction_MemOnly XRSTORS64;
+extern Instruction_MemOnly XSAVES;
+extern Instruction_MemOnly XSAVES64;
 extern Instruction_NoOperands XSETBV;
 extern Instruction_FSGSBASE RDFSBASE;
 extern Instruction_FSGSBASE RDGSBASE;

@@ -128,7 +128,6 @@
     <ClCompile Include="..\..\src\imm8.cpp" />
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
-    <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
     <ClCompile Include="..\..\src\Instruction_REP.cpp" />
@@ -167,7 +166,6 @@
     <ClInclude Include="..\..\src\imm8.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
-    <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />
     <ClInclude Include="..\..\src\Instruction_REP.h" />

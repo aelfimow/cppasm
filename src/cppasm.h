@@ -19,9 +19,6 @@
 #include "imm16.h"
 #include "imm32.h"
 #include "imm64.h"
-#include "disp8.h"
-#include "disp16.h"
-#include "disp32.h"
 #include "Sreg.h"
 #include "m.h"
 #include "m8.h"
@@ -43,7 +40,6 @@
 
 #include "Instruction_FST.h"
 #include "Instruction_MemOperand.h"
-#include "Instruction_MOV.h"
 #include "Instruction_MovWithExt.h"
 #include "Instruction_NOP.h"
 #include "Instruction_Prefix.h"
@@ -509,6 +505,46 @@ using Instruction_OUT = Instruction_6
     Operands_reg_reg<r16, r8>,
     Operands_reg_reg<r16, r16>,
     Operands_reg_reg<r16, r32>
+>;
+
+using Instruction_MOV = Instruction_36
+<
+    Operands_reg_reg<r8, r8>,
+    Operands_mem_reg<m8, r8>,
+    Operands_reg_reg<r16, r16>,
+    Operands_mem_reg<m16, r16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_mem_reg<m32, r32>,
+    Operands_reg_reg<r64, r64>,
+    Operands_mem_reg<m64, r64>,
+    Operands_reg_mem<r8, m8>,
+    Operands_reg_mem<r16, m16>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_mem<r64, m64>,
+    Operands_reg_reg<r16, Sreg>,
+    Operands_mem_reg<m16, Sreg>,
+    Operands_reg_reg<r64, Sreg>,
+    Operands_mem_reg<m64, Sreg>,
+    Operands_reg_reg<Sreg, r16>,
+    Operands_reg_mem<Sreg, m16>,
+    Operands_reg_reg<Sreg, r64>,
+    Operands_reg_mem<Sreg, m64>,
+    Operands_reg_imm<r8, imm8>,
+    Operands_reg_imm<r16, imm16>,
+    Operands_reg_imm<r32, imm32>,
+    Operands_reg_imm<r64, imm64>,
+    Operands_mem_postfix_imm<m8, imm8>,
+    Operands_mem_postfix_imm<m16, imm16>,
+    Operands_mem_postfix_imm<m32, imm32>,
+    Operands_mem_postfix_imm<m64, imm32>,
+    Operands_reg_reg<r32, cr>,
+    Operands_reg_reg<r64, cr>,
+    Operands_reg_reg<cr, r32>,
+    Operands_reg_reg<cr, r64>,
+    Operands_reg_reg<r32, dr>,
+    Operands_reg_reg<r64, dr>,
+    Operands_reg_reg<dr, r32>,
+    Operands_reg_reg<dr, r64>
 >;
 
 extern asmstream asmout;

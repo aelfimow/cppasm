@@ -12,9 +12,6 @@ all:
 	${CXX} -c comment.cpp -o ${OBJDIR}/comment.o ${CXXFLAGS}
 	${CXX} -c cppasm.cpp -o ${OBJDIR}/cppasm.o ${CXXFLAGS}
 	${CXX} -c cr.cpp -o ${OBJDIR}/cr.o ${CXXFLAGS}
-	${CXX} -c disp16.cpp -o ${OBJDIR}/disp16.o ${CXXFLAGS}
-	${CXX} -c disp32.cpp -o ${OBJDIR}/disp32.o ${CXXFLAGS}
-	${CXX} -c disp8.cpp -o ${OBJDIR}/disp8.o ${CXXFLAGS}
 	${CXX} -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}
 	${CXX} -c global.cpp -o ${OBJDIR}/global.o ${CXXFLAGS}
 	${CXX} -c imm16.cpp -o ${OBJDIR}/imm16.o ${CXXFLAGS}
@@ -24,7 +21,6 @@ all:
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	${CXX} -c Instruction_MemOperand.cpp -o ${OBJDIR}/Instruction_MemOperand.o ${CXXFLAGS}
-	${CXX} -c Instruction_MOV.cpp -o ${OBJDIR}/Instruction_MOV.o ${CXXFLAGS}
 	${CXX} -c Instruction_MovWithExt.cpp -o ${OBJDIR}/Instruction_MovWithExt.o ${CXXFLAGS}
 	${CXX} -c Instruction_NOP.cpp -o ${OBJDIR}/Instruction_NOP.o ${CXXFLAGS}
 	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}

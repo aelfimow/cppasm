@@ -120,9 +120,6 @@
     <ClCompile Include="..\..\src\comment.cpp" />
     <ClCompile Include="..\..\src\cppasm.cpp" />
     <ClCompile Include="..\..\src\cr.cpp" />
-    <ClCompile Include="..\..\src\disp16.cpp" />
-    <ClCompile Include="..\..\src\disp32.cpp" />
-    <ClCompile Include="..\..\src\disp8.cpp" />
     <ClCompile Include="..\..\src\dr.cpp" />
     <ClCompile Include="..\..\src\global.cpp" />
     <ClCompile Include="..\..\src\imm16.cpp" />
@@ -132,7 +129,6 @@
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\Instruction_FST.cpp" />
     <ClCompile Include="..\..\src\Instruction_MemOperand.cpp" />
-    <ClCompile Include="..\..\src\Instruction_MOV.cpp" />
     <ClCompile Include="..\..\src\Instruction_MovWithExt.cpp" />
     <ClCompile Include="..\..\src\Instruction_NOP.cpp" />
     <ClCompile Include="..\..\src\Instruction_Prefix.cpp" />
@@ -164,9 +160,6 @@
     <ClInclude Include="..\..\src\comment.h" />
     <ClInclude Include="..\..\src\cppasm.h" />
     <ClInclude Include="..\..\src\cr.h" />
-    <ClInclude Include="..\..\src\disp16.h" />
-    <ClInclude Include="..\..\src\disp32.h" />
-    <ClInclude Include="..\..\src\disp8.h" />
     <ClInclude Include="..\..\src\dr.h" />
     <ClInclude Include="..\..\src\global.h" />
     <ClInclude Include="..\..\src\imm16.h" />
@@ -176,7 +169,6 @@
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction_FST.h" />
     <ClInclude Include="..\..\src\Instruction_MemOperand.h" />
-    <ClInclude Include="..\..\src\Instruction_MOV.h" />
     <ClInclude Include="..\..\src\Instruction_MovWithExt.h" />
     <ClInclude Include="..\..\src\Instruction_NOP.h" />
     <ClInclude Include="..\..\src\Instruction_Prefix.h" />

@@ -43,7 +43,6 @@
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
 #include "Instruction_Shift.h"
-#include "Instruction_ShiftDouble.h"
 #include "Instruction_StringOp.h"
 
 extern const std::string Postfix_none;
@@ -566,6 +565,22 @@ using Instruction_MovWithExt = Instruction_12
     Operands_reg_mem<r64, m16, Postfix_wq>,
     Operands_reg_reg<r64, r32, Postfix_lq>,
     Operands_reg_mem<r64, m32, Postfix_lq>
+>;
+
+using Instruction_ShiftDouble = Instruction_12
+<
+    Operands_reg_reg_imm<r16, r16, imm8>,
+    Operands_mem_reg_imm<m16, r16, imm8>,
+    Operands_reg_reg_reg<r16, r16, r8>,
+    Operands_mem_reg_reg<m16, r16, r8>,
+    Operands_reg_reg_imm<r32, r32, imm8>,
+    Operands_mem_reg_imm<m32, r32, imm8>,
+    Operands_reg_reg_imm<r64, r64, imm8>,
+    Operands_mem_reg_imm<m64, r64, imm8>,
+    Operands_reg_reg_reg<r32, r32, r8>,
+    Operands_mem_reg_reg<m32, r32, r8>,
+    Operands_reg_reg_reg<r64, r64, r8>,
+    Operands_mem_reg_reg<m64, r64, r8>
 >;
 
 extern asmstream asmout;

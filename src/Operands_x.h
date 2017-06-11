@@ -35,7 +35,8 @@ class Operands_none
 template
 <
     class RegType1,
-    class RegType2
+    class RegType2,
+    const std::string &postfix
 >
 class Operands_reg_reg
 {
@@ -48,7 +49,8 @@ class Operands_reg_reg
 
         void operator()(RegType1 &op1, RegType2 &op2)
         {
-            Instruction instr { m_mnem, op1.name(), op2.name() };
+            std::string mnem { m_mnem + postfix };
+            Instruction instr { mnem, op1.name(), op2.name() };
             m_asmout << instr;
         }
 
@@ -350,7 +352,8 @@ class Operands_reg_mem_imm
 template
 <
     class RegType,
-    class MemType
+    class MemType,
+    const std::string &postfix
 >
 class Operands_reg_mem
 {
@@ -363,7 +366,8 @@ class Operands_reg_mem
 
         void operator()(RegType &op1, MemType &op2)
         {
-            Instruction instr { m_mnem, op1.name(), op2.to_str() };
+            std::string mnem { m_mnem + postfix };
+            Instruction instr { mnem, op1.name(), op2.to_str() };
             m_asmout << instr;
         }
 

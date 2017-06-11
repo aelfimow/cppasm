@@ -630,3 +630,11 @@ Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
 Keyword_comment comment;
 Keyword_global global;
 Keyword_label label;
+
+const std::string Postfix_none { "" };
+const std::string Postfix_bw { "bw" };
+const std::string Postfix_bl { "bl" };
+const std::string Postfix_bq { "bq" };
+const std::string Postfix_wl { "wl" };
+const std::string Postfix_wq { "wq" };
+const std::string Postfix_lq { "lq" };

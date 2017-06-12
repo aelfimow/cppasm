@@ -4,7 +4,7 @@
 
 #include "cppasm.h"
 
-static const r16 *all_r16[] =
+static r16 *all_r16[] =
 {
     &AX,
     &BX,
@@ -24,7 +24,7 @@ static const r16 *all_r16[] =
     &R15W
 };
 
-static const r32 *all_r32[] =
+static r32 *all_r32[] =
 {
     &EAX,
     &EBX,
@@ -44,7 +44,7 @@ static const r32 *all_r32[] =
     &R15D
 };
 
-static const r32 *all_r32_addr[] =
+static r32 *all_r32_addr[] =
 {
     &EAX,
     &EBX,
@@ -63,7 +63,7 @@ static const r32 *all_r32_addr[] =
     &R15D
 };
 
-static const r64 *all_r64_addr[] =
+static r64 *all_r64_addr[] =
 {
     &RAX,
     &RBX,

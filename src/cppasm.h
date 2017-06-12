@@ -186,10 +186,10 @@ using Instruction_Arithm2 = Instruction_8
     Operands_reg<r16>,
     Operands_reg<r32>,
     Operands_reg<r64>,
-    Operands_mem_postfix<m8>,
-    Operands_mem_postfix<m16>,
-    Operands_mem_postfix<m32>,
-    Operands_mem_postfix<m64>
+    Operands_mem<m8, Postfix_m8>,
+    Operands_mem<m16, Postfix_m16>,
+    Operands_mem<m32, Postfix_m32>,
+    Operands_mem<m64, Postfix_m64>
 >;
 
 using Instruction_AsciiAdj = Instruction_2
@@ -213,9 +213,9 @@ using Instruction_PUSH = Instruction_10
     Operands_reg<r16>,
     Operands_reg<r32>,
     Operands_reg<r64>,
-    Operands_mem_postfix<m16>,
-    Operands_mem_postfix<m32>,
-    Operands_mem_postfix<m64>,
+    Operands_mem<m16, Postfix_m16>,
+    Operands_mem<m32, Postfix_m32>,
+    Operands_mem<m64, Postfix_m64>,
     Operands_imm<imm8>,
     Operands_imm<imm16>,
     Operands_imm<imm32>,
@@ -464,11 +464,11 @@ using Instruction_XADD = Instruction_8
 using Instruction_POP = Instruction_7
 <
     Operands_reg<r16>,
-    Operands_mem_postfix<m16>,
+    Operands_mem<m16, Postfix_m16>,
     Operands_reg<r32>,
-    Operands_mem_postfix<m32>,
+    Operands_mem<m32, Postfix_m32>,
     Operands_reg<r64>,
-    Operands_mem_postfix<m64>,
+    Operands_mem<m64, Postfix_m64>,
     Operands_reg<Sreg>
 >;
 

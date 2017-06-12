@@ -66,7 +66,6 @@ class Operands_reg_reg
         Operands_reg_reg(const Operands_reg_reg &&instance) = delete;
         Operands_reg_reg &operator=(const Operands_reg_reg &instance) = delete;
         Operands_reg_reg &operator=(const Operands_reg_reg &&instance) = delete;
-
 };
 
 template
@@ -344,7 +343,6 @@ class Operands_imm_postfix
         Operands_imm_postfix(const Operands_imm_postfix &&instance) = delete;
         Operands_imm_postfix &operator=(const Operands_imm_postfix &instance) = delete;
         Operands_imm_postfix &operator=(const Operands_imm_postfix &&instance) = delete;
-
 };
 
 template
@@ -379,7 +377,6 @@ class Operands_reg_imm
         Operands_reg_imm(const Operands_reg_imm &&instance) = delete;
         Operands_reg_imm &operator=(const Operands_reg_imm &instance) = delete;
         Operands_reg_imm &operator=(const Operands_reg_imm &&instance) = delete;
-
 };
 
 template
@@ -415,7 +412,6 @@ class Operands_reg_mem_imm
         Operands_reg_mem_imm(const Operands_reg_mem_imm &&instance) = delete;
         Operands_reg_mem_imm &operator=(const Operands_reg_mem_imm &instance) = delete;
         Operands_reg_mem_imm &operator=(const Operands_reg_mem_imm &&instance) = delete;
-
 };
 
 template
@@ -452,7 +448,6 @@ class Operands_reg_mem
         Operands_reg_mem(const Operands_reg_mem &&instance) = delete;
         Operands_reg_mem &operator=(const Operands_reg_mem &instance) = delete;
         Operands_reg_mem &operator=(const Operands_reg_mem &&instance) = delete;
-
 };
 
 template
@@ -488,7 +483,6 @@ class Operands_reg_mem_postfix
         Operands_reg_mem_postfix(const Operands_reg_mem_postfix &&instance) = delete;
         Operands_reg_mem_postfix &operator=(const Operands_reg_mem_postfix &instance) = delete;
         Operands_reg_mem_postfix &operator=(const Operands_reg_mem_postfix &&instance) = delete;
-
 };
 
 template
@@ -525,7 +519,6 @@ class Operands_mem_reg
         Operands_mem_reg(const Operands_mem_reg &&instance) = delete;
         Operands_mem_reg &operator=(const Operands_mem_reg &instance) = delete;
         Operands_mem_reg &operator=(const Operands_mem_reg &&instance) = delete;
-
 };
 
 template
@@ -561,42 +554,6 @@ class Operands_mem
         Operands_mem(const Operands_mem &&instance) = delete;
         Operands_mem &operator=(const Operands_mem &instance) = delete;
         Operands_mem &operator=(const Operands_mem &&instance) = delete;
-
-};
-
-template
-<
-    class MemType
->
-class Operands_mem_postfix
-{
-    public:
-        Operands_mem_postfix(asmstream &s, const std::string mnem) :
-            m_asmout { s },
-            m_mnem { mnem }
-        {
-        }
-
-        void operator()(MemType &op1)
-        {
-            std::string mnem { m_mnem + op1.postfix() };
-            Instruction instr { mnem, op1.to_str() };
-            m_asmout << instr;
-        }
-
-        virtual ~Operands_mem_postfix() { }
-
-    private:
-        asmstream &m_asmout;
-        const std::string m_mnem;
-
-    public:
-        Operands_mem_postfix() = delete;
-        Operands_mem_postfix(const Operands_mem_postfix &instance) = delete;
-        Operands_mem_postfix(const Operands_mem_postfix &&instance) = delete;
-        Operands_mem_postfix &operator=(const Operands_mem_postfix &instance) = delete;
-        Operands_mem_postfix &operator=(const Operands_mem_postfix &&instance) = delete;
-
 };
 
 template
@@ -666,7 +623,6 @@ class Operands_reg
         Operands_reg(const Operands_reg &&instance) = delete;
         Operands_reg &operator=(const Operands_reg &instance) = delete;
         Operands_reg &operator=(const Operands_reg &&instance) = delete;
-
 };
 
 class Operands_string

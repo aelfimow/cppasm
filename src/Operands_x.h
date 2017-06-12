@@ -384,41 +384,6 @@ class Operands_reg_imm
 
 template
 <
-    class MemType,
-    class ImmType
->
-class Operands_mem_imm
-{
-    public:
-        Operands_mem_imm(asmstream &s, const std::string mnem) :
-            m_asmout { s },
-            m_mnem { mnem }
-        {
-        }
-
-        void operator()(MemType &op1, ImmType &op2)
-        {
-            Instruction instr { m_mnem, op1.to_str(), op2.to_str() };
-            m_asmout << instr;
-        }
-
-        virtual ~Operands_mem_imm() { }
-
-    private:
-        asmstream &m_asmout;
-        const std::string m_mnem;
-
-    public:
-        Operands_mem_imm() = delete;
-        Operands_mem_imm(const Operands_mem_imm &instance) = delete;
-        Operands_mem_imm(const Operands_mem_imm &&instance) = delete;
-        Operands_mem_imm &operator=(const Operands_mem_imm &instance) = delete;
-        Operands_mem_imm &operator=(const Operands_mem_imm &&instance) = delete;
-
-};
-
-template
-<
     class RegType,
     class MemType,
     class ImmType
@@ -529,7 +494,8 @@ class Operands_reg_mem_postfix
 template
 <
     class MemType,
-    class RegType
+    class RegType,
+    const std::string &postfix
 >
 class Operands_mem_reg
 {
@@ -542,7 +508,8 @@ class Operands_mem_reg
 
         void operator()(MemType &op1, RegType &op2)
         {
-            Instruction instr { m_mnem, op1.to_str(), op2.name() };
+            std::string mnem { m_mnem + postfix };
+            Instruction instr { mnem, op1.to_str(), op2.name() };
             m_asmout << instr;
         }
 
@@ -633,12 +600,13 @@ class Operands_mem_postfix
 template
 <
     class MemType,
-    class ImmType
+    class ImmType,
+    const std::string &postfix
 >
-class Operands_mem_postfix_imm
+class Operands_mem_imm
 {
     public:
-        Operands_mem_postfix_imm(asmstream &s, const std::string mnem) :
+        Operands_mem_imm(asmstream &s, const std::string mnem) :
             m_asmout { s },
             m_mnem { mnem }
         {
@@ -646,23 +614,23 @@ class Operands_mem_postfix_imm
 
         void operator()(MemType &op1, ImmType &op2)
         {
-            std::string mnem { m_mnem + op1.postfix() };
+            std::string mnem { m_mnem + postfix };
             Instruction instr { mnem, op1.to_str(), op2.to_str() };
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_postfix_imm() { }
+        virtual ~Operands_mem_imm() { }
 
     private:
         asmstream &m_asmout;
         const std::string m_mnem;
 
     public:
-        Operands_mem_postfix_imm() = delete;
-        Operands_mem_postfix_imm(const Operands_mem_postfix_imm &instance) = delete;
-        Operands_mem_postfix_imm(const Operands_mem_postfix_imm &&instance) = delete;
-        Operands_mem_postfix_imm &operator=(const Operands_mem_postfix_imm &instance) = delete;
-        Operands_mem_postfix_imm &operator=(const Operands_mem_postfix_imm &&instance) = delete;
+        Operands_mem_imm() = delete;
+        Operands_mem_imm(const Operands_mem_imm &instance) = delete;
+        Operands_mem_imm(const Operands_mem_imm &&instance) = delete;
+        Operands_mem_imm &operator=(const Operands_mem_imm &instance) = delete;
+        Operands_mem_imm &operator=(const Operands_mem_imm &&instance) = delete;
 };
 
 template

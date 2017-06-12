@@ -42,7 +42,6 @@
 #include "Instruction_NOP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
-#include "Instruction_Shift.h"
 #include "Instruction_StringOp.h"
 
 extern const std::string Postfix_none;
@@ -52,6 +51,10 @@ extern const std::string Postfix_bq;
 extern const std::string Postfix_wl;
 extern const std::string Postfix_wq;
 extern const std::string Postfix_lq;
+extern const std::string Postfix_m8;
+extern const std::string Postfix_m16;
+extern const std::string Postfix_m32;
+extern const std::string Postfix_m64;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -151,27 +154,27 @@ using Instruction_RDRAND = Instruction_3
 using Instruction_Arithm1 = Instruction_26
 <
     Operands_reg_imm<r8, imm8>,
-    Operands_mem_postfix_imm<m8, imm8>,
+    Operands_mem_imm<m8, imm8, Postfix_m8>,
     Operands_reg_imm<r16, imm16>,
-    Operands_mem_postfix_imm<m16, imm16>,
+    Operands_mem_imm<m16, imm16, Postfix_m16>,
     Operands_reg_imm<r32, imm32>,
-    Operands_mem_postfix_imm<m32, imm32>,
+    Operands_mem_imm<m32, imm32, Postfix_m32>,
     Operands_reg_imm<r64, imm32>,
-    Operands_mem_postfix_imm<m64, imm32>,
+    Operands_mem_imm<m64, imm32, Postfix_m64>,
     Operands_reg_imm<r16, imm8>,
-    Operands_mem_postfix_imm<m16, imm8>,
+    Operands_mem_imm<m16, imm8, Postfix_m16>,
     Operands_reg_imm<r32, imm8>,
-    Operands_mem_postfix_imm<m32, imm8>,
+    Operands_mem_imm<m32, imm8, Postfix_m32>,
     Operands_reg_imm<r64, imm8>,
-    Operands_mem_postfix_imm<m64, imm8>,
+    Operands_mem_imm<m64, imm8, Postfix_m64>,
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>,
+    Operands_mem_reg<m64, r64, Postfix_none>,
     Operands_reg_mem<r8, m8, Postfix_none>,
     Operands_reg_mem<r16, m16, Postfix_none>,
     Operands_reg_mem<r32, m32, Postfix_none>,
@@ -231,13 +234,13 @@ using Instruction_ADX = Instruction_4
 using Instruction_CMPXCHG = Instruction_8
 <
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>
+    Operands_mem_reg<m64, r64, Postfix_none>
 >;
 
 using Instruction_CMPXCHG8B = Instruction_1
@@ -263,17 +266,17 @@ using Instruction_BitScan = Instruction_6
 using Instruction_BitTest = Instruction_12
 <
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>,
+    Operands_mem_reg<m64, r64, Postfix_none>,
     Operands_reg_imm<r16, imm8>,
     Operands_reg_imm<r32, imm8>,
     Operands_reg_imm<r64, imm8>,
-    Operands_mem_postfix_imm<m16, imm8>,
-    Operands_mem_postfix_imm<m32, imm8>,
-    Operands_mem_postfix_imm<m64, imm8>
+    Operands_mem_imm<m16, imm8, Postfix_m16>,
+    Operands_mem_imm<m32, imm8, Postfix_m32>,
+    Operands_mem_imm<m64, imm8, Postfix_m64>
 >;
 
 using Instruction_BOUND = Instruction_2
@@ -308,13 +311,13 @@ using Instruction_SSE_MOV1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, Postfix_none>,
     Operands_reg_mem<xmm, m128, Postfix_none>,
-    Operands_mem_reg<m128, xmm>
+    Operands_mem_reg<m128, xmm, Postfix_none>
 >;
 
 using Instruction_SSE_MOV2 = Instruction_2
 <
     Operands_reg_mem<xmm, m64, Postfix_none>,
-    Operands_mem_reg<m64, xmm>
+    Operands_mem_reg<m64, xmm, Postfix_none>
 >;
 
 using Instruction_SSE_MOV3 = Instruction_1
@@ -332,7 +335,7 @@ using Instruction_SSE_MOV5 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, Postfix_none>,
     Operands_reg_mem<xmm, m32, Postfix_none>,
-    Operands_mem_reg<m32, xmm>
+    Operands_mem_reg<m32, xmm, Postfix_none>
 >;
 
 using Instruction_SSE_Arithm1 = Instruction_2
@@ -402,16 +405,16 @@ using Instruction_SSE_Conv4 = Instruction_4
 using Instruction_XCHG = Instruction_12
 <
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_mem<r8, m8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_mem<r16, m16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_mem<r32, m32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>,
+    Operands_mem_reg<m64, r64, Postfix_none>,
     Operands_reg_mem<r64, m64, Postfix_none>
 >;
 
@@ -424,21 +427,21 @@ using Instruction_FSGSBASE = Instruction_2
 using Instruction_TEST = Instruction_16
 <
     Operands_reg_imm<r8, imm8>,
-    Operands_mem_postfix_imm<m8, imm8>,
+    Operands_mem_imm<m8, imm8, Postfix_m8>,
     Operands_reg_imm<r16, imm16>,
-    Operands_mem_postfix_imm<m16, imm16>,
+    Operands_mem_imm<m16, imm16, Postfix_m16>,
     Operands_reg_imm<r32, imm32>,
-    Operands_mem_postfix_imm<m32, imm32>,
+    Operands_mem_imm<m32, imm32, Postfix_m32>,
     Operands_reg_imm<r64, imm32>,
-    Operands_mem_postfix_imm<m64, imm32>,
+    Operands_mem_imm<m64, imm32, Postfix_m64>,
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>
+    Operands_mem_reg<m64, r64, Postfix_none>
 >;
 
 using Instruction_RET = Instruction_2
@@ -450,13 +453,13 @@ using Instruction_RET = Instruction_2
 using Instruction_XADD = Instruction_8
 <
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>
+    Operands_mem_reg<m64, r64, Postfix_none>
 >;
 
 using Instruction_POP = Instruction_7
@@ -514,21 +517,21 @@ using Instruction_OUT = Instruction_6
 using Instruction_MOV = Instruction_36
 <
     Operands_reg_reg<r8, r8, Postfix_none>,
-    Operands_mem_reg<m8, r8>,
+    Operands_mem_reg<m8, r8, Postfix_none>,
     Operands_reg_reg<r16, r16, Postfix_none>,
-    Operands_mem_reg<m16, r16>,
+    Operands_mem_reg<m16, r16, Postfix_none>,
     Operands_reg_reg<r32, r32, Postfix_none>,
-    Operands_mem_reg<m32, r32>,
+    Operands_mem_reg<m32, r32, Postfix_none>,
     Operands_reg_reg<r64, r64, Postfix_none>,
-    Operands_mem_reg<m64, r64>,
+    Operands_mem_reg<m64, r64, Postfix_none>,
     Operands_reg_mem<r8, m8, Postfix_none>,
     Operands_reg_mem<r16, m16, Postfix_none>,
     Operands_reg_mem<r32, m32, Postfix_none>,
     Operands_reg_mem<r64, m64, Postfix_none>,
     Operands_reg_reg<r16, Sreg, Postfix_none>,
-    Operands_mem_reg<m16, Sreg>,
+    Operands_mem_reg<m16, Sreg, Postfix_none>,
     Operands_reg_reg<r64, Sreg, Postfix_none>,
-    Operands_mem_reg<m64, Sreg>,
+    Operands_mem_reg<m64, Sreg, Postfix_none>,
     Operands_reg_reg<Sreg, r16, Postfix_none>,
     Operands_reg_mem<Sreg, m16, Postfix_none>,
     Operands_reg_reg<Sreg, r64, Postfix_none>,
@@ -537,10 +540,10 @@ using Instruction_MOV = Instruction_36
     Operands_reg_imm<r16, imm16>,
     Operands_reg_imm<r32, imm32>,
     Operands_reg_imm<r64, imm64>,
-    Operands_mem_postfix_imm<m8, imm8>,
-    Operands_mem_postfix_imm<m16, imm16>,
-    Operands_mem_postfix_imm<m32, imm32>,
-    Operands_mem_postfix_imm<m64, imm32>,
+    Operands_mem_imm<m8, imm8, Postfix_m8>,
+    Operands_mem_imm<m16, imm16, Postfix_m16>,
+    Operands_mem_imm<m32, imm32, Postfix_m32>,
+    Operands_mem_imm<m64, imm32, Postfix_m64>,
     Operands_reg_reg<r32, cr, Postfix_none>,
     Operands_reg_reg<r64, cr, Postfix_none>,
     Operands_reg_reg<cr, r32, Postfix_none>,
@@ -581,6 +584,26 @@ using Instruction_ShiftDouble = Instruction_12
     Operands_mem_reg_reg<m32, r32, r8>,
     Operands_reg_reg_reg<r64, r64, r8>,
     Operands_mem_reg_reg<m64, r64, r8>
+>;
+
+using Instruction_Shift = Instruction_16
+<
+    Operands_reg_imm<r8, imm8>,
+    Operands_mem_imm<m8, imm8, Postfix_m8>,
+    Operands_reg_reg<r8, r8, Postfix_none>,
+    Operands_mem_reg<m8, r8, Postfix_m8>,
+    Operands_reg_imm<r16, imm8>,
+    Operands_mem_imm<m16, imm8, Postfix_m16>,
+    Operands_reg_reg<r16, r8, Postfix_none>,
+    Operands_mem_reg<m16, r8, Postfix_m16>,
+    Operands_reg_imm<r32, imm8>,
+    Operands_mem_imm<m32, imm8, Postfix_m32>,
+    Operands_reg_reg<r32, r8, Postfix_none>,
+    Operands_mem_reg<m32, r8, Postfix_m32>,
+    Operands_reg_imm<r64, imm8>,
+    Operands_mem_imm<m64, imm8, Postfix_m64>,
+    Operands_reg_reg<r64, r8, Postfix_none>,
+    Operands_mem_reg<m64, r8, Postfix_m64>
 >;
 
 extern asmstream asmout;

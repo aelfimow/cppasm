@@ -638,3 +638,7 @@ const std::string Postfix_bq { "bq" };
 const std::string Postfix_wl { "wl" };
 const std::string Postfix_wq { "wq" };
 const std::string Postfix_lq { "lq" };
+const std::string Postfix_m8 { "b" };
+const std::string Postfix_m16 { "w" };
+const std::string Postfix_m32 { "l" };
+const std::string Postfix_m64 { "q" };

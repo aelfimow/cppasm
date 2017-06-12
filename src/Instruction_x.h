@@ -105,6 +105,40 @@ template
     class T2,
     class T3,
     class T4,
+    class T5
+>
+class Instruction_5 :
+    public T1,
+    public T2,
+    public T3,
+    public T4,
+    public T5
+{
+    public:
+        Instruction_5(asmstream &s, const std::string mnem) :
+            T1 { s, mnem },
+            T2 { s, mnem },
+            T3 { s, mnem },
+            T4 { s, mnem },
+            T5 { s, mnem }
+        {
+        }
+
+        ~Instruction_5() { }
+
+        using T1::operator();
+        using T2::operator();
+        using T3::operator();
+        using T4::operator();
+        using T5::operator();
+};
+
+template
+<
+    class T1,
+    class T2,
+    class T3,
+    class T4,
     class T5,
     class T6
 >

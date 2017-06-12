@@ -102,15 +102,15 @@ try
     global(func_name);
     label(func_name);
 
-    NOP(1);
-    NOP(2);
-    NOP(3);
-    NOP(4);
-    NOP(5);
-    NOP(6);
-    NOP(7);
-    NOP(8);
-    NOP(9);
+    NOP();
+    NOP();
+    NOP();
+    NOP();
+    NOP();
+    NOP();
+    NOP();
+    NOP();
+    NOP();
 
     for (auto one_r16: all_r16)
     {

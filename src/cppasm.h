@@ -39,7 +39,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_NOP.h"
 #include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
 #include "Instruction_StringOp.h"
@@ -122,12 +121,12 @@ using Instruction_MMX_Shift = Instruction_6
 using Instruction_rm16 = Instruction_2
 <
     Operands_reg<r16>,
-    Operands_mem<m16>
+    Operands_mem<m16, Postfix_none>
 >;
 
 using Instruction_MemOnly = Instruction_1
 <
-    Operands_mem<m>
+    Operands_mem<m, Postfix_none>
 >;
 
 using Instruction_LoadFarPointer = Instruction_3
@@ -245,12 +244,12 @@ using Instruction_CMPXCHG = Instruction_8
 
 using Instruction_CMPXCHG8B = Instruction_1
 <
-    Operands_mem<m64>
+    Operands_mem<m64, Postfix_none>
 >;
 
 using Instruction_CMPXCHG16B = Instruction_1
 <
-    Operands_mem<m128>
+    Operands_mem<m128, Postfix_none>
 >;
 
 using Instruction_BitScan = Instruction_6
@@ -289,11 +288,11 @@ using Instruction_Branch = Instruction_7
 <
     Operands_string,
     Operands_reg<r16>,
-    Operands_mem<m16>,
+    Operands_mem<m16, Postfix_none>,
     Operands_reg<r32>,
-    Operands_mem<m32>,
+    Operands_mem<m32, Postfix_none>,
     Operands_reg<r64>,
-    Operands_mem<m64>
+    Operands_mem<m64, Postfix_none>
 >;
 
 using Instruction_BSWAP = Instruction_2
@@ -476,7 +475,7 @@ using Instruction_POP = Instruction_7
 using Instruction_SETcc = Instruction_2
 <
     Operands_reg<r8>,
-    Operands_mem<m8>
+    Operands_mem<m8, Postfix_none>
 >;
 
 using Instruction_INT = Instruction_1
@@ -604,6 +603,15 @@ using Instruction_Shift = Instruction_16
     Operands_mem_imm<m64, imm8, Postfix_m64>,
     Operands_reg_reg<r64, r8, Postfix_none>,
     Operands_mem_reg<m64, r8, Postfix_m64>
+>;
+
+using Instruction_NOP = Instruction_5
+<
+    Operands_none,
+    Operands_reg<r16>,
+    Operands_mem<m16, Postfix_m16>,
+    Operands_reg<r32>,
+    Operands_mem<m32, Postfix_m32>
 >;
 
 extern asmstream asmout;

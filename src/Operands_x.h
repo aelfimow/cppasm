@@ -530,7 +530,8 @@ class Operands_mem_reg
 
 template
 <
-    class MemType
+    class MemType,
+    const std::string &postfix
 >
 class Operands_mem
 {
@@ -543,7 +544,8 @@ class Operands_mem
 
         void operator()(MemType &op1)
         {
-            Instruction instr { m_mnem, op1.to_str() };
+            std::string mnem { m_mnem + postfix };
+            Instruction instr { mnem, op1.to_str() };
             m_asmout << instr;
         }
 

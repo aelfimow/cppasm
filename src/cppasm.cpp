@@ -391,7 +391,7 @@ Instruction_LoadFarPointer LSS { asmout, "lss" };
 
 // Miscelleneous instructions
 Instruction_LEA LEA { asmout, "lea" };
-Instruction_NOP NOP { asmout };
+Instruction_NOP NOP { asmout, "nop" };
 Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction_NoOperands UD1 { asmout, "ud1" };
 Instruction_NoOperands UD2 { asmout, "ud2" };

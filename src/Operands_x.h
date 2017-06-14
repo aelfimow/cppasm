@@ -32,6 +32,34 @@ class Operands_none
         Operands_none &operator=(const Operands_none &&instance) = delete;
 };
 
+class Operands_prefix
+{
+    public:
+        Operands_prefix(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()()
+        {
+            m_asmout.prefix(m_mnem);
+        }
+
+        virtual ~Operands_prefix() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_prefix() = delete;
+        Operands_prefix(const Operands_prefix &instance) = delete;
+        Operands_prefix(const Operands_prefix &&instance) = delete;
+        Operands_prefix &operator=(const Operands_prefix &instance) = delete;
+        Operands_prefix &operator=(const Operands_prefix &&instance) = delete;
+};
+
 template
 <
     class RegType1,

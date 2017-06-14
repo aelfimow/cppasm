@@ -39,7 +39,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_Prefix.h"
 #include "Instruction_REP.h"
 #include "Instruction_StringOp.h"
 
@@ -612,6 +611,11 @@ using Instruction_NOP = Instruction_5
     Operands_mem<m16, Postfix_m16>,
     Operands_reg<r32>,
     Operands_mem<m32, Postfix_m32>
+>;
+
+using Instruction_Prefix = Instruction_1
+<
+    Operands_prefix
 >;
 
 extern asmstream asmout;

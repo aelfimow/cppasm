@@ -20,7 +20,6 @@ all:
 	${CXX} -c imm8.cpp -o ${OBJDIR}/imm8.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
-	${CXX} -c Instruction_Prefix.cpp -o ${OBJDIR}/Instruction_Prefix.o ${CXXFLAGS}
 	${CXX} -c Instruction_REP.cpp -o ${OBJDIR}/Instruction_REP.o ${CXXFLAGS}
 	${CXX} -c Instruction_StringOp.cpp -o ${OBJDIR}/Instruction_StringOp.o ${CXXFLAGS}
 	${CXX} -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}

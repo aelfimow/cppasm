@@ -8,10 +8,6 @@
 #include "Instruction.h"
 #include "asmstream.h"
 #include "reg.h"
-#include "r8.h"
-#include "r16.h"
-#include "r32.h"
-#include "r64.h"
 #include "xmm.h"
 #include "ymm.h"
 #include "mm.h"
@@ -48,6 +44,11 @@ extern const std::string Postfix_m8;
 extern const std::string Postfix_m16;
 extern const std::string Postfix_m32;
 extern const std::string Postfix_m64;
+
+using r8 = reg_template<8>;
+using r16 = reg_template<16>;
+using r32 = reg_template<32>;
+using r64 = reg_template<64>;
 
 using imm8 = imm<uint8_t, 2>;
 using imm16 = imm<uint16_t, 4>;

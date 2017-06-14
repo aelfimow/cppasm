@@ -24,10 +24,6 @@ all:
 	${CXX} -c m8.cpp -o ${OBJDIR}/m8.o ${CXXFLAGS}
 	${CXX} -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
-	${CXX} -c r16.cpp -o ${OBJDIR}/r16.o ${CXXFLAGS}
-	${CXX} -c r32.cpp -o ${OBJDIR}/r32.o ${CXXFLAGS}
-	${CXX} -c r64.cpp -o ${OBJDIR}/r64.o ${CXXFLAGS}
-	${CXX} -c r8.cpp -o ${OBJDIR}/r8.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	${CXX} -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
 	${CXX} -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}

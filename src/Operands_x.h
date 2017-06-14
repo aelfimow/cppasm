@@ -341,40 +341,6 @@ class Operands_imm_imm
 
 template
 <
-    class ImmType
->
-class Operands_imm_postfix
-{
-    public:
-        Operands_imm_postfix(asmstream &s, const std::string mnem) :
-            m_asmout { s },
-            m_mnem { mnem }
-        {
-        }
-
-        void operator()(ImmType &op1)
-        {
-            std::string mnem { m_mnem + op1.postfix() };
-            Instruction instr { mnem, op1.to_str() };
-            m_asmout << instr;
-        }
-
-        virtual ~Operands_imm_postfix() { }
-
-    private:
-        asmstream &m_asmout;
-        const std::string m_mnem;
-
-    public:
-        Operands_imm_postfix() = delete;
-        Operands_imm_postfix(const Operands_imm_postfix &instance) = delete;
-        Operands_imm_postfix(const Operands_imm_postfix &&instance) = delete;
-        Operands_imm_postfix &operator=(const Operands_imm_postfix &instance) = delete;
-        Operands_imm_postfix &operator=(const Operands_imm_postfix &&instance) = delete;
-};
-
-template
-<
     class RegType,
     class ImmType
 >

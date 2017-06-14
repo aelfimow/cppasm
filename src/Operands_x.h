@@ -446,41 +446,6 @@ class Operands_reg_mem
 
 template
 <
-    class RegType,
-    class MemType
->
-class Operands_reg_mem_postfix
-{
-    public:
-        Operands_reg_mem_postfix(asmstream &s, const std::string mnem) :
-            m_asmout { s },
-            m_mnem { mnem }
-        {
-        }
-
-        void operator()(RegType &op1, MemType &op2)
-        {
-            std::string mnem { m_mnem + op1.postfix() };
-            Instruction instr { mnem, op1.name(), op2.to_str() };
-            m_asmout << instr;
-        }
-
-        virtual ~Operands_reg_mem_postfix() { }
-
-    private:
-        asmstream &m_asmout;
-        const std::string m_mnem;
-
-    public:
-        Operands_reg_mem_postfix() = delete;
-        Operands_reg_mem_postfix(const Operands_reg_mem_postfix &instance) = delete;
-        Operands_reg_mem_postfix(const Operands_reg_mem_postfix &&instance) = delete;
-        Operands_reg_mem_postfix &operator=(const Operands_reg_mem_postfix &instance) = delete;
-        Operands_reg_mem_postfix &operator=(const Operands_reg_mem_postfix &&instance) = delete;
-};
-
-template
-<
     class MemType,
     class RegType,
     const std::string &postfix

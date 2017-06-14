@@ -379,9 +379,9 @@ using Instruction_SSE_Conv1 = Instruction_2
 using Instruction_SSE_Conv2 = Instruction_4
 <
     Operands_reg_reg<xmm, r32, Postfix_none>,
-    Operands_reg_mem_postfix<xmm, m32>,
+    Operands_reg_mem<xmm, m32, Postfix_m32>,
     Operands_reg_reg<xmm, r64, Postfix_none>,
-    Operands_reg_mem_postfix<xmm, m64>
+    Operands_reg_mem<xmm, m64, Postfix_m64>
 >;
 
 using Instruction_SSE_Conv3 = Instruction_2

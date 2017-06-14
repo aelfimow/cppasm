@@ -39,7 +39,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_REP.h"
 #include "Instruction_StringOp.h"
 
 extern const std::string Postfix_none;
@@ -950,11 +949,11 @@ extern Instruction_StringOp STOSB;
 extern Instruction_StringOp STOSW;
 extern Instruction_StringOp STOSD;
 extern Instruction_StringOp STOSQ;
-extern Instruction_REP REP;
-extern Instruction_REP REPE;
-extern Instruction_REP REPZ;
-extern Instruction_REP REPNE;
-extern Instruction_REP REPNZ;
+extern Instruction_Prefix REP;
+extern Instruction_Prefix REPE;
+extern Instruction_Prefix REPZ;
+extern Instruction_Prefix REPNE;
+extern Instruction_Prefix REPNZ;
 
 // I/O instructions
 extern Instruction_IN IN;

@@ -351,11 +351,11 @@ Instruction_StringOp STOSB { asmout, "stosb" };
 Instruction_StringOp STOSW { asmout, "stosw" };
 Instruction_StringOp STOSD { asmout, "stosl" };
 Instruction_StringOp STOSQ { asmout, "stosq" };
-Instruction_REP REP { asmout, "rep" };
-Instruction_REP REPE { asmout, "repe" };
-Instruction_REP REPZ { asmout, "repz" };
-Instruction_REP REPNE { asmout, "repne" };
-Instruction_REP REPNZ { asmout, "repnz" };
+Instruction_Prefix REP { asmout, "rep" };
+Instruction_Prefix REPE { asmout, "repe" };
+Instruction_Prefix REPZ { asmout, "repz" };
+Instruction_Prefix REPNE { asmout, "repne" };
+Instruction_Prefix REPNZ { asmout, "repnz" };
 
 // I/O instructions
 Instruction_IN IN { asmout, "in" };

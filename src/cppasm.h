@@ -8,8 +8,6 @@
 #include "Instruction.h"
 #include "asmstream.h"
 #include "reg.h"
-#include "xmm.h"
-#include "ymm.h"
 #include "mm.h"
 #include "imm.h"
 #include "Sreg.h"
@@ -49,6 +47,8 @@ using r8 = reg_template<8>;
 using r16 = reg_template<16>;
 using r32 = reg_template<32>;
 using r64 = reg_template<64>;
+using xmm = reg_template<128>;
+using ymm = reg_template<256>;
 
 using imm8 = imm<uint8_t, 2>;
 using imm16 = imm<uint16_t, 4>;

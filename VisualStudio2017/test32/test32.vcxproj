@@ -135,8 +135,6 @@
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\Sreg.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
-    <ClCompile Include="..\..\src\xmm.cpp" />
-    <ClCompile Include="..\..\src\ymm.cpp" />
     <ClCompile Include="..\..\tests\test32.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,8 +162,6 @@
     <ClInclude Include="..\..\src\section.h" />
     <ClInclude Include="..\..\src\Sreg.h" />
     <ClInclude Include="..\..\src\st.h" />
-    <ClInclude Include="..\..\src\xmm.h" />
-    <ClInclude Include="..\..\src\ymm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

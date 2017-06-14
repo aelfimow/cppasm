@@ -27,6 +27,4 @@ all:
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	${CXX} -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}
 	${CXX} -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}
-	${CXX} -c xmm.cpp -o ${OBJDIR}/xmm.o ${CXXFLAGS}
-	${CXX} -c ymm.cpp -o ${OBJDIR}/ymm.o ${CXXFLAGS}
 	@echo No errors

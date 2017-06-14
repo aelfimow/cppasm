@@ -14,10 +14,6 @@ all:
 	${CXX} -c cr.cpp -o ${OBJDIR}/cr.o ${CXXFLAGS}
 	${CXX} -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}
 	${CXX} -c global.cpp -o ${OBJDIR}/global.o ${CXXFLAGS}
-	${CXX} -c imm16.cpp -o ${OBJDIR}/imm16.o ${CXXFLAGS}
-	${CXX} -c imm32.cpp -o ${OBJDIR}/imm32.o ${CXXFLAGS}
-	${CXX} -c imm64.cpp -o ${OBJDIR}/imm64.o ${CXXFLAGS}
-	${CXX} -c imm8.cpp -o ${OBJDIR}/imm8.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	${CXX} -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}

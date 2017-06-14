@@ -15,10 +15,7 @@
 #include "xmm.h"
 #include "ymm.h"
 #include "mm.h"
-#include "imm8.h"
-#include "imm16.h"
-#include "imm32.h"
-#include "imm64.h"
+#include "imm.h"
 #include "Sreg.h"
 #include "m.h"
 #include "m8.h"
@@ -51,6 +48,11 @@ extern const std::string Postfix_m8;
 extern const std::string Postfix_m16;
 extern const std::string Postfix_m32;
 extern const std::string Postfix_m64;
+
+using imm8 = imm<uint8_t, 2>;
+using imm16 = imm<uint16_t, 4>;
+using imm32 = imm<uint32_t, 8>;
+using imm64 = imm<uint64_t, 16>;
 
 using Instruction_NoOperands = Instruction_1
 <

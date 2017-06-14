@@ -154,6 +154,7 @@
     <ClInclude Include="..\..\src\cr.h" />
     <ClInclude Include="..\..\src\dr.h" />
     <ClInclude Include="..\..\src\global.h" />
+    <ClInclude Include="..\..\src\imm.h" />
     <ClInclude Include="..\..\src\imm16.h" />
     <ClInclude Include="..\..\src\imm32.h" />
     <ClInclude Include="..\..\src\imm64.h" />

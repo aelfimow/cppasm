@@ -39,7 +39,6 @@
 #include "Instruction_x.h"
 
 #include "Instruction_FST.h"
-#include "Instruction_StringOp.h"
 
 extern const std::string Postfix_none;
 extern const std::string Postfix_bw;
@@ -929,26 +928,26 @@ extern Instruction_LOOPcc LOOPNZ;
 extern Instruction_BOUND BOUND;
 
 // String instructions
-extern Instruction_StringOp MOVSB;
-extern Instruction_StringOp MOVSW;
-extern Instruction_StringOp MOVSD;
-extern Instruction_StringOp MOVSQ;
-extern Instruction_StringOp CMPSB;
-extern Instruction_StringOp CMPSW;
-extern Instruction_StringOp CMPSD;
-extern Instruction_StringOp CMPSQ;
-extern Instruction_StringOp SCASB;
-extern Instruction_StringOp SCASW;
-extern Instruction_StringOp SCASD;
-extern Instruction_StringOp SCASQ;
-extern Instruction_StringOp LODSB;
-extern Instruction_StringOp LODSW;
-extern Instruction_StringOp LODSD;
-extern Instruction_StringOp LODSQ;
-extern Instruction_StringOp STOSB;
-extern Instruction_StringOp STOSW;
-extern Instruction_StringOp STOSD;
-extern Instruction_StringOp STOSQ;
+extern Instruction_NoOperands MOVSB;
+extern Instruction_NoOperands MOVSW;
+extern Instruction_NoOperands MOVSD;
+extern Instruction_NoOperands MOVSQ;
+extern Instruction_NoOperands CMPSB;
+extern Instruction_NoOperands CMPSW;
+extern Instruction_NoOperands CMPSD;
+extern Instruction_NoOperands CMPSQ;
+extern Instruction_NoOperands SCASB;
+extern Instruction_NoOperands SCASW;
+extern Instruction_NoOperands SCASD;
+extern Instruction_NoOperands SCASQ;
+extern Instruction_NoOperands LODSB;
+extern Instruction_NoOperands LODSW;
+extern Instruction_NoOperands LODSD;
+extern Instruction_NoOperands LODSQ;
+extern Instruction_NoOperands STOSB;
+extern Instruction_NoOperands STOSW;
+extern Instruction_NoOperands STOSD;
+extern Instruction_NoOperands STOSQ;
 extern Instruction_Prefix REP;
 extern Instruction_Prefix REPE;
 extern Instruction_Prefix REPZ;
@@ -957,13 +956,13 @@ extern Instruction_Prefix REPNZ;
 
 // I/O instructions
 extern Instruction_IN IN;
-extern Instruction_StringOp INSB;
-extern Instruction_StringOp INSW;
-extern Instruction_StringOp INSD;
+extern Instruction_NoOperands INSB;
+extern Instruction_NoOperands INSW;
+extern Instruction_NoOperands INSD;
 extern Instruction_OUT OUT;
-extern Instruction_StringOp OUTSB;
-extern Instruction_StringOp OUTSW;
-extern Instruction_StringOp OUTSD;
+extern Instruction_NoOperands OUTSB;
+extern Instruction_NoOperands OUTSW;
+extern Instruction_NoOperands OUTSD;
 
 // Flag control (EFLAG) instructions
 extern Instruction_NoOperands CLC;

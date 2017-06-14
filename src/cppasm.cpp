@@ -331,26 +331,26 @@ Instruction_LOOPcc LOOPNZ { asmout, "loopnz" };
 Instruction_BOUND BOUND { asmout, "bound" };
 
 // String instructions
-Instruction_StringOp MOVSB { asmout, "movsb" };
-Instruction_StringOp MOVSW { asmout, "movsw" };
-Instruction_StringOp MOVSD { asmout, "movsl" };
-Instruction_StringOp MOVSQ { asmout, "movsq" };
-Instruction_StringOp CMPSB { asmout, "cmpsb" };
-Instruction_StringOp CMPSW { asmout, "cmpsw" };
-Instruction_StringOp CMPSD { asmout, "cmpsl" };
-Instruction_StringOp CMPSQ { asmout, "cmpsq" };
-Instruction_StringOp SCASB { asmout, "scasb" };
-Instruction_StringOp SCASW { asmout, "scasw" };
-Instruction_StringOp SCASD { asmout, "scasl" };
-Instruction_StringOp SCASQ { asmout, "scasq" };
-Instruction_StringOp LODSB { asmout, "lodsb" };
-Instruction_StringOp LODSW { asmout, "lodsw" };
-Instruction_StringOp LODSD { asmout, "lodsl" };
-Instruction_StringOp LODSQ { asmout, "lodsq" };
-Instruction_StringOp STOSB { asmout, "stosb" };
-Instruction_StringOp STOSW { asmout, "stosw" };
-Instruction_StringOp STOSD { asmout, "stosl" };
-Instruction_StringOp STOSQ { asmout, "stosq" };
+Instruction_NoOperands MOVSB { asmout, "movsb" };
+Instruction_NoOperands MOVSW { asmout, "movsw" };
+Instruction_NoOperands MOVSD { asmout, "movsl" };
+Instruction_NoOperands MOVSQ { asmout, "movsq" };
+Instruction_NoOperands CMPSB { asmout, "cmpsb" };
+Instruction_NoOperands CMPSW { asmout, "cmpsw" };
+Instruction_NoOperands CMPSD { asmout, "cmpsl" };
+Instruction_NoOperands CMPSQ { asmout, "cmpsq" };
+Instruction_NoOperands SCASB { asmout, "scasb" };
+Instruction_NoOperands SCASW { asmout, "scasw" };
+Instruction_NoOperands SCASD { asmout, "scasl" };
+Instruction_NoOperands SCASQ { asmout, "scasq" };
+Instruction_NoOperands LODSB { asmout, "lodsb" };
+Instruction_NoOperands LODSW { asmout, "lodsw" };
+Instruction_NoOperands LODSD { asmout, "lodsl" };
+Instruction_NoOperands LODSQ { asmout, "lodsq" };
+Instruction_NoOperands STOSB { asmout, "stosb" };
+Instruction_NoOperands STOSW { asmout, "stosw" };
+Instruction_NoOperands STOSD { asmout, "stosl" };
+Instruction_NoOperands STOSQ { asmout, "stosq" };
 Instruction_Prefix REP { asmout, "rep" };
 Instruction_Prefix REPE { asmout, "repe" };
 Instruction_Prefix REPZ { asmout, "repz" };
@@ -359,13 +359,13 @@ Instruction_Prefix REPNZ { asmout, "repnz" };
 
 // I/O instructions
 Instruction_IN IN { asmout, "in" };
-Instruction_StringOp INSB { asmout, "insb" };
-Instruction_StringOp INSW { asmout, "insw" };
-Instruction_StringOp INSD { asmout, "insl" };
+Instruction_NoOperands INSB { asmout, "insb" };
+Instruction_NoOperands INSW { asmout, "insw" };
+Instruction_NoOperands INSD { asmout, "insl" };
 Instruction_OUT OUT { asmout, "out" };
-Instruction_StringOp OUTSB { asmout, "outsb" };
-Instruction_StringOp OUTSW { asmout, "outsw" };
-Instruction_StringOp OUTSD { asmout, "outsl" };
+Instruction_NoOperands OUTSB { asmout, "outsb" };
+Instruction_NoOperands OUTSW { asmout, "outsw" };
+Instruction_NoOperands OUTSD { asmout, "outsl" };
 
 // Flag control (EFLAG) instructions
 Instruction_NoOperands CLC { asmout, "clc" };

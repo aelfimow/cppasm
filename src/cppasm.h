@@ -686,6 +686,25 @@ using Instruction_FCMOVcc = Instruction_1
     Operands_reg_reg<st, st, Postfix_none>
 >;
 
+using Instruction_FADD = Instruction_3
+<
+    Operands_mem<m32fp, Postfix_m32fp>,
+    Operands_mem<m64fp, Postfix_m64fp>,
+    Operands_reg_reg<st, st, Postfix_none>
+>;
+
+using Instruction_FADDP = Instruction_2
+<
+    Operands_reg_reg<st, st, Postfix_none>,
+    Operands_none
+>;
+
+using Instruction_FIADD = Instruction_2
+<
+    Operands_mem<m32, Postfix_m32int>,
+    Operands_mem<m16, Postfix_m16int>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1104,6 +1123,9 @@ extern Instruction_FCMOVcc FCMOVNBE;
 extern Instruction_FCMOVcc FCMOVNU;
 
 // x87 FPU basic arithmetic instructions
+extern Instruction_FADD FADD;
+extern Instruction_FADDP FADDP;
+extern Instruction_FIADD FIADD;
 extern Instruction_NoOperands FPREM;
 extern Instruction_NoOperands FPREM1;
 extern Instruction_NoOperands FABS;

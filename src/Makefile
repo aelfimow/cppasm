@@ -15,14 +15,7 @@ all:
 	${CXX} -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}
 	${CXX} -c global.cpp -o ${OBJDIR}/global.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
-	${CXX} -c Instruction_FST.cpp -o ${OBJDIR}/Instruction_FST.o ${CXXFLAGS}
 	${CXX} -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}
-	${CXX} -c m128.cpp -o ${OBJDIR}/m128.o ${CXXFLAGS}
-	${CXX} -c m16.cpp -o ${OBJDIR}/m16.o ${CXXFLAGS}
-	${CXX} -c m32.cpp -o ${OBJDIR}/m32.o ${CXXFLAGS}
-	${CXX} -c m64.cpp -o ${OBJDIR}/m64.o ${CXXFLAGS}
-	${CXX} -c m8.cpp -o ${OBJDIR}/m8.o ${CXXFLAGS}
-	${CXX} -c m80.cpp -o ${OBJDIR}/m80.o ${CXXFLAGS}
 	${CXX} -c mm.cpp -o ${OBJDIR}/mm.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	${CXX} -c Sreg.cpp -o ${OBJDIR}/Sreg.o ${CXXFLAGS}

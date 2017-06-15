@@ -12,12 +12,6 @@
 #include "imm.h"
 #include "Sreg.h"
 #include "m.h"
-#include "m8.h"
-#include "m16.h"
-#include "m32.h"
-#include "m64.h"
-#include "m80.h"
-#include "m128.h"
 #include "cr.h"
 #include "dr.h"
 #include "st.h"
@@ -28,8 +22,6 @@
 
 #include "Operands_x.h"
 #include "Instruction_x.h"
-
-#include "Instruction_FST.h"
 
 extern const std::string Postfix_none;
 extern const std::string Postfix_bw;
@@ -42,6 +34,9 @@ extern const std::string Postfix_m8;
 extern const std::string Postfix_m16;
 extern const std::string Postfix_m32;
 extern const std::string Postfix_m64;
+extern const std::string Postfix_m32fp;
+extern const std::string Postfix_m64fp;
+extern const std::string Postfix_m80fp;
 
 using r8 = reg_template<8>;
 using r16 = reg_template<16>;
@@ -54,6 +49,12 @@ using imm8 = imm<uint8_t, 2>;
 using imm16 = imm<uint16_t, 4>;
 using imm32 = imm<uint32_t, 8>;
 using imm64 = imm<uint64_t, 16>;
+
+using m8 = m_template<8>;
+using m16 = m_template<16>;
+using m32 = m_template<32>;
+using m64 = m_template<64>;
+using m128 = m_template<128>;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -1018,8 +1019,6 @@ extern Instruction_RDRAND RDRAND;
 extern Instruction_RDRAND RDSEED;
 
 // x87 FPU data transfer instructions
-extern Instruction_FST FST;
-extern Instruction_FST FSTP;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_NoOperands FPREM;

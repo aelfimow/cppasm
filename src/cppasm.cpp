@@ -418,8 +418,6 @@ Instruction_RDRAND RDRAND { asmout, "rdrand" };
 Instruction_RDRAND RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
-Instruction_FST FST { asmout, "fst" };
-Instruction_FST FSTP { asmout, "fstp" };
 
 // x87 FPU basic arithmetic instructions
 Instruction_NoOperands FPREM { asmout, "fprem" };
@@ -642,3 +640,6 @@ const std::string Postfix_m8 { "b" };
 const std::string Postfix_m16 { "w" };
 const std::string Postfix_m32 { "l" };
 const std::string Postfix_m64 { "q" };
+const std::string Postfix_m32fp { "s" };
+const std::string Postfix_m64fp { "l" };
+const std::string Postfix_m80fp { "t" };

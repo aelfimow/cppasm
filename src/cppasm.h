@@ -641,6 +641,19 @@ using Instruction_FILD = Instruction_3
     Operands_mem<m64, Postfix_m64int>
 >;
 
+using Instruction_FIST = Instruction_2
+<
+    Operands_mem<m16, Postfix_m16int>,
+    Operands_mem<m32, Postfix_m32int>
+>;
+
+using Instruction_FISTP = Instruction_3
+<
+    Operands_mem<m16, Postfix_m16int>,
+    Operands_mem<m32, Postfix_m32int>,
+    Operands_mem<m64, Postfix_m64int>
+>;
+
 using Instruction_FST = Instruction_3
 <
     Operands_mem<m32fp, Postfix_m32fp>,
@@ -1057,6 +1070,8 @@ extern Instruction_RDRAND RDSEED;
 // x87 FPU data transfer instructions
 extern Instruction_FLD FLD;
 extern Instruction_FILD FILD;
+extern Instruction_FIST FIST;
+extern Instruction_FISTP FISTP;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 

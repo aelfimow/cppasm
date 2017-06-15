@@ -37,6 +37,9 @@ extern const std::string Postfix_m64;
 extern const std::string Postfix_m32fp;
 extern const std::string Postfix_m64fp;
 extern const std::string Postfix_m80fp;
+extern const std::string Postfix_m16int;
+extern const std::string Postfix_m32int;
+extern const std::string Postfix_m64int;
 
 using r8 = reg_template<8>;
 using r16 = reg_template<16>;
@@ -631,6 +634,13 @@ using Instruction_FLD = Instruction_4
     Operands_reg<st>
 >;
 
+using Instruction_FILD = Instruction_3
+<
+    Operands_mem<m16, Postfix_m16int>,
+    Operands_mem<m32, Postfix_m32int>,
+    Operands_mem<m64, Postfix_m64int>
+>;
+
 using Instruction_FST = Instruction_3
 <
     Operands_mem<m32fp, Postfix_m32fp>,
@@ -1046,6 +1056,7 @@ extern Instruction_RDRAND RDSEED;
 
 // x87 FPU data transfer instructions
 extern Instruction_FLD FLD;
+extern Instruction_FILD FILD;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 

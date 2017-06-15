@@ -419,6 +419,7 @@ Instruction_RDRAND RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
 Instruction_FLD FLD { asmout, "fld" };
+Instruction_FILD FILD { asmout, "fild" };
 Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 
@@ -646,3 +647,6 @@ const std::string Postfix_m64 { "q" };
 const std::string Postfix_m32fp { "s" };
 const std::string Postfix_m64fp { "l" };
 const std::string Postfix_m80fp { "t" };
+const std::string Postfix_m16int { "" };
+const std::string Postfix_m32int { "l" };
+const std::string Postfix_m64int { "ll" };

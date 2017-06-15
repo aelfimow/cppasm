@@ -437,9 +437,12 @@ Instruction_FCMOVcc FCMOVNBE { asmout, "fcmovnbe" };
 Instruction_FCMOVcc FCMOVNU { asmout, "fcmovnu" };
 
 // x87 FPU basic arithmetic instructions
-Instruction_FADD FADD { asmout, "fadd" };
-Instruction_FADDP FADDP { asmout, "faddp" };
-Instruction_FIADD FIADD { asmout, "fiadd" };
+Instruction_FPU_Arithm1 FADD { asmout, "fadd" };
+Instruction_FPU_Arithm2 FADDP { asmout, "faddp" };
+Instruction_FPU_Arithm3 FIADD { asmout, "fiadd" };
+Instruction_FPU_Arithm1 FSUB { asmout, "fsub" };
+Instruction_FPU_Arithm2 FSUBP { asmout, "fsubp" };
+Instruction_FPU_Arithm3 FISUB { asmout, "fisub" };
 Instruction_NoOperands FPREM { asmout, "fprem" };
 Instruction_NoOperands FPREM1 { asmout, "fprem1" };
 Instruction_NoOperands FABS { asmout, "fabs" };

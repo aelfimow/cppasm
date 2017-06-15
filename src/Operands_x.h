@@ -64,7 +64,7 @@ template
 <
     class RegType1,
     class RegType2,
-    const std::string &postfix
+    const std::string &suffix
 >
 class Operands_reg_reg
 {
@@ -77,7 +77,7 @@ class Operands_reg_reg
 
         void operator()(RegType1 &op1, RegType2 &op2)
         {
-            std::string mnem { m_mnem + postfix };
+            std::string mnem { m_mnem + suffix };
             Instruction instr { mnem, op1.name(), op2.name() };
             m_asmout << instr;
         }
@@ -412,7 +412,7 @@ template
 <
     class RegType,
     class MemType,
-    const std::string &postfix
+    const std::string &suffix
 >
 class Operands_reg_mem
 {
@@ -425,7 +425,7 @@ class Operands_reg_mem
 
         void operator()(RegType &op1, MemType &op2)
         {
-            std::string mnem { m_mnem + postfix };
+            std::string mnem { m_mnem + suffix };
             Instruction instr { mnem, op1.name(), op2.to_str() };
             m_asmout << instr;
         }
@@ -448,7 +448,7 @@ template
 <
     class MemType,
     class RegType,
-    const std::string &postfix
+    const std::string &suffix
 >
 class Operands_mem_reg
 {
@@ -461,7 +461,7 @@ class Operands_mem_reg
 
         void operator()(MemType &op1, RegType &op2)
         {
-            std::string mnem { m_mnem + postfix };
+            std::string mnem { m_mnem + suffix };
             Instruction instr { mnem, op1.to_str(), op2.name() };
             m_asmout << instr;
         }
@@ -483,7 +483,7 @@ class Operands_mem_reg
 template
 <
     class MemType,
-    const std::string &postfix
+    const std::string &suffix
 >
 class Operands_mem
 {
@@ -496,7 +496,7 @@ class Operands_mem
 
         void operator()(MemType &op1)
         {
-            std::string mnem { m_mnem + postfix };
+            std::string mnem { m_mnem + suffix };
             Instruction instr { mnem, op1.to_str() };
             m_asmout << instr;
         }
@@ -519,7 +519,7 @@ template
 <
     class MemType,
     class ImmType,
-    const std::string &postfix
+    const std::string &suffix
 >
 class Operands_mem_imm
 {
@@ -532,7 +532,7 @@ class Operands_mem_imm
 
         void operator()(MemType &op1, ImmType &op2)
         {
-            std::string mnem { m_mnem + postfix };
+            std::string mnem { m_mnem + suffix };
             Instruction instr { mnem, op1.to_str(), op2.to_str() };
             m_asmout << instr;
         }

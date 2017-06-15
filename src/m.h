@@ -103,19 +103,19 @@ class m_template : public m
             return { m_disp + str };
         }
 
-        template <int bw> m_template<bw> &base(reg &b)
+        m_template<bit_width> &base(reg &b)
         {
             m_base = b.name();
             return *this;
         }
 
-        template <int bw> m_template<bw> &index(reg &i)
+        m_template<bit_width> &index(reg &i)
         {
             m_index = i.name();
             return *this;
         }
 
-        template <int bw> m_template<bw> &scale(size_t value)
+        m_template<bit_width> &scale(size_t value)
         {
             std::ostringstream ss;
             ss << value;
@@ -123,7 +123,7 @@ class m_template : public m
             return *this;
         }
 
-        template <int bw> m_template<bw> &disp(size_t value)
+        m_template<bit_width> &disp(size_t value)
         {
             if (0 == value)
             {

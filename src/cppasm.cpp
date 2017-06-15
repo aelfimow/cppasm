@@ -427,6 +427,14 @@ Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction_FBCD FBLD { asmout, "fbld" };
 Instruction_FBCD FBSTP { asmout, "fbstp" };
 Instruction_FXCH FXCH { asmout, "fxch" };
+Instruction_FCMOVcc FCMOVB { asmout, "fcmovb" };
+Instruction_FCMOVcc FCMOVE { asmout, "fcmove" };
+Instruction_FCMOVcc FCMOVBE { asmout, "fcmovbe" };
+Instruction_FCMOVcc FCMOVU { asmout, "fcmovu" };
+Instruction_FCMOVcc FCMOVNB { asmout, "fcmovnb" };
+Instruction_FCMOVcc FCMOVNE { asmout, "fcmovne" };
+Instruction_FCMOVcc FCMOVNBE { asmout, "fcmovnbe" };
+Instruction_FCMOVcc FCMOVNU { asmout, "fcmovnu" };
 
 // x87 FPU basic arithmetic instructions
 Instruction_NoOperands FPREM { asmout, "fprem" };

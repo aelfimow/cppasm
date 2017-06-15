@@ -681,6 +681,11 @@ using Instruction_FXCH = Instruction_2
     Operands_reg<st>
 >;
 
+using Instruction_FCMOVcc = Instruction_1
+<
+    Operands_reg_reg<st, st, Postfix_none>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1089,6 +1094,14 @@ extern Instruction_FSTP FSTP;
 extern Instruction_FBCD FBLD;
 extern Instruction_FBCD FBSTP;
 extern Instruction_FXCH FXCH;
+extern Instruction_FCMOVcc FCMOVB;
+extern Instruction_FCMOVcc FCMOVE;
+extern Instruction_FCMOVcc FCMOVBE;
+extern Instruction_FCMOVcc FCMOVU;
+extern Instruction_FCMOVcc FCMOVNB;
+extern Instruction_FCMOVcc FCMOVNE;
+extern Instruction_FCMOVcc FCMOVNBE;
+extern Instruction_FCMOVcc FCMOVNU;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_NoOperands FPREM;

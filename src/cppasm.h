@@ -675,6 +675,12 @@ using Instruction_FBCD = Instruction_1
     Operands_mem<m80bcd, Postfix_none>
 >;
 
+using Instruction_FXCH = Instruction_2
+<
+    Operands_none,
+    Operands_reg<st>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1082,6 +1088,7 @@ extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 extern Instruction_FBCD FBLD;
 extern Instruction_FBCD FBSTP;
+extern Instruction_FXCH FXCH;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_NoOperands FPREM;

@@ -426,6 +426,7 @@ Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction_FBCD FBLD { asmout, "fbld" };
 Instruction_FBCD FBSTP { asmout, "fbstp" };
+Instruction_FXCH FXCH { asmout, "fxch" };
 
 // x87 FPU basic arithmetic instructions
 Instruction_NoOperands FPREM { asmout, "fprem" };

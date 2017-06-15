@@ -55,6 +55,9 @@ using m16 = m_template<16>;
 using m32 = m_template<32>;
 using m64 = m_template<64>;
 using m128 = m_template<128>;
+using m32fp = m_template<32>;
+using m64fp = m_template<64>;
+using m80fp = m_template<80>;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -620,6 +623,21 @@ using Instruction_Prefix = Instruction_1
     Operands_prefix
 >;
 
+using Instruction_FST = Instruction_3
+<
+    Operands_mem<m32fp, Postfix_m32fp>,
+    Operands_mem<m64fp, Postfix_m64fp>,
+    Operands_reg<st>
+>;
+
+using Instruction_FSTP = Instruction_4
+<
+    Operands_mem<m32fp, Postfix_m32fp>,
+    Operands_mem<m64fp, Postfix_m64fp>,
+    Operands_mem<m80fp, Postfix_m80fp>,
+    Operands_reg<st>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1019,6 +1037,8 @@ extern Instruction_RDRAND RDRAND;
 extern Instruction_RDRAND RDSEED;
 
 // x87 FPU data transfer instructions
+extern Instruction_FST FST;
+extern Instruction_FSTP FSTP;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_NoOperands FPREM;

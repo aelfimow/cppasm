@@ -623,6 +623,14 @@ using Instruction_Prefix = Instruction_1
     Operands_prefix
 >;
 
+using Instruction_FLD = Instruction_4
+<
+    Operands_mem<m32fp, Postfix_m32fp>,
+    Operands_mem<m64fp, Postfix_m64fp>,
+    Operands_mem<m80fp, Postfix_m80fp>,
+    Operands_reg<st>
+>;
+
 using Instruction_FST = Instruction_3
 <
     Operands_mem<m32fp, Postfix_m32fp>,
@@ -1037,6 +1045,7 @@ extern Instruction_RDRAND RDRAND;
 extern Instruction_RDRAND RDSEED;
 
 // x87 FPU data transfer instructions
+extern Instruction_FLD FLD;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 

@@ -418,6 +418,7 @@ Instruction_RDRAND RDRAND { asmout, "rdrand" };
 Instruction_RDRAND RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
+Instruction_FLD FLD { asmout, "fld" };
 Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 

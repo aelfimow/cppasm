@@ -61,6 +61,7 @@ using m128 = m_template<128>;
 using m32fp = m_template<32>;
 using m64fp = m_template<64>;
 using m80fp = m_template<80>;
+using m80bcd = m_template<80>;
 
 using Instruction_NoOperands = Instruction_1
 <
@@ -669,6 +670,11 @@ using Instruction_FSTP = Instruction_4
     Operands_reg<st>
 >;
 
+using Instruction_FBCD = Instruction_1
+<
+    Operands_mem<m80bcd, Postfix_none>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1074,6 +1080,8 @@ extern Instruction_FIST FIST;
 extern Instruction_FISTP FISTP;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
+extern Instruction_FBCD FBLD;
+extern Instruction_FBCD FBSTP;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_NoOperands FPREM;

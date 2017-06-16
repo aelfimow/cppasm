@@ -718,6 +718,17 @@ using Instruction_FCOMPP = Instruction_1
     Operands_none
 >;
 
+using Instruction_FUCOM = Instruction_2
+<
+    Operands_reg<st>,
+    Operands_none
+>;
+
+using Instruction_FUCOMPP = Instruction_1
+<
+    Operands_none
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1167,6 +1178,9 @@ extern Instruction_NoOperands FXTRACT;
 extern Instruction_FCOM FCOM;
 extern Instruction_FCOM FCOMP;
 extern Instruction_FCOMPP FCOMPP;
+extern Instruction_FUCOM FUCOM;
+extern Instruction_FUCOM FUCOMP;
+extern Instruction_FUCOMPP FUCOMPP;
 extern Instruction_NoOperands FTST;
 extern Instruction_NoOperands FXAM;
 

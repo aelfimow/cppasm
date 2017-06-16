@@ -468,6 +468,9 @@ Instruction_NoOperands FXTRACT { asmout, "fxtract" };
 Instruction_FCOM FCOM = { asmout, "fcom" };
 Instruction_FCOM FCOMP = { asmout, "fcomp" };
 Instruction_FCOMPP FCOMPP = { asmout, "fcompp" };
+Instruction_FUCOM FUCOM = { asmout, "fucom" };
+Instruction_FUCOM FUCOMP = { asmout, "fucomp" };
+Instruction_FUCOMPP FUCOMPP = { asmout, "fucompp" };
 Instruction_NoOperands FTST { asmout, "ftst" };
 Instruction_NoOperands FXAM { asmout, "fxam" };
 

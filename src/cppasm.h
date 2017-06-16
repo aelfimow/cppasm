@@ -745,6 +745,42 @@ using Instruction_FFREE = Instruction_1
     Operands_reg<st>
 >;
 
+using Instruction_FSTCW = Instruction_1
+<
+    Operands_mem<m16, no_suffix>
+>;
+
+using Instruction_FLDCW = Instruction_1
+<
+    Operands_mem<m16, no_suffix>
+>;
+
+using Instruction_FSTENV = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FLDENV = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FSAVE = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FRSTOR = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FSTSW = Instruction_2
+<
+    Operands_mem<m16, no_suffix>,
+    Operands_reg<r16>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1233,6 +1269,17 @@ extern Instruction_NoOperands FINIT;
 extern Instruction_NoOperands FNINIT;
 extern Instruction_NoOperands FCLEX;
 extern Instruction_NoOperands FNCLEX;
+extern Instruction_FSTCW FSTCW;
+extern Instruction_FSTCW FNSTCW;
+extern Instruction_FLDCW FLDCW;
+extern Instruction_FSTENV FSTENV;
+extern Instruction_FSTENV FNSTENV;
+extern Instruction_FLDENV FLDENV;
+extern Instruction_FSAVE FSAVE;
+extern Instruction_FSAVE FNSAVE;
+extern Instruction_FRSTOR FRSTOR;
+extern Instruction_FSTSW FSTSW;
+extern Instruction_FSTSW FNSTSW;
 extern Instruction_NoOperands FNOP;
 
 // x87 FPU and SIMD state management instructions

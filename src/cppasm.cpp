@@ -507,6 +507,17 @@ Instruction_NoOperands FINIT { asmout, "finit" };
 Instruction_NoOperands FNINIT { asmout, "fninit" };
 Instruction_NoOperands FCLEX { asmout, "fclex" };
 Instruction_NoOperands FNCLEX { asmout, "fnclex" };
+Instruction_FSTCW FSTCW { asmout, "fstcw" };
+Instruction_FSTCW FNSTCW { asmout, "fnstcw" };
+Instruction_FLDCW FLDCW { asmout, "fldcw" };
+Instruction_FSTENV FSTENV { asmout, "fstenv" };
+Instruction_FSTENV FNSTENV { asmout, "fnstenv" };
+Instruction_FLDENV FLDENV { asmout, "fldenv" };
+Instruction_FSAVE FSAVE { asmout, "fsave" };
+Instruction_FSAVE FNSAVE { asmout, "fnsave" };
+Instruction_FRSTOR FRSTOR { asmout, "frstor" };
+Instruction_FSTSW FSTSW { asmout, "fstsw" };
+Instruction_FSTSW FNSTSW { asmout, "fnstsw" };
 Instruction_NoOperands FNOP { asmout, "fnop" };
 
 // x87 FPU and SIMD state management instructions

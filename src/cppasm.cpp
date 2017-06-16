@@ -473,6 +473,10 @@ Instruction_FUCOM FUCOMP = { asmout, "fucomp" };
 Instruction_FUCOMPP FUCOMPP = { asmout, "fucompp" };
 Instruction_FICOM FICOM = { asmout, "ficom" };
 Instruction_FICOM FICOMP = { asmout, "ficomp" };
+Instruction_FCOMI FCOMI = { asmout, "fcomi" };
+Instruction_FCOMI FCOMIP = { asmout, "fcomip" };
+Instruction_FCOMI FUCOMI = { asmout, "fucomi" };
+Instruction_FCOMI FUCOMIP = { asmout, "fucomip" };
 Instruction_NoOperands FTST { asmout, "ftst" };
 Instruction_NoOperands FXAM { asmout, "fxam" };
 

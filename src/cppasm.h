@@ -735,6 +735,11 @@ using Instruction_FICOM = Instruction_2
     Operands_mem<m32, suffix_m32int>
 >;
 
+using Instruction_FCOMI = Instruction_1
+<
+    Operands_reg_reg<st, st, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1189,6 +1194,10 @@ extern Instruction_FUCOM FUCOMP;
 extern Instruction_FUCOMPP FUCOMPP;
 extern Instruction_FICOM FICOM;
 extern Instruction_FICOM FICOMP;
+extern Instruction_FCOMI FCOMI;
+extern Instruction_FCOMI FCOMIP;
+extern Instruction_FCOMI FUCOMI;
+extern Instruction_FCOMI FUCOMIP;
 extern Instruction_NoOperands FTST;
 extern Instruction_NoOperands FXAM;
 

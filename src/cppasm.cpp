@@ -465,6 +465,9 @@ Instruction_NoOperands FSQRT { asmout, "fsqrt" };
 Instruction_NoOperands FXTRACT { asmout, "fxtract" };
 
 // x87 FPU comparison instructions
+Instruction_FCOM FCOM = { asmout, "fcom" };
+Instruction_FCOM FCOMP = { asmout, "fcomp" };
+Instruction_FCOMPP FCOMPP = { asmout, "fcompp" };
 Instruction_NoOperands FTST { asmout, "ftst" };
 Instruction_NoOperands FXAM { asmout, "fxam" };
 

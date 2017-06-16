@@ -705,6 +705,19 @@ using Instruction_FPU_Arithm3 = Instruction_2
     Operands_mem<m16, suffix_m16int>
 >;
 
+using Instruction_FCOM = Instruction_4
+<
+    Operands_mem<m32fp, suffix_m32fp>,
+    Operands_mem<m64fp, suffix_m64fp>,
+    Operands_reg<st>,
+    Operands_none
+>;
+
+using Instruction_FCOMPP = Instruction_1
+<
+    Operands_none
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1151,6 +1164,9 @@ extern Instruction_NoOperands FSQRT;
 extern Instruction_NoOperands FXTRACT;
 
 // x87 FPU comparison instructions
+extern Instruction_FCOM FCOM;
+extern Instruction_FCOM FCOMP;
+extern Instruction_FCOMPP FCOMPP;
 extern Instruction_NoOperands FTST;
 extern Instruction_NoOperands FXAM;
 

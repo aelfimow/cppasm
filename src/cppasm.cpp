@@ -502,6 +502,7 @@ Instruction_NoOperands FLDZ { asmout, "fldz" };
 // x87 FPU control instructions
 Instruction_NoOperands FINCSTP { asmout, "fincstp" };
 Instruction_NoOperands FDECSTP { asmout, "fdecstp" };
+Instruction_FFREE FFREE { asmout, "ffree" };
 Instruction_NoOperands FINIT { asmout, "finit" };
 Instruction_NoOperands FNINIT { asmout, "fninit" };
 Instruction_NoOperands FCLEX { asmout, "fclex" };

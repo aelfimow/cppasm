@@ -740,6 +740,11 @@ using Instruction_FCOMI = Instruction_1
     Operands_reg_reg<st, st, no_suffix>
 >;
 
+using Instruction_FFREE = Instruction_1
+<
+    Operands_reg<st>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1223,6 +1228,7 @@ extern Instruction_NoOperands FLDZ;
 // x87 FPU control instructions
 extern Instruction_NoOperands FINCSTP;
 extern Instruction_NoOperands FDECSTP;
+extern Instruction_FFREE FFREE;
 extern Instruction_NoOperands FINIT;
 extern Instruction_NoOperands FNINIT;
 extern Instruction_NoOperands FCLEX;

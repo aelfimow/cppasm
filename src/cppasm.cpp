@@ -641,6 +641,13 @@ Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
 Instruction_MXCSR LDMXCSR { asmout, "ldmxcsr" };
 Instruction_MXCSR STMXCSR { asmout, "stmxcsr" };
 
+// SSE 64-bit SIMD integer instructions
+Instruction_PAVGx PAVGB { asmout, "pavgb" };
+Instruction_PAVGx PAVGW { asmout, "pavgw" };
+Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
+Instruction_PMAXUB PMAXUB { asmout, "pmaxub" };
+Instruction_PMAXUW PMAXUW { asmout, "pmaxuw" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

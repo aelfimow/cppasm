@@ -786,6 +786,37 @@ using Instruction_MXCSR = Instruction_1
     Operands_mem<m32, no_suffix>
 >;
 
+using Instruction_PAVGx = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_PEXTRW = Instruction_5
+<
+    Operands_reg_reg_imm<r32, mm, imm8>,
+    Operands_reg_reg_imm<r64, mm, imm8>,
+    Operands_reg_reg_imm<r32, xmm, imm8>,
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m16, xmm, imm8>
+>;
+
+using Instruction_PMAXUB = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_PMAXUW = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1407,6 +1438,13 @@ extern Instruction_SSE_Conv4 CVTTSS2SI;
 // SSE MXCSR state management instructions
 extern Instruction_MXCSR LDMXCSR;
 extern Instruction_MXCSR STMXCSR;
+
+// SSE 64-bit SIMD integer instructions
+extern Instruction_PAVGx PAVGB;
+extern Instruction_PAVGx PAVGW;
+extern Instruction_PEXTRW PEXTRW;
+extern Instruction_PMAXUB PMAXUB;
+extern Instruction_PMAXUW PMAXUW;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -637,6 +637,10 @@ Instruction_SSE_Conv3 CVTTPS2PI { asmout, "cvttps2pi" };
 Instruction_SSE_Conv4 CVTSS2SI { asmout, "cvtss2si" };
 Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
 
+// SSE MXCSR state management instructions
+Instruction_MXCSR LDMXCSR { asmout, "ldmxcsr" };
+Instruction_MXCSR STMXCSR { asmout, "stmxcsr" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };
@@ -683,6 +687,8 @@ Instruction_NoOperands SYSRET { asmout, "sysret" };
 // AVX
 Instruction_VMOVD VMOVD { asmout, "qmovd" };
 Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
+Instruction_MXCSR VLDMXCSR { asmout, "vldmxcsr" };
+Instruction_MXCSR VSTMXCSR { asmout, "vstmxcsr" };
 
 Keyword_comment comment;
 Keyword_global global;

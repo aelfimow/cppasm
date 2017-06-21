@@ -781,6 +781,11 @@ using Instruction_FSTSW = Instruction_2
     Operands_reg<r16>
 >;
 
+using Instruction_MXCSR = Instruction_1
+<
+    Operands_mem<m32, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1399,6 +1404,10 @@ extern Instruction_SSE_Conv3 CVTTPS2PI;
 extern Instruction_SSE_Conv4 CVTSS2SI;
 extern Instruction_SSE_Conv4 CVTTSS2SI;
 
+// SSE MXCSR state management instructions
+extern Instruction_MXCSR LDMXCSR;
+extern Instruction_MXCSR STMXCSR;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;
@@ -1445,6 +1454,8 @@ extern Instruction_NoOperands SYSRET;
 // AVX
 extern Instruction_VMOVD VMOVD;
 extern Instruction_VMOVQ VMOVQ;
+extern Instruction_MXCSR VLDMXCSR;
+extern Instruction_MXCSR VSTMXCSR;
 
 extern Keyword_comment comment;
 extern Keyword_global global;

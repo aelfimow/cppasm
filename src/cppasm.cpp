@@ -651,6 +651,7 @@ Instruction_PMAXUW PMAXUW { asmout, "pmaxuw" };
 Instruction_PMxxSW PMAXSW { asmout, "pmaxsw" };
 Instruction_PMxxUB PMINUB { asmout, "pminub" };
 Instruction_PMxxSW PMINSW { asmout, "pminsw" };
+Instruction_PMOVMSKB PMOVMSKB { asmout, "pmovmskb" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

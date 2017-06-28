@@ -811,7 +811,7 @@ using Instruction_PINSRW = Instruction_4
     Operands_reg_mem_imm<xmm, m16, imm8>
 >;
 
-using Instruction_PMAXUB = Instruction_4
+using Instruction_PMxxUB = Instruction_4
 <
     Operands_reg_reg<mm, mm, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>,
@@ -825,7 +825,7 @@ using Instruction_PMAXUW = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_PMAXSW = Instruction_4
+using Instruction_PMxxSW = Instruction_4
 <
     Operands_reg_reg<mm, mm, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>,
@@ -1460,9 +1460,11 @@ extern Instruction_PAVGx PAVGB;
 extern Instruction_PAVGx PAVGW;
 extern Instruction_PEXTRW PEXTRW;
 extern Instruction_PINSRW PINSRW;
-extern Instruction_PMAXUB PMAXUB;
+extern Instruction_PMxxUB PMAXUB;
 extern Instruction_PMAXUW PMAXUW;
-extern Instruction_PMAXSW PMAXSW;
+extern Instruction_PMxxSW PMAXSW;
+extern Instruction_PMxxUB PMINUB;
+extern Instruction_PMxxSW PMINSW;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -803,6 +803,14 @@ using Instruction_PEXTRW = Instruction_5
     Operands_mem_reg_imm<m16, xmm, imm8>
 >;
 
+using Instruction_PINSRW = Instruction_4
+<
+    Operands_reg_reg_imm<mm, r32, imm8>,
+    Operands_reg_mem_imm<mm, m16, imm8>,
+    Operands_reg_reg_imm<xmm, r32, imm8>,
+    Operands_reg_mem_imm<xmm, m16, imm8>
+>;
+
 using Instruction_PMAXUB = Instruction_4
 <
     Operands_reg_reg<mm, mm, no_suffix>,
@@ -1443,6 +1451,7 @@ extern Instruction_MXCSR STMXCSR;
 extern Instruction_PAVGx PAVGB;
 extern Instruction_PAVGx PAVGW;
 extern Instruction_PEXTRW PEXTRW;
+extern Instruction_PINSRW PINSRW;
 extern Instruction_PMAXUB PMAXUB;
 extern Instruction_PMAXUW PMAXUW;
 

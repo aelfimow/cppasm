@@ -645,6 +645,7 @@ Instruction_MXCSR STMXCSR { asmout, "stmxcsr" };
 Instruction_PAVGx PAVGB { asmout, "pavgb" };
 Instruction_PAVGx PAVGW { asmout, "pavgw" };
 Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
+Instruction_PINSRW PINSRW { asmout, "pinsrw" };
 Instruction_PMAXUB PMAXUB { asmout, "pmaxub" };
 Instruction_PMAXUW PMAXUW { asmout, "pmaxuw" };
 

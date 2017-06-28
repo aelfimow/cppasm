@@ -825,6 +825,14 @@ using Instruction_PMAXUW = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_PMAXSW = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1454,6 +1462,7 @@ extern Instruction_PEXTRW PEXTRW;
 extern Instruction_PINSRW PINSRW;
 extern Instruction_PMAXUB PMAXUB;
 extern Instruction_PMAXUW PMAXUW;
+extern Instruction_PMAXSW PMAXSW;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

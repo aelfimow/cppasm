@@ -857,6 +857,12 @@ using Instruction_PSADBW = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_PSHUFW = Instruction_2
+<
+    Operands_reg_reg_imm<mm, mm, imm8>,
+    Operands_reg_mem_imm<mm, m64, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1492,6 +1498,7 @@ extern Instruction_PMxxSW PMINSW;
 extern Instruction_PMOVMSKB PMOVMSKB;
 extern Instruction_PMULHUW PMULHUW;
 extern Instruction_PSADBW PSADBW;
+extern Instruction_PSHUFW PSHUFW;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

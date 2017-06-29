@@ -656,6 +656,9 @@ Instruction_PMULHUW PMULHUW { asmout, "pmulhuw" };
 Instruction_PSADBW PSADBW { asmout, "psadbw" };
 Instruction_PSHUFW PSHUFW { asmout, "pshufw" };
 
+// SSE cacheability control, prefetch, and instruction ordering instructions
+Instruction_MASKMOVQ MASKMOVQ { asmout, "maskmovq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -863,6 +863,11 @@ using Instruction_PSHUFW = Instruction_2
     Operands_reg_mem_imm<mm, m64, imm8>
 >;
 
+using Instruction_MASKMOVQ = Instruction_1
+<
+    Operands_reg_reg<mm, mm, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1499,6 +1504,9 @@ extern Instruction_PMOVMSKB PMOVMSKB;
 extern Instruction_PMULHUW PMULHUW;
 extern Instruction_PSADBW PSADBW;
 extern Instruction_PSHUFW PSHUFW;
+
+// SSE cacheability control, prefetch, and instruction ordering instructions
+extern Instruction_MASKMOVQ MASKMOVQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

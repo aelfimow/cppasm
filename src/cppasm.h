@@ -868,6 +868,16 @@ using Instruction_MASKMOVQ = Instruction_1
     Operands_reg_reg<mm, mm, no_suffix>
 >;
 
+using Instruction_MOVNTQ = Instruction_1
+<
+    Operands_mem_reg<m64, mm, no_suffix>
+>;
+
+using Instruction_MOVNTPS = Instruction_1
+<
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1248,12 +1258,6 @@ extern Instruction_NoOperands CPUID;
 extern Instruction_NoOperands XLAT;
 extern Instruction_MemOnly CLFLUSH;
 extern Instruction_MemOnly CLFLUSHOPT;
-extern Instruction_MemOnly PREFETCHT0;
-extern Instruction_MemOnly PREFETCHT1;
-extern Instruction_MemOnly PREFETCHT2;
-extern Instruction_MemOnly PREFETCHNTA;
-extern Instruction_MemOnly PREFETCHW;
-extern Instruction_MemOnly PREFETCHWT1;
 
 // User mode extended state save/restore instructions
 extern Instruction_MemOnly XSAVE;
@@ -1507,6 +1511,15 @@ extern Instruction_PSHUFW PSHUFW;
 
 // SSE cacheability control, prefetch, and instruction ordering instructions
 extern Instruction_MASKMOVQ MASKMOVQ;
+extern Instruction_MOVNTQ MOVNTQ;
+extern Instruction_MOVNTPS MOVNTPS;
+extern Instruction_MemOnly PREFETCHT0;
+extern Instruction_MemOnly PREFETCHT1;
+extern Instruction_MemOnly PREFETCHT2;
+extern Instruction_MemOnly PREFETCHNTA;
+extern Instruction_MemOnly PREFETCHW;
+extern Instruction_MemOnly PREFETCHWT1;
+extern Instruction_NoOperands SFENCE;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

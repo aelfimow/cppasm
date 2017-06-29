@@ -399,12 +399,6 @@ Instruction_NoOperands CPUID { asmout, "cpuid" };
 Instruction_NoOperands XLAT { asmout, "xlat" };
 Instruction_MemOnly CLFLUSH { asmout, "clflush" };
 Instruction_MemOnly CLFLUSHOPT { asmout, "clflushopt" };
-Instruction_MemOnly PREFETCHT0 { asmout, "prefetchnta" };
-Instruction_MemOnly PREFETCHT1 { asmout, "prefetchnta" };
-Instruction_MemOnly PREFETCHT2 { asmout, "prefetchnta" };
-Instruction_MemOnly PREFETCHNTA { asmout, "prefetchnta" };
-Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
-Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
 
 // User mode extended state save/restore instructions
 Instruction_MemOnly XSAVE { asmout, "xsave" };
@@ -658,6 +652,15 @@ Instruction_PSHUFW PSHUFW { asmout, "pshufw" };
 
 // SSE cacheability control, prefetch, and instruction ordering instructions
 Instruction_MASKMOVQ MASKMOVQ { asmout, "maskmovq" };
+Instruction_MOVNTQ MOVNTQ { asmout, "movntq" };
+Instruction_MOVNTPS MOVNTPS { asmout, "movntps" };
+Instruction_MemOnly PREFETCHT0 { asmout, "prefetcht0" };
+Instruction_MemOnly PREFETCHT1 { asmout, "prefetcht1" };
+Instruction_MemOnly PREFETCHT2 { asmout, "prefetcht2" };
+Instruction_MemOnly PREFETCHNTA { asmout, "prefetchnta" };
+Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
+Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
+Instruction_NoOperands SFENCE { asmout, "sfence" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

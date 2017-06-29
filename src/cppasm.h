@@ -878,6 +878,31 @@ using Instruction_MOVNTPS = Instruction_1
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
+using Instruction_MOVxPD1 = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVxPD2 = Instruction_1
+<
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_MOVMSKPD = Instruction_2
+<
+    Operands_reg_reg<r32, xmm, no_suffix>,
+    Operands_reg_reg<r64, xmm, no_suffix>
+>;
+
+using Instruction_MOVSD = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>,
+    Operands_mem_reg<m64, xmm, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1520,6 +1545,14 @@ extern Instruction_MemOnly PREFETCHNTA;
 extern Instruction_MemOnly PREFETCHW;
 extern Instruction_MemOnly PREFETCHWT1;
 extern Instruction_NoOperands SFENCE;
+
+// SSE2 data movement instructions
+extern Instruction_MOVxPD1 MOVAPD;
+extern Instruction_MOVxPD1 MOVUPD;
+extern Instruction_MOVxPD2 MOVHPD;
+extern Instruction_MOVxPD2 MOVLPD;
+extern Instruction_MOVMSKPD MOVMSKPD;
+extern Instruction_MOVSD MOVSD_SSE2;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

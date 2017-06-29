@@ -662,6 +662,14 @@ Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
 Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
 Instruction_NoOperands SFENCE { asmout, "sfence" };
 
+// SSE2 data movement instructions
+Instruction_MOVxPD1 MOVAPD { asmout, "movapd" };
+Instruction_MOVxPD1 MOVUPD { asmout, "movupd" };
+Instruction_MOVxPD2 MOVHPD { asmout, "movhpd" };
+Instruction_MOVxPD2 MOVLPD { asmout, "movlpd" };
+Instruction_MOVMSKPD MOVMSKPD { asmout, "movmskpd" };
+Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

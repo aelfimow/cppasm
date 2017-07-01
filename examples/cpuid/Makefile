@@ -28,10 +28,10 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/cpuid_func.s
+	generate.exe > result/cpuid_func.S
 
 check:
-	$(AS) result/cpuid_func.s ${ASFLAGS64} -o cpuid_func.o
+	$(AS) result/cpuid_func.S ${ASFLAGS64} -o cpuid_func.o
 
 link_example:
 	$(CXX) example.o cpuid_func.o -o example.exe ${CXXFLAGS}

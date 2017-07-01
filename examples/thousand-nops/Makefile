@@ -28,10 +28,10 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/thousand_nops.s
+	generate.exe > result/thousand_nops.S
 
 check:
-	$(AS) result/thousand_nops.s ${ASFLAGS64} -o thousand_nops.o
+	$(AS) result/thousand_nops.S ${ASFLAGS64} -o thousand_nops.o
 
 link_example:
 	$(CXX) example.o thousand_nops.o -o example.exe ${CXXFLAGS}

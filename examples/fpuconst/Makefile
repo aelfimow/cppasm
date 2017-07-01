@@ -28,10 +28,10 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/fpuconst.s
+	generate.exe > result/fpuconst.S
 
 check:
-	$(AS) result/fpuconst.s ${ASFLAGS64} -o fpuconst.o
+	$(AS) result/fpuconst.S ${ASFLAGS64} -o fpuconst.o
 
 link_example:
 	$(CXX) example.o fpuconst.o -o example.exe ${CXXFLAGS}

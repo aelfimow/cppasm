@@ -28,10 +28,10 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/xorshift_func.s
+	generate.exe > result/xorshift_func.S
 
 check:
-	$(AS) result/xorshift_func.s ${ASFLAGS64} -o xorshift_func.o
+	$(AS) result/xorshift_func.S ${ASFLAGS64} -o xorshift_func.o
 
 link_example:
 	$(CXX) example.o xorshift_func.o -o example.exe ${CXXFLAGS}

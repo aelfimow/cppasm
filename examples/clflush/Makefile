@@ -28,10 +28,10 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/clflush_func.s
+	generate.exe > result/clflush_func.S
 
 check:
-	$(AS) result/clflush_func.s ${ASFLAGS64} -o clflush_func.o
+	$(AS) result/clflush_func.S ${ASFLAGS64} -o clflush_func.o
 
 link_example:
 	$(CXX) example.o clflush_func.o -o example.exe ${CXXFLAGS}

@@ -903,6 +903,18 @@ using Instruction_MOVSD = Instruction_3
     Operands_mem_reg<m64, xmm, no_suffix>
 >;
 
+using Instruction_SSE2_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE2_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1553,6 +1565,22 @@ extern Instruction_MOVxPD2 MOVHPD;
 extern Instruction_MOVxPD2 MOVLPD;
 extern Instruction_MOVMSKPD MOVMSKPD;
 extern Instruction_MOVSD MOVSD_SSE2;
+
+// SSE2 packed arithmetic instructions
+extern Instruction_SSE2_Arithm1 ADDPD;
+extern Instruction_SSE2_Arithm2 ADDSD;
+extern Instruction_SSE2_Arithm1 SUBPD;
+extern Instruction_SSE2_Arithm2 SUBSD;
+extern Instruction_SSE2_Arithm1 MULPD;
+extern Instruction_SSE2_Arithm2 MULSD;
+extern Instruction_SSE2_Arithm1 DIVPD;
+extern Instruction_SSE2_Arithm2 DIVSD;
+extern Instruction_SSE2_Arithm1 SQRTPD;
+extern Instruction_SSE2_Arithm2 SQRTSD;
+extern Instruction_SSE2_Arithm1 MAXPD;
+extern Instruction_SSE2_Arithm2 MAXSD;
+extern Instruction_SSE2_Arithm1 MINPD;
+extern Instruction_SSE2_Arithm2 MINSD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

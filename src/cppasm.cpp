@@ -670,6 +670,22 @@ Instruction_MOVxPD2 MOVLPD { asmout, "movlpd" };
 Instruction_MOVMSKPD MOVMSKPD { asmout, "movmskpd" };
 Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
 
+// SSE2 packed arithmetic instructions
+Instruction_SSE2_Arithm1 ADDPD { asmout, "addpd" };
+Instruction_SSE2_Arithm2 ADDSD { asmout, "addsd" };
+Instruction_SSE2_Arithm1 SUBPD { asmout, "subpd" };
+Instruction_SSE2_Arithm2 SUBSD { asmout, "subsd" };
+Instruction_SSE2_Arithm1 MULPD { asmout, "mulpd" };
+Instruction_SSE2_Arithm2 MULSD { asmout, "mulsd" };
+Instruction_SSE2_Arithm1 DIVPD { asmout, "divpd" };
+Instruction_SSE2_Arithm2 DIVSD { asmout, "divsd" };
+Instruction_SSE2_Arithm1 SQRTPD { asmout, "sqrtpd" };
+Instruction_SSE2_Arithm2 SQRTSD { asmout, "sqrtsd" };
+Instruction_SSE2_Arithm1 MAXPD { asmout, "maxpd" };
+Instruction_SSE2_Arithm2 MAXSD { asmout, "maxsd" };
+Instruction_SSE2_Arithm1 MINPD { asmout, "minpd" };
+Instruction_SSE2_Arithm2 MINSD { asmout, "minsd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

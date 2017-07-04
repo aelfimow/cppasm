@@ -1582,6 +1582,12 @@ extern Instruction_SSE2_Arithm2 MAXSD;
 extern Instruction_SSE2_Arithm1 MINPD;
 extern Instruction_SSE2_Arithm2 MINSD;
 
+// SSE2 logical instructions
+extern Instruction_SSE2_Arithm1 ANDPD;
+extern Instruction_SSE2_Arithm1 ANDNPD;
+extern Instruction_SSE2_Arithm1 ORPD;
+extern Instruction_SSE2_Arithm1 XORPD;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

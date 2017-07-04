@@ -686,6 +686,12 @@ Instruction_SSE2_Arithm2 MAXSD { asmout, "maxsd" };
 Instruction_SSE2_Arithm1 MINPD { asmout, "minpd" };
 Instruction_SSE2_Arithm2 MINSD { asmout, "minsd" };
 
+// SSE2 logical instructions
+Instruction_SSE2_Arithm1 ANDPD { asmout, "andpd" };
+Instruction_SSE2_Arithm1 ANDNPD { asmout, "andnpd" };
+Instruction_SSE2_Arithm1 ORPD { asmout, "orpd" };
+Instruction_SSE2_Arithm1 XORPD { asmout, "xorpd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

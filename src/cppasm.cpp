@@ -692,6 +692,12 @@ Instruction_SSE2_Arithm1 ANDNPD { asmout, "andnpd" };
 Instruction_SSE2_Arithm1 ORPD { asmout, "orpd" };
 Instruction_SSE2_Arithm1 XORPD { asmout, "xorpd" };
 
+// SSE2 comparison instructions
+Instruction_SSE2_Cmp1 CMPPD { asmout, "cmppd" };
+Instruction_SSE2_Cmp2 CMPSD_SSE2 { asmout, "cmpsd" };
+Instruction_SSE2_Cmp3 COMISD { asmout, "comisd" };
+Instruction_SSE2_Cmp3 UCOMISD { asmout, "ucomisd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

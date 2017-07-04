@@ -915,6 +915,25 @@ using Instruction_SSE2_Arithm2 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
+using Instruction_SSE2_Cmp1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE2_Cmp2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
+using Instruction_SSE2_Cmp3 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1587,6 +1606,12 @@ extern Instruction_SSE2_Arithm1 ANDPD;
 extern Instruction_SSE2_Arithm1 ANDNPD;
 extern Instruction_SSE2_Arithm1 ORPD;
 extern Instruction_SSE2_Arithm1 XORPD;
+
+// SSE2 comparison instructions
+extern Instruction_SSE2_Cmp1 CMPPD;
+extern Instruction_SSE2_Cmp2 CMPSD_SSE2;
+extern Instruction_SSE2_Cmp3 COMISD;
+extern Instruction_SSE2_Cmp3 UCOMISD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

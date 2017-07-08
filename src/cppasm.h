@@ -933,6 +933,17 @@ using Instruction_SSE2_Cmp3 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
+using Instruction_SHUFPD = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_UNPCKxPD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
 
 extern asmstream asmout;
 
@@ -1612,6 +1623,11 @@ extern Instruction_SSE2_Cmp1 CMPPD;
 extern Instruction_SSE2_Cmp2 CMPSD_SSE2;
 extern Instruction_SSE2_Cmp3 COMISD;
 extern Instruction_SSE2_Cmp3 UCOMISD;
+
+// SSE2 shuffle and unpack instructions
+extern Instruction_SHUFPD SHUFPD;
+extern Instruction_UNPCKxPD UNPCKHPD;
+extern Instruction_UNPCKxPD UNPCKLPD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -698,6 +698,11 @@ Instruction_SSE2_Cmp2 CMPSD_SSE2 { asmout, "cmpsd" };
 Instruction_SSE2_Cmp3 COMISD { asmout, "comisd" };
 Instruction_SSE2_Cmp3 UCOMISD { asmout, "ucomisd" };
 
+// SSE2 shuffle and unpack instructions
+Instruction_SHUFPD SHUFPD { asmout, "shufpd" };
+Instruction_UNPCKxPD UNPCKHPD { asmout, "unpckhpd" };
+Instruction_UNPCKxPD UNPCKLPD { asmout, "unpcklpd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

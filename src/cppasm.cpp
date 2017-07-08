@@ -703,6 +703,21 @@ Instruction_SHUFPD SHUFPD { asmout, "shufpd" };
 Instruction_UNPCKxPD UNPCKHPD { asmout, "unpckhpd" };
 Instruction_UNPCKxPD UNPCKLPD { asmout, "unpcklpd" };
 
+// SSE2 convertion instructions
+Instruction_CVTPD2PI CVTPD2PI { asmout, "cvtpd2pi" };
+Instruction_CVTPD2PI CVTTPD2PI { asmout, "cvttpd2pi" };
+Instruction_CVTPI2PD CVTPI2PD { asmout, "cvtpi2pd" };
+Instruction_CVTPD2DQ CVTPD2DQ { asmout, "cvtpd2dq" };
+Instruction_CVTPD2DQ CVTTPD2DQ { asmout, "cvttpd2dq" };
+Instruction_CVTDQ2PD CVTDQ2PD { asmout, "cvtdq2pd" };
+Instruction_CVTPS2PD CVTPS2PD { asmout, "cvtps2pd" };
+Instruction_CVTPD2PS CVTPD2PS { asmout, "cvtpd2ps" };
+Instruction_CVTSS2SD CVTSS2SD { asmout, "cvtss2sd" };
+Instruction_CVTSD2SS CVTSD2SS { asmout, "cvtsd2ss" };
+Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
+Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
+Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

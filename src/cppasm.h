@@ -945,6 +945,70 @@ using Instruction_UNPCKxPD = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_CVTPD2PI = Instruction_2
+<
+    Operands_reg_reg<mm, xmm, no_suffix>,
+    Operands_reg_mem<mm, m128, no_suffix>
+>;
+
+using Instruction_CVTPI2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, mm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPD2DQ = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTDQ2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPS2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPD2PS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTSS2SD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_CVTSD2SS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTSD2SI = Instruction_4
+<
+    Operands_reg_reg<r32, xmm, no_suffix>,
+    Operands_reg_mem<r32, m64, no_suffix>,
+    Operands_reg_reg<r64, xmm, no_suffix>,
+    Operands_reg_mem<r64, m64, no_suffix>
+>;
+
+using Instruction_CVTSI2SD = Instruction_4
+<
+    Operands_reg_reg<xmm, r32, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>,
+    Operands_reg_reg<xmm, r64, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1628,6 +1692,21 @@ extern Instruction_SSE2_Cmp3 UCOMISD;
 extern Instruction_SHUFPD SHUFPD;
 extern Instruction_UNPCKxPD UNPCKHPD;
 extern Instruction_UNPCKxPD UNPCKLPD;
+
+// SSE2 convertion instructions
+extern Instruction_CVTPD2PI CVTPD2PI;
+extern Instruction_CVTPD2PI CVTTPD2PI;
+extern Instruction_CVTPI2PD CVTPI2PD;
+extern Instruction_CVTPD2DQ CVTPD2DQ;
+extern Instruction_CVTPD2DQ CVTTPD2DQ;
+extern Instruction_CVTDQ2PD CVTDQ2PD;
+extern Instruction_CVTPS2PD CVTPS2PD;
+extern Instruction_CVTPD2PS CVTPD2PS;
+extern Instruction_CVTSS2SD CVTSS2SD;
+extern Instruction_CVTSD2SS CVTSD2SS;
+extern Instruction_CVTSD2SI CVTSD2SI;
+extern Instruction_CVTSD2SI CVTTSD2SI;
+extern Instruction_CVTSI2SD CVTSI2SD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

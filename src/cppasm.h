@@ -1009,6 +1009,22 @@ using Instruction_CVTSI2SD = Instruction_4
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
+using Instruction_MASKMOVDQU = Instruction_1
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>
+>;
+
+using Instruction_MOVNTPx = Instruction_1
+<
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVNTI = Instruction_2
+<
+    Operands_mem_reg<m32, r32, no_suffix>,
+    Operands_mem_reg<m64, r64, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1707,6 +1723,16 @@ extern Instruction_CVTSD2SS CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
 extern Instruction_CVTSD2SI CVTTSD2SI;
 extern Instruction_CVTSI2SD CVTSI2SD;
+
+// SSE2 cacheability control and ordering instructions
+extern Instruction_MemOnly CLFLUSH;
+extern Instruction_NoOperands LFENCE;
+extern Instruction_NoOperands MFENCE;
+extern Instruction_NoOperands PAUSE;
+extern Instruction_MASKMOVDQU MASKMOVDQU;
+extern Instruction_MOVNTPx MOVNTPD;
+extern Instruction_MOVNTPx MOVNTDQ;
+extern Instruction_MOVNTI MOVNTI;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

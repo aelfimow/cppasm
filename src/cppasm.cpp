@@ -718,6 +718,15 @@ Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
 Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
 Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
 
+// SSE2 cacheability control and ordering instructions
+Instruction_NoOperands LFENCE { asmout, "lfence" };
+Instruction_NoOperands MFENCE { asmout, "mfence" };
+Instruction_NoOperands PAUSE { asmout, "pause" };
+Instruction_MASKMOVDQU MASKMOVDQU { asmout, "maskmovdqu" };
+Instruction_MOVNTPx MOVNTPD { asmout, "movntpd" };
+Instruction_MOVNTPx MOVNTDQ { asmout, "movntdq" };
+Instruction_MOVNTI MOVNTI { asmout, "movnti" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

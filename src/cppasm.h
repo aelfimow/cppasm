@@ -1025,6 +1025,18 @@ using Instruction_MOVNTI = Instruction_2
     Operands_mem_reg<m64, r64, no_suffix>
 >;
 
+using Instruction_CVTDQ2PS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTPS2DQ = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1723,6 +1735,11 @@ extern Instruction_CVTSD2SS CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
 extern Instruction_CVTSD2SI CVTTSD2SI;
 extern Instruction_CVTSI2SD CVTSI2SD;
+
+// SSE2 packed single-precision floating point values
+extern Instruction_CVTDQ2PS CVTDQ2PS;
+extern Instruction_CVTPS2DQ CVTPS2DQ;
+extern Instruction_CVTPS2DQ CVTTPS2DQ;
 
 // SSE2 cacheability control and ordering instructions
 extern Instruction_MemOnly CLFLUSH;

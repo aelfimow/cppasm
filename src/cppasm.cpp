@@ -718,6 +718,11 @@ Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
 Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
 Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
 
+// SSE2 packed single-precision floating point values
+Instruction_CVTDQ2PS CVTDQ2PS { asmout, "cvtdq2ps" };
+Instruction_CVTPS2DQ CVTPS2DQ { asmout, "cvtps2dq" };
+Instruction_CVTPS2DQ CVTTPS2DQ { asmout, "cvttps2dq" };
+
 // SSE2 cacheability control and ordering instructions
 Instruction_NoOperands LFENCE { asmout, "lfence" };
 Instruction_NoOperands MFENCE { asmout, "mfence" };

@@ -1087,6 +1087,18 @@ using Instruction_SSE2_Int_Unpack = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_FISTTP = Instruction_3
+<
+    Operands_mem<m16, suffix_m16int>,
+    Operands_mem<m32, suffix_m32int>,
+    Operands_mem<m64, suffix_m64int>
+>;
+
+using Instruction_LDDQU = Instruction_1
+<
+    Operands_reg_mem<xmm, m, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1816,6 +1828,12 @@ extern Instruction_MASKMOVDQU MASKMOVDQU;
 extern Instruction_MOVNTPx MOVNTPD;
 extern Instruction_MOVNTPx MOVNTDQ;
 extern Instruction_MOVNTI MOVNTI;
+
+// SSE3 x87-FP integer convertion instruction
+extern Instruction_FISTTP FISTTP;
+
+// SSE3 specialized 128-bit unaligned data load instruction
+extern Instruction_LDDQU LDDQU;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

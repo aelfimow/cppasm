@@ -748,6 +748,12 @@ Instruction_MOVNTPx MOVNTPD { asmout, "movntpd" };
 Instruction_MOVNTPx MOVNTDQ { asmout, "movntdq" };
 Instruction_MOVNTI MOVNTI { asmout, "movnti" };
 
+// SSE3 x87-FP integer convertion instruction
+Instruction_FISTTP FISTTP { asmout, "fisttp" };
+
+// SSE3 specialized 128-bit unaligned data load instruction
+Instruction_LDDQU LDDQU { asmout, "lddqu" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -723,6 +723,22 @@ Instruction_CVTDQ2PS CVTDQ2PS { asmout, "cvtdq2ps" };
 Instruction_CVTPS2DQ CVTPS2DQ { asmout, "cvtps2dq" };
 Instruction_CVTPS2DQ CVTTPS2DQ { asmout, "cvttps2dq" };
 
+// SSE2 128-bit SIMD integer instructions
+Instruction_MOVDQx MOVDQA { asmout, "movdqa" };
+Instruction_MOVDQx MOVDQU { asmout, "movdqu" };
+Instruction_MOVQ2DQ MOVQ2DQ { asmout, "movq2dq" };
+Instruction_MOVDQ2Q MOVDQ2Q { asmout, "movdq2q" };
+Instruction_PMULUDQ PMULUDQ { asmout, "pmuludq" };
+Instruction_SSE2_Int_Arithm1 PADDQ { asmout, "paddq" };
+Instruction_SSE2_Int_Arithm1 PSUBQ { asmout, "psubq" };
+Instruction_SSE2_Int_Shuffle PSHUFLW { asmout, "pshuflw" };
+Instruction_SSE2_Int_Shuffle PSHUFHW { asmout, "pshufhw" };
+Instruction_SSE2_Int_Shuffle PSHUFD { asmout, "pshufd" };
+Instruction_SSE2_Int_Shift PSLLDQ { asmout, "pslldq" };
+Instruction_SSE2_Int_Shift PSRLDQ { asmout, "psrldq" };
+Instruction_SSE2_Int_Unpack PUNPCKHQDQ { asmout, "punpckhqdq" };
+Instruction_SSE2_Int_Unpack PUNPCKLQDQ { asmout, "punpcklqdq" };
+
 // SSE2 cacheability control and ordering instructions
 Instruction_NoOperands LFENCE { asmout, "lfence" };
 Instruction_NoOperands MFENCE { asmout, "mfence" };

@@ -1037,6 +1037,56 @@ using Instruction_CVTPS2DQ = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_MOVDQx = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVQ2DQ = Instruction_1
+<
+    Operands_reg_reg<xmm, mm, no_suffix>
+>;
+
+using Instruction_MOVDQ2Q = Instruction_1
+<
+    Operands_reg_reg<mm, xmm, no_suffix>
+>;
+
+using Instruction_PMULUDQ = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE2_Int_Arithm1 = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE2_Int_Shuffle = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE2_Int_Shift = Instruction_1
+<
+    Operands_reg_imm<xmm, imm8>
+>;
+
+using Instruction_SSE2_Int_Unpack = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1740,6 +1790,22 @@ extern Instruction_CVTSI2SD CVTSI2SD;
 extern Instruction_CVTDQ2PS CVTDQ2PS;
 extern Instruction_CVTPS2DQ CVTPS2DQ;
 extern Instruction_CVTPS2DQ CVTTPS2DQ;
+
+// SSE2 128-bit SIMD integer instructions
+extern Instruction_MOVDQx MOVDQA;
+extern Instruction_MOVDQx MOVDQU;
+extern Instruction_MOVQ2DQ MOVQ2DQ;
+extern Instruction_MOVDQ2Q MOVDQ2Q;
+extern Instruction_PMULUDQ PMULUDQ;
+extern Instruction_SSE2_Int_Arithm1 PADDQ;
+extern Instruction_SSE2_Int_Arithm1 PSUBQ;
+extern Instruction_SSE2_Int_Shuffle PSHUFLW;
+extern Instruction_SSE2_Int_Shuffle PSHUFHW;
+extern Instruction_SSE2_Int_Shuffle PSHUFD;
+extern Instruction_SSE2_Int_Shift PSLLDQ;
+extern Instruction_SSE2_Int_Shift PSRLDQ;
+extern Instruction_SSE2_Int_Unpack PUNPCKHQDQ;
+extern Instruction_SSE2_Int_Unpack PUNPCKLQDQ;
 
 // SSE2 cacheability control and ordering instructions
 extern Instruction_MemOnly CLFLUSH;

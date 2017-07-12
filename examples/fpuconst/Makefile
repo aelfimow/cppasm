@@ -3,7 +3,7 @@ CXXFLAGS += -Wall
 CXXFLAGS += -Wextra
 CXXFLAGS += -pedantic
 CXXFLAGS += -Weffc++
-CXXFLAGS += -std=c++11
+CXXFLAGS += -std=c++17
 
 ASFLAGS64  = --64
 ASFLAGS64 += -march=corei7

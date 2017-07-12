@@ -3,7 +3,7 @@ CXXFLAGS += -Wall
 CXXFLAGS += -Wextra
 CXXFLAGS += -pedantic
 CXXFLAGS += -Weffc++
-CXXFLAGS += -std=c++11
+CXXFLAGS += -std=c++17
 
 OBJDIR = ./obj
 

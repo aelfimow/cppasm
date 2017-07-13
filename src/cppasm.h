@@ -1860,7 +1860,7 @@ extern Instruction_SSE3_Arithm1 HSUBPD;
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
 extern Instruction_SSE3_Arithm1 MOVSHDUP;
 extern Instruction_SSE3_Arithm1 MOVSLDUP;
-extern Instruction_SSE3_Arithm2 MOVSDDUP;
+extern Instruction_SSE3_Arithm2 MOVDDUP;
 
 // SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;

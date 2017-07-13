@@ -767,7 +767,7 @@ Instruction_SSE3_Arithm1 HSUBPD { asmout, "hsubpd" };
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
 Instruction_SSE3_Arithm1 MOVSHDUP { asmout, "movshdup" };
 Instruction_SSE3_Arithm1 MOVSLDUP { asmout, "movsldup" };
-Instruction_SSE3_Arithm2 MOVSDDUP { asmout, "movsddup" };
+Instruction_SSE3_Arithm2 MOVDDUP { asmout, "movddup" };
 
 // SSE3 agent synchronization instructions
 Instruction_NoOperands MONITOR { asmout, "monitor" };

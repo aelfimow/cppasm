@@ -128,8 +128,6 @@ try
         MOV(R15, value);
     }
 
-    MONITOR();
-
     {
         imm8 value { 0x11 };
         m8 mem { EAX, EBX };
@@ -285,6 +283,69 @@ try
         REPNZ(); STOSD();
         REPNZ(); STOSQ();
     }
+
+    // SSE3 x87-FP integer convertion instruction
+    {
+        m16 addr1 { RAX };
+        m32 addr2 { RBX };
+        m64 addr3 { RCX };
+
+        FISTTP(addr1);
+        FISTTP(addr2);
+        FISTTP(addr3);
+    }
+
+    // SSE3 specialized 128-bit unaligned data load instruction
+    {
+        m128 addr1 { RAX };
+
+        LDDQU(XMM0, addr1);
+    }
+
+    // SSE3 SIMD floating-point packed ADD/SUB instructions
+    {
+        m128 addr1 { RAX };
+
+        ADDSUBPS(XMM0, XMM1);
+        ADDSUBPD(XMM0, XMM1);
+
+        ADDSUBPS(XMM0, addr1);
+        ADDSUBPD(XMM0, addr1);
+    }
+
+    // SSE3 SIMD floating-point horizontal ADD/SUB instructions
+    {
+        m128 addr1 { RAX };
+
+        HADDPS(XMM0, XMM1);
+        HSUBPS(XMM0, XMM1);
+        HADDPD(XMM0, XMM1);
+        HSUBPD(XMM0, XMM1);
+
+        HADDPS(XMM0, addr1);
+        HSUBPS(XMM0, addr1);
+        HADDPD(XMM0, addr1);
+        HSUBPD(XMM0, addr1);
+    }
+
+    // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
+    {
+        m128 addr1 { RAX };
+        m64 addr2 { RAX };
+
+        MOVSHDUP(XMM0, XMM1);
+        MOVSHDUP(XMM0, addr1);
+
+        MOVSLDUP(XMM0, XMM1);
+        MOVSLDUP(XMM0, addr1);
+
+        MOVDDUP(XMM0, XMM1);
+        MOVDDUP(XMM0, addr2);
+    }
+
+    // SSE3 agent synchronization instructions
+    MONITOR();
+    MWAIT();
 
     return EXIT_SUCCESS;
 }

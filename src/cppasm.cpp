@@ -764,6 +764,11 @@ Instruction_SSE3_Arithm1 HSUBPS { asmout, "hsubps" };
 Instruction_SSE3_Arithm1 HADDPD { asmout, "haddpd" };
 Instruction_SSE3_Arithm1 HSUBPD { asmout, "hsubpd" };
 
+// SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
+Instruction_SSE3_Arithm1 MOVSHDUP { asmout, "movshdup" };
+Instruction_SSE3_Arithm1 MOVSLDUP { asmout, "movsldup" };
+Instruction_SSE3_Arithm2 MOVSDDUP { asmout, "movsddup" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

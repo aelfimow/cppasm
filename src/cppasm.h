@@ -1105,6 +1105,12 @@ using Instruction_SSE3_Arithm1 = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_SSE3_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1850,6 +1856,11 @@ extern Instruction_SSE3_Arithm1 HADDPS;
 extern Instruction_SSE3_Arithm1 HSUBPS;
 extern Instruction_SSE3_Arithm1 HADDPD;
 extern Instruction_SSE3_Arithm1 HSUBPD;
+
+// SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
+extern Instruction_SSE3_Arithm1 MOVSHDUP;
+extern Instruction_SSE3_Arithm1 MOVSLDUP;
+extern Instruction_SSE3_Arithm2 MOVSDDUP;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

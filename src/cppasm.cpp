@@ -769,6 +769,10 @@ Instruction_SSE3_Arithm1 MOVSHDUP { asmout, "movshdup" };
 Instruction_SSE3_Arithm1 MOVSLDUP { asmout, "movsldup" };
 Instruction_SSE3_Arithm2 MOVSDDUP { asmout, "movsddup" };
 
+// SSE3 agent synchronization instructions
+Instruction_NoOperands MONITOR { asmout, "monitor" };
+Instruction_NoOperands MWAIT { asmout, "mwait" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };
@@ -803,10 +807,6 @@ Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
 Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };
 Instruction_FSGSBASE WRFSBASE { asmout, "wrfsbase" };
 Instruction_FSGSBASE WRGSBASE { asmout, "wrgsbase" };
-
-// SSE3 agent synchronization instructions
-Instruction_NoOperands MONITOR { asmout, "monitor" };
-Instruction_NoOperands MWAIT { asmout, "mwait" };
 
 // 64-bit mode instructions
 Instruction_NoOperands SYSCALL { asmout, "syscall" };

@@ -1862,6 +1862,10 @@ extern Instruction_SSE3_Arithm1 MOVSHDUP;
 extern Instruction_SSE3_Arithm1 MOVSLDUP;
 extern Instruction_SSE3_Arithm2 MOVSDDUP;
 
+// SSE3 agent synchronization instructions
+extern Instruction_NoOperands MONITOR;
+extern Instruction_NoOperands MWAIT;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;
@@ -1896,10 +1900,6 @@ extern Instruction_FSGSBASE RDFSBASE;
 extern Instruction_FSGSBASE RDGSBASE;
 extern Instruction_FSGSBASE WRFSBASE;
 extern Instruction_FSGSBASE WRGSBASE;
-
-// SSE3 agent synchronization instructions
-extern Instruction_NoOperands MONITOR;
-extern Instruction_NoOperands MWAIT;
 
 // 64-bit mode instructions
 extern Instruction_NoOperands SYSCALL;

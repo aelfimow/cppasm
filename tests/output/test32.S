@@ -1,0 +1,130 @@
+.section .text
+	mov $0xAA, %al
+	mov $0xAA, %ah
+	mov $0xAA, %bl
+	mov $0xAA, %bh
+	mov $0xAA, %cl
+	mov $0xAA, %ch
+	mov $0xAA, %dl
+	mov $0xAA, %dh
+	mov $0x1122, %ax
+	mov $0x1122, %bx
+	mov $0x1122, %cx
+	mov $0x1122, %dx
+	mov $0x1122, %bp
+	mov $0x1122, %si
+	mov $0x1122, %di
+	mov $0x1122, %sp
+	mov %ax, %cs
+	mov %ax, %ds
+	mov %ax, %ss
+	mov %ax, %es
+	mov %ax, %fs
+	mov %ax, %gs
+	mov $0x11223344, %eax
+	mov $0x11223344, %ebx
+	mov $0x11223344, %ecx
+	mov $0x11223344, %edx
+	mov $0x11223344, %ebp
+	mov $0x11223344, %esi
+	mov $0x11223344, %edi
+	mov $0x11223344, %esp
+	mov %eax, %cr0
+	mov %eax, %cr1
+	mov %eax, %cr2
+	mov %eax, %cr3
+	mov %eax, %cr4
+	mov %eax, %cr5
+	mov %eax, %cr6
+	mov %eax, %cr7
+	mov %eax, %cr8
+	mov %eax, %dr0
+	mov %eax, %dr1
+	mov %eax, %dr2
+	mov %eax, %dr3
+	mov %eax, %dr4
+	mov %eax, %dr5
+	mov %eax, %dr6
+	mov %eax, %dr7
+	aaa
+	aad
+	aad $0x08
+	aam
+	aam $0x08
+	aas
+	monitor
+	rep movsb
+	rep movsw
+	rep movsl
+	rep cmpsb
+	rep cmpsw
+	rep cmpsl
+	rep scasb
+	rep scasw
+	rep scasl
+	rep lodsb
+	rep lodsw
+	rep lodsl
+	rep stosb
+	rep stosw
+	rep stosl
+	repz movsb
+	repz movsw
+	repz movsl
+	repz cmpsb
+	repz cmpsw
+	repz cmpsl
+	repz scasb
+	repz scasw
+	repz scasl
+	repz lodsb
+	repz lodsw
+	repz lodsl
+	repz stosb
+	repz stosw
+	repz stosl
+	repe movsb
+	repe movsw
+	repe movsl
+	repe cmpsb
+	repe cmpsw
+	repe cmpsl
+	repe scasb
+	repe scasw
+	repe scasl
+	repe lodsb
+	repe lodsw
+	repe lodsl
+	repe stosb
+	repe stosw
+	repe stosl
+	repnz movsb
+	repnz movsw
+	repnz movsl
+	repnz cmpsb
+	repnz cmpsw
+	repnz cmpsl
+	repnz scasb
+	repnz scasw
+	repnz scasl
+	repnz lodsb
+	repnz lodsw
+	repnz lodsl
+	repnz stosb
+	repnz stosw
+	repnz stosl
+	repne movsb
+	repne movsw
+	repne movsl
+	repne cmpsb
+	repne cmpsw
+	repne cmpsl
+	repne scasb
+	repne scasw
+	repne scasl
+	repne lodsb
+	repne lodsw
+	repne lodsl
+	repne stosb
+	repne stosw
+	repne stosl

@@ -1845,6 +1845,12 @@ extern Instruction_LDDQU LDDQU;
 extern Instruction_SSE3_Arithm1 ADDSUBPS;
 extern Instruction_SSE3_Arithm1 ADDSUBPD;
 
+// SSE3 SIMD floating-point horizontal ADD/SUB instructions
+extern Instruction_SSE3_Arithm1 HADDPS;
+extern Instruction_SSE3_Arithm1 HSUBPS;
+extern Instruction_SSE3_Arithm1 HADDPD;
+extern Instruction_SSE3_Arithm1 HSUBPD;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

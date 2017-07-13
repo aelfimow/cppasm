@@ -758,6 +758,12 @@ Instruction_LDDQU LDDQU { asmout, "lddqu" };
 Instruction_SSE3_Arithm1 ADDSUBPS { asmout, "addsubps" };
 Instruction_SSE3_Arithm1 ADDSUBPD { asmout, "addsubpd" };
 
+// SSE3 SIMD floating-point horizontal ADD/SUB instructions
+Instruction_SSE3_Arithm1 HADDPS { asmout, "haddps" };
+Instruction_SSE3_Arithm1 HSUBPS { asmout, "hsubps" };
+Instruction_SSE3_Arithm1 HADDPD { asmout, "haddpd" };
+Instruction_SSE3_Arithm1 HSUBPD { asmout, "hsubpd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

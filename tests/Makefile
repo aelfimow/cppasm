@@ -20,12 +20,12 @@ all: test32 test64
 test32:
 	$(CXX) -c test32.cpp -o ${OUTDIR}/test32.o -I../src ${CXXFLAGS}
 	$(CXX) ${OUTDIR}/test32.o ${CPPASM_OBJ} -o test32.exe ${CXXFLAGS}
-	.\\test32.exe > ${OUTDIR}/test32.s
-	$(AS) ${OUTDIR}/test32.s ${ASFLAGS32} -o ${OUTDIR}/test32.o
+	test32.exe > ${OUTDIR}/test32.S
+	$(AS) ${OUTDIR}/test32.S ${ASFLAGS32} -o ${OUTDIR}/test32.o
 
 .PHONY: test64
 test64:
 	$(CXX) -c test64.cpp -o ${OUTDIR}/test64.o -I../src ${CXXFLAGS}
 	$(CXX) ${OUTDIR}/test64.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}
-	.\\test64.exe > ${OUTDIR}/test64.s
-	$(AS) ${OUTDIR}/test64.s ${ASFLAGS64} -o ${OUTDIR}/test64.o
+	test64.exe > ${OUTDIR}/test64.S
+	$(AS) ${OUTDIR}/test64.S ${ASFLAGS64} -o ${OUTDIR}/test64.o

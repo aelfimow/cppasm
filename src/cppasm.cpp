@@ -754,6 +754,10 @@ Instruction_FISTTP FISTTP { asmout, "fisttp" };
 // SSE3 specialized 128-bit unaligned data load instruction
 Instruction_LDDQU LDDQU { asmout, "lddqu" };
 
+// SSE3 SIMD floating-point packed ADD/SUB instructions
+Instruction_SSE3_Arithm1 ADDSUBPS { asmout, "addsubps" };
+Instruction_SSE3_Arithm1 ADDSUBPD { asmout, "addsubpd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

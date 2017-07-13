@@ -1099,6 +1099,12 @@ using Instruction_LDDQU = Instruction_1
     Operands_reg_mem<xmm, m, no_suffix>
 >;
 
+using Instruction_SSE3_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1834,6 +1840,10 @@ extern Instruction_FISTTP FISTTP;
 
 // SSE3 specialized 128-bit unaligned data load instruction
 extern Instruction_LDDQU LDDQU;
+
+// SSE3 SIMD floating-point packed ADD/SUB instructions
+extern Instruction_SSE3_Arithm1 ADDSUBPS;
+extern Instruction_SSE3_Arithm1 ADDSUBPD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -1111,6 +1111,14 @@ using Instruction_SSE3_Arithm2 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
+using Instruction_SSSE3_Arithm1 = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1865,6 +1873,14 @@ extern Instruction_SSE3_Arithm2 MOVDDUP;
 // SSE3 agent synchronization instructions
 extern Instruction_NoOperands MONITOR;
 extern Instruction_NoOperands MWAIT;
+
+// SSSE3: horizontal addition/subtraction
+extern Instruction_SSSE3_Arithm1 PHADDW;
+extern Instruction_SSSE3_Arithm1 PHADDSW;
+extern Instruction_SSSE3_Arithm1 PHADDD;
+extern Instruction_SSSE3_Arithm1 PHSUBW;
+extern Instruction_SSSE3_Arithm1 PHSUBSW;
+extern Instruction_SSSE3_Arithm1 PHSUBD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

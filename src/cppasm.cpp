@@ -773,6 +773,14 @@ Instruction_SSE3_Arithm2 MOVDDUP { asmout, "movddup" };
 Instruction_NoOperands MONITOR { asmout, "monitor" };
 Instruction_NoOperands MWAIT { asmout, "mwait" };
 
+// SSSE3: horizontal addition/subtraction
+Instruction_SSSE3_Arithm1 PHADDW { asmout, "phaddw" };
+Instruction_SSSE3_Arithm1 PHADDSW { asmout, "phaddsw" };
+Instruction_SSSE3_Arithm1 PHADDD { asmout, "phaddd" };
+Instruction_SSSE3_Arithm1 PHSUBW { asmout, "phsubw" };
+Instruction_SSSE3_Arithm1 PHSUBSW { asmout, "phsubsw" };
+Instruction_SSSE3_Arithm1 PHSUBD { asmout, "phsubd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

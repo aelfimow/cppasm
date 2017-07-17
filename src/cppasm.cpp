@@ -781,6 +781,11 @@ Instruction_SSSE3_Arithm1 PHSUBW { asmout, "phsubw" };
 Instruction_SSSE3_Arithm1 PHSUBSW { asmout, "phsubsw" };
 Instruction_SSSE3_Arithm1 PHSUBD { asmout, "phsubd" };
 
+// SSSE3: packed absolute values
+Instruction_SSSE3_Arithm1 PABSB { asmout, "pabsb" };
+Instruction_SSSE3_Arithm1 PABSW { asmout, "pabsw" };
+Instruction_SSSE3_Arithm1 PABSD { asmout, "pabsd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -1882,6 +1882,11 @@ extern Instruction_SSSE3_Arithm1 PHSUBW;
 extern Instruction_SSSE3_Arithm1 PHSUBSW;
 extern Instruction_SSSE3_Arithm1 PHSUBD;
 
+// SSSE3: packed absolute values
+extern Instruction_SSSE3_Arithm1 PABSB;
+extern Instruction_SSSE3_Arithm1 PABSW;
+extern Instruction_SSSE3_Arithm1 PABSD;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

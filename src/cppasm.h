@@ -1887,6 +1887,9 @@ extern Instruction_SSSE3_Arithm1 PABSB;
 extern Instruction_SSSE3_Arithm1 PABSW;
 extern Instruction_SSSE3_Arithm1 PABSD;
 
+// SSSE3: multiply and add packed signed and unsigned bytes
+extern Instruction_SSSE3_Arithm1 PMADDUBSW;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

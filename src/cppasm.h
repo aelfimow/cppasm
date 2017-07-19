@@ -1890,6 +1890,9 @@ extern Instruction_SSSE3_Arithm1 PABSD;
 // SSSE3: multiply and add packed signed and unsigned bytes
 extern Instruction_SSSE3_Arithm1 PMADDUBSW;
 
+// SSSE3: packed multiply high with round and scale
+extern Instruction_SSSE3_Arithm1 PMULHRSW;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

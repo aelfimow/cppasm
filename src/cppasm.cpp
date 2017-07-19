@@ -789,6 +789,9 @@ Instruction_SSSE3_Arithm1 PABSD { asmout, "pabsd" };
 // SSSE3: multiply and add packed signed and unsigned bytes
 Instruction_SSSE3_Arithm1 PMADDUBSW { asmout, "pmaddubsw" };
 
+// SSSE3: packed multiply high with round and scale
+Instruction_SSSE3_Arithm1 PMULHRSW { asmout, "pmulhrsw" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

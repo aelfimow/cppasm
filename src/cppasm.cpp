@@ -792,6 +792,9 @@ Instruction_SSSE3_Arithm1 PMADDUBSW { asmout, "pmaddubsw" };
 // SSSE3: packed multiply high with round and scale
 Instruction_SSSE3_Arithm1 PMULHRSW { asmout, "pmulhrsw" };
 
+// SSSE3: packed shuffle bytes
+Instruction_SSSE3_Arithm1 PSHUFB { asmout, "pshufb" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -795,6 +795,11 @@ Instruction_SSSE3_Arithm1 PMULHRSW { asmout, "pmulhrsw" };
 // SSSE3: packed shuffle bytes
 Instruction_SSSE3_Arithm1 PSHUFB { asmout, "pshufb" };
 
+// SSSE3: packed sign
+Instruction_SSSE3_Arithm1 PSIGNB { asmout, "psignb" };
+Instruction_SSSE3_Arithm1 PSIGNW { asmout, "psignw" };
+Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

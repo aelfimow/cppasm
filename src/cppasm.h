@@ -1896,6 +1896,11 @@ extern Instruction_SSSE3_Arithm1 PMULHRSW;
 // SSSE3: packed shuffle bytes
 extern Instruction_SSSE3_Arithm1 PSHUFB;
 
+// SSSE3: packed sign
+extern Instruction_SSSE3_Arithm1 PSIGNB;
+extern Instruction_SSSE3_Arithm1 PSIGNW;
+extern Instruction_SSSE3_Arithm1 PSIGND;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

@@ -1119,6 +1119,14 @@ using Instruction_SSSE3_Arithm1 = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_SSSE3_Arithm2 = Instruction_4
+<
+    Operands_reg_reg_imm<mm, mm, imm8>,
+    Operands_reg_mem_imm<mm, m64, imm8>,
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1900,6 +1908,9 @@ extern Instruction_SSSE3_Arithm1 PSHUFB;
 extern Instruction_SSSE3_Arithm1 PSIGNB;
 extern Instruction_SSSE3_Arithm1 PSIGNW;
 extern Instruction_SSSE3_Arithm1 PSIGND;
+
+// SSSE3: packed align right
+extern Instruction_SSSE3_Arithm2 PALIGNR;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

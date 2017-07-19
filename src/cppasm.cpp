@@ -800,6 +800,9 @@ Instruction_SSSE3_Arithm1 PSIGNB { asmout, "psignb" };
 Instruction_SSSE3_Arithm1 PSIGNW { asmout, "psignw" };
 Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
 
+// SSSE3: packed align right
+Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

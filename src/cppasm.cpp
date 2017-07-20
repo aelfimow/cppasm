@@ -807,6 +807,10 @@ Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
 Instruction_SSE4_1_Arithm1 PMULLD { asmout, "pmulld" };
 Instruction_SSE4_1_Arithm1 PMULDQ { asmout, "pmuldq" };
 
+// SSE4.1: floating-point dot product instructions
+Instruction_SSE4_1_Arithm2 DPPD { asmout, "dppd" };
+Instruction_SSE4_1_Arithm2 DPPS { asmout, "dpps" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

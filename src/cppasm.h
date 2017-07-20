@@ -1133,6 +1133,12 @@ using Instruction_SSE4_1_Arithm1 = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_SSE4_1_Arithm2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1921,6 +1927,10 @@ extern Instruction_SSSE3_Arithm2 PALIGNR;
 // SSE4.1: dword multiply instructions
 extern Instruction_SSE4_1_Arithm1 PMULLD;
 extern Instruction_SSE4_1_Arithm1 PMULDQ;
+
+// SSE4.1: floating-point dot product instructions
+extern Instruction_SSE4_1_Arithm2 DPPD;
+extern Instruction_SSE4_1_Arithm2 DPPS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -803,6 +803,10 @@ Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
 // SSSE3: packed align right
 Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
 
+// SSE4.1: dword multiply instructions
+Instruction_SSE4_1_Arithm1 PMULLD { asmout, "pmulld" };
+Instruction_SSE4_1_Arithm1 PMULDQ { asmout, "pmuldq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

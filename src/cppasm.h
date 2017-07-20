@@ -1127,6 +1127,12 @@ using Instruction_SSSE3_Arithm2 = Instruction_4
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
+using Instruction_SSE4_1_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1911,6 +1917,10 @@ extern Instruction_SSSE3_Arithm1 PSIGND;
 
 // SSSE3: packed align right
 extern Instruction_SSSE3_Arithm2 PALIGNR;
+
+// SSE4.1: dword multiply instructions
+extern Instruction_SSE4_1_Arithm1 PMULLD;
+extern Instruction_SSE4_1_Arithm1 PMULDQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

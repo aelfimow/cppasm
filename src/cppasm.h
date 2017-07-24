@@ -819,12 +819,6 @@ using Instruction_PMxxUB = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_PMAXUW = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
 using Instruction_PMxxSW = Instruction_4
 <
     Operands_reg_reg<mm, mm, no_suffix>,
@@ -1774,7 +1768,6 @@ extern Instruction_PAVGx PAVGW;
 extern Instruction_PEXTRW PEXTRW;
 extern Instruction_PINSRW PINSRW;
 extern Instruction_PMxxUB PMAXUB;
-extern Instruction_PMAXUW PMAXUW;
 extern Instruction_PMxxSW PMAXSW;
 extern Instruction_PMxxUB PMINUB;
 extern Instruction_PMxxSW PMINSW;
@@ -1955,6 +1948,16 @@ extern Instruction_SSE4_1_Arithm3 BLENDVPD;
 extern Instruction_SSE4_1_Arithm3 BLENDVPS;
 extern Instruction_SSE4_1_Arithm3 PBLENDVB;
 extern Instruction_SSE4_1_Arithm2 PBLENDW;
+
+// SSE4.1: packed integer MIN/MAX instructions
+extern Instruction_SSE4_1_Arithm1 PMINUW;
+extern Instruction_SSE4_1_Arithm1 PMINUD;
+extern Instruction_SSE4_1_Arithm1 PMINSB;
+extern Instruction_SSE4_1_Arithm1 PMINSD;
+extern Instruction_SSE4_1_Arithm1 PMAXUW;
+extern Instruction_SSE4_1_Arithm1 PMAXUD;
+extern Instruction_SSE4_1_Arithm1 PMAXSB;
+extern Instruction_SSE4_1_Arithm1 PMAXSD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

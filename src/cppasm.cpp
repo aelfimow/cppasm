@@ -641,7 +641,6 @@ Instruction_PAVGx PAVGW { asmout, "pavgw" };
 Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
 Instruction_PINSRW PINSRW { asmout, "pinsrw" };
 Instruction_PMxxUB PMAXUB { asmout, "pmaxub" };
-Instruction_PMAXUW PMAXUW { asmout, "pmaxuw" };
 Instruction_PMxxSW PMAXSW { asmout, "pmaxsw" };
 Instruction_PMxxUB PMINUB { asmout, "pminub" };
 Instruction_PMxxSW PMINSW { asmout, "pminsw" };
@@ -821,6 +820,16 @@ Instruction_SSE4_1_Arithm3 BLENDVPD { asmout, "blendvpd" };
 Instruction_SSE4_1_Arithm3 BLENDVPS { asmout, "blendvps" };
 Instruction_SSE4_1_Arithm3 PBLENDVB { asmout, "pblendvb" };
 Instruction_SSE4_1_Arithm2 PBLENDW { asmout, "pblendw" };
+
+// SSE4.1: packed integer MIN/MAX instructions
+Instruction_SSE4_1_Arithm1 PMINUW { asmout, "pminuw" };
+Instruction_SSE4_1_Arithm1 PMINUD { asmout, "pminud" };
+Instruction_SSE4_1_Arithm1 PMINSB { asmout, "pminsb" };
+Instruction_SSE4_1_Arithm1 PMINSD { asmout, "pminsd" };
+Instruction_SSE4_1_Arithm1 PMAXUW { asmout, "pmaxuw" };
+Instruction_SSE4_1_Arithm1 PMAXUD { asmout, "pmaxud" };
+Instruction_SSE4_1_Arithm1 PMAXSB { asmout, "pmaxsb" };
+Instruction_SSE4_1_Arithm1 PMAXSD { asmout, "pmaxsd" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

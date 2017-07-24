@@ -1144,6 +1144,14 @@ using Instruction_MOVNTDQA = Instruction_1
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_SSE4_1_Arithm3 = Instruction_4
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_mem_reg<xmm, m128, xmm>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1939,6 +1947,14 @@ extern Instruction_SSE4_1_Arithm2 DPPS;
 
 // SSE4.1: streaming load hint instruction
 extern Instruction_MOVNTDQA MOVNTDQA;
+
+// SSE4.1: packed blending instructions
+extern Instruction_SSE4_1_Arithm2 BLENDPD;
+extern Instruction_SSE4_1_Arithm2 BLENDPS;
+extern Instruction_SSE4_1_Arithm3 BLENDVPD;
+extern Instruction_SSE4_1_Arithm3 BLENDVPS;
+extern Instruction_SSE4_1_Arithm3 PBLENDVB;
+extern Instruction_SSE4_1_Arithm2 PBLENDW;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

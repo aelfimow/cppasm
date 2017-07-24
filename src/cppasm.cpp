@@ -814,6 +814,14 @@ Instruction_SSE4_1_Arithm2 DPPS { asmout, "dpps" };
 // SSE4.1: streaming load hint instruction
 Instruction_MOVNTDQA MOVNTDQA { asmout, "movntdqa" };
 
+// SSE4.1: packed blending instructions
+Instruction_SSE4_1_Arithm2 BLENDPD { asmout, "blendpd" };
+Instruction_SSE4_1_Arithm2 BLENDPS { asmout, "blendps" };
+Instruction_SSE4_1_Arithm3 BLENDVPD { asmout, "blendvpd" };
+Instruction_SSE4_1_Arithm3 BLENDVPS { asmout, "blendvps" };
+Instruction_SSE4_1_Arithm3 PBLENDVB { asmout, "pblendvb" };
+Instruction_SSE4_1_Arithm2 PBLENDW { asmout, "pblendw" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -1139,6 +1139,11 @@ using Instruction_SSE4_1_Arithm2 = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
+using Instruction_MOVNTDQA = Instruction_1
+<
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1931,6 +1936,9 @@ extern Instruction_SSE4_1_Arithm1 PMULDQ;
 // SSE4.1: floating-point dot product instructions
 extern Instruction_SSE4_1_Arithm2 DPPD;
 extern Instruction_SSE4_1_Arithm2 DPPS;
+
+// SSE4.1: streaming load hint instruction
+extern Instruction_MOVNTDQA MOVNTDQA;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

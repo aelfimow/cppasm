@@ -811,6 +811,9 @@ Instruction_SSE4_1_Arithm1 PMULDQ { asmout, "pmuldq" };
 Instruction_SSE4_1_Arithm2 DPPD { asmout, "dppd" };
 Instruction_SSE4_1_Arithm2 DPPS { asmout, "dpps" };
 
+// SSE4.1: streaming load hint instruction
+Instruction_MOVNTDQA MOVNTDQA { asmout, "movntdqa" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

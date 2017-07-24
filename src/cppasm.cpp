@@ -831,6 +831,12 @@ Instruction_SSE4_1_Arithm1 PMAXUD { asmout, "pmaxud" };
 Instruction_SSE4_1_Arithm1 PMAXSB { asmout, "pmaxsb" };
 Instruction_SSE4_1_Arithm1 PMAXSD { asmout, "pmaxsd" };
 
+// SSE4.1: floating-point round instructions with selectable rounding mode
+Instruction_SSE4_1_Arithm2 ROUNDPS { asmout, "roundps" };
+Instruction_SSE4_1_Arithm2 ROUNDPD { asmout, "roundpd" };
+Instruction_SSE4_1_Arithm4 ROUNDSS { asmout, "roundss" };
+Instruction_SSE4_1_Arithm5 ROUNDSD { asmout, "roundsd" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -1146,6 +1146,18 @@ using Instruction_SSE4_1_Arithm3 = Instruction_4
     Operands_reg_mem_reg<xmm, m128, xmm>
 >;
 
+using Instruction_SSE4_1_Arithm4 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm5 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1958,6 +1970,12 @@ extern Instruction_SSE4_1_Arithm1 PMAXUW;
 extern Instruction_SSE4_1_Arithm1 PMAXUD;
 extern Instruction_SSE4_1_Arithm1 PMAXSB;
 extern Instruction_SSE4_1_Arithm1 PMAXSD;
+
+// SSE4.1: floating-point round instructions with selectable rounding mode
+extern Instruction_SSE4_1_Arithm2 ROUNDPS;
+extern Instruction_SSE4_1_Arithm2 ROUNDPD;
+extern Instruction_SSE4_1_Arithm4 ROUNDSS;
+extern Instruction_SSE4_1_Arithm5 ROUNDSD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

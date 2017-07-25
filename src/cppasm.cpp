@@ -837,6 +837,16 @@ Instruction_SSE4_1_Arithm2 ROUNDPD { asmout, "roundpd" };
 Instruction_SSE4_1_Arithm4 ROUNDSS { asmout, "roundss" };
 Instruction_SSE4_1_Arithm5 ROUNDSD { asmout, "roundsd" };
 
+// SSE4.1: insertion and extractions from XMM registers
+Instruction_SSE4_1_Arithm6 EXTRACTPS { asmout, "extractps" };
+Instruction_SSE4_1_Arithm7 INSERTPS { asmout, "insertps" };
+Instruction_SSE4_1_Arithm8 PINSRB { asmout, "pinsrb" };
+Instruction_SSE4_1_Arithm9 PINSRD { asmout, "pinsrd" };
+Instruction_SSE4_1_Arithm10 PINSRQ { asmout, "pinsrq" };
+Instruction_SSE4_1_Arithm11 PEXTRB { asmout, "pextrb" };
+Instruction_SSE4_1_Arithm12 PEXTRD { asmout, "pextrd" };
+Instruction_SSE4_1_Arithm13 PEXTRQ { asmout, "pextrq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

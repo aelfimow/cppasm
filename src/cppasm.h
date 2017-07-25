@@ -1158,6 +1158,58 @@ using Instruction_SSE4_1_Arithm5 = Instruction_2
     Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
+using Instruction_SSE4_1_Arithm6 = Instruction_3
+<
+    Operands_reg_reg_imm<r32, xmm, imm8>,
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m32, xmm, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm7 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm8 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r32, imm8>,
+    Operands_reg_mem_imm<xmm, m8, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm9 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r32, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm10 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r64, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm11 = Instruction_3
+<
+    Operands_reg_reg_imm<r32, xmm, imm8>,
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m8, xmm, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm12 = Instruction_3
+<
+    Operands_reg_reg_imm<r32, xmm, imm8>,
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m32, xmm, imm8>
+>;
+
+using Instruction_SSE4_1_Arithm13 = Instruction_2
+<
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m64, xmm, imm8>
+>;
+
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -1976,6 +2028,16 @@ extern Instruction_SSE4_1_Arithm2 ROUNDPS;
 extern Instruction_SSE4_1_Arithm2 ROUNDPD;
 extern Instruction_SSE4_1_Arithm4 ROUNDSS;
 extern Instruction_SSE4_1_Arithm5 ROUNDSD;
+
+// SSE4.1: insertion and extractions from XMM registers
+extern Instruction_SSE4_1_Arithm6 EXTRACTPS;
+extern Instruction_SSE4_1_Arithm7 INSERTPS;
+extern Instruction_SSE4_1_Arithm8 PINSRB;
+extern Instruction_SSE4_1_Arithm9 PINSRD;
+extern Instruction_SSE4_1_Arithm10 PINSRQ;
+extern Instruction_SSE4_1_Arithm11 PEXTRB;
+extern Instruction_SSE4_1_Arithm12 PEXTRD;
+extern Instruction_SSE4_1_Arithm13 PEXTRQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

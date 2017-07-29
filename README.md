@@ -1,5 +1,6 @@
 # cppasm
-A C++ generator for x86 assembly code.
+This is a C++ generator for x86 assembly code.
+
 Current assembly source code syntax is: `AT&T`.
 
 The idea behind this generator is to encapsulate every instruction and CPU register
@@ -17,6 +18,18 @@ EAX and EBX are global instances of corresponding CPU registers and the output i
 ```assembly
     mov %ebx, %eax
 ```
+
+
+See [examples](https://github.com/aelfimow/cppasm/tree/master/examples) for more examples.
+See [src](https://github.com/aelfimow/cppasm/tree/master/src) for C++ generator source code.
+See [tests](https://github.com/aelfimow/cppasm/tree/master/tests) for some tests.
+
+I am using [mingw-w64](https://mingw-w64.org) to compile the C++ source files and
+assemble generated assembly files.
+
+I am compiling the [tests](https://github.com/aelfimow/cppasm/tree/master/tests) also
+with Visual Studio 2017, see [Visual Studio 2017](https://github.com/aelfimow/cppasm/tree/master/VisualStudio2017)
+for its project files.
 
 This C++ generator does not attempt to convince people to write assembly source code.
 Programmers, who write functions or programs in assembly language,

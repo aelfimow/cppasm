@@ -9,12 +9,12 @@ a 16-bit data word.
 
 All instructions are implemented as function objects, e.g.
 instruction instance of MOV can be used like this:
-```
+```c++
     MOV(EAX, EBX);
 ```
 
 EAX and EBX are global instances of corresponding CPU registers and the output is:
-```
+```assembly
     mov %ebx, %eax
 ```
 

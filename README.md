@@ -14,15 +14,17 @@ instruction instance of MOV can be used like this:
     MOV(EAX, EBX);
 ```
 
-EAX and EBX are global instances of corresponding CPU registers and the output is:
+EAX and EBX are global instances of corresponding CPU registers and the output is
+in `AT&T` syntax:
 ```assembly
     mov %ebx, %eax
 ```
 
+Take a look at the [examples](https://github.com/aelfimow/cppasm/tree/master/examples)
+to see how to use the generator.
 
-See [examples](https://github.com/aelfimow/cppasm/tree/master/examples) for more examples.
-See [src](https://github.com/aelfimow/cppasm/tree/master/src) for C++ generator source code.
-See [tests](https://github.com/aelfimow/cppasm/tree/master/tests) for some tests.
+The generator source code files can be found under [src](https://github.com/aelfimow/cppasm/tree/master/src)
+and some test files under [tests](https://github.com/aelfimow/cppasm/tree/master/tests).
 
 I am using [mingw-w64](https://mingw-w64.org) to compile the C++ source files and
 assemble generated assembly files.
@@ -36,4 +38,8 @@ Programmers, who write functions or programs in assembly language,
 have their reasons for it.
 
 I hope, anyone, a hobby programmer or someone, who is just tired thinking about
-portability of his code all the time, will find this generator helpful :)
+portability of his code all the time, will find this generator helpful :smile:
+
+## Acknowledgments
+Thanks to @MarcelBlanck for taking a look at this repository from time to time
+and giving some hints.

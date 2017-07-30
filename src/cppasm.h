@@ -2077,6 +2077,9 @@ extern Instruction_SSE4_1_Arithm2 MPSADBW;
 // SSE4.1: horizontal search
 extern Instruction_SSE4_1_Arithm2 PHMINPOSUW;
 
+// SSE4.1: packed test
+extern Instruction_SSE4_1_Arithm2 PTEST;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

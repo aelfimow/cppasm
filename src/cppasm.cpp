@@ -867,6 +867,9 @@ Instruction_SSE4_1_Arithm2 MPSADBW { asmout, "mpsadbw" };
 // SSE4.1: horizontal search
 Instruction_SSE4_1_Arithm2 PHMINPOSUW { asmout, "phminposuw" };
 
+// SSE4.1: packed test
+Instruction_SSE4_1_Arithm2 PTEST { asmout, "ptest" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

@@ -873,6 +873,9 @@ Instruction_SSE4_1_Arithm2 PTEST { asmout, "ptest" };
 // SSE4.1: packed qword equality comparison
 Instruction_SSE4_1_Arithm2 PCMPEQQ { asmout, "pcmpeqq" };
 
+// SSE4.1: dword packing with unsigned saturation
+Instruction_SSE4_1_Arithm2 PACKUSDW { asmout, "packusdw" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

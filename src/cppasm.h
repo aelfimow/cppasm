@@ -2074,6 +2074,9 @@ extern Instruction_SSE4_1_Arithm16 PMOVZXBQ;
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
 extern Instruction_SSE4_1_Arithm2 MPSADBW;
 
+// SSE4.1: horizontal search
+extern Instruction_SSE4_1_Arithm2 PHMINPOSUW;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

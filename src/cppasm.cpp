@@ -864,6 +864,9 @@ Instruction_SSE4_1_Arithm16 PMOVZXBQ { asmout, "pmovzxbq" };
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
 Instruction_SSE4_1_Arithm2 MPSADBW { asmout, "mpsadbw" };
 
+// SSE4.1: horizontal search
+Instruction_SSE4_1_Arithm2 PHMINPOSUW { asmout, "phminposuw" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

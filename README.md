@@ -1,4 +1,4 @@
-(cppasm-logo.png)
+[![cppasm logo](cppasm-logo.png)](https://github.com/aelfimow/cppasm/blob/master/cppasm-logo.png)]
 # cppasm
 This is a C++ generator for x86 assembly code.
 

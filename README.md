@@ -38,8 +38,8 @@ Programmers, who write functions or programs in assembly language,
 have their reasons for it.
 
 I hope, anyone, a hobby programmer or someone, who is just tired thinking about
-portability of his code all the time, will find this generator helpful :smile:
+portability of his code all the time, will find this generator helpful :grinning:
 
 ## Acknowledgments
-Thanks to @MarcelBlanck for taking a look at this repository from time to time
-and giving some hints.
+Thanks to [Marcel Blanck](https://github.com/MarcelBlanck) for taking a look at this repository
+from time to time and giving some hints.

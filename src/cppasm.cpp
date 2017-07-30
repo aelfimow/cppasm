@@ -847,6 +847,20 @@ Instruction_SSE4_1_Arithm11 PEXTRB { asmout, "pextrb" };
 Instruction_SSE4_1_Arithm12 PEXTRD { asmout, "pextrd" };
 Instruction_SSE4_1_Arithm13 PEXTRQ { asmout, "pextrq" };
 
+// SSE4.1: packed integer format convertions
+Instruction_SSE4_1_Arithm14 PMOVSXBW { asmout, "pmovsxbw" };
+Instruction_SSE4_1_Arithm14 PMOVSXWD { asmout, "pmovsxwd" };
+Instruction_SSE4_1_Arithm14 PMOVSXDQ { asmout, "pmovsxdq" };
+Instruction_SSE4_1_Arithm15 PMOVSXBD { asmout, "pmovsxbd" };
+Instruction_SSE4_1_Arithm15 PMOVSXWQ { asmout, "pmovsxwq" };
+Instruction_SSE4_1_Arithm16 PMOVSXBQ { asmout, "pmovsxbq" };
+Instruction_SSE4_1_Arithm14 PMOVZXBW { asmout, "pmovzxbw" };
+Instruction_SSE4_1_Arithm14 PMOVZXWD { asmout, "pmovzxwd" };
+Instruction_SSE4_1_Arithm14 PMOVZXDQ { asmout, "pmovzxdq" };
+Instruction_SSE4_1_Arithm15 PMOVZXBD { asmout, "pmovzxbd" };
+Instruction_SSE4_1_Arithm15 PMOVZXWQ { asmout, "pmovzxwq" };
+Instruction_SSE4_1_Arithm16 PMOVZXBQ { asmout, "pmovzxbq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

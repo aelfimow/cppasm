@@ -1209,6 +1209,24 @@ using Instruction_SSE4_1_Arithm13 = Instruction_2
     Operands_mem_reg_imm<m64, xmm, imm8>
 >;
 
+using Instruction_SSE4_1_Arithm14 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SSE4_1_Arithm15 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_SSE4_1_Arithm16 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m16, no_suffix>
+>;
+
 
 extern asmstream asmout;
 
@@ -2038,6 +2056,20 @@ extern Instruction_SSE4_1_Arithm10 PINSRQ;
 extern Instruction_SSE4_1_Arithm11 PEXTRB;
 extern Instruction_SSE4_1_Arithm12 PEXTRD;
 extern Instruction_SSE4_1_Arithm13 PEXTRQ;
+
+// SSE4.1: packed integer format convertions
+extern Instruction_SSE4_1_Arithm14 PMOVSXBW;
+extern Instruction_SSE4_1_Arithm14 PMOVSXWD;
+extern Instruction_SSE4_1_Arithm14 PMOVSXDQ;
+extern Instruction_SSE4_1_Arithm15 PMOVSXBD;
+extern Instruction_SSE4_1_Arithm15 PMOVSXWQ;
+extern Instruction_SSE4_1_Arithm16 PMOVSXBQ;
+extern Instruction_SSE4_1_Arithm14 PMOVZXBW;
+extern Instruction_SSE4_1_Arithm14 PMOVZXWD;
+extern Instruction_SSE4_1_Arithm14 PMOVZXDQ;
+extern Instruction_SSE4_1_Arithm15 PMOVZXBD;
+extern Instruction_SSE4_1_Arithm15 PMOVZXWQ;
+extern Instruction_SSE4_1_Arithm16 PMOVZXBQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

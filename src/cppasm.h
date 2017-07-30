@@ -2080,6 +2080,9 @@ extern Instruction_SSE4_1_Arithm2 PHMINPOSUW;
 // SSE4.1: packed test
 extern Instruction_SSE4_1_Arithm2 PTEST;
 
+// SSE4.1: packed qword equality comparison
+extern Instruction_SSE4_1_Arithm2 PCMPEQQ;
+
 // System instructions
 extern Instruction_NoOperands CLAC;
 extern Instruction_NoOperands STAC;

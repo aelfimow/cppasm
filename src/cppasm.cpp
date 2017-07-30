@@ -870,6 +870,9 @@ Instruction_SSE4_1_Arithm2 PHMINPOSUW { asmout, "phminposuw" };
 // SSE4.1: packed test
 Instruction_SSE4_1_Arithm2 PTEST { asmout, "ptest" };
 
+// SSE4.1: packed qword equality comparison
+Instruction_SSE4_1_Arithm2 PCMPEQQ { asmout, "pcmpeqq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

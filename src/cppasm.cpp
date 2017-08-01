@@ -882,6 +882,9 @@ Instruction_SSE4_2_Type1 PCMPESTRM { asmout, "pcmpestrm" };
 Instruction_SSE4_2_Type1 PCMPISTRI { asmout, "pcmpistri" };
 Instruction_SSE4_2_Type1 PCMPISTRM { asmout, "pcmpistrm" };
 
+// SSE4.2: packed comparison SIMD integer instruction
+Instruction_SSE4_2_Type2 PCMPGTQ { asmout, "pcmpgtq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

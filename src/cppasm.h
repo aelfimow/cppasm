@@ -1233,6 +1233,12 @@ using Instruction_SSE4_2_Type1 = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
+using Instruction_SSE4_2_Type2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 
 extern asmstream asmout;
 
@@ -2097,6 +2103,9 @@ extern Instruction_SSE4_2_Type1 PCMPESTRI;
 extern Instruction_SSE4_2_Type1 PCMPESTRM;
 extern Instruction_SSE4_2_Type1 PCMPISTRI;
 extern Instruction_SSE4_2_Type1 PCMPISTRM;
+
+// SSE4.2: packed comparison SIMD integer instruction
+extern Instruction_SSE4_2_Type2 PCMPGTQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

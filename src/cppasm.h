@@ -1227,6 +1227,12 @@ using Instruction_SSE4_1_Arithm16 = Instruction_2
     Operands_reg_mem<xmm, m16, no_suffix>
 >;
 
+using Instruction_SSE4_2_Type1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
 
 extern asmstream asmout;
 
@@ -2085,6 +2091,12 @@ extern Instruction_SSE4_1_Arithm2 PCMPEQQ;
 
 // SSE4.1: dword packing with unsigned saturation
 extern Instruction_SSE4_1_Arithm2 PACKUSDW;
+
+// SSE4.2: string and text processing instructions
+extern Instruction_SSE4_2_Type1 PCMPESTRI;
+extern Instruction_SSE4_2_Type1 PCMPESTRM;
+extern Instruction_SSE4_2_Type1 PCMPISTRI;
+extern Instruction_SSE4_2_Type1 PCMPISTRM;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

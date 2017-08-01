@@ -876,6 +876,12 @@ Instruction_SSE4_1_Arithm2 PCMPEQQ { asmout, "pcmpeqq" };
 // SSE4.1: dword packing with unsigned saturation
 Instruction_SSE4_1_Arithm2 PACKUSDW { asmout, "packusdw" };
 
+// SSE4.2: string and text processing instructions
+Instruction_SSE4_2_Type1 PCMPESTRI { asmout, "pcmpestri" };
+Instruction_SSE4_2_Type1 PCMPESTRM { asmout, "pcmpestrm" };
+Instruction_SSE4_2_Type1 PCMPISTRI { asmout, "pcmpistri" };
+Instruction_SSE4_2_Type1 PCMPISTRM { asmout, "pcmpistrm" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

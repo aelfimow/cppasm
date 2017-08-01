@@ -1239,6 +1239,23 @@ using Instruction_SSE4_2_Type2 = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction_AES_Type1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_AES_Type2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_PCLMULQDQ = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
 
 extern asmstream asmout;
 
@@ -2106,6 +2123,15 @@ extern Instruction_SSE4_2_Type1 PCMPISTRM;
 
 // SSE4.2: packed comparison SIMD integer instruction
 extern Instruction_SSE4_2_Type2 PCMPGTQ;
+
+// AESNI and PCLMULQDQ
+extern Instruction_AES_Type1 AESDEC;
+extern Instruction_AES_Type1 AESDECLAST;
+extern Instruction_AES_Type1 AESENC;
+extern Instruction_AES_Type1 AESENCLAST;
+extern Instruction_AES_Type1 AESIMC;
+extern Instruction_AES_Type2 AESKEYGENASSIST;
+extern Instruction_PCLMULQDQ PCLMULQDQ;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

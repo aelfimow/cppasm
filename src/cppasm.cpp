@@ -885,6 +885,15 @@ Instruction_SSE4_2_Type1 PCMPISTRM { asmout, "pcmpistrm" };
 // SSE4.2: packed comparison SIMD integer instruction
 Instruction_SSE4_2_Type2 PCMPGTQ { asmout, "pcmpgtq" };
 
+// AESNI and PCLMULQDQ
+Instruction_AES_Type1 AESDEC { asmout, "aesdec" };
+Instruction_AES_Type1 AESDECLAST { asmout, "aesdeclast" };
+Instruction_AES_Type1 AESENC { asmout, "aesenc" };
+Instruction_AES_Type1 AESENCLAST { asmout, "aesenclast" };
+Instruction_AES_Type1 AESIMC { asmout, "aesimc" };
+Instruction_AES_Type2 AESKEYGENASSIST { asmout, "aeskeygenassist" };
+Instruction_PCLMULQDQ PCLMULQDQ { asmout, "pclmulqdq" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

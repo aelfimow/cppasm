@@ -1121,13 +1121,13 @@ using Instruction_SSSE3_Arithm2 = Instruction_4
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm1 = Instruction_2
+using Instruction_SSE4_1_Type1 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_SSE4_1_Arithm2 = Instruction_2
+using Instruction_SSE4_1_Type2 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m128, imm8>
@@ -1138,7 +1138,7 @@ using Instruction_MOVNTDQA = Instruction_1
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_SSE4_1_Arithm3 = Instruction_4
+using Instruction_SSE4_1_Type3 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,
@@ -1146,82 +1146,82 @@ using Instruction_SSE4_1_Arithm3 = Instruction_4
     Operands_reg_mem_reg<xmm, m128, xmm>
 >;
 
-using Instruction_SSE4_1_Arithm4 = Instruction_2
+using Instruction_SSE4_1_Type4 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m32, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm5 = Instruction_2
+using Instruction_SSE4_1_Type5 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm6 = Instruction_3
+using Instruction_SSE4_1_Type6 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m32, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm7 = Instruction_2
+using Instruction_SSE4_1_Type7 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m32, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm8 = Instruction_2
+using Instruction_SSE4_1_Type8 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, r32, imm8>,
     Operands_reg_mem_imm<xmm, m8, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm9 = Instruction_2
+using Instruction_SSE4_1_Type9 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, r32, imm8>,
     Operands_reg_mem_imm<xmm, m32, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm10 = Instruction_2
+using Instruction_SSE4_1_Type10 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, r64, imm8>,
     Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm11 = Instruction_3
+using Instruction_SSE4_1_Type11 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m8, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm12 = Instruction_3
+using Instruction_SSE4_1_Type12 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m32, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm13 = Instruction_2
+using Instruction_SSE4_1_Type13 = Instruction_2
 <
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m64, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Arithm14 = Instruction_2
+using Instruction_SSE4_1_Type14 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_SSE4_1_Arithm15 = Instruction_2
+using Instruction_SSE4_1_Type15 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>
 >;
 
-using Instruction_SSE4_1_Arithm16 = Instruction_2
+using Instruction_SSE4_1_Type16 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m16, no_suffix>
@@ -2042,78 +2042,78 @@ extern Instruction_SSSE3_Arithm1 PSIGND;
 extern Instruction_SSSE3_Arithm2 PALIGNR;
 
 // SSE4.1: dword multiply instructions
-extern Instruction_SSE4_1_Arithm1 PMULLD;
-extern Instruction_SSE4_1_Arithm1 PMULDQ;
+extern Instruction_SSE4_1_Type1 PMULLD;
+extern Instruction_SSE4_1_Type1 PMULDQ;
 
 // SSE4.1: floating-point dot product instructions
-extern Instruction_SSE4_1_Arithm2 DPPD;
-extern Instruction_SSE4_1_Arithm2 DPPS;
+extern Instruction_SSE4_1_Type2 DPPD;
+extern Instruction_SSE4_1_Type2 DPPS;
 
 // SSE4.1: streaming load hint instruction
 extern Instruction_MOVNTDQA MOVNTDQA;
 
 // SSE4.1: packed blending instructions
-extern Instruction_SSE4_1_Arithm2 BLENDPD;
-extern Instruction_SSE4_1_Arithm2 BLENDPS;
-extern Instruction_SSE4_1_Arithm3 BLENDVPD;
-extern Instruction_SSE4_1_Arithm3 BLENDVPS;
-extern Instruction_SSE4_1_Arithm3 PBLENDVB;
-extern Instruction_SSE4_1_Arithm2 PBLENDW;
+extern Instruction_SSE4_1_Type2 BLENDPD;
+extern Instruction_SSE4_1_Type2 BLENDPS;
+extern Instruction_SSE4_1_Type3 BLENDVPD;
+extern Instruction_SSE4_1_Type3 BLENDVPS;
+extern Instruction_SSE4_1_Type3 PBLENDVB;
+extern Instruction_SSE4_1_Type2 PBLENDW;
 
 // SSE4.1: packed integer MIN/MAX instructions
-extern Instruction_SSE4_1_Arithm1 PMINUW;
-extern Instruction_SSE4_1_Arithm1 PMINUD;
-extern Instruction_SSE4_1_Arithm1 PMINSB;
-extern Instruction_SSE4_1_Arithm1 PMINSD;
-extern Instruction_SSE4_1_Arithm1 PMAXUW;
-extern Instruction_SSE4_1_Arithm1 PMAXUD;
-extern Instruction_SSE4_1_Arithm1 PMAXSB;
-extern Instruction_SSE4_1_Arithm1 PMAXSD;
+extern Instruction_SSE4_1_Type1 PMINUW;
+extern Instruction_SSE4_1_Type1 PMINUD;
+extern Instruction_SSE4_1_Type1 PMINSB;
+extern Instruction_SSE4_1_Type1 PMINSD;
+extern Instruction_SSE4_1_Type1 PMAXUW;
+extern Instruction_SSE4_1_Type1 PMAXUD;
+extern Instruction_SSE4_1_Type1 PMAXSB;
+extern Instruction_SSE4_1_Type1 PMAXSD;
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
-extern Instruction_SSE4_1_Arithm2 ROUNDPS;
-extern Instruction_SSE4_1_Arithm2 ROUNDPD;
-extern Instruction_SSE4_1_Arithm4 ROUNDSS;
-extern Instruction_SSE4_1_Arithm5 ROUNDSD;
+extern Instruction_SSE4_1_Type2 ROUNDPS;
+extern Instruction_SSE4_1_Type2 ROUNDPD;
+extern Instruction_SSE4_1_Type4 ROUNDSS;
+extern Instruction_SSE4_1_Type5 ROUNDSD;
 
 // SSE4.1: insertion and extractions from XMM registers
-extern Instruction_SSE4_1_Arithm6 EXTRACTPS;
-extern Instruction_SSE4_1_Arithm7 INSERTPS;
-extern Instruction_SSE4_1_Arithm8 PINSRB;
-extern Instruction_SSE4_1_Arithm9 PINSRD;
-extern Instruction_SSE4_1_Arithm10 PINSRQ;
-extern Instruction_SSE4_1_Arithm11 PEXTRB;
-extern Instruction_SSE4_1_Arithm12 PEXTRD;
-extern Instruction_SSE4_1_Arithm13 PEXTRQ;
+extern Instruction_SSE4_1_Type6 EXTRACTPS;
+extern Instruction_SSE4_1_Type7 INSERTPS;
+extern Instruction_SSE4_1_Type8 PINSRB;
+extern Instruction_SSE4_1_Type9 PINSRD;
+extern Instruction_SSE4_1_Type10 PINSRQ;
+extern Instruction_SSE4_1_Type11 PEXTRB;
+extern Instruction_SSE4_1_Type12 PEXTRD;
+extern Instruction_SSE4_1_Type13 PEXTRQ;
 
 // SSE4.1: packed integer format convertions
-extern Instruction_SSE4_1_Arithm14 PMOVSXBW;
-extern Instruction_SSE4_1_Arithm14 PMOVSXWD;
-extern Instruction_SSE4_1_Arithm14 PMOVSXDQ;
-extern Instruction_SSE4_1_Arithm15 PMOVSXBD;
-extern Instruction_SSE4_1_Arithm15 PMOVSXWQ;
-extern Instruction_SSE4_1_Arithm16 PMOVSXBQ;
-extern Instruction_SSE4_1_Arithm14 PMOVZXBW;
-extern Instruction_SSE4_1_Arithm14 PMOVZXWD;
-extern Instruction_SSE4_1_Arithm14 PMOVZXDQ;
-extern Instruction_SSE4_1_Arithm15 PMOVZXBD;
-extern Instruction_SSE4_1_Arithm15 PMOVZXWQ;
-extern Instruction_SSE4_1_Arithm16 PMOVZXBQ;
+extern Instruction_SSE4_1_Type14 PMOVSXBW;
+extern Instruction_SSE4_1_Type14 PMOVSXWD;
+extern Instruction_SSE4_1_Type14 PMOVSXDQ;
+extern Instruction_SSE4_1_Type15 PMOVSXBD;
+extern Instruction_SSE4_1_Type15 PMOVSXWQ;
+extern Instruction_SSE4_1_Type16 PMOVSXBQ;
+extern Instruction_SSE4_1_Type14 PMOVZXBW;
+extern Instruction_SSE4_1_Type14 PMOVZXWD;
+extern Instruction_SSE4_1_Type14 PMOVZXDQ;
+extern Instruction_SSE4_1_Type15 PMOVZXBD;
+extern Instruction_SSE4_1_Type15 PMOVZXWQ;
+extern Instruction_SSE4_1_Type16 PMOVZXBQ;
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
-extern Instruction_SSE4_1_Arithm2 MPSADBW;
+extern Instruction_SSE4_1_Type2 MPSADBW;
 
 // SSE4.1: horizontal search
-extern Instruction_SSE4_1_Arithm2 PHMINPOSUW;
+extern Instruction_SSE4_1_Type2 PHMINPOSUW;
 
 // SSE4.1: packed test
-extern Instruction_SSE4_1_Arithm2 PTEST;
+extern Instruction_SSE4_1_Type2 PTEST;
 
 // SSE4.1: packed qword equality comparison
-extern Instruction_SSE4_1_Arithm2 PCMPEQQ;
+extern Instruction_SSE4_1_Type2 PCMPEQQ;
 
 // SSE4.1: dword packing with unsigned saturation
-extern Instruction_SSE4_1_Arithm2 PACKUSDW;
+extern Instruction_SSE4_1_Type2 PACKUSDW;
 
 // SSE4.2: string and text processing instructions
 extern Instruction_SSE4_2_Type1 PCMPESTRI;

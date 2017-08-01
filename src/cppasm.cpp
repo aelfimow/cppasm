@@ -803,78 +803,78 @@ Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
 Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
 
 // SSE4.1: dword multiply instructions
-Instruction_SSE4_1_Arithm1 PMULLD { asmout, "pmulld" };
-Instruction_SSE4_1_Arithm1 PMULDQ { asmout, "pmuldq" };
+Instruction_SSE4_1_Type1 PMULLD { asmout, "pmulld" };
+Instruction_SSE4_1_Type1 PMULDQ { asmout, "pmuldq" };
 
 // SSE4.1: floating-point dot product instructions
-Instruction_SSE4_1_Arithm2 DPPD { asmout, "dppd" };
-Instruction_SSE4_1_Arithm2 DPPS { asmout, "dpps" };
+Instruction_SSE4_1_Type2 DPPD { asmout, "dppd" };
+Instruction_SSE4_1_Type2 DPPS { asmout, "dpps" };
 
 // SSE4.1: streaming load hint instruction
 Instruction_MOVNTDQA MOVNTDQA { asmout, "movntdqa" };
 
 // SSE4.1: packed blending instructions
-Instruction_SSE4_1_Arithm2 BLENDPD { asmout, "blendpd" };
-Instruction_SSE4_1_Arithm2 BLENDPS { asmout, "blendps" };
-Instruction_SSE4_1_Arithm3 BLENDVPD { asmout, "blendvpd" };
-Instruction_SSE4_1_Arithm3 BLENDVPS { asmout, "blendvps" };
-Instruction_SSE4_1_Arithm3 PBLENDVB { asmout, "pblendvb" };
-Instruction_SSE4_1_Arithm2 PBLENDW { asmout, "pblendw" };
+Instruction_SSE4_1_Type2 BLENDPD { asmout, "blendpd" };
+Instruction_SSE4_1_Type2 BLENDPS { asmout, "blendps" };
+Instruction_SSE4_1_Type3 BLENDVPD { asmout, "blendvpd" };
+Instruction_SSE4_1_Type3 BLENDVPS { asmout, "blendvps" };
+Instruction_SSE4_1_Type3 PBLENDVB { asmout, "pblendvb" };
+Instruction_SSE4_1_Type2 PBLENDW { asmout, "pblendw" };
 
 // SSE4.1: packed integer MIN/MAX instructions
-Instruction_SSE4_1_Arithm1 PMINUW { asmout, "pminuw" };
-Instruction_SSE4_1_Arithm1 PMINUD { asmout, "pminud" };
-Instruction_SSE4_1_Arithm1 PMINSB { asmout, "pminsb" };
-Instruction_SSE4_1_Arithm1 PMINSD { asmout, "pminsd" };
-Instruction_SSE4_1_Arithm1 PMAXUW { asmout, "pmaxuw" };
-Instruction_SSE4_1_Arithm1 PMAXUD { asmout, "pmaxud" };
-Instruction_SSE4_1_Arithm1 PMAXSB { asmout, "pmaxsb" };
-Instruction_SSE4_1_Arithm1 PMAXSD { asmout, "pmaxsd" };
+Instruction_SSE4_1_Type1 PMINUW { asmout, "pminuw" };
+Instruction_SSE4_1_Type1 PMINUD { asmout, "pminud" };
+Instruction_SSE4_1_Type1 PMINSB { asmout, "pminsb" };
+Instruction_SSE4_1_Type1 PMINSD { asmout, "pminsd" };
+Instruction_SSE4_1_Type1 PMAXUW { asmout, "pmaxuw" };
+Instruction_SSE4_1_Type1 PMAXUD { asmout, "pmaxud" };
+Instruction_SSE4_1_Type1 PMAXSB { asmout, "pmaxsb" };
+Instruction_SSE4_1_Type1 PMAXSD { asmout, "pmaxsd" };
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
-Instruction_SSE4_1_Arithm2 ROUNDPS { asmout, "roundps" };
-Instruction_SSE4_1_Arithm2 ROUNDPD { asmout, "roundpd" };
-Instruction_SSE4_1_Arithm4 ROUNDSS { asmout, "roundss" };
-Instruction_SSE4_1_Arithm5 ROUNDSD { asmout, "roundsd" };
+Instruction_SSE4_1_Type2 ROUNDPS { asmout, "roundps" };
+Instruction_SSE4_1_Type2 ROUNDPD { asmout, "roundpd" };
+Instruction_SSE4_1_Type4 ROUNDSS { asmout, "roundss" };
+Instruction_SSE4_1_Type5 ROUNDSD { asmout, "roundsd" };
 
 // SSE4.1: insertion and extractions from XMM registers
-Instruction_SSE4_1_Arithm6 EXTRACTPS { asmout, "extractps" };
-Instruction_SSE4_1_Arithm7 INSERTPS { asmout, "insertps" };
-Instruction_SSE4_1_Arithm8 PINSRB { asmout, "pinsrb" };
-Instruction_SSE4_1_Arithm9 PINSRD { asmout, "pinsrd" };
-Instruction_SSE4_1_Arithm10 PINSRQ { asmout, "pinsrq" };
-Instruction_SSE4_1_Arithm11 PEXTRB { asmout, "pextrb" };
-Instruction_SSE4_1_Arithm12 PEXTRD { asmout, "pextrd" };
-Instruction_SSE4_1_Arithm13 PEXTRQ { asmout, "pextrq" };
+Instruction_SSE4_1_Type6 EXTRACTPS { asmout, "extractps" };
+Instruction_SSE4_1_Type7 INSERTPS { asmout, "insertps" };
+Instruction_SSE4_1_Type8 PINSRB { asmout, "pinsrb" };
+Instruction_SSE4_1_Type9 PINSRD { asmout, "pinsrd" };
+Instruction_SSE4_1_Type10 PINSRQ { asmout, "pinsrq" };
+Instruction_SSE4_1_Type11 PEXTRB { asmout, "pextrb" };
+Instruction_SSE4_1_Type12 PEXTRD { asmout, "pextrd" };
+Instruction_SSE4_1_Type13 PEXTRQ { asmout, "pextrq" };
 
 // SSE4.1: packed integer format convertions
-Instruction_SSE4_1_Arithm14 PMOVSXBW { asmout, "pmovsxbw" };
-Instruction_SSE4_1_Arithm14 PMOVSXWD { asmout, "pmovsxwd" };
-Instruction_SSE4_1_Arithm14 PMOVSXDQ { asmout, "pmovsxdq" };
-Instruction_SSE4_1_Arithm15 PMOVSXBD { asmout, "pmovsxbd" };
-Instruction_SSE4_1_Arithm15 PMOVSXWQ { asmout, "pmovsxwq" };
-Instruction_SSE4_1_Arithm16 PMOVSXBQ { asmout, "pmovsxbq" };
-Instruction_SSE4_1_Arithm14 PMOVZXBW { asmout, "pmovzxbw" };
-Instruction_SSE4_1_Arithm14 PMOVZXWD { asmout, "pmovzxwd" };
-Instruction_SSE4_1_Arithm14 PMOVZXDQ { asmout, "pmovzxdq" };
-Instruction_SSE4_1_Arithm15 PMOVZXBD { asmout, "pmovzxbd" };
-Instruction_SSE4_1_Arithm15 PMOVZXWQ { asmout, "pmovzxwq" };
-Instruction_SSE4_1_Arithm16 PMOVZXBQ { asmout, "pmovzxbq" };
+Instruction_SSE4_1_Type14 PMOVSXBW { asmout, "pmovsxbw" };
+Instruction_SSE4_1_Type14 PMOVSXWD { asmout, "pmovsxwd" };
+Instruction_SSE4_1_Type14 PMOVSXDQ { asmout, "pmovsxdq" };
+Instruction_SSE4_1_Type15 PMOVSXBD { asmout, "pmovsxbd" };
+Instruction_SSE4_1_Type15 PMOVSXWQ { asmout, "pmovsxwq" };
+Instruction_SSE4_1_Type16 PMOVSXBQ { asmout, "pmovsxbq" };
+Instruction_SSE4_1_Type14 PMOVZXBW { asmout, "pmovzxbw" };
+Instruction_SSE4_1_Type14 PMOVZXWD { asmout, "pmovzxwd" };
+Instruction_SSE4_1_Type14 PMOVZXDQ { asmout, "pmovzxdq" };
+Instruction_SSE4_1_Type15 PMOVZXBD { asmout, "pmovzxbd" };
+Instruction_SSE4_1_Type15 PMOVZXWQ { asmout, "pmovzxwq" };
+Instruction_SSE4_1_Type16 PMOVZXBQ { asmout, "pmovzxbq" };
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
-Instruction_SSE4_1_Arithm2 MPSADBW { asmout, "mpsadbw" };
+Instruction_SSE4_1_Type2 MPSADBW { asmout, "mpsadbw" };
 
 // SSE4.1: horizontal search
-Instruction_SSE4_1_Arithm2 PHMINPOSUW { asmout, "phminposuw" };
+Instruction_SSE4_1_Type2 PHMINPOSUW { asmout, "phminposuw" };
 
 // SSE4.1: packed test
-Instruction_SSE4_1_Arithm2 PTEST { asmout, "ptest" };
+Instruction_SSE4_1_Type2 PTEST { asmout, "ptest" };
 
 // SSE4.1: packed qword equality comparison
-Instruction_SSE4_1_Arithm2 PCMPEQQ { asmout, "pcmpeqq" };
+Instruction_SSE4_1_Type2 PCMPEQQ { asmout, "pcmpeqq" };
 
 // SSE4.1: dword packing with unsigned saturation
-Instruction_SSE4_1_Arithm2 PACKUSDW { asmout, "packusdw" };
+Instruction_SSE4_1_Type2 PACKUSDW { asmout, "packusdw" };
 
 // SSE4.2: string and text processing instructions
 Instruction_SSE4_2_Type1 PCMPESTRI { asmout, "pcmpestri" };

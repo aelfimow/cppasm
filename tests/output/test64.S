@@ -1,4 +1,6 @@
 .section .text
+# MOV instruction
+MOV_instruction:
 	mov $0xAA, %al
 	mov $0xAA, %ah
 	mov $0xAA, %bl
@@ -65,6 +67,15 @@
 	mov %rax, %cr6
 	mov %rax, %cr7
 	mov %rax, %cr8
+	mov %cr0, %rax
+	mov %cr1, %rax
+	mov %cr2, %rax
+	mov %cr3, %rax
+	mov %cr4, %rax
+	mov %cr5, %rax
+	mov %cr6, %rax
+	mov %cr7, %rax
+	mov %cr8, %rax
 	mov %rax, %dr0
 	mov %rax, %dr1
 	mov %rax, %dr2
@@ -73,6 +84,14 @@
 	mov %rax, %dr5
 	mov %rax, %dr6
 	mov %rax, %dr7
+	mov %dr0, %rax
+	mov %dr1, %rax
+	mov %dr2, %rax
+	mov %dr3, %rax
+	mov %dr4, %rax
+	mov %dr5, %rax
+	mov %dr6, %rax
+	mov %dr7, %rax
 	mov $0x1122334455667788, %rax
 	mov $0x1122334455667788, %rbx
 	mov $0x1122334455667788, %rcx
@@ -89,6 +108,11 @@
 	mov $0x1122334455667788, %r13
 	mov $0x1122334455667788, %r14
 	mov $0x1122334455667788, %r15
+	mov (%rbx, %rcx), %rax
+	mov (%rbx, %rcx, 1), %rax
+	mov (%rbx, %rcx, 2), %rax
+	mov (%rbx, %rcx, 4), %rax
+	mov (%rbx, %rcx, 8), %rax
 	adc $0x11, %al
 	adc $0x11, %bl
 	adcb $0x11, (%eax, %ebx)

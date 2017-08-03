@@ -13,6 +13,8 @@ try
 
     code.start();
 
+    comment("MOV instruction");
+    label("MOV_instruction");
     {
         imm8 value { 0xAA };
 
@@ -97,6 +99,16 @@ try
         MOV(CR7, RAX);
         MOV(CR8, RAX);
 
+        MOV(RAX, CR0);
+        MOV(RAX, CR1);
+        MOV(RAX, CR2);
+        MOV(RAX, CR3);
+        MOV(RAX, CR4);
+        MOV(RAX, CR5);
+        MOV(RAX, CR6);
+        MOV(RAX, CR7);
+        MOV(RAX, CR8);
+
         MOV(DR0, RAX);
         MOV(DR1, RAX);
         MOV(DR2, RAX);
@@ -105,6 +117,15 @@ try
         MOV(DR5, RAX);
         MOV(DR6, RAX);
         MOV(DR7, RAX);
+
+        MOV(RAX, DR0);
+        MOV(RAX, DR1);
+        MOV(RAX, DR2);
+        MOV(RAX, DR3);
+        MOV(RAX, DR4);
+        MOV(RAX, DR5);
+        MOV(RAX, DR6);
+        MOV(RAX, DR7);
     }
 
     {
@@ -126,6 +147,16 @@ try
         MOV(R13, value);
         MOV(R14, value);
         MOV(R15, value);
+    }
+
+    {
+        m64 addr { RBX, RCX };
+
+        MOV(RAX, addr);
+        MOV(RAX, addr.scale(1));
+        MOV(RAX, addr.scale(2));
+        MOV(RAX, addr.scale(4));
+        MOV(RAX, addr.scale(8));
     }
 
     {

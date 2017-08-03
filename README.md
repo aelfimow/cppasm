@@ -2,21 +2,29 @@
 # cppasm
 This is a C++ generator for x86 assembly code.
 
-Current assembly source code syntax is: `AT&T`.
+Assembly source code syntax is: `AT&T`.
 
 The idea behind this generator is to encapsulate every instruction and CPU register
-in its own class. Every class name can be found in the Intel's developer's manuals, e.g.
-imm8 class represents an 8-bit immediate value, m16 class represents a memory address of
+in its own class. Every class name can be found in the Intel developer's manuals, e.g.
+`imm8` class represents an 8-bit immediate value, `m16` class represents a memory address of
 a 16-bit data word.
 
 All instructions are implemented as function objects, e.g.
-instruction instance of MOV can be used like this:
+instruction instance of `MOV` can be used like this:
 ```c++
+#include <cstdlib>
+#include "cppasm.h"
+
+int main(int argc, char *argv[])
+{
     MOV(EAX, EBX);
+
+    return EXIT_SUCCESS;
+}
 ```
 
-EAX and EBX are global instances of corresponding CPU registers and the output is
-in `AT&T` syntax:
+`EAX` and `EBX` are global instances of corresponding CPU registers and the output is
+simply (`AT&T` syntax):
 ```assembly
     mov %ebx, %eax
 ```

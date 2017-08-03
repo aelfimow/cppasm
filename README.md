@@ -2,7 +2,7 @@
 # cppasm
 This is a C++ generator for x86 assembly code.
 
-Assembly source code syntax is: `AT&T`.
+Generated assembly source code syntax is: `AT&T`.
 
 The idea behind this generator is to encapsulate every instruction and CPU register
 in its own class. Every class name can be found in the Intel developer's manuals, e.g.
@@ -12,14 +12,13 @@ a 16-bit data word.
 All instructions are implemented as function objects, e.g.
 instruction instance of `MOV` can be used like this:
 ```c++
-#include <cstdlib>
 #include "cppasm.h"
 
 int main(int argc, char *argv[])
 {
     MOV(EAX, EBX);
 
-    return EXIT_SUCCESS;
+    return 0;
 }
 ```
 
@@ -40,7 +39,7 @@ assemble generated assembly files.
 
 I am compiling the [tests](https://github.com/aelfimow/cppasm/tree/master/tests) also
 with Visual Studio 2017, see [Visual Studio 2017](https://github.com/aelfimow/cppasm/tree/master/VisualStudio2017)
-for its project files.
+for the project files.
 
 This C++ generator does not attempt to convince people to write assembly source code.
 Programmers, who write functions or programs in assembly language,

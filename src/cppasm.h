@@ -47,6 +47,7 @@ using r32 = reg_template<32>;
 using r64 = reg_template<64>;
 using xmm = reg_template<128>;
 using ymm = reg_template<256>;
+using zmm = reg_template<512>;
 
 using imm8 = imm<uint8_t, 2>;
 using imm16 = imm<uint16_t, 4>;
@@ -1257,6 +1258,22 @@ using Instruction_PCLMULQDQ = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
+using Instruction_F16C_Type1 = Instruction_4
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>,
+    Operands_reg_reg<ymm, xmm, no_suffix>,
+    Operands_reg_mem<ymm, m128, no_suffix>
+>;
+
+using Instruction_F16C_Type2 = Instruction_4
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_mem_reg_imm<m64, xmm, imm8>,
+    Operands_reg_reg_imm<xmm, ymm, imm8>,
+    Operands_mem_reg_imm<m128, ymm, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2132,6 +2149,10 @@ extern Instruction_AES_Type1 AESENCLAST;
 extern Instruction_AES_Type1 AESIMC;
 extern Instruction_AES_Type2 AESKEYGENASSIST;
 extern Instruction_PCLMULQDQ PCLMULQDQ;
+
+// 16-bit floating-point convertion instructions
+extern Instruction_F16C_Type1 VCVTPH2PS;
+extern Instruction_F16C_Type2 VCVTPS2PH;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

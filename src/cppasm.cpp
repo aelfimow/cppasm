@@ -894,6 +894,10 @@ Instruction_AES_Type1 AESIMC { asmout, "aesimc" };
 Instruction_AES_Type2 AESKEYGENASSIST { asmout, "aeskeygenassist" };
 Instruction_PCLMULQDQ PCLMULQDQ { asmout, "pclmulqdq" };
 
+// 16-bit floating-point convertion instructions
+Instruction_F16C_Type1 VCVTPH2PS { asmout, "vcvtph2ps" };
+Instruction_F16C_Type2 VCVTPS2PH { asmout, "vcvtps2ph" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

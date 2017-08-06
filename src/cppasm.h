@@ -1364,6 +1364,23 @@ extern xmm XMM13;
 extern xmm XMM14;
 extern xmm XMM15;
 
+extern ymm YMM0;
+extern ymm YMM1;
+extern ymm YMM2;
+extern ymm YMM3;
+extern ymm YMM4;
+extern ymm YMM5;
+extern ymm YMM6;
+extern ymm YMM7;
+extern ymm YMM8;
+extern ymm YMM9;
+extern ymm YMM10;
+extern ymm YMM11;
+extern ymm YMM12;
+extern ymm YMM13;
+extern ymm YMM14;
+extern ymm YMM15;
+
 extern zmm ZMM0;
 extern zmm ZMM1;
 extern zmm ZMM2;

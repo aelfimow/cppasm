@@ -3,6 +3,21 @@
 #include <stdexcept>
 #include "cppasm.h"
 
+static void gen_Instruction_Arithm1(Instruction_Arithm1 &instr, const std::string &descr)
+{
+    comment(descr);
+
+    imm8 value8 { 0x11 };
+    imm16 value16 { 0x1122 };
+    imm32 value32 { 0x11223344 };
+    imm64 value64 { 0x1122334455667788 };
+
+    instr(AL, value8);
+    instr(AX, value16);
+    instr(EAX, value32);
+    instr(RAX, value32);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -159,54 +174,14 @@ try
         MOV(RAX, addr.scale(8));
     }
 
-    {
-        imm8 value { 0x11 };
-        m8 mem { EAX, EBX };
-        ADC(AL, value);
-        ADC(BL, value);
-        ADC(mem, value);
-        ADC(mem, CL);
-        ADC(CL, mem);
-    }
-
-    {
-        imm8 value8 { 0x42 };
-        imm16 value16 { 0x1122 };
-        m16 mem { EAX, EBX };
-        ADC(AX, value16);
-        ADC(BX, value16);
-        ADC(mem, value16);
-        ADC(mem, value8);
-        ADC(mem, AX);
-        ADC(AX, mem);
-        ADC(DX, value8);
-    }
-
-    {
-        imm8 value8 { 0x42 };
-        imm32 value32 { 0x11223344 };
-        m32 mem { EAX, EBX };
-        ADC(EAX, value32);
-        ADC(EBX, value32);
-        ADC(mem, value32);
-        ADC(mem, value8);
-        ADC(mem, ECX);
-        ADC(ECX, mem);
-        ADC(ECX, value8);
-    }
-
-    {
-        imm8 value8 { 0x42 };
-        imm32 value32 { 0x11223344 };
-        m64 mem { RAX, RBX };
-        ADC(RAX, value32);
-        ADC(RBX, value32);
-        ADC(mem, value32);
-        ADC(mem, value8);
-        ADC(RDX, value8);
-        ADC(mem, RCX);
-        ADC(RCX, mem);
-    }
+    gen_Instruction_Arithm1(ADD, "ADD instruction");
+    gen_Instruction_Arithm1(ADC, "ADC instruction");
+    gen_Instruction_Arithm1(SUB, "SUB instruction");
+    gen_Instruction_Arithm1(SBB, "SBB instruction");
+    gen_Instruction_Arithm1(CMP, "CMP instruction");
+    gen_Instruction_Arithm1(AND, "AND instruction");
+    gen_Instruction_Arithm1(OR, "OR instruction");
+    gen_Instruction_Arithm1(XOR, "XOR instruction");
 
     {
         REP(); MOVSB();

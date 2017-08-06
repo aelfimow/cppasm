@@ -113,32 +113,46 @@ MOV_instruction:
 	mov (%rbx, %rcx, 2), %rax
 	mov (%rbx, %rcx, 4), %rax
 	mov (%rbx, %rcx, 8), %rax
+# ADD instruction
+	add $0x11, %al
+	add $0x1122, %ax
+	add $0x11223344, %eax
+	add $0x11223344, %rax
+# ADC instruction
 	adc $0x11, %al
-	adc $0x11, %bl
-	adcb $0x11, (%eax, %ebx)
-	adc %cl, (%eax, %ebx)
-	adc (%eax, %ebx), %cl
 	adc $0x1122, %ax
-	adc $0x1122, %bx
-	adcw $0x1122, (%eax, %ebx)
-	adcw $0x42, (%eax, %ebx)
-	adc %ax, (%eax, %ebx)
-	adc (%eax, %ebx), %ax
-	adc $0x42, %dx
 	adc $0x11223344, %eax
-	adc $0x11223344, %ebx
-	adcl $0x11223344, (%eax, %ebx)
-	adcl $0x42, (%eax, %ebx)
-	adc %ecx, (%eax, %ebx)
-	adc (%eax, %ebx), %ecx
-	adc $0x42, %ecx
 	adc $0x11223344, %rax
-	adc $0x11223344, %rbx
-	adcq $0x11223344, (%rax, %rbx)
-	adcq $0x42, (%rax, %rbx)
-	adc $0x42, %rdx
-	adc %rcx, (%rax, %rbx)
-	adc (%rax, %rbx), %rcx
+# SUB instruction
+	sub $0x11, %al
+	sub $0x1122, %ax
+	sub $0x11223344, %eax
+	sub $0x11223344, %rax
+# SBB instruction
+	sbb $0x11, %al
+	sbb $0x1122, %ax
+	sbb $0x11223344, %eax
+	sbb $0x11223344, %rax
+# CMP instruction
+	cmp $0x11, %al
+	cmp $0x1122, %ax
+	cmp $0x11223344, %eax
+	cmp $0x11223344, %rax
+# AND instruction
+	and $0x11, %al
+	and $0x1122, %ax
+	and $0x11223344, %eax
+	and $0x11223344, %rax
+# OR instruction
+	or $0x11, %al
+	or $0x1122, %ax
+	or $0x11223344, %eax
+	or $0x11223344, %rax
+# XOR instruction
+	xor $0x11, %al
+	xor $0x1122, %ax
+	xor $0x11223344, %eax
+	xor $0x11223344, %rax
 	rep movsb
 	rep movsw
 	rep movsl

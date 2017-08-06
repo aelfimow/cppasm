@@ -12,10 +12,25 @@ static void gen_Instruction_Arithm1(Instruction_Arithm1 &instr, const std::strin
     imm32 value32 { 0x11223344 };
     imm64 value64 { 0x1122334455667788 };
 
+    m8 addr8 { RBX, RCX };
+    m16 addr16 { RCX, RDX };
+    m32 addr32 { RDX, RSI };
+    m64 addr64 { RSI, RDI };
+
     instr(AL, value8);
     instr(AX, value16);
     instr(EAX, value32);
     instr(RAX, value32);
+
+    instr(DL, addr8);
+    instr(DX, addr16);
+    instr(EDX, addr32);
+    instr(RDX, addr64);
+
+    instr(addr8, DL);
+    instr(addr16, DX);
+    instr(addr32, EDX);
+    instr(addr64, RDX);
 }
 
 int main(int argc, char *argv[])

@@ -118,41 +118,105 @@ MOV_instruction:
 	add $0x1122, %ax
 	add $0x11223344, %eax
 	add $0x11223344, %rax
+	add (%rbx, %rcx), %dl
+	add (%rcx, %rdx), %dx
+	add (%rdx, %rsi), %edx
+	add (%rsi, %rdi), %rdx
+	add %dl, (%rbx, %rcx)
+	add %dx, (%rcx, %rdx)
+	add %edx, (%rdx, %rsi)
+	add %rdx, (%rsi, %rdi)
 # ADC instruction
 	adc $0x11, %al
 	adc $0x1122, %ax
 	adc $0x11223344, %eax
 	adc $0x11223344, %rax
+	adc (%rbx, %rcx), %dl
+	adc (%rcx, %rdx), %dx
+	adc (%rdx, %rsi), %edx
+	adc (%rsi, %rdi), %rdx
+	adc %dl, (%rbx, %rcx)
+	adc %dx, (%rcx, %rdx)
+	adc %edx, (%rdx, %rsi)
+	adc %rdx, (%rsi, %rdi)
 # SUB instruction
 	sub $0x11, %al
 	sub $0x1122, %ax
 	sub $0x11223344, %eax
 	sub $0x11223344, %rax
+	sub (%rbx, %rcx), %dl
+	sub (%rcx, %rdx), %dx
+	sub (%rdx, %rsi), %edx
+	sub (%rsi, %rdi), %rdx
+	sub %dl, (%rbx, %rcx)
+	sub %dx, (%rcx, %rdx)
+	sub %edx, (%rdx, %rsi)
+	sub %rdx, (%rsi, %rdi)
 # SBB instruction
 	sbb $0x11, %al
 	sbb $0x1122, %ax
 	sbb $0x11223344, %eax
 	sbb $0x11223344, %rax
+	sbb (%rbx, %rcx), %dl
+	sbb (%rcx, %rdx), %dx
+	sbb (%rdx, %rsi), %edx
+	sbb (%rsi, %rdi), %rdx
+	sbb %dl, (%rbx, %rcx)
+	sbb %dx, (%rcx, %rdx)
+	sbb %edx, (%rdx, %rsi)
+	sbb %rdx, (%rsi, %rdi)
 # CMP instruction
 	cmp $0x11, %al
 	cmp $0x1122, %ax
 	cmp $0x11223344, %eax
 	cmp $0x11223344, %rax
+	cmp (%rbx, %rcx), %dl
+	cmp (%rcx, %rdx), %dx
+	cmp (%rdx, %rsi), %edx
+	cmp (%rsi, %rdi), %rdx
+	cmp %dl, (%rbx, %rcx)
+	cmp %dx, (%rcx, %rdx)
+	cmp %edx, (%rdx, %rsi)
+	cmp %rdx, (%rsi, %rdi)
 # AND instruction
 	and $0x11, %al
 	and $0x1122, %ax
 	and $0x11223344, %eax
 	and $0x11223344, %rax
+	and (%rbx, %rcx), %dl
+	and (%rcx, %rdx), %dx
+	and (%rdx, %rsi), %edx
+	and (%rsi, %rdi), %rdx
+	and %dl, (%rbx, %rcx)
+	and %dx, (%rcx, %rdx)
+	and %edx, (%rdx, %rsi)
+	and %rdx, (%rsi, %rdi)
 # OR instruction
 	or $0x11, %al
 	or $0x1122, %ax
 	or $0x11223344, %eax
 	or $0x11223344, %rax
+	or (%rbx, %rcx), %dl
+	or (%rcx, %rdx), %dx
+	or (%rdx, %rsi), %edx
+	or (%rsi, %rdi), %rdx
+	or %dl, (%rbx, %rcx)
+	or %dx, (%rcx, %rdx)
+	or %edx, (%rdx, %rsi)
+	or %rdx, (%rsi, %rdi)
 # XOR instruction
 	xor $0x11, %al
 	xor $0x1122, %ax
 	xor $0x11223344, %eax
 	xor $0x11223344, %rax
+	xor (%rbx, %rcx), %dl
+	xor (%rcx, %rdx), %dx
+	xor (%rdx, %rsi), %edx
+	xor (%rsi, %rdi), %rdx
+	xor %dl, (%rbx, %rcx)
+	xor %dx, (%rcx, %rdx)
+	xor %edx, (%rdx, %rsi)
+	xor %rdx, (%rsi, %rdi)
 	rep movsb
 	rep movsw
 	rep movsl

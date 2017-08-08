@@ -931,6 +931,26 @@ Instruction_PCLMULQDQ PCLMULQDQ { asmout, "pclmulqdq" };
 Instruction_F16C_Type1 VCVTPH2PS { asmout, "vcvtph2ps" };
 Instruction_F16C_Type2 VCVTPS2PH { asmout, "vcvtps2ph" };
 
+// Fused-multiply-add (FMA) extensions
+Instruction_FMA_Type1 VFMADD132PD { asmout, "vfmadd132pd" };
+Instruction_FMA_Type1 VFMADD213PD { asmout, "vfmadd213pd" };
+Instruction_FMA_Type1 VFMADD231PD { asmout, "vfmadd231pd" };
+Instruction_FMA_Type1 VFMADD132PS { asmout, "vfmadd132ps" };
+Instruction_FMA_Type1 VFMADD213PS { asmout, "vfmadd213ps" };
+Instruction_FMA_Type1 VFMADD231PS { asmout, "vfmadd231ps" };
+Instruction_FMA_Type2 VFMADD132SD { asmout, "vfmadd132sd" };
+Instruction_FMA_Type2 VFMADD213SD { asmout, "vfmadd213sd" };
+Instruction_FMA_Type2 VFMADD231SD { asmout, "vfmadd231sd" };
+Instruction_FMA_Type3 VFMADD132SS { asmout, "vfmadd132ss" };
+Instruction_FMA_Type3 VFMADD213SS { asmout, "vfmadd213ss" };
+Instruction_FMA_Type3 VFMADD231SS { asmout, "vfmadd231ss" };
+Instruction_FMA_Type1 VFMADDSUB132PD { asmout, "vfmaddsub132pd" };
+Instruction_FMA_Type1 VFMADDSUB213PD { asmout, "vfmaddsub213pd" };
+Instruction_FMA_Type1 VFMADDSUB231PD { asmout, "vfmaddsub231pd" };
+Instruction_FMA_Type1 VFMADDSUB132PS { asmout, "vfmaddsub132ps" };
+Instruction_FMA_Type1 VFMADDSUB213PS { asmout, "vfmaddsub213ps" };
+Instruction_FMA_Type1 VFMADDSUB231PS { asmout, "vfmaddsub231ps" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

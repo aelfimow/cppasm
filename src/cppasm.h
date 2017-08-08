@@ -59,6 +59,7 @@ using m16 = m_template<16>;
 using m32 = m_template<32>;
 using m64 = m_template<64>;
 using m128 = m_template<128>;
+using m256 = m_template<256>;
 using m32fp = m_template<32>;
 using m64fp = m_template<64>;
 using m80fp = m_template<80>;
@@ -1274,6 +1275,26 @@ using Instruction_F16C_Type2 = Instruction_4
     Operands_mem_reg_imm<m128, ymm, imm8>
 >;
 
+using Instruction_FMA_Type1 = Instruction_4
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m128>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>
+>;
+
+using Instruction_FMA_Type2 = Instruction_2
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m64>
+>;
+
+using Instruction_FMA_Type3 = Instruction_2
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m32>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2203,6 +2224,26 @@ extern Instruction_PCLMULQDQ PCLMULQDQ;
 // 16-bit floating-point convertion instructions
 extern Instruction_F16C_Type1 VCVTPH2PS;
 extern Instruction_F16C_Type2 VCVTPS2PH;
+
+// Fused-multiply-add (FMA) extensions
+extern Instruction_FMA_Type1 VFMADD132PD;
+extern Instruction_FMA_Type1 VFMADD213PD;
+extern Instruction_FMA_Type1 VFMADD231PD;
+extern Instruction_FMA_Type1 VFMADD132PS;
+extern Instruction_FMA_Type1 VFMADD213PS;
+extern Instruction_FMA_Type1 VFMADD231PS;
+extern Instruction_FMA_Type2 VFMADD132SD;
+extern Instruction_FMA_Type2 VFMADD213SD;
+extern Instruction_FMA_Type2 VFMADD231SD;
+extern Instruction_FMA_Type3 VFMADD132SS;
+extern Instruction_FMA_Type3 VFMADD213SS;
+extern Instruction_FMA_Type3 VFMADD231SS;
+extern Instruction_FMA_Type1 VFMADDSUB132PD;
+extern Instruction_FMA_Type1 VFMADDSUB213PD;
+extern Instruction_FMA_Type1 VFMADDSUB231PD;
+extern Instruction_FMA_Type1 VFMADDSUB132PS;
+extern Instruction_FMA_Type1 VFMADDSUB213PS;
+extern Instruction_FMA_Type1 VFMADDSUB231PS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

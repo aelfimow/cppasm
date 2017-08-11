@@ -111,7 +111,7 @@ class Operands_reg_reg_reg
         {
         }
 
-        void operator()(RegType1 &op1, RegType2 &op2, RegType3 op3)
+        void operator()(RegType1 &op1, RegType2 &op2, RegType3 &op3)
         {
             Instruction instr { m_mnem, op1.name(), op2.name(), op3.name() };
             m_asmout << instr;
@@ -146,7 +146,7 @@ class Operands_reg_reg_mem
         {
         }
 
-        void operator()(RegType1 &op1, RegType2 &op2, MemType op3)
+        void operator()(RegType1 &op1, RegType2 &op2, MemType &op3)
         {
             Instruction instr { m_mnem, op1.name(), op2.name(), op3.to_str() };
             m_asmout << instr;
@@ -181,7 +181,7 @@ class Operands_reg_reg_imm
         {
         }
 
-        void operator()(RegType1 &op1, RegType2 &op2, ImmType op3)
+        void operator()(RegType1 &op1, RegType2 &op2, ImmType &op3)
         {
             Instruction instr { m_mnem, op1.name(), op2.name(), op3.to_str() };
             m_asmout << instr;
@@ -216,7 +216,7 @@ class Operands_mem_reg_imm
         {
         }
 
-        void operator()(MemType &op1, RegType &op2, ImmType op3)
+        void operator()(MemType &op1, RegType &op2, ImmType &op3)
         {
             Instruction instr { m_mnem, op1.to_str(), op2.name(), op3.to_str() };
             m_asmout << instr;
@@ -251,7 +251,7 @@ class Operands_mem_reg_reg
         {
         }
 
-        void operator()(MemType &op1, RegType1 &op2, RegType2 op3)
+        void operator()(MemType &op1, RegType1 &op2, RegType2 &op3)
         {
             Instruction instr { m_mnem, op1.to_str(), op2.name(), op3.name() };
             m_asmout << instr;

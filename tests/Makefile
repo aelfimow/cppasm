@@ -6,10 +6,10 @@ CXXFLAGS += -Weffc++
 CXXFLAGS += -std=c++17
 
 ASFLAGS32  = --32
-ASFLAGS32 += -march=corei7
+ASFLAGS32 += -march=+avx
 
 ASFLAGS64  = --64
-ASFLAGS64 += -march=corei7
+ASFLAGS64 += -march=+avx
 
 CPPASM_OBJ = ../src/obj/*.o
 OUTDIR = ./output

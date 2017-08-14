@@ -993,6 +993,20 @@ Instruction_FMA_Type3 VFNMSUB132SS { asmout, "vfnmsub132ss" };
 Instruction_FMA_Type3 VFNMSUB213SS { asmout, "vfnmsub213ss" };
 Instruction_FMA_Type3 VFNMSUB231SS { asmout, "vfnmsub231ss" };
 
+// AVX arithmetic instructions
+Instruction_AVX_Type1 VSQRTPD { asmout, "vsqrtpd" };
+Instruction_AVX_Type1 VSQRTPS { asmout, "vsqrtps" };
+Instruction_AVX_Type1 VRSQRTPS { asmout, "vrsqrtps" };
+Instruction_AVX_Type1 VRCPPS { asmout, "vrcpps" };
+Instruction_AVX_Type2 VADDPD { asmout, "vaddpd" };
+Instruction_AVX_Type2 VADDPS { asmout, "vaddps" };
+Instruction_AVX_Type2 VSUBPD { asmout, "vsubpd" };
+Instruction_AVX_Type2 VSUBPS { asmout, "vsubps" };
+Instruction_AVX_Type2 VMULPD { asmout, "vmulpd" };
+Instruction_AVX_Type2 VMULPS { asmout, "vmulps" };
+Instruction_AVX_Type2 VDIVPD { asmout, "vdivpd" };
+Instruction_AVX_Type2 VDIVPS { asmout, "vdivps" };
+
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };
 Instruction_NoOperands STAC { asmout, "stac" };

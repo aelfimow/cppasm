@@ -1295,6 +1295,22 @@ using Instruction_FMA_Type3 = Instruction_2
     Operands_reg_reg_mem<xmm, xmm, m32>
 >;
 
+using Instruction_AVX_Type1 = Instruction_4
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_reg<ymm, ymm, no_suffix>,
+    Operands_reg_mem<ymm, m256, no_suffix>
+>;
+
+using Instruction_AVX_Type2 = Instruction_4
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m128>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2286,6 +2302,20 @@ extern Instruction_FMA_Type2 VFNMSUB231SD;
 extern Instruction_FMA_Type3 VFNMSUB132SS;
 extern Instruction_FMA_Type3 VFNMSUB213SS;
 extern Instruction_FMA_Type3 VFNMSUB231SS;
+
+// AVX arithmetic instructions
+extern Instruction_AVX_Type1 VSQRTPD;
+extern Instruction_AVX_Type1 VSQRTPS;
+extern Instruction_AVX_Type1 VRSQRTPS;
+extern Instruction_AVX_Type1 VRCPPS;
+extern Instruction_AVX_Type2 VADDPD;
+extern Instruction_AVX_Type2 VADDPS;
+extern Instruction_AVX_Type2 VSUBPD;
+extern Instruction_AVX_Type2 VSUBPS;
+extern Instruction_AVX_Type2 VMULPD;
+extern Instruction_AVX_Type2 VMULPS;
+extern Instruction_AVX_Type2 VDIVPD;
+extern Instruction_AVX_Type2 VDIVPS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

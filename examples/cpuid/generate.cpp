@@ -4,18 +4,14 @@
 
 #include "cppasm.h"
 
-int main(int argc, char *argv[])
-try
+static void gen_Windows()
 {
-    argc = argc;
-    argv = argv;
-
     // Function name to be generated
     const std::string func_name { "execute_cpuid" };
-    comment("void " + func_name + "(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output)");
-    comment("cmd1 is in %rcx");
-    comment("cmd2 is in %rdx");
-    comment("p_output is in %r8");
+    comment("void " + func_name + "(size_t RAX_value, size_t RCX_value, size_t *pOut)");
+    comment("RAX_value is in %rcx");
+    comment("RCX_value is in %rdx");
+    comment("pOut is in %r8");
 
     global(func_name);
 
@@ -27,8 +23,8 @@ try
     r64 &reg_to_save = RBX;
     PUSH(reg_to_save);  // this register must be saved (and restored later)
 
-    MOV(RAX, RCX);  // cmd1
-    MOV(RCX, RDX);  // cmd2
+    MOV(RAX, RCX);  // RAX_value
+    MOV(RCX, RDX);  // RCX_value
 
     CPUID();
 
@@ -54,6 +50,15 @@ try
     POP(reg_to_save);   // restore register
 
     RET();
+}
+
+int main(int argc, char *argv[])
+try
+{
+    argc = argc;
+    argv = argv;
+
+    gen_Windows();
 
     return EXIT_SUCCESS;
 }

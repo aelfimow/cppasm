@@ -2,7 +2,9 @@
 #include <cstdlib>
 #include <stdexcept>
 
-extern "C" void execute_cpuid(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output);
+static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
+
+extern "C" void execute_cpuid(size_t RAX_value, size_t RCX_value, size_t *pOut);
 
 int main(int argc, char *argv[])
 try
@@ -10,7 +12,7 @@ try
     argc = argc;
     argv = argv;
 
-    uint64_t buffer[4U];
+    size_t buffer[4U];
 
     execute_cpuid(0, 0, buffer);
 

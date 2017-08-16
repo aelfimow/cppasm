@@ -1,7 +1,7 @@
-# void execute_cpuid(uint64_t cmd1, uint64_t cmd2, uint64_t *p_output)
-# cmd1 is in %rcx
-# cmd2 is in %rdx
-# p_output is in %r8
+# void execute_cpuid(size_t RAX_value, size_t RCX_value, size_t *pOut)
+# RAX_value is in %rcx
+# RCX_value is in %rdx
+# pOut is in %r8
 .global execute_cpuid
 .section .text
 execute_cpuid:

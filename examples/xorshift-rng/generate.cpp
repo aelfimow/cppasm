@@ -352,8 +352,34 @@ static void gen_XorshiftFunc(const xorshift_triple &triple, r64 &arg_reg)
 int main(int argc, char *argv[])
 try
 {
-    argc = argc;
-    argv = argv;
+    const std::string usageStr { "Usage: generate windows|linux" };
+
+    if (argc != 2)
+    {
+        throw std::invalid_argument(usageStr);
+    }
+
+    std::string os { argv[1] };
+
+    bool forWindows { os == "windows" };
+    bool forLinux { os == "linux" };
+
+    r64 *arg_reg { nullptr };
+
+    if (forWindows)
+    {
+        arg_reg = &RCX;
+    }
+
+    if (forLinux)
+    {
+        arg_reg = &RDI;
+    }
+
+    if (arg_reg == nullptr)
+    {
+        throw std::invalid_argument(usageStr);
+    }
 
     section code { ".text" };
     code.start();
@@ -361,7 +387,7 @@ try
     // Go through all tripples and generate corresponding function
     for (auto triple: all_triples)
     {
-        gen_XorshiftFunc(triple, RCX);
+        gen_XorshiftFunc(triple, *arg_reg);
     }
 
     return EXIT_SUCCESS;

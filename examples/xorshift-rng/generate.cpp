@@ -302,6 +302,54 @@ const std::vector<xorshift_triple> all_triples
     { 55, 9, 56 }
 };
 
+static void gen_XorshiftFunc(const xorshift_triple &triple)
+{
+    // Construct function name
+    std::ostringstream ss;
+    ss << "xorshift_func";
+    ss << "_" << static_cast<size_t>(triple.steps1);
+    ss << "_" << static_cast<size_t>(triple.steps2);
+    ss << "_" << static_cast<size_t>(triple.steps3);
+    const std::string func_name { ss.str() };
+
+    // Generate some meaningful comments with function name and argument etc.
+    const std::string str1 { "uint64_t " + func_name + "(uint64_t rng_state)" };
+    comment(str1);
+
+    r64 &arg_reg { RCX };   // Register containing function argument
+    r64 &ret_reg { RAX };   // Register containing return value
+
+    const std::string str2 { "Argument rng_state is in " + arg_reg.name() };
+    comment(str2);
+    const std::string str3 { "Return value is in " + ret_reg.name() };
+    comment(str3);
+
+    // Generate function
+    global(func_name);
+    label(func_name);
+
+    imm8 steps1 { triple.steps1 };
+    imm8 steps2 { triple.steps2 };
+    imm8 steps3 { triple.steps3 };
+
+    // 1st shift step
+    MOV(ret_reg, arg_reg);
+    SHL(arg_reg, steps1);
+    XOR(ret_reg, arg_reg);
+
+    // 2nd shift step
+    MOV(arg_reg, ret_reg);
+    SHR(ret_reg, steps2);
+    XOR(arg_reg, ret_reg);
+
+    // 3thd shift step
+    MOV(ret_reg, arg_reg);
+    SHL(arg_reg, steps3);
+    XOR(ret_reg, arg_reg);
+
+    RET();
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -314,50 +362,7 @@ try
     // Go through all tripples and generate corresponding function
     for (auto triple: all_triples)
     {
-        // Construct function name
-        std::ostringstream ss;
-        ss << "xorshift_func";
-        ss << "_" << static_cast<size_t>(triple.steps1);
-        ss << "_" << static_cast<size_t>(triple.steps2);
-        ss << "_" << static_cast<size_t>(triple.steps3);
-        const std::string func_name { ss.str() };
-
-        // Generate some meaningful comments with function name and argument etc.
-        const std::string str1 { "uint64_t " + func_name + "(uint64_t rng_state)" };
-        comment(str1);
-
-        r64 &arg_reg { RCX };   // Register containing function argument
-        r64 &ret_reg { RAX };   // Register containing return value
-
-        const std::string str2 { "Argument rng_state is in " + arg_reg.name() };
-        comment(str2);
-        const std::string str3 { "Return value is in " + ret_reg.name() };
-        comment(str3);
-
-        // Generate function
-        global(func_name);
-        label(func_name);
-
-        imm8 steps1 { triple.steps1 };
-        imm8 steps2 { triple.steps2 };
-        imm8 steps3 { triple.steps3 };
-
-        // 1st shift step
-        MOV(ret_reg, arg_reg);
-        SHL(arg_reg, steps1);
-        XOR(ret_reg, arg_reg);
-
-        // 2nd shift step
-        MOV(arg_reg, ret_reg);
-        SHR(ret_reg, steps2);
-        XOR(arg_reg, ret_reg);
-
-        // 3thd shift step
-        MOV(ret_reg, arg_reg);
-        SHL(arg_reg, steps3);
-        XOR(ret_reg, arg_reg);
-
-        RET();
+        gen_XorshiftFunc(triple);
     }
 
     return EXIT_SUCCESS;

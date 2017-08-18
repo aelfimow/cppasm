@@ -10,14 +10,27 @@ ASFLAGS64 += -march=corei7
 
 CPPASM_OBJ = ../../src/obj/*.o
 
+.PHONY: windows
+.PHONY: linux
 .PHONY: compile
 .PHONY: link_windows
 .PHONY: generate_windows
 .PHONY: asm_windows
 .PHONY: link_example_windows
 .PHONY: run_example_windows
+.PHONY: link_linux
+.PHONY: generate_linux
+.PHONY: asm_linux
+.PHONY: link_example_linux
+.PHONY: run_example_linux
 
-all: compile link_windows generate_windows asm_windows link_example_windows run_example_windows
+all:
+	@echo "Specify: windows or linux"
+
+windows: compile link_windows generate_windows asm_windows link_example_windows run_example_windows
+	@echo "No errors"
+
+linux: compile link_linux generate_linux asm_linux link_example_linux run_example_linux
 	@echo "No errors"
 
 compile:
@@ -38,3 +51,19 @@ link_example_windows:
 
 run_example_windows:
 	example.exe
+
+
+link_linux:
+	${CXX} generate.o ${CPPASM_OBJ} -o generate ${CXXFLAGS}
+
+generate_linux:
+	generate linux > result/xorshift_func_linux.S
+
+asm_linux:
+	${AS} result/xorshift_func_linux.S ${ASFLAGS64} -o xorshift_func_linux.o
+
+link_example_linux:
+	${CXX} example.o xorshift_func_linux.o -o example ${CXXFLAGS}
+
+run_example_linux:
+	./example

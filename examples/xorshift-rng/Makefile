@@ -13,28 +13,28 @@ CPPASM_OBJ = ../../src/obj/*.o
 .PHONY: compile
 .PHONY: link
 .PHONY: generate
-.PHONY: check
-.PHONY: link_example
-.PHONY: run_example
+.PHONY: asm
+.PHONY: link_example_windows
+.PHONY: run_example_windows
 
-all: compile link generate check link_example run_example
+all: compile link generate asm link_example_windows run_example_windows
 	@echo "No errors"
 
 compile:
-	$(CXX) -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
-	$(CXX) -c example.cpp -o example.o ${CXXFLAGS}
+	${CXX} -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
+	${CXX} -c example.cpp -o example.o ${CXXFLAGS}
 
 link:
-	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
+	${CXX} generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
 	generate.exe > result/xorshift_func.S
 
-check:
-	$(AS) result/xorshift_func.S ${ASFLAGS64} -o xorshift_func.o
+asm:
+	${AS} result/xorshift_func.S ${ASFLAGS64} -o xorshift_func.o
 
-link_example:
-	$(CXX) example.o xorshift_func.o -o example.exe ${CXXFLAGS}
+link_example_windows:
+	${CXX} example.o xorshift_func.o -o example.exe ${CXXFLAGS}
 
-run_example:
+run_example_windows:
 	example.exe

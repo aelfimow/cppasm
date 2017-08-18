@@ -302,7 +302,7 @@ const std::vector<xorshift_triple> all_triples
     { 55, 9, 56 }
 };
 
-static void gen_XorshiftFunc(const xorshift_triple &triple)
+static void gen_XorshiftFunc(const xorshift_triple &triple, r64 &arg_reg)
 {
     // Construct function name
     std::ostringstream ss;
@@ -316,7 +316,6 @@ static void gen_XorshiftFunc(const xorshift_triple &triple)
     const std::string str1 { "uint64_t " + func_name + "(uint64_t rng_state)" };
     comment(str1);
 
-    r64 &arg_reg { RCX };   // Register containing function argument
     r64 &ret_reg { RAX };   // Register containing return value
 
     const std::string str2 { "Argument rng_state is in " + arg_reg.name() };
@@ -362,7 +361,7 @@ try
     // Go through all tripples and generate corresponding function
     for (auto triple: all_triples)
     {
-        gen_XorshiftFunc(triple);
+        gen_XorshiftFunc(triple, RCX);
     }
 
     return EXIT_SUCCESS;

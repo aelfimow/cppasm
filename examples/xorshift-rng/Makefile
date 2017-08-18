@@ -11,30 +11,30 @@ ASFLAGS64 += -march=corei7
 CPPASM_OBJ = ../../src/obj/*.o
 
 .PHONY: compile
-.PHONY: link
-.PHONY: generate
-.PHONY: asm
+.PHONY: link_windows
+.PHONY: generate_windows
+.PHONY: asm_windows
 .PHONY: link_example_windows
 .PHONY: run_example_windows
 
-all: compile link generate asm link_example_windows run_example_windows
+all: compile link_windows generate_windows asm_windows link_example_windows run_example_windows
 	@echo "No errors"
 
 compile:
 	${CXX} -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
 	${CXX} -c example.cpp -o example.o ${CXXFLAGS}
 
-link:
+link_windows:
 	${CXX} generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
-generate:
-	generate.exe > result/xorshift_func.S
+generate_windows:
+	generate.exe windows > result/xorshift_func_windows.S
 
-asm:
-	${AS} result/xorshift_func.S ${ASFLAGS64} -o xorshift_func.o
+asm_windows:
+	${AS} result/xorshift_func_windows.S ${ASFLAGS64} -o xorshift_func_windows.o
 
 link_example_windows:
-	${CXX} example.o xorshift_func.o -o example.exe ${CXXFLAGS}
+	${CXX} example.o xorshift_func_windows.o -o example.exe ${CXXFLAGS}
 
 run_example_windows:
 	example.exe

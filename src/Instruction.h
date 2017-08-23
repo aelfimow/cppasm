@@ -10,6 +10,7 @@ class Instruction
         explicit Instruction(const std::string &mnem, const std::string &op);
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2);
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3);
+        explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4);
 
         Instruction() = delete;
         Instruction(const Instruction &instance) = delete;

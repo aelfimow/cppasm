@@ -21,6 +21,11 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
 {
 }
 
+Instruction::Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4) :
+    m_str { mnem + " " + op4 + ", " + op3 + ", " + op2 + ", " + op1 }
+{
+}
+
 std::string Instruction::to_str() const
 {
     return m_str;

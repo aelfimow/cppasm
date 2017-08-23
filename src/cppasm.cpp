@@ -1022,6 +1022,8 @@ Instruction_AVX_Type2 VHADDPS { asmout, "vhaddps" };
 Instruction_AVX_Type2 VHADDPD { asmout, "vhaddpd" };
 Instruction_AVX_Type2 VHSUBPS { asmout, "vhsubps" };
 Instruction_AVX_Type2 VHSUBPD { asmout, "vhsubpd" };
+Instruction_AVX_Type5 VCMPPS { asmout, "vcmpps" };
+Instruction_AVX_Type5 VCMPPD { asmout, "vcmppd" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

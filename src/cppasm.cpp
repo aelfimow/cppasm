@@ -1014,6 +1014,14 @@ Instruction_AVX_Type1 VCVTTPS2DQ { asmout, "vcvttps2dq" };
 Instruction_AVX_Type4 VCVTTPD2DQ { asmout, "vcvttpd2dq" };
 Instruction_AVX_Type4 VCVTPD2DQ { asmout, "vcvtpd2dq" };
 Instruction_AVX_Type3 VCVTDQ2PD { asmout, "vcvtdq2pd" };
+Instruction_AVX_Type2 VMINPS { asmout, "vminps" };
+Instruction_AVX_Type2 VMINPD { asmout, "vminpd" };
+Instruction_AVX_Type2 VMAXPS { asmout, "vmaxps" };
+Instruction_AVX_Type2 VMAXPD { asmout, "vmaxpd" };
+Instruction_AVX_Type2 VHADDPS { asmout, "vhaddps" };
+Instruction_AVX_Type2 VHADDPD { asmout, "vhaddpd" };
+Instruction_AVX_Type2 VHSUBPS { asmout, "vhsubps" };
+Instruction_AVX_Type2 VHSUBPD { asmout, "vhsubpd" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

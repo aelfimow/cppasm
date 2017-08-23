@@ -2340,6 +2340,14 @@ extern Instruction_AVX_Type1 VCVTTPS2DQ;
 extern Instruction_AVX_Type4 VCVTTPD2DQ;
 extern Instruction_AVX_Type4 VCVTPD2DQ;
 extern Instruction_AVX_Type3 VCVTDQ2PD;
+extern Instruction_AVX_Type2 VMINPS;
+extern Instruction_AVX_Type2 VMINPD;
+extern Instruction_AVX_Type2 VMAXPS;
+extern Instruction_AVX_Type2 VMAXPD;
+extern Instruction_AVX_Type2 VHADDPS;
+extern Instruction_AVX_Type2 VHADDPD;
+extern Instruction_AVX_Type2 VHSUBPS;
+extern Instruction_AVX_Type2 VHSUBPD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

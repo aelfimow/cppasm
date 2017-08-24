@@ -2391,6 +2391,9 @@ extern Instruction_AVX_Type7 VROUNDPD;
 extern Instruction_AVX_Type8 VMOVAPS;
 extern Instruction_AVX_Type8 VMOVAPD;
 extern Instruction_AVX_Type8 VMOVDQA;
+extern Instruction_AVX_Type8 VMOVUPS;
+extern Instruction_AVX_Type8 VMOVUPD;
+extern Instruction_AVX_Type8 VMOVDQU;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

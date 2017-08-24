@@ -1033,6 +1033,9 @@ Instruction_AVX_Type7 VROUNDPD { asmout, "vroundpd" };
 Instruction_AVX_Type8 VMOVAPS { asmout, "vmovaps" };
 Instruction_AVX_Type8 VMOVAPD { asmout, "vmovapd" };
 Instruction_AVX_Type8 VMOVDQA { asmout, "vmovdqa" };
+Instruction_AVX_Type8 VMOVUPS { asmout, "vmovups" };
+Instruction_AVX_Type8 VMOVUPD { asmout, "vmovupd" };
+Instruction_AVX_Type8 VMOVDQU { asmout, "vmovdqu" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

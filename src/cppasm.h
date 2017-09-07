@@ -1367,6 +1367,18 @@ using Instruction_AVX_Type9 = Instruction_4
     Operands_reg_reg<r64, ymm, no_suffix>
 >;
 
+using Instruction_AVX_Type10 = Instruction_2
+<
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_mem<ymm, m256, no_suffix>
+>;
+
+using Instruction_AVX_Type11 = Instruction_2
+<
+    Operands_mem_reg<m128, xmm, no_suffix>,
+    Operands_mem_reg<m256, ymm, no_suffix>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2404,6 +2416,11 @@ extern Instruction_AVX_Type8 VMOVUPD;
 extern Instruction_AVX_Type8 VMOVDQU;
 extern Instruction_AVX_Type9 VMOVMSKPS;
 extern Instruction_AVX_Type9 VMOVMSKPD;
+extern Instruction_AVX_Type10 VLDDQU;
+extern Instruction_AVX_Type11 VMOVNTPS;
+extern Instruction_AVX_Type11 VMOVNTPS;
+extern Instruction_AVX_Type11 VMOVNTDQ;
+extern Instruction_AVX_Type10 VMOVNTDQA;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

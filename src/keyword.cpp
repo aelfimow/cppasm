@@ -14,15 +14,15 @@ keyword::keyword(const std::string str) :
 
 void keyword::operator()(const std::string &name)
 {
-    bool notEmpty { m_str.size() != 0 };
+    bool const isEmpty { m_str.size() == 0 };
 
-    if (notEmpty)
+    if (isEmpty)
     {
-        std::cout << m_str.c_str() << name.c_str() << std::endl;
+        std::cout << name.c_str() << std::endl;
     }
     else
     {
-        std::cout << name.c_str() << std::endl;
+        std::cout << m_str.c_str() << " " << name.c_str() << std::endl;
     }
 }
 

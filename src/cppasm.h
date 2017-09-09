@@ -15,8 +15,7 @@
 #include "cr.h"
 #include "dr.h"
 #include "st.h"
-#include "comment.h"
-#include "global.h"
+#include "keyword.h"
 #include "label.h"
 #include "section.h"
 
@@ -2467,8 +2466,8 @@ extern Instruction_VMOVQ VMOVQ;
 extern Instruction_MXCSR VLDMXCSR;
 extern Instruction_MXCSR VSTMXCSR;
 
-extern Keyword_comment comment;
-extern Keyword_global global;
+extern keyword comment;
+extern keyword global;
 extern Keyword_label label;
 
 #endif

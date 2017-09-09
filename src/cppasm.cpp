@@ -1089,9 +1089,9 @@ Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
 Instruction_MXCSR VLDMXCSR { asmout, "vldmxcsr" };
 Instruction_MXCSR VSTMXCSR { asmout, "vstmxcsr" };
 
-Keyword_comment comment;
-Keyword_global global;
 Keyword_label label;
+keyword global { ".global" };
+keyword comment { "#" };
 
 const std::string no_suffix { "" };
 const std::string suffix_bw { "bw" };

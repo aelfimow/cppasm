@@ -5,6 +5,7 @@ windows:
 	${MAKE} -C clflush
 	${MAKE} -C cpuid
 	${MAKE} -C fpuconst
+	${MAKE} -C lea-arithm
 	${MAKE} -C rdtsc
 	${MAKE} -C thousand-nops
 	${MAKE} -C xorshift-rng windows
@@ -14,6 +15,7 @@ linux:
 	${MAKE} -C clflush
 	${MAKE} -C cpuid
 	${MAKE} -C fpuconst
+	${MAKE} -C lea-arithm
 	${MAKE} -C rdtsc
 	${MAKE} -C thousand-nops
 	${MAKE} -C xorshift-rng linux

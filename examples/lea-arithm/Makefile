@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o lea_arithm.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	example.exe 1 2

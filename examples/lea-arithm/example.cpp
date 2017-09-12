@@ -1,6 +1,9 @@
 #include <iostream>
+#include <sstream>
 #include <cstdlib>
 #include <stdexcept>
+
+static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
 
 extern "C" size_t lea_base_index(size_t a, size_t b);
 
@@ -18,14 +21,14 @@ try
     size_t a = 0;
     {
         std::stringstream ss;
-        ss << std::hex << argv[1];
+        ss << std::dec << argv[1];
         ss >> a;
     }
 
     size_t b = 0;
     {
         std::stringstream ss;
-        ss << std::hex << argv[2];
+        ss << std::dec << argv[2];
         ss >> b;
     }
 

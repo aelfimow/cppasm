@@ -4,12 +4,8 @@
 
 #include "cppasm.h"
 
-int main(int argc, char *argv[])
-try
+static void gen_Func1()
 {
-    argc = argc;
-    argv = argv;
-
     // Function name to be generated
     const std::string func_name { "lea_base_index" };
     comment("size_t lea_base_index(size_t a, size_t b)");
@@ -18,9 +14,6 @@ try
 
     global(func_name);
 
-    section code { ".text" };
-    code.start();
-
     label(func_name);
 
     m64 addr { RCX, RDX };
@@ -28,6 +21,78 @@ try
     LEA(RAX, addr);
 
     RET();
+}
+
+static void gen_Func2()
+{
+    // Function name to be generated
+    const std::string func_name { "lea_base_2x_index" };
+    comment("size_t " + func_name + "(size_t a, size_t b)");
+    comment("a is in %rcx");
+    comment("b is in %rdx");
+
+    global(func_name);
+
+    label(func_name);
+
+    m64 addr { RCX, RDX, 2 };
+
+    LEA(RAX, addr);
+
+    RET();
+}
+
+static void gen_Func3()
+{
+    // Function name to be generated
+    const std::string func_name { "lea_base_4x_index" };
+    comment("size_t " + func_name + "(size_t a, size_t b)");
+    comment("a is in %rcx");
+    comment("b is in %rdx");
+
+    global(func_name);
+
+    label(func_name);
+
+    m64 addr { RCX, RDX, 4 };
+
+    LEA(RAX, addr);
+
+    RET();
+}
+
+static void gen_Func4()
+{
+    // Function name to be generated
+    const std::string func_name { "lea_base_8x_index" };
+    comment("size_t " + func_name + "(size_t a, size_t b)");
+    comment("a is in %rcx");
+    comment("b is in %rdx");
+
+    global(func_name);
+
+    label(func_name);
+
+    m64 addr { RCX, RDX, 8 };
+
+    LEA(RAX, addr);
+
+    RET();
+}
+
+int main(int argc, char *argv[])
+try
+{
+    argc = argc;
+    argv = argv;
+
+    section code { ".text" };
+    code.start();
+
+    gen_Func1();
+    gen_Func2();
+    gen_Func3();
+    gen_Func4();
 
     return EXIT_SUCCESS;
 }

@@ -7,8 +7,8 @@
 static void gen_Func1()
 {
     // Function name to be generated
-    const std::string func_name { "lea_base_index" };
-    comment("size_t lea_base_index(size_t a, size_t b)");
+    const std::string func_name { "a_plus_b" };
+    comment("size_t " + func_name + "(size_t a, size_t b)");
     comment("a is in %rcx");
     comment("b is in %rdx");
 
@@ -26,7 +26,7 @@ static void gen_Func1()
 static void gen_Func2()
 {
     // Function name to be generated
-    const std::string func_name { "lea_base_2x_index" };
+    const std::string func_name { "a_plus_2b" };
     comment("size_t " + func_name + "(size_t a, size_t b)");
     comment("a is in %rcx");
     comment("b is in %rdx");
@@ -45,7 +45,7 @@ static void gen_Func2()
 static void gen_Func3()
 {
     // Function name to be generated
-    const std::string func_name { "lea_base_4x_index" };
+    const std::string func_name { "a_plus_4b" };
     comment("size_t " + func_name + "(size_t a, size_t b)");
     comment("a is in %rcx");
     comment("b is in %rdx");
@@ -64,7 +64,7 @@ static void gen_Func3()
 static void gen_Func4()
 {
     // Function name to be generated
-    const std::string func_name { "lea_base_8x_index" };
+    const std::string func_name { "a_plus_8b" };
     comment("size_t " + func_name + "(size_t a, size_t b)");
     comment("a is in %rcx");
     comment("b is in %rdx");

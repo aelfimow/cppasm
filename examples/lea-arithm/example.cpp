@@ -5,10 +5,10 @@
 
 static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
 
-extern "C" size_t lea_base_index(size_t a, size_t b);
-extern "C" size_t lea_base_2x_index(size_t a, size_t b);
-extern "C" size_t lea_base_4x_index(size_t a, size_t b);
-extern "C" size_t lea_base_8x_index(size_t a, size_t b);
+extern "C" size_t a_plus_b(size_t a, size_t b);
+extern "C" size_t a_plus_2b(size_t a, size_t b);
+extern "C" size_t a_plus_4b(size_t a, size_t b);
+extern "C" size_t a_plus_8b(size_t a, size_t b);
 
 int main(int argc, char *argv[])
 try
@@ -35,10 +35,10 @@ try
         ss >> b;
     }
 
-    auto result1 = lea_base_index(a, b);
-    auto result2 = lea_base_2x_index(a, b);
-    auto result3 = lea_base_4x_index(a, b);
-    auto result4 = lea_base_8x_index(a, b);
+    auto result1 = a_plus_b(a, b);
+    auto result2 = a_plus_2b(a, b);
+    auto result3 = a_plus_4b(a, b);
+    auto result4 = a_plus_8b(a, b);
 
     std::cout << "a = " << a << std::endl;
     std::cout << "b = " << b << std::endl;

@@ -2420,6 +2420,9 @@ extern Instruction_AVX_Type11 VMOVNTPS;
 extern Instruction_AVX_Type11 VMOVNTPS;
 extern Instruction_AVX_Type11 VMOVNTDQ;
 extern Instruction_AVX_Type10 VMOVNTDQA;
+extern Instruction_AVX_Type7 VMOVSHDUP;
+extern Instruction_AVX_Type7 VMOVSLDUP;
+extern Instruction_AVX_Type7 VMOVDDUP;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

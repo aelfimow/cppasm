@@ -1043,6 +1043,9 @@ Instruction_AVX_Type11 VMOVNTPS { asmout, "vmovntps" };
 Instruction_AVX_Type11 VMOVNTPD { asmout, "vmovntpd" };
 Instruction_AVX_Type11 VMOVNTDQ { asmout, "vmovntdq" };
 Instruction_AVX_Type10 VMOVNTDQA { asmout, "vmovntdqa" };
+Instruction_AVX_Type7 VMOVSHDUP { asmout, "vmovshdup" };
+Instruction_AVX_Type7 VMOVSLDUP { asmout, "vmovsldup" };
+Instruction_AVX_Type7 VMOVDDUP { asmout, "vmovddup" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

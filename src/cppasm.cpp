@@ -1046,6 +1046,10 @@ Instruction_AVX_Type10 VMOVNTDQA { asmout, "vmovntdqa" };
 Instruction_AVX_Type7 VMOVSHDUP { asmout, "vmovshdup" };
 Instruction_AVX_Type7 VMOVSLDUP { asmout, "vmovsldup" };
 Instruction_AVX_Type7 VMOVDDUP { asmout, "vmovddup" };
+Instruction_AVX_Type2 VUNPCKHPD { asmout, "vunpckhpd" };
+Instruction_AVX_Type2 VUNPCKLPD { asmout, "vunpcklpd" };
+Instruction_AVX_Type2 VUNPCKHPS { asmout, "vunpckhps" };
+Instruction_AVX_Type2 VUNPCKLPS { asmout, "vunpcklps" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

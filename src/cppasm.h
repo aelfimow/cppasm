@@ -2423,6 +2423,10 @@ extern Instruction_AVX_Type10 VMOVNTDQA;
 extern Instruction_AVX_Type7 VMOVSHDUP;
 extern Instruction_AVX_Type7 VMOVSLDUP;
 extern Instruction_AVX_Type7 VMOVDDUP;
+extern Instruction_AVX_Type2 VUNPCKHPD;
+extern Instruction_AVX_Type2 VUNPCKLPD;
+extern Instruction_AVX_Type2 VUNPCKHPS;
+extern Instruction_AVX_Type2 VUNPCKLPS;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

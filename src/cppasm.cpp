@@ -1056,6 +1056,15 @@ Instruction_AVX_Type5 VSHUFPS { asmout, "vshufps" };
 Instruction_AVX_Type5 VSHUFPD { asmout, "vshufpd" };
 Instruction_AVX_Type12 VBLENDVPD { asmout, "vblendvpd" };
 Instruction_AVX_Type12 VBLENDVPS { asmout, "vblendvps" };
+Instruction_AVX_Type1 VPTEST { asmout, "vptest" };
+Instruction_AVX_Type2 VXORPS { asmout, "vxorps" };
+Instruction_AVX_Type2 VXORPD { asmout, "vxorpd" };
+Instruction_AVX_Type2 VORPS { asmout, "vorps" };
+Instruction_AVX_Type2 VORPD { asmout, "vorpd" };
+Instruction_AVX_Type2 VANDPS { asmout, "vandps" };
+Instruction_AVX_Type2 VANDPD { asmout, "vandpd" };
+Instruction_AVX_Type2 VANDNPS { asmout, "vandnps" };
+Instruction_AVX_Type2 VANDNPD { asmout, "vandnpd" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

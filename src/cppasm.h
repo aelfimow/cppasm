@@ -2441,6 +2441,15 @@ extern Instruction_AVX_Type5 VSHUFPS;
 extern Instruction_AVX_Type5 VSHUFPD;
 extern Instruction_AVX_Type12 VBLENDVPD;
 extern Instruction_AVX_Type12 VBLENDVPS;
+extern Instruction_AVX_Type1 VPTEST;
+extern Instruction_AVX_Type2 VXORPS;
+extern Instruction_AVX_Type2 VXORPD;
+extern Instruction_AVX_Type2 VORPS;
+extern Instruction_AVX_Type2 VORPD;
+extern Instruction_AVX_Type2 VANDPS;
+extern Instruction_AVX_Type2 VANDPD;
+extern Instruction_AVX_Type2 VANDNPS;
+extern Instruction_AVX_Type2 VANDNPD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

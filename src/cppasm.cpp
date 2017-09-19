@@ -1050,6 +1050,12 @@ Instruction_AVX_Type2 VUNPCKHPD { asmout, "vunpckhpd" };
 Instruction_AVX_Type2 VUNPCKLPD { asmout, "vunpcklpd" };
 Instruction_AVX_Type2 VUNPCKHPS { asmout, "vunpckhps" };
 Instruction_AVX_Type2 VUNPCKLPS { asmout, "vunpcklps" };
+Instruction_AVX_Type5 VBLENDPS { asmout, "vblendps" };
+Instruction_AVX_Type5 VBLENDPD { asmout, "vblendpd" };
+Instruction_AVX_Type5 VSHUFPS { asmout, "vshufps" };
+Instruction_AVX_Type5 VSHUFPD { asmout, "vshufpd" };
+Instruction_AVX_Type12 VBLENDVPD { asmout, "vblendvpd" };
+Instruction_AVX_Type12 VBLENDVPS { asmout, "vblendvps" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

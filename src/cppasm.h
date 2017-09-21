@@ -1386,6 +1386,28 @@ using Instruction_AVX_Type12 = Instruction_4
     Operands_reg_reg_mem_reg<ymm, ymm, m128, ymm>
 >;
 
+using Instruction_AVX_Type13 = Instruction_2
+<
+    Operands_reg_mem<xmm, m32, no_suffix>,
+    Operands_reg_mem<ymm, m32, no_suffix>
+>;
+
+using Instruction_AVX_Type14 = Instruction_1
+<
+    Operands_reg_mem<ymm, m64, no_suffix>
+>;
+
+using Instruction_AVX_Type15 = Instruction_1
+<
+    Operands_reg_mem<ymm, m128, no_suffix>
+>;
+
+using Instruction_AVX_Type16 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, ymm, imm8>,
+    Operands_mem_reg_imm<m128, ymm, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2452,6 +2474,10 @@ extern Instruction_AVX_Type2 VANDNPS;
 extern Instruction_AVX_Type2 VANDNPD;
 extern Instruction_NoOperands VZEROALL;
 extern Instruction_NoOperands VZEROUPPER;
+extern Instruction_AVX_Type13 VBROADCASTSS;
+extern Instruction_AVX_Type14 VBROADCASTSD;
+extern Instruction_AVX_Type15 VBROADCASTF128;
+extern Instruction_AVX_Type16 VEXTRACTF128;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

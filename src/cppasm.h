@@ -2450,6 +2450,8 @@ extern Instruction_AVX_Type2 VANDPS;
 extern Instruction_AVX_Type2 VANDPD;
 extern Instruction_AVX_Type2 VANDNPS;
 extern Instruction_AVX_Type2 VANDNPD;
+extern Instruction_NoOperands VZEROALL;
+extern Instruction_NoOperands VZEROUPPER;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

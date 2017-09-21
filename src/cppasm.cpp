@@ -1065,6 +1065,8 @@ Instruction_AVX_Type2 VANDPS { asmout, "vandps" };
 Instruction_AVX_Type2 VANDPD { asmout, "vandpd" };
 Instruction_AVX_Type2 VANDNPS { asmout, "vandnps" };
 Instruction_AVX_Type2 VANDNPD { asmout, "vandnpd" };
+Instruction_NoOperands VZEROALL { asmout, "vzeroall" };
+Instruction_NoOperands VZEROUPPER { asmout, "vzeroupper" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

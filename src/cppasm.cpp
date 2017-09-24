@@ -1074,6 +1074,11 @@ Instruction_AVX_Type16 VEXTRACTF128 { asmout, "vextractf128" };
 Instruction_AVX_Type17 VINSERTF128 { asmout, "vinsertf128" };
 Instruction_AVX_Type18 VMASKMOVPS { asmout, "vmaskmovps" };
 Instruction_AVX_Type18 VMASKMOVPD { asmout, "vmaskmovpd" };
+Instruction_AVX_Type19 VPERMILPD { asmout, "vpermilpd" };
+Instruction_AVX_Type19 VPERMILPS { asmout, "vpermilps" };
+Instruction_AVX_Type20 VPERM2F128 { asmout, "vperm2f128" };
+Instruction_AVX_Type1 VTESTPS { asmout, "vtestps" };
+Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

@@ -1422,6 +1422,24 @@ using Instruction_AVX_Type18 = Instruction_4
     Operands_mem_reg_reg<m256, ymm, ymm>
 >;
 
+using Instruction_AVX_Type19 = Instruction_8
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m128>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>,
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>,
+    Operands_reg_reg_imm<ymm, ymm, imm8>,
+    Operands_reg_mem_imm<ymm, m256, imm8>
+>;
+
+using Instruction_AVX_Type20 = Instruction_2
+<
+    Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2495,6 +2513,11 @@ extern Instruction_AVX_Type16 VEXTRACTF128;
 extern Instruction_AVX_Type17 VINSERTF128;
 extern Instruction_AVX_Type18 VMASKMOVPS;
 extern Instruction_AVX_Type18 VMASKMOVPD;
+extern Instruction_AVX_Type19 VPERMILPD;
+extern Instruction_AVX_Type19 VPERMILPS;
+extern Instruction_AVX_Type20 VPERM2F128;
+extern Instruction_AVX_Type1 VTESTPS;
+extern Instruction_AVX_Type1 VTESTPD;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

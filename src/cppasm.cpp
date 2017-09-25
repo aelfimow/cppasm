@@ -1079,6 +1079,9 @@ Instruction_AVX_Type19 VPERMILPS { asmout, "vpermilps" };
 Instruction_AVX_Type20 VPERM2F128 { asmout, "vperm2f128" };
 Instruction_AVX_Type1 VTESTPS { asmout, "vtestps" };
 Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
+Instruction_AVX_Type21 VCVTSI2SS { asmout, "vcvtsi2ss" };
+Instruction_AVX_Type21 VCVTSI2SD { asmout, "vcvtsi2sd" };
+Instruction_CVTSD2SI VCVTSD2SI { asmout, "vcvtsd2si" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

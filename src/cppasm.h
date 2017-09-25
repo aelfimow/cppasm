@@ -1440,6 +1440,14 @@ using Instruction_AVX_Type20 = Instruction_2
     Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
 >;
 
+using Instruction_AVX_Type21 = Instruction_4
+<
+    Operands_reg_reg_reg<xmm, xmm, r32>,
+    Operands_reg_reg_mem<xmm, xmm, m32>,
+    Operands_reg_reg_reg<xmm, xmm, r64>,
+    Operands_reg_reg_mem<xmm, xmm, m64>
+>;
+
 extern asmstream asmout;
 
 extern r8 AL;
@@ -2518,6 +2526,9 @@ extern Instruction_AVX_Type19 VPERMILPS;
 extern Instruction_AVX_Type20 VPERM2F128;
 extern Instruction_AVX_Type1 VTESTPS;
 extern Instruction_AVX_Type1 VTESTPD;
+extern Instruction_AVX_Type21 VCVTSI2SS;
+extern Instruction_AVX_Type21 VCVTSI2SD;
+extern Instruction_CVTSD2SI VCVTSD2SI;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

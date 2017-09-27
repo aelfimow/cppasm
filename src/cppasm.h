@@ -2529,6 +2529,9 @@ extern Instruction_AVX_Type1 VTESTPD;
 extern Instruction_AVX_Type21 VCVTSI2SS;
 extern Instruction_AVX_Type21 VCVTSI2SD;
 extern Instruction_CVTSD2SI VCVTSD2SI;
+extern Instruction_SSE_Conv4 VCVTTSS2SI;
+extern Instruction_CVTSD2SI VCVTTSD2SI;
+extern Instruction_SSE_Conv4 VCVTSS2SI;
 
 // System instructions
 extern Instruction_NoOperands CLAC;

@@ -1082,6 +1082,9 @@ Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
 Instruction_AVX_Type21 VCVTSI2SS { asmout, "vcvtsi2ss" };
 Instruction_AVX_Type21 VCVTSI2SD { asmout, "vcvtsi2sd" };
 Instruction_CVTSD2SI VCVTSD2SI { asmout, "vcvtsd2si" };
+Instruction_SSE_Conv4 VCVTTSS2SI { asmout, "vcvttss2si" };
+Instruction_CVTSD2SI VCVTTSD2SI { asmout, "vcvttsd2si" };
+Instruction_SSE_Conv4 VCVTSS2SI { asmout, "vcvtss2si" };
 
 // System instructions
 Instruction_NoOperands CLAC { asmout, "clac" };

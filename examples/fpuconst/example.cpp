@@ -4,6 +4,9 @@
 
 extern "C" void fpuconst_fp32(float *p);
 extern "C" void fpuconst_fp64(double *p);
+extern "C" float fp32_zero(void);
+extern "C" double fp64_zero(void);
+extern "C" long double fp80_zero(void);
 
 int main(int argc, char *argv[])
 try
@@ -30,6 +33,8 @@ try
     }
 
     std::cout << std::endl;
+
+    std::cout << fp32_zero() << "; " << fp64_zero() << "; " << fp80_zero() << std::endl;
 
     return EXIT_SUCCESS;
 }

@@ -30,7 +30,7 @@ static void gen_fpuconst_fp32()
 
     imm8 offset { sizeof(float) };
     r64 &buffer_reg { RCX };
-    m32 p_buffer { RCX };
+    m32fp p_buffer { RCX };
 
     for (size_t i = 0U; i < MaxFpuConsts; ++i)
     {
@@ -58,7 +58,7 @@ static void gen_fpuconst_fp64()
 
     imm8 offset { sizeof(double) };
     r64 &buffer_reg { RCX };
-    m64 p_buffer { RCX };
+    m64fp p_buffer { RCX };
 
     for (size_t i = 0U; i < MaxFpuConsts; ++i)
     {
@@ -78,33 +78,42 @@ static void gen_fpuconst_zero()
     {
         const std::string func_name { "fp32_zero" };
 
-        comment("float " + func_name + "(void)");
+        comment("void " + func_name + "(float *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLDZ();
+        m32fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 
     {
         const std::string func_name { "fp64_zero" };
 
-        comment("double " + func_name + "(void)");
+        comment("void " + func_name + "(double *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLDZ();
+        m64fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 
     {
         const std::string func_name { "fp80_zero" };
 
-        comment("long double " + func_name + "(void)");
+        comment("void " + func_name + "(long double *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLDZ();
+        m80fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 }
@@ -114,33 +123,42 @@ static void gen_fpuconst_one()
     {
         const std::string func_name { "fp32_one" };
 
-        comment("float " + func_name + "(void)");
+        comment("void " + func_name + "(float *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLD1();
+        m32fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 
     {
         const std::string func_name { "fp64_one" };
 
-        comment("double " + func_name + "(void)");
+        comment("void " + func_name + "(double *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLD1();
+        m64fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 
     {
         const std::string func_name { "fp80_one" };
 
-        comment("long double " + func_name + "(void)");
+        comment("void " + func_name + "(long double *p)");
+        comment("p is in %rcx");
         global(func_name);
         label(func_name);
 
         FLD1();
+        m80fp addr { RCX };
+        FSTP(addr);
         RET();
     }
 }

@@ -49,33 +49,45 @@ fpuconst_fp64:
 	add $0x08, %rcx
 	fstpl (%rcx)
 	ret
-# float fp32_zero(void)
+# void fp32_zero(float *p)
+# p is in %rcx
 .global fp32_zero
 fp32_zero:
 	fldz
+	fstps (%rcx)
 	ret
-# double fp64_zero(void)
+# void fp64_zero(double *p)
+# p is in %rcx
 .global fp64_zero
 fp64_zero:
 	fldz
+	fstpl (%rcx)
 	ret
-# long double fp80_zero(void)
+# void fp80_zero(long double *p)
+# p is in %rcx
 .global fp80_zero
 fp80_zero:
 	fldz
+	fstpt (%rcx)
 	ret
-# float fp32_one(void)
+# void fp32_one(float *p)
+# p is in %rcx
 .global fp32_one
 fp32_one:
 	fld1
+	fstps (%rcx)
 	ret
-# double fp64_one(void)
+# void fp64_one(double *p)
+# p is in %rcx
 .global fp64_one
 fp64_one:
 	fld1
+	fstpl (%rcx)
 	ret
-# long double fp80_one(void)
+# void fp80_one(long double *p)
+# p is in %rcx
 .global fp80_one
 fp80_one:
 	fld1
+	fstpt (%rcx)
 	ret

@@ -45,6 +45,34 @@ static void gen_fpuconst_fp32()
     RET();
 }
 
+static void gen_fpuconst_fp64()
+{
+    const std::string func_name { "fpuconst_fp64" };
+    comment("void fpuconst_fp64(double *p)");
+    comment("p is in %rcx");
+
+    global(func_name);
+    label(func_name);
+
+    load_fpu_const();
+
+    imm8 offset { sizeof(double) };
+    r64 &buffer_reg { RCX };
+    m64 p_buffer { RCX };
+
+    for (size_t i = 0U; i < MaxFpuConsts; ++i)
+    {
+        FSTP(p_buffer);
+
+        if (i < (MaxFpuConsts - 1U))
+        {
+            ADD(buffer_reg, offset);
+        }
+    }
+
+    RET();
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -55,33 +83,7 @@ try
     code.start();
 
     gen_fpuconst_fp32();
-
-    {
-        const std::string func_name { "fpuconst_fp64" };
-        comment("void fpuconst_fp64(double *p)");
-        comment("p is in %rcx");
-
-        global(func_name);
-        label(func_name);
-
-        load_fpu_const();
-
-        imm8 offset { sizeof(double) };
-        r64 &buffer_reg { RCX };
-        m64 p_buffer { RCX };
-
-        for (size_t i = 0U; i < MaxFpuConsts; ++i)
-        {
-            FSTP(p_buffer);
-
-            if (i < (MaxFpuConsts - 1U))
-            {
-                ADD(buffer_reg, offset);
-            }
-        }
-
-        RET();
-    }
+    gen_fpuconst_fp64();
 
     return EXIT_SUCCESS;
 }

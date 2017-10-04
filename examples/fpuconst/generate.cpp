@@ -109,6 +109,42 @@ static void gen_fpuconst_zero()
     }
 }
 
+static void gen_fpuconst_one()
+{
+    {
+        const std::string func_name { "fp32_one" };
+
+        comment("float " + func_name + "(void)");
+        global(func_name);
+        label(func_name);
+
+        FLD1();
+        RET();
+    }
+
+    {
+        const std::string func_name { "fp64_one" };
+
+        comment("double " + func_name + "(void)");
+        global(func_name);
+        label(func_name);
+
+        FLD1();
+        RET();
+    }
+
+    {
+        const std::string func_name { "fp80_one" };
+
+        comment("long double " + func_name + "(void)");
+        global(func_name);
+        label(func_name);
+
+        FLD1();
+        RET();
+    }
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -121,6 +157,7 @@ try
     gen_fpuconst_fp32();
     gen_fpuconst_fp64();
     gen_fpuconst_zero();
+    gen_fpuconst_one();
 
     return EXIT_SUCCESS;
 }

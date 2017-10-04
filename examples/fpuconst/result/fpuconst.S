@@ -64,3 +64,18 @@ fp64_zero:
 fp80_zero:
 	fldz
 	ret
+# float fp32_one(void)
+.global fp32_one
+fp32_one:
+	fld1
+	ret
+# double fp64_one(void)
+.global fp64_one
+fp64_one:
+	fld1
+	ret
+# long double fp80_one(void)
+.global fp80_one
+fp80_one:
+	fld1
+	ret

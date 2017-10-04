@@ -4,22 +4,22 @@
 
 #include "cppasm.h"
 
+static void load_fpu_const()
+{
+    FLD1();
+    FLDL2T();
+    FLDL2E();
+    FLDPI();
+    FLDLG2();
+    FLDLN2();
+    FLDZ();
+}
+
 int main(int argc, char *argv[])
 try
 {
     argc = argc;
     argv = argv;
-
-    auto load_fpu_const = []()
-    {
-        FLD1();
-        FLDL2T();
-        FLDL2E();
-        FLDPI();
-        FLDLG2();
-        FLDLN2();
-        FLDZ();
-    };
 
     constexpr size_t max = 7U;
 

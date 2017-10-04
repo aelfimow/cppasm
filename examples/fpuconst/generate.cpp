@@ -4,6 +4,8 @@
 
 #include "cppasm.h"
 
+static constexpr size_t MaxFpuConsts = 7U;
+
 static void load_fpu_const()
 {
     FLD1();
@@ -15,43 +17,44 @@ static void load_fpu_const()
     FLDZ();
 }
 
+static void gen_fpuconst_fp32()
+{
+    const std::string func_name { "fpuconst_fp32" };
+    comment("void fpuconst_fp32(float *p)");
+    comment("p is in %rcx");
+
+    global(func_name);
+    label(func_name);
+
+    load_fpu_const();
+
+    imm8 offset { sizeof(float) };
+    r64 &buffer_reg { RCX };
+    m32 p_buffer { RCX };
+
+    for (size_t i = 0U; i < MaxFpuConsts; ++i)
+    {
+        FSTP(p_buffer);
+
+        if (i < (MaxFpuConsts - 1U))
+        {
+            ADD(buffer_reg, offset);
+        }
+    }
+
+    RET();
+}
+
 int main(int argc, char *argv[])
 try
 {
     argc = argc;
     argv = argv;
 
-    constexpr size_t max = 7U;
-
     section code { ".text" };
     code.start();
 
-    {
-        const std::string func_name { "fpuconst_fp32" };
-        comment("void fpuconst_fp32(float *p)");
-        comment("p is in %rcx");
-
-        global(func_name);
-        label(func_name);
-
-        load_fpu_const();
-
-        imm8 offset { sizeof(float) };
-        r64 &buffer_reg { RCX };
-        m32 p_buffer { RCX };
-
-        for (size_t i = 0U; i < max; ++i)
-        {
-            FSTP(p_buffer);
-
-            if (i < (max - 1U))
-            {
-                ADD(buffer_reg, offset);
-            }
-        }
-
-        RET();
-    }
+    gen_fpuconst_fp32();
 
     {
         const std::string func_name { "fpuconst_fp64" };
@@ -67,11 +70,11 @@ try
         r64 &buffer_reg { RCX };
         m64 p_buffer { RCX };
 
-        for (size_t i = 0U; i < max; ++i)
+        for (size_t i = 0U; i < MaxFpuConsts; ++i)
         {
             FSTP(p_buffer);
 
-            if (i < (max - 1U))
+            if (i < (MaxFpuConsts - 1U))
             {
                 ADD(buffer_reg, offset);
             }

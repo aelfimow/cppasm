@@ -10,15 +10,15 @@ class m
 {
     public:
         m() { }
+        virtual ~m() { }
 
+        virtual std::string to_str() const = 0;
+
+    public:
         m(const m &instance) = delete;
         m(const m &&instance) = delete;
         m &operator=(const m &instance) = delete;
         m &operator=(const m &&instance) = delete;
-
-        virtual ~m() { }
-
-        virtual std::string to_str() const = 0;
 };
 
 template

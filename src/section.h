@@ -7,19 +7,19 @@ class section
 {
     public:
         explicit section(const std::string &name);
-
-        section() = delete;
-        section(const section &instance) = delete;
-        section(const section &&instance) = delete;
-        section &operator=(const section &instance) = delete;
-        section &operator=(const section &&instance) = delete;
-
         ~section();
 
         void start();
 
     private:
         const std::string m_name;
+
+    public:
+        section() = delete;
+        section(const section &instance) = delete;
+        section(const section &&instance) = delete;
+        section &operator=(const section &instance) = delete;
+        section &operator=(const section &&instance) = delete;
 };
 
 #endif

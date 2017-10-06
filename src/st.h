@@ -7,13 +7,6 @@ class st
 {
     public:
         st();
-
-        st(const st &instance) = default;
-        st(st &&instance) = default;
-
-        st &operator=(const st &instance) = delete;
-        st &operator=(const st &&instance) = delete;
-
         ~st();
 
         st operator()(size_t i);
@@ -24,6 +17,12 @@ class st
         explicit st(size_t i);
 
         std::string m_name;
+
+    public:
+        st(const st &instance) = default;
+        st(st &&instance) = default;
+        st &operator=(const st &instance) = delete;
+        st &operator=(const st &&instance) = delete;
 };
 
 #endif

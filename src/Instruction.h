@@ -12,18 +12,19 @@ class Instruction
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3);
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4);
 
-        Instruction() = delete;
-        Instruction(const Instruction &instance) = delete;
-        Instruction(const Instruction &&instance) = delete;
-        Instruction &operator=(const Instruction &instance) = delete;
-        Instruction &operator=(const Instruction &&instance) = delete;
-
         std::string to_str() const;
 
         ~Instruction();
 
     private:
         const std::string m_str;
+
+    public:
+        Instruction() = delete;
+        Instruction(const Instruction &instance) = delete;
+        Instruction(const Instruction &&instance) = delete;
+        Instruction &operator=(const Instruction &instance) = delete;
+        Instruction &operator=(const Instruction &&instance) = delete;
 };
 
 #endif

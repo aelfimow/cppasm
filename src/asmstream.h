@@ -8,11 +8,6 @@ class asmstream
     public:
         asmstream();
 
-        asmstream(const asmstream &instance) = delete;
-        asmstream(const asmstream &&instance) = delete;
-        asmstream &operator=(const asmstream &instance) = delete;
-        asmstream &operator=(const asmstream &&instance) = delete;
-
         void operator<<(const Instruction &instr);
 
         void prefix(std::string str);
@@ -21,6 +16,12 @@ class asmstream
 
     private:
         bool m_prefix;
+
+    public:
+        asmstream(const asmstream &instance) = delete;
+        asmstream(const asmstream &&instance) = delete;
+        asmstream &operator=(const asmstream &instance) = delete;
+        asmstream &operator=(const asmstream &&instance) = delete;
 };
 
 #endif

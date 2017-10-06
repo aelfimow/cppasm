@@ -430,14 +430,14 @@ Instruction1_Type1 UD1 { asmout, "ud1" };
 Instruction1_Type1 UD2 { asmout, "ud2" };
 Instruction1_Type1 CPUID { asmout, "cpuid" };
 Instruction1_Type1 XLAT { asmout, "xlat" };
-Instruction_MemOnly CLFLUSH { asmout, "clflush" };
-Instruction_MemOnly CLFLUSHOPT { asmout, "clflushopt" };
+Instruction1_Type2 CLFLUSH { asmout, "clflush" };
+Instruction1_Type2 CLFLUSHOPT { asmout, "clflushopt" };
 
 // User mode extended state save/restore instructions
-Instruction_MemOnly XSAVE { asmout, "xsave" };
-Instruction_MemOnly XSAVEC { asmout, "xsavec" };
-Instruction_MemOnly XSAVEOPT { asmout, "xsaveopt" };
-Instruction_MemOnly XRSTOR { asmout, "xrstor" };
+Instruction1_Type2 XSAVE { asmout, "xsave" };
+Instruction1_Type2 XSAVEC { asmout, "xsavec" };
+Instruction1_Type2 XSAVEOPT { asmout, "xsaveopt" };
+Instruction1_Type2 XRSTOR { asmout, "xrstor" };
 Instruction1_Type1 XGETBV { asmout, "xgetbv" };
 
 // Random number generator instructions
@@ -537,19 +537,19 @@ Instruction1_Type1 FNCLEX { asmout, "fnclex" };
 Instruction_FSTCW FSTCW { asmout, "fstcw" };
 Instruction_FSTCW FNSTCW { asmout, "fnstcw" };
 Instruction_FLDCW FLDCW { asmout, "fldcw" };
-Instruction_FSTENV FSTENV { asmout, "fstenv" };
-Instruction_FSTENV FNSTENV { asmout, "fnstenv" };
-Instruction_FLDENV FLDENV { asmout, "fldenv" };
-Instruction_FSAVE FSAVE { asmout, "fsave" };
-Instruction_FSAVE FNSAVE { asmout, "fnsave" };
-Instruction_FRSTOR FRSTOR { asmout, "frstor" };
+Instruction1_Type2 FSTENV { asmout, "fstenv" };
+Instruction1_Type2 FNSTENV { asmout, "fnstenv" };
+Instruction1_Type2 FLDENV { asmout, "fldenv" };
+Instruction1_Type2 FSAVE { asmout, "fsave" };
+Instruction1_Type2 FNSAVE { asmout, "fnsave" };
+Instruction1_Type2 FRSTOR { asmout, "frstor" };
 Instruction_FSTSW FSTSW { asmout, "fstsw" };
 Instruction_FSTSW FNSTSW { asmout, "fnstsw" };
 Instruction1_Type1 FNOP { asmout, "fnop" };
 
 // x87 FPU and SIMD state management instructions
-Instruction_MemOnly FXSAVE { asmout, "fxsave" };
-Instruction_MemOnly FXRSTOR { asmout, "fxrstor" };
+Instruction1_Type2 FXSAVE { asmout, "fxsave" };
+Instruction1_Type2 FXRSTOR { asmout, "fxrstor" };
 
 // MMX data transfer instructions
 Instruction_MOVD MOVD { asmout, "movd" };
@@ -686,12 +686,12 @@ Instruction_PSHUFW PSHUFW { asmout, "pshufw" };
 Instruction_MASKMOVQ MASKMOVQ { asmout, "maskmovq" };
 Instruction_MOVNTQ MOVNTQ { asmout, "movntq" };
 Instruction_MOVNTPS MOVNTPS { asmout, "movntps" };
-Instruction_MemOnly PREFETCHT0 { asmout, "prefetcht0" };
-Instruction_MemOnly PREFETCHT1 { asmout, "prefetcht1" };
-Instruction_MemOnly PREFETCHT2 { asmout, "prefetcht2" };
-Instruction_MemOnly PREFETCHNTA { asmout, "prefetchnta" };
-Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
-Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
+Instruction1_Type2 PREFETCHT0 { asmout, "prefetcht0" };
+Instruction1_Type2 PREFETCHT1 { asmout, "prefetcht1" };
+Instruction1_Type2 PREFETCHT2 { asmout, "prefetcht2" };
+Instruction1_Type2 PREFETCHNTA { asmout, "prefetchnta" };
+Instruction1_Type2 PREFETCHW { asmout, "prefetchw" };
+Instruction1_Type2 PREFETCHWT1 { asmout, "prefetchwt1" };
 Instruction1_Type1 SFENCE { asmout, "sfence" };
 
 // SSE2 data movement instructions
@@ -1090,9 +1090,9 @@ Instruction_SSE_Conv4 VCVTSS2SI { asmout, "vcvtss2si" };
 Instruction1_Type1 CLAC { asmout, "clac" };
 Instruction1_Type1 STAC { asmout, "stac" };
 Instruction1_Type1 CLTS { asmout, "clts" };
-Instruction_MemOnly LGDT { asmout, "lgdt" };
-Instruction_MemOnly LIDT { asmout, "lidt" };
-Instruction_MemOnly SIDT { asmout, "sidt" };
+Instruction1_Type2 LGDT { asmout, "lgdt" };
+Instruction1_Type2 LIDT { asmout, "lidt" };
+Instruction1_Type2 SIDT { asmout, "sidt" };
 Instruction_rm16 LLDT { asmout, "lldt" };
 Instruction_rm16 LMSW { asmout, "lmsw" };
 Instruction_rm16 VERR { asmout, "verr" };
@@ -1100,7 +1100,7 @@ Instruction_rm16 VERW { asmout, "verw" };
 Instruction_rm16 LTR { asmout, "ltr" };
 Instruction1_Type1 INVD { asmout, "invd" };
 Instruction1_Type1 WBINVD { asmout, "wbinvd" };
-Instruction_MemOnly INVLPG { asmout, "invlpg" };
+Instruction1_Type2 INVLPG { asmout, "invlpg" };
 Instruction_Prefix LOCK { asmout, "lock" };
 Instruction1_Type1 HLT { asmout, "hlt" };
 Instruction1_Type1 RSM { asmout, "rsm" };
@@ -1111,10 +1111,10 @@ Instruction1_Type1 RDTSC { asmout, "rdtsc" };
 Instruction1_Type1 RDTSCP { asmout, "rdtscp" };
 Instruction1_Type1 SYSENTER { asmout, "sysenter" };
 Instruction1_Type1 SYSEXIT { asmout, "sysexit" };
-Instruction_MemOnly XRSTORS { asmout, "xrstors" };
-Instruction_MemOnly XRSTORS64 { asmout, "xrstors64" };
-Instruction_MemOnly XSAVES { asmout, "xsaves" };
-Instruction_MemOnly XSAVES64 { asmout, "xsaves64" };
+Instruction1_Type2 XRSTORS { asmout, "xrstors" };
+Instruction1_Type2 XRSTORS64 { asmout, "xrstors64" };
+Instruction1_Type2 XSAVES { asmout, "xsaves" };
+Instruction1_Type2 XSAVES64 { asmout, "xsaves64" };
 Instruction1_Type1 XSETBV { asmout, "xsetbv" };
 Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
 Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };

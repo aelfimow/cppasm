@@ -69,7 +69,7 @@ using Instruction1_Type1 = Instruction_1
     Operands_none
 >;
 
-using Instruction_MemOnly = Instruction_1
+using Instruction1_Type2 = Instruction_1
 <
     Operands_mem<m, no_suffix>
 >;
@@ -142,26 +142,6 @@ using Instruction_FSTCW = Instruction_1
 using Instruction_FLDCW = Instruction_1
 <
     Operands_mem<m16, no_suffix>
->;
-
-using Instruction_FSTENV = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FLDENV = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FSAVE = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FRSTOR = Instruction_1
-<
-    Operands_mem<m, no_suffix>
 >;
 
 using Instruction_MXCSR = Instruction_1
@@ -1866,14 +1846,14 @@ extern Instruction1_Type1 UD1;
 extern Instruction1_Type1 UD2;
 extern Instruction1_Type1 CPUID;
 extern Instruction1_Type1 XLAT;
-extern Instruction_MemOnly CLFLUSH;
-extern Instruction_MemOnly CLFLUSHOPT;
+extern Instruction1_Type2 CLFLUSH;
+extern Instruction1_Type2 CLFLUSHOPT;
 
 // User mode extended state save/restore instructions
-extern Instruction_MemOnly XSAVE;
-extern Instruction_MemOnly XSAVEC;
-extern Instruction_MemOnly XSAVEOPT;
-extern Instruction_MemOnly XRSTOR;
+extern Instruction1_Type2 XSAVE;
+extern Instruction1_Type2 XSAVEC;
+extern Instruction1_Type2 XSAVEOPT;
+extern Instruction1_Type2 XRSTOR;
 extern Instruction1_Type1 XGETBV;
 
 // Random number generator instructions
@@ -1973,19 +1953,19 @@ extern Instruction1_Type1 FNCLEX;
 extern Instruction_FSTCW FSTCW;
 extern Instruction_FSTCW FNSTCW;
 extern Instruction_FLDCW FLDCW;
-extern Instruction_FSTENV FSTENV;
-extern Instruction_FSTENV FNSTENV;
-extern Instruction_FLDENV FLDENV;
-extern Instruction_FSAVE FSAVE;
-extern Instruction_FSAVE FNSAVE;
-extern Instruction_FRSTOR FRSTOR;
+extern Instruction1_Type2 FSTENV;
+extern Instruction1_Type2 FNSTENV;
+extern Instruction1_Type2 FLDENV;
+extern Instruction1_Type2 FSAVE;
+extern Instruction1_Type2 FNSAVE;
+extern Instruction1_Type2 FRSTOR;
 extern Instruction_FSTSW FSTSW;
 extern Instruction_FSTSW FNSTSW;
 extern Instruction1_Type1 FNOP;
 
 // x87 FPU and SIMD state management instructions
-extern Instruction_MemOnly FXSAVE;
-extern Instruction_MemOnly FXRSTOR;
+extern Instruction1_Type2 FXSAVE;
+extern Instruction1_Type2 FXRSTOR;
 
 // MMX data transfer instructions
 extern Instruction_MOVD MOVD;
@@ -2122,12 +2102,12 @@ extern Instruction_PSHUFW PSHUFW;
 extern Instruction_MASKMOVQ MASKMOVQ;
 extern Instruction_MOVNTQ MOVNTQ;
 extern Instruction_MOVNTPS MOVNTPS;
-extern Instruction_MemOnly PREFETCHT0;
-extern Instruction_MemOnly PREFETCHT1;
-extern Instruction_MemOnly PREFETCHT2;
-extern Instruction_MemOnly PREFETCHNTA;
-extern Instruction_MemOnly PREFETCHW;
-extern Instruction_MemOnly PREFETCHWT1;
+extern Instruction1_Type2 PREFETCHT0;
+extern Instruction1_Type2 PREFETCHT1;
+extern Instruction1_Type2 PREFETCHT2;
+extern Instruction1_Type2 PREFETCHNTA;
+extern Instruction1_Type2 PREFETCHW;
+extern Instruction1_Type2 PREFETCHWT1;
 extern Instruction1_Type1 SFENCE;
 
 // SSE2 data movement instructions
@@ -2208,7 +2188,7 @@ extern Instruction_SSE2_Int_Unpack PUNPCKHQDQ;
 extern Instruction_SSE2_Int_Unpack PUNPCKLQDQ;
 
 // SSE2 cacheability control and ordering instructions
-extern Instruction_MemOnly CLFLUSH;
+extern Instruction1_Type2 CLFLUSH;
 extern Instruction1_Type1 LFENCE;
 extern Instruction1_Type1 MFENCE;
 extern Instruction1_Type1 PAUSE;
@@ -2527,9 +2507,9 @@ extern Instruction_SSE_Conv4 VCVTSS2SI;
 extern Instruction1_Type1 CLAC;
 extern Instruction1_Type1 STAC;
 extern Instruction1_Type1 CLTS;
-extern Instruction_MemOnly LGDT;
-extern Instruction_MemOnly LIDT;
-extern Instruction_MemOnly SIDT;
+extern Instruction1_Type2 LGDT;
+extern Instruction1_Type2 LIDT;
+extern Instruction1_Type2 SIDT;
 extern Instruction_rm16 LLDT;
 extern Instruction_rm16 LMSW;
 extern Instruction_rm16 VERR;
@@ -2537,7 +2517,7 @@ extern Instruction_rm16 VERW;
 extern Instruction_rm16 LTR;
 extern Instruction1_Type1 INVD;
 extern Instruction1_Type1 WBINVD;
-extern Instruction_MemOnly INVLPG;
+extern Instruction1_Type2 INVLPG;
 extern Instruction_Prefix LOCK;
 extern Instruction1_Type1 HLT;
 extern Instruction1_Type1 RSM;
@@ -2548,10 +2528,10 @@ extern Instruction1_Type1 RDTSC;
 extern Instruction1_Type1 RDTSCP;
 extern Instruction1_Type1 SYSENTER;
 extern Instruction1_Type1 SYSEXIT;
-extern Instruction_MemOnly XRSTORS;
-extern Instruction_MemOnly XRSTORS64;
-extern Instruction_MemOnly XSAVES;
-extern Instruction_MemOnly XSAVES64;
+extern Instruction1_Type2 XRSTORS;
+extern Instruction1_Type2 XRSTORS64;
+extern Instruction1_Type2 XSAVES;
+extern Instruction1_Type2 XSAVES64;
 extern Instruction1_Type1 XSETBV;
 extern Instruction_FSGSBASE RDFSBASE;
 extern Instruction_FSGSBASE RDGSBASE;

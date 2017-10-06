@@ -7,19 +7,19 @@ class mm
 {
     public:
         explicit mm(const std::string &name);
-
-        mm() = delete;
-        mm(const mm &instance) = delete;
-        mm(const mm &&instance) = delete;
-        mm &operator=(const mm &instance) = delete;
-        mm &operator=(const mm &&instance) = delete;
-
         ~mm();
 
         std::string name() const;
 
     private:
         const std::string m_name;
+
+    public:
+        mm() = delete;
+        mm(const mm &instance) = delete;
+        mm(const mm &&instance) = delete;
+        mm &operator=(const mm &instance) = delete;
+        mm &operator=(const mm &&instance) = delete;
 };
 
 #endif

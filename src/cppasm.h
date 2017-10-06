@@ -64,9 +64,174 @@ using m64fp = m_template<64>;
 using m80fp = m_template<80>;
 using m80bcd = m_template<80>;
 
-using Instruction_NoOperands = Instruction_1
+using Instruction1_Type1 = Instruction_1
 <
     Operands_none
+>;
+
+using Instruction_MemOnly = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_CMPXCHG8B = Instruction_1
+<
+    Operands_mem<m64, no_suffix>
+>;
+
+using Instruction_CMPXCHG16B = Instruction_1
+<
+    Operands_mem<m128, no_suffix>
+>;
+
+using Instruction_ENTER = Instruction_1
+<
+    Operands_imm_imm<imm16, imm8>
+>;
+
+using Instruction_SSE_MOV3 = Instruction_1
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>
+>;
+
+using Instruction_INT = Instruction_1
+<
+    Operands_imm<imm8>
+>;
+
+using Instruction_Jcc = Instruction_1
+<
+    Operands_string
+>;
+
+using Instruction_LOOPcc = Instruction_1
+<
+    Operands_string
+>;
+
+using Instruction_Prefix = Instruction_1
+<
+    Operands_prefix
+>;
+
+using Instruction_FBCD = Instruction_1
+<
+    Operands_mem<m80bcd, no_suffix>
+>;
+
+using Instruction_FCMOVcc = Instruction_1
+<
+    Operands_reg_reg<st, st, no_suffix>
+>;
+
+using Instruction_FCOMI = Instruction_1
+<
+    Operands_reg_reg<st, st, no_suffix>
+>;
+
+using Instruction_FFREE = Instruction_1
+<
+    Operands_reg<st>
+>;
+
+using Instruction_FSTCW = Instruction_1
+<
+    Operands_mem<m16, no_suffix>
+>;
+
+using Instruction_FLDCW = Instruction_1
+<
+    Operands_mem<m16, no_suffix>
+>;
+
+using Instruction_FSTENV = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FLDENV = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FSAVE = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_FRSTOR = Instruction_1
+<
+    Operands_mem<m, no_suffix>
+>;
+
+using Instruction_MXCSR = Instruction_1
+<
+    Operands_mem<m32, no_suffix>
+>;
+
+using Instruction_MASKMOVQ = Instruction_1
+<
+    Operands_reg_reg<mm, mm, no_suffix>
+>;
+
+using Instruction_MOVNTQ = Instruction_1
+<
+    Operands_mem_reg<m64, mm, no_suffix>
+>;
+
+using Instruction_MOVNTPS = Instruction_1
+<
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVxPD2 = Instruction_1
+<
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_MASKMOVDQU = Instruction_1
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>
+>;
+
+using Instruction_MOVNTPx = Instruction_1
+<
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVQ2DQ = Instruction_1
+<
+    Operands_reg_reg<xmm, mm, no_suffix>
+>;
+
+using Instruction_MOVDQ2Q = Instruction_1
+<
+    Operands_reg_reg<mm, xmm, no_suffix>
+>;
+
+using Instruction_SSE2_Int_Shift = Instruction_1
+<
+    Operands_reg_imm<xmm, imm8>
+>;
+
+using Instruction_LDDQU = Instruction_1
+<
+    Operands_reg_mem<xmm, m, no_suffix>
+>;
+
+using Instruction_MOVNTDQA = Instruction_1
+<
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_AVX_Type14 = Instruction_1
+<
+    Operands_reg_mem<ymm, m64, no_suffix>
+>;
+
+using Instruction_AVX_Type15 = Instruction_1
+<
+    Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
 using Instruction_MOVD = Instruction_8
@@ -131,11 +296,6 @@ using Instruction_rm16 = Instruction_2
 <
     Operands_reg<r16>,
     Operands_mem<m16, no_suffix>
->;
-
-using Instruction_MemOnly = Instruction_1
-<
-    Operands_mem<m, no_suffix>
 >;
 
 using Instruction_LoadFarPointer = Instruction_3
@@ -251,16 +411,6 @@ using Instruction_CMPXCHG = Instruction_8
     Operands_mem_reg<m64, r64, no_suffix>
 >;
 
-using Instruction_CMPXCHG8B = Instruction_1
-<
-    Operands_mem<m64, no_suffix>
->;
-
-using Instruction_CMPXCHG16B = Instruction_1
-<
-    Operands_mem<m128, no_suffix>
->;
-
 using Instruction_BitScan = Instruction_6
 <
     Operands_reg_reg<r16, r16, no_suffix>,
@@ -310,11 +460,6 @@ using Instruction_BSWAP = Instruction_2
     Operands_reg<r64>
 >;
 
-using Instruction_ENTER = Instruction_1
-<
-    Operands_imm_imm<imm16, imm8>
->;
-
 using Instruction_SSE_MOV1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
@@ -326,11 +471,6 @@ using Instruction_SSE_MOV2 = Instruction_2
 <
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_mem_reg<m64, xmm, no_suffix>
->;
-
-using Instruction_SSE_MOV3 = Instruction_1
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>
 >;
 
 using Instruction_SSE_MOV4 = Instruction_2
@@ -487,11 +627,6 @@ using Instruction_SETcc = Instruction_2
     Operands_mem<m8, no_suffix>
 >;
 
-using Instruction_INT = Instruction_1
-<
-    Operands_imm<imm8>
->;
-
 using Instruction_IN = Instruction_6
 <
     Operands_reg_imm<r8, imm8>,
@@ -500,16 +635,6 @@ using Instruction_IN = Instruction_6
     Operands_reg_reg<r8, r16, no_suffix>,
     Operands_reg_reg<r16, r16, no_suffix>,
     Operands_reg_reg<r32, r16, no_suffix>
->;
-
-using Instruction_Jcc = Instruction_1
-<
-    Operands_string
->;
-
-using Instruction_LOOPcc = Instruction_1
-<
-    Operands_string
 >;
 
 using Instruction_OUT = Instruction_6
@@ -623,11 +748,6 @@ using Instruction_NOP = Instruction_5
     Operands_mem<m32, suffix_m32>
 >;
 
-using Instruction_Prefix = Instruction_1
-<
-    Operands_prefix
->;
-
 using Instruction_FLD = Instruction_4
 <
     Operands_mem<m32fp, suffix_m32fp>,
@@ -671,20 +791,10 @@ using Instruction_FSTP = Instruction_4
     Operands_reg<st>
 >;
 
-using Instruction_FBCD = Instruction_1
-<
-    Operands_mem<m80bcd, no_suffix>
->;
-
 using Instruction_FXCH = Instruction_2
 <
     Operands_none,
     Operands_reg<st>
->;
-
-using Instruction_FCMOVcc = Instruction_1
-<
-    Operands_reg_reg<st, st, no_suffix>
 >;
 
 using Instruction_FPU_Arithm1 = Instruction_3
@@ -714,19 +824,9 @@ using Instruction_FCOM = Instruction_4
     Operands_none
 >;
 
-using Instruction_FCOMPP = Instruction_1
-<
-    Operands_none
->;
-
 using Instruction_FUCOM = Instruction_2
 <
     Operands_reg<st>,
-    Operands_none
->;
-
-using Instruction_FUCOMPP = Instruction_1
-<
     Operands_none
 >;
 
@@ -736,55 +836,10 @@ using Instruction_FICOM = Instruction_2
     Operands_mem<m32, suffix_m32int>
 >;
 
-using Instruction_FCOMI = Instruction_1
-<
-    Operands_reg_reg<st, st, no_suffix>
->;
-
-using Instruction_FFREE = Instruction_1
-<
-    Operands_reg<st>
->;
-
-using Instruction_FSTCW = Instruction_1
-<
-    Operands_mem<m16, no_suffix>
->;
-
-using Instruction_FLDCW = Instruction_1
-<
-    Operands_mem<m16, no_suffix>
->;
-
-using Instruction_FSTENV = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FLDENV = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FSAVE = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
-using Instruction_FRSTOR = Instruction_1
-<
-    Operands_mem<m, no_suffix>
->;
-
 using Instruction_FSTSW = Instruction_2
 <
     Operands_mem<m16, no_suffix>,
     Operands_reg<r16>
->;
-
-using Instruction_MXCSR = Instruction_1
-<
-    Operands_mem<m32, no_suffix>
 >;
 
 using Instruction_PAVGx = Instruction_4
@@ -858,31 +913,11 @@ using Instruction_PSHUFW = Instruction_2
     Operands_reg_mem_imm<mm, m64, imm8>
 >;
 
-using Instruction_MASKMOVQ = Instruction_1
-<
-    Operands_reg_reg<mm, mm, no_suffix>
->;
-
-using Instruction_MOVNTQ = Instruction_1
-<
-    Operands_mem_reg<m64, mm, no_suffix>
->;
-
-using Instruction_MOVNTPS = Instruction_1
-<
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
 using Instruction_MOVxPD1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,
     Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_MOVxPD2 = Instruction_1
-<
-    Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
 using Instruction_MOVMSKPD = Instruction_2
@@ -1004,16 +1039,6 @@ using Instruction_CVTSI2SD = Instruction_4
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_MASKMOVDQU = Instruction_1
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>
->;
-
-using Instruction_MOVNTPx = Instruction_1
-<
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
 using Instruction_MOVNTI = Instruction_2
 <
     Operands_mem_reg<m32, r32, no_suffix>,
@@ -1039,16 +1064,6 @@ using Instruction_MOVDQx = Instruction_3
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_MOVQ2DQ = Instruction_1
-<
-    Operands_reg_reg<xmm, mm, no_suffix>
->;
-
-using Instruction_MOVDQ2Q = Instruction_1
-<
-    Operands_reg_reg<mm, xmm, no_suffix>
->;
-
 using Instruction_PMULUDQ = Instruction_4
 <
     Operands_reg_reg<mm, mm, no_suffix>,
@@ -1071,11 +1086,6 @@ using Instruction_SSE2_Int_Shuffle = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
-using Instruction_SSE2_Int_Shift = Instruction_1
-<
-    Operands_reg_imm<xmm, imm8>
->;
-
 using Instruction_SSE2_Int_Unpack = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
@@ -1087,11 +1097,6 @@ using Instruction_FISTTP = Instruction_3
     Operands_mem<m16, suffix_m16int>,
     Operands_mem<m32, suffix_m32int>,
     Operands_mem<m64, suffix_m64int>
->;
-
-using Instruction_LDDQU = Instruction_1
-<
-    Operands_reg_mem<xmm, m, no_suffix>
 >;
 
 using Instruction_SSE3_Arithm1 = Instruction_2
@@ -1132,11 +1137,6 @@ using Instruction_SSE4_1_Type2 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_MOVNTDQA = Instruction_1
-<
-    Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
 using Instruction_SSE4_1_Type3 = Instruction_4
@@ -1390,16 +1390,6 @@ using Instruction_AVX_Type13 = Instruction_2
 <
     Operands_reg_mem<xmm, m32, no_suffix>,
     Operands_reg_mem<ymm, m32, no_suffix>
->;
-
-using Instruction_AVX_Type14 = Instruction_1
-<
-    Operands_reg_mem<ymm, m64, no_suffix>
->;
-
-using Instruction_AVX_Type15 = Instruction_1
-<
-    Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
 using Instruction_AVX_Type16 = Instruction_2
@@ -1657,14 +1647,14 @@ extern Instruction_CMOVx CMOVPO;
 extern Instruction_CMOVx CMOVS;
 extern Instruction_CMOVx CMOVZ;
 extern Instruction_PUSH PUSH;
-extern Instruction_NoOperands PUSHA;
-extern Instruction_NoOperands PUSHAD;
+extern Instruction1_Type1 PUSHA;
+extern Instruction1_Type1 PUSHAD;
 extern Instruction_POP POP;
-extern Instruction_NoOperands POPA;
-extern Instruction_NoOperands POPAD;
-extern Instruction_NoOperands CWD;
-extern Instruction_NoOperands CDQ;
-extern Instruction_NoOperands CQO;
+extern Instruction1_Type1 POPA;
+extern Instruction1_Type1 POPAD;
+extern Instruction1_Type1 CWD;
+extern Instruction1_Type1 CDQ;
+extern Instruction1_Type1 CQO;
 extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
 extern Instruction_XCHG XCHG;
@@ -1691,12 +1681,12 @@ extern Instruction_Arithm2 INC;
 extern Instruction_Arithm2 DEC;
 
 // Decimal arithmetic instructions
-extern Instruction_NoOperands AAA;
+extern Instruction1_Type1 AAA;
 extern Instruction_AsciiAdj AAD;
 extern Instruction_AsciiAdj AAM;
-extern Instruction_NoOperands AAS;
-extern Instruction_NoOperands DAA;
-extern Instruction_NoOperands DAS;
+extern Instruction1_Type1 AAS;
+extern Instruction1_Type1 DAA;
+extern Instruction1_Type1 DAS;
 
 // Logical instructions
 extern Instruction_Arithm1 AND;
@@ -1796,12 +1786,12 @@ extern Instruction_Branch CALL_FAR;
 extern Instruction_RET RET;
 extern Instruction_RET RET_FAR;
 extern Instruction_ENTER ENTER;
-extern Instruction_NoOperands LEAVE;
+extern Instruction1_Type1 LEAVE;
 extern Instruction_INT INT;
-extern Instruction_NoOperands INTO;
-extern Instruction_NoOperands IRET;
-extern Instruction_NoOperands IRETD;
-extern Instruction_NoOperands IRETQ;
+extern Instruction1_Type1 INTO;
+extern Instruction1_Type1 IRET;
+extern Instruction1_Type1 IRETD;
+extern Instruction1_Type1 IRETQ;
 extern Instruction_LOOPcc LOOP;
 extern Instruction_LOOPcc LOOPE;
 extern Instruction_LOOPcc LOOPNE;
@@ -1810,26 +1800,26 @@ extern Instruction_LOOPcc LOOPNZ;
 extern Instruction_BOUND BOUND;
 
 // String instructions
-extern Instruction_NoOperands MOVSB;
-extern Instruction_NoOperands MOVSW;
-extern Instruction_NoOperands MOVSD;
-extern Instruction_NoOperands MOVSQ;
-extern Instruction_NoOperands CMPSB;
-extern Instruction_NoOperands CMPSW;
-extern Instruction_NoOperands CMPSD;
-extern Instruction_NoOperands CMPSQ;
-extern Instruction_NoOperands SCASB;
-extern Instruction_NoOperands SCASW;
-extern Instruction_NoOperands SCASD;
-extern Instruction_NoOperands SCASQ;
-extern Instruction_NoOperands LODSB;
-extern Instruction_NoOperands LODSW;
-extern Instruction_NoOperands LODSD;
-extern Instruction_NoOperands LODSQ;
-extern Instruction_NoOperands STOSB;
-extern Instruction_NoOperands STOSW;
-extern Instruction_NoOperands STOSD;
-extern Instruction_NoOperands STOSQ;
+extern Instruction1_Type1 MOVSB;
+extern Instruction1_Type1 MOVSW;
+extern Instruction1_Type1 MOVSD;
+extern Instruction1_Type1 MOVSQ;
+extern Instruction1_Type1 CMPSB;
+extern Instruction1_Type1 CMPSW;
+extern Instruction1_Type1 CMPSD;
+extern Instruction1_Type1 CMPSQ;
+extern Instruction1_Type1 SCASB;
+extern Instruction1_Type1 SCASW;
+extern Instruction1_Type1 SCASD;
+extern Instruction1_Type1 SCASQ;
+extern Instruction1_Type1 LODSB;
+extern Instruction1_Type1 LODSW;
+extern Instruction1_Type1 LODSD;
+extern Instruction1_Type1 LODSQ;
+extern Instruction1_Type1 STOSB;
+extern Instruction1_Type1 STOSW;
+extern Instruction1_Type1 STOSD;
+extern Instruction1_Type1 STOSQ;
 extern Instruction_Prefix REP;
 extern Instruction_Prefix REPE;
 extern Instruction_Prefix REPZ;
@@ -1838,28 +1828,28 @@ extern Instruction_Prefix REPNZ;
 
 // I/O instructions
 extern Instruction_IN IN;
-extern Instruction_NoOperands INSB;
-extern Instruction_NoOperands INSW;
-extern Instruction_NoOperands INSD;
+extern Instruction1_Type1 INSB;
+extern Instruction1_Type1 INSW;
+extern Instruction1_Type1 INSD;
 extern Instruction_OUT OUT;
-extern Instruction_NoOperands OUTSB;
-extern Instruction_NoOperands OUTSW;
-extern Instruction_NoOperands OUTSD;
+extern Instruction1_Type1 OUTSB;
+extern Instruction1_Type1 OUTSW;
+extern Instruction1_Type1 OUTSD;
 
 // Flag control (EFLAG) instructions
-extern Instruction_NoOperands CLC;
-extern Instruction_NoOperands CLD;
-extern Instruction_NoOperands CLI;
-extern Instruction_NoOperands CMC;
-extern Instruction_NoOperands LAHF;
-extern Instruction_NoOperands SAHF;
-extern Instruction_NoOperands PUSHF;
-extern Instruction_NoOperands POPF;
-extern Instruction_NoOperands POPFD;
-extern Instruction_NoOperands POPFQ;
-extern Instruction_NoOperands STC;
-extern Instruction_NoOperands STI;
-extern Instruction_NoOperands STD;
+extern Instruction1_Type1 CLC;
+extern Instruction1_Type1 CLD;
+extern Instruction1_Type1 CLI;
+extern Instruction1_Type1 CMC;
+extern Instruction1_Type1 LAHF;
+extern Instruction1_Type1 SAHF;
+extern Instruction1_Type1 PUSHF;
+extern Instruction1_Type1 POPF;
+extern Instruction1_Type1 POPFD;
+extern Instruction1_Type1 POPFQ;
+extern Instruction1_Type1 STC;
+extern Instruction1_Type1 STI;
+extern Instruction1_Type1 STD;
 
 // Segment register instructions
 extern Instruction_LoadFarPointer LDS;
@@ -1871,11 +1861,11 @@ extern Instruction_LoadFarPointer LSS;
 // Miscelleneous instructions
 extern Instruction_LEA LEA;
 extern Instruction_NOP NOP;
-extern Instruction_NoOperands UD;
-extern Instruction_NoOperands UD1;
-extern Instruction_NoOperands UD2;
-extern Instruction_NoOperands CPUID;
-extern Instruction_NoOperands XLAT;
+extern Instruction1_Type1 UD;
+extern Instruction1_Type1 UD1;
+extern Instruction1_Type1 UD2;
+extern Instruction1_Type1 CPUID;
+extern Instruction1_Type1 XLAT;
 extern Instruction_MemOnly CLFLUSH;
 extern Instruction_MemOnly CLFLUSHOPT;
 
@@ -1884,7 +1874,7 @@ extern Instruction_MemOnly XSAVE;
 extern Instruction_MemOnly XSAVEC;
 extern Instruction_MemOnly XSAVEOPT;
 extern Instruction_MemOnly XRSTOR;
-extern Instruction_NoOperands XGETBV;
+extern Instruction1_Type1 XGETBV;
 
 // Random number generator instructions
 extern Instruction_RDRAND RDRAND;
@@ -1928,58 +1918,58 @@ extern Instruction_FPU_Arithm3 FIDIV;
 extern Instruction_FPU_Arithm1 FDIVR;
 extern Instruction_FPU_Arithm2 FDIVRP;
 extern Instruction_FPU_Arithm3 FIDIVR;
-extern Instruction_NoOperands FPREM;
-extern Instruction_NoOperands FPREM1;
-extern Instruction_NoOperands FABS;
-extern Instruction_NoOperands FCHS;
-extern Instruction_NoOperands FRNDINT;
-extern Instruction_NoOperands FSCALE;
-extern Instruction_NoOperands FSQRT;
-extern Instruction_NoOperands FXTRACT;
+extern Instruction1_Type1 FPREM;
+extern Instruction1_Type1 FPREM1;
+extern Instruction1_Type1 FABS;
+extern Instruction1_Type1 FCHS;
+extern Instruction1_Type1 FRNDINT;
+extern Instruction1_Type1 FSCALE;
+extern Instruction1_Type1 FSQRT;
+extern Instruction1_Type1 FXTRACT;
 
 // x87 FPU comparison instructions
 extern Instruction_FCOM FCOM;
 extern Instruction_FCOM FCOMP;
-extern Instruction_FCOMPP FCOMPP;
+extern Instruction1_Type1 FCOMPP;
 extern Instruction_FUCOM FUCOM;
 extern Instruction_FUCOM FUCOMP;
-extern Instruction_FUCOMPP FUCOMPP;
+extern Instruction1_Type1 FUCOMPP;
 extern Instruction_FICOM FICOM;
 extern Instruction_FICOM FICOMP;
 extern Instruction_FCOMI FCOMI;
 extern Instruction_FCOMI FCOMIP;
 extern Instruction_FCOMI FUCOMI;
 extern Instruction_FCOMI FUCOMIP;
-extern Instruction_NoOperands FTST;
-extern Instruction_NoOperands FXAM;
+extern Instruction1_Type1 FTST;
+extern Instruction1_Type1 FXAM;
 
 // x87 FPU transcendental instructions
-extern Instruction_NoOperands FSIN;
-extern Instruction_NoOperands FSINCOS;
-extern Instruction_NoOperands FCOS;
-extern Instruction_NoOperands FPTAN;
-extern Instruction_NoOperands FPATAN;
-extern Instruction_NoOperands F2XM1;
-extern Instruction_NoOperands FYL2X;
-extern Instruction_NoOperands FYL2XP1;
+extern Instruction1_Type1 FSIN;
+extern Instruction1_Type1 FSINCOS;
+extern Instruction1_Type1 FCOS;
+extern Instruction1_Type1 FPTAN;
+extern Instruction1_Type1 FPATAN;
+extern Instruction1_Type1 F2XM1;
+extern Instruction1_Type1 FYL2X;
+extern Instruction1_Type1 FYL2XP1;
 
 // x87 FPU load constants instructions
-extern Instruction_NoOperands FLD1;
-extern Instruction_NoOperands FLDL2T;
-extern Instruction_NoOperands FLDL2E;
-extern Instruction_NoOperands FLDPI;
-extern Instruction_NoOperands FLDLG2;
-extern Instruction_NoOperands FLDLN2;
-extern Instruction_NoOperands FLDZ;
+extern Instruction1_Type1 FLD1;
+extern Instruction1_Type1 FLDL2T;
+extern Instruction1_Type1 FLDL2E;
+extern Instruction1_Type1 FLDPI;
+extern Instruction1_Type1 FLDLG2;
+extern Instruction1_Type1 FLDLN2;
+extern Instruction1_Type1 FLDZ;
 
 // x87 FPU control instructions
-extern Instruction_NoOperands FINCSTP;
-extern Instruction_NoOperands FDECSTP;
+extern Instruction1_Type1 FINCSTP;
+extern Instruction1_Type1 FDECSTP;
 extern Instruction_FFREE FFREE;
-extern Instruction_NoOperands FINIT;
-extern Instruction_NoOperands FNINIT;
-extern Instruction_NoOperands FCLEX;
-extern Instruction_NoOperands FNCLEX;
+extern Instruction1_Type1 FINIT;
+extern Instruction1_Type1 FNINIT;
+extern Instruction1_Type1 FCLEX;
+extern Instruction1_Type1 FNCLEX;
 extern Instruction_FSTCW FSTCW;
 extern Instruction_FSTCW FNSTCW;
 extern Instruction_FLDCW FLDCW;
@@ -1991,7 +1981,7 @@ extern Instruction_FSAVE FNSAVE;
 extern Instruction_FRSTOR FRSTOR;
 extern Instruction_FSTSW FSTSW;
 extern Instruction_FSTSW FNSTSW;
-extern Instruction_NoOperands FNOP;
+extern Instruction1_Type1 FNOP;
 
 // x87 FPU and SIMD state management instructions
 extern Instruction_MemOnly FXSAVE;
@@ -2055,7 +2045,7 @@ extern Instruction_MMX_Shift PSRAW;
 extern Instruction_MMX_Shift PSRAD;
 
 // MMX state management instructions
-extern Instruction_NoOperands EMMS;
+extern Instruction1_Type1 EMMS;
 
 // SSE data transfer instructions
 extern Instruction_SSE_MOV1 MOVAPS;
@@ -2138,7 +2128,7 @@ extern Instruction_MemOnly PREFETCHT2;
 extern Instruction_MemOnly PREFETCHNTA;
 extern Instruction_MemOnly PREFETCHW;
 extern Instruction_MemOnly PREFETCHWT1;
-extern Instruction_NoOperands SFENCE;
+extern Instruction1_Type1 SFENCE;
 
 // SSE2 data movement instructions
 extern Instruction_MOVxPD1 MOVAPD;
@@ -2219,9 +2209,9 @@ extern Instruction_SSE2_Int_Unpack PUNPCKLQDQ;
 
 // SSE2 cacheability control and ordering instructions
 extern Instruction_MemOnly CLFLUSH;
-extern Instruction_NoOperands LFENCE;
-extern Instruction_NoOperands MFENCE;
-extern Instruction_NoOperands PAUSE;
+extern Instruction1_Type1 LFENCE;
+extern Instruction1_Type1 MFENCE;
+extern Instruction1_Type1 PAUSE;
 extern Instruction_MASKMOVDQU MASKMOVDQU;
 extern Instruction_MOVNTPx MOVNTPD;
 extern Instruction_MOVNTPx MOVNTDQ;
@@ -2249,8 +2239,8 @@ extern Instruction_SSE3_Arithm1 MOVSLDUP;
 extern Instruction_SSE3_Arithm2 MOVDDUP;
 
 // SSE3 agent synchronization instructions
-extern Instruction_NoOperands MONITOR;
-extern Instruction_NoOperands MWAIT;
+extern Instruction1_Type1 MONITOR;
+extern Instruction1_Type1 MWAIT;
 
 // SSSE3: horizontal addition/subtraction
 extern Instruction_SSSE3_Arithm1 PHADDW;
@@ -2512,8 +2502,8 @@ extern Instruction_AVX_Type2 VANDPS;
 extern Instruction_AVX_Type2 VANDPD;
 extern Instruction_AVX_Type2 VANDNPS;
 extern Instruction_AVX_Type2 VANDNPD;
-extern Instruction_NoOperands VZEROALL;
-extern Instruction_NoOperands VZEROUPPER;
+extern Instruction1_Type1 VZEROALL;
+extern Instruction1_Type1 VZEROUPPER;
 extern Instruction_AVX_Type13 VBROADCASTSS;
 extern Instruction_AVX_Type14 VBROADCASTSD;
 extern Instruction_AVX_Type15 VBROADCASTF128;
@@ -2534,9 +2524,9 @@ extern Instruction_CVTSD2SI VCVTTSD2SI;
 extern Instruction_SSE_Conv4 VCVTSS2SI;
 
 // System instructions
-extern Instruction_NoOperands CLAC;
-extern Instruction_NoOperands STAC;
-extern Instruction_NoOperands CLTS;
+extern Instruction1_Type1 CLAC;
+extern Instruction1_Type1 STAC;
+extern Instruction1_Type1 CLTS;
 extern Instruction_MemOnly LGDT;
 extern Instruction_MemOnly LIDT;
 extern Instruction_MemOnly SIDT;
@@ -2545,32 +2535,32 @@ extern Instruction_rm16 LMSW;
 extern Instruction_rm16 VERR;
 extern Instruction_rm16 VERW;
 extern Instruction_rm16 LTR;
-extern Instruction_NoOperands INVD;
-extern Instruction_NoOperands WBINVD;
+extern Instruction1_Type1 INVD;
+extern Instruction1_Type1 WBINVD;
 extern Instruction_MemOnly INVLPG;
 extern Instruction_Prefix LOCK;
-extern Instruction_NoOperands HLT;
-extern Instruction_NoOperands RSM;
-extern Instruction_NoOperands RDMSR;
-extern Instruction_NoOperands WRMSR;
-extern Instruction_NoOperands RDPMC;
-extern Instruction_NoOperands RDTSC;
-extern Instruction_NoOperands RDTSCP;
-extern Instruction_NoOperands SYSENTER;
-extern Instruction_NoOperands SYSEXIT;
+extern Instruction1_Type1 HLT;
+extern Instruction1_Type1 RSM;
+extern Instruction1_Type1 RDMSR;
+extern Instruction1_Type1 WRMSR;
+extern Instruction1_Type1 RDPMC;
+extern Instruction1_Type1 RDTSC;
+extern Instruction1_Type1 RDTSCP;
+extern Instruction1_Type1 SYSENTER;
+extern Instruction1_Type1 SYSEXIT;
 extern Instruction_MemOnly XRSTORS;
 extern Instruction_MemOnly XRSTORS64;
 extern Instruction_MemOnly XSAVES;
 extern Instruction_MemOnly XSAVES64;
-extern Instruction_NoOperands XSETBV;
+extern Instruction1_Type1 XSETBV;
 extern Instruction_FSGSBASE RDFSBASE;
 extern Instruction_FSGSBASE RDGSBASE;
 extern Instruction_FSGSBASE WRFSBASE;
 extern Instruction_FSGSBASE WRGSBASE;
 
 // 64-bit mode instructions
-extern Instruction_NoOperands SYSCALL;
-extern Instruction_NoOperands SYSRET;
+extern Instruction1_Type1 SYSCALL;
+extern Instruction1_Type1 SYSRET;
 
 // AVX
 extern Instruction_VMOVD VMOVD;

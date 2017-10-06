@@ -211,14 +211,14 @@ Instruction_CMOVx CMOVPO { asmout, "cmovpo" };
 Instruction_CMOVx CMOVS { asmout, "cmovs" };
 Instruction_CMOVx CMOVZ { asmout, "cmovz" };
 Instruction_PUSH PUSH { asmout, "push" };
-Instruction_NoOperands PUSHA { asmout, "pusha" };
-Instruction_NoOperands PUSHAD { asmout, "pushal" };
+Instruction1_Type1 PUSHA { asmout, "pusha" };
+Instruction1_Type1 PUSHAD { asmout, "pushal" };
 Instruction_POP POP { asmout, "pop" };
-Instruction_NoOperands POPA { asmout, "popa" };
-Instruction_NoOperands POPAD { asmout, "popal" };
-Instruction_NoOperands CWD { asmout, "cwtd" };
-Instruction_NoOperands CDQ { asmout, "cltd" };
-Instruction_NoOperands CQO { asmout, "cqto" };
+Instruction1_Type1 POPA { asmout, "popa" };
+Instruction1_Type1 POPAD { asmout, "popal" };
+Instruction1_Type1 CWD { asmout, "cwtd" };
+Instruction1_Type1 CDQ { asmout, "cltd" };
+Instruction1_Type1 CQO { asmout, "cqto" };
 Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout, "xchg" };
@@ -245,12 +245,12 @@ Instruction_Arithm2 INC { asmout, "inc" };
 Instruction_Arithm2 DEC { asmout, "dec" };
 
 // Decimal arithmetic instructions
-Instruction_NoOperands AAA { asmout, "aaa" };
+Instruction1_Type1 AAA { asmout, "aaa" };
 Instruction_AsciiAdj AAD { asmout, "aad" };
 Instruction_AsciiAdj AAM { asmout, "aam" };
-Instruction_NoOperands AAS { asmout, "aas" };
-Instruction_NoOperands DAA { asmout, "daa" };
-Instruction_NoOperands DAS { asmout, "das" };
+Instruction1_Type1 AAS { asmout, "aas" };
+Instruction1_Type1 DAA { asmout, "daa" };
+Instruction1_Type1 DAS { asmout, "das" };
 
 // Logical instructions
 Instruction_Arithm1 AND { asmout, "and" };
@@ -350,12 +350,12 @@ Instruction_Branch CALL_FAR { asmout, "lcall" };
 Instruction_RET RET { asmout, "ret" };
 Instruction_RET RET_FAR { asmout, "lret" };
 Instruction_ENTER ENTER { asmout, "enter" };
-Instruction_NoOperands LEAVE { asmout, "leave" };
+Instruction1_Type1 LEAVE { asmout, "leave" };
 Instruction_INT INT { asmout, "int" };
-Instruction_NoOperands INTO { asmout, "into" };
-Instruction_NoOperands IRET { asmout, "iret" };
-Instruction_NoOperands IRETD { asmout, "iretl" };
-Instruction_NoOperands IRETQ { asmout, "iretq" };
+Instruction1_Type1 INTO { asmout, "into" };
+Instruction1_Type1 IRET { asmout, "iret" };
+Instruction1_Type1 IRETD { asmout, "iretl" };
+Instruction1_Type1 IRETQ { asmout, "iretq" };
 Instruction_LOOPcc LOOP { asmout, "loop" };
 Instruction_LOOPcc LOOPE { asmout, "loope" };
 Instruction_LOOPcc LOOPNE { asmout, "loopne" };
@@ -364,26 +364,26 @@ Instruction_LOOPcc LOOPNZ { asmout, "loopnz" };
 Instruction_BOUND BOUND { asmout, "bound" };
 
 // String instructions
-Instruction_NoOperands MOVSB { asmout, "movsb" };
-Instruction_NoOperands MOVSW { asmout, "movsw" };
-Instruction_NoOperands MOVSD { asmout, "movsl" };
-Instruction_NoOperands MOVSQ { asmout, "movsq" };
-Instruction_NoOperands CMPSB { asmout, "cmpsb" };
-Instruction_NoOperands CMPSW { asmout, "cmpsw" };
-Instruction_NoOperands CMPSD { asmout, "cmpsl" };
-Instruction_NoOperands CMPSQ { asmout, "cmpsq" };
-Instruction_NoOperands SCASB { asmout, "scasb" };
-Instruction_NoOperands SCASW { asmout, "scasw" };
-Instruction_NoOperands SCASD { asmout, "scasl" };
-Instruction_NoOperands SCASQ { asmout, "scasq" };
-Instruction_NoOperands LODSB { asmout, "lodsb" };
-Instruction_NoOperands LODSW { asmout, "lodsw" };
-Instruction_NoOperands LODSD { asmout, "lodsl" };
-Instruction_NoOperands LODSQ { asmout, "lodsq" };
-Instruction_NoOperands STOSB { asmout, "stosb" };
-Instruction_NoOperands STOSW { asmout, "stosw" };
-Instruction_NoOperands STOSD { asmout, "stosl" };
-Instruction_NoOperands STOSQ { asmout, "stosq" };
+Instruction1_Type1 MOVSB { asmout, "movsb" };
+Instruction1_Type1 MOVSW { asmout, "movsw" };
+Instruction1_Type1 MOVSD { asmout, "movsl" };
+Instruction1_Type1 MOVSQ { asmout, "movsq" };
+Instruction1_Type1 CMPSB { asmout, "cmpsb" };
+Instruction1_Type1 CMPSW { asmout, "cmpsw" };
+Instruction1_Type1 CMPSD { asmout, "cmpsl" };
+Instruction1_Type1 CMPSQ { asmout, "cmpsq" };
+Instruction1_Type1 SCASB { asmout, "scasb" };
+Instruction1_Type1 SCASW { asmout, "scasw" };
+Instruction1_Type1 SCASD { asmout, "scasl" };
+Instruction1_Type1 SCASQ { asmout, "scasq" };
+Instruction1_Type1 LODSB { asmout, "lodsb" };
+Instruction1_Type1 LODSW { asmout, "lodsw" };
+Instruction1_Type1 LODSD { asmout, "lodsl" };
+Instruction1_Type1 LODSQ { asmout, "lodsq" };
+Instruction1_Type1 STOSB { asmout, "stosb" };
+Instruction1_Type1 STOSW { asmout, "stosw" };
+Instruction1_Type1 STOSD { asmout, "stosl" };
+Instruction1_Type1 STOSQ { asmout, "stosq" };
 Instruction_Prefix REP { asmout, "rep" };
 Instruction_Prefix REPE { asmout, "repe" };
 Instruction_Prefix REPZ { asmout, "repz" };
@@ -392,28 +392,28 @@ Instruction_Prefix REPNZ { asmout, "repnz" };
 
 // I/O instructions
 Instruction_IN IN { asmout, "in" };
-Instruction_NoOperands INSB { asmout, "insb" };
-Instruction_NoOperands INSW { asmout, "insw" };
-Instruction_NoOperands INSD { asmout, "insl" };
+Instruction1_Type1 INSB { asmout, "insb" };
+Instruction1_Type1 INSW { asmout, "insw" };
+Instruction1_Type1 INSD { asmout, "insl" };
 Instruction_OUT OUT { asmout, "out" };
-Instruction_NoOperands OUTSB { asmout, "outsb" };
-Instruction_NoOperands OUTSW { asmout, "outsw" };
-Instruction_NoOperands OUTSD { asmout, "outsl" };
+Instruction1_Type1 OUTSB { asmout, "outsb" };
+Instruction1_Type1 OUTSW { asmout, "outsw" };
+Instruction1_Type1 OUTSD { asmout, "outsl" };
 
 // Flag control (EFLAG) instructions
-Instruction_NoOperands CLC { asmout, "clc" };
-Instruction_NoOperands CLD { asmout, "cld" };
-Instruction_NoOperands CLI { asmout, "cli" };
-Instruction_NoOperands CMC { asmout, "cmc" };
-Instruction_NoOperands LAHF { asmout, "lahf" };
-Instruction_NoOperands SAHF { asmout, "sahf" };
-Instruction_NoOperands PUSHF { asmout, "pushf" };
-Instruction_NoOperands POPF { asmout, "popf" };
-Instruction_NoOperands POPFD { asmout, "popfl" };
-Instruction_NoOperands POPFQ { asmout, "popfq" };
-Instruction_NoOperands STC { asmout, "stc" };
-Instruction_NoOperands STI { asmout, "sti" };
-Instruction_NoOperands STD { asmout, "std" };
+Instruction1_Type1 CLC { asmout, "clc" };
+Instruction1_Type1 CLD { asmout, "cld" };
+Instruction1_Type1 CLI { asmout, "cli" };
+Instruction1_Type1 CMC { asmout, "cmc" };
+Instruction1_Type1 LAHF { asmout, "lahf" };
+Instruction1_Type1 SAHF { asmout, "sahf" };
+Instruction1_Type1 PUSHF { asmout, "pushf" };
+Instruction1_Type1 POPF { asmout, "popf" };
+Instruction1_Type1 POPFD { asmout, "popfl" };
+Instruction1_Type1 POPFQ { asmout, "popfq" };
+Instruction1_Type1 STC { asmout, "stc" };
+Instruction1_Type1 STI { asmout, "sti" };
+Instruction1_Type1 STD { asmout, "std" };
 
 // Segment register instructions
 Instruction_LoadFarPointer LDS { asmout, "lds" };
@@ -425,11 +425,11 @@ Instruction_LoadFarPointer LSS { asmout, "lss" };
 // Miscelleneous instructions
 Instruction_LEA LEA { asmout, "lea" };
 Instruction_NOP NOP { asmout, "nop" };
-Instruction_NoOperands UD { asmout, ".byte 0x0F, 0xFF" };
-Instruction_NoOperands UD1 { asmout, "ud1" };
-Instruction_NoOperands UD2 { asmout, "ud2" };
-Instruction_NoOperands CPUID { asmout, "cpuid" };
-Instruction_NoOperands XLAT { asmout, "xlat" };
+Instruction1_Type1 UD { asmout, ".byte 0x0F, 0xFF" };
+Instruction1_Type1 UD1 { asmout, "ud1" };
+Instruction1_Type1 UD2 { asmout, "ud2" };
+Instruction1_Type1 CPUID { asmout, "cpuid" };
+Instruction1_Type1 XLAT { asmout, "xlat" };
 Instruction_MemOnly CLFLUSH { asmout, "clflush" };
 Instruction_MemOnly CLFLUSHOPT { asmout, "clflushopt" };
 
@@ -438,7 +438,7 @@ Instruction_MemOnly XSAVE { asmout, "xsave" };
 Instruction_MemOnly XSAVEC { asmout, "xsavec" };
 Instruction_MemOnly XSAVEOPT { asmout, "xsaveopt" };
 Instruction_MemOnly XRSTOR { asmout, "xrstor" };
-Instruction_NoOperands XGETBV { asmout, "xgetbv" };
+Instruction1_Type1 XGETBV { asmout, "xgetbv" };
 
 // Random number generator instructions
 Instruction_RDRAND RDRAND { asmout, "rdrand" };
@@ -482,58 +482,58 @@ Instruction_FPU_Arithm3 FIDIV { asmout, "fidiv" };
 Instruction_FPU_Arithm1 FDIVR { asmout, "fdivr" };
 Instruction_FPU_Arithm2 FDIVRP { asmout, "fdivrp" };
 Instruction_FPU_Arithm3 FIDIVR { asmout, "fidivr" };
-Instruction_NoOperands FPREM { asmout, "fprem" };
-Instruction_NoOperands FPREM1 { asmout, "fprem1" };
-Instruction_NoOperands FABS { asmout, "fabs" };
-Instruction_NoOperands FCHS { asmout, "fchs" };
-Instruction_NoOperands FRNDINT { asmout, "frndint" };
-Instruction_NoOperands FSCALE { asmout, "fscale" };
-Instruction_NoOperands FSQRT { asmout, "fsqrt" };
-Instruction_NoOperands FXTRACT { asmout, "fxtract" };
+Instruction1_Type1 FPREM { asmout, "fprem" };
+Instruction1_Type1 FPREM1 { asmout, "fprem1" };
+Instruction1_Type1 FABS { asmout, "fabs" };
+Instruction1_Type1 FCHS { asmout, "fchs" };
+Instruction1_Type1 FRNDINT { asmout, "frndint" };
+Instruction1_Type1 FSCALE { asmout, "fscale" };
+Instruction1_Type1 FSQRT { asmout, "fsqrt" };
+Instruction1_Type1 FXTRACT { asmout, "fxtract" };
 
 // x87 FPU comparison instructions
 Instruction_FCOM FCOM = { asmout, "fcom" };
 Instruction_FCOM FCOMP = { asmout, "fcomp" };
-Instruction_FCOMPP FCOMPP = { asmout, "fcompp" };
+Instruction1_Type1 FCOMPP = { asmout, "fcompp" };
 Instruction_FUCOM FUCOM = { asmout, "fucom" };
 Instruction_FUCOM FUCOMP = { asmout, "fucomp" };
-Instruction_FUCOMPP FUCOMPP = { asmout, "fucompp" };
+Instruction1_Type1 FUCOMPP = { asmout, "fucompp" };
 Instruction_FICOM FICOM = { asmout, "ficom" };
 Instruction_FICOM FICOMP = { asmout, "ficomp" };
 Instruction_FCOMI FCOMI = { asmout, "fcomi" };
 Instruction_FCOMI FCOMIP = { asmout, "fcomip" };
 Instruction_FCOMI FUCOMI = { asmout, "fucomi" };
 Instruction_FCOMI FUCOMIP = { asmout, "fucomip" };
-Instruction_NoOperands FTST { asmout, "ftst" };
-Instruction_NoOperands FXAM { asmout, "fxam" };
+Instruction1_Type1 FTST { asmout, "ftst" };
+Instruction1_Type1 FXAM { asmout, "fxam" };
 
 // x87 FPU transcendental instructions
-Instruction_NoOperands FSIN { asmout, "fsin" };
-Instruction_NoOperands FSINCOS { asmout, "fsincos" };
-Instruction_NoOperands FCOS { asmout, "fcos" };
-Instruction_NoOperands FPTAN { asmout, "fptan" };
-Instruction_NoOperands FPATAN { asmout, "fpatan" };
-Instruction_NoOperands F2XM1 { asmout, "f2xm1" };
-Instruction_NoOperands FYL2X { asmout, "fyl2x" };
-Instruction_NoOperands FYL2XP1 { asmout, "fyl2xp1" };
+Instruction1_Type1 FSIN { asmout, "fsin" };
+Instruction1_Type1 FSINCOS { asmout, "fsincos" };
+Instruction1_Type1 FCOS { asmout, "fcos" };
+Instruction1_Type1 FPTAN { asmout, "fptan" };
+Instruction1_Type1 FPATAN { asmout, "fpatan" };
+Instruction1_Type1 F2XM1 { asmout, "f2xm1" };
+Instruction1_Type1 FYL2X { asmout, "fyl2x" };
+Instruction1_Type1 FYL2XP1 { asmout, "fyl2xp1" };
 
 // x87 FPU load constants instructions
-Instruction_NoOperands FLD1 { asmout, "fld1" };
-Instruction_NoOperands FLDL2T { asmout, "fldl2t" };
-Instruction_NoOperands FLDL2E { asmout, "fldl2e" };
-Instruction_NoOperands FLDPI { asmout, "fldpi" };
-Instruction_NoOperands FLDLG2 { asmout, "fldlg2" };
-Instruction_NoOperands FLDLN2 { asmout, "fldln2" };
-Instruction_NoOperands FLDZ { asmout, "fldz" };
+Instruction1_Type1 FLD1 { asmout, "fld1" };
+Instruction1_Type1 FLDL2T { asmout, "fldl2t" };
+Instruction1_Type1 FLDL2E { asmout, "fldl2e" };
+Instruction1_Type1 FLDPI { asmout, "fldpi" };
+Instruction1_Type1 FLDLG2 { asmout, "fldlg2" };
+Instruction1_Type1 FLDLN2 { asmout, "fldln2" };
+Instruction1_Type1 FLDZ { asmout, "fldz" };
 
 // x87 FPU control instructions
-Instruction_NoOperands FINCSTP { asmout, "fincstp" };
-Instruction_NoOperands FDECSTP { asmout, "fdecstp" };
+Instruction1_Type1 FINCSTP { asmout, "fincstp" };
+Instruction1_Type1 FDECSTP { asmout, "fdecstp" };
 Instruction_FFREE FFREE { asmout, "ffree" };
-Instruction_NoOperands FINIT { asmout, "finit" };
-Instruction_NoOperands FNINIT { asmout, "fninit" };
-Instruction_NoOperands FCLEX { asmout, "fclex" };
-Instruction_NoOperands FNCLEX { asmout, "fnclex" };
+Instruction1_Type1 FINIT { asmout, "finit" };
+Instruction1_Type1 FNINIT { asmout, "fninit" };
+Instruction1_Type1 FCLEX { asmout, "fclex" };
+Instruction1_Type1 FNCLEX { asmout, "fnclex" };
 Instruction_FSTCW FSTCW { asmout, "fstcw" };
 Instruction_FSTCW FNSTCW { asmout, "fnstcw" };
 Instruction_FLDCW FLDCW { asmout, "fldcw" };
@@ -545,7 +545,7 @@ Instruction_FSAVE FNSAVE { asmout, "fnsave" };
 Instruction_FRSTOR FRSTOR { asmout, "frstor" };
 Instruction_FSTSW FSTSW { asmout, "fstsw" };
 Instruction_FSTSW FNSTSW { asmout, "fnstsw" };
-Instruction_NoOperands FNOP { asmout, "fnop" };
+Instruction1_Type1 FNOP { asmout, "fnop" };
 
 // x87 FPU and SIMD state management instructions
 Instruction_MemOnly FXSAVE { asmout, "fxsave" };
@@ -609,7 +609,7 @@ Instruction_MMX_Shift PSRAW { asmout, "psraw" };
 Instruction_MMX_Shift PSRAD { asmout, "psrad" };
 
 // MMX state management instructions
-Instruction_NoOperands EMMS { asmout, "emms" };
+Instruction1_Type1 EMMS { asmout, "emms" };
 
 // SSE data transfer instructions
 Instruction_SSE_MOV1 MOVAPS { asmout, "movaps" };
@@ -692,7 +692,7 @@ Instruction_MemOnly PREFETCHT2 { asmout, "prefetcht2" };
 Instruction_MemOnly PREFETCHNTA { asmout, "prefetchnta" };
 Instruction_MemOnly PREFETCHW { asmout, "prefetchw" };
 Instruction_MemOnly PREFETCHWT1 { asmout, "prefetchwt1" };
-Instruction_NoOperands SFENCE { asmout, "sfence" };
+Instruction1_Type1 SFENCE { asmout, "sfence" };
 
 // SSE2 data movement instructions
 Instruction_MOVxPD1 MOVAPD { asmout, "movapd" };
@@ -772,9 +772,9 @@ Instruction_SSE2_Int_Unpack PUNPCKHQDQ { asmout, "punpckhqdq" };
 Instruction_SSE2_Int_Unpack PUNPCKLQDQ { asmout, "punpcklqdq" };
 
 // SSE2 cacheability control and ordering instructions
-Instruction_NoOperands LFENCE { asmout, "lfence" };
-Instruction_NoOperands MFENCE { asmout, "mfence" };
-Instruction_NoOperands PAUSE { asmout, "pause" };
+Instruction1_Type1 LFENCE { asmout, "lfence" };
+Instruction1_Type1 MFENCE { asmout, "mfence" };
+Instruction1_Type1 PAUSE { asmout, "pause" };
 Instruction_MASKMOVDQU MASKMOVDQU { asmout, "maskmovdqu" };
 Instruction_MOVNTPx MOVNTPD { asmout, "movntpd" };
 Instruction_MOVNTPx MOVNTDQ { asmout, "movntdq" };
@@ -802,8 +802,8 @@ Instruction_SSE3_Arithm1 MOVSLDUP { asmout, "movsldup" };
 Instruction_SSE3_Arithm2 MOVDDUP { asmout, "movddup" };
 
 // SSE3 agent synchronization instructions
-Instruction_NoOperands MONITOR { asmout, "monitor" };
-Instruction_NoOperands MWAIT { asmout, "mwait" };
+Instruction1_Type1 MONITOR { asmout, "monitor" };
+Instruction1_Type1 MWAIT { asmout, "mwait" };
 
 // SSSE3: horizontal addition/subtraction
 Instruction_SSSE3_Arithm1 PHADDW { asmout, "phaddw" };
@@ -1065,8 +1065,8 @@ Instruction_AVX_Type2 VANDPS { asmout, "vandps" };
 Instruction_AVX_Type2 VANDPD { asmout, "vandpd" };
 Instruction_AVX_Type2 VANDNPS { asmout, "vandnps" };
 Instruction_AVX_Type2 VANDNPD { asmout, "vandnpd" };
-Instruction_NoOperands VZEROALL { asmout, "vzeroall" };
-Instruction_NoOperands VZEROUPPER { asmout, "vzeroupper" };
+Instruction1_Type1 VZEROALL { asmout, "vzeroall" };
+Instruction1_Type1 VZEROUPPER { asmout, "vzeroupper" };
 Instruction_AVX_Type13 VBROADCASTSS { asmout, "vbroadcastss" };
 Instruction_AVX_Type14 VBROADCASTSD { asmout, "vbroadcastsd" };
 Instruction_AVX_Type15 VBROADCASTF128 { asmout, "vbroadcastf128" };
@@ -1087,9 +1087,9 @@ Instruction_CVTSD2SI VCVTTSD2SI { asmout, "vcvttsd2si" };
 Instruction_SSE_Conv4 VCVTSS2SI { asmout, "vcvtss2si" };
 
 // System instructions
-Instruction_NoOperands CLAC { asmout, "clac" };
-Instruction_NoOperands STAC { asmout, "stac" };
-Instruction_NoOperands CLTS { asmout, "clts" };
+Instruction1_Type1 CLAC { asmout, "clac" };
+Instruction1_Type1 STAC { asmout, "stac" };
+Instruction1_Type1 CLTS { asmout, "clts" };
 Instruction_MemOnly LGDT { asmout, "lgdt" };
 Instruction_MemOnly LIDT { asmout, "lidt" };
 Instruction_MemOnly SIDT { asmout, "sidt" };
@@ -1098,32 +1098,32 @@ Instruction_rm16 LMSW { asmout, "lmsw" };
 Instruction_rm16 VERR { asmout, "verr" };
 Instruction_rm16 VERW { asmout, "verw" };
 Instruction_rm16 LTR { asmout, "ltr" };
-Instruction_NoOperands INVD { asmout, "invd" };
-Instruction_NoOperands WBINVD { asmout, "wbinvd" };
+Instruction1_Type1 INVD { asmout, "invd" };
+Instruction1_Type1 WBINVD { asmout, "wbinvd" };
 Instruction_MemOnly INVLPG { asmout, "invlpg" };
 Instruction_Prefix LOCK { asmout, "lock" };
-Instruction_NoOperands HLT { asmout, "hlt" };
-Instruction_NoOperands RSM { asmout, "rsm" };
-Instruction_NoOperands RDMSR { asmout, "rdmsr" };
-Instruction_NoOperands WRMSR { asmout, "wrmsr" };
-Instruction_NoOperands RDPMC { asmout, "rdpmc" };
-Instruction_NoOperands RDTSC { asmout, "rdtsc" };
-Instruction_NoOperands RDTSCP { asmout, "rdtscp" };
-Instruction_NoOperands SYSENTER { asmout, "sysenter" };
-Instruction_NoOperands SYSEXIT { asmout, "sysexit" };
+Instruction1_Type1 HLT { asmout, "hlt" };
+Instruction1_Type1 RSM { asmout, "rsm" };
+Instruction1_Type1 RDMSR { asmout, "rdmsr" };
+Instruction1_Type1 WRMSR { asmout, "wrmsr" };
+Instruction1_Type1 RDPMC { asmout, "rdpmc" };
+Instruction1_Type1 RDTSC { asmout, "rdtsc" };
+Instruction1_Type1 RDTSCP { asmout, "rdtscp" };
+Instruction1_Type1 SYSENTER { asmout, "sysenter" };
+Instruction1_Type1 SYSEXIT { asmout, "sysexit" };
 Instruction_MemOnly XRSTORS { asmout, "xrstors" };
 Instruction_MemOnly XRSTORS64 { asmout, "xrstors64" };
 Instruction_MemOnly XSAVES { asmout, "xsaves" };
 Instruction_MemOnly XSAVES64 { asmout, "xsaves64" };
-Instruction_NoOperands XSETBV { asmout, "xsetbv" };
+Instruction1_Type1 XSETBV { asmout, "xsetbv" };
 Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
 Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };
 Instruction_FSGSBASE WRFSBASE { asmout, "wrfsbase" };
 Instruction_FSGSBASE WRGSBASE { asmout, "wrgsbase" };
 
 // 64-bit mode instructions
-Instruction_NoOperands SYSCALL { asmout, "syscall" };
-Instruction_NoOperands SYSRET { asmout, "sysret" };
+Instruction1_Type1 SYSCALL { asmout, "syscall" };
+Instruction1_Type1 SYSRET { asmout, "sysret" };
 
 // AVX
 Instruction_VMOVD VMOVD { asmout, "qmovd" };

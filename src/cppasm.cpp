@@ -454,14 +454,14 @@ Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction_FBCD FBLD { asmout, "fbld" };
 Instruction_FBCD FBSTP { asmout, "fbstp" };
 Instruction_FXCH FXCH { asmout, "fxch" };
-Instruction_FCMOVcc FCMOVB { asmout, "fcmovb" };
-Instruction_FCMOVcc FCMOVE { asmout, "fcmove" };
-Instruction_FCMOVcc FCMOVBE { asmout, "fcmovbe" };
-Instruction_FCMOVcc FCMOVU { asmout, "fcmovu" };
-Instruction_FCMOVcc FCMOVNB { asmout, "fcmovnb" };
-Instruction_FCMOVcc FCMOVNE { asmout, "fcmovne" };
-Instruction_FCMOVcc FCMOVNBE { asmout, "fcmovnbe" };
-Instruction_FCMOVcc FCMOVNU { asmout, "fcmovnu" };
+Instruction1_Type5 FCMOVB { asmout, "fcmovb" };
+Instruction1_Type5 FCMOVE { asmout, "fcmove" };
+Instruction1_Type5 FCMOVBE { asmout, "fcmovbe" };
+Instruction1_Type5 FCMOVU { asmout, "fcmovu" };
+Instruction1_Type5 FCMOVNB { asmout, "fcmovnb" };
+Instruction1_Type5 FCMOVNE { asmout, "fcmovne" };
+Instruction1_Type5 FCMOVNBE { asmout, "fcmovnbe" };
+Instruction1_Type5 FCMOVNU { asmout, "fcmovnu" };
 
 // x87 FPU basic arithmetic instructions
 Instruction_FPU_Arithm1 FADD { asmout, "fadd" };
@@ -500,10 +500,10 @@ Instruction_FUCOM FUCOMP = { asmout, "fucomp" };
 Instruction1_Type1 FUCOMPP = { asmout, "fucompp" };
 Instruction_FICOM FICOM = { asmout, "ficom" };
 Instruction_FICOM FICOMP = { asmout, "ficomp" };
-Instruction_FCOMI FCOMI = { asmout, "fcomi" };
-Instruction_FCOMI FCOMIP = { asmout, "fcomip" };
-Instruction_FCOMI FUCOMI = { asmout, "fucomi" };
-Instruction_FCOMI FUCOMIP = { asmout, "fucomip" };
+Instruction1_Type5 FCOMI = { asmout, "fcomi" };
+Instruction1_Type5 FCOMIP = { asmout, "fcomip" };
+Instruction1_Type5 FUCOMI = { asmout, "fucomi" };
+Instruction1_Type5 FUCOMIP = { asmout, "fucomip" };
 Instruction1_Type1 FTST { asmout, "ftst" };
 Instruction1_Type1 FXAM { asmout, "fxam" };
 

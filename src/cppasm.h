@@ -84,6 +84,11 @@ using Instruction1_Type4 = Instruction_1
     Operands_string
 >;
 
+using Instruction1_Type5 = Instruction_1
+<
+    Operands_reg_reg<st, st, no_suffix>
+>;
+
 using Instruction_CMPXCHG8B = Instruction_1
 <
     Operands_mem<m64, no_suffix>
@@ -112,16 +117,6 @@ using Instruction_Prefix = Instruction_1
 using Instruction_FBCD = Instruction_1
 <
     Operands_mem<m80bcd, no_suffix>
->;
-
-using Instruction_FCMOVcc = Instruction_1
-<
-    Operands_reg_reg<st, st, no_suffix>
->;
-
-using Instruction_FCOMI = Instruction_1
-<
-    Operands_reg_reg<st, st, no_suffix>
 >;
 
 using Instruction_FFREE = Instruction_1
@@ -1860,14 +1855,14 @@ extern Instruction_FSTP FSTP;
 extern Instruction_FBCD FBLD;
 extern Instruction_FBCD FBSTP;
 extern Instruction_FXCH FXCH;
-extern Instruction_FCMOVcc FCMOVB;
-extern Instruction_FCMOVcc FCMOVE;
-extern Instruction_FCMOVcc FCMOVBE;
-extern Instruction_FCMOVcc FCMOVU;
-extern Instruction_FCMOVcc FCMOVNB;
-extern Instruction_FCMOVcc FCMOVNE;
-extern Instruction_FCMOVcc FCMOVNBE;
-extern Instruction_FCMOVcc FCMOVNU;
+extern Instruction1_Type5 FCMOVB;
+extern Instruction1_Type5 FCMOVE;
+extern Instruction1_Type5 FCMOVBE;
+extern Instruction1_Type5 FCMOVU;
+extern Instruction1_Type5 FCMOVNB;
+extern Instruction1_Type5 FCMOVNE;
+extern Instruction1_Type5 FCMOVNBE;
+extern Instruction1_Type5 FCMOVNU;
 
 // x87 FPU basic arithmetic instructions
 extern Instruction_FPU_Arithm1 FADD;
@@ -1906,10 +1901,10 @@ extern Instruction_FUCOM FUCOMP;
 extern Instruction1_Type1 FUCOMPP;
 extern Instruction_FICOM FICOM;
 extern Instruction_FICOM FICOMP;
-extern Instruction_FCOMI FCOMI;
-extern Instruction_FCOMI FCOMIP;
-extern Instruction_FCOMI FUCOMI;
-extern Instruction_FCOMI FUCOMIP;
+extern Instruction1_Type5 FCOMI;
+extern Instruction1_Type5 FCOMIP;
+extern Instruction1_Type5 FUCOMI;
+extern Instruction1_Type5 FUCOMIP;
 extern Instruction1_Type1 FTST;
 extern Instruction1_Type1 FXAM;
 

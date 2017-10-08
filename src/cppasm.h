@@ -89,6 +89,11 @@ using Instruction1_Type5 = Instruction_1
     Operands_reg_reg<st, st, no_suffix>
 >;
 
+using Instruction1_Type6 = Instruction_1
+<
+    Operands_mem<m16, no_suffix>
+>;
+
 using Instruction_CMPXCHG8B = Instruction_1
 <
     Operands_mem<m64, no_suffix>
@@ -122,16 +127,6 @@ using Instruction_FBCD = Instruction_1
 using Instruction_FFREE = Instruction_1
 <
     Operands_reg<st>
->;
-
-using Instruction_FSTCW = Instruction_1
-<
-    Operands_mem<m16, no_suffix>
->;
-
-using Instruction_FLDCW = Instruction_1
-<
-    Operands_mem<m16, no_suffix>
 >;
 
 using Instruction_MXCSR = Instruction_1
@@ -1935,9 +1930,9 @@ extern Instruction1_Type1 FINIT;
 extern Instruction1_Type1 FNINIT;
 extern Instruction1_Type1 FCLEX;
 extern Instruction1_Type1 FNCLEX;
-extern Instruction_FSTCW FSTCW;
-extern Instruction_FSTCW FNSTCW;
-extern Instruction_FLDCW FLDCW;
+extern Instruction1_Type6 FSTCW;
+extern Instruction1_Type6 FNSTCW;
+extern Instruction1_Type6 FLDCW;
 extern Instruction1_Type2 FSTENV;
 extern Instruction1_Type2 FNSTENV;
 extern Instruction1_Type2 FLDENV;

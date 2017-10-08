@@ -79,6 +79,11 @@ using Instruction1_Type3 = Instruction_1
     Operands_reg_reg<xmm, xmm, no_suffix>
 >;
 
+using Instruction1_Type4 = Instruction_1
+<
+    Operands_string
+>;
+
 using Instruction_CMPXCHG8B = Instruction_1
 <
     Operands_mem<m64, no_suffix>
@@ -97,16 +102,6 @@ using Instruction_ENTER = Instruction_1
 using Instruction_INT = Instruction_1
 <
     Operands_imm<imm8>
->;
-
-using Instruction_Jcc = Instruction_1
-<
-    Operands_string
->;
-
-using Instruction_LOOPcc = Instruction_1
-<
-    Operands_string
 >;
 
 using Instruction_Prefix = Instruction_1
@@ -1723,39 +1718,39 @@ extern Instruction_TEST TEST;
 // Control transfer instructions
 extern Instruction_Branch JMP;
 extern Instruction_Branch JMP_FAR;
-extern Instruction_Jcc JA;
-extern Instruction_Jcc JAE;
-extern Instruction_Jcc JB;
-extern Instruction_Jcc JBE;
-extern Instruction_Jcc JC;
-extern Instruction_Jcc JCXZ;
-extern Instruction_Jcc JECXZ;
-extern Instruction_Jcc JRCXZ;
-extern Instruction_Jcc JE;
-extern Instruction_Jcc JG;
-extern Instruction_Jcc JGE;
-extern Instruction_Jcc JL;
-extern Instruction_Jcc JLE;
-extern Instruction_Jcc JNA;
-extern Instruction_Jcc JNAE;
-extern Instruction_Jcc JNB;
-extern Instruction_Jcc JNBE;
-extern Instruction_Jcc JNC;
-extern Instruction_Jcc JNE;
-extern Instruction_Jcc JNG;
-extern Instruction_Jcc JNGE;
-extern Instruction_Jcc JNL;
-extern Instruction_Jcc JNLE;
-extern Instruction_Jcc JNO;
-extern Instruction_Jcc JNP;
-extern Instruction_Jcc JNS;
-extern Instruction_Jcc JNZ;
-extern Instruction_Jcc JO;
-extern Instruction_Jcc JP;
-extern Instruction_Jcc JPE;
-extern Instruction_Jcc JPO;
-extern Instruction_Jcc JS;
-extern Instruction_Jcc JZ;
+extern Instruction1_Type4 JA;
+extern Instruction1_Type4 JAE;
+extern Instruction1_Type4 JB;
+extern Instruction1_Type4 JBE;
+extern Instruction1_Type4 JC;
+extern Instruction1_Type4 JCXZ;
+extern Instruction1_Type4 JECXZ;
+extern Instruction1_Type4 JRCXZ;
+extern Instruction1_Type4 JE;
+extern Instruction1_Type4 JG;
+extern Instruction1_Type4 JGE;
+extern Instruction1_Type4 JL;
+extern Instruction1_Type4 JLE;
+extern Instruction1_Type4 JNA;
+extern Instruction1_Type4 JNAE;
+extern Instruction1_Type4 JNB;
+extern Instruction1_Type4 JNBE;
+extern Instruction1_Type4 JNC;
+extern Instruction1_Type4 JNE;
+extern Instruction1_Type4 JNG;
+extern Instruction1_Type4 JNGE;
+extern Instruction1_Type4 JNL;
+extern Instruction1_Type4 JNLE;
+extern Instruction1_Type4 JNO;
+extern Instruction1_Type4 JNP;
+extern Instruction1_Type4 JNS;
+extern Instruction1_Type4 JNZ;
+extern Instruction1_Type4 JO;
+extern Instruction1_Type4 JP;
+extern Instruction1_Type4 JPE;
+extern Instruction1_Type4 JPO;
+extern Instruction1_Type4 JS;
+extern Instruction1_Type4 JZ;
 extern Instruction_Branch CALL;
 extern Instruction_Branch CALL_FAR;
 extern Instruction_RET RET;
@@ -1767,11 +1762,11 @@ extern Instruction1_Type1 INTO;
 extern Instruction1_Type1 IRET;
 extern Instruction1_Type1 IRETD;
 extern Instruction1_Type1 IRETQ;
-extern Instruction_LOOPcc LOOP;
-extern Instruction_LOOPcc LOOPE;
-extern Instruction_LOOPcc LOOPNE;
-extern Instruction_LOOPcc LOOPZ;
-extern Instruction_LOOPcc LOOPNZ;
+extern Instruction1_Type4 LOOP;
+extern Instruction1_Type4 LOOPE;
+extern Instruction1_Type4 LOOPNE;
+extern Instruction1_Type4 LOOPZ;
+extern Instruction1_Type4 LOOPNZ;
 extern Instruction_BOUND BOUND;
 
 // String instructions

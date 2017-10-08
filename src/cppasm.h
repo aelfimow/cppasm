@@ -74,6 +74,11 @@ using Instruction1_Type2 = Instruction_1
     Operands_mem<m, no_suffix>
 >;
 
+using Instruction1_Type3 = Instruction_1
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>
+>;
+
 using Instruction_CMPXCHG8B = Instruction_1
 <
     Operands_mem<m64, no_suffix>
@@ -87,11 +92,6 @@ using Instruction_CMPXCHG16B = Instruction_1
 using Instruction_ENTER = Instruction_1
 <
     Operands_imm_imm<imm16, imm8>
->;
-
-using Instruction_SSE_MOV3 = Instruction_1
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>
 >;
 
 using Instruction_INT = Instruction_1
@@ -167,11 +167,6 @@ using Instruction_MOVNTPS = Instruction_1
 using Instruction_MOVxPD2 = Instruction_1
 <
     Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_MASKMOVDQU = Instruction_1
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>
 >;
 
 using Instruction_MOVNTPx = Instruction_1
@@ -2032,8 +2027,8 @@ extern Instruction_SSE_MOV1 MOVAPS;
 extern Instruction_SSE_MOV1 MOVUPS;
 extern Instruction_SSE_MOV2 MOVHPS;
 extern Instruction_SSE_MOV2 MOVLPS;
-extern Instruction_SSE_MOV3 MOVLHPS;
-extern Instruction_SSE_MOV3 MOVHLPS;
+extern Instruction1_Type3 MOVLHPS;
+extern Instruction1_Type3 MOVHLPS;
 extern Instruction_SSE_MOV4 MOVMSKPS;
 extern Instruction_SSE_MOV5 MOVSS;
 
@@ -2192,7 +2187,7 @@ extern Instruction1_Type2 CLFLUSH;
 extern Instruction1_Type1 LFENCE;
 extern Instruction1_Type1 MFENCE;
 extern Instruction1_Type1 PAUSE;
-extern Instruction_MASKMOVDQU MASKMOVDQU;
+extern Instruction1_Type3 MASKMOVDQU;
 extern Instruction_MOVNTPx MOVNTPD;
 extern Instruction_MOVNTPx MOVNTDQ;
 extern Instruction_MOVNTI MOVNTI;

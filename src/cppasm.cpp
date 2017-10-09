@@ -225,8 +225,8 @@ Instruction_XCHG XCHG { asmout, "xchg" };
 Instruction_BSWAP BSWAP { asmout, "bswap" };
 Instruction_XADD XADD { asmout, "xadd" };
 Instruction_CMPXCHG CMPXCHG { asmout, "cmpxchg" };
-Instruction_CMPXCHG8B CMPXCHG8B { asmout, "cmpxchg8b" };
-Instruction_CMPXCHG16B CMPXCHG16B { asmout, "cmpxchg16b" };
+Instruction1_Type7 CMPXCHG8B { asmout, "cmpxchg8b" };
+Instruction1_Type8 CMPXCHG16B { asmout, "cmpxchg16b" };
 
 // Binary arithmetic instructions
 Instruction_Arithm1 ADD { asmout, "add" };
@@ -349,9 +349,9 @@ Instruction_Branch CALL { asmout, "call" };
 Instruction_Branch CALL_FAR { asmout, "lcall" };
 Instruction_RET RET { asmout, "ret" };
 Instruction_RET RET_FAR { asmout, "lret" };
-Instruction_ENTER ENTER { asmout, "enter" };
+Instruction1_Type9 ENTER { asmout, "enter" };
 Instruction1_Type1 LEAVE { asmout, "leave" };
-Instruction_INT INT { asmout, "int" };
+Instruction1_Type10 INT { asmout, "int" };
 Instruction1_Type1 INTO { asmout, "into" };
 Instruction1_Type1 IRET { asmout, "iret" };
 Instruction1_Type1 IRETD { asmout, "iretl" };
@@ -384,11 +384,11 @@ Instruction1_Type1 STOSB { asmout, "stosb" };
 Instruction1_Type1 STOSW { asmout, "stosw" };
 Instruction1_Type1 STOSD { asmout, "stosl" };
 Instruction1_Type1 STOSQ { asmout, "stosq" };
-Instruction_Prefix REP { asmout, "rep" };
-Instruction_Prefix REPE { asmout, "repe" };
-Instruction_Prefix REPZ { asmout, "repz" };
-Instruction_Prefix REPNE { asmout, "repne" };
-Instruction_Prefix REPNZ { asmout, "repnz" };
+Instruction1_Type11 REP { asmout, "rep" };
+Instruction1_Type11 REPE { asmout, "repe" };
+Instruction1_Type11 REPZ { asmout, "repz" };
+Instruction1_Type11 REPNE { asmout, "repne" };
+Instruction1_Type11 REPNZ { asmout, "repnz" };
 
 // I/O instructions
 Instruction_IN IN { asmout, "in" };
@@ -451,8 +451,8 @@ Instruction_FIST FIST { asmout, "fist" };
 Instruction_FISTP FISTP { asmout, "fistp" };
 Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
-Instruction_FBCD FBLD { asmout, "fbld" };
-Instruction_FBCD FBSTP { asmout, "fbstp" };
+Instruction1_Type12 FBLD { asmout, "fbld" };
+Instruction1_Type12 FBSTP { asmout, "fbstp" };
 Instruction_FXCH FXCH { asmout, "fxch" };
 Instruction1_Type5 FCMOVB { asmout, "fcmovb" };
 Instruction1_Type5 FCMOVE { asmout, "fcmove" };
@@ -529,7 +529,7 @@ Instruction1_Type1 FLDZ { asmout, "fldz" };
 // x87 FPU control instructions
 Instruction1_Type1 FINCSTP { asmout, "fincstp" };
 Instruction1_Type1 FDECSTP { asmout, "fdecstp" };
-Instruction_FFREE FFREE { asmout, "ffree" };
+Instruction1_Type13 FFREE { asmout, "ffree" };
 Instruction1_Type1 FINIT { asmout, "finit" };
 Instruction1_Type1 FNINIT { asmout, "fninit" };
 Instruction1_Type1 FCLEX { asmout, "fclex" };
@@ -665,8 +665,8 @@ Instruction_SSE_Conv4 CVTSS2SI { asmout, "cvtss2si" };
 Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
 
 // SSE MXCSR state management instructions
-Instruction_MXCSR LDMXCSR { asmout, "ldmxcsr" };
-Instruction_MXCSR STMXCSR { asmout, "stmxcsr" };
+Instruction1_Type14 LDMXCSR { asmout, "ldmxcsr" };
+Instruction1_Type14 STMXCSR { asmout, "stmxcsr" };
 
 // SSE 64-bit SIMD integer instructions
 Instruction_PAVGx PAVGB { asmout, "pavgb" };
@@ -683,9 +683,9 @@ Instruction_PSADBW PSADBW { asmout, "psadbw" };
 Instruction_PSHUFW PSHUFW { asmout, "pshufw" };
 
 // SSE cacheability control, prefetch, and instruction ordering instructions
-Instruction_MASKMOVQ MASKMOVQ { asmout, "maskmovq" };
-Instruction_MOVNTQ MOVNTQ { asmout, "movntq" };
-Instruction_MOVNTPS MOVNTPS { asmout, "movntps" };
+Instruction1_Type15 MASKMOVQ { asmout, "maskmovq" };
+Instruction1_Type16 MOVNTQ { asmout, "movntq" };
+Instruction1_Type17 MOVNTPS { asmout, "movntps" };
 Instruction1_Type2 PREFETCHT0 { asmout, "prefetcht0" };
 Instruction1_Type2 PREFETCHT1 { asmout, "prefetcht1" };
 Instruction1_Type2 PREFETCHT2 { asmout, "prefetcht2" };
@@ -697,8 +697,8 @@ Instruction1_Type1 SFENCE { asmout, "sfence" };
 // SSE2 data movement instructions
 Instruction_MOVxPD1 MOVAPD { asmout, "movapd" };
 Instruction_MOVxPD1 MOVUPD { asmout, "movupd" };
-Instruction_MOVxPD2 MOVHPD { asmout, "movhpd" };
-Instruction_MOVxPD2 MOVLPD { asmout, "movlpd" };
+Instruction1_Type18 MOVHPD { asmout, "movhpd" };
+Instruction1_Type18 MOVLPD { asmout, "movlpd" };
 Instruction_MOVMSKPD MOVMSKPD { asmout, "movmskpd" };
 Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
 
@@ -758,16 +758,16 @@ Instruction_CVTPS2DQ CVTTPS2DQ { asmout, "cvttps2dq" };
 // SSE2 128-bit SIMD integer instructions
 Instruction_MOVDQx MOVDQA { asmout, "movdqa" };
 Instruction_MOVDQx MOVDQU { asmout, "movdqu" };
-Instruction_MOVQ2DQ MOVQ2DQ { asmout, "movq2dq" };
-Instruction_MOVDQ2Q MOVDQ2Q { asmout, "movdq2q" };
+Instruction1_Type20 MOVQ2DQ { asmout, "movq2dq" };
+Instruction1_Type21 MOVDQ2Q { asmout, "movdq2q" };
 Instruction_PMULUDQ PMULUDQ { asmout, "pmuludq" };
 Instruction_SSE2_Int_Arithm1 PADDQ { asmout, "paddq" };
 Instruction_SSE2_Int_Arithm1 PSUBQ { asmout, "psubq" };
 Instruction_SSE2_Int_Shuffle PSHUFLW { asmout, "pshuflw" };
 Instruction_SSE2_Int_Shuffle PSHUFHW { asmout, "pshufhw" };
 Instruction_SSE2_Int_Shuffle PSHUFD { asmout, "pshufd" };
-Instruction_SSE2_Int_Shift PSLLDQ { asmout, "pslldq" };
-Instruction_SSE2_Int_Shift PSRLDQ { asmout, "psrldq" };
+Instruction1_Type22 PSLLDQ { asmout, "pslldq" };
+Instruction1_Type22 PSRLDQ { asmout, "psrldq" };
 Instruction_SSE2_Int_Unpack PUNPCKHQDQ { asmout, "punpckhqdq" };
 Instruction_SSE2_Int_Unpack PUNPCKLQDQ { asmout, "punpcklqdq" };
 
@@ -776,15 +776,15 @@ Instruction1_Type1 LFENCE { asmout, "lfence" };
 Instruction1_Type1 MFENCE { asmout, "mfence" };
 Instruction1_Type1 PAUSE { asmout, "pause" };
 Instruction1_Type3 MASKMOVDQU { asmout, "maskmovdqu" };
-Instruction_MOVNTPx MOVNTPD { asmout, "movntpd" };
-Instruction_MOVNTPx MOVNTDQ { asmout, "movntdq" };
+Instruction1_Type19 MOVNTPD { asmout, "movntpd" };
+Instruction1_Type19 MOVNTDQ { asmout, "movntdq" };
 Instruction_MOVNTI MOVNTI { asmout, "movnti" };
 
 // SSE3 x87-FP integer convertion instruction
 Instruction_FISTTP FISTTP { asmout, "fisttp" };
 
 // SSE3 specialized 128-bit unaligned data load instruction
-Instruction_LDDQU LDDQU { asmout, "lddqu" };
+Instruction1_Type23 LDDQU { asmout, "lddqu" };
 
 // SSE3 SIMD floating-point packed ADD/SUB instructions
 Instruction_SSE3_Arithm1 ADDSUBPS { asmout, "addsubps" };
@@ -844,7 +844,7 @@ Instruction_SSE4_1_Type2 DPPD { asmout, "dppd" };
 Instruction_SSE4_1_Type2 DPPS { asmout, "dpps" };
 
 // SSE4.1: streaming load hint instruction
-Instruction_MOVNTDQA MOVNTDQA { asmout, "movntdqa" };
+Instruction1_Type24 MOVNTDQA { asmout, "movntdqa" };
 
 // SSE4.1: packed blending instructions
 Instruction_SSE4_1_Type2 BLENDPD { asmout, "blendpd" };
@@ -1068,8 +1068,8 @@ Instruction_AVX_Type2 VANDNPD { asmout, "vandnpd" };
 Instruction1_Type1 VZEROALL { asmout, "vzeroall" };
 Instruction1_Type1 VZEROUPPER { asmout, "vzeroupper" };
 Instruction_AVX_Type13 VBROADCASTSS { asmout, "vbroadcastss" };
-Instruction_AVX_Type14 VBROADCASTSD { asmout, "vbroadcastsd" };
-Instruction_AVX_Type15 VBROADCASTF128 { asmout, "vbroadcastf128" };
+Instruction1_Type25 VBROADCASTSD { asmout, "vbroadcastsd" };
+Instruction1_Type26 VBROADCASTF128 { asmout, "vbroadcastf128" };
 Instruction_AVX_Type16 VEXTRACTF128 { asmout, "vextractf128" };
 Instruction_AVX_Type17 VINSERTF128 { asmout, "vinsertf128" };
 Instruction_AVX_Type18 VMASKMOVPS { asmout, "vmaskmovps" };
@@ -1101,7 +1101,7 @@ Instruction_rm16 LTR { asmout, "ltr" };
 Instruction1_Type1 INVD { asmout, "invd" };
 Instruction1_Type1 WBINVD { asmout, "wbinvd" };
 Instruction1_Type2 INVLPG { asmout, "invlpg" };
-Instruction_Prefix LOCK { asmout, "lock" };
+Instruction1_Type11 LOCK { asmout, "lock" };
 Instruction1_Type1 HLT { asmout, "hlt" };
 Instruction1_Type1 RSM { asmout, "rsm" };
 Instruction1_Type1 RDMSR { asmout, "rdmsr" };
@@ -1128,8 +1128,8 @@ Instruction1_Type1 SYSRET { asmout, "sysret" };
 // AVX
 Instruction_VMOVD VMOVD { asmout, "qmovd" };
 Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
-Instruction_MXCSR VLDMXCSR { asmout, "vldmxcsr" };
-Instruction_MXCSR VSTMXCSR { asmout, "vstmxcsr" };
+Instruction1_Type14 VLDMXCSR { asmout, "vldmxcsr" };
+Instruction1_Type14 VSTMXCSR { asmout, "vstmxcsr" };
 
 Keyword_label label;
 keyword global { ".global" };

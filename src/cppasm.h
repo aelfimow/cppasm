@@ -94,102 +94,102 @@ using Instruction1_Type6 = Instruction_1
     Operands_mem<m16, no_suffix>
 >;
 
-using Instruction_CMPXCHG8B = Instruction_1
+using Instruction1_Type7 = Instruction_1
 <
     Operands_mem<m64, no_suffix>
 >;
 
-using Instruction_CMPXCHG16B = Instruction_1
+using Instruction1_Type8 = Instruction_1
 <
     Operands_mem<m128, no_suffix>
 >;
 
-using Instruction_ENTER = Instruction_1
+using Instruction1_Type9 = Instruction_1
 <
     Operands_imm_imm<imm16, imm8>
 >;
 
-using Instruction_INT = Instruction_1
+using Instruction1_Type10 = Instruction_1
 <
     Operands_imm<imm8>
 >;
 
-using Instruction_Prefix = Instruction_1
+using Instruction1_Type11 = Instruction_1
 <
     Operands_prefix
 >;
 
-using Instruction_FBCD = Instruction_1
+using Instruction1_Type12 = Instruction_1
 <
     Operands_mem<m80bcd, no_suffix>
 >;
 
-using Instruction_FFREE = Instruction_1
+using Instruction1_Type13 = Instruction_1
 <
     Operands_reg<st>
 >;
 
-using Instruction_MXCSR = Instruction_1
+using Instruction1_Type14 = Instruction_1
 <
     Operands_mem<m32, no_suffix>
 >;
 
-using Instruction_MASKMOVQ = Instruction_1
+using Instruction1_Type15 = Instruction_1
 <
     Operands_reg_reg<mm, mm, no_suffix>
 >;
 
-using Instruction_MOVNTQ = Instruction_1
+using Instruction1_Type16 = Instruction_1
 <
     Operands_mem_reg<m64, mm, no_suffix>
 >;
 
-using Instruction_MOVNTPS = Instruction_1
+using Instruction1_Type17 = Instruction_1
 <
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_MOVxPD2 = Instruction_1
+using Instruction1_Type18 = Instruction_1
 <
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_MOVNTPx = Instruction_1
+using Instruction1_Type19 = Instruction_1
 <
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_MOVQ2DQ = Instruction_1
+using Instruction1_Type20 = Instruction_1
 <
     Operands_reg_reg<xmm, mm, no_suffix>
 >;
 
-using Instruction_MOVDQ2Q = Instruction_1
+using Instruction1_Type21 = Instruction_1
 <
     Operands_reg_reg<mm, xmm, no_suffix>
 >;
 
-using Instruction_SSE2_Int_Shift = Instruction_1
+using Instruction1_Type22 = Instruction_1
 <
     Operands_reg_imm<xmm, imm8>
 >;
 
-using Instruction_LDDQU = Instruction_1
+using Instruction1_Type23 = Instruction_1
 <
     Operands_reg_mem<xmm, m, no_suffix>
 >;
 
-using Instruction_MOVNTDQA = Instruction_1
+using Instruction1_Type24 = Instruction_1
 <
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_AVX_Type14 = Instruction_1
+using Instruction1_Type25 = Instruction_1
 <
     Operands_reg_mem<ymm, m64, no_suffix>
 >;
 
-using Instruction_AVX_Type15 = Instruction_1
+using Instruction1_Type26 = Instruction_1
 <
     Operands_reg_mem<ymm, m128, no_suffix>
 >;
@@ -1621,8 +1621,8 @@ extern Instruction_XCHG XCHG;
 extern Instruction_BSWAP BSWAP;
 extern Instruction_XADD XADD;
 extern Instruction_CMPXCHG CMPXCHG;
-extern Instruction_CMPXCHG8B CMPXCHG8B;
-extern Instruction_CMPXCHG16B CMPXCHG16B;
+extern Instruction1_Type7 CMPXCHG8B;
+extern Instruction1_Type8 CMPXCHG16B;
 
 // Binary arithmetic instructions
 extern Instruction_Arithm1 ADD;
@@ -1745,9 +1745,9 @@ extern Instruction_Branch CALL;
 extern Instruction_Branch CALL_FAR;
 extern Instruction_RET RET;
 extern Instruction_RET RET_FAR;
-extern Instruction_ENTER ENTER;
+extern Instruction1_Type9 ENTER;
 extern Instruction1_Type1 LEAVE;
-extern Instruction_INT INT;
+extern Instruction1_Type10 INT;
 extern Instruction1_Type1 INTO;
 extern Instruction1_Type1 IRET;
 extern Instruction1_Type1 IRETD;
@@ -1780,11 +1780,11 @@ extern Instruction1_Type1 STOSB;
 extern Instruction1_Type1 STOSW;
 extern Instruction1_Type1 STOSD;
 extern Instruction1_Type1 STOSQ;
-extern Instruction_Prefix REP;
-extern Instruction_Prefix REPE;
-extern Instruction_Prefix REPZ;
-extern Instruction_Prefix REPNE;
-extern Instruction_Prefix REPNZ;
+extern Instruction1_Type11 REP;
+extern Instruction1_Type11 REPE;
+extern Instruction1_Type11 REPZ;
+extern Instruction1_Type11 REPNE;
+extern Instruction1_Type11 REPNZ;
 
 // I/O instructions
 extern Instruction_IN IN;
@@ -1847,8 +1847,8 @@ extern Instruction_FIST FIST;
 extern Instruction_FISTP FISTP;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
-extern Instruction_FBCD FBLD;
-extern Instruction_FBCD FBSTP;
+extern Instruction1_Type12 FBLD;
+extern Instruction1_Type12 FBSTP;
 extern Instruction_FXCH FXCH;
 extern Instruction1_Type5 FCMOVB;
 extern Instruction1_Type5 FCMOVE;
@@ -1925,7 +1925,7 @@ extern Instruction1_Type1 FLDZ;
 // x87 FPU control instructions
 extern Instruction1_Type1 FINCSTP;
 extern Instruction1_Type1 FDECSTP;
-extern Instruction_FFREE FFREE;
+extern Instruction1_Type13 FFREE;
 extern Instruction1_Type1 FINIT;
 extern Instruction1_Type1 FNINIT;
 extern Instruction1_Type1 FCLEX;
@@ -2061,8 +2061,8 @@ extern Instruction_SSE_Conv4 CVTSS2SI;
 extern Instruction_SSE_Conv4 CVTTSS2SI;
 
 // SSE MXCSR state management instructions
-extern Instruction_MXCSR LDMXCSR;
-extern Instruction_MXCSR STMXCSR;
+extern Instruction1_Type14 LDMXCSR;
+extern Instruction1_Type14 STMXCSR;
 
 // SSE 64-bit SIMD integer instructions
 extern Instruction_PAVGx PAVGB;
@@ -2079,9 +2079,9 @@ extern Instruction_PSADBW PSADBW;
 extern Instruction_PSHUFW PSHUFW;
 
 // SSE cacheability control, prefetch, and instruction ordering instructions
-extern Instruction_MASKMOVQ MASKMOVQ;
-extern Instruction_MOVNTQ MOVNTQ;
-extern Instruction_MOVNTPS MOVNTPS;
+extern Instruction1_Type15 MASKMOVQ;
+extern Instruction1_Type16 MOVNTQ;
+extern Instruction1_Type17 MOVNTPS;
 extern Instruction1_Type2 PREFETCHT0;
 extern Instruction1_Type2 PREFETCHT1;
 extern Instruction1_Type2 PREFETCHT2;
@@ -2093,8 +2093,8 @@ extern Instruction1_Type1 SFENCE;
 // SSE2 data movement instructions
 extern Instruction_MOVxPD1 MOVAPD;
 extern Instruction_MOVxPD1 MOVUPD;
-extern Instruction_MOVxPD2 MOVHPD;
-extern Instruction_MOVxPD2 MOVLPD;
+extern Instruction1_Type18 MOVHPD;
+extern Instruction1_Type18 MOVLPD;
 extern Instruction_MOVMSKPD MOVMSKPD;
 extern Instruction_MOVSD MOVSD_SSE2;
 
@@ -2154,16 +2154,16 @@ extern Instruction_CVTPS2DQ CVTTPS2DQ;
 // SSE2 128-bit SIMD integer instructions
 extern Instruction_MOVDQx MOVDQA;
 extern Instruction_MOVDQx MOVDQU;
-extern Instruction_MOVQ2DQ MOVQ2DQ;
-extern Instruction_MOVDQ2Q MOVDQ2Q;
+extern Instruction1_Type20 MOVQ2DQ;
+extern Instruction1_Type21 MOVDQ2Q;
 extern Instruction_PMULUDQ PMULUDQ;
 extern Instruction_SSE2_Int_Arithm1 PADDQ;
 extern Instruction_SSE2_Int_Arithm1 PSUBQ;
 extern Instruction_SSE2_Int_Shuffle PSHUFLW;
 extern Instruction_SSE2_Int_Shuffle PSHUFHW;
 extern Instruction_SSE2_Int_Shuffle PSHUFD;
-extern Instruction_SSE2_Int_Shift PSLLDQ;
-extern Instruction_SSE2_Int_Shift PSRLDQ;
+extern Instruction1_Type22 PSLLDQ;
+extern Instruction1_Type22 PSRLDQ;
 extern Instruction_SSE2_Int_Unpack PUNPCKHQDQ;
 extern Instruction_SSE2_Int_Unpack PUNPCKLQDQ;
 
@@ -2173,15 +2173,15 @@ extern Instruction1_Type1 LFENCE;
 extern Instruction1_Type1 MFENCE;
 extern Instruction1_Type1 PAUSE;
 extern Instruction1_Type3 MASKMOVDQU;
-extern Instruction_MOVNTPx MOVNTPD;
-extern Instruction_MOVNTPx MOVNTDQ;
+extern Instruction1_Type19 MOVNTPD;
+extern Instruction1_Type19 MOVNTDQ;
 extern Instruction_MOVNTI MOVNTI;
 
 // SSE3 x87-FP integer convertion instruction
 extern Instruction_FISTTP FISTTP;
 
 // SSE3 specialized 128-bit unaligned data load instruction
-extern Instruction_LDDQU LDDQU;
+extern Instruction1_Type23 LDDQU;
 
 // SSE3 SIMD floating-point packed ADD/SUB instructions
 extern Instruction_SSE3_Arithm1 ADDSUBPS;
@@ -2241,7 +2241,7 @@ extern Instruction_SSE4_1_Type2 DPPD;
 extern Instruction_SSE4_1_Type2 DPPS;
 
 // SSE4.1: streaming load hint instruction
-extern Instruction_MOVNTDQA MOVNTDQA;
+extern Instruction1_Type24 MOVNTDQA;
 
 // SSE4.1: packed blending instructions
 extern Instruction_SSE4_1_Type2 BLENDPD;
@@ -2465,8 +2465,8 @@ extern Instruction_AVX_Type2 VANDNPD;
 extern Instruction1_Type1 VZEROALL;
 extern Instruction1_Type1 VZEROUPPER;
 extern Instruction_AVX_Type13 VBROADCASTSS;
-extern Instruction_AVX_Type14 VBROADCASTSD;
-extern Instruction_AVX_Type15 VBROADCASTF128;
+extern Instruction1_Type25 VBROADCASTSD;
+extern Instruction1_Type26 VBROADCASTF128;
 extern Instruction_AVX_Type16 VEXTRACTF128;
 extern Instruction_AVX_Type17 VINSERTF128;
 extern Instruction_AVX_Type18 VMASKMOVPS;
@@ -2498,7 +2498,7 @@ extern Instruction_rm16 LTR;
 extern Instruction1_Type1 INVD;
 extern Instruction1_Type1 WBINVD;
 extern Instruction1_Type2 INVLPG;
-extern Instruction_Prefix LOCK;
+extern Instruction1_Type11 LOCK;
 extern Instruction1_Type1 HLT;
 extern Instruction1_Type1 RSM;
 extern Instruction1_Type1 RDMSR;
@@ -2525,8 +2525,8 @@ extern Instruction1_Type1 SYSRET;
 // AVX
 extern Instruction_VMOVD VMOVD;
 extern Instruction_VMOVQ VMOVQ;
-extern Instruction_MXCSR VLDMXCSR;
-extern Instruction_MXCSR VSTMXCSR;
+extern Instruction1_Type14 VLDMXCSR;
+extern Instruction1_Type14 VSTMXCSR;
 
 extern keyword comment;
 extern keyword global;

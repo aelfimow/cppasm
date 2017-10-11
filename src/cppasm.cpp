@@ -222,7 +222,7 @@ Instruction1_Type1 CQO { asmout, "cqto" };
 Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout, "xchg" };
-Instruction_BSWAP BSWAP { asmout, "bswap" };
+Instruction2_Type3 BSWAP { asmout, "bswap" };
 Instruction_XADD XADD { asmout, "xadd" };
 Instruction_CMPXCHG CMPXCHG { asmout, "cmpxchg" };
 Instruction1_Type7 CMPXCHG8B { asmout, "cmpxchg8b" };
@@ -453,7 +453,7 @@ Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction1_Type12 FBLD { asmout, "fbld" };
 Instruction1_Type12 FBSTP { asmout, "fbstp" };
-Instruction_FXCH FXCH { asmout, "fxch" };
+Instruction2_Type5 FXCH { asmout, "fxch" };
 Instruction1_Type5 FCMOVB { asmout, "fcmovb" };
 Instruction1_Type5 FCMOVE { asmout, "fcmove" };
 Instruction1_Type5 FCMOVBE { asmout, "fcmovbe" };
@@ -495,8 +495,8 @@ Instruction1_Type1 FXTRACT { asmout, "fxtract" };
 Instruction_FCOM FCOM = { asmout, "fcom" };
 Instruction_FCOM FCOMP = { asmout, "fcomp" };
 Instruction1_Type1 FCOMPP = { asmout, "fcompp" };
-Instruction_FUCOM FUCOM = { asmout, "fucom" };
-Instruction_FUCOM FUCOMP = { asmout, "fucomp" };
+Instruction2_Type5 FUCOM = { asmout, "fucom" };
+Instruction2_Type5 FUCOMP = { asmout, "fucomp" };
 Instruction1_Type1 FUCOMPP = { asmout, "fucompp" };
 Instruction_FICOM FICOM = { asmout, "ficom" };
 Instruction_FICOM FICOMP = { asmout, "ficomp" };
@@ -618,7 +618,7 @@ Instruction_SSE_MOV2 MOVHPS { asmout, "movhps" };
 Instruction_SSE_MOV2 MOVLPS { asmout, "movlps" };
 Instruction1_Type3 MOVLHPS { asmout, "movlhps" };
 Instruction1_Type3 MOVHLPS { asmout, "movhlps" };
-Instruction_SSE_MOV4 MOVMSKPS { asmout, "movmskps" };
+Instruction2_Type4 MOVMSKPS { asmout, "movmskps" };
 Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
 
 // SSE packed arithmetic instructions
@@ -699,7 +699,7 @@ Instruction_MOVxPD1 MOVAPD { asmout, "movapd" };
 Instruction_MOVxPD1 MOVUPD { asmout, "movupd" };
 Instruction1_Type18 MOVHPD { asmout, "movhpd" };
 Instruction1_Type18 MOVLPD { asmout, "movlpd" };
-Instruction_MOVMSKPD MOVMSKPD { asmout, "movmskpd" };
+Instruction2_Type4 MOVMSKPD { asmout, "movmskpd" };
 Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
 
 // SSE2 packed arithmetic instructions
@@ -1116,10 +1116,10 @@ Instruction1_Type2 XRSTORS64 { asmout, "xrstors64" };
 Instruction1_Type2 XSAVES { asmout, "xsaves" };
 Instruction1_Type2 XSAVES64 { asmout, "xsaves64" };
 Instruction1_Type1 XSETBV { asmout, "xsetbv" };
-Instruction_FSGSBASE RDFSBASE { asmout, "rdfsbase" };
-Instruction_FSGSBASE RDGSBASE { asmout, "rdgsbase" };
-Instruction_FSGSBASE WRFSBASE { asmout, "wrfsbase" };
-Instruction_FSGSBASE WRGSBASE { asmout, "wrgsbase" };
+Instruction2_Type3 RDFSBASE { asmout, "rdfsbase" };
+Instruction2_Type3 RDGSBASE { asmout, "rdgsbase" };
+Instruction2_Type3 WRFSBASE { asmout, "wrfsbase" };
+Instruction2_Type3 WRGSBASE { asmout, "wrgsbase" };
 
 // 64-bit mode instructions
 Instruction1_Type1 SYSCALL { asmout, "syscall" };

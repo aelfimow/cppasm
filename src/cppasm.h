@@ -206,6 +206,24 @@ using Instruction2_Type2 = Instruction_2
     Operands_imm<imm16>
 >;
 
+using Instruction2_Type3 = Instruction_2
+<
+    Operands_reg<r32>,
+    Operands_reg<r64>
+>;
+
+using Instruction2_Type4 = Instruction_2
+<
+    Operands_reg_reg<r32, xmm, no_suffix>,
+    Operands_reg_reg<r64, xmm, no_suffix>
+>;
+
+using Instruction2_Type5 = Instruction_2
+<
+    Operands_none,
+    Operands_reg<st>
+>;
+
 using Instruction_rm16 = Instruction_2
 <
     Operands_reg<r16>,
@@ -218,22 +236,10 @@ using Instruction_BOUND = Instruction_2
     Operands_reg_mem<r32, m32, no_suffix>
 >;
 
-using Instruction_BSWAP = Instruction_2
-<
-    Operands_reg<r32>,
-    Operands_reg<r64>
->;
-
 using Instruction_SSE_MOV2 = Instruction_2
 <
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_mem_reg<m64, xmm, no_suffix>
->;
-
-using Instruction_SSE_MOV4 = Instruction_2
-<
-    Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_reg<r64, xmm, no_suffix>
 >;
 
 using Instruction_SSE_Arithm1 = Instruction_2
@@ -284,12 +290,6 @@ using Instruction_SSE_Conv3 = Instruction_2
     Operands_reg_mem<mm, m64, no_suffix>
 >;
 
-using Instruction_FSGSBASE = Instruction_2
-<
-    Operands_reg<r32>,
-    Operands_reg<r64>
->;
-
 using Instruction_SETcc = Instruction_2
 <
     Operands_reg<r8>,
@@ -302,12 +302,6 @@ using Instruction_FIST = Instruction_2
     Operands_mem<m32, suffix_m32int>
 >;
 
-using Instruction_FXCH = Instruction_2
-<
-    Operands_none,
-    Operands_reg<st>
->;
-
 using Instruction_FPU_Arithm2 = Instruction_2
 <
     Operands_reg_reg<st, st, no_suffix>,
@@ -318,12 +312,6 @@ using Instruction_FPU_Arithm3 = Instruction_2
 <
     Operands_mem<m32, suffix_m32int>,
     Operands_mem<m16, suffix_m16int>
->;
-
-using Instruction_FUCOM = Instruction_2
-<
-    Operands_reg<st>,
-    Operands_none
 >;
 
 using Instruction_FICOM = Instruction_2
@@ -342,12 +330,6 @@ using Instruction_PSHUFW = Instruction_2
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
     Operands_reg_mem_imm<mm, m64, imm8>
->;
-
-using Instruction_MOVMSKPD = Instruction_2
-<
-    Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_reg<r64, xmm, no_suffix>
 >;
 
 using Instruction_SSE2_Arithm1 = Instruction_2
@@ -1618,7 +1600,7 @@ extern Instruction1_Type1 CQO;
 extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
 extern Instruction_XCHG XCHG;
-extern Instruction_BSWAP BSWAP;
+extern Instruction2_Type3 BSWAP;
 extern Instruction_XADD XADD;
 extern Instruction_CMPXCHG CMPXCHG;
 extern Instruction1_Type7 CMPXCHG8B;
@@ -1849,7 +1831,7 @@ extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 extern Instruction1_Type12 FBLD;
 extern Instruction1_Type12 FBSTP;
-extern Instruction_FXCH FXCH;
+extern Instruction2_Type5 FXCH;
 extern Instruction1_Type5 FCMOVB;
 extern Instruction1_Type5 FCMOVE;
 extern Instruction1_Type5 FCMOVBE;
@@ -1891,8 +1873,8 @@ extern Instruction1_Type1 FXTRACT;
 extern Instruction_FCOM FCOM;
 extern Instruction_FCOM FCOMP;
 extern Instruction1_Type1 FCOMPP;
-extern Instruction_FUCOM FUCOM;
-extern Instruction_FUCOM FUCOMP;
+extern Instruction2_Type5 FUCOM;
+extern Instruction2_Type5 FUCOMP;
 extern Instruction1_Type1 FUCOMPP;
 extern Instruction_FICOM FICOM;
 extern Instruction_FICOM FICOMP;
@@ -2014,7 +1996,7 @@ extern Instruction_SSE_MOV2 MOVHPS;
 extern Instruction_SSE_MOV2 MOVLPS;
 extern Instruction1_Type3 MOVLHPS;
 extern Instruction1_Type3 MOVHLPS;
-extern Instruction_SSE_MOV4 MOVMSKPS;
+extern Instruction2_Type4 MOVMSKPS;
 extern Instruction_SSE_MOV5 MOVSS;
 
 // SSE packed arithmetic instructions
@@ -2095,7 +2077,7 @@ extern Instruction_MOVxPD1 MOVAPD;
 extern Instruction_MOVxPD1 MOVUPD;
 extern Instruction1_Type18 MOVHPD;
 extern Instruction1_Type18 MOVLPD;
-extern Instruction_MOVMSKPD MOVMSKPD;
+extern Instruction2_Type4 MOVMSKPD;
 extern Instruction_MOVSD MOVSD_SSE2;
 
 // SSE2 packed arithmetic instructions
@@ -2513,10 +2495,10 @@ extern Instruction1_Type2 XRSTORS64;
 extern Instruction1_Type2 XSAVES;
 extern Instruction1_Type2 XSAVES64;
 extern Instruction1_Type1 XSETBV;
-extern Instruction_FSGSBASE RDFSBASE;
-extern Instruction_FSGSBASE RDGSBASE;
-extern Instruction_FSGSBASE WRFSBASE;
-extern Instruction_FSGSBASE WRGSBASE;
+extern Instruction2_Type3 RDFSBASE;
+extern Instruction2_Type3 RDGSBASE;
+extern Instruction2_Type3 WRFSBASE;
+extern Instruction2_Type3 WRGSBASE;
 
 // 64-bit mode instructions
 extern Instruction1_Type1 SYSCALL;

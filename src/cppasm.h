@@ -230,6 +230,12 @@ using Instruction2_Type6 = Instruction_2
     Operands_mem<m16, no_suffix>
 >;
 
+using Instruction2_Type7 = Instruction_2
+<
+    Operands_reg<r8>,
+    Operands_mem<m8, no_suffix>
+>;
+
 using Instruction_BOUND = Instruction_2
 <
     Operands_reg_mem<r16, m16, no_suffix>,
@@ -288,12 +294,6 @@ using Instruction_SSE_Conv3 = Instruction_2
 <
     Operands_reg_reg<mm, xmm, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>
->;
-
-using Instruction_SETcc = Instruction_2
-<
-    Operands_reg<r8>,
-    Operands_mem<m8, no_suffix>
 >;
 
 using Instruction_FIST = Instruction_2
@@ -1649,36 +1649,36 @@ extern Instruction_BitTest BTR;
 extern Instruction_BitTest BTS;
 extern Instruction_BitScan BSF;
 extern Instruction_BitScan BSR;
-extern Instruction_SETcc SETA;
-extern Instruction_SETcc SETAE;
-extern Instruction_SETcc SETB;
-extern Instruction_SETcc SETBE;
-extern Instruction_SETcc SETC;
-extern Instruction_SETcc SETE;
-extern Instruction_SETcc SETG;
-extern Instruction_SETcc SETGE;
-extern Instruction_SETcc SETL;
-extern Instruction_SETcc SETLE;
-extern Instruction_SETcc SETNA;
-extern Instruction_SETcc SETNAE;
-extern Instruction_SETcc SETNB;
-extern Instruction_SETcc SETNBE;
-extern Instruction_SETcc SETNC;
-extern Instruction_SETcc SETNE;
-extern Instruction_SETcc SETNG;
-extern Instruction_SETcc SETNGE;
-extern Instruction_SETcc SETNL;
-extern Instruction_SETcc SETNLE;
-extern Instruction_SETcc SETNO;
-extern Instruction_SETcc SETNP;
-extern Instruction_SETcc SETNS;
-extern Instruction_SETcc SETNZ;
-extern Instruction_SETcc SETO;
-extern Instruction_SETcc SETP;
-extern Instruction_SETcc SETPE;
-extern Instruction_SETcc SETPO;
-extern Instruction_SETcc SETS;
-extern Instruction_SETcc SETZ;
+extern Instruction2_Type7 SETA;
+extern Instruction2_Type7 SETAE;
+extern Instruction2_Type7 SETB;
+extern Instruction2_Type7 SETBE;
+extern Instruction2_Type7 SETC;
+extern Instruction2_Type7 SETE;
+extern Instruction2_Type7 SETG;
+extern Instruction2_Type7 SETGE;
+extern Instruction2_Type7 SETL;
+extern Instruction2_Type7 SETLE;
+extern Instruction2_Type7 SETNA;
+extern Instruction2_Type7 SETNAE;
+extern Instruction2_Type7 SETNB;
+extern Instruction2_Type7 SETNBE;
+extern Instruction2_Type7 SETNC;
+extern Instruction2_Type7 SETNE;
+extern Instruction2_Type7 SETNG;
+extern Instruction2_Type7 SETNGE;
+extern Instruction2_Type7 SETNL;
+extern Instruction2_Type7 SETNLE;
+extern Instruction2_Type7 SETNO;
+extern Instruction2_Type7 SETNP;
+extern Instruction2_Type7 SETNS;
+extern Instruction2_Type7 SETNZ;
+extern Instruction2_Type7 SETO;
+extern Instruction2_Type7 SETP;
+extern Instruction2_Type7 SETPE;
+extern Instruction2_Type7 SETPO;
+extern Instruction2_Type7 SETS;
+extern Instruction2_Type7 SETZ;
 extern Instruction_TEST TEST;
 
 // Control transfer instructions

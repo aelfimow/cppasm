@@ -194,6 +194,450 @@ using Instruction1_Type26 = Instruction_1
     Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
+using Instruction_rm16 = Instruction_2
+<
+    Operands_reg<r16>,
+    Operands_mem<m16, no_suffix>
+>;
+
+using Instruction_AsciiAdj = Instruction_2
+<
+    Operands_none,
+    Operands_imm<imm8>
+>;
+
+using Instruction_BOUND = Instruction_2
+<
+    Operands_reg_mem<r16, m16, no_suffix>,
+    Operands_reg_mem<r32, m32, no_suffix>
+>;
+
+using Instruction_BSWAP = Instruction_2
+<
+    Operands_reg<r32>,
+    Operands_reg<r64>
+>;
+
+using Instruction_SSE_MOV2 = Instruction_2
+<
+    Operands_reg_mem<xmm, m64, no_suffix>,
+    Operands_mem_reg<m64, xmm, no_suffix>
+>;
+
+using Instruction_SSE_MOV4 = Instruction_2
+<
+    Operands_reg_reg<r32, xmm, no_suffix>,
+    Operands_reg_reg<r64, xmm, no_suffix>
+>;
+
+using Instruction_SSE_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_SSE_Cmp1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE_Cmp2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE_Cmp3 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_SSE_Shuffle = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE_Conv1 = Instruction_2
+<
+    Operands_reg_reg<xmm, mm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SSE_Conv3 = Instruction_2
+<
+    Operands_reg_reg<mm, xmm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>
+>;
+
+using Instruction_FSGSBASE = Instruction_2
+<
+    Operands_reg<r32>,
+    Operands_reg<r64>
+>;
+
+using Instruction_RET = Instruction_2
+<
+    Operands_none,
+    Operands_imm<imm16>
+>;
+
+using Instruction_SETcc = Instruction_2
+<
+    Operands_reg<r8>,
+    Operands_mem<m8, no_suffix>
+>;
+
+using Instruction_FIST = Instruction_2
+<
+    Operands_mem<m16, suffix_m16int>,
+    Operands_mem<m32, suffix_m32int>
+>;
+
+using Instruction_FXCH = Instruction_2
+<
+    Operands_none,
+    Operands_reg<st>
+>;
+
+using Instruction_FPU_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<st, st, no_suffix>,
+    Operands_none
+>;
+
+using Instruction_FPU_Arithm3 = Instruction_2
+<
+    Operands_mem<m32, suffix_m32int>,
+    Operands_mem<m16, suffix_m16int>
+>;
+
+using Instruction_FUCOM = Instruction_2
+<
+    Operands_reg<st>,
+    Operands_none
+>;
+
+using Instruction_FICOM = Instruction_2
+<
+    Operands_mem<m16, suffix_m16int>,
+    Operands_mem<m32, suffix_m32int>
+>;
+
+using Instruction_FSTSW = Instruction_2
+<
+    Operands_mem<m16, no_suffix>,
+    Operands_reg<r16>
+>;
+
+using Instruction_PSHUFW = Instruction_2
+<
+    Operands_reg_reg_imm<mm, mm, imm8>,
+    Operands_reg_mem_imm<mm, m64, imm8>
+>;
+
+using Instruction_MOVMSKPD = Instruction_2
+<
+    Operands_reg_reg<r32, xmm, no_suffix>,
+    Operands_reg_reg<r64, xmm, no_suffix>
+>;
+
+using Instruction_SSE2_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE2_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SSE2_Cmp1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE2_Cmp2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
+using Instruction_SSE2_Cmp3 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SHUFPD = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_UNPCKxPD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTPD2PI = Instruction_2
+<
+    Operands_reg_reg<mm, xmm, no_suffix>,
+    Operands_reg_mem<mm, m128, no_suffix>
+>;
+
+using Instruction_CVTPI2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, mm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPD2DQ = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTDQ2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPS2PD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_CVTPD2PS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTSS2SD = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_CVTSD2SS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_MOVNTI = Instruction_2
+<
+    Operands_mem_reg<m32, r32, no_suffix>,
+    Operands_mem_reg<m64, r64, no_suffix>
+>;
+
+using Instruction_CVTDQ2PS = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_CVTPS2DQ = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE2_Int_Shuffle = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE2_Int_Unpack = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE3_Arithm1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE3_Arithm2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SSE4_1_Type1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSE4_1_Type2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE4_1_Type4 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Type5 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
+using Instruction_SSE4_1_Type7 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Type8 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r32, imm8>,
+    Operands_reg_mem_imm<xmm, m8, imm8>
+>;
+
+using Instruction_SSE4_1_Type9 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r32, imm8>,
+    Operands_reg_mem_imm<xmm, m32, imm8>
+>;
+
+using Instruction_SSE4_1_Type10 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, r64, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
+using Instruction_SSE4_1_Type13 = Instruction_2
+<
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m64, xmm, imm8>
+>;
+
+using Instruction_SSE4_1_Type14 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>
+>;
+
+using Instruction_SSE4_1_Type15 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>
+>;
+
+using Instruction_SSE4_1_Type16 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m16, no_suffix>
+>;
+
+using Instruction_SSE4_2_Type1 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_SSE4_2_Type2 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_AES_Type1 = Instruction_2
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_AES_Type2 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_PCLMULQDQ = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
+using Instruction_FMA_Type2 = Instruction_2
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m64>
+>;
+
+using Instruction_FMA_Type3 = Instruction_2
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m32>
+>;
+
+using Instruction_AVX_Type6 = Instruction_2
+<
+    Operands_reg_reg_reg_imm<xmm, xmm, xmm, imm8>,
+    Operands_reg_reg_mem_imm<xmm, xmm, m128, imm8>
+>;
+
+using Instruction_AVX_Type10 = Instruction_2
+<
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_mem<ymm, m256, no_suffix>
+>;
+
+using Instruction_AVX_Type11 = Instruction_2
+<
+    Operands_mem_reg<m128, xmm, no_suffix>,
+    Operands_mem_reg<m256, ymm, no_suffix>
+>;
+
+using Instruction_AVX_Type13 = Instruction_2
+<
+    Operands_reg_mem<xmm, m32, no_suffix>,
+    Operands_reg_mem<ymm, m32, no_suffix>
+>;
+
+using Instruction_AVX_Type16 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, ymm, imm8>,
+    Operands_mem_reg_imm<m128, ymm, imm8>
+>;
+
+using Instruction_AVX_Type17 = Instruction_2
+<
+    Operands_reg_reg_reg_imm<ymm, ymm, xmm, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m128, imm8>
+>;
+
+using Instruction_AVX_Type20 = Instruction_2
+<
+    Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
+>;
+
 using Instruction_MOVD = Instruction_8
 <
     Operands_reg_reg<mm, r32, no_suffix>,
@@ -250,12 +694,6 @@ using Instruction_MMX_Shift = Instruction_6
     Operands_reg_mem<xmm, m128, no_suffix>,
     Operands_reg_imm<mm, imm8>,
     Operands_reg_imm<xmm, imm8>
->;
-
-using Instruction_rm16 = Instruction_2
-<
-    Operands_reg<r16>,
-    Operands_mem<m16, no_suffix>
 >;
 
 using Instruction_LoadFarPointer = Instruction_3
@@ -319,12 +757,6 @@ using Instruction_Arithm2 = Instruction_8
     Operands_mem<m16, suffix_m16>,
     Operands_mem<m32, suffix_m32>,
     Operands_mem<m64, suffix_m64>
->;
-
-using Instruction_AsciiAdj = Instruction_2
-<
-    Operands_none,
-    Operands_imm<imm8>
 >;
 
 using Instruction_CMOVx = Instruction_6
@@ -397,12 +829,6 @@ using Instruction_BitTest = Instruction_12
     Operands_mem_imm<m64, imm8, suffix_m64>
 >;
 
-using Instruction_BOUND = Instruction_2
-<
-    Operands_reg_mem<r16, m16, no_suffix>,
-    Operands_reg_mem<r32, m32, no_suffix>
->;
-
 using Instruction_Branch = Instruction_7
 <
     Operands_string,
@@ -414,29 +840,11 @@ using Instruction_Branch = Instruction_7
     Operands_mem<m64, no_suffix>
 >;
 
-using Instruction_BSWAP = Instruction_2
-<
-    Operands_reg<r32>,
-    Operands_reg<r64>
->;
-
 using Instruction_SSE_MOV1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,
     Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_SSE_MOV2 = Instruction_2
-<
-    Operands_reg_mem<xmm, m64, no_suffix>,
-    Operands_mem_reg<m64, xmm, no_suffix>
->;
-
-using Instruction_SSE_MOV4 = Instruction_2
-<
-    Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_reg<r64, xmm, no_suffix>
 >;
 
 using Instruction_SSE_MOV5 = Instruction_3
@@ -446,60 +854,12 @@ using Instruction_SSE_MOV5 = Instruction_3
     Operands_mem_reg<m32, xmm, no_suffix>
 >;
 
-using Instruction_SSE_Arithm1 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSE_Arithm2 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_SSE_Cmp1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE_Cmp2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
->;
-
-using Instruction_SSE_Cmp3 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_SSE_Shuffle = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE_Conv1 = Instruction_2
-<
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
 using Instruction_SSE_Conv2 = Instruction_4
 <
     Operands_reg_reg<xmm, r32, no_suffix>,
     Operands_reg_mem<xmm, m32, suffix_m32>,
     Operands_reg_reg<xmm, r64, no_suffix>,
     Operands_reg_mem<xmm, m64, suffix_m64>
->;
-
-using Instruction_SSE_Conv3 = Instruction_2
-<
-    Operands_reg_reg<mm, xmm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>
 >;
 
 using Instruction_SSE_Conv4 = Instruction_4
@@ -526,12 +886,6 @@ using Instruction_XCHG = Instruction_12
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction_FSGSBASE = Instruction_2
-<
-    Operands_reg<r32>,
-    Operands_reg<r64>
->;
-
 using Instruction_TEST = Instruction_16
 <
     Operands_reg_imm<r8, imm8>,
@@ -550,12 +904,6 @@ using Instruction_TEST = Instruction_16
     Operands_mem_reg<m32, r32, no_suffix>,
     Operands_reg_reg<r64, r64, no_suffix>,
     Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_RET = Instruction_2
-<
-    Operands_none,
-    Operands_imm<imm16>
 >;
 
 using Instruction_XADD = Instruction_8
@@ -579,12 +927,6 @@ using Instruction_POP = Instruction_7
     Operands_reg<r64>,
     Operands_mem<m64, suffix_m64>,
     Operands_reg<Sreg>
->;
-
-using Instruction_SETcc = Instruction_2
-<
-    Operands_reg<r8>,
-    Operands_mem<m8, no_suffix>
 >;
 
 using Instruction_IN = Instruction_6
@@ -723,12 +1065,6 @@ using Instruction_FILD = Instruction_3
     Operands_mem<m64, suffix_m64int>
 >;
 
-using Instruction_FIST = Instruction_2
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>
->;
-
 using Instruction_FISTP = Instruction_3
 <
     Operands_mem<m16, suffix_m16int>,
@@ -751,29 +1087,11 @@ using Instruction_FSTP = Instruction_4
     Operands_reg<st>
 >;
 
-using Instruction_FXCH = Instruction_2
-<
-    Operands_none,
-    Operands_reg<st>
->;
-
 using Instruction_FPU_Arithm1 = Instruction_3
 <
     Operands_mem<m32fp, suffix_m32fp>,
     Operands_mem<m64fp, suffix_m64fp>,
     Operands_reg_reg<st, st, no_suffix>
->;
-
-using Instruction_FPU_Arithm2 = Instruction_2
-<
-    Operands_reg_reg<st, st, no_suffix>,
-    Operands_none
->;
-
-using Instruction_FPU_Arithm3 = Instruction_2
-<
-    Operands_mem<m32, suffix_m32int>,
-    Operands_mem<m16, suffix_m16int>
 >;
 
 using Instruction_FCOM = Instruction_4
@@ -782,24 +1100,6 @@ using Instruction_FCOM = Instruction_4
     Operands_mem<m64fp, suffix_m64fp>,
     Operands_reg<st>,
     Operands_none
->;
-
-using Instruction_FUCOM = Instruction_2
-<
-    Operands_reg<st>,
-    Operands_none
->;
-
-using Instruction_FICOM = Instruction_2
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>
->;
-
-using Instruction_FSTSW = Instruction_2
-<
-    Operands_mem<m16, no_suffix>,
-    Operands_reg<r16>
 >;
 
 using Instruction_PAVGx = Instruction_4
@@ -867,12 +1167,6 @@ using Instruction_PSADBW = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_PSHUFW = Instruction_2
-<
-    Operands_reg_reg_imm<mm, mm, imm8>,
-    Operands_reg_mem_imm<mm, m64, imm8>
->;
-
 using Instruction_MOVxPD1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
@@ -880,107 +1174,11 @@ using Instruction_MOVxPD1 = Instruction_3
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_MOVMSKPD = Instruction_2
-<
-    Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_reg<r64, xmm, no_suffix>
->;
-
 using Instruction_MOVSD = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_mem_reg<m64, xmm, no_suffix>
->;
-
-using Instruction_SSE2_Arithm1 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSE2_Arithm2 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_SSE2_Cmp1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE2_Cmp2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m64, imm8>
->;
-
-using Instruction_SSE2_Cmp3 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_SHUFPD = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_UNPCKxPD = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_CVTPD2PI = Instruction_2
-<
-    Operands_reg_reg<mm, xmm, no_suffix>,
-    Operands_reg_mem<mm, m128, no_suffix>
->;
-
-using Instruction_CVTPI2PD = Instruction_2
-<
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_CVTPD2DQ = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_CVTDQ2PD = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_CVTPS2PD = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_CVTPD2PS = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_CVTSS2SD = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_CVTSD2SS = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
 using Instruction_CVTSD2SI = Instruction_4
@@ -997,24 +1195,6 @@ using Instruction_CVTSI2SD = Instruction_4
     Operands_reg_mem<xmm, m32, no_suffix>,
     Operands_reg_reg<xmm, r64, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_MOVNTI = Instruction_2
-<
-    Operands_mem_reg<m32, r32, no_suffix>,
-    Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_CVTDQ2PS = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_CVTPS2DQ = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
 using Instruction_MOVDQx = Instruction_3
@@ -1040,35 +1220,11 @@ using Instruction_SSE2_Int_Arithm1 = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_SSE2_Int_Shuffle = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE2_Int_Unpack = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
 using Instruction_FISTTP = Instruction_3
 <
     Operands_mem<m16, suffix_m16int>,
     Operands_mem<m32, suffix_m32int>,
     Operands_mem<m64, suffix_m64int>
->;
-
-using Instruction_SSE3_Arithm1 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSE3_Arithm2 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
 using Instruction_SSSE3_Arithm1 = Instruction_4
@@ -1087,18 +1243,6 @@ using Instruction_SSSE3_Arithm2 = Instruction_4
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
-using Instruction_SSE4_1_Type1 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSE4_1_Type2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
 using Instruction_SSE4_1_Type3 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
@@ -1107,47 +1251,11 @@ using Instruction_SSE4_1_Type3 = Instruction_4
     Operands_reg_mem_reg<xmm, m128, xmm>
 >;
 
-using Instruction_SSE4_1_Type4 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
->;
-
-using Instruction_SSE4_1_Type5 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m64, imm8>
->;
-
 using Instruction_SSE4_1_Type6 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m32, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type7 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
->;
-
-using Instruction_SSE4_1_Type8 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, r32, imm8>,
-    Operands_reg_mem_imm<xmm, m8, imm8>
->;
-
-using Instruction_SSE4_1_Type9 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, r32, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
->;
-
-using Instruction_SSE4_1_Type10 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, r64, imm8>,
-    Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
 using Instruction_SSE4_1_Type11 = Instruction_3
@@ -1162,60 +1270,6 @@ using Instruction_SSE4_1_Type12 = Instruction_3
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m32, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type13 = Instruction_2
-<
-    Operands_reg_reg_imm<r64, xmm, imm8>,
-    Operands_mem_reg_imm<m64, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type14 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_SSE4_1_Type15 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_SSE4_1_Type16 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m16, no_suffix>
->;
-
-using Instruction_SSE4_2_Type1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE4_2_Type2 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_AES_Type1 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_AES_Type2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_PCLMULQDQ = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
 using Instruction_F16C_Type1 = Instruction_4
@@ -1240,18 +1294,6 @@ using Instruction_FMA_Type1 = Instruction_4
     Operands_reg_reg_mem<xmm, xmm, m128>,
     Operands_reg_reg_reg<ymm, ymm, ymm>,
     Operands_reg_reg_mem<ymm, ymm, m256>
->;
-
-using Instruction_FMA_Type2 = Instruction_2
-<
-    Operands_reg_reg_reg<xmm, xmm, xmm>,
-    Operands_reg_reg_mem<xmm, xmm, m64>
->;
-
-using Instruction_FMA_Type3 = Instruction_2
-<
-    Operands_reg_reg_reg<xmm, xmm, xmm>,
-    Operands_reg_reg_mem<xmm, xmm, m32>
 >;
 
 using Instruction_AVX_Type1 = Instruction_4
@@ -1294,12 +1336,6 @@ using Instruction_AVX_Type5 = Instruction_4
     Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
 >;
 
-using Instruction_AVX_Type6 = Instruction_2
-<
-    Operands_reg_reg_reg_imm<xmm, xmm, xmm, imm8>,
-    Operands_reg_reg_mem_imm<xmm, xmm, m128, imm8>
->;
-
 using Instruction_AVX_Type7 = Instruction_4
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
@@ -1326,42 +1362,12 @@ using Instruction_AVX_Type9 = Instruction_4
     Operands_reg_reg<r64, ymm, no_suffix>
 >;
 
-using Instruction_AVX_Type10 = Instruction_2
-<
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_reg_mem<ymm, m256, no_suffix>
->;
-
-using Instruction_AVX_Type11 = Instruction_2
-<
-    Operands_mem_reg<m128, xmm, no_suffix>,
-    Operands_mem_reg<m256, ymm, no_suffix>
->;
-
 using Instruction_AVX_Type12 = Instruction_4
 <
     Operands_reg_reg_reg_reg<xmm, xmm, xmm, xmm>,
     Operands_reg_reg_mem_reg<xmm, xmm, m128, xmm>,
     Operands_reg_reg_reg_reg<ymm, ymm, ymm, ymm>,
     Operands_reg_reg_mem_reg<ymm, ymm, m128, ymm>
->;
-
-using Instruction_AVX_Type13 = Instruction_2
-<
-    Operands_reg_mem<xmm, m32, no_suffix>,
-    Operands_reg_mem<ymm, m32, no_suffix>
->;
-
-using Instruction_AVX_Type16 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, ymm, imm8>,
-    Operands_mem_reg_imm<m128, ymm, imm8>
->;
-
-using Instruction_AVX_Type17 = Instruction_2
-<
-    Operands_reg_reg_reg_imm<ymm, ymm, xmm, imm8>,
-    Operands_reg_reg_mem_imm<ymm, ymm, m128, imm8>
 >;
 
 using Instruction_AVX_Type18 = Instruction_4
@@ -1382,12 +1388,6 @@ using Instruction_AVX_Type19 = Instruction_8
     Operands_reg_mem_imm<xmm, m128, imm8>,
     Operands_reg_reg_imm<ymm, ymm, imm8>,
     Operands_reg_mem_imm<ymm, m256, imm8>
->;
-
-using Instruction_AVX_Type20 = Instruction_2
-<
-    Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
-    Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
 >;
 
 using Instruction_AVX_Type21 = Instruction_4

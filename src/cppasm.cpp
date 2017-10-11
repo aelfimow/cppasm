@@ -246,8 +246,8 @@ Instruction_Arithm2 DEC { asmout, "dec" };
 
 // Decimal arithmetic instructions
 Instruction1_Type1 AAA { asmout, "aaa" };
-Instruction_AsciiAdj AAD { asmout, "aad" };
-Instruction_AsciiAdj AAM { asmout, "aam" };
+Instruction2_Type1 AAD { asmout, "aad" };
+Instruction2_Type1 AAM { asmout, "aam" };
 Instruction1_Type1 AAS { asmout, "aas" };
 Instruction1_Type1 DAA { asmout, "daa" };
 Instruction1_Type1 DAS { asmout, "das" };
@@ -347,8 +347,8 @@ Instruction1_Type4 JS { asmout, "js" };
 Instruction1_Type4 JZ { asmout, "jz" };
 Instruction_Branch CALL { asmout, "call" };
 Instruction_Branch CALL_FAR { asmout, "lcall" };
-Instruction_RET RET { asmout, "ret" };
-Instruction_RET RET_FAR { asmout, "lret" };
+Instruction2_Type2 RET { asmout, "ret" };
+Instruction2_Type2 RET_FAR { asmout, "lret" };
 Instruction1_Type9 ENTER { asmout, "enter" };
 Instruction1_Type1 LEAVE { asmout, "leave" };
 Instruction1_Type10 INT { asmout, "int" };

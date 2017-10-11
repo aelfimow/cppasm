@@ -194,16 +194,22 @@ using Instruction1_Type26 = Instruction_1
     Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
+using Instruction2_Type1 = Instruction_2
+<
+    Operands_none,
+    Operands_imm<imm8>
+>;
+
+using Instruction2_Type2 = Instruction_2
+<
+    Operands_none,
+    Operands_imm<imm16>
+>;
+
 using Instruction_rm16 = Instruction_2
 <
     Operands_reg<r16>,
     Operands_mem<m16, no_suffix>
->;
-
-using Instruction_AsciiAdj = Instruction_2
-<
-    Operands_none,
-    Operands_imm<imm8>
 >;
 
 using Instruction_BOUND = Instruction_2
@@ -282,12 +288,6 @@ using Instruction_FSGSBASE = Instruction_2
 <
     Operands_reg<r32>,
     Operands_reg<r64>
->;
-
-using Instruction_RET = Instruction_2
-<
-    Operands_none,
-    Operands_imm<imm16>
 >;
 
 using Instruction_SETcc = Instruction_2
@@ -1642,8 +1642,8 @@ extern Instruction_Arithm2 DEC;
 
 // Decimal arithmetic instructions
 extern Instruction1_Type1 AAA;
-extern Instruction_AsciiAdj AAD;
-extern Instruction_AsciiAdj AAM;
+extern Instruction2_Type1 AAD;
+extern Instruction2_Type1 AAM;
 extern Instruction1_Type1 AAS;
 extern Instruction1_Type1 DAA;
 extern Instruction1_Type1 DAS;
@@ -1743,8 +1743,8 @@ extern Instruction1_Type4 JS;
 extern Instruction1_Type4 JZ;
 extern Instruction_Branch CALL;
 extern Instruction_Branch CALL_FAR;
-extern Instruction_RET RET;
-extern Instruction_RET RET_FAR;
+extern Instruction2_Type2 RET;
+extern Instruction2_Type2 RET_FAR;
 extern Instruction1_Type9 ENTER;
 extern Instruction1_Type1 LEAVE;
 extern Instruction1_Type10 INT;

@@ -543,8 +543,8 @@ Instruction1_Type2 FLDENV { asmout, "fldenv" };
 Instruction1_Type2 FSAVE { asmout, "fsave" };
 Instruction1_Type2 FNSAVE { asmout, "fnsave" };
 Instruction1_Type2 FRSTOR { asmout, "frstor" };
-Instruction_FSTSW FSTSW { asmout, "fstsw" };
-Instruction_FSTSW FNSTSW { asmout, "fnstsw" };
+Instruction2_Type6 FSTSW { asmout, "fstsw" };
+Instruction2_Type6 FNSTSW { asmout, "fnstsw" };
 Instruction1_Type1 FNOP { asmout, "fnop" };
 
 // x87 FPU and SIMD state management instructions
@@ -1093,11 +1093,11 @@ Instruction1_Type1 CLTS { asmout, "clts" };
 Instruction1_Type2 LGDT { asmout, "lgdt" };
 Instruction1_Type2 LIDT { asmout, "lidt" };
 Instruction1_Type2 SIDT { asmout, "sidt" };
-Instruction_rm16 LLDT { asmout, "lldt" };
-Instruction_rm16 LMSW { asmout, "lmsw" };
-Instruction_rm16 VERR { asmout, "verr" };
-Instruction_rm16 VERW { asmout, "verw" };
-Instruction_rm16 LTR { asmout, "ltr" };
+Instruction2_Type6 LLDT { asmout, "lldt" };
+Instruction2_Type6 LMSW { asmout, "lmsw" };
+Instruction2_Type6 VERR { asmout, "verr" };
+Instruction2_Type6 VERW { asmout, "verw" };
+Instruction2_Type6 LTR { asmout, "ltr" };
 Instruction1_Type1 INVD { asmout, "invd" };
 Instruction1_Type1 WBINVD { asmout, "wbinvd" };
 Instruction1_Type2 INVLPG { asmout, "invlpg" };

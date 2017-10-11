@@ -224,7 +224,7 @@ using Instruction2_Type5 = Instruction_2
     Operands_reg<st>
 >;
 
-using Instruction_rm16 = Instruction_2
+using Instruction2_Type6 = Instruction_2
 <
     Operands_reg<r16>,
     Operands_mem<m16, no_suffix>
@@ -318,12 +318,6 @@ using Instruction_FICOM = Instruction_2
 <
     Operands_mem<m16, suffix_m16int>,
     Operands_mem<m32, suffix_m32int>
->;
-
-using Instruction_FSTSW = Instruction_2
-<
-    Operands_mem<m16, no_suffix>,
-    Operands_reg<r16>
 >;
 
 using Instruction_PSHUFW = Instruction_2
@@ -1921,8 +1915,8 @@ extern Instruction1_Type2 FLDENV;
 extern Instruction1_Type2 FSAVE;
 extern Instruction1_Type2 FNSAVE;
 extern Instruction1_Type2 FRSTOR;
-extern Instruction_FSTSW FSTSW;
-extern Instruction_FSTSW FNSTSW;
+extern Instruction2_Type6 FSTSW;
+extern Instruction2_Type6 FNSTSW;
 extern Instruction1_Type1 FNOP;
 
 // x87 FPU and SIMD state management instructions
@@ -2472,11 +2466,11 @@ extern Instruction1_Type1 CLTS;
 extern Instruction1_Type2 LGDT;
 extern Instruction1_Type2 LIDT;
 extern Instruction1_Type2 SIDT;
-extern Instruction_rm16 LLDT;
-extern Instruction_rm16 LMSW;
-extern Instruction_rm16 VERR;
-extern Instruction_rm16 VERW;
-extern Instruction_rm16 LTR;
+extern Instruction2_Type6 LLDT;
+extern Instruction2_Type6 LMSW;
+extern Instruction2_Type6 VERR;
+extern Instruction2_Type6 VERW;
+extern Instruction2_Type6 LTR;
 extern Instruction1_Type1 INVD;
 extern Instruction1_Type1 WBINVD;
 extern Instruction1_Type2 INVLPG;

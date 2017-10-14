@@ -1,3 +1,6 @@
+/*! \file imm.h
+    \brief Template class for representing immediate values.
+*/
 #ifdef IMM_H
 #error Already included
 #else

@@ -1,3 +1,6 @@
+/*! \file st.h
+    \brief Class representing FPU's ST register.
+*/
 #ifdef ST_H
 #error Already included
 #else

@@ -1,3 +1,4 @@
+doc/html
 src/obj/*.o
 src/main.cpp
 src/main.exe

@@ -8,23 +8,6 @@
 
 #include <string>
 
-#include "Instruction.h"
-#include "asmstream.h"
-#include "reg.h"
-#include "mm.h"
-#include "imm.h"
-#include "Sreg.h"
-#include "m.h"
-#include "cr.h"
-#include "dr.h"
-#include "st.h"
-#include "keyword.h"
-#include "label.h"
-#include "section.h"
-
-#include "Operands_x.h"
-#include "Instruction_x.h"
-
 extern const std::string no_suffix;
 extern const std::string suffix_bw;
 extern const std::string suffix_bl;
@@ -43,30 +26,22 @@ extern const std::string suffix_m16int;
 extern const std::string suffix_m32int;
 extern const std::string suffix_m64int;
 
-using r8 = reg_template<8>;
-using r16 = reg_template<16>;
-using r32 = reg_template<32>;
-using r64 = reg_template<64>;
-using xmm = reg_template<128>;
-using ymm = reg_template<256>;
-using zmm = reg_template<512>;
+#include "Instruction.h"
+#include "asmstream.h"
+#include "reg.h"
+#include "mm.h"
+#include "imm.h"
+#include "Sreg.h"
+#include "m.h"
+#include "cr.h"
+#include "dr.h"
+#include "st.h"
+#include "keyword.h"
+#include "label.h"
+#include "section.h"
 
-using imm8 = imm<uint8_t, 2>;
-using imm16 = imm<uint16_t, 4>;
-using imm32 = imm<uint32_t, 8>;
-using imm64 = imm<uint64_t, 16>;
-
-using m8 = m_template<8>;
-using m16 = m_template<16>;
-using m32 = m_template<32>;
-using m64 = m_template<64>;
-using m128 = m_template<128>;
-using m256 = m_template<256>;
-using m32fp = m_template<32>;
-using m64fp = m_template<64>;
-using m80fp = m_template<80>;
-using m80bcd = m_template<80>;
-
+#include "Operands_x.h"
+#include "Instruction_x.h"
 #include "Instruction1_Types.h"
 
 using Instruction2_Type1 = Instruction_2

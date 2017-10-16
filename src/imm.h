@@ -56,4 +56,9 @@ class imm
         imm &operator=(const imm &&instance) = delete;
 };
 
+using imm8 = imm<uint8_t, 2>;
+using imm16 = imm<uint16_t, 4>;
+using imm32 = imm<uint32_t, 8>;
+using imm64 = imm<uint64_t, 16>;
+
 #endif

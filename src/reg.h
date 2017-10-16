@@ -54,4 +54,12 @@ class reg_template : public reg
         reg_template &operator=(const reg_template &&instance) = delete;
 };
 
+using r8 = reg_template<8>;
+using r16 = reg_template<16>;
+using r32 = reg_template<32>;
+using r64 = reg_template<64>;
+using xmm = reg_template<128>;
+using ymm = reg_template<256>;
+using zmm = reg_template<512>;
+
 #endif

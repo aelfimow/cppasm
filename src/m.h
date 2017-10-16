@@ -155,4 +155,15 @@ class m_template : public m
         m_template &operator=(const m_template &&instance) = delete;
 };
 
+using m8 = m_template<8>;
+using m16 = m_template<16>;
+using m32 = m_template<32>;
+using m64 = m_template<64>;
+using m128 = m_template<128>;
+using m256 = m_template<256>;
+using m32fp = m_template<32>;
+using m64fp = m_template<64>;
+using m80fp = m_template<80>;
+using m80bcd = m_template<80>;
+
 #endif

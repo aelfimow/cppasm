@@ -1,3 +1,6 @@
+/*! \file Sreg.h
+    \brief Class representing Segment Register.
+*/
 #ifdef SREG_H
 #error Already included
 #else

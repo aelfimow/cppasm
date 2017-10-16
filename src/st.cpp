@@ -1,3 +1,6 @@
+/*! \file st.cpp
+    \brief Class representing FPU's ST register.
+*/
 #include <string>
 #include <sstream>
 #include "st.h"

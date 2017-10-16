@@ -1,3 +1,6 @@
+/*! \file m.h
+    \brief Classes representing operand in memory.
+*/
 #ifdef M_H
 #error Already included
 #else

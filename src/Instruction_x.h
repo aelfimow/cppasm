@@ -1,3 +1,6 @@
+/*! \file Instruction_x.h
+    \brief A set of template classes representing instructions.
+*/
 #ifdef INSTRUCTION_X_H
 #error Already included
 #else

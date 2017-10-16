@@ -1,3 +1,6 @@
+/*! \file Operands_x.h
+    \brief A set of template classes representing operands.
+*/
 #ifdef OPERANDS_X_H
 #error Already included
 #else

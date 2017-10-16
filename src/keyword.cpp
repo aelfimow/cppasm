@@ -1,3 +1,6 @@
+/*! \file keyword.cpp
+    \brief Class for assembler keywords.
+*/
 #include <iostream>
 #include <string>
 #include "keyword.h"

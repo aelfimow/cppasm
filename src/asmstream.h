@@ -1,3 +1,6 @@
+/*! \file asmstream.h
+    \brief Class for Assembly Stream.
+*/
 #ifdef ASM_STREAM_H
 #error Already included
 #else

@@ -1,3 +1,6 @@
+/*! \file Sreg.h
+    \brief Class representing Segment Register.
+*/
 #include <string>
 #include "Sreg.h"
 

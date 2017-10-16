@@ -1,3 +1,6 @@
+/*! \file cr.h
+    \brief Class representing control register.
+*/
 #ifdef CR_H
 #error Already included
 #else

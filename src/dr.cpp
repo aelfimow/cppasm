@@ -1,3 +1,6 @@
+/*! \file dr.cpp
+    \brief Class representing Debug Register.
+*/
 #include <string>
 #include "dr.h"
 

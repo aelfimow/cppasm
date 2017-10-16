@@ -1,3 +1,6 @@
+/*! \file reg.h
+    \brief Classes representing general purpose registers.
+*/
 #ifdef REG_H
 #error Already included
 #else

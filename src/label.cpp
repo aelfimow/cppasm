@@ -1,3 +1,6 @@
+/*! \file label.cpp
+    \brief Class for assembler labels.
+*/
 #include <iostream>
 #include <string>
 #include "label.h"

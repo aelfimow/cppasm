@@ -1,3 +1,6 @@
+/*! \file section.cpp
+    \brief Class for assembler section keyword.
+*/
 #include <iostream>
 #include <string>
 #include "section.h"

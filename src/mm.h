@@ -1,3 +1,6 @@
+/*! \file mm.h
+    \brief Class representing an MMX register.
+*/
 #ifdef MM_H
 #error Already included
 #else

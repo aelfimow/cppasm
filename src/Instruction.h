@@ -1,3 +1,6 @@
+/*! \file Instruction.h
+    \brief Class representing Instruction.
+*/
 #ifdef INSTRUCTION_H
 #error Already included
 #else

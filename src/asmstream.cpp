@@ -1,3 +1,6 @@
+/*! \file asmstream.cpp
+    \brief Class for Assembly Stream.
+*/
 #include <iostream>
 #include "Instruction.h"
 #include "asmstream.h"

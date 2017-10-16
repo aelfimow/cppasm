@@ -1,3 +1,6 @@
+/*! \file label.h
+    \brief Class for assembler labels.
+*/
 #ifdef LABEL_H
 #error Already included
 #else

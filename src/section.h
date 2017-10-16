@@ -1,3 +1,6 @@
+/*! \file section.h
+    \brief Class for assembler section keyword.
+*/
 #ifdef SECTION_H
 #error Already included
 #else

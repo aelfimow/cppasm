@@ -1,3 +1,6 @@
+/*! \file Instruction.cpp
+    \brief Class representing Instruction.
+*/
 #include <string>
 #include "Instruction.h"
 

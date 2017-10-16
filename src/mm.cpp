@@ -1,3 +1,6 @@
+/*! \file mm.cpp
+    \brief Class representing an MMX register.
+*/
 #include <string>
 #include "mm.h"
 

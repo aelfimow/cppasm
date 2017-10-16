@@ -1,3 +1,6 @@
+/*! \file cppasm.h
+    \brief Main header file of the C++ Assembly Generator.
+*/
 #ifdef CPPASM_H
 #error Already included
 #else

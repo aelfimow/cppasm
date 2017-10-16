@@ -1,3 +1,6 @@
+/*! \file dr.h
+    \brief Class representing Debug Register.
+*/
 #ifdef DR_H
 #error Already included
 #else

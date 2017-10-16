@@ -1,3 +1,6 @@
+/*! \file keyword.h
+    \brief Class for assembler keywords.
+*/
 #ifdef KEYWORD_H
 #error Already included
 #else

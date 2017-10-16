@@ -1,3 +1,6 @@
+/*! \file cr.cpp
+    \brief Class representing control register.
+*/
 #include <string>
 #include "cr.h"
 

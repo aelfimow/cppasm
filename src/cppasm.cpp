@@ -364,7 +364,7 @@ Instruction1_Type4 LOOPE { asmout, "loope" };
 Instruction1_Type4 LOOPNE { asmout, "loopne" };
 Instruction1_Type4 LOOPZ { asmout, "loopz" };
 Instruction1_Type4 LOOPNZ { asmout, "loopnz" };
-Instruction_BOUND BOUND { asmout, "bound" };
+Instruction2_Type8 BOUND { asmout, "bound" };
 
 // String instructions
 Instruction1_Type1 MOVSB { asmout, "movsb" };
@@ -617,8 +617,8 @@ Instruction1_Type1 EMMS { asmout, "emms" };
 // SSE data transfer instructions
 Instruction_SSE_MOV1 MOVAPS { asmout, "movaps" };
 Instruction_SSE_MOV1 MOVUPS { asmout, "movups" };
-Instruction_SSE_MOV2 MOVHPS { asmout, "movhps" };
-Instruction_SSE_MOV2 MOVLPS { asmout, "movlps" };
+Instruction2_Type9 MOVHPS { asmout, "movhps" };
+Instruction2_Type9 MOVLPS { asmout, "movlps" };
 Instruction1_Type3 MOVLHPS { asmout, "movlhps" };
 Instruction1_Type3 MOVHLPS { asmout, "movhlps" };
 Instruction2_Type4 MOVMSKPS { asmout, "movmskps" };

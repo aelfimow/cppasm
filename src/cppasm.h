@@ -1164,7 +1164,7 @@ extern Instruction1_Type4 LOOPE;
 extern Instruction1_Type4 LOOPNE;
 extern Instruction1_Type4 LOOPZ;
 extern Instruction1_Type4 LOOPNZ;
-extern Instruction_BOUND BOUND;
+extern Instruction2_Type8 BOUND;
 
 // String instructions
 extern Instruction1_Type1 MOVSB;
@@ -1417,8 +1417,8 @@ extern Instruction1_Type1 EMMS;
 // SSE data transfer instructions
 extern Instruction_SSE_MOV1 MOVAPS;
 extern Instruction_SSE_MOV1 MOVUPS;
-extern Instruction_SSE_MOV2 MOVHPS;
-extern Instruction_SSE_MOV2 MOVLPS;
+extern Instruction2_Type9 MOVHPS;
+extern Instruction2_Type9 MOVLPS;
 extern Instruction1_Type3 MOVLHPS;
 extern Instruction1_Type3 MOVHLPS;
 extern Instruction2_Type4 MOVMSKPS;

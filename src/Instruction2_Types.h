@@ -48,13 +48,13 @@ using Instruction2_Type7 = Instruction_2
     Operands_mem<m8, no_suffix>
 >;
 
-using Instruction_BOUND = Instruction_2
+using Instruction2_Type8 = Instruction_2
 <
     Operands_reg_mem<r16, m16, no_suffix>,
     Operands_reg_mem<r32, m32, no_suffix>
 >;
 
-using Instruction_SSE_MOV2 = Instruction_2
+using Instruction2_Type9 = Instruction_2
 <
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_mem_reg<m64, xmm, no_suffix>

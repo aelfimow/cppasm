@@ -1425,21 +1425,21 @@ extern Instruction2_Type4 MOVMSKPS;
 extern Instruction_SSE_MOV5 MOVSS;
 
 // SSE packed arithmetic instructions
-extern Instruction_SSE_Arithm1 ADDPS;
+extern Instruction2_Type10 ADDPS;
 extern Instruction_SSE_Arithm2 ADDSS;
-extern Instruction_SSE_Arithm1 SUBPS;
+extern Instruction2_Type10 SUBPS;
 extern Instruction_SSE_Arithm2 SUBSS;
-extern Instruction_SSE_Arithm1 MULPS;
+extern Instruction2_Type10 MULPS;
 extern Instruction_SSE_Arithm2 MULSS;
-extern Instruction_SSE_Arithm1 DIVPS;
+extern Instruction2_Type10 DIVPS;
 extern Instruction_SSE_Arithm2 DIVSS;
-extern Instruction_SSE_Arithm1 RCPPS;
+extern Instruction2_Type10 RCPPS;
 extern Instruction_SSE_Arithm2 RCPSS;
-extern Instruction_SSE_Arithm1 SQRTPS;
+extern Instruction2_Type10 SQRTPS;
 extern Instruction_SSE_Arithm2 SQRTSS;
-extern Instruction_SSE_Arithm1 MAXPS;
+extern Instruction2_Type10 MAXPS;
 extern Instruction_SSE_Arithm2 MAXSS;
-extern Instruction_SSE_Arithm1 MINPS;
+extern Instruction2_Type10 MINPS;
 extern Instruction_SSE_Arithm2 MINSS;
 
 // SSE comparison instructions
@@ -1449,15 +1449,15 @@ extern Instruction_SSE_Cmp3 COMISS;
 extern Instruction_SSE_Cmp3 UCOMISS;
 
 // SSE logical instructions
-extern Instruction_SSE_Arithm1 ANDPS;
-extern Instruction_SSE_Arithm1 ANDNPS;
-extern Instruction_SSE_Arithm1 ORPS;
-extern Instruction_SSE_Arithm1 XORPS;
+extern Instruction2_Type10 ANDPS;
+extern Instruction2_Type10 ANDNPS;
+extern Instruction2_Type10 ORPS;
+extern Instruction2_Type10 XORPS;
 
 // SSE shuffle and unpack instructions
 extern Instruction_SSE_Shuffle SHUFPS;
-extern Instruction_SSE_Arithm1 UNPCKHPS;
-extern Instruction_SSE_Arithm1 UNPCKLPS;
+extern Instruction2_Type10 UNPCKHPS;
+extern Instruction2_Type10 UNPCKLPS;
 
 // SSE convertion instructions
 extern Instruction_SSE_Conv1 CVTPI2PS;
@@ -1506,26 +1506,26 @@ extern Instruction2_Type4 MOVMSKPD;
 extern Instruction_MOVSD MOVSD_SSE2;
 
 // SSE2 packed arithmetic instructions
-extern Instruction_SSE2_Arithm1 ADDPD;
+extern Instruction2_Type10 ADDPD;
 extern Instruction_SSE2_Arithm2 ADDSD;
-extern Instruction_SSE2_Arithm1 SUBPD;
+extern Instruction2_Type10 SUBPD;
 extern Instruction_SSE2_Arithm2 SUBSD;
-extern Instruction_SSE2_Arithm1 MULPD;
+extern Instruction2_Type10 MULPD;
 extern Instruction_SSE2_Arithm2 MULSD;
-extern Instruction_SSE2_Arithm1 DIVPD;
+extern Instruction2_Type10 DIVPD;
 extern Instruction_SSE2_Arithm2 DIVSD;
-extern Instruction_SSE2_Arithm1 SQRTPD;
+extern Instruction2_Type10 SQRTPD;
 extern Instruction_SSE2_Arithm2 SQRTSD;
-extern Instruction_SSE2_Arithm1 MAXPD;
+extern Instruction2_Type10 MAXPD;
 extern Instruction_SSE2_Arithm2 MAXSD;
-extern Instruction_SSE2_Arithm1 MINPD;
+extern Instruction2_Type10 MINPD;
 extern Instruction_SSE2_Arithm2 MINSD;
 
 // SSE2 logical instructions
-extern Instruction_SSE2_Arithm1 ANDPD;
-extern Instruction_SSE2_Arithm1 ANDNPD;
-extern Instruction_SSE2_Arithm1 ORPD;
-extern Instruction_SSE2_Arithm1 XORPD;
+extern Instruction2_Type10 ANDPD;
+extern Instruction2_Type10 ANDNPD;
+extern Instruction2_Type10 ORPD;
+extern Instruction2_Type10 XORPD;
 
 // SSE2 comparison instructions
 extern Instruction_SSE2_Cmp1 CMPPD;
@@ -1535,18 +1535,18 @@ extern Instruction_SSE2_Cmp3 UCOMISD;
 
 // SSE2 shuffle and unpack instructions
 extern Instruction_SHUFPD SHUFPD;
-extern Instruction_UNPCKxPD UNPCKHPD;
-extern Instruction_UNPCKxPD UNPCKLPD;
+extern Instruction2_Type10 UNPCKHPD;
+extern Instruction2_Type10 UNPCKLPD;
 
 // SSE2 convertion instructions
 extern Instruction_CVTPD2PI CVTPD2PI;
 extern Instruction_CVTPD2PI CVTTPD2PI;
 extern Instruction_CVTPI2PD CVTPI2PD;
-extern Instruction_CVTPD2DQ CVTPD2DQ;
-extern Instruction_CVTPD2DQ CVTTPD2DQ;
+extern Instruction2_Type10 CVTPD2DQ;
+extern Instruction2_Type10 CVTTPD2DQ;
 extern Instruction_CVTDQ2PD CVTDQ2PD;
 extern Instruction_CVTPS2PD CVTPS2PD;
-extern Instruction_CVTPD2PS CVTPD2PS;
+extern Instruction2_Type10 CVTPD2PS;
 extern Instruction_CVTSS2SD CVTSS2SD;
 extern Instruction_CVTSD2SS CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
@@ -1554,9 +1554,9 @@ extern Instruction_CVTSD2SI CVTTSD2SI;
 extern Instruction_CVTSI2SD CVTSI2SD;
 
 // SSE2 packed single-precision floating point values
-extern Instruction_CVTDQ2PS CVTDQ2PS;
-extern Instruction_CVTPS2DQ CVTPS2DQ;
-extern Instruction_CVTPS2DQ CVTTPS2DQ;
+extern Instruction2_Type10 CVTDQ2PS;
+extern Instruction2_Type10 CVTPS2DQ;
+extern Instruction2_Type10 CVTTPS2DQ;
 
 // SSE2 128-bit SIMD integer instructions
 extern Instruction_MOVDQx MOVDQA;
@@ -1571,8 +1571,8 @@ extern Instruction_SSE2_Int_Shuffle PSHUFHW;
 extern Instruction_SSE2_Int_Shuffle PSHUFD;
 extern Instruction1_Type22 PSLLDQ;
 extern Instruction1_Type22 PSRLDQ;
-extern Instruction_SSE2_Int_Unpack PUNPCKHQDQ;
-extern Instruction_SSE2_Int_Unpack PUNPCKLQDQ;
+extern Instruction2_Type10 PUNPCKHQDQ;
+extern Instruction2_Type10 PUNPCKLQDQ;
 
 // SSE2 cacheability control and ordering instructions
 extern Instruction1_Type2 CLFLUSH;
@@ -1591,18 +1591,18 @@ extern Instruction_FISTTP FISTTP;
 extern Instruction1_Type23 LDDQU;
 
 // SSE3 SIMD floating-point packed ADD/SUB instructions
-extern Instruction_SSE3_Arithm1 ADDSUBPS;
-extern Instruction_SSE3_Arithm1 ADDSUBPD;
+extern Instruction2_Type10 ADDSUBPS;
+extern Instruction2_Type10 ADDSUBPD;
 
 // SSE3 SIMD floating-point horizontal ADD/SUB instructions
-extern Instruction_SSE3_Arithm1 HADDPS;
-extern Instruction_SSE3_Arithm1 HSUBPS;
-extern Instruction_SSE3_Arithm1 HADDPD;
-extern Instruction_SSE3_Arithm1 HSUBPD;
+extern Instruction2_Type10 HADDPS;
+extern Instruction2_Type10 HSUBPS;
+extern Instruction2_Type10 HADDPD;
+extern Instruction2_Type10 HSUBPD;
 
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
-extern Instruction_SSE3_Arithm1 MOVSHDUP;
-extern Instruction_SSE3_Arithm1 MOVSLDUP;
+extern Instruction2_Type10 MOVSHDUP;
+extern Instruction2_Type10 MOVSLDUP;
 extern Instruction_SSE3_Arithm2 MOVDDUP;
 
 // SSE3 agent synchronization instructions
@@ -1640,8 +1640,8 @@ extern Instruction_SSSE3_Arithm1 PSIGND;
 extern Instruction_SSSE3_Arithm2 PALIGNR;
 
 // SSE4.1: dword multiply instructions
-extern Instruction_SSE4_1_Type1 PMULLD;
-extern Instruction_SSE4_1_Type1 PMULDQ;
+extern Instruction2_Type10 PMULLD;
+extern Instruction2_Type10 PMULDQ;
 
 // SSE4.1: floating-point dot product instructions
 extern Instruction_SSE4_1_Type2 DPPD;
@@ -1659,14 +1659,14 @@ extern Instruction_SSE4_1_Type3 PBLENDVB;
 extern Instruction_SSE4_1_Type2 PBLENDW;
 
 // SSE4.1: packed integer MIN/MAX instructions
-extern Instruction_SSE4_1_Type1 PMINUW;
-extern Instruction_SSE4_1_Type1 PMINUD;
-extern Instruction_SSE4_1_Type1 PMINSB;
-extern Instruction_SSE4_1_Type1 PMINSD;
-extern Instruction_SSE4_1_Type1 PMAXUW;
-extern Instruction_SSE4_1_Type1 PMAXUD;
-extern Instruction_SSE4_1_Type1 PMAXSB;
-extern Instruction_SSE4_1_Type1 PMAXSD;
+extern Instruction2_Type10 PMINUW;
+extern Instruction2_Type10 PMINUD;
+extern Instruction2_Type10 PMINSB;
+extern Instruction2_Type10 PMINSD;
+extern Instruction2_Type10 PMAXUW;
+extern Instruction2_Type10 PMAXUD;
+extern Instruction2_Type10 PMAXSB;
+extern Instruction2_Type10 PMAXSD;
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
 extern Instruction_SSE4_1_Type2 ROUNDPS;
@@ -1720,14 +1720,14 @@ extern Instruction_SSE4_2_Type1 PCMPISTRI;
 extern Instruction_SSE4_2_Type1 PCMPISTRM;
 
 // SSE4.2: packed comparison SIMD integer instruction
-extern Instruction_SSE4_2_Type2 PCMPGTQ;
+extern Instruction2_Type10 PCMPGTQ;
 
 // AESNI and PCLMULQDQ
-extern Instruction_AES_Type1 AESDEC;
-extern Instruction_AES_Type1 AESDECLAST;
-extern Instruction_AES_Type1 AESENC;
-extern Instruction_AES_Type1 AESENCLAST;
-extern Instruction_AES_Type1 AESIMC;
+extern Instruction2_Type10 AESDEC;
+extern Instruction2_Type10 AESDECLAST;
+extern Instruction2_Type10 AESENC;
+extern Instruction2_Type10 AESENCLAST;
+extern Instruction2_Type10 AESIMC;
 extern Instruction_AES_Type2 AESKEYGENASSIST;
 extern Instruction_PCLMULQDQ PCLMULQDQ;
 

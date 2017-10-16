@@ -625,21 +625,21 @@ Instruction2_Type4 MOVMSKPS { asmout, "movmskps" };
 Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
 
 // SSE packed arithmetic instructions
-Instruction_SSE_Arithm1 ADDPS { asmout, "addps" };
+Instruction2_Type10 ADDPS { asmout, "addps" };
 Instruction_SSE_Arithm2 ADDSS { asmout, "addss" };
-Instruction_SSE_Arithm1 SUBPS { asmout, "subps" };
+Instruction2_Type10 SUBPS { asmout, "subps" };
 Instruction_SSE_Arithm2 SUBSS { asmout, "subss" };
-Instruction_SSE_Arithm1 MULPS { asmout, "mulps" };
+Instruction2_Type10 MULPS { asmout, "mulps" };
 Instruction_SSE_Arithm2 MULSS { asmout, "mulss" };
-Instruction_SSE_Arithm1 DIVPS { asmout, "divps" };
+Instruction2_Type10 DIVPS { asmout, "divps" };
 Instruction_SSE_Arithm2 DIVSS { asmout, "divss" };
-Instruction_SSE_Arithm1 RCPPS { asmout, "rcpps" };
+Instruction2_Type10 RCPPS { asmout, "rcpps" };
 Instruction_SSE_Arithm2 RCPSS { asmout, "rcpss" };
-Instruction_SSE_Arithm1 SQRTPS { asmout, "sqrtps" };
+Instruction2_Type10 SQRTPS { asmout, "sqrtps" };
 Instruction_SSE_Arithm2 SQRTSS { asmout, "sqrtss" };
-Instruction_SSE_Arithm1 MAXPS { asmout, "maxps" };
+Instruction2_Type10 MAXPS { asmout, "maxps" };
 Instruction_SSE_Arithm2 MAXSS { asmout, "maxss" };
-Instruction_SSE_Arithm1 MINPS { asmout, "minps" };
+Instruction2_Type10 MINPS { asmout, "minps" };
 Instruction_SSE_Arithm2 MINSS { asmout, "minss" };
 
 // SSE comparison instructions
@@ -649,15 +649,15 @@ Instruction_SSE_Cmp3 COMISS { asmout, "comiss" };
 Instruction_SSE_Cmp3 UCOMISS { asmout, "ucomiss" };
 
 // SSE logical instructions
-Instruction_SSE_Arithm1 ANDPS { asmout, "andps" };
-Instruction_SSE_Arithm1 ANDNPS { asmout, "andnps" };
-Instruction_SSE_Arithm1 ORPS { asmout, "orps" };
-Instruction_SSE_Arithm1 XORPS { asmout, "xorps" };
+Instruction2_Type10 ANDPS { asmout, "andps" };
+Instruction2_Type10 ANDNPS { asmout, "andnps" };
+Instruction2_Type10 ORPS { asmout, "orps" };
+Instruction2_Type10 XORPS { asmout, "xorps" };
 
 // SSE shuffle and unpack instructions
 Instruction_SSE_Shuffle SHUFPS { asmout, "shufps" };
-Instruction_SSE_Arithm1 UNPCKHPS { asmout, "unpckhps" };
-Instruction_SSE_Arithm1 UNPCKLPS { asmout, "unpcklps" };
+Instruction2_Type10 UNPCKHPS { asmout, "unpckhps" };
+Instruction2_Type10 UNPCKLPS { asmout, "unpcklps" };
 
 // SSE convertion instructions
 Instruction_SSE_Conv1 CVTPI2PS { asmout, "cvtpi2ps" };
@@ -706,26 +706,26 @@ Instruction2_Type4 MOVMSKPD { asmout, "movmskpd" };
 Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
 
 // SSE2 packed arithmetic instructions
-Instruction_SSE2_Arithm1 ADDPD { asmout, "addpd" };
+Instruction2_Type10 ADDPD { asmout, "addpd" };
 Instruction_SSE2_Arithm2 ADDSD { asmout, "addsd" };
-Instruction_SSE2_Arithm1 SUBPD { asmout, "subpd" };
+Instruction2_Type10 SUBPD { asmout, "subpd" };
 Instruction_SSE2_Arithm2 SUBSD { asmout, "subsd" };
-Instruction_SSE2_Arithm1 MULPD { asmout, "mulpd" };
+Instruction2_Type10 MULPD { asmout, "mulpd" };
 Instruction_SSE2_Arithm2 MULSD { asmout, "mulsd" };
-Instruction_SSE2_Arithm1 DIVPD { asmout, "divpd" };
+Instruction2_Type10 DIVPD { asmout, "divpd" };
 Instruction_SSE2_Arithm2 DIVSD { asmout, "divsd" };
-Instruction_SSE2_Arithm1 SQRTPD { asmout, "sqrtpd" };
+Instruction2_Type10 SQRTPD { asmout, "sqrtpd" };
 Instruction_SSE2_Arithm2 SQRTSD { asmout, "sqrtsd" };
-Instruction_SSE2_Arithm1 MAXPD { asmout, "maxpd" };
+Instruction2_Type10 MAXPD { asmout, "maxpd" };
 Instruction_SSE2_Arithm2 MAXSD { asmout, "maxsd" };
-Instruction_SSE2_Arithm1 MINPD { asmout, "minpd" };
+Instruction2_Type10 MINPD { asmout, "minpd" };
 Instruction_SSE2_Arithm2 MINSD { asmout, "minsd" };
 
 // SSE2 logical instructions
-Instruction_SSE2_Arithm1 ANDPD { asmout, "andpd" };
-Instruction_SSE2_Arithm1 ANDNPD { asmout, "andnpd" };
-Instruction_SSE2_Arithm1 ORPD { asmout, "orpd" };
-Instruction_SSE2_Arithm1 XORPD { asmout, "xorpd" };
+Instruction2_Type10 ANDPD { asmout, "andpd" };
+Instruction2_Type10 ANDNPD { asmout, "andnpd" };
+Instruction2_Type10 ORPD { asmout, "orpd" };
+Instruction2_Type10 XORPD { asmout, "xorpd" };
 
 // SSE2 comparison instructions
 Instruction_SSE2_Cmp1 CMPPD { asmout, "cmppd" };
@@ -735,18 +735,18 @@ Instruction_SSE2_Cmp3 UCOMISD { asmout, "ucomisd" };
 
 // SSE2 shuffle and unpack instructions
 Instruction_SHUFPD SHUFPD { asmout, "shufpd" };
-Instruction_UNPCKxPD UNPCKHPD { asmout, "unpckhpd" };
-Instruction_UNPCKxPD UNPCKLPD { asmout, "unpcklpd" };
+Instruction2_Type10 UNPCKHPD { asmout, "unpckhpd" };
+Instruction2_Type10 UNPCKLPD { asmout, "unpcklpd" };
 
 // SSE2 convertion instructions
 Instruction_CVTPD2PI CVTPD2PI { asmout, "cvtpd2pi" };
 Instruction_CVTPD2PI CVTTPD2PI { asmout, "cvttpd2pi" };
 Instruction_CVTPI2PD CVTPI2PD { asmout, "cvtpi2pd" };
-Instruction_CVTPD2DQ CVTPD2DQ { asmout, "cvtpd2dq" };
-Instruction_CVTPD2DQ CVTTPD2DQ { asmout, "cvttpd2dq" };
+Instruction2_Type10 CVTPD2DQ { asmout, "cvtpd2dq" };
+Instruction2_Type10 CVTTPD2DQ { asmout, "cvttpd2dq" };
 Instruction_CVTDQ2PD CVTDQ2PD { asmout, "cvtdq2pd" };
 Instruction_CVTPS2PD CVTPS2PD { asmout, "cvtps2pd" };
-Instruction_CVTPD2PS CVTPD2PS { asmout, "cvtpd2ps" };
+Instruction2_Type10 CVTPD2PS { asmout, "cvtpd2ps" };
 Instruction_CVTSS2SD CVTSS2SD { asmout, "cvtss2sd" };
 Instruction_CVTSD2SS CVTSD2SS { asmout, "cvtsd2ss" };
 Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
@@ -754,9 +754,9 @@ Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
 Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
 
 // SSE2 packed single-precision floating point values
-Instruction_CVTDQ2PS CVTDQ2PS { asmout, "cvtdq2ps" };
-Instruction_CVTPS2DQ CVTPS2DQ { asmout, "cvtps2dq" };
-Instruction_CVTPS2DQ CVTTPS2DQ { asmout, "cvttps2dq" };
+Instruction2_Type10 CVTDQ2PS { asmout, "cvtdq2ps" };
+Instruction2_Type10 CVTPS2DQ { asmout, "cvtps2dq" };
+Instruction2_Type10 CVTTPS2DQ { asmout, "cvttps2dq" };
 
 // SSE2 128-bit SIMD integer instructions
 Instruction_MOVDQx MOVDQA { asmout, "movdqa" };
@@ -771,8 +771,8 @@ Instruction_SSE2_Int_Shuffle PSHUFHW { asmout, "pshufhw" };
 Instruction_SSE2_Int_Shuffle PSHUFD { asmout, "pshufd" };
 Instruction1_Type22 PSLLDQ { asmout, "pslldq" };
 Instruction1_Type22 PSRLDQ { asmout, "psrldq" };
-Instruction_SSE2_Int_Unpack PUNPCKHQDQ { asmout, "punpckhqdq" };
-Instruction_SSE2_Int_Unpack PUNPCKLQDQ { asmout, "punpcklqdq" };
+Instruction2_Type10 PUNPCKHQDQ { asmout, "punpckhqdq" };
+Instruction2_Type10 PUNPCKLQDQ { asmout, "punpcklqdq" };
 
 // SSE2 cacheability control and ordering instructions
 Instruction1_Type1 LFENCE { asmout, "lfence" };
@@ -790,18 +790,18 @@ Instruction_FISTTP FISTTP { asmout, "fisttp" };
 Instruction1_Type23 LDDQU { asmout, "lddqu" };
 
 // SSE3 SIMD floating-point packed ADD/SUB instructions
-Instruction_SSE3_Arithm1 ADDSUBPS { asmout, "addsubps" };
-Instruction_SSE3_Arithm1 ADDSUBPD { asmout, "addsubpd" };
+Instruction2_Type10 ADDSUBPS { asmout, "addsubps" };
+Instruction2_Type10 ADDSUBPD { asmout, "addsubpd" };
 
 // SSE3 SIMD floating-point horizontal ADD/SUB instructions
-Instruction_SSE3_Arithm1 HADDPS { asmout, "haddps" };
-Instruction_SSE3_Arithm1 HSUBPS { asmout, "hsubps" };
-Instruction_SSE3_Arithm1 HADDPD { asmout, "haddpd" };
-Instruction_SSE3_Arithm1 HSUBPD { asmout, "hsubpd" };
+Instruction2_Type10 HADDPS { asmout, "haddps" };
+Instruction2_Type10 HSUBPS { asmout, "hsubps" };
+Instruction2_Type10 HADDPD { asmout, "haddpd" };
+Instruction2_Type10 HSUBPD { asmout, "hsubpd" };
 
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
-Instruction_SSE3_Arithm1 MOVSHDUP { asmout, "movshdup" };
-Instruction_SSE3_Arithm1 MOVSLDUP { asmout, "movsldup" };
+Instruction2_Type10 MOVSHDUP { asmout, "movshdup" };
+Instruction2_Type10 MOVSLDUP { asmout, "movsldup" };
 Instruction_SSE3_Arithm2 MOVDDUP { asmout, "movddup" };
 
 // SSE3 agent synchronization instructions
@@ -839,8 +839,8 @@ Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
 Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
 
 // SSE4.1: dword multiply instructions
-Instruction_SSE4_1_Type1 PMULLD { asmout, "pmulld" };
-Instruction_SSE4_1_Type1 PMULDQ { asmout, "pmuldq" };
+Instruction2_Type10 PMULLD { asmout, "pmulld" };
+Instruction2_Type10 PMULDQ { asmout, "pmuldq" };
 
 // SSE4.1: floating-point dot product instructions
 Instruction_SSE4_1_Type2 DPPD { asmout, "dppd" };
@@ -858,14 +858,14 @@ Instruction_SSE4_1_Type3 PBLENDVB { asmout, "pblendvb" };
 Instruction_SSE4_1_Type2 PBLENDW { asmout, "pblendw" };
 
 // SSE4.1: packed integer MIN/MAX instructions
-Instruction_SSE4_1_Type1 PMINUW { asmout, "pminuw" };
-Instruction_SSE4_1_Type1 PMINUD { asmout, "pminud" };
-Instruction_SSE4_1_Type1 PMINSB { asmout, "pminsb" };
-Instruction_SSE4_1_Type1 PMINSD { asmout, "pminsd" };
-Instruction_SSE4_1_Type1 PMAXUW { asmout, "pmaxuw" };
-Instruction_SSE4_1_Type1 PMAXUD { asmout, "pmaxud" };
-Instruction_SSE4_1_Type1 PMAXSB { asmout, "pmaxsb" };
-Instruction_SSE4_1_Type1 PMAXSD { asmout, "pmaxsd" };
+Instruction2_Type10 PMINUW { asmout, "pminuw" };
+Instruction2_Type10 PMINUD { asmout, "pminud" };
+Instruction2_Type10 PMINSB { asmout, "pminsb" };
+Instruction2_Type10 PMINSD { asmout, "pminsd" };
+Instruction2_Type10 PMAXUW { asmout, "pmaxuw" };
+Instruction2_Type10 PMAXUD { asmout, "pmaxud" };
+Instruction2_Type10 PMAXSB { asmout, "pmaxsb" };
+Instruction2_Type10 PMAXSD { asmout, "pmaxsd" };
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
 Instruction_SSE4_1_Type2 ROUNDPS { asmout, "roundps" };
@@ -919,14 +919,14 @@ Instruction_SSE4_2_Type1 PCMPISTRI { asmout, "pcmpistri" };
 Instruction_SSE4_2_Type1 PCMPISTRM { asmout, "pcmpistrm" };
 
 // SSE4.2: packed comparison SIMD integer instruction
-Instruction_SSE4_2_Type2 PCMPGTQ { asmout, "pcmpgtq" };
+Instruction2_Type10 PCMPGTQ { asmout, "pcmpgtq" };
 
 // AESNI and PCLMULQDQ
-Instruction_AES_Type1 AESDEC { asmout, "aesdec" };
-Instruction_AES_Type1 AESDECLAST { asmout, "aesdeclast" };
-Instruction_AES_Type1 AESENC { asmout, "aesenc" };
-Instruction_AES_Type1 AESENCLAST { asmout, "aesenclast" };
-Instruction_AES_Type1 AESIMC { asmout, "aesimc" };
+Instruction2_Type10 AESDEC { asmout, "aesdec" };
+Instruction2_Type10 AESDECLAST { asmout, "aesdeclast" };
+Instruction2_Type10 AESENC { asmout, "aesenc" };
+Instruction2_Type10 AESENCLAST { asmout, "aesenclast" };
+Instruction2_Type10 AESIMC { asmout, "aesimc" };
 Instruction_AES_Type2 AESKEYGENASSIST { asmout, "aeskeygenassist" };
 Instruction_PCLMULQDQ PCLMULQDQ { asmout, "pclmulqdq" };
 

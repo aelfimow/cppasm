@@ -626,27 +626,27 @@ Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
 
 // SSE packed arithmetic instructions
 Instruction2_Type10 ADDPS { asmout, "addps" };
-Instruction_SSE_Arithm2 ADDSS { asmout, "addss" };
+Instruction2_Type11 ADDSS { asmout, "addss" };
 Instruction2_Type10 SUBPS { asmout, "subps" };
-Instruction_SSE_Arithm2 SUBSS { asmout, "subss" };
+Instruction2_Type11 SUBSS { asmout, "subss" };
 Instruction2_Type10 MULPS { asmout, "mulps" };
-Instruction_SSE_Arithm2 MULSS { asmout, "mulss" };
+Instruction2_Type11 MULSS { asmout, "mulss" };
 Instruction2_Type10 DIVPS { asmout, "divps" };
-Instruction_SSE_Arithm2 DIVSS { asmout, "divss" };
+Instruction2_Type11 DIVSS { asmout, "divss" };
 Instruction2_Type10 RCPPS { asmout, "rcpps" };
-Instruction_SSE_Arithm2 RCPSS { asmout, "rcpss" };
+Instruction2_Type11 RCPSS { asmout, "rcpss" };
 Instruction2_Type10 SQRTPS { asmout, "sqrtps" };
-Instruction_SSE_Arithm2 SQRTSS { asmout, "sqrtss" };
+Instruction2_Type11 SQRTSS { asmout, "sqrtss" };
 Instruction2_Type10 MAXPS { asmout, "maxps" };
-Instruction_SSE_Arithm2 MAXSS { asmout, "maxss" };
+Instruction2_Type11 MAXSS { asmout, "maxss" };
 Instruction2_Type10 MINPS { asmout, "minps" };
-Instruction_SSE_Arithm2 MINSS { asmout, "minss" };
+Instruction2_Type11 MINSS { asmout, "minss" };
 
 // SSE comparison instructions
 Instruction_SSE_Cmp1 CMPPS { asmout, "cmpps" };
 Instruction_SSE_Cmp2 CMPSS { asmout, "cmpss" };
-Instruction_SSE_Cmp3 COMISS { asmout, "comiss" };
-Instruction_SSE_Cmp3 UCOMISS { asmout, "ucomiss" };
+Instruction2_Type11 COMISS { asmout, "comiss" };
+Instruction2_Type11 UCOMISS { asmout, "ucomiss" };
 
 // SSE logical instructions
 Instruction2_Type10 ANDPS { asmout, "andps" };
@@ -747,7 +747,7 @@ Instruction2_Type10 CVTTPD2DQ { asmout, "cvttpd2dq" };
 Instruction_CVTDQ2PD CVTDQ2PD { asmout, "cvtdq2pd" };
 Instruction_CVTPS2PD CVTPS2PD { asmout, "cvtps2pd" };
 Instruction2_Type10 CVTPD2PS { asmout, "cvtpd2ps" };
-Instruction_CVTSS2SD CVTSS2SD { asmout, "cvtss2sd" };
+Instruction2_Type11 CVTSS2SD { asmout, "cvtss2sd" };
 Instruction_CVTSD2SS CVTSD2SS { asmout, "cvtsd2ss" };
 Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
 Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };

@@ -66,19 +66,7 @@ using Instruction2_Type10 = Instruction_2
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_CVTSS2SD = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_SSE_Arithm2 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
->;
-
-using Instruction_SSE_Cmp3 = Instruction_2
+using Instruction2_Type11 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>

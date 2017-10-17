@@ -1426,27 +1426,27 @@ extern Instruction_SSE_MOV5 MOVSS;
 
 // SSE packed arithmetic instructions
 extern Instruction2_Type10 ADDPS;
-extern Instruction_SSE_Arithm2 ADDSS;
+extern Instruction2_Type11 ADDSS;
 extern Instruction2_Type10 SUBPS;
-extern Instruction_SSE_Arithm2 SUBSS;
+extern Instruction2_Type11 SUBSS;
 extern Instruction2_Type10 MULPS;
-extern Instruction_SSE_Arithm2 MULSS;
+extern Instruction2_Type11 MULSS;
 extern Instruction2_Type10 DIVPS;
-extern Instruction_SSE_Arithm2 DIVSS;
+extern Instruction2_Type11 DIVSS;
 extern Instruction2_Type10 RCPPS;
-extern Instruction_SSE_Arithm2 RCPSS;
+extern Instruction2_Type11 RCPSS;
 extern Instruction2_Type10 SQRTPS;
-extern Instruction_SSE_Arithm2 SQRTSS;
+extern Instruction2_Type11 SQRTSS;
 extern Instruction2_Type10 MAXPS;
-extern Instruction_SSE_Arithm2 MAXSS;
+extern Instruction2_Type11 MAXSS;
 extern Instruction2_Type10 MINPS;
-extern Instruction_SSE_Arithm2 MINSS;
+extern Instruction2_Type11 MINSS;
 
 // SSE comparison instructions
 extern Instruction_SSE_Cmp1 CMPPS;
 extern Instruction_SSE_Cmp2 CMPSS;
-extern Instruction_SSE_Cmp3 COMISS;
-extern Instruction_SSE_Cmp3 UCOMISS;
+extern Instruction2_Type11 COMISS;
+extern Instruction2_Type11 UCOMISS;
 
 // SSE logical instructions
 extern Instruction2_Type10 ANDPS;
@@ -1547,7 +1547,7 @@ extern Instruction2_Type10 CVTTPD2DQ;
 extern Instruction_CVTDQ2PD CVTDQ2PD;
 extern Instruction_CVTPS2PD CVTPS2PD;
 extern Instruction2_Type10 CVTPD2PS;
-extern Instruction_CVTSS2SD CVTSS2SD;
+extern Instruction2_Type11 CVTSS2SD;
 extern Instruction_CVTSD2SS CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
 extern Instruction_CVTSD2SI CVTTSD2SI;

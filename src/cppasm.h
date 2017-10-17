@@ -1528,13 +1528,13 @@ extern Instruction2_Type10 ORPD;
 extern Instruction2_Type10 XORPD;
 
 // SSE2 comparison instructions
-extern Instruction_SSE2_Cmp1 CMPPD;
+extern Instruction2_Type12 CMPPD;
 extern Instruction_SSE2_Cmp2 CMPSD_SSE2;
 extern Instruction_SSE2_Cmp3 COMISD;
 extern Instruction_SSE2_Cmp3 UCOMISD;
 
 // SSE2 shuffle and unpack instructions
-extern Instruction_SHUFPD SHUFPD;
+extern Instruction2_Type12 SHUFPD;
 extern Instruction2_Type10 UNPCKHPD;
 extern Instruction2_Type10 UNPCKLPD;
 
@@ -1566,9 +1566,9 @@ extern Instruction1_Type21 MOVDQ2Q;
 extern Instruction_PMULUDQ PMULUDQ;
 extern Instruction_SSE2_Int_Arithm1 PADDQ;
 extern Instruction_SSE2_Int_Arithm1 PSUBQ;
-extern Instruction_SSE2_Int_Shuffle PSHUFLW;
-extern Instruction_SSE2_Int_Shuffle PSHUFHW;
-extern Instruction_SSE2_Int_Shuffle PSHUFD;
+extern Instruction2_Type12 PSHUFLW;
+extern Instruction2_Type12 PSHUFHW;
+extern Instruction2_Type12 PSHUFD;
 extern Instruction1_Type22 PSLLDQ;
 extern Instruction1_Type22 PSRLDQ;
 extern Instruction2_Type10 PUNPCKHQDQ;
@@ -1644,19 +1644,19 @@ extern Instruction2_Type10 PMULLD;
 extern Instruction2_Type10 PMULDQ;
 
 // SSE4.1: floating-point dot product instructions
-extern Instruction_SSE4_1_Type2 DPPD;
-extern Instruction_SSE4_1_Type2 DPPS;
+extern Instruction2_Type12 DPPD;
+extern Instruction2_Type12 DPPS;
 
 // SSE4.1: streaming load hint instruction
 extern Instruction1_Type24 MOVNTDQA;
 
 // SSE4.1: packed blending instructions
-extern Instruction_SSE4_1_Type2 BLENDPD;
-extern Instruction_SSE4_1_Type2 BLENDPS;
+extern Instruction2_Type12 BLENDPD;
+extern Instruction2_Type12 BLENDPS;
 extern Instruction_SSE4_1_Type3 BLENDVPD;
 extern Instruction_SSE4_1_Type3 BLENDVPS;
 extern Instruction_SSE4_1_Type3 PBLENDVB;
-extern Instruction_SSE4_1_Type2 PBLENDW;
+extern Instruction2_Type12 PBLENDW;
 
 // SSE4.1: packed integer MIN/MAX instructions
 extern Instruction2_Type10 PMINUW;
@@ -1669,8 +1669,8 @@ extern Instruction2_Type10 PMAXSB;
 extern Instruction2_Type10 PMAXSD;
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
-extern Instruction_SSE4_1_Type2 ROUNDPS;
-extern Instruction_SSE4_1_Type2 ROUNDPD;
+extern Instruction2_Type12 ROUNDPS;
+extern Instruction2_Type12 ROUNDPD;
 extern Instruction_SSE4_1_Type4 ROUNDSS;
 extern Instruction_SSE4_1_Type5 ROUNDSD;
 
@@ -1699,25 +1699,25 @@ extern Instruction_SSE4_1_Type15 PMOVZXWQ;
 extern Instruction_SSE4_1_Type16 PMOVZXBQ;
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
-extern Instruction_SSE4_1_Type2 MPSADBW;
+extern Instruction2_Type12 MPSADBW;
 
 // SSE4.1: horizontal search
-extern Instruction_SSE4_1_Type2 PHMINPOSUW;
+extern Instruction2_Type12 PHMINPOSUW;
 
 // SSE4.1: packed test
-extern Instruction_SSE4_1_Type2 PTEST;
+extern Instruction2_Type12 PTEST;
 
 // SSE4.1: packed qword equality comparison
-extern Instruction_SSE4_1_Type2 PCMPEQQ;
+extern Instruction2_Type12 PCMPEQQ;
 
 // SSE4.1: dword packing with unsigned saturation
-extern Instruction_SSE4_1_Type2 PACKUSDW;
+extern Instruction2_Type12 PACKUSDW;
 
 // SSE4.2: string and text processing instructions
-extern Instruction_SSE4_2_Type1 PCMPESTRI;
-extern Instruction_SSE4_2_Type1 PCMPESTRM;
-extern Instruction_SSE4_2_Type1 PCMPISTRI;
-extern Instruction_SSE4_2_Type1 PCMPISTRM;
+extern Instruction2_Type12 PCMPESTRI;
+extern Instruction2_Type12 PCMPESTRM;
+extern Instruction2_Type12 PCMPISTRI;
+extern Instruction2_Type12 PCMPISTRM;
 
 // SSE4.2: packed comparison SIMD integer instruction
 extern Instruction2_Type10 PCMPGTQ;
@@ -1728,8 +1728,8 @@ extern Instruction2_Type10 AESDECLAST;
 extern Instruction2_Type10 AESENC;
 extern Instruction2_Type10 AESENCLAST;
 extern Instruction2_Type10 AESIMC;
-extern Instruction_AES_Type2 AESKEYGENASSIST;
-extern Instruction_PCLMULQDQ PCLMULQDQ;
+extern Instruction2_Type12 AESKEYGENASSIST;
+extern Instruction2_Type12 PCLMULQDQ;
 
 // 16-bit floating-point convertion instructions
 extern Instruction_F16C_Type1 VCVTPH2PS;

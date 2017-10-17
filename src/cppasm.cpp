@@ -728,13 +728,13 @@ Instruction2_Type10 ORPD { asmout, "orpd" };
 Instruction2_Type10 XORPD { asmout, "xorpd" };
 
 // SSE2 comparison instructions
-Instruction_SSE2_Cmp1 CMPPD { asmout, "cmppd" };
+Instruction2_Type12 CMPPD { asmout, "cmppd" };
 Instruction_SSE2_Cmp2 CMPSD_SSE2 { asmout, "cmpsd" };
 Instruction_SSE2_Cmp3 COMISD { asmout, "comisd" };
 Instruction_SSE2_Cmp3 UCOMISD { asmout, "ucomisd" };
 
 // SSE2 shuffle and unpack instructions
-Instruction_SHUFPD SHUFPD { asmout, "shufpd" };
+Instruction2_Type12 SHUFPD { asmout, "shufpd" };
 Instruction2_Type10 UNPCKHPD { asmout, "unpckhpd" };
 Instruction2_Type10 UNPCKLPD { asmout, "unpcklpd" };
 
@@ -766,9 +766,9 @@ Instruction1_Type21 MOVDQ2Q { asmout, "movdq2q" };
 Instruction_PMULUDQ PMULUDQ { asmout, "pmuludq" };
 Instruction_SSE2_Int_Arithm1 PADDQ { asmout, "paddq" };
 Instruction_SSE2_Int_Arithm1 PSUBQ { asmout, "psubq" };
-Instruction_SSE2_Int_Shuffle PSHUFLW { asmout, "pshuflw" };
-Instruction_SSE2_Int_Shuffle PSHUFHW { asmout, "pshufhw" };
-Instruction_SSE2_Int_Shuffle PSHUFD { asmout, "pshufd" };
+Instruction2_Type12 PSHUFLW { asmout, "pshuflw" };
+Instruction2_Type12 PSHUFHW { asmout, "pshufhw" };
+Instruction2_Type12 PSHUFD { asmout, "pshufd" };
 Instruction1_Type22 PSLLDQ { asmout, "pslldq" };
 Instruction1_Type22 PSRLDQ { asmout, "psrldq" };
 Instruction2_Type10 PUNPCKHQDQ { asmout, "punpckhqdq" };
@@ -843,19 +843,19 @@ Instruction2_Type10 PMULLD { asmout, "pmulld" };
 Instruction2_Type10 PMULDQ { asmout, "pmuldq" };
 
 // SSE4.1: floating-point dot product instructions
-Instruction_SSE4_1_Type2 DPPD { asmout, "dppd" };
-Instruction_SSE4_1_Type2 DPPS { asmout, "dpps" };
+Instruction2_Type12 DPPD { asmout, "dppd" };
+Instruction2_Type12 DPPS { asmout, "dpps" };
 
 // SSE4.1: streaming load hint instruction
 Instruction1_Type24 MOVNTDQA { asmout, "movntdqa" };
 
 // SSE4.1: packed blending instructions
-Instruction_SSE4_1_Type2 BLENDPD { asmout, "blendpd" };
-Instruction_SSE4_1_Type2 BLENDPS { asmout, "blendps" };
+Instruction2_Type12 BLENDPD { asmout, "blendpd" };
+Instruction2_Type12 BLENDPS { asmout, "blendps" };
 Instruction_SSE4_1_Type3 BLENDVPD { asmout, "blendvpd" };
 Instruction_SSE4_1_Type3 BLENDVPS { asmout, "blendvps" };
 Instruction_SSE4_1_Type3 PBLENDVB { asmout, "pblendvb" };
-Instruction_SSE4_1_Type2 PBLENDW { asmout, "pblendw" };
+Instruction2_Type12 PBLENDW { asmout, "pblendw" };
 
 // SSE4.1: packed integer MIN/MAX instructions
 Instruction2_Type10 PMINUW { asmout, "pminuw" };
@@ -868,8 +868,8 @@ Instruction2_Type10 PMAXSB { asmout, "pmaxsb" };
 Instruction2_Type10 PMAXSD { asmout, "pmaxsd" };
 
 // SSE4.1: floating-point round instructions with selectable rounding mode
-Instruction_SSE4_1_Type2 ROUNDPS { asmout, "roundps" };
-Instruction_SSE4_1_Type2 ROUNDPD { asmout, "roundpd" };
+Instruction2_Type12 ROUNDPS { asmout, "roundps" };
+Instruction2_Type12 ROUNDPD { asmout, "roundpd" };
 Instruction_SSE4_1_Type4 ROUNDSS { asmout, "roundss" };
 Instruction_SSE4_1_Type5 ROUNDSD { asmout, "roundsd" };
 
@@ -898,25 +898,25 @@ Instruction_SSE4_1_Type15 PMOVZXWQ { asmout, "pmovzxwq" };
 Instruction_SSE4_1_Type16 PMOVZXBQ { asmout, "pmovzxbq" };
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
-Instruction_SSE4_1_Type2 MPSADBW { asmout, "mpsadbw" };
+Instruction2_Type12 MPSADBW { asmout, "mpsadbw" };
 
 // SSE4.1: horizontal search
-Instruction_SSE4_1_Type2 PHMINPOSUW { asmout, "phminposuw" };
+Instruction2_Type12 PHMINPOSUW { asmout, "phminposuw" };
 
 // SSE4.1: packed test
-Instruction_SSE4_1_Type2 PTEST { asmout, "ptest" };
+Instruction2_Type12 PTEST { asmout, "ptest" };
 
 // SSE4.1: packed qword equality comparison
-Instruction_SSE4_1_Type2 PCMPEQQ { asmout, "pcmpeqq" };
+Instruction2_Type12 PCMPEQQ { asmout, "pcmpeqq" };
 
 // SSE4.1: dword packing with unsigned saturation
-Instruction_SSE4_1_Type2 PACKUSDW { asmout, "packusdw" };
+Instruction2_Type12 PACKUSDW { asmout, "packusdw" };
 
 // SSE4.2: string and text processing instructions
-Instruction_SSE4_2_Type1 PCMPESTRI { asmout, "pcmpestri" };
-Instruction_SSE4_2_Type1 PCMPESTRM { asmout, "pcmpestrm" };
-Instruction_SSE4_2_Type1 PCMPISTRI { asmout, "pcmpistri" };
-Instruction_SSE4_2_Type1 PCMPISTRM { asmout, "pcmpistrm" };
+Instruction2_Type12 PCMPESTRI { asmout, "pcmpestri" };
+Instruction2_Type12 PCMPESTRM { asmout, "pcmpestrm" };
+Instruction2_Type12 PCMPISTRI { asmout, "pcmpistri" };
+Instruction2_Type12 PCMPISTRM { asmout, "pcmpistrm" };
 
 // SSE4.2: packed comparison SIMD integer instruction
 Instruction2_Type10 PCMPGTQ { asmout, "pcmpgtq" };
@@ -927,8 +927,8 @@ Instruction2_Type10 AESDECLAST { asmout, "aesdeclast" };
 Instruction2_Type10 AESENC { asmout, "aesenc" };
 Instruction2_Type10 AESENCLAST { asmout, "aesenclast" };
 Instruction2_Type10 AESIMC { asmout, "aesimc" };
-Instruction_AES_Type2 AESKEYGENASSIST { asmout, "aeskeygenassist" };
-Instruction_PCLMULQDQ PCLMULQDQ { asmout, "pclmulqdq" };
+Instruction2_Type12 AESKEYGENASSIST { asmout, "aeskeygenassist" };
+Instruction2_Type12 PCLMULQDQ { asmout, "pclmulqdq" };
 
 // 16-bit floating-point convertion instructions
 Instruction_F16C_Type1 VCVTPH2PS { asmout, "vcvtph2ps" };

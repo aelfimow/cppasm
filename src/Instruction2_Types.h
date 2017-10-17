@@ -138,18 +138,6 @@ using Instruction_SSE2_Cmp3 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_SSE2_Cmp1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SHUFPD = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
 using Instruction_SSE2_Cmp2 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
@@ -192,22 +180,10 @@ using Instruction_MOVNTI = Instruction_2
     Operands_mem_reg<m64, r64, no_suffix>
 >;
 
-using Instruction_SSE2_Int_Shuffle = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
 using Instruction_SSE3_Arithm2 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_SSE4_1_Type2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
 using Instruction_SSE4_1_Type4 = Instruction_2
@@ -268,24 +244,6 @@ using Instruction_SSE4_1_Type16 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m16, no_suffix>
->;
-
-using Instruction_SSE4_2_Type1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_AES_Type2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_PCLMULQDQ = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
 using Instruction_FMA_Type2 = Instruction_2

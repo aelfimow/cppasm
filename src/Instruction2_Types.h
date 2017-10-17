@@ -72,13 +72,7 @@ using Instruction2_Type11 = Instruction_2
     Operands_reg_mem<xmm, m32, no_suffix>
 >;
 
-using Instruction_SSE_Cmp1 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
->;
-
-using Instruction_SSE_Shuffle = Instruction_2
+using Instruction2_Type12 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m128, imm8>

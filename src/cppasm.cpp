@@ -643,7 +643,7 @@ Instruction2_Type10 MINPS { asmout, "minps" };
 Instruction2_Type11 MINSS { asmout, "minss" };
 
 // SSE comparison instructions
-Instruction_SSE_Cmp1 CMPPS { asmout, "cmpps" };
+Instruction2_Type12 CMPPS { asmout, "cmpps" };
 Instruction_SSE_Cmp2 CMPSS { asmout, "cmpss" };
 Instruction2_Type11 COMISS { asmout, "comiss" };
 Instruction2_Type11 UCOMISS { asmout, "ucomiss" };
@@ -655,7 +655,7 @@ Instruction2_Type10 ORPS { asmout, "orps" };
 Instruction2_Type10 XORPS { asmout, "xorps" };
 
 // SSE shuffle and unpack instructions
-Instruction_SSE_Shuffle SHUFPS { asmout, "shufps" };
+Instruction2_Type12 SHUFPS { asmout, "shufps" };
 Instruction2_Type10 UNPCKHPS { asmout, "unpckhps" };
 Instruction2_Type10 UNPCKLPS { asmout, "unpcklps" };
 

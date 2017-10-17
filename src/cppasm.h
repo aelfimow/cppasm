@@ -1443,7 +1443,7 @@ extern Instruction2_Type10 MINPS;
 extern Instruction2_Type11 MINSS;
 
 // SSE comparison instructions
-extern Instruction_SSE_Cmp1 CMPPS;
+extern Instruction2_Type12 CMPPS;
 extern Instruction_SSE_Cmp2 CMPSS;
 extern Instruction2_Type11 COMISS;
 extern Instruction2_Type11 UCOMISS;
@@ -1455,7 +1455,7 @@ extern Instruction2_Type10 ORPS;
 extern Instruction2_Type10 XORPS;
 
 // SSE shuffle and unpack instructions
-extern Instruction_SSE_Shuffle SHUFPS;
+extern Instruction2_Type12 SHUFPS;
 extern Instruction2_Type10 UNPCKHPS;
 extern Instruction2_Type10 UNPCKLPS;
 

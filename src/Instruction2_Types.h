@@ -90,6 +90,12 @@ using Instruction2_Type14 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
+using Instruction2_Type15 = Instruction_2
+<
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m64, imm8>
+>;
+
 using Instruction_SSE_Conv1 = Instruction_2
 <
     Operands_reg_reg<xmm, mm, no_suffix>,
@@ -132,12 +138,6 @@ using Instruction_PSHUFW = Instruction_2
     Operands_reg_mem_imm<mm, m64, imm8>
 >;
 
-using Instruction_SSE2_Cmp2 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m64, imm8>
->;
-
 using Instruction_CVTPD2PI = Instruction_2
 <
     Operands_reg_reg<mm, xmm, no_suffix>,
@@ -154,12 +154,6 @@ using Instruction_MOVNTI = Instruction_2
 <
     Operands_mem_reg<m32, r32, no_suffix>,
     Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_SSE4_1_Type5 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
 using Instruction_SSE4_1_Type8 = Instruction_2

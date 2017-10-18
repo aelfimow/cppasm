@@ -1529,7 +1529,7 @@ extern Instruction2_Type10 XORPD;
 
 // SSE2 comparison instructions
 extern Instruction2_Type12 CMPPD;
-extern Instruction_SSE2_Cmp2 CMPSD_SSE2;
+extern Instruction2_Type15 CMPSD_SSE2;
 extern Instruction2_Type14 COMISD;
 extern Instruction2_Type14 UCOMISD;
 
@@ -1672,7 +1672,7 @@ extern Instruction2_Type10 PMAXSD;
 extern Instruction2_Type12 ROUNDPS;
 extern Instruction2_Type12 ROUNDPD;
 extern Instruction2_Type13 ROUNDSS;
-extern Instruction_SSE4_1_Type5 ROUNDSD;
+extern Instruction2_Type15 ROUNDSD;
 
 // SSE4.1: insertion and extractions from XMM registers
 extern Instruction_SSE4_1_Type6 EXTRACTPS;

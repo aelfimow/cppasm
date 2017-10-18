@@ -729,7 +729,7 @@ Instruction2_Type10 XORPD { asmout, "xorpd" };
 
 // SSE2 comparison instructions
 Instruction2_Type12 CMPPD { asmout, "cmppd" };
-Instruction_SSE2_Cmp2 CMPSD_SSE2 { asmout, "cmpsd" };
+Instruction2_Type15 CMPSD_SSE2 { asmout, "cmpsd" };
 Instruction2_Type14 COMISD { asmout, "comisd" };
 Instruction2_Type14 UCOMISD { asmout, "ucomisd" };
 
@@ -871,7 +871,7 @@ Instruction2_Type10 PMAXSD { asmout, "pmaxsd" };
 Instruction2_Type12 ROUNDPS { asmout, "roundps" };
 Instruction2_Type12 ROUNDPD { asmout, "roundpd" };
 Instruction2_Type13 ROUNDSS { asmout, "roundss" };
-Instruction_SSE4_1_Type5 ROUNDSD { asmout, "roundsd" };
+Instruction2_Type15 ROUNDSD { asmout, "roundsd" };
 
 // SSE4.1: insertion and extractions from XMM registers
 Instruction_SSE4_1_Type6 EXTRACTPS { asmout, "extractps" };

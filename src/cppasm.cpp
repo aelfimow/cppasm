@@ -644,7 +644,7 @@ Instruction2_Type11 MINSS { asmout, "minss" };
 
 // SSE comparison instructions
 Instruction2_Type12 CMPPS { asmout, "cmpps" };
-Instruction_SSE_Cmp2 CMPSS { asmout, "cmpss" };
+Instruction2_Type13 CMPSS { asmout, "cmpss" };
 Instruction2_Type11 COMISS { asmout, "comiss" };
 Instruction2_Type11 UCOMISS { asmout, "ucomiss" };
 
@@ -870,12 +870,12 @@ Instruction2_Type10 PMAXSD { asmout, "pmaxsd" };
 // SSE4.1: floating-point round instructions with selectable rounding mode
 Instruction2_Type12 ROUNDPS { asmout, "roundps" };
 Instruction2_Type12 ROUNDPD { asmout, "roundpd" };
-Instruction_SSE4_1_Type4 ROUNDSS { asmout, "roundss" };
+Instruction2_Type13 ROUNDSS { asmout, "roundss" };
 Instruction_SSE4_1_Type5 ROUNDSD { asmout, "roundsd" };
 
 // SSE4.1: insertion and extractions from XMM registers
 Instruction_SSE4_1_Type6 EXTRACTPS { asmout, "extractps" };
-Instruction_SSE4_1_Type7 INSERTPS { asmout, "insertps" };
+Instruction2_Type13 INSERTPS { asmout, "insertps" };
 Instruction_SSE4_1_Type8 PINSRB { asmout, "pinsrb" };
 Instruction_SSE4_1_Type9 PINSRD { asmout, "pinsrd" };
 Instruction_SSE4_1_Type10 PINSRQ { asmout, "pinsrq" };

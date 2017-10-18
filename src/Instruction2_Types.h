@@ -78,7 +78,7 @@ using Instruction2_Type12 = Instruction_2
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
-using Instruction_SSE_Cmp2 = Instruction_2
+using Instruction2_Type13 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m32, imm8>
@@ -186,22 +186,10 @@ using Instruction_SSE3_Arithm2 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_SSE4_1_Type4 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
->;
-
 using Instruction_SSE4_1_Type5 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m64, imm8>
->;
-
-using Instruction_SSE4_1_Type7 = Instruction_2
-<
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m32, imm8>
 >;
 
 using Instruction_SSE4_1_Type8 = Instruction_2

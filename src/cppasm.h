@@ -1444,7 +1444,7 @@ extern Instruction2_Type11 MINSS;
 
 // SSE comparison instructions
 extern Instruction2_Type12 CMPPS;
-extern Instruction_SSE_Cmp2 CMPSS;
+extern Instruction2_Type13 CMPSS;
 extern Instruction2_Type11 COMISS;
 extern Instruction2_Type11 UCOMISS;
 
@@ -1671,12 +1671,12 @@ extern Instruction2_Type10 PMAXSD;
 // SSE4.1: floating-point round instructions with selectable rounding mode
 extern Instruction2_Type12 ROUNDPS;
 extern Instruction2_Type12 ROUNDPD;
-extern Instruction_SSE4_1_Type4 ROUNDSS;
+extern Instruction2_Type13 ROUNDSS;
 extern Instruction_SSE4_1_Type5 ROUNDSD;
 
 // SSE4.1: insertion and extractions from XMM registers
 extern Instruction_SSE4_1_Type6 EXTRACTPS;
-extern Instruction_SSE4_1_Type7 INSERTPS;
+extern Instruction2_Type13 INSERTPS;
 extern Instruction_SSE4_1_Type8 PINSRB;
 extern Instruction_SSE4_1_Type9 PINSRD;
 extern Instruction_SSE4_1_Type10 PINSRQ;

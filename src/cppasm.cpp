@@ -707,19 +707,19 @@ Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
 
 // SSE2 packed arithmetic instructions
 Instruction2_Type10 ADDPD { asmout, "addpd" };
-Instruction_SSE2_Arithm2 ADDSD { asmout, "addsd" };
+Instruction2_Type14 ADDSD { asmout, "addsd" };
 Instruction2_Type10 SUBPD { asmout, "subpd" };
-Instruction_SSE2_Arithm2 SUBSD { asmout, "subsd" };
+Instruction2_Type14 SUBSD { asmout, "subsd" };
 Instruction2_Type10 MULPD { asmout, "mulpd" };
-Instruction_SSE2_Arithm2 MULSD { asmout, "mulsd" };
+Instruction2_Type14 MULSD { asmout, "mulsd" };
 Instruction2_Type10 DIVPD { asmout, "divpd" };
-Instruction_SSE2_Arithm2 DIVSD { asmout, "divsd" };
+Instruction2_Type14 DIVSD { asmout, "divsd" };
 Instruction2_Type10 SQRTPD { asmout, "sqrtpd" };
-Instruction_SSE2_Arithm2 SQRTSD { asmout, "sqrtsd" };
+Instruction2_Type14 SQRTSD { asmout, "sqrtsd" };
 Instruction2_Type10 MAXPD { asmout, "maxpd" };
-Instruction_SSE2_Arithm2 MAXSD { asmout, "maxsd" };
+Instruction2_Type14 MAXSD { asmout, "maxsd" };
 Instruction2_Type10 MINPD { asmout, "minpd" };
-Instruction_SSE2_Arithm2 MINSD { asmout, "minsd" };
+Instruction2_Type14 MINSD { asmout, "minsd" };
 
 // SSE2 logical instructions
 Instruction2_Type10 ANDPD { asmout, "andpd" };
@@ -730,8 +730,8 @@ Instruction2_Type10 XORPD { asmout, "xorpd" };
 // SSE2 comparison instructions
 Instruction2_Type12 CMPPD { asmout, "cmppd" };
 Instruction_SSE2_Cmp2 CMPSD_SSE2 { asmout, "cmpsd" };
-Instruction_SSE2_Cmp3 COMISD { asmout, "comisd" };
-Instruction_SSE2_Cmp3 UCOMISD { asmout, "ucomisd" };
+Instruction2_Type14 COMISD { asmout, "comisd" };
+Instruction2_Type14 UCOMISD { asmout, "ucomisd" };
 
 // SSE2 shuffle and unpack instructions
 Instruction2_Type12 SHUFPD { asmout, "shufpd" };
@@ -744,11 +744,11 @@ Instruction_CVTPD2PI CVTTPD2PI { asmout, "cvttpd2pi" };
 Instruction_CVTPI2PD CVTPI2PD { asmout, "cvtpi2pd" };
 Instruction2_Type10 CVTPD2DQ { asmout, "cvtpd2dq" };
 Instruction2_Type10 CVTTPD2DQ { asmout, "cvttpd2dq" };
-Instruction_CVTDQ2PD CVTDQ2PD { asmout, "cvtdq2pd" };
-Instruction_CVTPS2PD CVTPS2PD { asmout, "cvtps2pd" };
+Instruction2_Type14 CVTDQ2PD { asmout, "cvtdq2pd" };
+Instruction2_Type14 CVTPS2PD { asmout, "cvtps2pd" };
 Instruction2_Type10 CVTPD2PS { asmout, "cvtpd2ps" };
 Instruction2_Type11 CVTSS2SD { asmout, "cvtss2sd" };
-Instruction_CVTSD2SS CVTSD2SS { asmout, "cvtsd2ss" };
+Instruction2_Type14 CVTSD2SS { asmout, "cvtsd2ss" };
 Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
 Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
 Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
@@ -802,7 +802,7 @@ Instruction2_Type10 HSUBPD { asmout, "hsubpd" };
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
 Instruction2_Type10 MOVSHDUP { asmout, "movshdup" };
 Instruction2_Type10 MOVSLDUP { asmout, "movsldup" };
-Instruction_SSE3_Arithm2 MOVDDUP { asmout, "movddup" };
+Instruction2_Type14 MOVDDUP { asmout, "movddup" };
 
 // SSE3 agent synchronization instructions
 Instruction1_Type1 MONITOR { asmout, "monitor" };
@@ -884,15 +884,15 @@ Instruction_SSE4_1_Type12 PEXTRD { asmout, "pextrd" };
 Instruction_SSE4_1_Type13 PEXTRQ { asmout, "pextrq" };
 
 // SSE4.1: packed integer format convertions
-Instruction_SSE4_1_Type14 PMOVSXBW { asmout, "pmovsxbw" };
-Instruction_SSE4_1_Type14 PMOVSXWD { asmout, "pmovsxwd" };
-Instruction_SSE4_1_Type14 PMOVSXDQ { asmout, "pmovsxdq" };
+Instruction2_Type14 PMOVSXBW { asmout, "pmovsxbw" };
+Instruction2_Type14 PMOVSXWD { asmout, "pmovsxwd" };
+Instruction2_Type14 PMOVSXDQ { asmout, "pmovsxdq" };
 Instruction_SSE4_1_Type15 PMOVSXBD { asmout, "pmovsxbd" };
 Instruction_SSE4_1_Type15 PMOVSXWQ { asmout, "pmovsxwq" };
 Instruction_SSE4_1_Type16 PMOVSXBQ { asmout, "pmovsxbq" };
-Instruction_SSE4_1_Type14 PMOVZXBW { asmout, "pmovzxbw" };
-Instruction_SSE4_1_Type14 PMOVZXWD { asmout, "pmovzxwd" };
-Instruction_SSE4_1_Type14 PMOVZXDQ { asmout, "pmovzxdq" };
+Instruction2_Type14 PMOVZXBW { asmout, "pmovzxbw" };
+Instruction2_Type14 PMOVZXWD { asmout, "pmovzxwd" };
+Instruction2_Type14 PMOVZXDQ { asmout, "pmovzxdq" };
 Instruction_SSE4_1_Type15 PMOVZXBD { asmout, "pmovzxbd" };
 Instruction_SSE4_1_Type15 PMOVZXWQ { asmout, "pmovzxwq" };
 Instruction_SSE4_1_Type16 PMOVZXBQ { asmout, "pmovzxbq" };

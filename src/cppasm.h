@@ -1507,19 +1507,19 @@ extern Instruction_MOVSD MOVSD_SSE2;
 
 // SSE2 packed arithmetic instructions
 extern Instruction2_Type10 ADDPD;
-extern Instruction_SSE2_Arithm2 ADDSD;
+extern Instruction2_Type14 ADDSD;
 extern Instruction2_Type10 SUBPD;
-extern Instruction_SSE2_Arithm2 SUBSD;
+extern Instruction2_Type14 SUBSD;
 extern Instruction2_Type10 MULPD;
-extern Instruction_SSE2_Arithm2 MULSD;
+extern Instruction2_Type14 MULSD;
 extern Instruction2_Type10 DIVPD;
-extern Instruction_SSE2_Arithm2 DIVSD;
+extern Instruction2_Type14 DIVSD;
 extern Instruction2_Type10 SQRTPD;
-extern Instruction_SSE2_Arithm2 SQRTSD;
+extern Instruction2_Type14 SQRTSD;
 extern Instruction2_Type10 MAXPD;
-extern Instruction_SSE2_Arithm2 MAXSD;
+extern Instruction2_Type14 MAXSD;
 extern Instruction2_Type10 MINPD;
-extern Instruction_SSE2_Arithm2 MINSD;
+extern Instruction2_Type14 MINSD;
 
 // SSE2 logical instructions
 extern Instruction2_Type10 ANDPD;
@@ -1530,8 +1530,8 @@ extern Instruction2_Type10 XORPD;
 // SSE2 comparison instructions
 extern Instruction2_Type12 CMPPD;
 extern Instruction_SSE2_Cmp2 CMPSD_SSE2;
-extern Instruction_SSE2_Cmp3 COMISD;
-extern Instruction_SSE2_Cmp3 UCOMISD;
+extern Instruction2_Type14 COMISD;
+extern Instruction2_Type14 UCOMISD;
 
 // SSE2 shuffle and unpack instructions
 extern Instruction2_Type12 SHUFPD;
@@ -1544,11 +1544,11 @@ extern Instruction_CVTPD2PI CVTTPD2PI;
 extern Instruction_CVTPI2PD CVTPI2PD;
 extern Instruction2_Type10 CVTPD2DQ;
 extern Instruction2_Type10 CVTTPD2DQ;
-extern Instruction_CVTDQ2PD CVTDQ2PD;
-extern Instruction_CVTPS2PD CVTPS2PD;
+extern Instruction2_Type14 CVTDQ2PD;
+extern Instruction2_Type14 CVTPS2PD;
 extern Instruction2_Type10 CVTPD2PS;
 extern Instruction2_Type11 CVTSS2SD;
-extern Instruction_CVTSD2SS CVTSD2SS;
+extern Instruction2_Type14 CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
 extern Instruction_CVTSD2SI CVTTSD2SI;
 extern Instruction_CVTSI2SD CVTSI2SD;
@@ -1603,7 +1603,7 @@ extern Instruction2_Type10 HSUBPD;
 // SSE3 SIMD floating-point LOAD/MOVE/DUPLICATE instructions
 extern Instruction2_Type10 MOVSHDUP;
 extern Instruction2_Type10 MOVSLDUP;
-extern Instruction_SSE3_Arithm2 MOVDDUP;
+extern Instruction2_Type14 MOVDDUP;
 
 // SSE3 agent synchronization instructions
 extern Instruction1_Type1 MONITOR;
@@ -1685,15 +1685,15 @@ extern Instruction_SSE4_1_Type12 PEXTRD;
 extern Instruction_SSE4_1_Type13 PEXTRQ;
 
 // SSE4.1: packed integer format convertions
-extern Instruction_SSE4_1_Type14 PMOVSXBW;
-extern Instruction_SSE4_1_Type14 PMOVSXWD;
-extern Instruction_SSE4_1_Type14 PMOVSXDQ;
+extern Instruction2_Type14 PMOVSXBW;
+extern Instruction2_Type14 PMOVSXWD;
+extern Instruction2_Type14 PMOVSXDQ;
 extern Instruction_SSE4_1_Type15 PMOVSXBD;
 extern Instruction_SSE4_1_Type15 PMOVSXWQ;
 extern Instruction_SSE4_1_Type16 PMOVSXBQ;
-extern Instruction_SSE4_1_Type14 PMOVZXBW;
-extern Instruction_SSE4_1_Type14 PMOVZXWD;
-extern Instruction_SSE4_1_Type14 PMOVZXDQ;
+extern Instruction2_Type14 PMOVZXBW;
+extern Instruction2_Type14 PMOVZXWD;
+extern Instruction2_Type14 PMOVZXDQ;
 extern Instruction_SSE4_1_Type15 PMOVZXBD;
 extern Instruction_SSE4_1_Type15 PMOVZXWQ;
 extern Instruction_SSE4_1_Type16 PMOVZXBQ;

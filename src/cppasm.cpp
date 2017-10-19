@@ -660,7 +660,7 @@ Instruction2_Type10 UNPCKHPS { asmout, "unpckhps" };
 Instruction2_Type10 UNPCKLPS { asmout, "unpcklps" };
 
 // SSE convertion instructions
-Instruction_SSE_Conv1 CVTPI2PS { asmout, "cvtpi2ps" };
+Instruction2_Type17 CVTPI2PS { asmout, "cvtpi2ps" };
 Instruction_SSE_Conv2 CVTSI2SS { asmout, "cvtsi2ss" };
 Instruction_SSE_Conv3 CVTPS2PI { asmout, "cvtps2pi" };
 Instruction_SSE_Conv3 CVTTPS2PI { asmout, "cvttps2pi" };
@@ -741,7 +741,7 @@ Instruction2_Type10 UNPCKLPD { asmout, "unpcklpd" };
 // SSE2 convertion instructions
 Instruction_CVTPD2PI CVTPD2PI { asmout, "cvtpd2pi" };
 Instruction_CVTPD2PI CVTTPD2PI { asmout, "cvttpd2pi" };
-Instruction_CVTPI2PD CVTPI2PD { asmout, "cvtpi2pd" };
+Instruction2_Type17 CVTPI2PD { asmout, "cvtpi2pd" };
 Instruction2_Type10 CVTPD2DQ { asmout, "cvtpd2dq" };
 Instruction2_Type10 CVTTPD2DQ { asmout, "cvttpd2dq" };
 Instruction2_Type14 CVTDQ2PD { asmout, "cvtdq2pd" };

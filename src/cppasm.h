@@ -1460,7 +1460,7 @@ extern Instruction2_Type10 UNPCKHPS;
 extern Instruction2_Type10 UNPCKLPS;
 
 // SSE convertion instructions
-extern Instruction_SSE_Conv1 CVTPI2PS;
+extern Instruction2_Type17 CVTPI2PS;
 extern Instruction_SSE_Conv2 CVTSI2SS;
 extern Instruction_SSE_Conv3 CVTPS2PI;
 extern Instruction_SSE_Conv3 CVTTPS2PI;
@@ -1541,7 +1541,7 @@ extern Instruction2_Type10 UNPCKLPD;
 // SSE2 convertion instructions
 extern Instruction_CVTPD2PI CVTPD2PI;
 extern Instruction_CVTPD2PI CVTTPD2PI;
-extern Instruction_CVTPI2PD CVTPI2PD;
+extern Instruction2_Type17 CVTPI2PD;
 extern Instruction2_Type10 CVTPD2DQ;
 extern Instruction2_Type10 CVTTPD2DQ;
 extern Instruction2_Type14 CVTDQ2PD;

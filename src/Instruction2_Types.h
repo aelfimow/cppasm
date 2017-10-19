@@ -102,7 +102,7 @@ using Instruction2_Type16 = Instruction_2
     Operands_mem<m32, suffix_m32int>
 >;
 
-using Instruction_SSE_Conv1 = Instruction_2
+using Instruction2_Type17 = Instruction_2
 <
     Operands_reg_reg<xmm, mm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>
@@ -130,12 +130,6 @@ using Instruction_CVTPD2PI = Instruction_2
 <
     Operands_reg_reg<mm, xmm, no_suffix>,
     Operands_reg_mem<mm, m128, no_suffix>
->;
-
-using Instruction_CVTPI2PD = Instruction_2
-<
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
 using Instruction_MOVNTI = Instruction_2

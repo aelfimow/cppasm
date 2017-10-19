@@ -120,7 +120,7 @@ using Instruction2_Type19 = Instruction_2
     Operands_reg_mem<mm, m128, no_suffix>
 >;
 
-using Instruction_FPU_Arithm2 = Instruction_2
+using Instruction2_Type20 = Instruction_2
 <
     Operands_reg_reg<st, st, no_suffix>,
     Operands_none

@@ -739,8 +739,8 @@ Instruction2_Type10 UNPCKHPD { asmout, "unpckhpd" };
 Instruction2_Type10 UNPCKLPD { asmout, "unpcklpd" };
 
 // SSE2 convertion instructions
-Instruction_CVTPD2PI CVTPD2PI { asmout, "cvtpd2pi" };
-Instruction_CVTPD2PI CVTTPD2PI { asmout, "cvttpd2pi" };
+Instruction2_Type19 CVTPD2PI { asmout, "cvtpd2pi" };
+Instruction2_Type19 CVTTPD2PI { asmout, "cvttpd2pi" };
 Instruction2_Type17 CVTPI2PD { asmout, "cvtpi2pd" };
 Instruction2_Type10 CVTPD2DQ { asmout, "cvtpd2dq" };
 Instruction2_Type10 CVTTPD2DQ { asmout, "cvttpd2dq" };

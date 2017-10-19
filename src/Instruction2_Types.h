@@ -114,7 +114,7 @@ using Instruction2_Type18 = Instruction_2
     Operands_reg_mem<mm, m64, no_suffix>
 >;
 
-using Instruction_CVTPD2PI = Instruction_2
+using Instruction2_Type19 = Instruction_2
 <
     Operands_reg_reg<mm, xmm, no_suffix>,
     Operands_reg_mem<mm, m128, no_suffix>

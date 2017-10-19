@@ -1539,8 +1539,8 @@ extern Instruction2_Type10 UNPCKHPD;
 extern Instruction2_Type10 UNPCKLPD;
 
 // SSE2 convertion instructions
-extern Instruction_CVTPD2PI CVTPD2PI;
-extern Instruction_CVTPD2PI CVTTPD2PI;
+extern Instruction2_Type19 CVTPD2PI;
+extern Instruction2_Type19 CVTTPD2PI;
 extern Instruction2_Type17 CVTPI2PD;
 extern Instruction2_Type10 CVTPD2DQ;
 extern Instruction2_Type10 CVTTPD2DQ;

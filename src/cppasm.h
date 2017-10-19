@@ -1880,7 +1880,7 @@ extern Instruction_AVX_Type18 VMASKMOVPS;
 extern Instruction_AVX_Type18 VMASKMOVPD;
 extern Instruction_AVX_Type19 VPERMILPD;
 extern Instruction_AVX_Type19 VPERMILPS;
-extern Instruction_AVX_Type20 VPERM2F128;
+extern Instruction2_Type36 VPERM2F128;
 extern Instruction_AVX_Type1 VTESTPS;
 extern Instruction_AVX_Type1 VTESTPD;
 extern Instruction_AVX_Type21 VCVTSI2SS;

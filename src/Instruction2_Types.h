@@ -216,7 +216,7 @@ using Instruction2_Type35 = Instruction_2
     Operands_reg_reg_mem_imm<ymm, ymm, m128, imm8>
 >;
 
-using Instruction_AVX_Type20 = Instruction_2
+using Instruction2_Type36 = Instruction_2
 <
     Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
     Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>

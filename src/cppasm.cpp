@@ -1079,7 +1079,7 @@ Instruction_AVX_Type18 VMASKMOVPS { asmout, "vmaskmovps" };
 Instruction_AVX_Type18 VMASKMOVPD { asmout, "vmaskmovpd" };
 Instruction_AVX_Type19 VPERMILPD { asmout, "vpermilpd" };
 Instruction_AVX_Type19 VPERMILPS { asmout, "vpermilps" };
-Instruction_AVX_Type20 VPERM2F128 { asmout, "vperm2f128" };
+Instruction2_Type36 VPERM2F128 { asmout, "vperm2f128" };
 Instruction_AVX_Type1 VTESTPS { asmout, "vtestps" };
 Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
 Instruction_AVX_Type21 VCVTSI2SS { asmout, "vcvtsi2ss" };

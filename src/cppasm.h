@@ -1690,13 +1690,13 @@ extern Instruction2_Type14 PMOVSXWD;
 extern Instruction2_Type14 PMOVSXDQ;
 extern Instruction2_Type11 PMOVSXBD;
 extern Instruction2_Type11 PMOVSXWQ;
-extern Instruction_SSE4_1_Type16 PMOVSXBQ;
+extern Instruction2_Type27 PMOVSXBQ;
 extern Instruction2_Type14 PMOVZXBW;
 extern Instruction2_Type14 PMOVZXWD;
 extern Instruction2_Type14 PMOVZXDQ;
 extern Instruction2_Type11 PMOVZXBD;
 extern Instruction2_Type11 PMOVZXWQ;
-extern Instruction_SSE4_1_Type16 PMOVZXBQ;
+extern Instruction2_Type27 PMOVZXBQ;
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
 extern Instruction2_Type12 MPSADBW;

@@ -162,7 +162,7 @@ using Instruction2_Type26 = Instruction_2
     Operands_mem_reg_imm<m64, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Type16 = Instruction_2
+using Instruction2_Type27 = Instruction_2
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m16, no_suffix>

@@ -889,13 +889,13 @@ Instruction2_Type14 PMOVSXWD { asmout, "pmovsxwd" };
 Instruction2_Type14 PMOVSXDQ { asmout, "pmovsxdq" };
 Instruction2_Type11 PMOVSXBD { asmout, "pmovsxbd" };
 Instruction2_Type11 PMOVSXWQ { asmout, "pmovsxwq" };
-Instruction_SSE4_1_Type16 PMOVSXBQ { asmout, "pmovsxbq" };
+Instruction2_Type27 PMOVSXBQ { asmout, "pmovsxbq" };
 Instruction2_Type14 PMOVZXBW { asmout, "pmovzxbw" };
 Instruction2_Type14 PMOVZXWD { asmout, "pmovzxwd" };
 Instruction2_Type14 PMOVZXDQ { asmout, "pmovzxdq" };
 Instruction2_Type11 PMOVZXBD { asmout, "pmovzxbd" };
 Instruction2_Type11 PMOVZXWQ { asmout, "pmovzxwq" };
-Instruction_SSE4_1_Type16 PMOVZXBQ { asmout, "pmovzxbq" };
+Instruction2_Type27 PMOVZXBQ { asmout, "pmovzxbq" };
 
 // SSE4.1: improved sums of absolute differences for 4-byte blocks
 Instruction2_Type12 MPSADBW { asmout, "mpsadbw" };

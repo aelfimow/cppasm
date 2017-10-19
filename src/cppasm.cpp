@@ -1070,7 +1070,7 @@ Instruction_AVX_Type2 VANDNPS { asmout, "vandnps" };
 Instruction_AVX_Type2 VANDNPD { asmout, "vandnpd" };
 Instruction1_Type1 VZEROALL { asmout, "vzeroall" };
 Instruction1_Type1 VZEROUPPER { asmout, "vzeroupper" };
-Instruction_AVX_Type13 VBROADCASTSS { asmout, "vbroadcastss" };
+Instruction2_Type33 VBROADCASTSS { asmout, "vbroadcastss" };
 Instruction1_Type25 VBROADCASTSD { asmout, "vbroadcastsd" };
 Instruction1_Type26 VBROADCASTF128 { asmout, "vbroadcastf128" };
 Instruction_AVX_Type16 VEXTRACTF128 { asmout, "vextractf128" };

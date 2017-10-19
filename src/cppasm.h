@@ -1871,7 +1871,7 @@ extern Instruction_AVX_Type2 VANDNPS;
 extern Instruction_AVX_Type2 VANDNPD;
 extern Instruction1_Type1 VZEROALL;
 extern Instruction1_Type1 VZEROUPPER;
-extern Instruction_AVX_Type13 VBROADCASTSS;
+extern Instruction2_Type33 VBROADCASTSS;
 extern Instruction1_Type25 VBROADCASTSD;
 extern Instruction1_Type26 VBROADCASTF128;
 extern Instruction_AVX_Type16 VEXTRACTF128;

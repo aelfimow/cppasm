@@ -114,6 +114,12 @@ using Instruction_SSE_Conv3 = Instruction_2
     Operands_reg_mem<mm, m64, no_suffix>
 >;
 
+using Instruction_CVTPD2PI = Instruction_2
+<
+    Operands_reg_reg<mm, xmm, no_suffix>,
+    Operands_reg_mem<mm, m128, no_suffix>
+>;
+
 using Instruction_FPU_Arithm2 = Instruction_2
 <
     Operands_reg_reg<st, st, no_suffix>,
@@ -124,12 +130,6 @@ using Instruction_PSHUFW = Instruction_2
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
     Operands_reg_mem_imm<mm, m64, imm8>
->;
-
-using Instruction_CVTPD2PI = Instruction_2
-<
-    Operands_reg_reg<mm, xmm, no_suffix>,
-    Operands_reg_mem<mm, m128, no_suffix>
 >;
 
 using Instruction_MOVNTI = Instruction_2
@@ -160,12 +160,6 @@ using Instruction_SSE4_1_Type13 = Instruction_2
 <
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m64, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type15 = Instruction_2
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>
 >;
 
 using Instruction_SSE4_1_Type16 = Instruction_2

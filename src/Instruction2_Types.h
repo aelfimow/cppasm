@@ -108,7 +108,7 @@ using Instruction2_Type17 = Instruction_2
     Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
-using Instruction_SSE_Conv3 = Instruction_2
+using Instruction2_Type18 = Instruction_2
 <
     Operands_reg_reg<mm, xmm, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>

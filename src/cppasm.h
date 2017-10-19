@@ -1462,8 +1462,8 @@ extern Instruction2_Type10 UNPCKLPS;
 // SSE convertion instructions
 extern Instruction2_Type17 CVTPI2PS;
 extern Instruction_SSE_Conv2 CVTSI2SS;
-extern Instruction_SSE_Conv3 CVTPS2PI;
-extern Instruction_SSE_Conv3 CVTTPS2PI;
+extern Instruction2_Type18 CVTPS2PI;
+extern Instruction2_Type18 CVTTPS2PI;
 extern Instruction_SSE_Conv4 CVTSS2SI;
 extern Instruction_SSE_Conv4 CVTTSS2SI;
 

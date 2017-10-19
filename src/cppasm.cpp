@@ -781,7 +781,7 @@ Instruction1_Type1 PAUSE { asmout, "pause" };
 Instruction1_Type3 MASKMOVDQU { asmout, "maskmovdqu" };
 Instruction1_Type19 MOVNTPD { asmout, "movntpd" };
 Instruction1_Type19 MOVNTDQ { asmout, "movntdq" };
-Instruction_MOVNTI MOVNTI { asmout, "movnti" };
+Instruction2_Type22 MOVNTI { asmout, "movnti" };
 
 // SSE3 x87-FP integer convertion instruction
 Instruction_FISTTP FISTTP { asmout, "fisttp" };

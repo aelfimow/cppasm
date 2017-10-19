@@ -132,7 +132,7 @@ using Instruction2_Type21 = Instruction_2
     Operands_reg_mem_imm<mm, m64, imm8>
 >;
 
-using Instruction_MOVNTI = Instruction_2
+using Instruction2_Type22 = Instruction_2
 <
     Operands_mem_reg<m32, r32, no_suffix>,
     Operands_mem_reg<m64, r64, no_suffix>

@@ -1582,7 +1582,7 @@ extern Instruction1_Type1 PAUSE;
 extern Instruction1_Type3 MASKMOVDQU;
 extern Instruction1_Type19 MOVNTPD;
 extern Instruction1_Type19 MOVNTDQ;
-extern Instruction_MOVNTI MOVNTI;
+extern Instruction2_Type22 MOVNTI;
 
 // SSE3 x87-FP integer convertion instruction
 extern Instruction_FISTTP FISTTP;

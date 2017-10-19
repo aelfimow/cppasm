@@ -683,7 +683,7 @@ Instruction_PMxxSW PMINSW { asmout, "pminsw" };
 Instruction_PMOVMSKB PMOVMSKB { asmout, "pmovmskb" };
 Instruction_PMULHUW PMULHUW { asmout, "pmulhuw" };
 Instruction_PSADBW PSADBW { asmout, "psadbw" };
-Instruction_PSHUFW PSHUFW { asmout, "pshufw" };
+Instruction2_Type21 PSHUFW { asmout, "pshufw" };
 
 // SSE cacheability control, prefetch, and instruction ordering instructions
 Instruction1_Type15 MASKMOVQ { asmout, "maskmovq" };

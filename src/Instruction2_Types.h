@@ -126,7 +126,7 @@ using Instruction2_Type20 = Instruction_2
     Operands_none
 >;
 
-using Instruction_PSHUFW = Instruction_2
+using Instruction2_Type21 = Instruction_2
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
     Operands_reg_mem_imm<mm, m64, imm8>

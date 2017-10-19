@@ -156,7 +156,7 @@ using Instruction2_Type25 = Instruction_2
     Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
-using Instruction_SSE4_1_Type13 = Instruction_2
+using Instruction2_Type26 = Instruction_2
 <
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m64, xmm, imm8>

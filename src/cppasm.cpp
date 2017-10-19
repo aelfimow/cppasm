@@ -881,7 +881,7 @@ Instruction2_Type24 PINSRD { asmout, "pinsrd" };
 Instruction2_Type25 PINSRQ { asmout, "pinsrq" };
 Instruction_SSE4_1_Type11 PEXTRB { asmout, "pextrb" };
 Instruction_SSE4_1_Type12 PEXTRD { asmout, "pextrd" };
-Instruction_SSE4_1_Type13 PEXTRQ { asmout, "pextrq" };
+Instruction2_Type26 PEXTRQ { asmout, "pextrq" };
 
 // SSE4.1: packed integer format convertions
 Instruction2_Type14 PMOVSXBW { asmout, "pmovsxbw" };

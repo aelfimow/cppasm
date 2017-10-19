@@ -1682,7 +1682,7 @@ extern Instruction2_Type24 PINSRD;
 extern Instruction2_Type25 PINSRQ;
 extern Instruction_SSE4_1_Type11 PEXTRB;
 extern Instruction_SSE4_1_Type12 PEXTRD;
-extern Instruction_SSE4_1_Type13 PEXTRQ;
+extern Instruction2_Type26 PEXTRQ;
 
 // SSE4.1: packed integer format convertions
 extern Instruction2_Type14 PMOVSXBW;

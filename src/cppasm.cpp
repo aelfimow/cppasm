@@ -876,7 +876,7 @@ Instruction2_Type15 ROUNDSD { asmout, "roundsd" };
 // SSE4.1: insertion and extractions from XMM registers
 Instruction_SSE4_1_Type6 EXTRACTPS { asmout, "extractps" };
 Instruction2_Type13 INSERTPS { asmout, "insertps" };
-Instruction_SSE4_1_Type8 PINSRB { asmout, "pinsrb" };
+Instruction2_Type23 PINSRB { asmout, "pinsrb" };
 Instruction_SSE4_1_Type9 PINSRD { asmout, "pinsrd" };
 Instruction_SSE4_1_Type10 PINSRQ { asmout, "pinsrq" };
 Instruction_SSE4_1_Type11 PEXTRB { asmout, "pextrb" };

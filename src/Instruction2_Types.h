@@ -138,7 +138,7 @@ using Instruction2_Type22 = Instruction_2
     Operands_mem_reg<m64, r64, no_suffix>
 >;
 
-using Instruction_SSE4_1_Type8 = Instruction_2
+using Instruction2_Type23 = Instruction_2
 <
     Operands_reg_reg_imm<xmm, r32, imm8>,
     Operands_reg_mem_imm<xmm, m8, imm8>

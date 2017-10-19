@@ -1677,7 +1677,7 @@ extern Instruction2_Type15 ROUNDSD;
 // SSE4.1: insertion and extractions from XMM registers
 extern Instruction_SSE4_1_Type6 EXTRACTPS;
 extern Instruction2_Type13 INSERTPS;
-extern Instruction_SSE4_1_Type8 PINSRB;
+extern Instruction2_Type23 PINSRB;
 extern Instruction_SSE4_1_Type9 PINSRD;
 extern Instruction_SSE4_1_Type10 PINSRQ;
 extern Instruction_SSE4_1_Type11 PEXTRB;

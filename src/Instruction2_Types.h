@@ -168,7 +168,7 @@ using Instruction2_Type27 = Instruction_2
     Operands_reg_mem<xmm, m16, no_suffix>
 >;
 
-using Instruction_FMA_Type2 = Instruction_2
+using Instruction2_Type28 = Instruction_2
 <
     Operands_reg_reg_reg<xmm, xmm, xmm>,
     Operands_reg_reg_mem<xmm, xmm, m64>

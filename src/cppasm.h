@@ -1831,7 +1831,7 @@ extern Instruction_AVX_Type5 VCMPPD;
 extern Instruction_AVX_Type2 VADDSUBPS;
 extern Instruction_AVX_Type2 VADDSUBPD;
 extern Instruction_AVX_Type5 VDPPS;
-extern Instruction_AVX_Type6 VDPPD;
+extern Instruction2_Type30 VDPPD;
 extern Instruction_AVX_Type7 VROUNDPS;
 extern Instruction_AVX_Type7 VROUNDPD;
 extern Instruction_AVX_Type8 VMOVAPS;

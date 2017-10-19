@@ -180,7 +180,7 @@ using Instruction2_Type29 = Instruction_2
     Operands_reg_reg_mem<xmm, xmm, m32>
 >;
 
-using Instruction_AVX_Type6 = Instruction_2
+using Instruction2_Type30 = Instruction_2
 <
     Operands_reg_reg_reg_imm<xmm, xmm, xmm, imm8>,
     Operands_reg_reg_mem_imm<xmm, xmm, m128, imm8>

@@ -1030,7 +1030,7 @@ Instruction_AVX_Type5 VCMPPD { asmout, "vcmppd" };
 Instruction_AVX_Type2 VADDSUBPS { asmout, "vaddsubps" };
 Instruction_AVX_Type2 VADDSUBPD { asmout, "vaddsubpd" };
 Instruction_AVX_Type5 VDPPS { asmout, "vdpps" };
-Instruction_AVX_Type6 VDPPD { asmout, "vdppd" };
+Instruction2_Type30 VDPPD { asmout, "vdppd" };
 Instruction_AVX_Type7 VROUNDPS { asmout, "vroundps" };
 Instruction_AVX_Type7 VROUNDPD { asmout, "vroundpd" };
 Instruction_AVX_Type8 VMOVAPS { asmout, "vmovaps" };

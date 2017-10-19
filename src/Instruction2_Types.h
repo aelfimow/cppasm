@@ -96,6 +96,12 @@ using Instruction2_Type15 = Instruction_2
     Operands_reg_mem_imm<xmm, m64, imm8>
 >;
 
+using Instruction2_Type16 = Instruction_2
+<
+    Operands_mem<m16, suffix_m16int>,
+    Operands_mem<m32, suffix_m32int>
+>;
+
 using Instruction_SSE_Conv1 = Instruction_2
 <
     Operands_reg_reg<xmm, mm, no_suffix>,
@@ -108,28 +114,10 @@ using Instruction_SSE_Conv3 = Instruction_2
     Operands_reg_mem<mm, m64, no_suffix>
 >;
 
-using Instruction_FIST = Instruction_2
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>
->;
-
 using Instruction_FPU_Arithm2 = Instruction_2
 <
     Operands_reg_reg<st, st, no_suffix>,
     Operands_none
->;
-
-using Instruction_FPU_Arithm3 = Instruction_2
-<
-    Operands_mem<m32, suffix_m32int>,
-    Operands_mem<m16, suffix_m16int>
->;
-
-using Instruction_FICOM = Instruction_2
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>
 >;
 
 using Instruction_PSHUFW = Instruction_2

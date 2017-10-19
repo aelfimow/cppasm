@@ -1875,7 +1875,7 @@ extern Instruction2_Type33 VBROADCASTSS;
 extern Instruction1_Type25 VBROADCASTSD;
 extern Instruction1_Type26 VBROADCASTF128;
 extern Instruction2_Type34 VEXTRACTF128;
-extern Instruction_AVX_Type17 VINSERTF128;
+extern Instruction2_Type35 VINSERTF128;
 extern Instruction_AVX_Type18 VMASKMOVPS;
 extern Instruction_AVX_Type18 VMASKMOVPD;
 extern Instruction_AVX_Type19 VPERMILPD;

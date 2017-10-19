@@ -210,7 +210,7 @@ using Instruction2_Type34 = Instruction_2
     Operands_mem_reg_imm<m128, ymm, imm8>
 >;
 
-using Instruction_AVX_Type17 = Instruction_2
+using Instruction2_Type35 = Instruction_2
 <
     Operands_reg_reg_reg_imm<ymm, ymm, xmm, imm8>,
     Operands_reg_reg_mem_imm<ymm, ymm, m128, imm8>

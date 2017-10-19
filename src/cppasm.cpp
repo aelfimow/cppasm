@@ -1074,7 +1074,7 @@ Instruction2_Type33 VBROADCASTSS { asmout, "vbroadcastss" };
 Instruction1_Type25 VBROADCASTSD { asmout, "vbroadcastsd" };
 Instruction1_Type26 VBROADCASTF128 { asmout, "vbroadcastf128" };
 Instruction2_Type34 VEXTRACTF128 { asmout, "vextractf128" };
-Instruction_AVX_Type17 VINSERTF128 { asmout, "vinsertf128" };
+Instruction2_Type35 VINSERTF128 { asmout, "vinsertf128" };
 Instruction_AVX_Type18 VMASKMOVPS { asmout, "vmaskmovps" };
 Instruction_AVX_Type18 VMASKMOVPD { asmout, "vmaskmovpd" };
 Instruction_AVX_Type19 VPERMILPD { asmout, "vpermilpd" };

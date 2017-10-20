@@ -622,7 +622,7 @@ Instruction2_Type9 MOVLPS { asmout, "movlps" };
 Instruction1_Type3 MOVLHPS { asmout, "movlhps" };
 Instruction1_Type3 MOVHLPS { asmout, "movhlps" };
 Instruction2_Type4 MOVMSKPS { asmout, "movmskps" };
-Instruction_SSE_MOV5 MOVSS { asmout, "movss" };
+Instruction3_Type3 MOVSS { asmout, "movss" };
 
 // SSE packed arithmetic instructions
 Instruction2_Type10 ADDPS { asmout, "addps" };

@@ -20,7 +20,7 @@ using Instruction3_Type2 = Instruction_3
     Operands_reg<r64>
 >;
 
-using Instruction_SSE_MOV5 = Instruction_3
+using Instruction3_Type3 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>,

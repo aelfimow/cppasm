@@ -1311,7 +1311,7 @@ extern Instruction2_Type9 MOVLPS;
 extern Instruction1_Type3 MOVLHPS;
 extern Instruction1_Type3 MOVHLPS;
 extern Instruction2_Type4 MOVMSKPS;
-extern Instruction_SSE_MOV5 MOVSS;
+extern Instruction3_Type3 MOVSS;
 
 // SSE packed arithmetic instructions
 extern Instruction2_Type10 ADDPS;

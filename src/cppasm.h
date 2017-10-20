@@ -1115,7 +1115,7 @@ extern Instruction3_Type1 LGS;
 extern Instruction3_Type1 LSS;
 
 // Miscelleneous instructions
-extern Instruction_LEA LEA;
+extern Instruction3_Type1 LEA;
 extern Instruction_NOP NOP;
 extern Instruction1_Type1 UD;
 extern Instruction1_Type1 UD1;

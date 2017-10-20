@@ -426,7 +426,7 @@ Instruction3_Type1 LGS { asmout, "lgs" };
 Instruction3_Type1 LSS { asmout, "lss" };
 
 // Miscelleneous instructions
-Instruction_LEA LEA { asmout, "lea" };
+Instruction3_Type1 LEA { asmout, "lea" };
 Instruction_NOP NOP { asmout, "nop" };
 Instruction1_Type1 UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction1_Type1 UD1 { asmout, "ud1" };

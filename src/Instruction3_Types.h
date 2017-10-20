@@ -13,13 +13,6 @@ using Instruction3_Type1 = Instruction_3
     Operands_reg_mem<r64, m, no_suffix>
 >;
 
-using Instruction_LEA = Instruction_3
-<
-    Operands_reg_mem<r16, m, no_suffix>,
-    Operands_reg_mem<r32, m, no_suffix>,
-    Operands_reg_mem<r64, m, no_suffix>
->;
-
 using Instruction_RDRAND = Instruction_3
 <
     Operands_reg<r16>,

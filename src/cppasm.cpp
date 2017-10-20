@@ -444,8 +444,8 @@ Instruction1_Type2 XRSTOR { asmout, "xrstor" };
 Instruction1_Type1 XGETBV { asmout, "xgetbv" };
 
 // Random number generator instructions
-Instruction_RDRAND RDRAND { asmout, "rdrand" };
-Instruction_RDRAND RDSEED { asmout, "rdseed" };
+Instruction3_Type2 RDRAND { asmout, "rdrand" };
+Instruction3_Type2 RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
 Instruction_FLD FLD { asmout, "fld" };

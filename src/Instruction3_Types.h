@@ -13,7 +13,7 @@ using Instruction3_Type1 = Instruction_3
     Operands_reg_mem<r64, m, no_suffix>
 >;
 
-using Instruction_RDRAND = Instruction_3
+using Instruction3_Type2 = Instruction_3
 <
     Operands_reg<r16>,
     Operands_reg<r32>,

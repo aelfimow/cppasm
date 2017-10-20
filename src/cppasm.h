@@ -1133,8 +1133,8 @@ extern Instruction1_Type2 XRSTOR;
 extern Instruction1_Type1 XGETBV;
 
 // Random number generator instructions
-extern Instruction_RDRAND RDRAND;
-extern Instruction_RDRAND RDSEED;
+extern Instruction3_Type2 RDRAND;
+extern Instruction3_Type2 RDSEED;
 
 // x87 FPU data transfer instructions
 extern Instruction_FLD FLD;

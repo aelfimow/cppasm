@@ -48,7 +48,7 @@ using Instruction3_Type6 = Instruction_3
     Operands_mem<m64, suffix_m64int>
 >;
 
-using Instruction_FST = Instruction_3
+using Instruction3_Type7 = Instruction_3
 <
     Operands_mem<m32fp, suffix_m32fp>,
     Operands_mem<m64fp, suffix_m64fp>,

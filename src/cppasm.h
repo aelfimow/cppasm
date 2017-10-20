@@ -1141,7 +1141,7 @@ extern Instruction_FLD FLD;
 extern Instruction3_Type6 FILD;
 extern Instruction2_Type16 FIST;
 extern Instruction3_Type6 FISTP;
-extern Instruction_FST FST;
+extern Instruction3_Type7 FST;
 extern Instruction_FSTP FSTP;
 extern Instruction1_Type12 FBLD;
 extern Instruction1_Type12 FBSTP;

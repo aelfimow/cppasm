@@ -452,7 +452,7 @@ Instruction_FLD FLD { asmout, "fld" };
 Instruction3_Type6 FILD { asmout, "fild" };
 Instruction2_Type16 FIST { asmout, "fist" };
 Instruction3_Type6 FISTP { asmout, "fistp" };
-Instruction_FST FST { asmout, "fst" };
+Instruction3_Type7 FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction1_Type12 FBLD { asmout, "fbld" };
 Instruction1_Type12 FBSTP { asmout, "fbstp" };

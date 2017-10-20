@@ -615,8 +615,8 @@ Instruction_MMX_Shift PSRAD { asmout, "psrad" };
 Instruction1_Type1 EMMS { asmout, "emms" };
 
 // SSE data transfer instructions
-Instruction_SSE_MOV1 MOVAPS { asmout, "movaps" };
-Instruction_SSE_MOV1 MOVUPS { asmout, "movups" };
+Instruction3_Type5 MOVAPS { asmout, "movaps" };
+Instruction3_Type5 MOVUPS { asmout, "movups" };
 Instruction2_Type9 MOVHPS { asmout, "movhps" };
 Instruction2_Type9 MOVLPS { asmout, "movlps" };
 Instruction1_Type3 MOVLHPS { asmout, "movlhps" };
@@ -698,8 +698,8 @@ Instruction1_Type2 PREFETCHWT1 { asmout, "prefetchwt1" };
 Instruction1_Type1 SFENCE { asmout, "sfence" };
 
 // SSE2 data movement instructions
-Instruction_MOVxPD1 MOVAPD { asmout, "movapd" };
-Instruction_MOVxPD1 MOVUPD { asmout, "movupd" };
+Instruction3_Type5 MOVAPD { asmout, "movapd" };
+Instruction3_Type5 MOVUPD { asmout, "movupd" };
 Instruction1_Type18 MOVHPD { asmout, "movhpd" };
 Instruction1_Type18 MOVLPD { asmout, "movlpd" };
 Instruction2_Type4 MOVMSKPD { asmout, "movmskpd" };
@@ -759,8 +759,8 @@ Instruction2_Type10 CVTPS2DQ { asmout, "cvtps2dq" };
 Instruction2_Type10 CVTTPS2DQ { asmout, "cvttps2dq" };
 
 // SSE2 128-bit SIMD integer instructions
-Instruction_MOVDQx MOVDQA { asmout, "movdqa" };
-Instruction_MOVDQx MOVDQU { asmout, "movdqu" };
+Instruction3_Type5 MOVDQA { asmout, "movdqa" };
+Instruction3_Type5 MOVDQU { asmout, "movdqu" };
 Instruction1_Type20 MOVQ2DQ { asmout, "movq2dq" };
 Instruction1_Type21 MOVDQ2Q { asmout, "movdq2q" };
 Instruction_PMULUDQ PMULUDQ { asmout, "pmuludq" };

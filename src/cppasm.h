@@ -1304,8 +1304,8 @@ extern Instruction_MMX_Shift PSRAD;
 extern Instruction1_Type1 EMMS;
 
 // SSE data transfer instructions
-extern Instruction_SSE_MOV1 MOVAPS;
-extern Instruction_SSE_MOV1 MOVUPS;
+extern Instruction3_Type5 MOVAPS;
+extern Instruction3_Type5 MOVUPS;
 extern Instruction2_Type9 MOVHPS;
 extern Instruction2_Type9 MOVLPS;
 extern Instruction1_Type3 MOVLHPS;
@@ -1387,8 +1387,8 @@ extern Instruction1_Type2 PREFETCHWT1;
 extern Instruction1_Type1 SFENCE;
 
 // SSE2 data movement instructions
-extern Instruction_MOVxPD1 MOVAPD;
-extern Instruction_MOVxPD1 MOVUPD;
+extern Instruction3_Type5 MOVAPD;
+extern Instruction3_Type5 MOVUPD;
 extern Instruction1_Type18 MOVHPD;
 extern Instruction1_Type18 MOVLPD;
 extern Instruction2_Type4 MOVMSKPD;
@@ -1448,8 +1448,8 @@ extern Instruction2_Type10 CVTPS2DQ;
 extern Instruction2_Type10 CVTTPS2DQ;
 
 // SSE2 128-bit SIMD integer instructions
-extern Instruction_MOVDQx MOVDQA;
-extern Instruction_MOVDQx MOVDQU;
+extern Instruction3_Type5 MOVDQA;
+extern Instruction3_Type5 MOVDQU;
 extern Instruction1_Type20 MOVQ2DQ;
 extern Instruction1_Type21 MOVDQ2Q;
 extern Instruction_PMULUDQ PMULUDQ;

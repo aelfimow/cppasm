@@ -34,21 +34,7 @@ using Instruction3_Type4 = Instruction_3
     Operands_mem_reg<m64, xmm, no_suffix>
 >;
 
-using Instruction_SSE_MOV1 = Instruction_3
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_MOVxPD1 = Instruction_3
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_MOVDQx = Instruction_3
+using Instruction3_Type5 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,

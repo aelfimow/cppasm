@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION3_TYPES_H
 
-using Instruction_LoadFarPointer = Instruction_3
+using Instruction3_Type1 = Instruction_3
 <
     Operands_reg_mem<r16, m, no_suffix>,
     Operands_reg_mem<r32, m, no_suffix>,

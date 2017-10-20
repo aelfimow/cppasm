@@ -1108,11 +1108,11 @@ extern Instruction1_Type1 STI;
 extern Instruction1_Type1 STD;
 
 // Segment register instructions
-extern Instruction_LoadFarPointer LDS;
-extern Instruction_LoadFarPointer LES;
-extern Instruction_LoadFarPointer LFS;
-extern Instruction_LoadFarPointer LGS;
-extern Instruction_LoadFarPointer LSS;
+extern Instruction3_Type1 LDS;
+extern Instruction3_Type1 LES;
+extern Instruction3_Type1 LFS;
+extern Instruction3_Type1 LGS;
+extern Instruction3_Type1 LSS;
 
 // Miscelleneous instructions
 extern Instruction_LEA LEA;

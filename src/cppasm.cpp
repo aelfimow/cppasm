@@ -419,11 +419,11 @@ Instruction1_Type1 STI { asmout, "sti" };
 Instruction1_Type1 STD { asmout, "std" };
 
 // Segment register instructions
-Instruction_LoadFarPointer LDS { asmout, "lds" };
-Instruction_LoadFarPointer LES { asmout, "les" };
-Instruction_LoadFarPointer LFS { asmout, "lfs" };
-Instruction_LoadFarPointer LGS { asmout, "lgs" };
-Instruction_LoadFarPointer LSS { asmout, "lss" };
+Instruction3_Type1 LDS { asmout, "lds" };
+Instruction3_Type1 LES { asmout, "les" };
+Instruction3_Type1 LFS { asmout, "lfs" };
+Instruction3_Type1 LGS { asmout, "lgs" };
+Instruction3_Type1 LSS { asmout, "lss" };
 
 // Miscelleneous instructions
 Instruction_LEA LEA { asmout, "lea" };

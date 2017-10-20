@@ -1138,9 +1138,9 @@ extern Instruction3_Type2 RDSEED;
 
 // x87 FPU data transfer instructions
 extern Instruction_FLD FLD;
-extern Instruction_FILD FILD;
+extern Instruction3_Type6 FILD;
 extern Instruction2_Type16 FIST;
-extern Instruction_FISTP FISTP;
+extern Instruction3_Type6 FISTP;
 extern Instruction_FST FST;
 extern Instruction_FSTP FSTP;
 extern Instruction1_Type12 FBLD;
@@ -1474,7 +1474,7 @@ extern Instruction1_Type19 MOVNTDQ;
 extern Instruction2_Type22 MOVNTI;
 
 // SSE3 x87-FP integer convertion instruction
-extern Instruction_FISTTP FISTTP;
+extern Instruction3_Type6 FISTTP;
 
 // SSE3 specialized 128-bit unaligned data load instruction
 extern Instruction1_Type23 LDDQU;

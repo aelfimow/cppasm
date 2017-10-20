@@ -449,9 +449,9 @@ Instruction3_Type2 RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
 Instruction_FLD FLD { asmout, "fld" };
-Instruction_FILD FILD { asmout, "fild" };
+Instruction3_Type6 FILD { asmout, "fild" };
 Instruction2_Type16 FIST { asmout, "fist" };
-Instruction_FISTP FISTP { asmout, "fistp" };
+Instruction3_Type6 FISTP { asmout, "fistp" };
 Instruction_FST FST { asmout, "fst" };
 Instruction_FSTP FSTP { asmout, "fstp" };
 Instruction1_Type12 FBLD { asmout, "fbld" };
@@ -784,7 +784,7 @@ Instruction1_Type19 MOVNTDQ { asmout, "movntdq" };
 Instruction2_Type22 MOVNTI { asmout, "movnti" };
 
 // SSE3 x87-FP integer convertion instruction
-Instruction_FISTTP FISTTP { asmout, "fisttp" };
+Instruction3_Type6 FISTTP { asmout, "fisttp" };
 
 // SSE3 specialized 128-bit unaligned data load instruction
 Instruction1_Type23 LDDQU { asmout, "lddqu" };

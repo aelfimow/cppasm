@@ -41,21 +41,7 @@ using Instruction3_Type5 = Instruction_3
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_FILD = Instruction_3
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>,
-    Operands_mem<m64, suffix_m64int>
->;
-
-using Instruction_FISTP = Instruction_3
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>,
-    Operands_mem<m64, suffix_m64int>
->;
-
-using Instruction_FISTTP = Instruction_3
+using Instruction3_Type6 = Instruction_3
 <
     Operands_mem<m16, suffix_m16int>,
     Operands_mem<m32, suffix_m32int>,

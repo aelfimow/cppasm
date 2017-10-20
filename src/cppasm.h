@@ -1156,22 +1156,22 @@ extern Instruction1_Type5 FCMOVNBE;
 extern Instruction1_Type5 FCMOVNU;
 
 // x87 FPU basic arithmetic instructions
-extern Instruction_FPU_Arithm1 FADD;
+extern Instruction3_Type8 FADD;
 extern Instruction2_Type20 FADDP;
 extern Instruction2_Type16 FIADD;
-extern Instruction_FPU_Arithm1 FSUB;
+extern Instruction3_Type8 FSUB;
 extern Instruction2_Type20 FSUBP;
 extern Instruction2_Type16 FISUB;
-extern Instruction_FPU_Arithm1 FSUBR;
+extern Instruction3_Type8 FSUBR;
 extern Instruction2_Type20 FSUBRP;
 extern Instruction2_Type16 FISUBR;
-extern Instruction_FPU_Arithm1 FMUL;
+extern Instruction3_Type8 FMUL;
 extern Instruction2_Type20 FMULP;
 extern Instruction2_Type16 FIMUL;
-extern Instruction_FPU_Arithm1 FDIV;
+extern Instruction3_Type8 FDIV;
 extern Instruction2_Type20 FDIVP;
 extern Instruction2_Type16 FIDIV;
-extern Instruction_FPU_Arithm1 FDIVR;
+extern Instruction3_Type8 FDIVR;
 extern Instruction2_Type20 FDIVRP;
 extern Instruction2_Type16 FIDIVR;
 extern Instruction1_Type1 FPREM;

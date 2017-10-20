@@ -27,7 +27,7 @@ using Instruction3_Type3 = Instruction_3
     Operands_mem_reg<m32, xmm, no_suffix>
 >;
 
-using Instruction_MOVSD = Instruction_3
+using Instruction3_Type4 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>,

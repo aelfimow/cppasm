@@ -703,7 +703,7 @@ Instruction_MOVxPD1 MOVUPD { asmout, "movupd" };
 Instruction1_Type18 MOVHPD { asmout, "movhpd" };
 Instruction1_Type18 MOVLPD { asmout, "movlpd" };
 Instruction2_Type4 MOVMSKPD { asmout, "movmskpd" };
-Instruction_MOVSD MOVSD_SSE2 { asmout, "movsd" };
+Instruction3_Type4 MOVSD_SSE2 { asmout, "movsd" };
 
 // SSE2 packed arithmetic instructions
 Instruction2_Type10 ADDPD { asmout, "addpd" };

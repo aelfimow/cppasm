@@ -1392,7 +1392,7 @@ extern Instruction_MOVxPD1 MOVUPD;
 extern Instruction1_Type18 MOVHPD;
 extern Instruction1_Type18 MOVLPD;
 extern Instruction2_Type4 MOVMSKPD;
-extern Instruction_MOVSD MOVSD_SSE2;
+extern Instruction3_Type4 MOVSD_SSE2;
 
 // SSE2 packed arithmetic instructions
 extern Instruction2_Type10 ADDPD;

@@ -1564,13 +1564,13 @@ extern Instruction2_Type13 ROUNDSS;
 extern Instruction2_Type15 ROUNDSD;
 
 // SSE4.1: insertion and extractions from XMM registers
-extern Instruction_SSE4_1_Type6 EXTRACTPS;
+extern Instruction3_Type10 EXTRACTPS;
 extern Instruction2_Type13 INSERTPS;
 extern Instruction2_Type23 PINSRB;
 extern Instruction2_Type24 PINSRD;
 extern Instruction2_Type25 PINSRQ;
 extern Instruction3_Type9 PEXTRB;
-extern Instruction_SSE4_1_Type12 PEXTRD;
+extern Instruction3_Type10 PEXTRD;
 extern Instruction2_Type26 PEXTRQ;
 
 // SSE4.1: packed integer format convertions

@@ -874,13 +874,13 @@ Instruction2_Type13 ROUNDSS { asmout, "roundss" };
 Instruction2_Type15 ROUNDSD { asmout, "roundsd" };
 
 // SSE4.1: insertion and extractions from XMM registers
-Instruction_SSE4_1_Type6 EXTRACTPS { asmout, "extractps" };
+Instruction3_Type10 EXTRACTPS { asmout, "extractps" };
 Instruction2_Type13 INSERTPS { asmout, "insertps" };
 Instruction2_Type23 PINSRB { asmout, "pinsrb" };
 Instruction2_Type24 PINSRD { asmout, "pinsrd" };
 Instruction2_Type25 PINSRQ { asmout, "pinsrq" };
 Instruction3_Type9 PEXTRB { asmout, "pextrb" };
-Instruction_SSE4_1_Type12 PEXTRD { asmout, "pextrd" };
+Instruction3_Type10 PEXTRD { asmout, "pextrd" };
 Instruction2_Type26 PEXTRQ { asmout, "pextrq" };
 
 // SSE4.1: packed integer format convertions

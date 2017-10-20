@@ -69,14 +69,7 @@ using Instruction3_Type9 = Instruction_3
     Operands_mem_reg_imm<m8, xmm, imm8>
 >;
 
-using Instruction_SSE4_1_Type6 = Instruction_3
-<
-    Operands_reg_reg_imm<r32, xmm, imm8>,
-    Operands_reg_reg_imm<r64, xmm, imm8>,
-    Operands_mem_reg_imm<m32, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type12 = Instruction_3
+using Instruction3_Type10 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,

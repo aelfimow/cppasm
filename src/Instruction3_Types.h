@@ -20,6 +20,20 @@ using Instruction_RDRAND = Instruction_3
     Operands_reg<r64>
 >;
 
+using Instruction_SSE_MOV5 = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>,
+    Operands_mem_reg<m32, xmm, no_suffix>
+>;
+
+using Instruction_MOVSD = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>,
+    Operands_mem_reg<m64, xmm, no_suffix>
+>;
+
 using Instruction_SSE_MOV1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
@@ -27,11 +41,18 @@ using Instruction_SSE_MOV1 = Instruction_3
     Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
-using Instruction_SSE_MOV5 = Instruction_3
+using Instruction_MOVxPD1 = Instruction_3
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>,
-    Operands_mem_reg<m32, xmm, no_suffix>
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_mem_reg<m128, xmm, no_suffix>
+>;
+
+using Instruction_MOVDQx = Instruction_3
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_mem_reg<m128, xmm, no_suffix>
 >;
 
 using Instruction_FILD = Instruction_3
@@ -42,6 +63,13 @@ using Instruction_FILD = Instruction_3
 >;
 
 using Instruction_FISTP = Instruction_3
+<
+    Operands_mem<m16, suffix_m16int>,
+    Operands_mem<m32, suffix_m32int>,
+    Operands_mem<m64, suffix_m64int>
+>;
+
+using Instruction_FISTTP = Instruction_3
 <
     Operands_mem<m16, suffix_m16int>,
     Operands_mem<m32, suffix_m32int>,
@@ -62,32 +90,11 @@ using Instruction_FPU_Arithm1 = Instruction_3
     Operands_reg_reg<st, st, no_suffix>
 >;
 
-using Instruction_MOVxPD1 = Instruction_3
+using Instruction_SSE4_1_Type11 = Instruction_3
 <
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_MOVSD = Instruction_3
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>,
-    Operands_mem_reg<m64, xmm, no_suffix>
->;
-
-using Instruction_MOVDQx = Instruction_3
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_mem_reg<m128, xmm, no_suffix>
->;
-
-using Instruction_FISTTP = Instruction_3
-<
-    Operands_mem<m16, suffix_m16int>,
-    Operands_mem<m32, suffix_m32int>,
-    Operands_mem<m64, suffix_m64int>
+    Operands_reg_reg_imm<r32, xmm, imm8>,
+    Operands_reg_reg_imm<r64, xmm, imm8>,
+    Operands_mem_reg_imm<m8, xmm, imm8>
 >;
 
 using Instruction_SSE4_1_Type6 = Instruction_3
@@ -95,13 +102,6 @@ using Instruction_SSE4_1_Type6 = Instruction_3
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,
     Operands_mem_reg_imm<m32, xmm, imm8>
->;
-
-using Instruction_SSE4_1_Type11 = Instruction_3
-<
-    Operands_reg_reg_imm<r32, xmm, imm8>,
-    Operands_reg_reg_imm<r64, xmm, imm8>,
-    Operands_mem_reg_imm<m8, xmm, imm8>
 >;
 
 using Instruction_SSE4_1_Type12 = Instruction_3

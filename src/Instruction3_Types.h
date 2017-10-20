@@ -62,7 +62,7 @@ using Instruction3_Type8 = Instruction_3
     Operands_reg_reg<st, st, no_suffix>
 >;
 
-using Instruction_SSE4_1_Type11 = Instruction_3
+using Instruction3_Type9 = Instruction_3
 <
     Operands_reg_reg_imm<r32, xmm, imm8>,
     Operands_reg_reg_imm<r64, xmm, imm8>,

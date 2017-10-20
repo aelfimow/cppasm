@@ -1569,7 +1569,7 @@ extern Instruction2_Type13 INSERTPS;
 extern Instruction2_Type23 PINSRB;
 extern Instruction2_Type24 PINSRD;
 extern Instruction2_Type25 PINSRQ;
-extern Instruction_SSE4_1_Type11 PEXTRB;
+extern Instruction3_Type9 PEXTRB;
 extern Instruction_SSE4_1_Type12 PEXTRD;
 extern Instruction2_Type26 PEXTRQ;
 

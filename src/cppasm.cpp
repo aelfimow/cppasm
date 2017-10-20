@@ -879,7 +879,7 @@ Instruction2_Type13 INSERTPS { asmout, "insertps" };
 Instruction2_Type23 PINSRB { asmout, "pinsrb" };
 Instruction2_Type24 PINSRD { asmout, "pinsrd" };
 Instruction2_Type25 PINSRQ { asmout, "pinsrq" };
-Instruction_SSE4_1_Type11 PEXTRB { asmout, "pextrb" };
+Instruction3_Type9 PEXTRB { asmout, "pextrb" };
 Instruction_SSE4_1_Type12 PEXTRD { asmout, "pextrd" };
 Instruction2_Type26 PEXTRQ { asmout, "pextrq" };
 

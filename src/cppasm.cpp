@@ -559,47 +559,47 @@ Instruction_MOVD MOVD { asmout, "movd" };
 Instruction_MOVQ MOVQ { asmout, "movq" };
 
 // MMX conversion instructions
-Instruction_MMX_Op PACKSSWB  { asmout, "packsswb" };
-Instruction_MMX_Op PACKSSDW  { asmout, "packssdw" };
-Instruction_MMX_Op PUNPCKHBW { asmout, "punpckhbw" };
-Instruction_MMX_Op PUNPCKHWD { asmout, "punpckhwd" };
-Instruction_MMX_Op PUNPCKHDQ { asmout, "punpckhdq" };
-Instruction_MMX_Op PUNPCKLBW { asmout, "punpcklbw" };
-Instruction_MMX_Op PUNPCKLWD { asmout, "punpcklwd" };
-Instruction_MMX_Op PUNPCKLDQ { asmout, "punpckldq" };
+Instruction4_Type1 PACKSSWB  { asmout, "packsswb" };
+Instruction4_Type1 PACKSSDW  { asmout, "packssdw" };
+Instruction4_Type1 PUNPCKHBW { asmout, "punpckhbw" };
+Instruction4_Type1 PUNPCKHWD { asmout, "punpckhwd" };
+Instruction4_Type1 PUNPCKHDQ { asmout, "punpckhdq" };
+Instruction4_Type1 PUNPCKLBW { asmout, "punpcklbw" };
+Instruction4_Type1 PUNPCKLWD { asmout, "punpcklwd" };
+Instruction4_Type1 PUNPCKLDQ { asmout, "punpckldq" };
 
 // MMX packed arithmetic instructions
-Instruction_MMX_Op PADDB   { asmout, "paddb"   };
-Instruction_MMX_Op PADDW   { asmout, "paddw"   };
-Instruction_MMX_Op PADDD   { asmout, "paddd"   };
-Instruction_MMX_Op PADDSB  { asmout, "paddsb"  };
-Instruction_MMX_Op PADDSW  { asmout, "paddsw"  };
-Instruction_MMX_Op PADDUSB { asmout, "paddusb" };
-Instruction_MMX_Op PADDUSW { asmout, "paddusw" };
-Instruction_MMX_Op PSUBB   { asmout, "psubb"   };
-Instruction_MMX_Op PSUBW   { asmout, "psubw"   };
-Instruction_MMX_Op PSUBD   { asmout, "psubd"   };
-Instruction_MMX_Op PSUBSB  { asmout, "psubsb"  };
-Instruction_MMX_Op PSUBSW  { asmout, "psubsw"  };
-Instruction_MMX_Op PSUBUSB { asmout, "psubusb" };
-Instruction_MMX_Op PSUBUSW { asmout, "psubusw" };
-Instruction_MMX_Op PMULHW  { asmout, "pmulhw"  };
-Instruction_MMX_Op PMULLW  { asmout, "pmullw"  };
-Instruction_MMX_Op PMADDWD { asmout, "pmaddwd" };
+Instruction4_Type1 PADDB   { asmout, "paddb"   };
+Instruction4_Type1 PADDW   { asmout, "paddw"   };
+Instruction4_Type1 PADDD   { asmout, "paddd"   };
+Instruction4_Type1 PADDSB  { asmout, "paddsb"  };
+Instruction4_Type1 PADDSW  { asmout, "paddsw"  };
+Instruction4_Type1 PADDUSB { asmout, "paddusb" };
+Instruction4_Type1 PADDUSW { asmout, "paddusw" };
+Instruction4_Type1 PSUBB   { asmout, "psubb"   };
+Instruction4_Type1 PSUBW   { asmout, "psubw"   };
+Instruction4_Type1 PSUBD   { asmout, "psubd"   };
+Instruction4_Type1 PSUBSB  { asmout, "psubsb"  };
+Instruction4_Type1 PSUBSW  { asmout, "psubsw"  };
+Instruction4_Type1 PSUBUSB { asmout, "psubusb" };
+Instruction4_Type1 PSUBUSW { asmout, "psubusw" };
+Instruction4_Type1 PMULHW  { asmout, "pmulhw"  };
+Instruction4_Type1 PMULLW  { asmout, "pmullw"  };
+Instruction4_Type1 PMADDWD { asmout, "pmaddwd" };
 
 // MMX comparison instructions
-Instruction_MMX_Op PCMPEQB { asmout, "pcmpeqb" };
-Instruction_MMX_Op PCMPEQW { asmout, "pcmpeqw" };
-Instruction_MMX_Op PCMPEQD { asmout, "pcmpeqd" };
-Instruction_MMX_Op PCMPGTB { asmout, "pcmpgtb" };
-Instruction_MMX_Op PCMPGTW { asmout, "pcmpgtw" };
-Instruction_MMX_Op PCMPGTD { asmout, "pcmpgtd" };
+Instruction4_Type1 PCMPEQB { asmout, "pcmpeqb" };
+Instruction4_Type1 PCMPEQW { asmout, "pcmpeqw" };
+Instruction4_Type1 PCMPEQD { asmout, "pcmpeqd" };
+Instruction4_Type1 PCMPGTB { asmout, "pcmpgtb" };
+Instruction4_Type1 PCMPGTW { asmout, "pcmpgtw" };
+Instruction4_Type1 PCMPGTD { asmout, "pcmpgtd" };
 
 // MMX logical instructions
-Instruction_MMX_Op PAND  { asmout, "pand"  };
-Instruction_MMX_Op PANDN { asmout, "pandn" };
-Instruction_MMX_Op POR   { asmout, "por"   };
-Instruction_MMX_Op PXOR  { asmout, "pxor"  };
+Instruction4_Type1 PAND  { asmout, "pand"  };
+Instruction4_Type1 PANDN { asmout, "pandn" };
+Instruction4_Type1 POR   { asmout, "por"   };
+Instruction4_Type1 PXOR  { asmout, "pxor"  };
 
 // MMX shift and rotate instructions
 Instruction_MMX_Shift PSLLW { asmout, "psllw" };
@@ -672,14 +672,14 @@ Instruction1_Type14 LDMXCSR { asmout, "ldmxcsr" };
 Instruction1_Type14 STMXCSR { asmout, "stmxcsr" };
 
 // SSE 64-bit SIMD integer instructions
-Instruction_PAVGx PAVGB { asmout, "pavgb" };
-Instruction_PAVGx PAVGW { asmout, "pavgw" };
+Instruction4_Type1 PAVGB { asmout, "pavgb" };
+Instruction4_Type1 PAVGW { asmout, "pavgw" };
 Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
 Instruction_PINSRW PINSRW { asmout, "pinsrw" };
-Instruction_PMxxUB PMAXUB { asmout, "pmaxub" };
-Instruction_PMxxSW PMAXSW { asmout, "pmaxsw" };
-Instruction_PMxxUB PMINUB { asmout, "pminub" };
-Instruction_PMxxSW PMINSW { asmout, "pminsw" };
+Instruction4_Type1 PMAXUB { asmout, "pmaxub" };
+Instruction4_Type1 PMAXSW { asmout, "pmaxsw" };
+Instruction4_Type1 PMINUB { asmout, "pminub" };
+Instruction4_Type1 PMINSW { asmout, "pminsw" };
 Instruction_PMOVMSKB PMOVMSKB { asmout, "pmovmskb" };
 Instruction_PMULHUW PMULHUW { asmout, "pmulhuw" };
 Instruction_PSADBW PSADBW { asmout, "psadbw" };
@@ -763,9 +763,9 @@ Instruction3_Type5 MOVDQA { asmout, "movdqa" };
 Instruction3_Type5 MOVDQU { asmout, "movdqu" };
 Instruction1_Type20 MOVQ2DQ { asmout, "movq2dq" };
 Instruction1_Type21 MOVDQ2Q { asmout, "movdq2q" };
-Instruction_PMULUDQ PMULUDQ { asmout, "pmuludq" };
-Instruction_SSE2_Int_Arithm1 PADDQ { asmout, "paddq" };
-Instruction_SSE2_Int_Arithm1 PSUBQ { asmout, "psubq" };
+Instruction4_Type1 PMULUDQ { asmout, "pmuludq" };
+Instruction4_Type1 PADDQ { asmout, "paddq" };
+Instruction4_Type1 PSUBQ { asmout, "psubq" };
 Instruction2_Type12 PSHUFLW { asmout, "pshuflw" };
 Instruction2_Type12 PSHUFHW { asmout, "pshufhw" };
 Instruction2_Type12 PSHUFD { asmout, "pshufd" };
@@ -809,31 +809,31 @@ Instruction1_Type1 MONITOR { asmout, "monitor" };
 Instruction1_Type1 MWAIT { asmout, "mwait" };
 
 // SSSE3: horizontal addition/subtraction
-Instruction_SSSE3_Arithm1 PHADDW { asmout, "phaddw" };
-Instruction_SSSE3_Arithm1 PHADDSW { asmout, "phaddsw" };
-Instruction_SSSE3_Arithm1 PHADDD { asmout, "phaddd" };
-Instruction_SSSE3_Arithm1 PHSUBW { asmout, "phsubw" };
-Instruction_SSSE3_Arithm1 PHSUBSW { asmout, "phsubsw" };
-Instruction_SSSE3_Arithm1 PHSUBD { asmout, "phsubd" };
+Instruction4_Type1 PHADDW { asmout, "phaddw" };
+Instruction4_Type1 PHADDSW { asmout, "phaddsw" };
+Instruction4_Type1 PHADDD { asmout, "phaddd" };
+Instruction4_Type1 PHSUBW { asmout, "phsubw" };
+Instruction4_Type1 PHSUBSW { asmout, "phsubsw" };
+Instruction4_Type1 PHSUBD { asmout, "phsubd" };
 
 // SSSE3: packed absolute values
-Instruction_SSSE3_Arithm1 PABSB { asmout, "pabsb" };
-Instruction_SSSE3_Arithm1 PABSW { asmout, "pabsw" };
-Instruction_SSSE3_Arithm1 PABSD { asmout, "pabsd" };
+Instruction4_Type1 PABSB { asmout, "pabsb" };
+Instruction4_Type1 PABSW { asmout, "pabsw" };
+Instruction4_Type1 PABSD { asmout, "pabsd" };
 
 // SSSE3: multiply and add packed signed and unsigned bytes
-Instruction_SSSE3_Arithm1 PMADDUBSW { asmout, "pmaddubsw" };
+Instruction4_Type1 PMADDUBSW { asmout, "pmaddubsw" };
 
 // SSSE3: packed multiply high with round and scale
-Instruction_SSSE3_Arithm1 PMULHRSW { asmout, "pmulhrsw" };
+Instruction4_Type1 PMULHRSW { asmout, "pmulhrsw" };
 
 // SSSE3: packed shuffle bytes
-Instruction_SSSE3_Arithm1 PSHUFB { asmout, "pshufb" };
+Instruction4_Type1 PSHUFB { asmout, "pshufb" };
 
 // SSSE3: packed sign
-Instruction_SSSE3_Arithm1 PSIGNB { asmout, "psignb" };
-Instruction_SSSE3_Arithm1 PSIGNW { asmout, "psignw" };
-Instruction_SSSE3_Arithm1 PSIGND { asmout, "psignd" };
+Instruction4_Type1 PSIGNB { asmout, "psignb" };
+Instruction4_Type1 PSIGNW { asmout, "psignw" };
+Instruction4_Type1 PSIGND { asmout, "psignd" };
 
 // SSSE3: packed align right
 Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };

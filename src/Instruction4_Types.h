@@ -6,6 +6,22 @@
 #else
 #define INSTRUCTION4_TYPES_H
 
+using Instruction4_Type1 = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
+using Instruction_SSSE3_Arithm2 = Instruction_4
+<
+    Operands_reg_reg_imm<mm, mm, imm8>,
+    Operands_reg_mem_imm<mm, m64, imm8>,
+    Operands_reg_reg_imm<xmm, xmm, imm8>,
+    Operands_reg_mem_imm<xmm, m128, imm8>
+>;
+
 using Instruction_VMOVD = Instruction_4
 <
     Operands_reg_reg<xmm, r32, no_suffix>,
@@ -20,14 +36,6 @@ using Instruction_VMOVQ = Instruction_4
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_reg_reg<r64, xmm, no_suffix>,
     Operands_reg_mem<m64, xmm, no_suffix>
->;
-
-using Instruction_MMX_Op = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
 using Instruction_ADX = Instruction_4
@@ -78,36 +86,12 @@ using Instruction_FCOM = Instruction_4
     Operands_none
 >;
 
-using Instruction_PAVGx = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
 using Instruction_PINSRW = Instruction_4
 <
     Operands_reg_reg_imm<mm, r32, imm8>,
     Operands_reg_mem_imm<mm, m16, imm8>,
     Operands_reg_reg_imm<xmm, r32, imm8>,
     Operands_reg_mem_imm<xmm, m16, imm8>
->;
-
-using Instruction_PMxxUB = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_PMxxSW = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
 using Instruction_PMOVMSKB = Instruction_4
@@ -148,38 +132,6 @@ using Instruction_CVTSI2SD = Instruction_4
     Operands_reg_mem<xmm, m32, no_suffix>,
     Operands_reg_reg<xmm, r64, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>
->;
-
-using Instruction_PMULUDQ = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSE2_Int_Arithm1 = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSSE3_Arithm1 = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_SSSE3_Arithm2 = Instruction_4
-<
-    Operands_reg_reg_imm<mm, mm, imm8>,
-    Operands_reg_mem_imm<mm, m64, imm8>,
-    Operands_reg_reg_imm<xmm, xmm, imm8>,
-    Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
 using Instruction_SSE4_1_Type3 = Instruction_4

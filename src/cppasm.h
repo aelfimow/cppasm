@@ -961,47 +961,47 @@ extern Instruction_MOVD MOVD;
 extern Instruction_MOVQ MOVQ;
 
 // MMX conversion instructions
-extern Instruction_MMX_Op PACKSSWB;
-extern Instruction_MMX_Op PACKSSDW;
-extern Instruction_MMX_Op PUNPCKHBW;
-extern Instruction_MMX_Op PUNPCKHWD;
-extern Instruction_MMX_Op PUNPCKHDQ;
-extern Instruction_MMX_Op PUNPCKLBW;
-extern Instruction_MMX_Op PUNPCKLWD;
-extern Instruction_MMX_Op PUNPCKLDQ;
+extern Instruction4_Type1 PACKSSWB;
+extern Instruction4_Type1 PACKSSDW;
+extern Instruction4_Type1 PUNPCKHBW;
+extern Instruction4_Type1 PUNPCKHWD;
+extern Instruction4_Type1 PUNPCKHDQ;
+extern Instruction4_Type1 PUNPCKLBW;
+extern Instruction4_Type1 PUNPCKLWD;
+extern Instruction4_Type1 PUNPCKLDQ;
 
 // MMX packed arithmetic instructions
-extern Instruction_MMX_Op PADDB;
-extern Instruction_MMX_Op PADDW;
-extern Instruction_MMX_Op PADDD;
-extern Instruction_MMX_Op PADDSB;
-extern Instruction_MMX_Op PADDSW;
-extern Instruction_MMX_Op PADDUSB;
-extern Instruction_MMX_Op PADDUSW;
-extern Instruction_MMX_Op PSUBB;
-extern Instruction_MMX_Op PSUBW;
-extern Instruction_MMX_Op PSUBD;
-extern Instruction_MMX_Op PSUBSB;
-extern Instruction_MMX_Op PSUBSW;
-extern Instruction_MMX_Op PSUBUSB;
-extern Instruction_MMX_Op PSUBUSW;
-extern Instruction_MMX_Op PMULHW;
-extern Instruction_MMX_Op PMULLW;
-extern Instruction_MMX_Op PMADDWD;
+extern Instruction4_Type1 PADDB;
+extern Instruction4_Type1 PADDW;
+extern Instruction4_Type1 PADDD;
+extern Instruction4_Type1 PADDSB;
+extern Instruction4_Type1 PADDSW;
+extern Instruction4_Type1 PADDUSB;
+extern Instruction4_Type1 PADDUSW;
+extern Instruction4_Type1 PSUBB;
+extern Instruction4_Type1 PSUBW;
+extern Instruction4_Type1 PSUBD;
+extern Instruction4_Type1 PSUBSB;
+extern Instruction4_Type1 PSUBSW;
+extern Instruction4_Type1 PSUBUSB;
+extern Instruction4_Type1 PSUBUSW;
+extern Instruction4_Type1 PMULHW;
+extern Instruction4_Type1 PMULLW;
+extern Instruction4_Type1 PMADDWD;
 
 // MMX comparison instructions
-extern Instruction_MMX_Op PCMPEQB;
-extern Instruction_MMX_Op PCMPEQW;
-extern Instruction_MMX_Op PCMPEQD;
-extern Instruction_MMX_Op PCMPGTB;
-extern Instruction_MMX_Op PCMPGTW;
-extern Instruction_MMX_Op PCMPGTD;
+extern Instruction4_Type1 PCMPEQB;
+extern Instruction4_Type1 PCMPEQW;
+extern Instruction4_Type1 PCMPEQD;
+extern Instruction4_Type1 PCMPGTB;
+extern Instruction4_Type1 PCMPGTW;
+extern Instruction4_Type1 PCMPGTD;
 
 // MMX logical instructions
-extern Instruction_MMX_Op PAND;
-extern Instruction_MMX_Op PANDN;
-extern Instruction_MMX_Op POR;
-extern Instruction_MMX_Op PXOR;
+extern Instruction4_Type1 PAND;
+extern Instruction4_Type1 PANDN;
+extern Instruction4_Type1 POR;
+extern Instruction4_Type1 PXOR;
 
 // MMX shift and rotate instructions
 extern Instruction_MMX_Shift PSLLW;
@@ -1074,14 +1074,14 @@ extern Instruction1_Type14 LDMXCSR;
 extern Instruction1_Type14 STMXCSR;
 
 // SSE 64-bit SIMD integer instructions
-extern Instruction_PAVGx PAVGB;
-extern Instruction_PAVGx PAVGW;
+extern Instruction4_Type1 PAVGB;
+extern Instruction4_Type1 PAVGW;
 extern Instruction_PEXTRW PEXTRW;
 extern Instruction_PINSRW PINSRW;
-extern Instruction_PMxxUB PMAXUB;
-extern Instruction_PMxxSW PMAXSW;
-extern Instruction_PMxxUB PMINUB;
-extern Instruction_PMxxSW PMINSW;
+extern Instruction4_Type1 PMAXUB;
+extern Instruction4_Type1 PMAXSW;
+extern Instruction4_Type1 PMINUB;
+extern Instruction4_Type1 PMINSW;
 extern Instruction_PMOVMSKB PMOVMSKB;
 extern Instruction_PMULHUW PMULHUW;
 extern Instruction_PSADBW PSADBW;
@@ -1165,9 +1165,9 @@ extern Instruction3_Type5 MOVDQA;
 extern Instruction3_Type5 MOVDQU;
 extern Instruction1_Type20 MOVQ2DQ;
 extern Instruction1_Type21 MOVDQ2Q;
-extern Instruction_PMULUDQ PMULUDQ;
-extern Instruction_SSE2_Int_Arithm1 PADDQ;
-extern Instruction_SSE2_Int_Arithm1 PSUBQ;
+extern Instruction4_Type1 PMULUDQ;
+extern Instruction4_Type1 PADDQ;
+extern Instruction4_Type1 PSUBQ;
 extern Instruction2_Type12 PSHUFLW;
 extern Instruction2_Type12 PSHUFHW;
 extern Instruction2_Type12 PSHUFD;
@@ -1212,31 +1212,31 @@ extern Instruction1_Type1 MONITOR;
 extern Instruction1_Type1 MWAIT;
 
 // SSSE3: horizontal addition/subtraction
-extern Instruction_SSSE3_Arithm1 PHADDW;
-extern Instruction_SSSE3_Arithm1 PHADDSW;
-extern Instruction_SSSE3_Arithm1 PHADDD;
-extern Instruction_SSSE3_Arithm1 PHSUBW;
-extern Instruction_SSSE3_Arithm1 PHSUBSW;
-extern Instruction_SSSE3_Arithm1 PHSUBD;
+extern Instruction4_Type1 PHADDW;
+extern Instruction4_Type1 PHADDSW;
+extern Instruction4_Type1 PHADDD;
+extern Instruction4_Type1 PHSUBW;
+extern Instruction4_Type1 PHSUBSW;
+extern Instruction4_Type1 PHSUBD;
 
 // SSSE3: packed absolute values
-extern Instruction_SSSE3_Arithm1 PABSB;
-extern Instruction_SSSE3_Arithm1 PABSW;
-extern Instruction_SSSE3_Arithm1 PABSD;
+extern Instruction4_Type1 PABSB;
+extern Instruction4_Type1 PABSW;
+extern Instruction4_Type1 PABSD;
 
 // SSSE3: multiply and add packed signed and unsigned bytes
-extern Instruction_SSSE3_Arithm1 PMADDUBSW;
+extern Instruction4_Type1 PMADDUBSW;
 
 // SSSE3: packed multiply high with round and scale
-extern Instruction_SSSE3_Arithm1 PMULHRSW;
+extern Instruction4_Type1 PMULHRSW;
 
 // SSSE3: packed shuffle bytes
-extern Instruction_SSSE3_Arithm1 PSHUFB;
+extern Instruction4_Type1 PSHUFB;
 
 // SSSE3: packed sign
-extern Instruction_SSSE3_Arithm1 PSIGNB;
-extern Instruction_SSSE3_Arithm1 PSIGNW;
-extern Instruction_SSSE3_Arithm1 PSIGND;
+extern Instruction4_Type1 PSIGNB;
+extern Instruction4_Type1 PSIGNW;
+extern Instruction4_Type1 PSIGND;
 
 // SSSE3: packed align right
 extern Instruction_SSSE3_Arithm2 PALIGNR;

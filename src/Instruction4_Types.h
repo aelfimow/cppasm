@@ -1,5 +1,5 @@
 /*! \file Instruction4_Types.h
-    \brief Types for instructions with three operands combinations.
+    \brief Types for instructions with four operands combinations.
 */
 #ifdef INSTRUCTION4_TYPES_H
 #error Already included

@@ -139,6 +139,7 @@
     <ClInclude Include="..\..\src\Instruction1_Types.h" />
     <ClInclude Include="..\..\src\Instruction2_Types.h" />
     <ClInclude Include="..\..\src\Instruction3_Types.h" />
+    <ClInclude Include="..\..\src\Instruction4_Types.h" />
     <ClInclude Include="..\..\src\Instruction_x.h" />
     <ClInclude Include="..\..\src\keyword.h" />
     <ClInclude Include="..\..\src\label.h" />

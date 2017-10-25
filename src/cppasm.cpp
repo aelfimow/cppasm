@@ -932,7 +932,7 @@ Instruction2_Type12 PCLMULQDQ { asmout, "pclmulqdq" };
 
 // 16-bit floating-point convertion instructions
 Instruction4_Type15 VCVTPH2PS { asmout, "vcvtph2ps" };
-Instruction_F16C_Type2 VCVTPS2PH { asmout, "vcvtps2ph" };
+Instruction4_Type16 VCVTPS2PH { asmout, "vcvtps2ph" };
 
 // Fused-multiply-add (FMA) extensions
 Instruction_FMA_Type1 VFMADD132PD { asmout, "vfmadd132pd" };

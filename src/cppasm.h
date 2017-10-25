@@ -1335,7 +1335,7 @@ extern Instruction2_Type12 PCLMULQDQ;
 
 // 16-bit floating-point convertion instructions
 extern Instruction4_Type15 VCVTPH2PS;
-extern Instruction_F16C_Type2 VCVTPS2PH;
+extern Instruction4_Type16 VCVTPS2PH;
 
 // Fused-multiply-add (FMA) extensions
 extern Instruction_FMA_Type1 VFMADD132PD;

@@ -126,7 +126,7 @@ using Instruction4_Type15 = Instruction_4
     Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
-using Instruction_F16C_Type2 = Instruction_4
+using Instruction4_Type16 = Instruction_4
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_mem_reg_imm<m64, xmm, imm8>,

@@ -198,7 +198,7 @@ using Instruction4_Type24 = Instruction_4
     Operands_mem_reg_reg<m256, ymm, ymm>
 >;
 
-using Instruction_AVX_Type21 = Instruction_4
+using Instruction4_Type25 = Instruction_4
 <
     Operands_reg_reg_reg<xmm, xmm, r32>,
     Operands_reg_reg_mem<xmm, xmm, m32>,

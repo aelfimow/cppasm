@@ -1151,8 +1151,8 @@ extern Instruction2_Type14 CVTPS2PD;
 extern Instruction2_Type10 CVTPD2PS;
 extern Instruction2_Type11 CVTSS2SD;
 extern Instruction2_Type14 CVTSD2SS;
-extern Instruction_CVTSD2SI CVTSD2SI;
-extern Instruction_CVTSD2SI CVTTSD2SI;
+extern Instruction4_Type13 CVTSD2SI;
+extern Instruction4_Type13 CVTTSD2SI;
 extern Instruction4_Type8 CVTSI2SD;
 
 // SSE2 packed single-precision floating point values
@@ -1487,9 +1487,9 @@ extern Instruction_AVX_Type1 VTESTPS;
 extern Instruction_AVX_Type1 VTESTPD;
 extern Instruction_AVX_Type21 VCVTSI2SS;
 extern Instruction_AVX_Type21 VCVTSI2SD;
-extern Instruction_CVTSD2SI VCVTSD2SI;
+extern Instruction4_Type13 VCVTSD2SI;
 extern Instruction4_Type9 VCVTTSS2SI;
-extern Instruction_CVTSD2SI VCVTTSD2SI;
+extern Instruction4_Type13 VCVTTSD2SI;
 extern Instruction4_Type9 VCVTSS2SI;
 
 // System instructions

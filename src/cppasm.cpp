@@ -749,8 +749,8 @@ Instruction2_Type14 CVTPS2PD { asmout, "cvtps2pd" };
 Instruction2_Type10 CVTPD2PS { asmout, "cvtpd2ps" };
 Instruction2_Type11 CVTSS2SD { asmout, "cvtss2sd" };
 Instruction2_Type14 CVTSD2SS { asmout, "cvtsd2ss" };
-Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
-Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
+Instruction4_Type13 CVTSD2SI { asmout, "cvtsd2si" };
+Instruction4_Type13 CVTTSD2SI { asmout, "cvttsd2si" };
 Instruction4_Type8 CVTSI2SD { asmout, "cvtsi2sd" };
 
 // SSE2 packed single-precision floating point values
@@ -1084,9 +1084,9 @@ Instruction_AVX_Type1 VTESTPS { asmout, "vtestps" };
 Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
 Instruction_AVX_Type21 VCVTSI2SS { asmout, "vcvtsi2ss" };
 Instruction_AVX_Type21 VCVTSI2SD { asmout, "vcvtsi2sd" };
-Instruction_CVTSD2SI VCVTSD2SI { asmout, "vcvtsd2si" };
+Instruction4_Type13 VCVTSD2SI { asmout, "vcvtsd2si" };
 Instruction4_Type9 VCVTTSS2SI { asmout, "vcvttss2si" };
-Instruction_CVTSD2SI VCVTTSD2SI { asmout, "vcvttsd2si" };
+Instruction4_Type13 VCVTTSD2SI { asmout, "vcvttsd2si" };
 Instruction4_Type9 VCVTSS2SI { asmout, "vcvtss2si" };
 
 // System instructions

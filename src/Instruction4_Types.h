@@ -102,7 +102,7 @@ using Instruction4_Type12 = Instruction_4
     Operands_reg_reg<r64, xmm, no_suffix>
 >;
 
-using Instruction_CVTSD2SI = Instruction_4
+using Instruction4_Type13 = Instruction_4
 <
     Operands_reg_reg<r32, xmm, no_suffix>,
     Operands_reg_mem<r32, m64, no_suffix>,

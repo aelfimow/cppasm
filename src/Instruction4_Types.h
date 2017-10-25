@@ -150,7 +150,7 @@ using Instruction4_Type18 = Instruction_4
     Operands_reg_mem<ymm, m256, no_suffix>
 >;
 
-using Instruction_AVX_Type4 = Instruction_4
+using Instruction4_Type19 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,

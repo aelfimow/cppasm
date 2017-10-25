@@ -495,8 +495,8 @@ Instruction1_Type1 FSQRT { asmout, "fsqrt" };
 Instruction1_Type1 FXTRACT { asmout, "fxtract" };
 
 // x87 FPU comparison instructions
-Instruction_FCOM FCOM = { asmout, "fcom" };
-Instruction_FCOM FCOMP = { asmout, "fcomp" };
+Instruction4_Type10 FCOM = { asmout, "fcom" };
+Instruction4_Type10 FCOMP = { asmout, "fcomp" };
 Instruction1_Type1 FCOMPP = { asmout, "fcompp" };
 Instruction2_Type5 FUCOM = { asmout, "fucom" };
 Instruction2_Type5 FUCOMP = { asmout, "fucomp" };

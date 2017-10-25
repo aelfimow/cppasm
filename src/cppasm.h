@@ -897,8 +897,8 @@ extern Instruction1_Type1 FSQRT;
 extern Instruction1_Type1 FXTRACT;
 
 // x87 FPU comparison instructions
-extern Instruction_FCOM FCOM;
-extern Instruction_FCOM FCOMP;
+extern Instruction4_Type10 FCOM;
+extern Instruction4_Type10 FCOMP;
 extern Instruction1_Type1 FCOMPP;
 extern Instruction2_Type5 FUCOM;
 extern Instruction2_Type5 FUCOMP;

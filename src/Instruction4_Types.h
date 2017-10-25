@@ -78,7 +78,7 @@ using Instruction4_Type9 = Instruction_4
     Operands_reg_mem<r64, m32, no_suffix>
 >;
 
-using Instruction_FCOM = Instruction_4
+using Instruction4_Type10 = Instruction_4
 <
     Operands_mem<m32fp, suffix_m32fp>,
     Operands_mem<m64fp, suffix_m64fp>,

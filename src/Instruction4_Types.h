@@ -182,7 +182,7 @@ using Instruction4_Type22 = Instruction_4
     Operands_reg_reg<r64, ymm, no_suffix>
 >;
 
-using Instruction_AVX_Type12 = Instruction_4
+using Instruction4_Type23 = Instruction_4
 <
     Operands_reg_reg_reg_reg<xmm, xmm, xmm, xmm>,
     Operands_reg_reg_mem_reg<xmm, xmm, m128, xmm>,

@@ -118,7 +118,7 @@ using Instruction4_Type14 = Instruction_4
     Operands_reg_mem_reg<xmm, m128, xmm>
 >;
 
-using Instruction_F16C_Type1 = Instruction_4
+using Instruction4_Type15 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>,
@@ -156,14 +156,6 @@ using Instruction_AVX_Type2 = Instruction_4
     Operands_reg_reg_mem<xmm, xmm, m128>,
     Operands_reg_reg_reg<ymm, ymm, ymm>,
     Operands_reg_reg_mem<ymm, ymm, m256>
->;
-
-using Instruction_AVX_Type3 = Instruction_4
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>,
-    Operands_reg_reg<ymm, xmm, no_suffix>,
-    Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
 using Instruction_AVX_Type4 = Instruction_4

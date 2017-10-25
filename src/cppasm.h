@@ -1334,7 +1334,7 @@ extern Instruction2_Type12 AESKEYGENASSIST;
 extern Instruction2_Type12 PCLMULQDQ;
 
 // 16-bit floating-point convertion instructions
-extern Instruction_F16C_Type1 VCVTPH2PS;
+extern Instruction4_Type15 VCVTPH2PS;
 extern Instruction_F16C_Type2 VCVTPS2PH;
 
 // Fused-multiply-add (FMA) extensions
@@ -1412,14 +1412,14 @@ extern Instruction_AVX_Type2 VMULPD;
 extern Instruction_AVX_Type2 VMULPS;
 extern Instruction_AVX_Type2 VDIVPD;
 extern Instruction_AVX_Type2 VDIVPS;
-extern Instruction_AVX_Type3 VCVTPS2PD;
+extern Instruction4_Type15 VCVTPS2PD;
 extern Instruction_AVX_Type4 VCVTPD2PS;
 extern Instruction_AVX_Type1 VCVTPS2DQ;
 extern Instruction_AVX_Type1 VCVTDQ2PS;
 extern Instruction_AVX_Type1 VCVTTPS2DQ;
 extern Instruction_AVX_Type4 VCVTTPD2DQ;
 extern Instruction_AVX_Type4 VCVTPD2DQ;
-extern Instruction_AVX_Type3 VCVTDQ2PD;
+extern Instruction4_Type15 VCVTDQ2PD;
 extern Instruction_AVX_Type2 VMINPS;
 extern Instruction_AVX_Type2 VMINPD;
 extern Instruction_AVX_Type2 VMAXPS;

@@ -675,7 +675,7 @@ Instruction1_Type14 STMXCSR { asmout, "stmxcsr" };
 Instruction4_Type1 PAVGB { asmout, "pavgb" };
 Instruction4_Type1 PAVGW { asmout, "pavgw" };
 Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
-Instruction_PINSRW PINSRW { asmout, "pinsrw" };
+Instruction4_Type11 PINSRW { asmout, "pinsrw" };
 Instruction4_Type1 PMAXUB { asmout, "pmaxub" };
 Instruction4_Type1 PMAXSW { asmout, "pmaxsw" };
 Instruction4_Type1 PMINUB { asmout, "pminub" };

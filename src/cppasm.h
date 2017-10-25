@@ -1077,7 +1077,7 @@ extern Instruction1_Type14 STMXCSR;
 extern Instruction4_Type1 PAVGB;
 extern Instruction4_Type1 PAVGW;
 extern Instruction_PEXTRW PEXTRW;
-extern Instruction_PINSRW PINSRW;
+extern Instruction4_Type11 PINSRW;
 extern Instruction4_Type1 PMAXUB;
 extern Instruction4_Type1 PMAXSW;
 extern Instruction4_Type1 PMINUB;

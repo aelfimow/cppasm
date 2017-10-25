@@ -86,7 +86,7 @@ using Instruction4_Type10 = Instruction_4
     Operands_none
 >;
 
-using Instruction_PINSRW = Instruction_4
+using Instruction4_Type11 = Instruction_4
 <
     Operands_reg_reg_imm<mm, r32, imm8>,
     Operands_reg_mem_imm<mm, m16, imm8>,

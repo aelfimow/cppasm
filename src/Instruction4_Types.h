@@ -46,7 +46,7 @@ using Instruction4_Type5 = Instruction_4
     Operands_reg_mem<m32, xmm, no_suffix>
 >;
 
-using Instruction_VMOVQ = Instruction_4
+using Instruction4_Type6 = Instruction_4
 <
     Operands_reg_reg<xmm, r64, no_suffix>,
     Operands_reg_mem<xmm, m64, no_suffix>,

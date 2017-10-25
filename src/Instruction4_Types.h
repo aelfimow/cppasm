@@ -94,7 +94,7 @@ using Instruction4_Type11 = Instruction_4
     Operands_reg_mem_imm<xmm, m16, imm8>
 >;
 
-using Instruction_PMOVMSKB = Instruction_4
+using Instruction4_Type12 = Instruction_4
 <
     Operands_reg_reg<r32, mm, no_suffix>,
     Operands_reg_reg<r64, mm, no_suffix>,

@@ -680,7 +680,7 @@ Instruction4_Type1 PMAXUB { asmout, "pmaxub" };
 Instruction4_Type1 PMAXSW { asmout, "pmaxsw" };
 Instruction4_Type1 PMINUB { asmout, "pminub" };
 Instruction4_Type1 PMINSW { asmout, "pminsw" };
-Instruction_PMOVMSKB PMOVMSKB { asmout, "pmovmskb" };
+Instruction4_Type12 PMOVMSKB { asmout, "pmovmskb" };
 Instruction4_Type3 PMULHUW { asmout, "pmulhuw" };
 Instruction4_Type3 PSADBW { asmout, "psadbw" };
 Instruction2_Type21 PSHUFW { asmout, "pshufw" };

@@ -448,12 +448,12 @@ Instruction3_Type2 RDRAND { asmout, "rdrand" };
 Instruction3_Type2 RDSEED { asmout, "rdseed" };
 
 // x87 FPU data transfer instructions
-Instruction_FLD FLD { asmout, "fld" };
+Instruction4_Type2 FLD { asmout, "fld" };
 Instruction3_Type6 FILD { asmout, "fild" };
 Instruction2_Type16 FIST { asmout, "fist" };
 Instruction3_Type6 FISTP { asmout, "fistp" };
 Instruction3_Type7 FST { asmout, "fst" };
-Instruction_FSTP FSTP { asmout, "fstp" };
+Instruction4_Type2 FSTP { asmout, "fstp" };
 Instruction1_Type12 FBLD { asmout, "fbld" };
 Instruction1_Type12 FBSTP { asmout, "fbstp" };
 Instruction2_Type5 FXCH { asmout, "fxch" };

@@ -14,6 +14,14 @@ using Instruction4_Type1 = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
+using Instruction4_Type2 = Instruction_4
+<
+    Operands_mem<m32fp, suffix_m32fp>,
+    Operands_mem<m64fp, suffix_m64fp>,
+    Operands_mem<m80fp, suffix_m80fp>,
+    Operands_reg<st>
+>;
+
 using Instruction_SSSE3_Arithm2 = Instruction_4
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
@@ -60,22 +68,6 @@ using Instruction_SSE_Conv4 = Instruction_4
     Operands_reg_mem<r32, m32, no_suffix>,
     Operands_reg_reg<r64, xmm, no_suffix>,
     Operands_reg_mem<r64, m32, no_suffix>
->;
-
-using Instruction_FLD = Instruction_4
-<
-    Operands_mem<m32fp, suffix_m32fp>,
-    Operands_mem<m64fp, suffix_m64fp>,
-    Operands_mem<m80fp, suffix_m80fp>,
-    Operands_reg<st>
->;
-
-using Instruction_FSTP = Instruction_4
-<
-    Operands_mem<m32fp, suffix_m32fp>,
-    Operands_mem<m64fp, suffix_m64fp>,
-    Operands_mem<m80fp, suffix_m80fp>,
-    Operands_reg<st>
 >;
 
 using Instruction_FCOM = Instruction_4

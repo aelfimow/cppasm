@@ -850,12 +850,12 @@ extern Instruction3_Type2 RDRAND;
 extern Instruction3_Type2 RDSEED;
 
 // x87 FPU data transfer instructions
-extern Instruction_FLD FLD;
+extern Instruction4_Type2 FLD;
 extern Instruction3_Type6 FILD;
 extern Instruction2_Type16 FIST;
 extern Instruction3_Type6 FISTP;
 extern Instruction3_Type7 FST;
-extern Instruction_FSTP FSTP;
+extern Instruction4_Type2 FSTP;
 extern Instruction1_Type12 FBLD;
 extern Instruction1_Type12 FBSTP;
 extern Instruction2_Type5 FXCH;

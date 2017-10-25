@@ -1083,8 +1083,8 @@ extern Instruction4_Type1 PMAXSW;
 extern Instruction4_Type1 PMINUB;
 extern Instruction4_Type1 PMINSW;
 extern Instruction_PMOVMSKB PMOVMSKB;
-extern Instruction_PMULHUW PMULHUW;
-extern Instruction_PSADBW PSADBW;
+extern Instruction4_Type3 PMULHUW;
+extern Instruction4_Type3 PSADBW;
 extern Instruction2_Type21 PSHUFW;
 
 // SSE cacheability control, prefetch, and instruction ordering instructions

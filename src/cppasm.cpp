@@ -681,8 +681,8 @@ Instruction4_Type1 PMAXSW { asmout, "pmaxsw" };
 Instruction4_Type1 PMINUB { asmout, "pminub" };
 Instruction4_Type1 PMINSW { asmout, "pminsw" };
 Instruction_PMOVMSKB PMOVMSKB { asmout, "pmovmskb" };
-Instruction_PMULHUW PMULHUW { asmout, "pmulhuw" };
-Instruction_PSADBW PSADBW { asmout, "psadbw" };
+Instruction4_Type3 PMULHUW { asmout, "pmulhuw" };
+Instruction4_Type3 PSADBW { asmout, "psadbw" };
 Instruction2_Type21 PSHUFW { asmout, "pshufw" };
 
 // SSE cacheability control, prefetch, and instruction ordering instructions

@@ -22,6 +22,14 @@ using Instruction4_Type2 = Instruction_4
     Operands_reg<st>
 >;
 
+using Instruction4_Type3 = Instruction_4
+<
+    Operands_reg_reg<mm, mm, no_suffix>,
+    Operands_reg_mem<mm, m64, no_suffix>,
+    Operands_reg_reg<xmm, mm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>
+>;
+
 using Instruction_SSSE3_Arithm2 = Instruction_4
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
@@ -92,22 +100,6 @@ using Instruction_PMOVMSKB = Instruction_4
     Operands_reg_reg<r64, mm, no_suffix>,
     Operands_reg_reg<r32, xmm, no_suffix>,
     Operands_reg_reg<r64, xmm, no_suffix>
->;
-
-using Instruction_PMULHUW = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
-
-using Instruction_PSADBW = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
 using Instruction_CVTSD2SI = Instruction_4

@@ -54,7 +54,7 @@ using Instruction4_Type6 = Instruction_4
     Operands_reg_mem<m64, xmm, no_suffix>
 >;
 
-using Instruction_ADX = Instruction_4
+using Instruction4_Type7 = Instruction_4
 <
     Operands_reg_reg<r32, r32, no_suffix>,
     Operands_reg_mem<r32, m32, no_suffix>,

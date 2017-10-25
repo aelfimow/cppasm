@@ -166,7 +166,7 @@ using Instruction4_Type20 = Instruction_4
     Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>
 >;
 
-using Instruction_AVX_Type7 = Instruction_4
+using Instruction4_Type21 = Instruction_4
 <
     Operands_reg_reg_imm<xmm, xmm, imm8>,
     Operands_reg_mem_imm<xmm, m128, imm8>,

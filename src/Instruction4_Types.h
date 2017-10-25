@@ -142,14 +142,6 @@ using Instruction4_Type17 = Instruction_4
     Operands_reg_reg_mem<ymm, ymm, m256>
 >;
 
-using Instruction_AVX_Type2 = Instruction_4
-<
-    Operands_reg_reg_reg<xmm, xmm, xmm>,
-    Operands_reg_reg_mem<xmm, xmm, m128>,
-    Operands_reg_reg_reg<ymm, ymm, ymm>,
-    Operands_reg_reg_mem<ymm, ymm, m256>
->;
-
 using Instruction_AVX_Type1 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,

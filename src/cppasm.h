@@ -1255,9 +1255,9 @@ extern Instruction1_Type24 MOVNTDQA;
 // SSE4.1: packed blending instructions
 extern Instruction2_Type12 BLENDPD;
 extern Instruction2_Type12 BLENDPS;
-extern Instruction_SSE4_1_Type3 BLENDVPD;
-extern Instruction_SSE4_1_Type3 BLENDVPS;
-extern Instruction_SSE4_1_Type3 PBLENDVB;
+extern Instruction4_Type14 BLENDVPD;
+extern Instruction4_Type14 BLENDVPS;
+extern Instruction4_Type14 PBLENDVB;
 extern Instruction2_Type12 PBLENDW;
 
 // SSE4.1: packed integer MIN/MAX instructions

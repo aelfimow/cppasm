@@ -110,7 +110,7 @@ using Instruction4_Type13 = Instruction_4
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction_SSE4_1_Type3 = Instruction_4
+using Instruction4_Type14 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,

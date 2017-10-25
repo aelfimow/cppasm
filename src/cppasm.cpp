@@ -852,9 +852,9 @@ Instruction1_Type24 MOVNTDQA { asmout, "movntdqa" };
 // SSE4.1: packed blending instructions
 Instruction2_Type12 BLENDPD { asmout, "blendpd" };
 Instruction2_Type12 BLENDPS { asmout, "blendps" };
-Instruction_SSE4_1_Type3 BLENDVPD { asmout, "blendvpd" };
-Instruction_SSE4_1_Type3 BLENDVPS { asmout, "blendvps" };
-Instruction_SSE4_1_Type3 PBLENDVB { asmout, "pblendvb" };
+Instruction4_Type14 BLENDVPD { asmout, "blendvpd" };
+Instruction4_Type14 BLENDVPS { asmout, "blendvps" };
+Instruction4_Type14 PBLENDVB { asmout, "pblendvb" };
 Instruction2_Type12 PBLENDW { asmout, "pblendw" };
 
 // SSE4.1: packed integer MIN/MAX instructions

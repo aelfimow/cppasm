@@ -134,7 +134,15 @@ using Instruction4_Type16 = Instruction_4
     Operands_mem_reg_imm<m128, ymm, imm8>
 >;
 
-using Instruction_FMA_Type1 = Instruction_4
+using Instruction4_Type17 = Instruction_4
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m128>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>
+>;
+
+using Instruction_AVX_Type2 = Instruction_4
 <
     Operands_reg_reg_reg<xmm, xmm, xmm>,
     Operands_reg_reg_mem<xmm, xmm, m128>,
@@ -148,14 +156,6 @@ using Instruction_AVX_Type1 = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>,
     Operands_reg_reg<ymm, ymm, no_suffix>,
     Operands_reg_mem<ymm, m256, no_suffix>
->;
-
-using Instruction_AVX_Type2 = Instruction_4
-<
-    Operands_reg_reg_reg<xmm, xmm, xmm>,
-    Operands_reg_reg_mem<xmm, xmm, m128>,
-    Operands_reg_reg_reg<ymm, ymm, ymm>,
-    Operands_reg_reg_mem<ymm, ymm, m256>
 >;
 
 using Instruction_AVX_Type4 = Instruction_4

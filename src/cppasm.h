@@ -1239,7 +1239,7 @@ extern Instruction4_Type1 PSIGNW;
 extern Instruction4_Type1 PSIGND;
 
 // SSSE3: packed align right
-extern Instruction_SSSE3_Arithm2 PALIGNR;
+extern Instruction4_Type4 PALIGNR;
 
 // SSE4.1: dword multiply instructions
 extern Instruction2_Type10 PMULLD;

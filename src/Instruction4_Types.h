@@ -30,7 +30,7 @@ using Instruction4_Type3 = Instruction_4
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-using Instruction_SSSE3_Arithm2 = Instruction_4
+using Instruction4_Type4 = Instruction_4
 <
     Operands_reg_reg_imm<mm, mm, imm8>,
     Operands_reg_mem_imm<mm, m64, imm8>,

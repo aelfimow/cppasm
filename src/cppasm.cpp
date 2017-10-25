@@ -836,7 +836,7 @@ Instruction4_Type1 PSIGNW { asmout, "psignw" };
 Instruction4_Type1 PSIGND { asmout, "psignd" };
 
 // SSSE3: packed align right
-Instruction_SSSE3_Arithm2 PALIGNR { asmout, "palignr" };
+Instruction4_Type4 PALIGNR { asmout, "palignr" };
 
 // SSE4.1: dword multiply instructions
 Instruction2_Type10 PMULLD { asmout, "pmulld" };

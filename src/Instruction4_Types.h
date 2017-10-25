@@ -38,7 +38,7 @@ using Instruction4_Type4 = Instruction_4
     Operands_reg_mem_imm<xmm, m128, imm8>
 >;
 
-using Instruction_VMOVD = Instruction_4
+using Instruction4_Type5 = Instruction_4
 <
     Operands_reg_reg<xmm, r32, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>,

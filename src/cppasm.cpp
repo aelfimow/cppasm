@@ -1129,7 +1129,7 @@ Instruction1_Type1 SYSCALL { asmout, "syscall" };
 Instruction1_Type1 SYSRET { asmout, "sysret" };
 
 // AVX
-Instruction_VMOVD VMOVD { asmout, "qmovd" };
+Instruction4_Type5 VMOVD { asmout, "qmovd" };
 Instruction_VMOVQ VMOVQ { asmout, "qmovq" };
 Instruction1_Type14 VLDMXCSR { asmout, "vldmxcsr" };
 Instruction1_Type14 VSTMXCSR { asmout, "vstmxcsr" };

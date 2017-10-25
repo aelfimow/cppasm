@@ -1532,7 +1532,7 @@ extern Instruction1_Type1 SYSCALL;
 extern Instruction1_Type1 SYSRET;
 
 // AVX
-extern Instruction_VMOVD VMOVD;
+extern Instruction4_Type5 VMOVD;
 extern Instruction_VMOVQ VMOVQ;
 extern Instruction1_Type14 VLDMXCSR;
 extern Instruction1_Type14 VSTMXCSR;

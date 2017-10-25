@@ -664,8 +664,8 @@ Instruction2_Type17 CVTPI2PS { asmout, "cvtpi2ps" };
 Instruction4_Type8 CVTSI2SS { asmout, "cvtsi2ss" };
 Instruction2_Type18 CVTPS2PI { asmout, "cvtps2pi" };
 Instruction2_Type18 CVTTPS2PI { asmout, "cvttps2pi" };
-Instruction_SSE_Conv4 CVTSS2SI { asmout, "cvtss2si" };
-Instruction_SSE_Conv4 CVTTSS2SI { asmout, "cvttss2si" };
+Instruction4_Type9 CVTSS2SI { asmout, "cvtss2si" };
+Instruction4_Type9 CVTTSS2SI { asmout, "cvttss2si" };
 
 // SSE MXCSR state management instructions
 Instruction1_Type14 LDMXCSR { asmout, "ldmxcsr" };
@@ -1085,9 +1085,9 @@ Instruction_AVX_Type1 VTESTPD { asmout, "vtestpd" };
 Instruction_AVX_Type21 VCVTSI2SS { asmout, "vcvtsi2ss" };
 Instruction_AVX_Type21 VCVTSI2SD { asmout, "vcvtsi2sd" };
 Instruction_CVTSD2SI VCVTSD2SI { asmout, "vcvtsd2si" };
-Instruction_SSE_Conv4 VCVTTSS2SI { asmout, "vcvttss2si" };
+Instruction4_Type9 VCVTTSS2SI { asmout, "vcvttss2si" };
 Instruction_CVTSD2SI VCVTTSD2SI { asmout, "vcvttsd2si" };
-Instruction_SSE_Conv4 VCVTSS2SI { asmout, "vcvtss2si" };
+Instruction4_Type9 VCVTSS2SI { asmout, "vcvtss2si" };
 
 // System instructions
 Instruction1_Type1 CLAC { asmout, "clac" };

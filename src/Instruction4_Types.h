@@ -70,7 +70,7 @@ using Instruction4_Type8 = Instruction_4
     Operands_reg_mem<xmm, m64, suffix_m64>
 >;
 
-using Instruction_SSE_Conv4 = Instruction_4
+using Instruction4_Type9 = Instruction_4
 <
     Operands_reg_reg<r32, xmm, no_suffix>,
     Operands_reg_mem<r32, m32, no_suffix>,

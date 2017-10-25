@@ -1066,8 +1066,8 @@ extern Instruction2_Type17 CVTPI2PS;
 extern Instruction4_Type8 CVTSI2SS;
 extern Instruction2_Type18 CVTPS2PI;
 extern Instruction2_Type18 CVTTPS2PI;
-extern Instruction_SSE_Conv4 CVTSS2SI;
-extern Instruction_SSE_Conv4 CVTTSS2SI;
+extern Instruction4_Type9 CVTSS2SI;
+extern Instruction4_Type9 CVTTSS2SI;
 
 // SSE MXCSR state management instructions
 extern Instruction1_Type14 LDMXCSR;
@@ -1488,9 +1488,9 @@ extern Instruction_AVX_Type1 VTESTPD;
 extern Instruction_AVX_Type21 VCVTSI2SS;
 extern Instruction_AVX_Type21 VCVTSI2SD;
 extern Instruction_CVTSD2SI VCVTSD2SI;
-extern Instruction_SSE_Conv4 VCVTTSS2SI;
+extern Instruction4_Type9 VCVTTSS2SI;
 extern Instruction_CVTSD2SI VCVTTSD2SI;
-extern Instruction_SSE_Conv4 VCVTSS2SI;
+extern Instruction4_Type9 VCVTSS2SI;
 
 // System instructions
 extern Instruction1_Type1 CLAC;

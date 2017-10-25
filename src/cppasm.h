@@ -1063,7 +1063,7 @@ extern Instruction2_Type10 UNPCKLPS;
 
 // SSE convertion instructions
 extern Instruction2_Type17 CVTPI2PS;
-extern Instruction_SSE_Conv2 CVTSI2SS;
+extern Instruction4_Type8 CVTSI2SS;
 extern Instruction2_Type18 CVTPS2PI;
 extern Instruction2_Type18 CVTTPS2PI;
 extern Instruction_SSE_Conv4 CVTSS2SI;
@@ -1153,7 +1153,7 @@ extern Instruction2_Type11 CVTSS2SD;
 extern Instruction2_Type14 CVTSD2SS;
 extern Instruction_CVTSD2SI CVTSD2SI;
 extern Instruction_CVTSD2SI CVTTSD2SI;
-extern Instruction_CVTSI2SD CVTSI2SD;
+extern Instruction4_Type8 CVTSI2SD;
 
 // SSE2 packed single-precision floating point values
 extern Instruction2_Type10 CVTDQ2PS;

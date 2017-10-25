@@ -62,7 +62,7 @@ using Instruction4_Type7 = Instruction_4
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction_SSE_Conv2 = Instruction_4
+using Instruction4_Type8 = Instruction_4
 <
     Operands_reg_reg<xmm, r32, no_suffix>,
     Operands_reg_mem<xmm, m32, suffix_m32>,
@@ -108,14 +108,6 @@ using Instruction_CVTSD2SI = Instruction_4
     Operands_reg_mem<r32, m64, no_suffix>,
     Operands_reg_reg<r64, xmm, no_suffix>,
     Operands_reg_mem<r64, m64, no_suffix>
->;
-
-using Instruction_CVTSI2SD = Instruction_4
-<
-    Operands_reg_reg<xmm, r32, no_suffix>,
-    Operands_reg_mem<xmm, m32, no_suffix>,
-    Operands_reg_reg<xmm, r64, no_suffix>,
-    Operands_reg_mem<xmm, m64, no_suffix>
 >;
 
 using Instruction_SSE4_1_Type3 = Instruction_4

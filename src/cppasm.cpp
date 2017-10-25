@@ -661,7 +661,7 @@ Instruction2_Type10 UNPCKLPS { asmout, "unpcklps" };
 
 // SSE convertion instructions
 Instruction2_Type17 CVTPI2PS { asmout, "cvtpi2ps" };
-Instruction_SSE_Conv2 CVTSI2SS { asmout, "cvtsi2ss" };
+Instruction4_Type8 CVTSI2SS { asmout, "cvtsi2ss" };
 Instruction2_Type18 CVTPS2PI { asmout, "cvtps2pi" };
 Instruction2_Type18 CVTTPS2PI { asmout, "cvttps2pi" };
 Instruction_SSE_Conv4 CVTSS2SI { asmout, "cvtss2si" };
@@ -751,7 +751,7 @@ Instruction2_Type11 CVTSS2SD { asmout, "cvtss2sd" };
 Instruction2_Type14 CVTSD2SS { asmout, "cvtsd2ss" };
 Instruction_CVTSD2SI CVTSD2SI { asmout, "cvtsd2si" };
 Instruction_CVTSD2SI CVTTSD2SI { asmout, "cvttsd2si" };
-Instruction_CVTSI2SD CVTSI2SD { asmout, "cvtsi2sd" };
+Instruction4_Type8 CVTSI2SD { asmout, "cvtsi2sd" };
 
 // SSE2 packed single-precision floating point values
 Instruction2_Type10 CVTDQ2PS { asmout, "cvtdq2ps" };

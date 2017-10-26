@@ -812,7 +812,7 @@ extern Instruction3_Type1 LSS;
 
 // Miscelleneous instructions
 extern Instruction3_Type1 LEA;
-extern Instruction_NOP NOP;
+extern Instruction5_Type1 NOP;
 extern Instruction1_Type1 UD;
 extern Instruction1_Type1 UD1;
 extern Instruction1_Type1 UD2;
@@ -1059,7 +1059,7 @@ extern Instruction1_Type14 STMXCSR;
 // SSE 64-bit SIMD integer instructions
 extern Instruction4_Type1 PAVGB;
 extern Instruction4_Type1 PAVGW;
-extern Instruction_PEXTRW PEXTRW;
+extern Instruction5_Type2 PEXTRW;
 extern Instruction4_Type11 PINSRW;
 extern Instruction4_Type1 PMAXUB;
 extern Instruction4_Type1 PMAXSW;

@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION5_TYPES_H
 
-using Instruction_NOP = Instruction_5
+using Instruction5_Type1 = Instruction_5
 <
     Operands_none,
     Operands_reg<r16>,
@@ -15,7 +15,7 @@ using Instruction_NOP = Instruction_5
     Operands_mem<m32, suffix_m32>
 >;
 
-using Instruction_PEXTRW = Instruction_5
+using Instruction5_Type2 = Instruction_5
 <
     Operands_reg_reg_imm<r32, mm, imm8>,
     Operands_reg_reg_imm<r64, mm, imm8>,

@@ -427,7 +427,7 @@ Instruction3_Type1 LSS { asmout, "lss" };
 
 // Miscelleneous instructions
 Instruction3_Type1 LEA { asmout, "lea" };
-Instruction_NOP NOP { asmout, "nop" };
+Instruction5_Type1 NOP { asmout, "nop" };
 Instruction1_Type1 UD { asmout, ".byte 0x0F, 0xFF" };
 Instruction1_Type1 UD1 { asmout, "ud1" };
 Instruction1_Type1 UD2 { asmout, "ud2" };
@@ -674,7 +674,7 @@ Instruction1_Type14 STMXCSR { asmout, "stmxcsr" };
 // SSE 64-bit SIMD integer instructions
 Instruction4_Type1 PAVGB { asmout, "pavgb" };
 Instruction4_Type1 PAVGW { asmout, "pavgw" };
-Instruction_PEXTRW PEXTRW { asmout, "pextrw" };
+Instruction5_Type2 PEXTRW { asmout, "pextrw" };
 Instruction4_Type11 PINSRW { asmout, "pinsrw" };
 Instruction4_Type1 PMAXUB { asmout, "pmaxub" };
 Instruction4_Type1 PMAXSW { asmout, "pmaxsw" };

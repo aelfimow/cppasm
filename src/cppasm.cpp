@@ -398,7 +398,7 @@ Instruction6_Type3 IN { asmout, "in" };
 Instruction1_Type1 INSB { asmout, "insb" };
 Instruction1_Type1 INSW { asmout, "insw" };
 Instruction1_Type1 INSD { asmout, "insl" };
-Instruction_OUT OUT { asmout, "out" };
+Instruction6_Type4 OUT { asmout, "out" };
 Instruction1_Type1 OUTSB { asmout, "outsb" };
 Instruction1_Type1 OUTSW { asmout, "outsw" };
 Instruction1_Type1 OUTSD { asmout, "outsl" };

@@ -36,7 +36,7 @@ using Instruction6_Type3 = Instruction_6
     Operands_reg_reg<r32, r16, no_suffix>
 >;
 
-using Instruction_OUT = Instruction_6
+using Instruction6_Type4 = Instruction_6
 <
     Operands_imm_reg<imm8, r8>,
     Operands_imm_reg<imm8, r16>,

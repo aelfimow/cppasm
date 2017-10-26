@@ -724,7 +724,7 @@ extern Instruction6_Type3 IN;
 extern Instruction1_Type1 INSB;
 extern Instruction1_Type1 INSW;
 extern Instruction1_Type1 INSD;
-extern Instruction_OUT OUT;
+extern Instruction6_Type4 OUT;
 extern Instruction1_Type1 OUTSB;
 extern Instruction1_Type1 OUTSW;
 extern Instruction1_Type1 OUTSD;

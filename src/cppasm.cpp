@@ -394,7 +394,7 @@ Instruction1_Type11 REPNE { asmout, "repne" };
 Instruction1_Type11 REPNZ { asmout, "repnz" };
 
 // I/O instructions
-Instruction_IN IN { asmout, "in" };
+Instruction6_Type3 IN { asmout, "in" };
 Instruction1_Type1 INSB { asmout, "insb" };
 Instruction1_Type1 INSW { asmout, "insw" };
 Instruction1_Type1 INSD { asmout, "insl" };

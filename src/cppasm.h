@@ -720,7 +720,7 @@ extern Instruction1_Type11 REPNE;
 extern Instruction1_Type11 REPNZ;
 
 // I/O instructions
-extern Instruction_IN IN;
+extern Instruction6_Type3 IN;
 extern Instruction1_Type1 INSB;
 extern Instruction1_Type1 INSW;
 extern Instruction1_Type1 INSD;

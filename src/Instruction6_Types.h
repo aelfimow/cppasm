@@ -26,7 +26,7 @@ using Instruction6_Type2 = Instruction_6
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction_IN = Instruction_6
+using Instruction6_Type3 = Instruction_6
 <
     Operands_reg_imm<r8, imm8>,
     Operands_reg_imm<r16, imm8>,

@@ -54,7 +54,7 @@ using Instruction8_Type4 = Instruction_8
     Operands_mem_reg<m64, r64, no_suffix>
 >;
 
-using Instruction_AVX_Type19 = Instruction_8
+using Instruction8_Type5 = Instruction_8
 <
     Operands_reg_reg_reg<xmm, xmm, xmm>,
     Operands_reg_reg_mem<xmm, xmm, m128>,

@@ -602,14 +602,14 @@ Instruction4_Type1 POR   { asmout, "por"   };
 Instruction4_Type1 PXOR  { asmout, "pxor"  };
 
 // MMX shift and rotate instructions
-Instruction_MMX_Shift PSLLW { asmout, "psllw" };
-Instruction_MMX_Shift PSLLD { asmout, "pslld" };
-Instruction_MMX_Shift PSLLQ { asmout, "psllq" };
-Instruction_MMX_Shift PSRLW { asmout, "psrlw" };
-Instruction_MMX_Shift PSRLD { asmout, "psrld" };
-Instruction_MMX_Shift PSRLQ { asmout, "psrlq" };
-Instruction_MMX_Shift PSRAW { asmout, "psraw" };
-Instruction_MMX_Shift PSRAD { asmout, "psrad" };
+Instruction6_Type1 PSLLW { asmout, "psllw" };
+Instruction6_Type1 PSLLD { asmout, "pslld" };
+Instruction6_Type1 PSLLQ { asmout, "psllq" };
+Instruction6_Type1 PSRLW { asmout, "psrlw" };
+Instruction6_Type1 PSRLD { asmout, "psrld" };
+Instruction6_Type1 PSRLQ { asmout, "psrlq" };
+Instruction6_Type1 PSRAW { asmout, "psraw" };
+Instruction6_Type1 PSRAD { asmout, "psrad" };
 
 // MMX state management instructions
 Instruction1_Type1 EMMS { asmout, "emms" };

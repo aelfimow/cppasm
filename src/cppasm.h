@@ -928,14 +928,14 @@ extern Instruction4_Type1 POR;
 extern Instruction4_Type1 PXOR;
 
 // MMX shift and rotate instructions
-extern Instruction_MMX_Shift PSLLW;
-extern Instruction_MMX_Shift PSLLD;
-extern Instruction_MMX_Shift PSLLQ;
-extern Instruction_MMX_Shift PSRLW;
-extern Instruction_MMX_Shift PSRLD;
-extern Instruction_MMX_Shift PSRLQ;
-extern Instruction_MMX_Shift PSRAW;
-extern Instruction_MMX_Shift PSRAD;
+extern Instruction6_Type1 PSLLW;
+extern Instruction6_Type1 PSLLD;
+extern Instruction6_Type1 PSLLQ;
+extern Instruction6_Type1 PSRLW;
+extern Instruction6_Type1 PSRLD;
+extern Instruction6_Type1 PSRLQ;
+extern Instruction6_Type1 PSRAW;
+extern Instruction6_Type1 PSRAD;
 
 // MMX state management instructions
 extern Instruction1_Type1 EMMS;

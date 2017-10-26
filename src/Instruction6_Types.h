@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION6_TYPES_H
 
-using Instruction_MMX_Shift = Instruction_6
+using Instruction6_Type1 = Instruction_6
 <
     Operands_reg_reg<mm, mm, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>,

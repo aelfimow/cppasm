@@ -313,8 +313,8 @@ Instruction2_Type7 SETZ { asmout, "setz" };
 Instruction_TEST TEST { asmout, "test" };
 
 // Control transfer instructions
-Instruction_Branch JMP { asmout, "jmp" };
-Instruction_Branch JMP_FAR { asmout, "ljmp" };
+Instruction7_Type1 JMP { asmout, "jmp" };
+Instruction7_Type1 JMP_FAR { asmout, "ljmp" };
 Instruction1_Type4 JA { asmout, "ja" };
 Instruction1_Type4 JAE { asmout, "jae" };
 Instruction1_Type4 JB { asmout, "jb" };
@@ -348,8 +348,8 @@ Instruction1_Type4 JPE { asmout, "jpe" };
 Instruction1_Type4 JPO { asmout, "jpo" };
 Instruction1_Type4 JS { asmout, "js" };
 Instruction1_Type4 JZ { asmout, "jz" };
-Instruction_Branch CALL { asmout, "call" };
-Instruction_Branch CALL_FAR { asmout, "lcall" };
+Instruction7_Type1 CALL { asmout, "call" };
+Instruction7_Type1 CALL_FAR { asmout, "lcall" };
 Instruction2_Type2 RET { asmout, "ret" };
 Instruction2_Type2 RET_FAR { asmout, "lret" };
 Instruction1_Type9 ENTER { asmout, "enter" };

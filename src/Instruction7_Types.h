@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION7_TYPES_H
 
-using Instruction_Branch = Instruction_7
+using Instruction7_Type1 = Instruction_7
 <
     Operands_string,
     Operands_reg<r16>,

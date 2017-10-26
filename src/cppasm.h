@@ -47,6 +47,7 @@ extern const std::string suffix_m64int;
 #include "Instruction3_Types.h"
 #include "Instruction4_Types.h"
 #include "Instruction5_Types.h"
+#include "Instruction6_Types.h"
 
 using Instruction_MOVD = Instruction_8
 <
@@ -70,16 +71,6 @@ using Instruction_MOVQ = Instruction_8
     Operands_reg_mem<xmm, m64, no_suffix>,
     Operands_reg_reg<r64, xmm, no_suffix>,
     Operands_reg_mem<m64, xmm, no_suffix>
->;
-
-using Instruction_MMX_Shift = Instruction_6
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_reg_imm<mm, imm8>,
-    Operands_reg_imm<xmm, imm8>
 >;
 
 using Instruction_Arithm1 = Instruction_26
@@ -124,16 +115,6 @@ using Instruction_Arithm2 = Instruction_8
     Operands_mem<m64, suffix_m64>
 >;
 
-using Instruction_CMOVx = Instruction_6
-<
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_reg_mem<r16, m16, no_suffix>,
-    Operands_reg_reg<r32, r32, no_suffix>,
-    Operands_reg_mem<r32, m32, no_suffix>,
-    Operands_reg_reg<r64, r64, no_suffix>,
-    Operands_reg_mem<r64, m64, no_suffix>
->;
-
 using Instruction_PUSH = Instruction_10
 <
     Operands_reg<r16>,
@@ -158,16 +139,6 @@ using Instruction_CMPXCHG = Instruction_8
     Operands_mem_reg<m32, r32, no_suffix>,
     Operands_reg_reg<r64, r64, no_suffix>,
     Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_BitScan = Instruction_6
-<
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_reg_mem<r16, m16, no_suffix>,
-    Operands_reg_reg<r32, r32, no_suffix>,
-    Operands_reg_mem<r32, m32, no_suffix>,
-    Operands_reg_reg<r64, r64, no_suffix>,
-    Operands_reg_mem<r64, m64, no_suffix>
 >;
 
 using Instruction_BitTest = Instruction_12
@@ -254,26 +225,6 @@ using Instruction_POP = Instruction_7
     Operands_reg<r64>,
     Operands_mem<m64, suffix_m64>,
     Operands_reg<Sreg>
->;
-
-using Instruction_IN = Instruction_6
-<
-    Operands_reg_imm<r8, imm8>,
-    Operands_reg_imm<r16, imm8>,
-    Operands_reg_imm<r32, imm8>,
-    Operands_reg_reg<r8, r16, no_suffix>,
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_reg_reg<r32, r16, no_suffix>
->;
-
-using Instruction_OUT = Instruction_6
-<
-    Operands_imm_reg<imm8, r8>,
-    Operands_imm_reg<imm8, r16>,
-    Operands_imm_reg<imm8, r32>,
-    Operands_reg_reg<r16, r8, no_suffix>,
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_reg_reg<r16, r32, no_suffix>
 >;
 
 using Instruction_MOV = Instruction_36
@@ -366,16 +317,6 @@ using Instruction_Shift = Instruction_16
     Operands_mem_imm<m64, imm8, suffix_m64>,
     Operands_reg_reg<r64, r8, no_suffix>,
     Operands_mem_reg<m64, r8, suffix_m64>
->;
-
-using Instruction_AVX_Type8 = Instruction_6
-<
-    Operands_reg_reg<xmm, xmm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_mem_reg<m128, xmm, no_suffix>,
-    Operands_reg_reg<ymm, ymm, no_suffix>,
-    Operands_reg_mem<ymm, m256, no_suffix>,
-    Operands_mem_reg<m256, ymm, no_suffix>
 >;
 
 using Instruction_AVX_Type19 = Instruction_8

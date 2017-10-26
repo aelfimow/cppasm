@@ -46,7 +46,7 @@ using Instruction6_Type4 = Instruction_6
     Operands_reg_reg<r16, r32, no_suffix>
 >;
 
-using Instruction_AVX_Type8 = Instruction_6
+using Instruction6_Type5 = Instruction_6
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,

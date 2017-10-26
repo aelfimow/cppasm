@@ -48,6 +48,7 @@ extern const std::string suffix_m64int;
 #include "Instruction4_Types.h"
 #include "Instruction5_Types.h"
 #include "Instruction6_Types.h"
+#include "Instruction7_Types.h"
 
 using Instruction_MOVD = Instruction_8
 <
@@ -157,17 +158,6 @@ using Instruction_BitTest = Instruction_12
     Operands_mem_imm<m64, imm8, suffix_m64>
 >;
 
-using Instruction_Branch = Instruction_7
-<
-    Operands_string,
-    Operands_reg<r16>,
-    Operands_mem<m16, no_suffix>,
-    Operands_reg<r32>,
-    Operands_mem<m32, no_suffix>,
-    Operands_reg<r64>,
-    Operands_mem<m64, no_suffix>
->;
-
 using Instruction_XCHG = Instruction_12
 <
     Operands_reg_reg<r8, r8, no_suffix>,
@@ -214,17 +204,6 @@ using Instruction_XADD = Instruction_8
     Operands_mem_reg<m32, r32, no_suffix>,
     Operands_reg_reg<r64, r64, no_suffix>,
     Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_POP = Instruction_7
-<
-    Operands_reg<r16>,
-    Operands_mem<m16, suffix_m16>,
-    Operands_reg<r32>,
-    Operands_mem<m32, suffix_m32>,
-    Operands_reg<r64>,
-    Operands_mem<m64, suffix_m64>,
-    Operands_reg<Sreg>
 >;
 
 using Instruction_MOV = Instruction_36

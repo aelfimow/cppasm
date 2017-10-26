@@ -42,19 +42,7 @@ using Instruction8_Type3 = Instruction_8
     Operands_mem<m64, suffix_m64>
 >;
 
-using Instruction_CMPXCHG = Instruction_8
-<
-    Operands_reg_reg<r8, r8, no_suffix>,
-    Operands_mem_reg<m8, r8, no_suffix>,
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_mem_reg<m16, r16, no_suffix>,
-    Operands_reg_reg<r32, r32, no_suffix>,
-    Operands_mem_reg<m32, r32, no_suffix>,
-    Operands_reg_reg<r64, r64, no_suffix>,
-    Operands_mem_reg<m64, r64, no_suffix>
->;
-
-using Instruction_XADD = Instruction_8
+using Instruction8_Type4 = Instruction_8
 <
     Operands_reg_reg<r8, r8, no_suffix>,
     Operands_mem_reg<m8, r8, no_suffix>,

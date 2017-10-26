@@ -460,8 +460,8 @@ extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
 extern Instruction_XCHG XCHG;
 extern Instruction2_Type3 BSWAP;
-extern Instruction_XADD XADD;
-extern Instruction_CMPXCHG CMPXCHG;
+extern Instruction8_Type4 XADD;
+extern Instruction8_Type4 CMPXCHG;
 extern Instruction1_Type7 CMPXCHG8B;
 extern Instruction1_Type8 CMPXCHG16B;
 

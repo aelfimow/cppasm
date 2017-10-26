@@ -226,8 +226,8 @@ Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
 Instruction_XCHG XCHG { asmout, "xchg" };
 Instruction2_Type3 BSWAP { asmout, "bswap" };
-Instruction_XADD XADD { asmout, "xadd" };
-Instruction_CMPXCHG CMPXCHG { asmout, "cmpxchg" };
+Instruction8_Type4 XADD { asmout, "xadd" };
+Instruction8_Type4 CMPXCHG { asmout, "cmpxchg" };
 Instruction1_Type7 CMPXCHG8B { asmout, "cmpxchg8b" };
 Instruction1_Type8 CMPXCHG16B { asmout, "cmpxchg16b" };
 

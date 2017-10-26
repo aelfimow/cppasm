@@ -555,7 +555,7 @@ Instruction1_Type2 FXSAVE { asmout, "fxsave" };
 Instruction1_Type2 FXRSTOR { asmout, "fxrstor" };
 
 // MMX data transfer instructions
-Instruction_MOVD MOVD { asmout, "movd" };
+Instruction8_Type1 MOVD { asmout, "movd" };
 Instruction_MOVQ MOVQ { asmout, "movq" };
 
 // MMX conversion instructions

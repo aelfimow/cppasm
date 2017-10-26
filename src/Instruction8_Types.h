@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION8_TYPES_H
 
-using Instruction_MOVD = Instruction_8
+using Instruction8_Type1 = Instruction_8
 <
     Operands_reg_reg<mm, r32, no_suffix>,
     Operands_reg_mem<mm, m32, no_suffix>,

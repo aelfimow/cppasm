@@ -18,7 +18,7 @@ using Instruction8_Type1 = Instruction_8
     Operands_reg_mem<m32, xmm, no_suffix>
 >;
 
-using Instruction_MOVQ = Instruction_8
+using Instruction8_Type2 = Instruction_8
 <
     Operands_reg_reg<mm, r64, no_suffix>,
     Operands_reg_mem<mm, m64, no_suffix>,

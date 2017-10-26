@@ -790,7 +790,7 @@ extern Instruction1_Type2 FXRSTOR;
 
 // MMX data transfer instructions
 extern Instruction8_Type1 MOVD;
-extern Instruction_MOVQ MOVQ;
+extern Instruction8_Type2 MOVQ;
 
 // MMX conversion instructions
 extern Instruction4_Type1 PACKSSWB;

@@ -46,6 +46,7 @@ extern const std::string suffix_m64int;
 #include "Instruction2_Types.h"
 #include "Instruction3_Types.h"
 #include "Instruction4_Types.h"
+#include "Instruction5_Types.h"
 
 using Instruction_MOVD = Instruction_8
 <
@@ -365,24 +366,6 @@ using Instruction_Shift = Instruction_16
     Operands_mem_imm<m64, imm8, suffix_m64>,
     Operands_reg_reg<r64, r8, no_suffix>,
     Operands_mem_reg<m64, r8, suffix_m64>
->;
-
-using Instruction_NOP = Instruction_5
-<
-    Operands_none,
-    Operands_reg<r16>,
-    Operands_mem<m16, suffix_m16>,
-    Operands_reg<r32>,
-    Operands_mem<m32, suffix_m32>
->;
-
-using Instruction_PEXTRW = Instruction_5
-<
-    Operands_reg_reg_imm<r32, mm, imm8>,
-    Operands_reg_reg_imm<r64, mm, imm8>,
-    Operands_reg_reg_imm<r32, xmm, imm8>,
-    Operands_reg_reg_imm<r64, xmm, imm8>,
-    Operands_mem_reg_imm<m16, xmm, imm8>
 >;
 
 using Instruction_AVX_Type8 = Instruction_6

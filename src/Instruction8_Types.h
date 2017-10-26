@@ -30,7 +30,7 @@ using Instruction8_Type2 = Instruction_8
     Operands_reg_mem<m64, xmm, no_suffix>
 >;
 
-using Instruction_Arithm2 = Instruction_8
+using Instruction8_Type3 = Instruction_8
 <
     Operands_reg<r8>,
     Operands_reg<r16>,

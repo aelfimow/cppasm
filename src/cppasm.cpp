@@ -239,13 +239,13 @@ Instruction_Arithm1 SBB { asmout, "sbb" };
 Instruction_Arithm1 CMP { asmout, "cmp" };
 Instruction4_Type7 ADCX { asmout, "adcx" };
 Instruction4_Type7 ADOX { asmout, "adox" };
-Instruction_Arithm2 MUL { asmout, "mul" };
-Instruction_Arithm2 IMUL { asmout, "imul" };
-Instruction_Arithm2 DIV { asmout, "div" };
-Instruction_Arithm2 IDIV { asmout, "idiv" };
-Instruction_Arithm2 NEG { asmout, "neg" };
-Instruction_Arithm2 INC { asmout, "inc" };
-Instruction_Arithm2 DEC { asmout, "dec" };
+Instruction8_Type3 MUL { asmout, "mul" };
+Instruction8_Type3 IMUL { asmout, "imul" };
+Instruction8_Type3 DIV { asmout, "div" };
+Instruction8_Type3 IDIV { asmout, "idiv" };
+Instruction8_Type3 NEG { asmout, "neg" };
+Instruction8_Type3 INC { asmout, "inc" };
+Instruction8_Type3 DEC { asmout, "dec" };
 
 // Decimal arithmetic instructions
 Instruction1_Type1 AAA { asmout, "aaa" };
@@ -259,7 +259,7 @@ Instruction1_Type1 DAS { asmout, "das" };
 Instruction_Arithm1 AND { asmout, "and" };
 Instruction_Arithm1 OR { asmout, "or" };
 Instruction_Arithm1 XOR { asmout, "xor" };
-Instruction_Arithm2 NOT { asmout, "not" };
+Instruction8_Type3 NOT { asmout, "not" };
 
 // Shift and rotate instructions
 Instruction_Shift SAL { asmout, "sal" };

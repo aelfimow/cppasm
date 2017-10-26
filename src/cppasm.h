@@ -473,13 +473,13 @@ extern Instruction_Arithm1 SBB;
 extern Instruction_Arithm1 CMP;
 extern Instruction4_Type7 ADCX;
 extern Instruction4_Type7 ADOX;
-extern Instruction_Arithm2 MUL;
-extern Instruction_Arithm2 IMUL;
-extern Instruction_Arithm2 DIV;
-extern Instruction_Arithm2 IDIV;
-extern Instruction_Arithm2 NEG;
-extern Instruction_Arithm2 INC;
-extern Instruction_Arithm2 DEC;
+extern Instruction8_Type3 MUL;
+extern Instruction8_Type3 IMUL;
+extern Instruction8_Type3 DIV;
+extern Instruction8_Type3 IDIV;
+extern Instruction8_Type3 NEG;
+extern Instruction8_Type3 INC;
+extern Instruction8_Type3 DEC;
 
 // Decimal arithmetic instructions
 extern Instruction1_Type1 AAA;
@@ -493,7 +493,7 @@ extern Instruction1_Type1 DAS;
 extern Instruction_Arithm1 AND;
 extern Instruction_Arithm1 OR;
 extern Instruction_Arithm1 XOR;
-extern Instruction_Arithm2 NOT;
+extern Instruction8_Type3 NOT;
 
 // Shift and rotate instructions
 extern Instruction_Shift SAL;

@@ -16,17 +16,7 @@ using Instruction6_Type1 = Instruction_6
     Operands_reg_imm<xmm, imm8>
 >;
 
-using Instruction_CMOVx = Instruction_6
-<
-    Operands_reg_reg<r16, r16, no_suffix>,
-    Operands_reg_mem<r16, m16, no_suffix>,
-    Operands_reg_reg<r32, r32, no_suffix>,
-    Operands_reg_mem<r32, m32, no_suffix>,
-    Operands_reg_reg<r64, r64, no_suffix>,
-    Operands_reg_mem<r64, m64, no_suffix>
->;
-
-using Instruction_BitScan = Instruction_6
+using Instruction6_Type2 = Instruction_6
 <
     Operands_reg_reg<r16, r16, no_suffix>,
     Operands_reg_mem<r16, m16, no_suffix>,

@@ -17,7 +17,7 @@ using Instruction7_Type1 = Instruction_7
     Operands_mem<m64, no_suffix>
 >;
 
-using Instruction_POP = Instruction_7
+using Instruction7_Type2 = Instruction_7
 <
     Operands_reg<r16>,
     Operands_mem<m16, suffix_m16>,

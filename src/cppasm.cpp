@@ -216,7 +216,7 @@ Instruction6_Type2 CMOVZ { asmout, "cmovz" };
 Instruction_PUSH PUSH { asmout, "push" };
 Instruction1_Type1 PUSHA { asmout, "pusha" };
 Instruction1_Type1 PUSHAD { asmout, "pushal" };
-Instruction_POP POP { asmout, "pop" };
+Instruction7_Type2 POP { asmout, "pop" };
 Instruction1_Type1 POPA { asmout, "popa" };
 Instruction1_Type1 POPAD { asmout, "popal" };
 Instruction1_Type1 CWD { asmout, "cwtd" };

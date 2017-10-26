@@ -521,7 +521,7 @@ extern Instruction6_Type2 CMOVZ;
 extern Instruction_PUSH PUSH;
 extern Instruction1_Type1 PUSHA;
 extern Instruction1_Type1 PUSHAD;
-extern Instruction_POP POP;
+extern Instruction7_Type2 POP;
 extern Instruction1_Type1 POPA;
 extern Instruction1_Type1 POPAD;
 extern Instruction1_Type1 CWD;

@@ -310,7 +310,7 @@ Instruction2_Type7 SETPE { asmout, "setpe" };
 Instruction2_Type7 SETPO { asmout, "setpo" };
 Instruction2_Type7 SETS { asmout, "sets" };
 Instruction2_Type7 SETZ { asmout, "setz" };
-Instruction_TEST TEST { asmout, "test" };
+Instruction16_Type1 TEST { asmout, "test" };
 
 // Control transfer instructions
 Instruction7_Type1 JMP { asmout, "jmp" };

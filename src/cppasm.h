@@ -429,7 +429,7 @@ extern Instruction2_Type7 SETPE;
 extern Instruction2_Type7 SETPO;
 extern Instruction2_Type7 SETS;
 extern Instruction2_Type7 SETZ;
-extern Instruction_TEST TEST;
+extern Instruction16_Type1 TEST;
 
 // Control transfer instructions
 extern Instruction7_Type1 JMP;

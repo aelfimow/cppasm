@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION16_TYPES_H
 
-using Instruction_TEST = Instruction_16
+using Instruction16_Type1 = Instruction_16
 <
     Operands_reg_imm<r8, imm8>,
     Operands_mem_imm<m8, imm8, suffix_m8>,

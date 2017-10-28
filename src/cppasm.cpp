@@ -224,7 +224,7 @@ Instruction1_Type1 CDQ { asmout, "cltd" };
 Instruction1_Type1 CQO { asmout, "cqto" };
 Instruction_MovWithExt MOVSX { asmout, "movs" };
 Instruction_MovWithExt MOVZX { asmout, "movz" };
-Instruction_XCHG XCHG { asmout, "xchg" };
+Instruction12_Type2 XCHG { asmout, "xchg" };
 Instruction2_Type3 BSWAP { asmout, "bswap" };
 Instruction8_Type4 XADD { asmout, "xadd" };
 Instruction8_Type4 CMPXCHG { asmout, "cmpxchg" };

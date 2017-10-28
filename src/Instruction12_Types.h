@@ -22,7 +22,7 @@ using Instruction12_Type1 = Instruction_12
     Operands_mem_imm<m64, imm8, suffix_m64>
 >;
 
-using Instruction_XCHG = Instruction_12
+using Instruction12_Type2 = Instruction_12
 <
     Operands_reg_reg<r8, r8, no_suffix>,
     Operands_mem_reg<m8, r8, no_suffix>,

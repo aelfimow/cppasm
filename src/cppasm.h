@@ -382,7 +382,7 @@ extern Instruction1_Type1 CDQ;
 extern Instruction1_Type1 CQO;
 extern Instruction_MovWithExt MOVSX;
 extern Instruction_MovWithExt MOVZX;
-extern Instruction_XCHG XCHG;
+extern Instruction12_Type2 XCHG;
 extern Instruction2_Type3 BSWAP;
 extern Instruction8_Type4 XADD;
 extern Instruction8_Type4 CMPXCHG;

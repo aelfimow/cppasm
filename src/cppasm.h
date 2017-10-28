@@ -432,10 +432,10 @@ extern Instruction_ShiftDouble SHLD;
 extern Instruction_ShiftDouble SHRD;
 
 // Bit and byte instructions
-extern Instruction_BitTest BT;
-extern Instruction_BitTest BTC;
-extern Instruction_BitTest BTR;
-extern Instruction_BitTest BTS;
+extern Instruction12_Type1 BT;
+extern Instruction12_Type1 BTC;
+extern Instruction12_Type1 BTR;
+extern Instruction12_Type1 BTS;
 extern Instruction6_Type2 BSF;
 extern Instruction6_Type2 BSR;
 extern Instruction2_Type7 SETA;

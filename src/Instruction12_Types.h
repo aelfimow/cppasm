@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION12_TYPES_H
 
-using Instruction_BitTest = Instruction_12
+using Instruction12_Type1 = Instruction_12
 <
     Operands_reg_reg<r16, r16, no_suffix>,
     Operands_mem_reg<m16, r16, no_suffix>,

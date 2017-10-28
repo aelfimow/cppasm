@@ -381,14 +381,14 @@ extern Instruction_Arithm1 XOR;
 extern Instruction8_Type3 NOT;
 
 // Shift and rotate instructions
-extern Instruction_Shift SAL;
-extern Instruction_Shift SAR;
-extern Instruction_Shift SHL;
-extern Instruction_Shift SHR;
-extern Instruction_Shift RCL;
-extern Instruction_Shift RCR;
-extern Instruction_Shift ROL;
-extern Instruction_Shift ROR;
+extern Instruction16_Type2 SAL;
+extern Instruction16_Type2 SAR;
+extern Instruction16_Type2 SHL;
+extern Instruction16_Type2 SHR;
+extern Instruction16_Type2 RCL;
+extern Instruction16_Type2 RCR;
+extern Instruction16_Type2 ROL;
+extern Instruction16_Type2 ROR;
 extern Instruction12_Type4 SHLD;
 extern Instruction12_Type4 SHRD;
 

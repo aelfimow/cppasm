@@ -262,14 +262,14 @@ Instruction_Arithm1 XOR { asmout, "xor" };
 Instruction8_Type3 NOT { asmout, "not" };
 
 // Shift and rotate instructions
-Instruction_Shift SAL { asmout, "sal" };
-Instruction_Shift SAR { asmout, "sar" };
-Instruction_Shift SHL { asmout, "shl" };
-Instruction_Shift SHR { asmout, "shr" };
-Instruction_Shift RCL { asmout, "rcl" };
-Instruction_Shift RCR { asmout, "rcr" };
-Instruction_Shift ROL { asmout, "rol" };
-Instruction_Shift ROR { asmout, "ror" };
+Instruction16_Type2 SAL { asmout, "sal" };
+Instruction16_Type2 SAR { asmout, "sar" };
+Instruction16_Type2 SHL { asmout, "shl" };
+Instruction16_Type2 SHR { asmout, "shr" };
+Instruction16_Type2 RCL { asmout, "rcl" };
+Instruction16_Type2 RCR { asmout, "rcr" };
+Instruction16_Type2 ROL { asmout, "rol" };
+Instruction16_Type2 ROR { asmout, "ror" };
 Instruction12_Type4 SHLD { asmout, "shld" };
 Instruction12_Type4 SHRD { asmout, "shrd" };
 

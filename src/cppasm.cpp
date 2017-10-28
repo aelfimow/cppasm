@@ -183,7 +183,7 @@ dr DR7 { "%dr7" };
 st ST;
 
 // Data transfer instructions
-Instruction_MOV MOV { asmout, "mov" };
+Instruction36_Type1 MOV { asmout, "mov" };
 Instruction6_Type2 CMOVA { asmout, "cmova" };
 Instruction6_Type2 CMOVAE { asmout, "cmovae" };
 Instruction6_Type2 CMOVB { asmout, "cmovb" };

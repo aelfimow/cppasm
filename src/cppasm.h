@@ -234,7 +234,7 @@ extern dr DR7;
 extern st ST;
 
 // Data transfer instructions
-extern Instruction_MOV MOV;
+extern Instruction36_Type1 MOV;
 extern Instruction6_Type2 CMOVA;
 extern Instruction6_Type2 CMOVAE;
 extern Instruction6_Type2 CMOVB;

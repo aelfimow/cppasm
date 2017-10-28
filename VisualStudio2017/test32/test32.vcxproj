@@ -136,6 +136,7 @@
     <ClInclude Include="..\..\src\dr.h" />
     <ClInclude Include="..\..\src\imm.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
+    <ClInclude Include="..\..\src\Instruction10_Types.h" />
     <ClInclude Include="..\..\src\Instruction1_Types.h" />
     <ClInclude Include="..\..\src\Instruction2_Types.h" />
     <ClInclude Include="..\..\src\Instruction3_Types.h" />

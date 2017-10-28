@@ -50,6 +50,7 @@ extern const std::string suffix_m64int;
 #include "Instruction6_Types.h"
 #include "Instruction7_Types.h"
 #include "Instruction8_Types.h"
+#include "Instruction10_Types.h"
 
 using Instruction_Arithm1 = Instruction_26
 <
@@ -79,20 +80,6 @@ using Instruction_Arithm1 = Instruction_26
     Operands_reg_mem<r16, m16, no_suffix>,
     Operands_reg_mem<r32, m32, no_suffix>,
     Operands_reg_mem<r64, m64, no_suffix>
->;
-
-using Instruction_PUSH = Instruction_10
-<
-    Operands_reg<r16>,
-    Operands_reg<r32>,
-    Operands_reg<r64>,
-    Operands_mem<m16, suffix_m16>,
-    Operands_mem<m32, suffix_m32>,
-    Operands_mem<m64, suffix_m64>,
-    Operands_imm<imm8>,
-    Operands_imm<imm16>,
-    Operands_imm<imm32>,
-    Operands_reg<Sreg>
 >;
 
 using Instruction_BitTest = Instruction_12

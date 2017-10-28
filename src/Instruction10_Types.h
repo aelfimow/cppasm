@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION10_TYPES_H
 
-using Instruction_PUSH = Instruction_10
+using Instruction10_Type1 = Instruction_10
 <
     Operands_reg<r16>,
     Operands_reg<r32>,

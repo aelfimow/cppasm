@@ -434,7 +434,7 @@ extern Instruction6_Type2 CMOVPE;
 extern Instruction6_Type2 CMOVPO;
 extern Instruction6_Type2 CMOVS;
 extern Instruction6_Type2 CMOVZ;
-extern Instruction_PUSH PUSH;
+extern Instruction10_Type1 PUSH;
 extern Instruction1_Type1 PUSHA;
 extern Instruction1_Type1 PUSHAD;
 extern Instruction7_Type2 POP;

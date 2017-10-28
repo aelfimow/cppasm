@@ -222,8 +222,8 @@ Instruction1_Type1 POPAD { asmout, "popal" };
 Instruction1_Type1 CWD { asmout, "cwtd" };
 Instruction1_Type1 CDQ { asmout, "cltd" };
 Instruction1_Type1 CQO { asmout, "cqto" };
-Instruction_MovWithExt MOVSX { asmout, "movs" };
-Instruction_MovWithExt MOVZX { asmout, "movz" };
+Instruction12_Type3 MOVSX { asmout, "movs" };
+Instruction12_Type3 MOVZX { asmout, "movz" };
 Instruction12_Type2 XCHG { asmout, "xchg" };
 Instruction2_Type3 BSWAP { asmout, "bswap" };
 Instruction8_Type4 XADD { asmout, "xadd" };
@@ -270,8 +270,8 @@ Instruction_Shift RCL { asmout, "rcl" };
 Instruction_Shift RCR { asmout, "rcr" };
 Instruction_Shift ROL { asmout, "rol" };
 Instruction_Shift ROR { asmout, "ror" };
-Instruction_ShiftDouble SHLD { asmout, "shld" };
-Instruction_ShiftDouble SHRD { asmout, "shrd" };
+Instruction12_Type4 SHLD { asmout, "shld" };
+Instruction12_Type4 SHRD { asmout, "shrd" };
 
 // Bit and byte instructions
 Instruction12_Type1 BT { asmout, "bt" };

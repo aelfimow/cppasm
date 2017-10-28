@@ -38,7 +38,7 @@ using Instruction12_Type2 = Instruction_12
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction_MovWithExt = Instruction_12
+using Instruction12_Type3 = Instruction_12
 <
     Operands_reg_reg<r16, r8, suffix_bw>,
     Operands_reg_mem<r16, m8, suffix_bw>,
@@ -54,7 +54,7 @@ using Instruction_MovWithExt = Instruction_12
     Operands_reg_mem<r64, m32, suffix_lq>
 >;
 
-using Instruction_ShiftDouble = Instruction_12
+using Instruction12_Type4 = Instruction_12
 <
     Operands_reg_reg_imm<r16, r16, imm8>,
     Operands_mem_reg_imm<m16, r16, imm8>,

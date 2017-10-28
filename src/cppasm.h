@@ -380,8 +380,8 @@ extern Instruction1_Type1 POPAD;
 extern Instruction1_Type1 CWD;
 extern Instruction1_Type1 CDQ;
 extern Instruction1_Type1 CQO;
-extern Instruction_MovWithExt MOVSX;
-extern Instruction_MovWithExt MOVZX;
+extern Instruction12_Type3 MOVSX;
+extern Instruction12_Type3 MOVZX;
 extern Instruction12_Type2 XCHG;
 extern Instruction2_Type3 BSWAP;
 extern Instruction8_Type4 XADD;
@@ -428,8 +428,8 @@ extern Instruction_Shift RCL;
 extern Instruction_Shift RCR;
 extern Instruction_Shift ROL;
 extern Instruction_Shift ROR;
-extern Instruction_ShiftDouble SHLD;
-extern Instruction_ShiftDouble SHRD;
+extern Instruction12_Type4 SHLD;
+extern Instruction12_Type4 SHRD;
 
 // Bit and byte instructions
 extern Instruction12_Type1 BT;

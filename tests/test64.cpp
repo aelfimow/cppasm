@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include "cppasm.h"
 
-static void gen_Instruction_Arithm1(Instruction_Arithm1 &instr, const std::string &descr)
+static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
 

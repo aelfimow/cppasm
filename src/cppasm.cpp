@@ -232,11 +232,11 @@ Instruction1_Type7 CMPXCHG8B { asmout, "cmpxchg8b" };
 Instruction1_Type8 CMPXCHG16B { asmout, "cmpxchg16b" };
 
 // Binary arithmetic instructions
-Instruction_Arithm1 ADD { asmout, "add" };
-Instruction_Arithm1 ADC { asmout, "adc" };
-Instruction_Arithm1 SUB { asmout, "sub" };
-Instruction_Arithm1 SBB { asmout, "sbb" };
-Instruction_Arithm1 CMP { asmout, "cmp" };
+Instruction26_Type1 ADD { asmout, "add" };
+Instruction26_Type1 ADC { asmout, "adc" };
+Instruction26_Type1 SUB { asmout, "sub" };
+Instruction26_Type1 SBB { asmout, "sbb" };
+Instruction26_Type1 CMP { asmout, "cmp" };
 Instruction4_Type7 ADCX { asmout, "adcx" };
 Instruction4_Type7 ADOX { asmout, "adox" };
 Instruction8_Type3 MUL { asmout, "mul" };
@@ -256,9 +256,9 @@ Instruction1_Type1 DAA { asmout, "daa" };
 Instruction1_Type1 DAS { asmout, "das" };
 
 // Logical instructions
-Instruction_Arithm1 AND { asmout, "and" };
-Instruction_Arithm1 OR { asmout, "or" };
-Instruction_Arithm1 XOR { asmout, "xor" };
+Instruction26_Type1 AND { asmout, "and" };
+Instruction26_Type1 OR { asmout, "or" };
+Instruction26_Type1 XOR { asmout, "xor" };
 Instruction8_Type3 NOT { asmout, "not" };
 
 // Shift and rotate instructions

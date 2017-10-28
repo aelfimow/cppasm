@@ -322,11 +322,11 @@ extern Instruction1_Type7 CMPXCHG8B;
 extern Instruction1_Type8 CMPXCHG16B;
 
 // Binary arithmetic instructions
-extern Instruction_Arithm1 ADD;
-extern Instruction_Arithm1 ADC;
-extern Instruction_Arithm1 SUB;
-extern Instruction_Arithm1 SBB;
-extern Instruction_Arithm1 CMP;
+extern Instruction26_Type1 ADD;
+extern Instruction26_Type1 ADC;
+extern Instruction26_Type1 SUB;
+extern Instruction26_Type1 SBB;
+extern Instruction26_Type1 CMP;
 extern Instruction4_Type7 ADCX;
 extern Instruction4_Type7 ADOX;
 extern Instruction8_Type3 MUL;
@@ -346,9 +346,9 @@ extern Instruction1_Type1 DAA;
 extern Instruction1_Type1 DAS;
 
 // Logical instructions
-extern Instruction_Arithm1 AND;
-extern Instruction_Arithm1 OR;
-extern Instruction_Arithm1 XOR;
+extern Instruction26_Type1 AND;
+extern Instruction26_Type1 OR;
+extern Instruction26_Type1 XOR;
 extern Instruction8_Type3 NOT;
 
 // Shift and rotate instructions

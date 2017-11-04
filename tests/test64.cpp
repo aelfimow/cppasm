@@ -3,6 +3,11 @@
 #include <stdexcept>
 #include "cppasm.h"
 
+static void gen_Instruction1_Type1(Instruction1_Type1 &instr)
+{
+    instr();
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -546,6 +551,118 @@ try
         VFNMSUB213PS(YMM0, YMM1, YMM2);
         VFNMSUB231PS(YMM0, YMM1, YMM2);
     }
+
+    gen_Instruction1_Type1(CWD);
+    gen_Instruction1_Type1(CDQ);
+    gen_Instruction1_Type1(CQO);
+    gen_Instruction1_Type1(LEAVE);
+    gen_Instruction1_Type1(IRET);
+    gen_Instruction1_Type1(IRETD);
+    gen_Instruction1_Type1(IRETQ);
+    gen_Instruction1_Type1(MOVSB);
+    gen_Instruction1_Type1(MOVSW);
+    gen_Instruction1_Type1(MOVSD);
+    gen_Instruction1_Type1(MOVSQ);
+    gen_Instruction1_Type1(CMPSB);
+    gen_Instruction1_Type1(CMPSW);
+    gen_Instruction1_Type1(CMPSD);
+    gen_Instruction1_Type1(CMPSQ);
+    gen_Instruction1_Type1(SCASB);
+    gen_Instruction1_Type1(SCASW);
+    gen_Instruction1_Type1(SCASD);
+    gen_Instruction1_Type1(SCASQ);
+    gen_Instruction1_Type1(LODSB);
+    gen_Instruction1_Type1(LODSW);
+    gen_Instruction1_Type1(LODSD);
+    gen_Instruction1_Type1(LODSQ);
+    gen_Instruction1_Type1(STOSB);
+    gen_Instruction1_Type1(STOSW);
+    gen_Instruction1_Type1(STOSD);
+    gen_Instruction1_Type1(STOSQ);
+    gen_Instruction1_Type1(INSB);
+    gen_Instruction1_Type1(INSW);
+    gen_Instruction1_Type1(INSD);
+    gen_Instruction1_Type1(OUTSB);
+    gen_Instruction1_Type1(OUTSW);
+    gen_Instruction1_Type1(OUTSD);
+    gen_Instruction1_Type1(CLC);
+    gen_Instruction1_Type1(CLD);
+    gen_Instruction1_Type1(CLI);
+    gen_Instruction1_Type1(CMC);
+    gen_Instruction1_Type1(LAHF);
+    gen_Instruction1_Type1(SAHF);
+    gen_Instruction1_Type1(PUSHF);
+    gen_Instruction1_Type1(POPF);
+    gen_Instruction1_Type1(POPFQ);
+    gen_Instruction1_Type1(STC);
+    gen_Instruction1_Type1(STI);
+    gen_Instruction1_Type1(STD);
+    gen_Instruction1_Type1(UD);
+    gen_Instruction1_Type1(UD1);
+    gen_Instruction1_Type1(UD2);
+    gen_Instruction1_Type1(CPUID);
+    gen_Instruction1_Type1(XLAT);
+    gen_Instruction1_Type1(XGETBV);
+    gen_Instruction1_Type1(FPREM);
+    gen_Instruction1_Type1(FPREM1);
+    gen_Instruction1_Type1(FABS);
+    gen_Instruction1_Type1(FCHS);
+    gen_Instruction1_Type1(FRNDINT);
+    gen_Instruction1_Type1(FSCALE);
+    gen_Instruction1_Type1(FSQRT);
+    gen_Instruction1_Type1(FXTRACT);
+    gen_Instruction1_Type1(FCOMPP);
+    gen_Instruction1_Type1(FUCOMPP);
+    gen_Instruction1_Type1(FTST);
+    gen_Instruction1_Type1(FXAM);
+    gen_Instruction1_Type1(FSIN);
+    gen_Instruction1_Type1(FSINCOS);
+    gen_Instruction1_Type1(FCOS);
+    gen_Instruction1_Type1(FPTAN);
+    gen_Instruction1_Type1(FPATAN);
+    gen_Instruction1_Type1(F2XM1);
+    gen_Instruction1_Type1(FYL2X);
+    gen_Instruction1_Type1(FYL2XP1);
+    gen_Instruction1_Type1(FLD1);
+    gen_Instruction1_Type1(FLDL2T);
+    gen_Instruction1_Type1(FLDL2E);
+    gen_Instruction1_Type1(FLDPI);
+    gen_Instruction1_Type1(FLDLG2);
+    gen_Instruction1_Type1(FLDLN2);
+    gen_Instruction1_Type1(FLDZ);
+    gen_Instruction1_Type1(FINCSTP);
+    gen_Instruction1_Type1(FDECSTP);
+    gen_Instruction1_Type1(FINIT);
+    gen_Instruction1_Type1(FNINIT);
+    gen_Instruction1_Type1(FCLEX);
+    gen_Instruction1_Type1(FNCLEX);
+    gen_Instruction1_Type1(FNOP);
+    gen_Instruction1_Type1(EMMS);
+    gen_Instruction1_Type1(SFENCE);
+    gen_Instruction1_Type1(LFENCE);
+    gen_Instruction1_Type1(MFENCE);
+    gen_Instruction1_Type1(PAUSE);
+    gen_Instruction1_Type1(MONITOR);
+    gen_Instruction1_Type1(MWAIT);
+    gen_Instruction1_Type1(VZEROALL);
+    gen_Instruction1_Type1(VZEROUPPER);
+    gen_Instruction1_Type1(CLAC);
+    gen_Instruction1_Type1(STAC);
+    gen_Instruction1_Type1(CLTS);
+    gen_Instruction1_Type1(INVD);
+    gen_Instruction1_Type1(WBINVD);
+    gen_Instruction1_Type1(HLT);
+    gen_Instruction1_Type1(RSM);
+    gen_Instruction1_Type1(RDMSR);
+    gen_Instruction1_Type1(WRMSR);
+    gen_Instruction1_Type1(RDPMC);
+    gen_Instruction1_Type1(RDTSC);
+    gen_Instruction1_Type1(RDTSCP);
+    gen_Instruction1_Type1(SYSENTER);
+    gen_Instruction1_Type1(SYSEXIT);
+    gen_Instruction1_Type1(XSETBV);
+    gen_Instruction1_Type1(SYSCALL);
+    gen_Instruction1_Type1(SYSRET);
 
     return EXIT_SUCCESS;
 }

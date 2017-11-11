@@ -645,7 +645,6 @@ MOV_instruction:
 	prefetchnta (%rax)
 	prefetchw (%rax)
 	prefetchwt1 (%rax)
-	clflush (%rax)
 	lgdt (%rax)
 	lidt (%rax)
 	sidt (%rax)

@@ -691,7 +691,6 @@ try
     gen_Instruction1_Type2(PREFETCHNTA);
     gen_Instruction1_Type2(PREFETCHW);
     gen_Instruction1_Type2(PREFETCHWT1);
-    gen_Instruction1_Type2(CLFLUSH);
     gen_Instruction1_Type2(LGDT);
     gen_Instruction1_Type2(LIDT);
     gen_Instruction1_Type2(SIDT);

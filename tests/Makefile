@@ -14,16 +14,20 @@ ASFLAGS64 += -march=+avx
 CPPASM_OBJ = ../src/obj/*.o
 OUTDIR = ./output
 
-all: test32 test64
+all: common test32 test64
 
-.PHONY: test32
+.PHONY: common
+common:
+	$(CXX) -c common.cpp -o ${OUTDIR}/common.o -I../src ${CXXFLAGS}
+
+.PHONY: common test32
 test32:
 	$(CXX) -c test32.cpp -o ${OUTDIR}/test32.o -I../src ${CXXFLAGS}
 	$(CXX) ${OUTDIR}/test32.o ${CPPASM_OBJ} -o test32.exe ${CXXFLAGS}
 	test32.exe > ${OUTDIR}/test32.S
 	$(AS) ${OUTDIR}/test32.S ${ASFLAGS32} -o ${OUTDIR}/test32.o
 
-.PHONY: test64
+.PHONY: common test64
 test64:
 	$(CXX) -c test64.cpp -o ${OUTDIR}/test64.o -I../src ${CXXFLAGS}
 	$(CXX) ${OUTDIR}/test64.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}

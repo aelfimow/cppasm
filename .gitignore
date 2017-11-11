@@ -6,7 +6,6 @@ src/tmp.o
 src/tmp.s
 tests/output/test32.o
 tests/output/test64.o
-tests/output/common.o
 tests/test32.exe
 tests/test64.exe
 VisualStudio2017/test32/.vs

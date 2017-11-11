@@ -8,6 +8,13 @@ static void gen_Instruction1_Type1(Instruction1_Type1 &instr)
     instr();
 }
 
+static void gen_Instruction1_Type2(Instruction1_Type2 &instr)
+{
+    m64 addr { RAX };
+
+    instr(addr);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -663,6 +670,36 @@ try
     gen_Instruction1_Type1(XSETBV);
     gen_Instruction1_Type1(SYSCALL);
     gen_Instruction1_Type1(SYSRET);
+
+    gen_Instruction1_Type2(CLFLUSH);
+    gen_Instruction1_Type2(CLFLUSHOPT);
+    gen_Instruction1_Type2(XSAVE);
+    gen_Instruction1_Type2(XSAVEC);
+    gen_Instruction1_Type2(XSAVEOPT);
+    gen_Instruction1_Type2(XRSTOR);
+    gen_Instruction1_Type2(FSTENV);
+    gen_Instruction1_Type2(FNSTENV);
+    gen_Instruction1_Type2(FLDENV);
+    gen_Instruction1_Type2(FSAVE);
+    gen_Instruction1_Type2(FNSAVE);
+    gen_Instruction1_Type2(FRSTOR);
+    gen_Instruction1_Type2(FXSAVE);
+    gen_Instruction1_Type2(FXRSTOR);
+    gen_Instruction1_Type2(PREFETCHT0);
+    gen_Instruction1_Type2(PREFETCHT1);
+    gen_Instruction1_Type2(PREFETCHT2);
+    gen_Instruction1_Type2(PREFETCHNTA);
+    gen_Instruction1_Type2(PREFETCHW);
+    gen_Instruction1_Type2(PREFETCHWT1);
+    gen_Instruction1_Type2(CLFLUSH);
+    gen_Instruction1_Type2(LGDT);
+    gen_Instruction1_Type2(LIDT);
+    gen_Instruction1_Type2(SIDT);
+    gen_Instruction1_Type2(INVLPG);
+    gen_Instruction1_Type2(XRSTORS);
+    gen_Instruction1_Type2(XRSTORS64);
+    gen_Instruction1_Type2(XSAVES);
+    gen_Instruction1_Type2(XSAVES64);
 
     return EXIT_SUCCESS;
 }

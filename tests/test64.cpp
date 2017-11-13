@@ -20,6 +20,11 @@ static void gen_Instruction1_Type3(Instruction1_Type3 &instr)
     instr(XMM1, XMM0);
 }
 
+static void gen_Instruction1_Type4(Instruction1_Type4 &instr, std::string &L)
+{
+    instr(L);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -708,6 +713,46 @@ try
     gen_Instruction1_Type3(MOVLHPS);
     gen_Instruction1_Type3(MOVHLPS);
     gen_Instruction1_Type3(MASKMOVDQU);
+
+    std::string L { "Instruction1_Type4_Label" };
+    label(L);
+    gen_Instruction1_Type4(JA, L);
+    gen_Instruction1_Type4(JAE, L);
+    gen_Instruction1_Type4(JB, L);
+    gen_Instruction1_Type4(JBE, L);
+    gen_Instruction1_Type4(JC, L);
+    gen_Instruction1_Type4(JECXZ, L);
+    gen_Instruction1_Type4(JRCXZ, L);
+    gen_Instruction1_Type4(JE, L);
+    gen_Instruction1_Type4(JG, L);
+    gen_Instruction1_Type4(JGE, L);
+    gen_Instruction1_Type4(JL, L);
+    gen_Instruction1_Type4(JLE, L);
+    gen_Instruction1_Type4(JNA, L);
+    gen_Instruction1_Type4(JNAE, L);
+    gen_Instruction1_Type4(JNB, L);
+    gen_Instruction1_Type4(JNBE, L);
+    gen_Instruction1_Type4(JNC, L);
+    gen_Instruction1_Type4(JNE, L);
+    gen_Instruction1_Type4(JNG, L);
+    gen_Instruction1_Type4(JNGE, L);
+    gen_Instruction1_Type4(JNL, L);
+    gen_Instruction1_Type4(JNLE, L);
+    gen_Instruction1_Type4(JNO, L);
+    gen_Instruction1_Type4(JNP, L);
+    gen_Instruction1_Type4(JNS, L);
+    gen_Instruction1_Type4(JNZ, L);
+    gen_Instruction1_Type4(JO, L);
+    gen_Instruction1_Type4(JP, L);
+    gen_Instruction1_Type4(JPE, L);
+    gen_Instruction1_Type4(JPO, L);
+    gen_Instruction1_Type4(JS, L);
+    gen_Instruction1_Type4(JZ, L);
+    gen_Instruction1_Type4(LOOP, L);
+    gen_Instruction1_Type4(LOOPE, L);
+    gen_Instruction1_Type4(LOOPNE, L);
+    gen_Instruction1_Type4(LOOPZ, L);
+    gen_Instruction1_Type4(LOOPNZ, L);
 
     return EXIT_SUCCESS;
 }

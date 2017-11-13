@@ -267,3 +267,6 @@
 	invlpg (%eax)
 	xrstors (%eax)
 	xsaves (%eax)
+	movlhps %xmm0, %xmm1
+	movhlps %xmm0, %xmm1
+	maskmovdqu %xmm0, %xmm1

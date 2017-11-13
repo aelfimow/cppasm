@@ -15,6 +15,11 @@ static void gen_Instruction1_Type2(Instruction1_Type2 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type3(Instruction1_Type3 &instr)
+{
+    instr(XMM1, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -332,6 +337,10 @@ try
     gen_Instruction1_Type2(INVLPG);
     gen_Instruction1_Type2(XRSTORS);
     gen_Instruction1_Type2(XSAVES);
+
+    gen_Instruction1_Type3(MOVLHPS);
+    gen_Instruction1_Type3(MOVHLPS);
+    gen_Instruction1_Type3(MASKMOVDQU);
 
     return EXIT_SUCCESS;
 }

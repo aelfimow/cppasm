@@ -15,6 +15,11 @@ static void gen_Instruction1_Type2(Instruction1_Type2 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type3(Instruction1_Type3 &instr)
+{
+    instr(XMM1, XMM0);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -699,6 +704,10 @@ try
     gen_Instruction1_Type2(XRSTORS64);
     gen_Instruction1_Type2(XSAVES);
     gen_Instruction1_Type2(XSAVES64);
+
+    gen_Instruction1_Type3(MOVLHPS);
+    gen_Instruction1_Type3(MOVHLPS);
+    gen_Instruction1_Type3(MASKMOVDQU);
 
     return EXIT_SUCCESS;
 }

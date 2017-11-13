@@ -653,3 +653,6 @@ MOV_instruction:
 	xrstors64 (%rax)
 	xsaves (%rax)
 	xsaves64 (%rax)
+	movlhps %xmm0, %xmm1
+	movhlps %xmm0, %xmm1
+	maskmovdqu %xmm0, %xmm1

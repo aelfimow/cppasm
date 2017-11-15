@@ -25,6 +25,11 @@ static void gen_Instruction1_Type4(Instruction1_Type4 &instr, std::string &L)
     instr(L);
 }
 
+static void gen_Instruction1_Type5(Instruction1_Type5 &instr)
+{
+    instr(ST(0), ST(1));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -386,6 +391,19 @@ try
     gen_Instruction1_Type4(LOOPNE, L);
     gen_Instruction1_Type4(LOOPZ, L);
     gen_Instruction1_Type4(LOOPNZ, L);
+
+    gen_Instruction1_Type5(FCMOVB);
+    gen_Instruction1_Type5(FCMOVE);
+    gen_Instruction1_Type5(FCMOVBE);
+    gen_Instruction1_Type5(FCMOVU);
+    gen_Instruction1_Type5(FCMOVNB);
+    gen_Instruction1_Type5(FCMOVNE);
+    gen_Instruction1_Type5(FCMOVNBE);
+    gen_Instruction1_Type5(FCMOVNU);
+    gen_Instruction1_Type5(FCOMI);
+    gen_Instruction1_Type5(FCOMIP);
+    gen_Instruction1_Type5(FUCOMI);
+    gen_Instruction1_Type5(FUCOMIP);
 
     return EXIT_SUCCESS;
 }

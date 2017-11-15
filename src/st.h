@@ -6,18 +6,18 @@
 #else
 #define ST_H
 
-class st
+class st: public reg
 {
     public:
         st();
         ~st();
 
-        st operator()(size_t i);
+        st &operator()(size_t i);
 
-        std::string name() const;
+        std::string name() const override;
 
     private:
-        explicit st(size_t i);
+        void set(size_t i);
 
         std::string m_name;
 

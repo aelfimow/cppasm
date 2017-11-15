@@ -13,12 +13,6 @@ class reg
         virtual ~reg() { }
 
         virtual std::string name() const = 0;
-
-    public:
-        reg(const reg &instance) = delete;
-        reg(const reg &&instance) = delete;
-        reg &operator=(const reg &instance) = delete;
-        reg &operator=(const reg &&instance) = delete;
 };
 
 template

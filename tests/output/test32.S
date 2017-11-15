@@ -320,3 +320,6 @@ Instruction1_Type4_Label:
 	fcomip %st(1), %st(0)
 	fucomi %st(1), %st(0)
 	fucomip %st(1), %st(0)
+	fstcw (%eax)
+	fnstcw (%eax)
+	fldcw (%eax)

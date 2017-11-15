@@ -30,6 +30,13 @@ static void gen_Instruction1_Type5(Instruction1_Type5 &instr)
     instr(ST(0), ST(1));
 }
 
+static void gen_Instruction1_Type6(Instruction1_Type6 &instr)
+{
+    m16 addr { EAX };
+
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -404,6 +411,10 @@ try
     gen_Instruction1_Type5(FCOMIP);
     gen_Instruction1_Type5(FUCOMI);
     gen_Instruction1_Type5(FUCOMIP);
+
+    gen_Instruction1_Type6(FSTCW);
+    gen_Instruction1_Type6(FNSTCW);
+    gen_Instruction1_Type6(FLDCW);
 
     return EXIT_SUCCESS;
 }

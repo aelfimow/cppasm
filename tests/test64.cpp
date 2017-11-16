@@ -44,6 +44,13 @@ static void gen_Instruction1_Type7(Instruction1_Type7 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type8(Instruction1_Type8 &instr)
+{
+    m128 addr { RAX };
+
+    instr(addr);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -791,6 +798,8 @@ try
     gen_Instruction1_Type6(FLDCW);
 
     gen_Instruction1_Type7(CMPXCHG8B);
+
+    gen_Instruction1_Type8(CMPXCHG16B);
 
     return EXIT_SUCCESS;
 }

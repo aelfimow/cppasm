@@ -710,3 +710,4 @@ Instruction1_Type4_Label:
 	fnstcw (%rax)
 	fldcw (%rax)
 	cmpxchg8b (%rax)
+	cmpxchg16b (%rax)

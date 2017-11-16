@@ -711,3 +711,4 @@ Instruction1_Type4_Label:
 	fldcw (%rax)
 	cmpxchg8b (%rax)
 	cmpxchg16b (%rax)
+	enter $0xFFFF, $0xFF

@@ -51,6 +51,14 @@ static void gen_Instruction1_Type8(Instruction1_Type8 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type9(Instruction1_Type9 &instr)
+{
+    imm16 param1 { 65535 };
+    imm8 param2 { 255 };
+
+    instr(param1, param2);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -800,6 +808,8 @@ try
     gen_Instruction1_Type7(CMPXCHG8B);
 
     gen_Instruction1_Type8(CMPXCHG16B);
+
+    gen_Instruction1_Type9(ENTER);
 
     return EXIT_SUCCESS;
 }

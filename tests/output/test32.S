@@ -325,3 +325,4 @@ Instruction1_Type4_Label:
 	fldcw (%eax)
 	cmpxchg8b (%eax)
 	enter $0xFFFF, $0xFF
+	int $0xFF

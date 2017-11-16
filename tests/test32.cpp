@@ -52,6 +52,13 @@ static void gen_Instruction1_Type9(Instruction1_Type9 &instr)
     instr(param1, param2);
 }
 
+static void gen_Instruction1_Type10(Instruction1_Type10 &instr)
+{
+    imm8 param1 { 255 };
+
+    instr(param1);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -434,6 +441,8 @@ try
     gen_Instruction1_Type7(CMPXCHG8B);
 
     gen_Instruction1_Type9(ENTER);
+
+    gen_Instruction1_Type10(INT);
 
     return EXIT_SUCCESS;
 }

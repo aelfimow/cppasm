@@ -712,3 +712,4 @@ Instruction1_Type4_Label:
 	cmpxchg8b (%rax)
 	cmpxchg16b (%rax)
 	enter $0xFFFF, $0xFF
+	int $0xFF

@@ -59,6 +59,13 @@ static void gen_Instruction1_Type9(Instruction1_Type9 &instr)
     instr(param1, param2);
 }
 
+static void gen_Instruction1_Type10(Instruction1_Type10 &instr)
+{
+    imm8 param1 { 255 };
+
+    instr(param1);
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -810,6 +817,8 @@ try
     gen_Instruction1_Type8(CMPXCHG16B);
 
     gen_Instruction1_Type9(ENTER);
+
+    gen_Instruction1_Type10(INT);
 
     return EXIT_SUCCESS;
 }

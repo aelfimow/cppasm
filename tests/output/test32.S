@@ -324,3 +324,4 @@ Instruction1_Type4_Label:
 	fnstcw (%eax)
 	fldcw (%eax)
 	cmpxchg8b (%eax)
+	enter $0xFFFF, $0xFF

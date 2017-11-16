@@ -37,6 +37,13 @@ static void gen_Instruction1_Type6(Instruction1_Type6 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type7(Instruction1_Type7 &instr)
+{
+    m64 addr { EAX };
+
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -415,6 +422,8 @@ try
     gen_Instruction1_Type6(FSTCW);
     gen_Instruction1_Type6(FNSTCW);
     gen_Instruction1_Type6(FLDCW);
+
+    gen_Instruction1_Type7(CMPXCHG8B);
 
     return EXIT_SUCCESS;
 }

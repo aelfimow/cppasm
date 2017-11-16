@@ -323,3 +323,4 @@ Instruction1_Type4_Label:
 	fstcw (%eax)
 	fnstcw (%eax)
 	fldcw (%eax)
+	cmpxchg8b (%eax)

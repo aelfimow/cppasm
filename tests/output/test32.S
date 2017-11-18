@@ -202,3 +202,5 @@ Instruction1_Type4_Label:
 	repz stosb
 	repne stosb
 	repnz stosb
+	fbld (%eax)
+	fbstp (%eax)

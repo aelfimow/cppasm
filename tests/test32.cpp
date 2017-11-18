@@ -65,6 +65,13 @@ static void gen_Instruction1_Type11(Instruction1_Type11 &instr)
     STOSB();
 }
 
+static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
+{
+    m80bcd addr { EAX };
+
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -289,6 +296,9 @@ try
     gen_Instruction1_Type11(REPZ);
     gen_Instruction1_Type11(REPNE);
     gen_Instruction1_Type11(REPNZ);
+
+    gen_Instruction1_Type12(FBLD);
+    gen_Instruction1_Type12(FBSTP);
 
     return EXIT_SUCCESS;
 }

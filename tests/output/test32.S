@@ -326,3 +326,8 @@ Instruction1_Type4_Label:
 	cmpxchg8b (%eax)
 	enter $0xFFFF, $0xFF
 	int $0xFF
+	rep stosb
+	repe stosb
+	repz stosb
+	repne stosb
+	repnz stosb

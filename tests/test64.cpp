@@ -66,6 +66,12 @@ static void gen_Instruction1_Type10(Instruction1_Type10 &instr)
     instr(param1);
 }
 
+static void gen_Instruction1_Type11(Instruction1_Type11 &instr)
+{
+    instr();
+    STOSB();
+}
+
 static void gen_Instruction_Arithm1(Instruction26_Type1 &instr, const std::string &descr)
 {
     comment(descr);
@@ -819,6 +825,12 @@ try
     gen_Instruction1_Type9(ENTER);
 
     gen_Instruction1_Type10(INT);
+
+    gen_Instruction1_Type11(REP);
+    gen_Instruction1_Type11(REPE);
+    gen_Instruction1_Type11(REPZ);
+    gen_Instruction1_Type11(REPNE);
+    gen_Instruction1_Type11(REPNZ);
 
     return EXIT_SUCCESS;
 }

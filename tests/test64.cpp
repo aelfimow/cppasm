@@ -79,6 +79,11 @@ static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type13(Instruction1_Type13 &instr)
+{
+    instr(ST(0));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -307,6 +312,8 @@ try
 
     gen_Instruction1_Type12(FBLD);
     gen_Instruction1_Type12(FBSTP);
+
+    gen_Instruction1_Type13(FFREE);
 
     return EXIT_SUCCESS;
 }

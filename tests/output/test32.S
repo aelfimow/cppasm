@@ -204,3 +204,4 @@ Instruction1_Type4_Label:
 	repnz stosb
 	fbld (%eax)
 	fbstp (%eax)
+	ffree %st(0)

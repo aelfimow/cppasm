@@ -65,6 +65,11 @@ static void gen_Instruction1_Type11(Instruction1_Type11 &instr)
     STOSB();
 }
 
+static void gen_Instruction1_Type13(Instruction1_Type13 &instr)
+{
+    instr(ST(0));
+}
+
 static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
 {
     m80bcd addr { EAX };
@@ -299,6 +304,8 @@ try
 
     gen_Instruction1_Type12(FBLD);
     gen_Instruction1_Type12(FBSTP);
+
+    gen_Instruction1_Type13(FFREE);
 
     return EXIT_SUCCESS;
 }

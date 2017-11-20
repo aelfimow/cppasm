@@ -210,3 +210,4 @@ Instruction1_Type4_Label:
 	stmxcsr (%rax)
 	vldmxcsr (%rax)
 	vstmxcsr (%rax)
+	maskmovq %mm0, %mm1

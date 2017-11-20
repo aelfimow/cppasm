@@ -84,6 +84,13 @@ static void gen_Instruction1_Type13(Instruction1_Type13 &instr)
     instr(ST(0));
 }
 
+static void gen_Instruction1_Type14(Instruction1_Type14 &instr)
+{
+    m32 addr { RAX };
+
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -314,6 +321,11 @@ try
     gen_Instruction1_Type12(FBSTP);
 
     gen_Instruction1_Type13(FFREE);
+
+    gen_Instruction1_Type14(LDMXCSR);
+    gen_Instruction1_Type14(STMXCSR);
+    gen_Instruction1_Type14(VLDMXCSR);
+    gen_Instruction1_Type14(VSTMXCSR);
 
     return EXIT_SUCCESS;
 }

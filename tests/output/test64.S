@@ -206,3 +206,7 @@ Instruction1_Type4_Label:
 	fbld (%rax)
 	fbstp (%rax)
 	ffree %st(0)
+	ldmxcsr (%rax)
+	stmxcsr (%rax)
+	vldmxcsr (%rax)
+	vstmxcsr (%rax)

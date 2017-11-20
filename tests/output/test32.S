@@ -209,3 +209,4 @@ Instruction1_Type4_Label:
 	stmxcsr (%eax)
 	vldmxcsr (%eax)
 	vstmxcsr (%eax)
+	maskmovq %mm0, %mm1

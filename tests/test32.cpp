@@ -84,6 +84,11 @@ static void gen_Instruction1_Type14(Instruction1_Type14 &instr)
     instr(addr);
 }
 
+static void gen_Instruction1_Type15(Instruction1_Type15 &instr)
+{
+    instr(MM1, MM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -318,6 +323,8 @@ try
     gen_Instruction1_Type14(STMXCSR);
     gen_Instruction1_Type14(VLDMXCSR);
     gen_Instruction1_Type14(VSTMXCSR);
+
+    gen_Instruction1_Type15(MASKMOVQ);
 
     return EXIT_SUCCESS;
 }

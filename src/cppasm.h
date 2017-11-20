@@ -196,14 +196,14 @@ extern zmm ZMM29;
 extern zmm ZMM30;
 extern zmm ZMM31;
 
-extern mm mm0;
-extern mm mm1;
-extern mm mm2;
-extern mm mm3;
-extern mm mm4;
-extern mm mm5;
-extern mm mm6;
-extern mm mm7;
+extern mm MM0;
+extern mm MM1;
+extern mm MM2;
+extern mm MM3;
+extern mm MM4;
+extern mm MM5;
+extern mm MM6;
+extern mm MM7;
 
 extern Sreg CS;
 extern Sreg DS;

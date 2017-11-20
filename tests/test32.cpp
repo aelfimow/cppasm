@@ -65,14 +65,21 @@ static void gen_Instruction1_Type11(Instruction1_Type11 &instr)
     STOSB();
 }
 
+static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
+{
+    m80bcd addr { EAX };
+
+    instr(addr);
+}
+
 static void gen_Instruction1_Type13(Instruction1_Type13 &instr)
 {
     instr(ST(0));
 }
 
-static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
+static void gen_Instruction1_Type14(Instruction1_Type14 &instr)
 {
-    m80bcd addr { EAX };
+    m32 addr { EAX };
 
     instr(addr);
 }
@@ -306,6 +313,11 @@ try
     gen_Instruction1_Type12(FBSTP);
 
     gen_Instruction1_Type13(FFREE);
+
+    gen_Instruction1_Type14(LDMXCSR);
+    gen_Instruction1_Type14(STMXCSR);
+    gen_Instruction1_Type14(VLDMXCSR);
+    gen_Instruction1_Type14(VSTMXCSR);
 
     return EXIT_SUCCESS;
 }

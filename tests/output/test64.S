@@ -213,3 +213,5 @@ Instruction1_Type4_Label:
 	maskmovq %mm0, %mm1
 	movntq %mm0, (%rax)
 	movntps %xmm0, (%eax)
+	movhpd (%rax), %xmm0
+	movlpd (%rax), %xmm0

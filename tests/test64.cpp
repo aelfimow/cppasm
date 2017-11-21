@@ -110,6 +110,13 @@ static void gen_Instruction1_Type17(Instruction1_Type17 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction1_Type18(Instruction1_Type18 &instr)
+{
+    m64 addr { RAX };
+
+    instr(XMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -351,6 +358,9 @@ try
     gen_Instruction1_Type16(MOVNTQ);
 
     gen_Instruction1_Type17(MOVNTPS);
+
+    gen_Instruction1_Type18(MOVHPD);
+    gen_Instruction1_Type18(MOVLPD);
 
     return EXIT_SUCCESS;
 }

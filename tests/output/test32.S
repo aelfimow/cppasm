@@ -211,3 +211,4 @@ Instruction1_Type4_Label:
 	vstmxcsr (%eax)
 	maskmovq %mm0, %mm1
 	movntq %mm0, (%eax)
+	movntps %xmm0, (%eax)

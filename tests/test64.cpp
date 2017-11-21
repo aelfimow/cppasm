@@ -103,6 +103,13 @@ static void gen_Instruction1_Type16(Instruction1_Type16 &instr)
     instr(addr, MM0);
 }
 
+static void gen_Instruction1_Type17(Instruction1_Type17 &instr)
+{
+    m128 addr { EAX };
+
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -342,6 +349,8 @@ try
     gen_Instruction1_Type15(MASKMOVQ);
 
     gen_Instruction1_Type16(MOVNTQ);
+
+    gen_Instruction1_Type17(MOVNTPS);
 
     return EXIT_SUCCESS;
 }

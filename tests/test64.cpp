@@ -96,6 +96,13 @@ static void gen_Instruction1_Type15(Instruction1_Type15 &instr)
     instr(MM1, MM0);
 }
 
+static void gen_Instruction1_Type16(Instruction1_Type16 &instr)
+{
+    m64 addr { RAX };
+
+    instr(addr, MM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -333,6 +340,8 @@ try
     gen_Instruction1_Type14(VSTMXCSR);
 
     gen_Instruction1_Type15(MASKMOVQ);
+
+    gen_Instruction1_Type16(MOVNTQ);
 
     return EXIT_SUCCESS;
 }

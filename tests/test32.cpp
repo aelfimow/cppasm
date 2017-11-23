@@ -110,6 +110,13 @@ static void gen_Instruction1_Type18(Instruction1_Type18 &instr)
     instr(XMM0, addr);
 }
 
+static void gen_Instruction1_Type19(Instruction1_Type19 &instr)
+{
+    m128 addr { EAX };
+
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -353,6 +360,9 @@ try
 
     gen_Instruction1_Type18(MOVHPD);
     gen_Instruction1_Type18(MOVLPD);
+
+    gen_Instruction1_Type19(MOVNTPD);
+    gen_Instruction1_Type19(MOVNTDQ);
 
     return EXIT_SUCCESS;
 }

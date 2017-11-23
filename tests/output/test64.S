@@ -215,3 +215,5 @@ Instruction1_Type4_Label:
 	movntps %xmm0, (%eax)
 	movhpd (%rax), %xmm0
 	movlpd (%rax), %xmm0
+	movntpd %xmm0, (%rax)
+	movntdq %xmm0, (%rax)

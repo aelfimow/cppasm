@@ -129,6 +129,11 @@ static void gen_Instruction1_Type20(Instruction1_Type20 &instr)
     instr(XMM0, MM0);
 }
 
+static void gen_Instruction1_Type21(Instruction1_Type21 &instr)
+{
+    instr(MM0, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -378,6 +383,8 @@ try
     gen_Instruction1_Type19(MOVNTDQ);
 
     gen_Instruction1_Type20(MOVQ2DQ);
+
+    gen_Instruction1_Type21(MOVDQ2Q);
 
     return EXIT_SUCCESS;
 }

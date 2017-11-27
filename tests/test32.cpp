@@ -117,6 +117,11 @@ static void gen_Instruction1_Type19(Instruction1_Type19 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction1_Type20(Instruction1_Type20 &instr)
+{
+    instr(XMM0, MM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -363,6 +368,8 @@ try
 
     gen_Instruction1_Type19(MOVNTPD);
     gen_Instruction1_Type19(MOVNTDQ);
+
+    gen_Instruction1_Type20(MOVQ2DQ);
 
     return EXIT_SUCCESS;
 }

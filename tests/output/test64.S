@@ -219,3 +219,7 @@ Instruction1_Type4_Label:
 	movntdq %xmm0, (%rax)
 	movq2dq %mm0, %xmm0
 	movdq2q %xmm0, %mm0
+	pslldq $0x01, %xmm0
+	pslldq $0x80, %xmm0
+	psrldq $0x01, %xmm0
+	psrldq $0x80, %xmm0

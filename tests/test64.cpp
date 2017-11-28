@@ -164,6 +164,13 @@ static void gen_Instruction1_Type25(Instruction1_Type25 &instr)
     instr(YMM0, addr);
 }
 
+static void gen_Instruction1_Type26(Instruction1_Type26 &instr)
+{
+    m128 addr { RAX };
+
+    instr(YMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -424,6 +431,8 @@ try
     gen_Instruction1_Type24(MOVNTDQA);
 
     gen_Instruction1_Type25(VBROADCASTSD);
+
+    gen_Instruction1_Type26(VBROADCASTF128);
 
     return EXIT_SUCCESS;
 }

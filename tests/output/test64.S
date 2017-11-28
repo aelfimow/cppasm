@@ -225,3 +225,4 @@ Instruction1_Type4_Label:
 	psrldq $0x80, %xmm0
 	lddqu (%rax), %xmm0
 	movntdqa (%rax), %xmm0
+	vbroadcastsd (%rax), %ymm0

@@ -225,3 +225,4 @@ Instruction1_Type4_Label:
 	lddqu (%eax), %xmm0
 	movntdqa (%eax), %xmm0
 	vbroadcastsd (%eax), %ymm0
+	vbroadcastf128 (%eax), %ymm0

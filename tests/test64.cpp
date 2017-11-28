@@ -150,6 +150,13 @@ static void gen_Instruction1_Type23(Instruction1_Type23 &instr)
     instr(XMM0, addr);
 }
 
+static void gen_Instruction1_Type24(Instruction1_Type24 &instr)
+{
+    m128 addr { RAX };
+
+    instr(XMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -406,6 +413,8 @@ try
     gen_Instruction1_Type22(PSRLDQ);
 
     gen_Instruction1_Type23(LDDQU);
+
+    gen_Instruction1_Type24(MOVNTDQA);
 
     return EXIT_SUCCESS;
 }

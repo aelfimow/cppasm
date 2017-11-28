@@ -224,3 +224,4 @@ Instruction1_Type4_Label:
 	psrldq $0x01, %xmm0
 	psrldq $0x80, %xmm0
 	lddqu (%rax), %xmm0
+	movntdqa (%rax), %xmm0

@@ -227,3 +227,7 @@ Instruction1_Type4_Label:
 	movntdqa (%rax), %xmm0
 	vbroadcastsd (%rax), %ymm0
 	vbroadcastf128 (%rax), %ymm0
+	ret
+	ret $0xFFFF
+	lret
+	lret $0xFFFF

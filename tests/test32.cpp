@@ -164,6 +164,13 @@ static void gen_Instruction1_Type26(Instruction1_Type26 &instr)
     instr(YMM0, addr);
 }
 
+static void gen_Instruction2_Type1(Instruction2_Type1 &instr)
+{
+    imm8 value { 0 };
+    instr();
+    instr(value);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -425,6 +432,9 @@ try
     gen_Instruction1_Type25(VBROADCASTSD);
 
     gen_Instruction1_Type26(VBROADCASTF128);
+
+    gen_Instruction2_Type1(AAD);
+    gen_Instruction2_Type1(AAM);
 
     return EXIT_SUCCESS;
 }

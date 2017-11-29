@@ -178,6 +178,11 @@ static void gen_Instruction2_Type2(Instruction2_Type2 &instr)
     instr(value);
 }
 
+static void gen_Instruction2_Type3(Instruction2_Type3 &instr)
+{
+    instr(EAX);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -445,6 +450,12 @@ try
 
     gen_Instruction2_Type2(RET);
     gen_Instruction2_Type2(RET_FAR);
+
+    gen_Instruction2_Type3(RDFSBASE);
+    gen_Instruction2_Type3(RDGSBASE);
+    gen_Instruction2_Type3(WRFSBASE);
+    gen_Instruction2_Type3(WRGSBASE);
+    gen_Instruction2_Type3(BSWAP);
 
     return EXIT_SUCCESS;
 }

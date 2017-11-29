@@ -234,3 +234,8 @@ Instruction1_Type4_Label:
 	ret $0xFFFF
 	lret
 	lret $0xFFFF
+	rdfsbase %eax
+	rdgsbase %eax
+	wrfsbase %eax
+	wrgsbase %eax
+	bswap %eax

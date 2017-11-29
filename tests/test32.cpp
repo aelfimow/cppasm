@@ -171,6 +171,13 @@ static void gen_Instruction2_Type1(Instruction2_Type1 &instr)
     instr(value);
 }
 
+static void gen_Instruction2_Type2(Instruction2_Type2 &instr)
+{
+    imm16 value { 65535 };
+    instr();
+    instr(value);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -435,6 +442,9 @@ try
 
     gen_Instruction2_Type1(AAD);
     gen_Instruction2_Type1(AAM);
+
+    gen_Instruction2_Type2(RET);
+    gen_Instruction2_Type2(RET_FAR);
 
     return EXIT_SUCCESS;
 }

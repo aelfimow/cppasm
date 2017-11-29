@@ -230,3 +230,7 @@ Instruction1_Type4_Label:
 	aad $0x00
 	aam
 	aam $0x00
+	ret
+	ret $0xFFFF
+	lret
+	lret $0xFFFF

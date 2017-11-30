@@ -245,3 +245,9 @@ Instruction1_Type4_Label:
 	movmskps %xmm0, %rax
 	movmskpd %xmm0, %eax
 	movmskpd %xmm0, %rax
+	fxch
+	fxch %st(1)
+	fucom
+	fucom %st(1)
+	fucomp
+	fucomp %st(1)

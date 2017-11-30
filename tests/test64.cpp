@@ -190,6 +190,12 @@ static void gen_Instruction2_Type4(Instruction2_Type4 &instr)
     instr(RAX, XMM0);
 }
 
+static void gen_Instruction2_Type5(Instruction2_Type5 &instr)
+{
+    instr();
+    instr(ST(1));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -464,6 +470,10 @@ try
 
     gen_Instruction2_Type4(MOVMSKPS);
     gen_Instruction2_Type4(MOVMSKPD);
+
+    gen_Instruction2_Type5(FXCH);
+    gen_Instruction2_Type5(FUCOM);
+    gen_Instruction2_Type5(FUCOMP);
 
     return EXIT_SUCCESS;
 }

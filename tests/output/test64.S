@@ -241,3 +241,7 @@ Instruction1_Type4_Label:
 	wrgsbase %rax
 	bswap %eax
 	bswap %rax
+	movmskps %xmm0, %eax
+	movmskps %xmm0, %rax
+	movmskpd %xmm0, %eax
+	movmskpd %xmm0, %rax

@@ -184,6 +184,12 @@ static void gen_Instruction2_Type3(Instruction2_Type3 &instr)
     instr(RAX);
 }
 
+static void gen_Instruction2_Type4(Instruction2_Type4 &instr)
+{
+    instr(EAX, XMM0);
+    instr(RAX, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -455,6 +461,9 @@ try
     gen_Instruction2_Type3(WRFSBASE);
     gen_Instruction2_Type3(WRGSBASE);
     gen_Instruction2_Type3(BSWAP);
+
+    gen_Instruction2_Type4(MOVMSKPS);
+    gen_Instruction2_Type4(MOVMSKPD);
 
     return EXIT_SUCCESS;
 }

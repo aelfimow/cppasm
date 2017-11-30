@@ -241,3 +241,9 @@ Instruction1_Type4_Label:
 	bswap %eax
 	movmskps %xmm0, %eax
 	movmskpd %xmm0, %eax
+	fxch
+	fxch %st(1)
+	fucom
+	fucom %st(1)
+	fucomp
+	fucomp %st(1)

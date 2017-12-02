@@ -204,6 +204,14 @@ static void gen_Instruction2_Type6(Instruction2_Type6 &instr)
     instr(addr);
 }
 
+static void gen_Instruction2_Type7(Instruction2_Type7 &instr)
+{
+    instr(AL);
+
+    m8 addr { RAX };
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -490,6 +498,37 @@ try
     gen_Instruction2_Type6(VERR);
     gen_Instruction2_Type6(VERW);
     gen_Instruction2_Type6(LTR);
+
+    gen_Instruction2_Type7(SETA);
+    gen_Instruction2_Type7(SETAE);
+    gen_Instruction2_Type7(SETB);
+    gen_Instruction2_Type7(SETBE);
+    gen_Instruction2_Type7(SETC);
+    gen_Instruction2_Type7(SETE);
+    gen_Instruction2_Type7(SETG);
+    gen_Instruction2_Type7(SETGE);
+    gen_Instruction2_Type7(SETL);
+    gen_Instruction2_Type7(SETLE);
+    gen_Instruction2_Type7(SETNA);
+    gen_Instruction2_Type7(SETNAE);
+    gen_Instruction2_Type7(SETNB);
+    gen_Instruction2_Type7(SETNBE);
+    gen_Instruction2_Type7(SETNC);
+    gen_Instruction2_Type7(SETNE);
+    gen_Instruction2_Type7(SETNG);
+    gen_Instruction2_Type7(SETNGE);
+    gen_Instruction2_Type7(SETNL);
+    gen_Instruction2_Type7(SETNLE);
+    gen_Instruction2_Type7(SETNO);
+    gen_Instruction2_Type7(SETNP);
+    gen_Instruction2_Type7(SETNS);
+    gen_Instruction2_Type7(SETNZ);
+    gen_Instruction2_Type7(SETO);
+    gen_Instruction2_Type7(SETP);
+    gen_Instruction2_Type7(SETPE);
+    gen_Instruction2_Type7(SETPO);
+    gen_Instruction2_Type7(SETS);
+    gen_Instruction2_Type7(SETZ);
 
     return EXIT_SUCCESS;
 }

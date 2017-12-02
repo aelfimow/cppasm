@@ -247,3 +247,17 @@ Instruction1_Type4_Label:
 	fucom %st(1)
 	fucomp
 	fucomp %st(1)
+	fstsw %ax
+	fstsw (%eax)
+	fnstsw %ax
+	fnstsw (%eax)
+	lldt %ax
+	lldt (%eax)
+	lmsw %ax
+	lmsw (%eax)
+	verr %ax
+	verr (%eax)
+	verw %ax
+	verw (%eax)
+	ltr %ax
+	ltr (%eax)

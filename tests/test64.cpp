@@ -196,6 +196,14 @@ static void gen_Instruction2_Type5(Instruction2_Type5 &instr)
     instr(ST(1));
 }
 
+static void gen_Instruction2_Type6(Instruction2_Type6 &instr)
+{
+    instr(AX);
+
+    m16 addr { RAX };
+    instr(addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -474,6 +482,14 @@ try
     gen_Instruction2_Type5(FXCH);
     gen_Instruction2_Type5(FUCOM);
     gen_Instruction2_Type5(FUCOMP);
+
+    gen_Instruction2_Type6(FSTSW);
+    gen_Instruction2_Type6(FNSTSW);
+    gen_Instruction2_Type6(LLDT);
+    gen_Instruction2_Type6(LMSW);
+    gen_Instruction2_Type6(VERR);
+    gen_Instruction2_Type6(VERW);
+    gen_Instruction2_Type6(LTR);
 
     return EXIT_SUCCESS;
 }

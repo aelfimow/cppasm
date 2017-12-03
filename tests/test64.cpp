@@ -214,7 +214,7 @@ static void gen_Instruction2_Type7(Instruction2_Type7 &instr)
 
 static void gen_Instruction2_Type9(Instruction2_Type9 &instr)
 {
-    m64 addr { EAX };
+    m64 addr { RAX };
     instr(XMM0, addr);
     instr(addr, XMM0);
 }

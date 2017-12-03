@@ -50,8 +50,8 @@ using Instruction2_Type7 = Instruction_2
 
 using Instruction2_Type8 = Instruction_2
 <
-    Operands_reg_mem<r16, m16, no_suffix>,
-    Operands_reg_mem<r32, m32, no_suffix>
+    Operands_reg_mem2<r16, m16>,
+    Operands_reg_mem2<r32, m32>
 >;
 
 using Instruction2_Type9 = Instruction_2

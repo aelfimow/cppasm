@@ -323,3 +323,7 @@ Instruction1_Type4_Label:
 	setz (%eax)
 	bound %bx, (%eax)
 	bound %ebx, (%eax)
+	movhps (%eax), %xmm0
+	movhps %xmm0, (%eax)
+	movlps (%eax), %xmm0
+	movlps %xmm0, (%eax)

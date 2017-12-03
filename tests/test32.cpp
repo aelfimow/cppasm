@@ -218,6 +218,13 @@ static void gen_Instruction2_Type8(Instruction2_Type8 &instr)
     instr(EBX, addr2);
 }
 
+static void gen_Instruction2_Type9(Instruction2_Type9 &instr)
+{
+    m64 addr { EAX };
+    instr(XMM0, addr);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -539,6 +546,9 @@ try
     gen_Instruction2_Type7(SETZ);
 
     gen_Instruction2_Type8(BOUND);
+
+    gen_Instruction2_Type9(MOVHPS);
+    gen_Instruction2_Type9(MOVLPS);
 
     return EXIT_SUCCESS;
 }

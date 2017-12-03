@@ -321,3 +321,5 @@ Instruction1_Type4_Label:
 	sets (%eax)
 	setz %al
 	setz (%eax)
+	bound %bx, (%eax)
+	bound %ebx, (%eax)

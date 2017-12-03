@@ -210,6 +210,14 @@ static void gen_Instruction2_Type7(Instruction2_Type7 &instr)
     instr(addr);
 }
 
+static void gen_Instruction2_Type8(Instruction2_Type8 &instr)
+{
+    m16 addr1 { EAX };
+    m32 addr2 { EAX };
+    instr(BX, addr1);
+    instr(EBX, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -529,6 +537,8 @@ try
     gen_Instruction2_Type7(SETPO);
     gen_Instruction2_Type7(SETS);
     gen_Instruction2_Type7(SETZ);
+
+    gen_Instruction2_Type8(BOUND);
 
     return EXIT_SUCCESS;
 }

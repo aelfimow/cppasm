@@ -325,3 +325,7 @@ Instruction1_Type4_Label:
 	sets (%rax)
 	setz %al
 	setz (%rax)
+	movhps (%eax), %xmm0
+	movhps %xmm0, (%eax)
+	movlps (%eax), %xmm0
+	movlps %xmm0, (%eax)

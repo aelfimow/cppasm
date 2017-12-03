@@ -225,6 +225,13 @@ static void gen_Instruction2_Type9(Instruction2_Type9 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction2_Type10(Instruction2_Type10 &instr)
+{
+    m128 addr { EAX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -549,6 +556,66 @@ try
 
     gen_Instruction2_Type9(MOVHPS);
     gen_Instruction2_Type9(MOVLPS);
+
+    gen_Instruction2_Type10(ADDPS);
+    gen_Instruction2_Type10(SUBPS);
+    gen_Instruction2_Type10(MULPS);
+    gen_Instruction2_Type10(DIVPS);
+    gen_Instruction2_Type10(RCPPS);
+    gen_Instruction2_Type10(SQRTPS);
+    gen_Instruction2_Type10(MAXPS);
+    gen_Instruction2_Type10(MINPS);
+    gen_Instruction2_Type10(ANDPS);
+    gen_Instruction2_Type10(ANDNPS);
+    gen_Instruction2_Type10(ORPS);
+    gen_Instruction2_Type10(XORPS);
+    gen_Instruction2_Type10(UNPCKHPS);
+    gen_Instruction2_Type10(UNPCKLPS);
+    gen_Instruction2_Type10(ADDPD);
+    gen_Instruction2_Type10(SUBPD);
+    gen_Instruction2_Type10(MULPD);
+    gen_Instruction2_Type10(DIVPD);
+    gen_Instruction2_Type10(SQRTPD);
+    gen_Instruction2_Type10(MAXPD);
+    gen_Instruction2_Type10(MINPD);
+    gen_Instruction2_Type10(ANDPD);
+    gen_Instruction2_Type10(ANDNPD);
+    gen_Instruction2_Type10(ORPD);
+    gen_Instruction2_Type10(XORPD);
+    gen_Instruction2_Type10(UNPCKHPD);
+    gen_Instruction2_Type10(UNPCKLPD);
+    gen_Instruction2_Type10(CVTPD2DQ);
+    gen_Instruction2_Type10(CVTTPD2DQ);
+    gen_Instruction2_Type10(CVTPD2PS);
+    gen_Instruction2_Type10(CVTDQ2PS);
+    gen_Instruction2_Type10(CVTPS2DQ);
+    gen_Instruction2_Type10(CVTTPS2DQ);
+    gen_Instruction2_Type10(PUNPCKHQDQ);
+    gen_Instruction2_Type10(PUNPCKLQDQ);
+    gen_Instruction2_Type10(ADDSUBPS);
+    gen_Instruction2_Type10(ADDSUBPD);
+    gen_Instruction2_Type10(HADDPS);
+    gen_Instruction2_Type10(HSUBPS);
+    gen_Instruction2_Type10(HADDPD);
+    gen_Instruction2_Type10(HSUBPD);
+    gen_Instruction2_Type10(MOVSHDUP);
+    gen_Instruction2_Type10(MOVSLDUP);
+    gen_Instruction2_Type10(PMULLD);
+    gen_Instruction2_Type10(PMULDQ);
+    gen_Instruction2_Type10(PMINUW);
+    gen_Instruction2_Type10(PMINUD);
+    gen_Instruction2_Type10(PMINSB);
+    gen_Instruction2_Type10(PMINSD);
+    gen_Instruction2_Type10(PMAXUW);
+    gen_Instruction2_Type10(PMAXUD);
+    gen_Instruction2_Type10(PMAXSB);
+    gen_Instruction2_Type10(PMAXSD);
+    gen_Instruction2_Type10(PCMPGTQ);
+    gen_Instruction2_Type10(AESDEC);
+    gen_Instruction2_Type10(AESDECLAST);
+    gen_Instruction2_Type10(AESENC);
+    gen_Instruction2_Type10(AESENCLAST);
+    gen_Instruction2_Type10(AESIMC);
 
     return EXIT_SUCCESS;
 }

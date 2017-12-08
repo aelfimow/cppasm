@@ -953,16 +953,16 @@ extern Instruction2_Type27 PMOVZXBQ;
 extern Instruction2_Type12 MPSADBW;
 
 // SSE4.1: horizontal search
-extern Instruction2_Type12 PHMINPOSUW;
+extern Instruction2_Type10 PHMINPOSUW;
 
 // SSE4.1: packed test
-extern Instruction2_Type12 PTEST;
+extern Instruction2_Type10 PTEST;
 
 // SSE4.1: packed qword equality comparison
-extern Instruction2_Type12 PCMPEQQ;
+extern Instruction2_Type10 PCMPEQQ;
 
 // SSE4.1: dword packing with unsigned saturation
-extern Instruction2_Type12 PACKUSDW;
+extern Instruction2_Type10 PACKUSDW;
 
 // SSE4.2: string and text processing instructions
 extern Instruction2_Type12 PCMPESTRI;

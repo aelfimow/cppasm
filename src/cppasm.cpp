@@ -900,16 +900,16 @@ Instruction2_Type27 PMOVZXBQ { asmout, "pmovzxbq" };
 Instruction2_Type12 MPSADBW { asmout, "mpsadbw" };
 
 // SSE4.1: horizontal search
-Instruction2_Type12 PHMINPOSUW { asmout, "phminposuw" };
+Instruction2_Type10 PHMINPOSUW { asmout, "phminposuw" };
 
 // SSE4.1: packed test
-Instruction2_Type12 PTEST { asmout, "ptest" };
+Instruction2_Type10 PTEST { asmout, "ptest" };
 
 // SSE4.1: packed qword equality comparison
-Instruction2_Type12 PCMPEQQ { asmout, "pcmpeqq" };
+Instruction2_Type10 PCMPEQQ { asmout, "pcmpeqq" };
 
 // SSE4.1: dword packing with unsigned saturation
-Instruction2_Type12 PACKUSDW { asmout, "packusdw" };
+Instruction2_Type10 PACKUSDW { asmout, "packusdw" };
 
 // SSE4.2: string and text processing instructions
 Instruction2_Type12 PCMPESTRI { asmout, "pcmpestri" };

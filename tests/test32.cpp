@@ -239,6 +239,14 @@ static void gen_Instruction2_Type11(Instruction2_Type11 &instr)
     instr(XMM0, addr);
 }
 
+static void gen_Instruction2_Type12(Instruction2_Type12 &instr)
+{
+    m128 addr { EAX };
+    imm8 mask { 255 };
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -623,6 +631,10 @@ try
     gen_Instruction2_Type10(AESENC);
     gen_Instruction2_Type10(AESENCLAST);
     gen_Instruction2_Type10(AESIMC);
+    gen_Instruction2_Type10(PHMINPOSUW);
+    gen_Instruction2_Type10(PTEST);
+    gen_Instruction2_Type10(PCMPEQQ);
+    gen_Instruction2_Type10(PACKUSDW);
 
     gen_Instruction2_Type11(ADDSS);
     gen_Instruction2_Type11(SUBSS);
@@ -639,6 +651,28 @@ try
     gen_Instruction2_Type11(PMOVSXWQ);
     gen_Instruction2_Type11(PMOVZXBD);
     gen_Instruction2_Type11(PMOVZXWQ);
+
+    gen_Instruction2_Type12(CMPPS);
+    gen_Instruction2_Type12(SHUFPS);
+    gen_Instruction2_Type12(CMPPD);
+    gen_Instruction2_Type12(SHUFPD);
+    gen_Instruction2_Type12(PSHUFLW);
+    gen_Instruction2_Type12(PSHUFHW);
+    gen_Instruction2_Type12(PSHUFD);
+    gen_Instruction2_Type12(DPPD);
+    gen_Instruction2_Type12(DPPS);
+    gen_Instruction2_Type12(BLENDPD);
+    gen_Instruction2_Type12(BLENDPS);
+    gen_Instruction2_Type12(PBLENDW);
+    gen_Instruction2_Type12(ROUNDPS);
+    gen_Instruction2_Type12(ROUNDPD);
+    gen_Instruction2_Type12(MPSADBW);
+    gen_Instruction2_Type12(PCMPESTRI);
+    gen_Instruction2_Type12(PCMPESTRM);
+    gen_Instruction2_Type12(PCMPISTRI);
+    gen_Instruction2_Type12(PCMPISTRM);
+    gen_Instruction2_Type12(AESKEYGENASSIST);
+    gen_Instruction2_Type12(PCLMULQDQ);
 
     return EXIT_SUCCESS;
 }

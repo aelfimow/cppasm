@@ -445,3 +445,33 @@ Instruction1_Type4_Label:
 	aesenclast (%eax), %xmm0
 	aesimc %xmm1, %xmm0
 	aesimc (%eax), %xmm0
+	addss %xmm1, %xmm0
+	addss (%eax), %xmm0
+	subss %xmm1, %xmm0
+	subss (%eax), %xmm0
+	mulss %xmm1, %xmm0
+	mulss (%eax), %xmm0
+	divss %xmm1, %xmm0
+	divss (%eax), %xmm0
+	rcpss %xmm1, %xmm0
+	rcpss (%eax), %xmm0
+	sqrtss %xmm1, %xmm0
+	sqrtss (%eax), %xmm0
+	maxss %xmm1, %xmm0
+	maxss (%eax), %xmm0
+	minss %xmm1, %xmm0
+	minss (%eax), %xmm0
+	comiss %xmm1, %xmm0
+	comiss (%eax), %xmm0
+	ucomiss %xmm1, %xmm0
+	ucomiss (%eax), %xmm0
+	cvtss2sd %xmm1, %xmm0
+	cvtss2sd (%eax), %xmm0
+	pmovsxbd %xmm1, %xmm0
+	pmovsxbd (%eax), %xmm0
+	pmovsxwq %xmm1, %xmm0
+	pmovsxwq (%eax), %xmm0
+	pmovzxbd %xmm1, %xmm0
+	pmovzxbd (%eax), %xmm0
+	pmovzxwq %xmm1, %xmm0
+	pmovzxwq (%eax), %xmm0

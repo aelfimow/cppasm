@@ -447,6 +447,14 @@ Instruction1_Type4_Label:
 	aesenclast (%rax), %xmm0
 	aesimc %xmm1, %xmm0
 	aesimc (%rax), %xmm0
+	phminposuw %xmm1, %xmm0
+	phminposuw (%rax), %xmm0
+	ptest %xmm1, %xmm0
+	ptest (%rax), %xmm0
+	pcmpeqq %xmm1, %xmm0
+	pcmpeqq (%rax), %xmm0
+	packusdw %xmm1, %xmm0
+	packusdw (%rax), %xmm0
 	addss %xmm1, %xmm0
 	addss (%rax), %xmm0
 	subss %xmm1, %xmm0
@@ -477,3 +485,45 @@ Instruction1_Type4_Label:
 	pmovzxbd (%rax), %xmm0
 	pmovzxwq %xmm1, %xmm0
 	pmovzxwq (%rax), %xmm0
+	cmpps $0xFF, %xmm1, %xmm0
+	cmpps $0xFF, (%rax), %xmm0
+	shufps $0xFF, %xmm1, %xmm0
+	shufps $0xFF, (%rax), %xmm0
+	cmppd $0xFF, %xmm1, %xmm0
+	cmppd $0xFF, (%rax), %xmm0
+	shufpd $0xFF, %xmm1, %xmm0
+	shufpd $0xFF, (%rax), %xmm0
+	pshuflw $0xFF, %xmm1, %xmm0
+	pshuflw $0xFF, (%rax), %xmm0
+	pshufhw $0xFF, %xmm1, %xmm0
+	pshufhw $0xFF, (%rax), %xmm0
+	pshufd $0xFF, %xmm1, %xmm0
+	pshufd $0xFF, (%rax), %xmm0
+	dppd $0xFF, %xmm1, %xmm0
+	dppd $0xFF, (%rax), %xmm0
+	dpps $0xFF, %xmm1, %xmm0
+	dpps $0xFF, (%rax), %xmm0
+	blendpd $0xFF, %xmm1, %xmm0
+	blendpd $0xFF, (%rax), %xmm0
+	blendps $0xFF, %xmm1, %xmm0
+	blendps $0xFF, (%rax), %xmm0
+	pblendw $0xFF, %xmm1, %xmm0
+	pblendw $0xFF, (%rax), %xmm0
+	roundps $0xFF, %xmm1, %xmm0
+	roundps $0xFF, (%rax), %xmm0
+	roundpd $0xFF, %xmm1, %xmm0
+	roundpd $0xFF, (%rax), %xmm0
+	mpsadbw $0xFF, %xmm1, %xmm0
+	mpsadbw $0xFF, (%rax), %xmm0
+	pcmpestri $0xFF, %xmm1, %xmm0
+	pcmpestri $0xFF, (%rax), %xmm0
+	pcmpestrm $0xFF, %xmm1, %xmm0
+	pcmpestrm $0xFF, (%rax), %xmm0
+	pcmpistri $0xFF, %xmm1, %xmm0
+	pcmpistri $0xFF, (%rax), %xmm0
+	pcmpistrm $0xFF, %xmm1, %xmm0
+	pcmpistrm $0xFF, (%rax), %xmm0
+	aeskeygenassist $0xFF, %xmm1, %xmm0
+	aeskeygenassist $0xFF, (%rax), %xmm0
+	pclmulqdq $0xFF, %xmm1, %xmm0
+	pclmulqdq $0xFF, (%rax), %xmm0

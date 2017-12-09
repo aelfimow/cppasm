@@ -241,6 +241,14 @@ static void gen_Instruction2_Type12(Instruction2_Type12 &instr)
     instr(XMM0, addr, mask);
 }
 
+static void gen_Instruction2_Type13(Instruction2_Type13 &instr)
+{
+    m32 addr { RAX };
+    imm8 mask { 255 };
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -663,6 +671,10 @@ try
     gen_Instruction2_Type12(PCMPISTRM);
     gen_Instruction2_Type12(AESKEYGENASSIST);
     gen_Instruction2_Type12(PCLMULQDQ);
+
+    gen_Instruction2_Type13(CMPSS);
+    gen_Instruction2_Type13(ROUNDSS);
+    gen_Instruction2_Type13(INSERTPS);
 
     return EXIT_SUCCESS;
 }

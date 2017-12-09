@@ -527,3 +527,9 @@ Instruction1_Type4_Label:
 	aeskeygenassist $0xFF, (%rax), %xmm0
 	pclmulqdq $0xFF, %xmm1, %xmm0
 	pclmulqdq $0xFF, (%rax), %xmm0
+	cmpss $0xFF, %xmm1, %xmm0
+	cmpss $0xFF, (%rax), %xmm0
+	roundss $0xFF, %xmm1, %xmm0
+	roundss $0xFF, (%rax), %xmm0
+	insertps $0xFF, %xmm1, %xmm0
+	insertps $0xFF, (%rax), %xmm0

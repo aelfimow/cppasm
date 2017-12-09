@@ -249,6 +249,13 @@ static void gen_Instruction2_Type13(Instruction2_Type13 &instr)
     instr(XMM0, addr, mask);
 }
 
+static void gen_Instruction2_Type14(Instruction2_Type14 &instr)
+{
+    m64 addr { RAX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -675,6 +682,26 @@ try
     gen_Instruction2_Type13(CMPSS);
     gen_Instruction2_Type13(ROUNDSS);
     gen_Instruction2_Type13(INSERTPS);
+
+    gen_Instruction2_Type14(ADDSD);
+    gen_Instruction2_Type14(SUBSD);
+    gen_Instruction2_Type14(MULSD);
+    gen_Instruction2_Type14(DIVSD);
+    gen_Instruction2_Type14(SQRTSD);
+    gen_Instruction2_Type14(MAXSD);
+    gen_Instruction2_Type14(MINSD);
+    gen_Instruction2_Type14(COMISD);
+    gen_Instruction2_Type14(UCOMISD);
+    gen_Instruction2_Type14(CVTDQ2PD);
+    gen_Instruction2_Type14(CVTPS2PD);
+    gen_Instruction2_Type14(CVTSD2SS);
+    gen_Instruction2_Type14(MOVDDUP);
+    gen_Instruction2_Type14(PMOVSXBW);
+    gen_Instruction2_Type14(PMOVSXWD);
+    gen_Instruction2_Type14(PMOVSXDQ);
+    gen_Instruction2_Type14(PMOVZXBW);
+    gen_Instruction2_Type14(PMOVZXWD);
+    gen_Instruction2_Type14(PMOVZXDQ);
 
     return EXIT_SUCCESS;
 }

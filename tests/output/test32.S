@@ -591,3 +591,7 @@ Instruction1_Type4_Label:
 	ficoml (%ebx)
 	ficomp (%eax)
 	ficompl (%ebx)
+	cvtpi2ps %mm0, %xmm0
+	cvtpi2ps (%eax), %xmm0
+	cvtpi2pd %mm0, %xmm0
+	cvtpi2pd (%eax), %xmm0

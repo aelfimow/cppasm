@@ -278,6 +278,13 @@ static void gen_Instruction2_Type16(Instruction2_Type16 &instr)
     instr(addr2);
 }
 
+static void gen_Instruction2_Type17(Instruction2_Type17 &instr)
+{
+    m64 addr { EAX };
+    instr(XMM0, MM0);
+    instr(XMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -741,6 +748,9 @@ try
     gen_Instruction2_Type16(FIDIVR);
     gen_Instruction2_Type16(FICOM);
     gen_Instruction2_Type16(FICOMP);
+
+    gen_Instruction2_Type17(CVTPI2PS);
+    gen_Instruction2_Type17(CVTPI2PD);
 
     return EXIT_SUCCESS;
 }

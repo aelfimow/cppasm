@@ -569,3 +569,7 @@ Instruction1_Type4_Label:
 	pmovzxwd (%eax), %xmm0
 	pmovzxdq %xmm1, %xmm0
 	pmovzxdq (%eax), %xmm0
+	cmpsd $0xFF, %xmm1, %xmm0
+	cmpsd $0xFF, (%eax), %xmm0
+	roundsd $0xFF, %xmm1, %xmm0
+	roundsd $0xFF, (%eax), %xmm0

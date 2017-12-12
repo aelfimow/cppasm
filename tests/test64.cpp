@@ -256,6 +256,14 @@ static void gen_Instruction2_Type14(Instruction2_Type14 &instr)
     instr(XMM0, addr);
 }
 
+static void gen_Instruction2_Type15(Instruction2_Type15 &instr)
+{
+    m64 addr { RAX };
+    imm8 mask { 255 };
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -702,6 +710,9 @@ try
     gen_Instruction2_Type14(PMOVZXBW);
     gen_Instruction2_Type14(PMOVZXWD);
     gen_Instruction2_Type14(PMOVZXDQ);
+
+    gen_Instruction2_Type15(CMPSD_SSE2);
+    gen_Instruction2_Type15(ROUNDSD);
 
     return EXIT_SUCCESS;
 }

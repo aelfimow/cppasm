@@ -270,6 +270,14 @@ static void gen_Instruction2_Type15(Instruction2_Type15 &instr)
     instr(XMM0, addr, mask);
 }
 
+static void gen_Instruction2_Type16(Instruction2_Type16 &instr)
+{
+    m16 addr1 { EAX };
+    m32 addr2 { EBX };
+    instr(addr1);
+    instr(addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -723,6 +731,16 @@ try
 
     gen_Instruction2_Type15(CMPSD_SSE2);
     gen_Instruction2_Type15(ROUNDSD);
+
+    gen_Instruction2_Type16(FIST);
+    gen_Instruction2_Type16(FIADD);
+    gen_Instruction2_Type16(FISUB);
+    gen_Instruction2_Type16(FISUBR);
+    gen_Instruction2_Type16(FIMUL);
+    gen_Instruction2_Type16(FIDIV);
+    gen_Instruction2_Type16(FIDIVR);
+    gen_Instruction2_Type16(FICOM);
+    gen_Instruction2_Type16(FICOMP);
 
     return EXIT_SUCCESS;
 }

@@ -573,3 +573,21 @@ Instruction1_Type4_Label:
 	cmpsd $0xFF, (%eax), %xmm0
 	roundsd $0xFF, %xmm1, %xmm0
 	roundsd $0xFF, (%eax), %xmm0
+	fist (%eax)
+	fistl (%ebx)
+	fiadd (%eax)
+	fiaddl (%ebx)
+	fisub (%eax)
+	fisubl (%ebx)
+	fisubr (%eax)
+	fisubrl (%ebx)
+	fimul (%eax)
+	fimull (%ebx)
+	fidiv (%eax)
+	fidivl (%ebx)
+	fidivr (%eax)
+	fidivrl (%ebx)
+	ficom (%eax)
+	ficoml (%ebx)
+	ficomp (%eax)
+	ficompl (%ebx)

@@ -593,3 +593,7 @@ Instruction1_Type4_Label:
 	ficoml (%rbx)
 	ficomp (%rax)
 	ficompl (%rbx)
+	cvtpi2ps %mm0, %xmm0
+	cvtpi2ps (%rax), %xmm0
+	cvtpi2pd %mm0, %xmm0
+	cvtpi2pd (%rax), %xmm0

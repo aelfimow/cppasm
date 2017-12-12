@@ -597,3 +597,7 @@ Instruction1_Type4_Label:
 	cvtpi2ps (%rax), %xmm0
 	cvtpi2pd %mm0, %xmm0
 	cvtpi2pd (%rax), %xmm0
+	cvtps2pi %xmm0, %mm0
+	cvtps2pi (%rax), %mm0
+	cvttps2pi %xmm0, %mm0
+	cvttps2pi (%rax), %mm0

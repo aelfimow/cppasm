@@ -292,6 +292,13 @@ static void gen_Instruction2_Type18(Instruction2_Type18 &instr)
     instr(MM0, addr);
 }
 
+static void gen_Instruction2_Type19(Instruction2_Type19 &instr)
+{
+    m128 addr { EAX };
+    instr(MM0, XMM0);
+    instr(MM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -761,6 +768,9 @@ try
 
     gen_Instruction2_Type18(CVTPS2PI);
     gen_Instruction2_Type18(CVTTPS2PI);
+
+    gen_Instruction2_Type19(CVTPD2PI);
+    gen_Instruction2_Type19(CVTTPD2PI);
 
     return EXIT_SUCCESS;
 }

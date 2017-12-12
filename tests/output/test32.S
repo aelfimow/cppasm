@@ -599,3 +599,7 @@ Instruction1_Type4_Label:
 	cvtps2pi (%eax), %mm0
 	cvttps2pi %xmm0, %mm0
 	cvttps2pi (%eax), %mm0
+	cvtpd2pi %xmm0, %mm0
+	cvtpd2pi (%eax), %mm0
+	cvttpd2pi %xmm0, %mm0
+	cvttpd2pi (%eax), %mm0

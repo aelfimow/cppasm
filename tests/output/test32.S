@@ -617,3 +617,4 @@ Instruction1_Type4_Label:
 	fdivrp %st(0), %st(1)
 	pshufw $0xFF, %mm1, %mm0
 	pshufw $0xFF, (%eax), %mm0
+	movnti %ecx, (%eax)

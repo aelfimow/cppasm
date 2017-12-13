@@ -618,3 +618,5 @@ Instruction1_Type4_Label:
 	pshufw $0xFF, %mm1, %mm0
 	pshufw $0xFF, (%eax), %mm0
 	movnti %ecx, (%eax)
+	pinsrb $0xFF, %eax, %xmm0
+	pinsrb $0xFF, (%eax), %xmm0

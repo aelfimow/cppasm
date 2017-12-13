@@ -299,6 +299,15 @@ static void gen_Instruction2_Type20(Instruction2_Type20 &instr)
     instr(ST(1), ST(0));
 }
 
+static void gen_Instruction2_Type21(Instruction2_Type21 &instr)
+{
+    m64 addr { RAX };
+    imm8 mask { 255 };
+    instr(MM0, MM1, mask);
+    instr(MM0, addr, mask);
+}
+
+
 int main(int argc, char *argv[])
 try
 {
@@ -774,6 +783,8 @@ try
     gen_Instruction2_Type20(FMULP);
     gen_Instruction2_Type20(FDIVP);
     gen_Instruction2_Type20(FDIVRP);
+
+    gen_Instruction2_Type21(PSHUFW);
 
     return EXIT_SUCCESS;
 }

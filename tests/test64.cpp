@@ -315,6 +315,14 @@ static void gen_Instruction2_Type22(Instruction2_Type22 &instr)
     instr(addr2, RCX);
 }
 
+static void gen_Instruction2_Type23(Instruction2_Type23 &instr)
+{
+    m8 addr { RAX };
+    imm8 mask { 255 };
+    instr(XMM0, EAX, mask);
+    instr(XMM0, addr, mask);
+}
+
 
 int main(int argc, char *argv[])
 try
@@ -795,6 +803,8 @@ try
     gen_Instruction2_Type21(PSHUFW);
 
     gen_Instruction2_Type22(MOVNTI);
+
+    gen_Instruction2_Type23(PINSRB);
 
     return EXIT_SUCCESS;
 }

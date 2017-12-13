@@ -605,3 +605,15 @@ Instruction1_Type4_Label:
 	cvtpd2pi (%rax), %mm0
 	cvttpd2pi %xmm0, %mm0
 	cvttpd2pi (%rax), %mm0
+	faddp
+	faddp %st(0), %st(1)
+	fsubp
+	fsubp %st(0), %st(1)
+	fsubrp
+	fsubrp %st(0), %st(1)
+	fmulp
+	fmulp %st(0), %st(1)
+	fdivp
+	fdivp %st(0), %st(1)
+	fdivrp
+	fdivrp %st(0), %st(1)

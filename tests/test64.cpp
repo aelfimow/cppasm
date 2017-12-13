@@ -293,6 +293,12 @@ static void gen_Instruction2_Type19(Instruction2_Type19 &instr)
     instr(MM0, addr);
 }
 
+static void gen_Instruction2_Type20(Instruction2_Type20 &instr)
+{
+    instr();
+    instr(ST(1), ST(0));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -761,6 +767,13 @@ try
 
     gen_Instruction2_Type19(CVTPD2PI);
     gen_Instruction2_Type19(CVTTPD2PI);
+
+    gen_Instruction2_Type20(FADDP);
+    gen_Instruction2_Type20(FSUBP);
+    gen_Instruction2_Type20(FSUBRP);
+    gen_Instruction2_Type20(FMULP);
+    gen_Instruction2_Type20(FDIVP);
+    gen_Instruction2_Type20(FDIVRP);
 
     return EXIT_SUCCESS;
 }

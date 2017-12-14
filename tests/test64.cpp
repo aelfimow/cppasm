@@ -339,6 +339,14 @@ static void gen_Instruction2_Type25(Instruction2_Type25 &instr)
     instr(XMM0, addr, mask);
 }
 
+static void gen_Instruction2_Type26(Instruction2_Type26 &instr)
+{
+    m64 addr { RBX };
+    imm8 mask { 255 };
+    instr(RAX, XMM1, mask);
+    instr(addr, XMM1, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -824,6 +832,8 @@ try
     gen_Instruction2_Type24(PINSRD);
 
     gen_Instruction2_Type25(PINSRQ);
+
+    gen_Instruction2_Type26(PEXTRQ);
 
     return EXIT_SUCCESS;
 }

@@ -627,3 +627,5 @@ Instruction1_Type4_Label:
 	pinsrd $0xFF, (%rbx), %xmm0
 	pinsrq $0xFF, %rax, %xmm0
 	pinsrq $0xFF, (%rbx), %xmm0
+	pextrq $0xFF, %xmm1, %rax
+	pextrq $0xFF, %xmm1, (%rbx)

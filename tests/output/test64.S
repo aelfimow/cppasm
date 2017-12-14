@@ -625,3 +625,5 @@ Instruction1_Type4_Label:
 	pinsrb $0xFF, (%rax), %xmm0
 	pinsrd $0xFF, %eax, %xmm0
 	pinsrd $0xFF, (%rbx), %xmm0
+	pinsrq $0xFF, %rax, %xmm0
+	pinsrq $0xFF, (%rbx), %xmm0

@@ -629,3 +629,7 @@ Instruction1_Type4_Label:
 	pinsrq $0xFF, (%rbx), %xmm0
 	pextrq $0xFF, %xmm1, %rax
 	pextrq $0xFF, %xmm1, (%rbx)
+	pmovsxbq %xmm1, %xmm0
+	pmovsxbq (%rax), %xmm0
+	pmovzxbq %xmm1, %xmm0
+	pmovzxbq (%rax), %xmm0

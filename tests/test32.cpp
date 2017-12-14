@@ -349,6 +349,13 @@ static void gen_Instruction2_Type28(Instruction2_Type28 &instr)
     instr(XMM0, XMM1, addr);
 }
 
+static void gen_Instruction2_Type29(Instruction2_Type29 &instr)
+{
+    m32 addr { EAX };
+    instr(XMM0, XMM1, XMM2);
+    instr(XMM0, XMM1, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -852,6 +859,19 @@ try
     gen_Instruction2_Type28(VFNMSUB132SD);
     gen_Instruction2_Type28(VFNMSUB213SD);
     gen_Instruction2_Type28(VFNMSUB231SD);
+
+    gen_Instruction2_Type29(VFMADD132SS);
+    gen_Instruction2_Type29(VFMADD213SS);
+    gen_Instruction2_Type29(VFMADD231SS);
+    gen_Instruction2_Type29(VFMSUB132SS);
+    gen_Instruction2_Type29(VFMSUB213SS);
+    gen_Instruction2_Type29(VFMSUB231SS);
+    gen_Instruction2_Type29(VFNMADD132SS);
+    gen_Instruction2_Type29(VFNMADD213SS);
+    gen_Instruction2_Type29(VFNMADD231SS);
+    gen_Instruction2_Type29(VFNMSUB132SS);
+    gen_Instruction2_Type29(VFNMSUB213SS);
+    gen_Instruction2_Type29(VFNMSUB231SS);
 
     return EXIT_SUCCESS;
 }

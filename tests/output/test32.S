@@ -622,3 +622,7 @@ Instruction1_Type4_Label:
 	pinsrb $0xFF, (%eax), %xmm0
 	pinsrd $0xFF, %eax, %xmm0
 	pinsrd $0xFF, (%ebx), %xmm0
+	pmovsxbq %xmm1, %xmm0
+	pmovsxbq (%eax), %xmm0
+	pmovzxbq %xmm1, %xmm0
+	pmovzxbq (%eax), %xmm0

@@ -620,3 +620,5 @@ Instruction1_Type4_Label:
 	movnti %ecx, (%eax)
 	pinsrb $0xFF, %eax, %xmm0
 	pinsrb $0xFF, (%eax), %xmm0
+	pinsrd $0xFF, %eax, %xmm0
+	pinsrd $0xFF, (%ebx), %xmm0

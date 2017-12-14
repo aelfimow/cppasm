@@ -657,3 +657,27 @@ Instruction1_Type4_Label:
 	vfnmsub213sd (%rax), %xmm1, %xmm0
 	vfnmsub231sd %xmm2, %xmm1, %xmm0
 	vfnmsub231sd (%rax), %xmm1, %xmm0
+	vfmadd132ss %xmm2, %xmm1, %xmm0
+	vfmadd132ss (%rax), %xmm1, %xmm0
+	vfmadd213ss %xmm2, %xmm1, %xmm0
+	vfmadd213ss (%rax), %xmm1, %xmm0
+	vfmadd231ss %xmm2, %xmm1, %xmm0
+	vfmadd231ss (%rax), %xmm1, %xmm0
+	vfmsub132ss %xmm2, %xmm1, %xmm0
+	vfmsub132ss (%rax), %xmm1, %xmm0
+	vfmsub213ss %xmm2, %xmm1, %xmm0
+	vfmsub213ss (%rax), %xmm1, %xmm0
+	vfmsub231ss %xmm2, %xmm1, %xmm0
+	vfmsub231ss (%rax), %xmm1, %xmm0
+	vfnmadd132ss %xmm2, %xmm1, %xmm0
+	vfnmadd132ss (%rax), %xmm1, %xmm0
+	vfnmadd213ss %xmm2, %xmm1, %xmm0
+	vfnmadd213ss (%rax), %xmm1, %xmm0
+	vfnmadd231ss %xmm2, %xmm1, %xmm0
+	vfnmadd231ss (%rax), %xmm1, %xmm0
+	vfnmsub132ss %xmm2, %xmm1, %xmm0
+	vfnmsub132ss (%rax), %xmm1, %xmm0
+	vfnmsub213ss %xmm2, %xmm1, %xmm0
+	vfnmsub213ss (%rax), %xmm1, %xmm0
+	vfnmsub231ss %xmm2, %xmm1, %xmm0
+	vfnmsub231ss (%rax), %xmm1, %xmm0

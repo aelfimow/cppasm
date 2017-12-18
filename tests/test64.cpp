@@ -368,6 +368,14 @@ static void gen_Instruction2_Type29(Instruction2_Type29 &instr)
     instr(XMM0, XMM1, addr);
 }
 
+static void gen_Instruction2_Type30(Instruction2_Type30 &instr)
+{
+    imm8 mask { 255 };
+    m128 addr { RAX };
+    instr(XMM0, XMM1, XMM2, mask);
+    instr(XMM0, XMM1, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -884,6 +892,8 @@ try
     gen_Instruction2_Type29(VFNMSUB132SS);
     gen_Instruction2_Type29(VFNMSUB213SS);
     gen_Instruction2_Type29(VFNMSUB231SS);
+
+    gen_Instruction2_Type30(VDPPD);
 
     return EXIT_SUCCESS;
 }

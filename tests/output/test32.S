@@ -676,3 +676,7 @@ Instruction1_Type4_Label:
 	vfnmsub231ss (%eax), %xmm1, %xmm0
 	vdppd $0xFF, %xmm2, %xmm1, %xmm0
 	vdppd $0xFF, (%eax), %xmm1, %xmm0
+	vlddqu (%eax), %xmm0
+	vlddqu (%ebx), %ymm0
+	vmovntdqa (%eax), %xmm0
+	vmovntdqa (%ebx), %ymm0

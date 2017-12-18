@@ -364,6 +364,14 @@ static void gen_Instruction2_Type30(Instruction2_Type30 &instr)
     instr(XMM0, XMM1, addr, mask);
 }
 
+static void gen_Instruction2_Type31(Instruction2_Type31 &instr)
+{
+    m128 addr1 { EAX };
+    m256 addr2 { EBX };
+    instr(XMM0, addr1);
+    instr(YMM0, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -882,6 +890,9 @@ try
     gen_Instruction2_Type29(VFNMSUB231SS);
 
     gen_Instruction2_Type30(VDPPD);
+
+    gen_Instruction2_Type31(VLDDQU);
+    gen_Instruction2_Type31(VMOVNTDQA);
 
     return EXIT_SUCCESS;
 }

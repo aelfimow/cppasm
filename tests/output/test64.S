@@ -687,3 +687,7 @@ Instruction1_Type4_Label:
 	vlddqu (%rbx), %ymm0
 	vmovntdqa (%rax), %xmm0
 	vmovntdqa (%rbx), %ymm0
+	vmovntps %xmm0, (%rax)
+	vmovntps %ymm0, (%rbx)
+	vmovntdq %xmm0, (%rax)
+	vmovntdq %ymm0, (%rbx)

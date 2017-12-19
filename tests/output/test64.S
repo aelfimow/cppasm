@@ -695,3 +695,5 @@ Instruction1_Type4_Label:
 	vbroadcastss (%rax), %ymm0
 	vextractf128 $0xFF, %ymm0, %xmm0
 	vextractf128 $0xFF, %ymm0, (%rax)
+	vinsertf128 $0xFF, %xmm0, %ymm1, %ymm0
+	vinsertf128 $0xFF, (%rax), %ymm1, %ymm0

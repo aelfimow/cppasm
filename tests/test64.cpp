@@ -407,6 +407,14 @@ static void gen_Instruction2_Type34(Instruction2_Type34 &instr)
     instr(addr, YMM0, mask);
 }
 
+static void gen_Instruction2_Type35(Instruction2_Type35 &instr)
+{
+    imm8 mask { 255 };
+    m128 addr { RAX };
+    instr(YMM0, YMM1, XMM0, mask);
+    instr(YMM0, YMM1, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -935,6 +943,8 @@ try
     gen_Instruction2_Type33(VBROADCASTSS);
 
     gen_Instruction2_Type34(VEXTRACTF128);
+
+    gen_Instruction2_Type35(VINSERTF128);
 
     return EXIT_SUCCESS;
 }

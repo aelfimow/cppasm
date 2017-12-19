@@ -680,3 +680,7 @@ Instruction1_Type4_Label:
 	vlddqu (%ebx), %ymm0
 	vmovntdqa (%eax), %xmm0
 	vmovntdqa (%ebx), %ymm0
+	vmovntps %xmm0, (%eax)
+	vmovntps %ymm0, (%ebx)
+	vmovntdq %xmm0, (%eax)
+	vmovntdq %ymm0, (%ebx)

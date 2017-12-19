@@ -387,6 +387,14 @@ static void gen_Instruction2_Type33(Instruction2_Type33 &instr)
     instr(YMM0, addr);
 }
 
+static void gen_Instruction2_Type34(Instruction2_Type34 &instr)
+{
+    imm8 mask { 255 };
+    m128 addr { EAX };
+    instr(XMM0, YMM0, mask);
+    instr(addr, YMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -913,6 +921,8 @@ try
     gen_Instruction2_Type32(VMOVNTDQ);
 
     gen_Instruction2_Type33(VBROADCASTSS);
+
+    gen_Instruction2_Type34(VEXTRACTF128);
 
     return EXIT_SUCCESS;
 }

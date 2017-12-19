@@ -686,3 +686,5 @@ Instruction1_Type4_Label:
 	vmovntdq %ymm0, (%ebx)
 	vbroadcastss (%eax), %xmm0
 	vbroadcastss (%eax), %ymm0
+	vextractf128 $0xFF, %ymm0, %xmm0
+	vextractf128 $0xFF, %ymm0, (%eax)

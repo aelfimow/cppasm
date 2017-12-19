@@ -392,6 +392,13 @@ static void gen_Instruction2_Type32(Instruction2_Type32 &instr)
     instr(addr2, YMM0);
 }
 
+static void gen_Instruction2_Type33(Instruction2_Type33 &instr)
+{
+    m32 addr { RAX };
+    instr(XMM0, addr);
+    instr(YMM0, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -916,6 +923,8 @@ try
 
     gen_Instruction2_Type32(VMOVNTPS);
     gen_Instruction2_Type32(VMOVNTDQ);
+
+    gen_Instruction2_Type33(VBROADCASTSS);
 
     return EXIT_SUCCESS;
 }

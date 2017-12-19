@@ -1095,7 +1095,6 @@ extern Instruction4_Type22 VMOVMSKPS;
 extern Instruction4_Type22 VMOVMSKPD;
 extern Instruction2_Type31 VLDDQU;
 extern Instruction2_Type32 VMOVNTPS;
-extern Instruction2_Type32 VMOVNTPS;
 extern Instruction2_Type32 VMOVNTDQ;
 extern Instruction2_Type31 VMOVNTDQA;
 extern Instruction4_Type21 VMOVSHDUP;

@@ -711,3 +711,6 @@ Instruction1_Type4_Label:
 	movss %xmm1, %xmm0
 	movss (%eax), %xmm0
 	movss %xmm0, (%eax)
+	movsd %xmm1, %xmm0
+	movsd (%eax), %xmm0
+	movsd %xmm0, (%eax)

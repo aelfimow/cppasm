@@ -704,3 +704,7 @@ Instruction1_Type4_Label:
 	lss (%eax), %eax
 	lea (%eax), %ax
 	lea (%eax), %eax
+	rdrand %ax
+	rdrand %eax
+	rdseed %ax
+	rdseed %eax

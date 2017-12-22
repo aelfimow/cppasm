@@ -708,3 +708,6 @@ Instruction1_Type4_Label:
 	rdrand %eax
 	rdseed %ax
 	rdseed %eax
+	movss %xmm1, %xmm0
+	movss (%eax), %xmm0
+	movss %xmm0, (%eax)

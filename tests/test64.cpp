@@ -438,6 +438,14 @@ static void gen_Instruction3_Type2(Instruction3_Type2 &instr)
     instr(RAX);
 }
 
+static void gen_Instruction3_Type3(Instruction3_Type3 &instr)
+{
+    m32 addr { RAX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -978,6 +986,8 @@ try
 
     gen_Instruction3_Type2(RDRAND);
     gen_Instruction3_Type2(RDSEED);
+
+    gen_Instruction3_Type3(MOVSS);
 
     return EXIT_SUCCESS;
 }

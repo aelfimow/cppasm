@@ -717,3 +717,6 @@ Instruction1_Type4_Label:
 	rdseed %ax
 	rdseed %eax
 	rdseed %rax
+	movss %xmm1, %xmm0
+	movss (%rax), %xmm0
+	movss %xmm0, (%rax)

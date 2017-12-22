@@ -714,3 +714,21 @@ Instruction1_Type4_Label:
 	movsd %xmm1, %xmm0
 	movsd (%eax), %xmm0
 	movsd %xmm0, (%eax)
+	movaps %xmm1, %xmm0
+	movaps (%eax), %xmm0
+	movaps %xmm0, (%eax)
+	movups %xmm1, %xmm0
+	movups (%eax), %xmm0
+	movups %xmm0, (%eax)
+	movapd %xmm1, %xmm0
+	movapd (%eax), %xmm0
+	movapd %xmm0, (%eax)
+	movupd %xmm1, %xmm0
+	movupd (%eax), %xmm0
+	movupd %xmm0, (%eax)
+	movdqa %xmm1, %xmm0
+	movdqa (%eax), %xmm0
+	movdqa %xmm0, (%eax)
+	movdqu %xmm1, %xmm0
+	movdqu (%eax), %xmm0
+	movdqu %xmm0, (%eax)

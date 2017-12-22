@@ -440,6 +440,14 @@ static void gen_Instruction3_Type4(Instruction3_Type4 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction3_Type5(Instruction3_Type5 &instr)
+{
+    m128 addr { EAX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -986,6 +994,13 @@ try
     gen_Instruction3_Type3(MOVSS);
 
     gen_Instruction3_Type4(MOVSD_SSE2);
+
+    gen_Instruction3_Type5(MOVAPS);
+    gen_Instruction3_Type5(MOVUPS);
+    gen_Instruction3_Type5(MOVAPD);
+    gen_Instruction3_Type5(MOVUPD);
+    gen_Instruction3_Type5(MOVDQA);
+    gen_Instruction3_Type5(MOVDQU);
 
     return EXIT_SUCCESS;
 }

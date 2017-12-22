@@ -423,6 +423,14 @@ static void gen_Instruction2_Type36(Instruction2_Type36 &instr)
     instr(YMM0, YMM1, addr, mask);
 }
 
+static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
+{
+    m64 addr { RAX };
+    instr(AX, addr);
+    instr(EAX, addr);
+    instr(RAX, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -955,6 +963,11 @@ try
     gen_Instruction2_Type35(VINSERTF128);
 
     gen_Instruction2_Type36(VPERM2F128);
+
+    gen_Instruction3_Type1(LFS);
+    gen_Instruction3_Type1(LGS);
+    gen_Instruction3_Type1(LSS);
+    gen_Instruction3_Type1(LEA);
 
     return EXIT_SUCCESS;
 }

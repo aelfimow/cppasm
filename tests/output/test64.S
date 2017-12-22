@@ -699,3 +699,15 @@ Instruction1_Type4_Label:
 	vinsertf128 $0xFF, (%rax), %ymm1, %ymm0
 	vperm2f128 $0xFF, %ymm2, %ymm1, %ymm0
 	vperm2f128 $0xFF, (%rax), %ymm1, %ymm0
+	lfs (%rax), %ax
+	lfs (%rax), %eax
+	lfs (%rax), %rax
+	lgs (%rax), %ax
+	lgs (%rax), %eax
+	lgs (%rax), %rax
+	lss (%rax), %ax
+	lss (%rax), %eax
+	lss (%rax), %rax
+	lea (%rax), %ax
+	lea (%rax), %eax
+	lea (%rax), %rax

@@ -431,6 +431,13 @@ static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
     instr(RAX, addr);
 }
 
+static void gen_Instruction3_Type2(Instruction3_Type2 &instr)
+{
+    instr(AX);
+    instr(EAX);
+    instr(RAX);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -968,6 +975,9 @@ try
     gen_Instruction3_Type1(LGS);
     gen_Instruction3_Type1(LSS);
     gen_Instruction3_Type1(LEA);
+
+    gen_Instruction3_Type2(RDRAND);
+    gen_Instruction3_Type2(RDSEED);
 
     return EXIT_SUCCESS;
 }

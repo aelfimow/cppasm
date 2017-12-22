@@ -711,3 +711,9 @@ Instruction1_Type4_Label:
 	lea (%rax), %ax
 	lea (%rax), %eax
 	lea (%rax), %rax
+	rdrand %ax
+	rdrand %eax
+	rdrand %rax
+	rdseed %ax
+	rdseed %eax
+	rdseed %rax

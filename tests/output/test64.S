@@ -741,3 +741,12 @@ Instruction1_Type4_Label:
 	movdqu %xmm1, %xmm0
 	movdqu (%rax), %xmm0
 	movdqu %xmm0, (%rax)
+	fild (%rax)
+	fildl (%rbx)
+	fildll (%rcx)
+	fistp (%rax)
+	fistpl (%rbx)
+	fistpll (%rcx)
+	fisttp (%rax)
+	fisttpl (%rbx)
+	fisttpll (%rcx)

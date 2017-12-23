@@ -462,6 +462,16 @@ static void gen_Instruction3_Type5(Instruction3_Type5 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction3_Type6(Instruction3_Type6 &instr)
+{
+    m16 addr1 { RAX };
+    m32 addr2 { RBX };
+    m64 addr3 { RCX };
+    instr(addr1);
+    instr(addr2);
+    instr(addr3);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1013,6 +1023,10 @@ try
     gen_Instruction3_Type5(MOVUPD);
     gen_Instruction3_Type5(MOVDQA);
     gen_Instruction3_Type5(MOVDQU);
+
+    gen_Instruction3_Type6(FILD);
+    gen_Instruction3_Type6(FISTP);
+    gen_Instruction3_Type6(FISTTP);
 
     return EXIT_SUCCESS;
 }

@@ -774,3 +774,6 @@ Instruction1_Type4_Label:
 	pextrb $0xFF, %xmm0, %eax
 	pextrb $0xFF, %xmm0, %rax
 	pextrb $0xFF, %xmm0, (%rax)
+	extractps $0xFF, %xmm0, %eax
+	extractps $0xFF, %xmm0, %rax
+	extractps $0xFF, %xmm0, (%rax)

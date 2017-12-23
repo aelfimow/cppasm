@@ -932,7 +932,7 @@ extern Instruction2_Type23 PINSRB;
 extern Instruction2_Type24 PINSRD;
 extern Instruction2_Type25 PINSRQ;
 extern Instruction3_Type9 PEXTRB;
-extern Instruction3_Type10 PEXTRD;
+extern Instruction2_Type37 PEXTRD;
 extern Instruction2_Type26 PEXTRQ;
 
 // SSE4.1: packed integer format convertions

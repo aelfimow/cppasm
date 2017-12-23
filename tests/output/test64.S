@@ -771,3 +771,6 @@ Instruction1_Type4_Label:
 	fdivrs (%rax)
 	fdivrl (%rbx)
 	fdivr %st(0), %st(1)
+	pextrb $0xFF, %xmm0, %eax
+	pextrb $0xFF, %xmm0, %rax
+	pextrb $0xFF, %xmm0, (%rax)

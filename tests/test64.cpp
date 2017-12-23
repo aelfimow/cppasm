@@ -490,6 +490,15 @@ static void gen_Instruction3_Type8(Instruction3_Type8 &instr)
     instr(ST(1), ST(0));
 }
 
+static void gen_Instruction3_Type9(Instruction3_Type9 &instr)
+{
+    imm8 mask { 255 };
+    m8 addr { RAX };
+    instr(EAX, XMM0, mask);
+    instr(RAX, XMM0, mask);
+    instr(addr, XMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1054,6 +1063,8 @@ try
     gen_Instruction3_Type8(FMUL);
     gen_Instruction3_Type8(FDIV);
     gen_Instruction3_Type8(FDIVR);
+
+    gen_Instruction3_Type9(PEXTRB);
 
     return EXIT_SUCCESS;
 }

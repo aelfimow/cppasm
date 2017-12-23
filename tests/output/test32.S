@@ -741,3 +741,6 @@ Instruction1_Type4_Label:
 	fisttp (%eax)
 	fisttpl (%ebx)
 	fisttpll (%ecx)
+	fsts (%eax)
+	fstl (%ebx)
+	fst %st(0)

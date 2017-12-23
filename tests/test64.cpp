@@ -472,6 +472,15 @@ static void gen_Instruction3_Type6(Instruction3_Type6 &instr)
     instr(addr3);
 }
 
+static void gen_Instruction3_Type7(Instruction3_Type7 &instr)
+{
+    m32fp addr1 { RAX };
+    m64fp addr2 { RBX };
+    instr(addr1);
+    instr(addr2);
+    instr(ST(0));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1027,6 +1036,8 @@ try
     gen_Instruction3_Type6(FILD);
     gen_Instruction3_Type6(FISTP);
     gen_Instruction3_Type6(FISTTP);
+
+    gen_Instruction3_Type7(FST);
 
     return EXIT_SUCCESS;
 }

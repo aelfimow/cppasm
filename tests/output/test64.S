@@ -750,3 +750,6 @@ Instruction1_Type4_Label:
 	fisttp (%rax)
 	fisttpl (%rbx)
 	fisttpll (%rcx)
+	fsts (%rax)
+	fstl (%rbx)
+	fst %st(0)

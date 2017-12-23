@@ -766,5 +766,3 @@ Instruction1_Type4_Label:
 	pextrb $0xFF, %xmm0, (%eax)
 	extractps $0xFF, %xmm0, %eax
 	extractps $0xFF, %xmm0, (%eax)
-	pextrd $0xFF, %xmm0, %eax
-	pextrd $0xFF, %xmm0, (%eax)

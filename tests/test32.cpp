@@ -1062,7 +1062,6 @@ try
     gen_Instruction3_Type9(PEXTRB);
 
     gen_Instruction3_Type10(EXTRACTPS);
-    gen_Instruction3_Type10(PEXTRD);
 
     return EXIT_SUCCESS;
 }

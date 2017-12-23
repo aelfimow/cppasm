@@ -467,6 +467,15 @@ static void gen_Instruction3_Type7(Instruction3_Type7 &instr)
     instr(ST(0));
 }
 
+static void gen_Instruction3_Type8(Instruction3_Type8 &instr)
+{
+    m32fp addr1 { EAX };
+    m64fp addr2 { EBX };
+    instr(addr1);
+    instr(addr2);
+    instr(ST(1), ST(0));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1026,6 +1035,13 @@ try
     gen_Instruction3_Type6(FISTTP);
 
     gen_Instruction3_Type7(FST);
+
+    gen_Instruction3_Type8(FADD);
+    gen_Instruction3_Type8(FSUB);
+    gen_Instruction3_Type8(FSUBR);
+    gen_Instruction3_Type8(FMUL);
+    gen_Instruction3_Type8(FDIV);
+    gen_Instruction3_Type8(FDIVR);
 
     return EXIT_SUCCESS;
 }

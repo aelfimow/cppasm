@@ -764,3 +764,7 @@ Instruction1_Type4_Label:
 	fdivr %st(0), %st(1)
 	pextrb $0xFF, %xmm0, %eax
 	pextrb $0xFF, %xmm0, (%eax)
+	extractps $0xFF, %xmm0, %eax
+	extractps $0xFF, %xmm0, (%eax)
+	pextrd $0xFF, %xmm0, %eax
+	pextrd $0xFF, %xmm0, (%eax)

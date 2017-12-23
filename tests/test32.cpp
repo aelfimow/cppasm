@@ -484,6 +484,14 @@ static void gen_Instruction3_Type9(Instruction3_Type9 &instr)
     instr(addr, XMM0, mask);
 }
 
+static void gen_Instruction3_Type10(Instruction3_Type10 &instr)
+{
+    imm8 mask { 255 };
+    m32 addr { EAX };
+    instr(EAX, XMM0, mask);
+    instr(addr, XMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1052,6 +1060,9 @@ try
     gen_Instruction3_Type8(FDIVR);
 
     gen_Instruction3_Type9(PEXTRB);
+
+    gen_Instruction3_Type10(EXTRACTPS);
+    gen_Instruction3_Type10(PEXTRD);
 
     return EXIT_SUCCESS;
 }

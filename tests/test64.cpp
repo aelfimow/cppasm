@@ -537,6 +537,17 @@ static void gen_Instruction4_Type2(Instruction4_Type2 &instr)
     instr(ST(0));
 }
 
+static void gen_Instruction4_Type4(Instruction4_Type4 &instr)
+{
+    m64 addr1 { EAX };
+    m128 addr2 { EBX };
+    imm8 mask { 255 };
+    instr(MM0, MM1, mask);
+    instr(MM0, addr1, mask);
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr2, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1172,6 +1183,8 @@ try
 
     gen_Instruction4_Type2(FLD);
     gen_Instruction4_Type2(FSTP);
+
+    gen_Instruction4_Type4(PALIGNR);
 
     return EXIT_SUCCESS;
 }

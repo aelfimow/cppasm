@@ -1153,6 +1153,8 @@ try
     gen_Instruction4_Type1(PSIGNB);
     gen_Instruction4_Type1(PSIGNW);
     gen_Instruction4_Type1(PSIGND);
+    gen_Instruction4_Type1(PMULHUW);
+    gen_Instruction4_Type1(PSADBW);
 
     gen_Instruction4_Type2(FLD);
     gen_Instruction4_Type2(FSTP);

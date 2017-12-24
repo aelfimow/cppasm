@@ -1004,6 +1004,14 @@ Instruction1_Type4_Label:
 	psignd (%eax), %mm0
 	psignd %xmm1, %xmm0
 	psignd (%ebx), %xmm0
+	pmulhuw %mm1, %mm0
+	pmulhuw (%eax), %mm0
+	pmulhuw %xmm1, %xmm0
+	pmulhuw (%ebx), %xmm0
+	psadbw %mm1, %mm0
+	psadbw (%eax), %mm0
+	psadbw %xmm1, %xmm0
+	psadbw (%ebx), %xmm0
 	flds (%eax)
 	fldl (%ebx)
 	fldt (%ecx)

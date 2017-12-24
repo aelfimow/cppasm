@@ -22,13 +22,7 @@ using Instruction4_Type2 = Instruction_4
     Operands_reg<st>
 >;
 
-using Instruction4_Type3 = Instruction_4
-<
-    Operands_reg_reg<mm, mm, no_suffix>,
-    Operands_reg_mem<mm, m64, no_suffix>,
-    Operands_reg_reg<xmm, mm, no_suffix>,
-    Operands_reg_mem<xmm, m128, no_suffix>
->;
+/* Free type: Instruction4_Type3 */
 
 using Instruction4_Type4 = Instruction_4
 <

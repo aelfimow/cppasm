@@ -1020,3 +1020,7 @@ Instruction1_Type4_Label:
 	fstpl (%ebx)
 	fstpt (%ecx)
 	fstp %st(0)
+	palignr $0xFF, %mm1, %mm0
+	palignr $0xFF, (%eax), %mm0
+	palignr $0xFF, %xmm1, %xmm0
+	palignr $0xFF, (%ebx), %xmm0

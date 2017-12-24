@@ -526,6 +526,17 @@ static void gen_Instruction4_Type1(Instruction4_Type1 &instr)
     instr(XMM0, addr2);
 }
 
+static void gen_Instruction4_Type2(Instruction4_Type2 &instr)
+{
+    m32fp addr1 { EAX };
+    m64fp addr2 { EBX };
+    m80fp addr3 { ECX };
+    instr(addr1);
+    instr(addr2);
+    instr(addr3);
+    instr(ST(0));
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1156,6 +1167,9 @@ try
     gen_Instruction4_Type1(PSIGNB);
     gen_Instruction4_Type1(PSIGNW);
     gen_Instruction4_Type1(PSIGND);
+
+    gen_Instruction4_Type2(FLD);
+    gen_Instruction4_Type2(FSTP);
 
     return EXIT_SUCCESS;
 }

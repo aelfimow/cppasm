@@ -500,6 +500,16 @@ static void gen_Instruction3_Type10(Instruction3_Type10 &instr)
     instr(addr, XMM0, mask);
 }
 
+static void gen_Instruction4_Type1(Instruction4_Type1 &instr)
+{
+    m64 addr1 { EAX };
+    m128 addr2 { EBX };
+    instr(MM0, MM1);
+    instr(MM0, addr1);
+    instr(XMM0, XMM1);
+    instr(XMM0, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1072,6 +1082,66 @@ try
     gen_Instruction3_Type9(PEXTRB);
 
     gen_Instruction3_Type10(EXTRACTPS);
+
+    gen_Instruction4_Type1(PACKSSWB);
+    gen_Instruction4_Type1(PACKSSDW);
+    gen_Instruction4_Type1(PUNPCKHBW);
+    gen_Instruction4_Type1(PUNPCKHWD);
+    gen_Instruction4_Type1(PUNPCKHDQ);
+    gen_Instruction4_Type1(PUNPCKLBW);
+    gen_Instruction4_Type1(PUNPCKLWD);
+    gen_Instruction4_Type1(PUNPCKLDQ);
+    gen_Instruction4_Type1(PADDB);
+    gen_Instruction4_Type1(PADDW);
+    gen_Instruction4_Type1(PADDD);
+    gen_Instruction4_Type1(PADDSB);
+    gen_Instruction4_Type1(PADDSW);
+    gen_Instruction4_Type1(PADDUSB);
+    gen_Instruction4_Type1(PADDUSW);
+    gen_Instruction4_Type1(PSUBB);
+    gen_Instruction4_Type1(PSUBW);
+    gen_Instruction4_Type1(PSUBD);
+    gen_Instruction4_Type1(PSUBSB);
+    gen_Instruction4_Type1(PSUBSW);
+    gen_Instruction4_Type1(PSUBUSB);
+    gen_Instruction4_Type1(PSUBUSW);
+    gen_Instruction4_Type1(PMULHW);
+    gen_Instruction4_Type1(PMULLW);
+    gen_Instruction4_Type1(PMADDWD);
+    gen_Instruction4_Type1(PCMPEQB);
+    gen_Instruction4_Type1(PCMPEQW);
+    gen_Instruction4_Type1(PCMPEQD);
+    gen_Instruction4_Type1(PCMPGTB);
+    gen_Instruction4_Type1(PCMPGTW);
+    gen_Instruction4_Type1(PCMPGTD);
+    gen_Instruction4_Type1(PAND);
+    gen_Instruction4_Type1(PANDN);
+    gen_Instruction4_Type1(POR);
+    gen_Instruction4_Type1(PXOR);
+    gen_Instruction4_Type1(PAVGB);
+    gen_Instruction4_Type1(PAVGW);
+    gen_Instruction4_Type1(PMAXUB);
+    gen_Instruction4_Type1(PMAXSW);
+    gen_Instruction4_Type1(PMINUB);
+    gen_Instruction4_Type1(PMINSW);
+    gen_Instruction4_Type1(PMULUDQ);
+    gen_Instruction4_Type1(PADDQ);
+    gen_Instruction4_Type1(PSUBQ);
+    gen_Instruction4_Type1(PHADDW);
+    gen_Instruction4_Type1(PHADDSW);
+    gen_Instruction4_Type1(PHADDD);
+    gen_Instruction4_Type1(PHSUBW);
+    gen_Instruction4_Type1(PHSUBSW);
+    gen_Instruction4_Type1(PHSUBD);
+    gen_Instruction4_Type1(PABSB);
+    gen_Instruction4_Type1(PABSW);
+    gen_Instruction4_Type1(PABSD);
+    gen_Instruction4_Type1(PMADDUBSW);
+    gen_Instruction4_Type1(PMULHRSW);
+    gen_Instruction4_Type1(PSHUFB);
+    gen_Instruction4_Type1(PSIGNB);
+    gen_Instruction4_Type1(PSIGNW);
+    gen_Instruction4_Type1(PSIGND);
 
     return EXIT_SUCCESS;
 }

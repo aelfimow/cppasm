@@ -541,6 +541,13 @@ static void gen_Instruction4_Type5(Instruction4_Type5 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction4_Type7(Instruction4_Type7 &instr)
+{
+    m32 addr { EAX };
+    instr(EAX, EBX);
+    instr(EAX, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1182,6 +1189,9 @@ try
     gen_Instruction4_Type4(PALIGNR);
 
     gen_Instruction4_Type5(VMOVD);
+
+    gen_Instruction4_Type7(ADCX);
+    gen_Instruction4_Type7(ADOX);
 
     return EXIT_SUCCESS;
 }

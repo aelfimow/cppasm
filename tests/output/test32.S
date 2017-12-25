@@ -1028,3 +1028,7 @@ Instruction1_Type4_Label:
 	vmovd (%eax), %xmm0
 	vmovd %xmm0, %eax
 	vmovd %xmm0, (%eax)
+	adcx %ebx, %eax
+	adcx (%eax), %eax
+	adox %ebx, %eax
+	adox (%eax), %eax

@@ -1024,3 +1024,7 @@ Instruction1_Type4_Label:
 	palignr $0xFF, (%eax), %mm0
 	palignr $0xFF, %xmm1, %xmm0
 	palignr $0xFF, (%ebx), %xmm0
+	vmovd %eax, %xmm0
+	vmovd (%eax), %xmm0
+	vmovd %xmm0, %eax
+	vmovd %xmm0, (%eax)

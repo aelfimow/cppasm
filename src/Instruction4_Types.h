@@ -37,7 +37,7 @@ using Instruction4_Type5 = Instruction_4
     Operands_reg_reg<xmm, r32, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>,
     Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_mem<m32, xmm, no_suffix>
+    Operands_mem_reg<m32, xmm, no_suffix>
 >;
 
 using Instruction4_Type6 = Instruction_4

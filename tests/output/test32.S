@@ -1036,3 +1036,11 @@ Instruction1_Type4_Label:
 	cvtsi2ssl (%eax), %xmm0
 	cvtsi2sd %eax, %xmm0
 	cvtsi2sdl (%eax), %xmm0
+	cvtss2si %xmm0, %eax
+	cvtss2si (%eax), %eax
+	cvttss2si %xmm0, %eax
+	cvttss2si (%eax), %eax
+	vcvttss2si %xmm0, %eax
+	vcvttss2si (%eax), %eax
+	vcvtss2si %xmm0, %eax
+	vcvtss2si (%eax), %eax

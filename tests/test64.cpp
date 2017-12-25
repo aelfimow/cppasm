@@ -548,6 +548,15 @@ static void gen_Instruction4_Type4(Instruction4_Type4 &instr)
     instr(XMM0, addr2, mask);
 }
 
+static void gen_Instruction4_Type5(Instruction4_Type5 &instr)
+{
+    m32 addr { RAX };
+    instr(XMM0, EAX);
+    instr(XMM0, addr);
+    instr(EAX, XMM0);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1185,6 +1194,8 @@ try
     gen_Instruction4_Type2(FSTP);
 
     gen_Instruction4_Type4(PALIGNR);
+
+    gen_Instruction4_Type5(VMOVD);
 
     return EXIT_SUCCESS;
 }

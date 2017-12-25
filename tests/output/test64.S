@@ -1051,3 +1051,11 @@ Instruction1_Type4_Label:
 	adox (%eax), %eax
 	adox %rbx, %rax
 	adox (%ebx), %rax
+	cvtsi2ss %eax, %xmm0
+	cvtsi2ssl (%rax), %xmm0
+	cvtsi2ss %rax, %xmm0
+	cvtsi2ssq (%rbx), %xmm0
+	cvtsi2sd %eax, %xmm0
+	cvtsi2sdl (%rax), %xmm0
+	cvtsi2sd %rax, %xmm0
+	cvtsi2sdq (%rbx), %xmm0

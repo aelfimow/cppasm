@@ -1032,3 +1032,7 @@ Instruction1_Type4_Label:
 	adcx (%eax), %eax
 	adox %ebx, %eax
 	adox (%eax), %eax
+	cvtsi2ss %eax, %xmm0
+	cvtsi2ssl (%eax), %xmm0
+	cvtsi2sd %eax, %xmm0
+	cvtsi2sdl (%eax), %xmm0

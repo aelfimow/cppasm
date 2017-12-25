@@ -566,6 +566,16 @@ static void gen_Instruction4_Type6(Instruction4_Type6 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction4_Type7(Instruction4_Type7 &instr)
+{
+    m32 addr1 { EAX };
+    m64 addr2 { EBX };
+    instr(EAX, EBX);
+    instr(EAX, addr1);
+    instr(RAX, RBX);
+    instr(RAX, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1207,6 +1217,9 @@ try
     gen_Instruction4_Type5(VMOVD);
 
     gen_Instruction4_Type6(VMOVQ);
+
+    gen_Instruction4_Type7(ADCX);
+    gen_Instruction4_Type7(ADOX);
 
     return EXIT_SUCCESS;
 }

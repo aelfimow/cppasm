@@ -1039,3 +1039,7 @@ Instruction1_Type4_Label:
 	vmovd (%rax), %xmm0
 	vmovd %xmm0, %eax
 	vmovd %xmm0, (%rax)
+	vmovq %rax, %xmm0
+	vmovq (%rax), %xmm0
+	vmovq %xmm0, %rax
+	vmovq %xmm0, (%rax)

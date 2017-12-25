@@ -557,6 +557,15 @@ static void gen_Instruction4_Type5(Instruction4_Type5 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction4_Type6(Instruction4_Type6 &instr)
+{
+    m64 addr { RAX };
+    instr(XMM0, RAX);
+    instr(XMM0, addr);
+    instr(RAX, XMM0);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1196,6 +1205,8 @@ try
     gen_Instruction4_Type4(PALIGNR);
 
     gen_Instruction4_Type5(VMOVD);
+
+    gen_Instruction4_Type6(VMOVQ);
 
     return EXIT_SUCCESS;
 }

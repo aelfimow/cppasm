@@ -1059,3 +1059,19 @@ Instruction1_Type4_Label:
 	cvtsi2sdl (%rax), %xmm0
 	cvtsi2sd %rax, %xmm0
 	cvtsi2sdq (%rbx), %xmm0
+	cvtss2si %xmm0, %eax
+	cvtss2si (%eax), %eax
+	cvtss2si %xmm0, %rax
+	cvtss2si (%eax), %rax
+	cvttss2si %xmm0, %eax
+	cvttss2si (%eax), %eax
+	cvttss2si %xmm0, %rax
+	cvttss2si (%eax), %rax
+	vcvttss2si %xmm0, %eax
+	vcvttss2si (%eax), %eax
+	vcvttss2si %xmm0, %rax
+	vcvttss2si (%eax), %rax
+	vcvtss2si %xmm0, %eax
+	vcvtss2si (%eax), %eax
+	vcvtss2si %xmm0, %rax
+	vcvtss2si (%eax), %rax

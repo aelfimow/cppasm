@@ -586,6 +586,15 @@ static void gen_Instruction4_Type8(Instruction4_Type8 &instr)
     instr(XMM0, addr2);
 }
 
+static void gen_Instruction4_Type9(Instruction4_Type9 &instr)
+{
+    m32 addr { EAX };
+    instr(EAX, XMM0);
+    instr(EAX, addr);
+    instr(RAX, XMM0);
+    instr(RAX, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1233,6 +1242,11 @@ try
 
     gen_Instruction4_Type8(CVTSI2SS);
     gen_Instruction4_Type8(CVTSI2SD);
+
+    gen_Instruction4_Type9(CVTSS2SI);
+    gen_Instruction4_Type9(CVTTSS2SI);
+    gen_Instruction4_Type9(VCVTTSS2SI);
+    gen_Instruction4_Type9(VCVTSS2SI);
 
     return EXIT_SUCCESS;
 }

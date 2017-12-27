@@ -582,6 +582,12 @@ static void gen_Instruction4_Type11(Instruction4_Type11 &instr)
     instr(XMM0, addr, mask);
 }
 
+static void gen_Instruction4_Type12(Instruction4_Type12 &instr)
+{
+    instr(EAX, MM0);
+    instr(EAX, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1239,6 +1245,8 @@ try
     gen_Instruction4_Type10(FCOMP);
 
     gen_Instruction4_Type11(PINSRW);
+
+    gen_Instruction4_Type12(PMOVMSKB);
 
     return EXIT_SUCCESS;
 }

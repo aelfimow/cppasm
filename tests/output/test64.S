@@ -1091,3 +1091,19 @@ Instruction1_Type4_Label:
 	pmovmskb %mm0, %rax
 	pmovmskb %xmm0, %eax
 	pmovmskb %xmm0, %rax
+	cvtsd2si %xmm0, %eax
+	cvtsd2si (%rax), %eax
+	cvtsd2si %xmm0, %rax
+	cvtsd2si (%rax), %rax
+	cvttsd2si %xmm0, %eax
+	cvttsd2si (%rax), %eax
+	cvttsd2si %xmm0, %rax
+	cvttsd2si (%rax), %rax
+	vcvtsd2si %xmm0, %eax
+	vcvtsd2si (%rax), %eax
+	vcvtsd2si %xmm0, %rax
+	vcvtsd2si (%rax), %rax
+	vcvttsd2si %xmm0, %eax
+	vcvttsd2si (%rax), %eax
+	vcvttsd2si %xmm0, %rax
+	vcvttsd2si (%rax), %rax

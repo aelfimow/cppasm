@@ -588,6 +588,13 @@ static void gen_Instruction4_Type12(Instruction4_Type12 &instr)
     instr(EAX, XMM0);
 }
 
+static void gen_Instruction4_Type13(Instruction4_Type13 &instr)
+{
+    m64 addr { EAX };
+    instr(EAX, XMM0);
+    instr(EAX, addr);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1247,6 +1254,11 @@ try
     gen_Instruction4_Type11(PINSRW);
 
     gen_Instruction4_Type12(PMOVMSKB);
+
+    gen_Instruction4_Type13(CVTSD2SI);
+    gen_Instruction4_Type13(CVTTSD2SI);
+    gen_Instruction4_Type13(VCVTSD2SI);
+    gen_Instruction4_Type13(VCVTTSD2SI);
 
     return EXIT_SUCCESS;
 }

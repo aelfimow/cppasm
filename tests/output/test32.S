@@ -1058,3 +1058,11 @@ Instruction1_Type4_Label:
 	pinsrw $0xFF, (%eax), %xmm0
 	pmovmskb %mm0, %eax
 	pmovmskb %xmm0, %eax
+	cvtsd2si %xmm0, %eax
+	cvtsd2si (%eax), %eax
+	cvttsd2si %xmm0, %eax
+	cvttsd2si (%eax), %eax
+	vcvtsd2si %xmm0, %eax
+	vcvtsd2si (%eax), %eax
+	vcvttsd2si %xmm0, %eax
+	vcvttsd2si (%eax), %eax

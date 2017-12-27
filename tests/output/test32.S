@@ -1044,3 +1044,11 @@ Instruction1_Type4_Label:
 	vcvttss2si (%eax), %eax
 	vcvtss2si %xmm0, %eax
 	vcvtss2si (%eax), %eax
+	fcom
+	fcom %st(1)
+	fcoms (%eax)
+	fcoml (%ebx)
+	fcomp
+	fcomp %st(1)
+	fcomps (%eax)
+	fcompl (%ebx)

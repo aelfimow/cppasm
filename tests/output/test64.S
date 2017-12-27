@@ -1087,3 +1087,7 @@ Instruction1_Type4_Label:
 	pinsrw $0xFF, (%rax), %mm0
 	pinsrw $0xFF, %eax, %xmm0
 	pinsrw $0xFF, (%rax), %xmm0
+	pmovmskb %mm0, %eax
+	pmovmskb %mm0, %rax
+	pmovmskb %xmm0, %eax
+	pmovmskb %xmm0, %rax

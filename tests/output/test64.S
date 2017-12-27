@@ -1083,3 +1083,7 @@ Instruction1_Type4_Label:
 	fcomp %st(1)
 	fcomps (%rax)
 	fcompl (%rbx)
+	pinsrw $0xFF, %eax, %mm0
+	pinsrw $0xFF, (%rax), %mm0
+	pinsrw $0xFF, %eax, %xmm0
+	pinsrw $0xFF, (%rax), %xmm0

@@ -572,6 +572,16 @@ static void gen_Instruction4_Type10(Instruction4_Type10 &instr)
     instr(addr2);
 }
 
+static void gen_Instruction4_Type11(Instruction4_Type11 &instr)
+{
+    m16 addr { EAX };
+    imm8 mask { 255 };
+    instr(MM0, EAX, mask);
+    instr(MM0, addr, mask);
+    instr(XMM0, EAX, mask);
+    instr(XMM0, addr, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1227,6 +1237,8 @@ try
 
     gen_Instruction4_Type10(FCOM);
     gen_Instruction4_Type10(FCOMP);
+
+    gen_Instruction4_Type11(PINSRW);
 
     return EXIT_SUCCESS;
 }

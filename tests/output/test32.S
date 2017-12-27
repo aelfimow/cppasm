@@ -1052,3 +1052,7 @@ Instruction1_Type4_Label:
 	fcomp %st(1)
 	fcomps (%eax)
 	fcompl (%ebx)
+	pinsrw $0xFF, %eax, %mm0
+	pinsrw $0xFF, (%eax), %mm0
+	pinsrw $0xFF, %eax, %xmm0
+	pinsrw $0xFF, (%eax), %xmm0

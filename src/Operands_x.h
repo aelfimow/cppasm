@@ -80,8 +80,8 @@ class Operands_reg_reg
 
         void operator()(RegType1 &op1, RegType2 &op2)
         {
-            std::string mnem { m_mnem + suffix };
-            Instruction instr { mnem, op1.name(), op2.name() };
+            Instruction instr { m_mnem, op1.name(), op2.name() };
+            instr.suffix(suffix);
             m_asmout << instr;
         }
 
@@ -642,8 +642,8 @@ class Operands_reg_mem
 
         void operator()(RegType &op1, MemType &op2)
         {
-            std::string mnem { m_mnem + suffix };
-            Instruction instr { mnem, op1.name(), op2.to_str() };
+            Instruction instr { m_mnem, op1.name(), op2.to_str() };
+            instr.suffix(suffix);
             m_asmout << instr;
         }
 
@@ -713,8 +713,8 @@ class Operands_mem_reg
 
         void operator()(MemType &op1, RegType &op2)
         {
-            std::string mnem { m_mnem + suffix };
-            Instruction instr { mnem, op1.to_str(), op2.name() };
+            Instruction instr { m_mnem, op1.to_str(), op2.name() };
+            instr.suffix(suffix);
             m_asmout << instr;
         }
 
@@ -748,8 +748,8 @@ class Operands_mem
 
         void operator()(MemType &op1)
         {
-            std::string mnem { m_mnem + suffix };
-            Instruction instr { mnem, op1.to_str() };
+            Instruction instr { m_mnem, op1.to_str() };
+            instr.suffix(suffix);
             m_asmout << instr;
         }
 
@@ -784,8 +784,8 @@ class Operands_mem_imm
 
         void operator()(MemType &op1, ImmType &op2)
         {
-            std::string mnem { m_mnem + suffix };
-            Instruction instr { mnem, op1.to_str(), op2.to_str() };
+            Instruction instr { m_mnem, op1.to_str(), op2.to_str() };
+            instr.suffix(suffix);
             m_asmout << instr;
         }
 

@@ -15,6 +15,8 @@ class Instruction
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3);
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4);
 
+        void suffix(const std::string sfx);
+
         std::string to_str() const;
 
         ~Instruction();
@@ -25,6 +27,8 @@ class Instruction
         const std::string m_op2;
         const std::string m_op3;
         const std::string m_op4;
+
+        std::string m_suffix;
 
     public:
         Instruction() = delete;

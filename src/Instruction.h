@@ -20,7 +20,11 @@ class Instruction
         ~Instruction();
 
     private:
-        const std::string m_str;
+        const std::string m_mnem;
+        const std::string m_op1;
+        const std::string m_op2;
+        const std::string m_op3;
+        const std::string m_op4;
 
     public:
         Instruction() = delete;

@@ -1066,3 +1066,15 @@ Instruction1_Type4_Label:
 	vcvtsd2si (%eax), %eax
 	vcvttsd2si %xmm0, %eax
 	vcvttsd2si (%eax), %eax
+	blendvpd %xmm1, %xmm0
+	blendvpd (%eax), %xmm0
+	blendvpd %xmm0, %xmm1, %xmm2
+	blendvpd %xmm0, (%eax), %xmm1
+	blendvps %xmm1, %xmm0
+	blendvps (%eax), %xmm0
+	blendvps %xmm0, %xmm1, %xmm2
+	blendvps %xmm0, (%eax), %xmm1
+	pblendvb %xmm1, %xmm0
+	pblendvb (%eax), %xmm0
+	pblendvb %xmm0, %xmm1, %xmm2
+	pblendvb %xmm0, (%eax), %xmm1

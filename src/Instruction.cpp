@@ -10,7 +10,8 @@ Instruction::Instruction(const std::string &mnem) :
     m_op2 { },
     m_op3 { },
     m_op4 { },
-    m_suffix { }
+    m_suffix { },
+    m_keep_args_sequence { false }
 {
 }
 
@@ -20,7 +21,8 @@ Instruction::Instruction(const std::string &mnem, const std::string &op) :
     m_op2 { },
     m_op3 { },
     m_op4 { },
-    m_suffix { }
+    m_suffix { },
+    m_keep_args_sequence { false }
 {
 }
 
@@ -30,7 +32,8 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op2 { op2 },
     m_op3 { },
     m_op4 { },
-    m_suffix { }
+    m_suffix { },
+    m_keep_args_sequence { false }
 {
 }
 
@@ -40,7 +43,8 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op2 { op2 },
     m_op3 { op3 },
     m_op4 { },
-    m_suffix { }
+    m_suffix { },
+    m_keep_args_sequence { false }
 {
 }
 
@@ -50,13 +54,19 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op2 { op2 },
     m_op3 { op3 },
     m_op4 { op4 },
-    m_suffix { }
+    m_suffix { },
+    m_keep_args_sequence { false }
 {
 }
 
 void Instruction::suffix(const std::string sfx)
 {
     m_suffix = sfx;
+}
+
+void Instruction::keep_args_sequence()
+{
+    m_keep_args_sequence = true;
 }
 
 std::string Instruction::to_str() const
@@ -70,19 +80,34 @@ std::string Instruction::to_str() const
 
     if (0 != m_op4.length())
     {
-        const std::string str { mnem + " " + m_op4 + ", " + m_op3 + ", " + m_op2 + ", " + m_op1 };
+        const std::string &op1 = m_keep_args_sequence ? m_op1 : m_op4;
+        const std::string &op2 = m_keep_args_sequence ? m_op2 : m_op3;
+        const std::string &op3 = m_keep_args_sequence ? m_op3 : m_op2;
+        const std::string &op4 = m_keep_args_sequence ? m_op4 : m_op1;
+
+        const std::string str { mnem + " " + op1 + ", " + op2 + ", " + op3 + ", " + op4 };
+
         return str;
     }
 
     if (0 != m_op3.length())
     {
-        const std::string str { mnem + " " + m_op3 + ", " + m_op2 + ", " + m_op1 };
+        const std::string &op1 = m_keep_args_sequence ? m_op1 : m_op3;
+        const std::string &op2 = m_keep_args_sequence ? m_op2 : m_op2;
+        const std::string &op3 = m_keep_args_sequence ? m_op3 : m_op1;
+
+        const std::string str { mnem + " " + op1 + ", " + op2 + ", " + op3 };
+
         return str;
     }
 
     if (0 != m_op2.length())
     {
-        const std::string str { mnem + " " + m_op2 + ", " + m_op1 };
+        const std::string &op1 = m_keep_args_sequence ? m_op1 : m_op2;
+        const std::string &op2 = m_keep_args_sequence ? m_op2 : m_op1;
+
+        const std::string str { mnem + " " + op1 + ", " + op2 };
+
         return str;
     }
 

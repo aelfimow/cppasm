@@ -16,6 +16,7 @@ class Instruction
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4);
 
         void suffix(const std::string sfx);
+        void keep_args_sequence();
 
         std::string to_str() const;
 
@@ -29,6 +30,7 @@ class Instruction
         const std::string m_op4;
 
         std::string m_suffix;
+        bool m_keep_args_sequence;
 
     public:
         Instruction() = delete;

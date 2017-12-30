@@ -1119,3 +1119,15 @@ Instruction1_Type4_Label:
 	pblendvb (%rax), %xmm0
 	pblendvb %xmm0, %xmm1, %xmm2
 	pblendvb %xmm0, (%rax), %xmm1
+	vcvtph2ps %xmm1, %xmm0
+	vcvtph2ps (%rax), %xmm0
+	vcvtph2ps %xmm0, %ymm0
+	vcvtph2ps (%rbx), %ymm0
+	vcvtps2pd %xmm1, %xmm0
+	vcvtps2pd (%rax), %xmm0
+	vcvtps2pd %xmm0, %ymm0
+	vcvtps2pd (%rbx), %ymm0
+	vcvtdq2pd %xmm1, %xmm0
+	vcvtdq2pd (%rax), %xmm0
+	vcvtdq2pd %xmm0, %ymm0
+	vcvtdq2pd (%rbx), %ymm0

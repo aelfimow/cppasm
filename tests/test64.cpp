@@ -641,6 +641,16 @@ static void gen_Instruction4_Type14(Instruction4_Type14 &instr)
     instr(XMM0, addr, XMM1);
 }
 
+static void gen_Instruction4_Type15(Instruction4_Type15 &instr)
+{
+    m64 addr1 { RAX };
+    m128 addr2 { RBX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr1);
+    instr(YMM0, XMM0);
+    instr(YMM0, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1309,6 +1319,10 @@ try
     gen_Instruction4_Type14(BLENDVPD);
     gen_Instruction4_Type14(BLENDVPS);
     gen_Instruction4_Type14(PBLENDVB);
+
+    gen_Instruction4_Type15(VCVTPH2PS);
+    gen_Instruction4_Type15(VCVTPS2PD);
+    gen_Instruction4_Type15(VCVTDQ2PD);
 
     return EXIT_SUCCESS;
 }

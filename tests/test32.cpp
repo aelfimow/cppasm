@@ -614,6 +614,17 @@ static void gen_Instruction4_Type15(Instruction4_Type15 &instr)
     instr(YMM0, addr2);
 }
 
+static void gen_Instruction4_Type16(Instruction4_Type16 &instr)
+{
+    m64 addr1 { EAX };
+    m128 addr2 { EBX };
+    imm8 mask { 255 };
+    instr(XMM0, XMM1, mask);
+    instr(addr1, XMM0, mask);
+    instr(XMM0, YMM0, mask);
+    instr(addr2, YMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1286,6 +1297,8 @@ try
     gen_Instruction4_Type15(VCVTPH2PS);
     gen_Instruction4_Type15(VCVTPS2PD);
     gen_Instruction4_Type15(VCVTDQ2PD);
+
+    gen_Instruction4_Type16(VCVTPS2PH);
 
     return EXIT_SUCCESS;
 }

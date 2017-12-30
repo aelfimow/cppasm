@@ -1090,3 +1090,7 @@ Instruction1_Type4_Label:
 	vcvtdq2pd (%eax), %xmm0
 	vcvtdq2pd %xmm0, %ymm0
 	vcvtdq2pd (%ebx), %ymm0
+	vcvtps2ph $0xFF, %xmm1, %xmm0
+	vcvtps2ph $0xFF, %xmm0, (%eax)
+	vcvtps2ph $0xFF, %ymm0, %xmm0
+	vcvtps2ph $0xFF, %ymm0, (%ebx)

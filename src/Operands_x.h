@@ -138,6 +138,42 @@ template
 <
     class RegType1,
     class RegType2,
+    class RegType3
+>
+class Operands_reg_reg_reg2
+{
+    public:
+        Operands_reg_reg_reg2(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType1 &op1, RegType2 &op2, RegType3 &op3)
+        {
+            Instruction instr { m_mnem, op1.name(), op2.name(), op3.name() };
+            instr.keep_args_sequence();
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_reg_reg2() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_reg_reg2() = delete;
+        Operands_reg_reg_reg2(const Operands_reg_reg_reg2 &instance) = delete;
+        Operands_reg_reg_reg2(const Operands_reg_reg_reg2 &&instance) = delete;
+        Operands_reg_reg_reg2 &operator=(const Operands_reg_reg_reg2 &instance) = delete;
+        Operands_reg_reg_reg2 &operator=(const Operands_reg_reg_reg2 &&instance) = delete;
+};
+
+template
+<
+    class RegType1,
+    class RegType2,
     class RegType3,
     class RegType4
 >
@@ -588,6 +624,42 @@ class Operands_reg_mem_reg
         Operands_reg_mem_reg(const Operands_reg_mem_reg &&instance) = delete;
         Operands_reg_mem_reg &operator=(const Operands_reg_mem_reg &instance) = delete;
         Operands_reg_mem_reg &operator=(const Operands_reg_mem_reg &&instance) = delete;
+};
+
+template
+<
+    class RegType1,
+    class MemType,
+    class RegType2
+>
+class Operands_reg_mem_reg2
+{
+    public:
+        Operands_reg_mem_reg2(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType1 &op1, MemType &op2, RegType2 &op3)
+        {
+            Instruction instr { m_mnem, op1.name(), op2.to_str(), op3.name() };
+            instr.keep_args_sequence();
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_mem_reg2() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_mem_reg2() = delete;
+        Operands_reg_mem_reg2(const Operands_reg_mem_reg2 &instance) = delete;
+        Operands_reg_mem_reg2(const Operands_reg_mem_reg2 &&instance) = delete;
+        Operands_reg_mem_reg2 &operator=(const Operands_reg_mem_reg2 &instance) = delete;
+        Operands_reg_mem_reg2 &operator=(const Operands_reg_mem_reg2 &&instance) = delete;
 };
 
 template

@@ -108,8 +108,8 @@ using Instruction4_Type14 = Instruction_4
 <
     Operands_reg_reg<xmm, xmm, no_suffix>,
     Operands_reg_mem<xmm, m128, no_suffix>,
-    Operands_reg_reg_reg<xmm, xmm, xmm>,
-    Operands_reg_mem_reg<xmm, m128, xmm>
+    Operands_reg_reg_reg2<xmm, xmm, xmm>,
+    Operands_reg_mem_reg2<xmm, m128, xmm>
 >;
 
 using Instruction4_Type15 = Instruction_4

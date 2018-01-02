@@ -645,6 +645,14 @@ static void gen_Instruction4_Type18(Instruction4_Type18 &instr)
     instr(YMM0, addr2);
 }
 
+static void gen_Instruction4_Type19(Instruction4_Type19 &instr)
+{
+    instr(XMM0, XMM1);
+    //instr(XMM0, addr1);
+    instr(XMM0, YMM1);
+    //instr(XMM0, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1397,6 +1405,10 @@ try
     gen_Instruction4_Type18(VPTEST);
     gen_Instruction4_Type18(VTESTPS);
     gen_Instruction4_Type18(VTESTPD);
+
+    gen_Instruction4_Type19(VCVTPD2PS);
+    gen_Instruction4_Type19(VCVTTPD2DQ);
+    gen_Instruction4_Type19(VCVTPD2DQ);
 
     return EXIT_SUCCESS;
 }

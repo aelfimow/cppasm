@@ -625,6 +625,16 @@ static void gen_Instruction4_Type16(Instruction4_Type16 &instr)
     instr(addr2, YMM0, mask);
 }
 
+static void gen_Instruction4_Type17(Instruction4_Type17 &instr)
+{
+    m128 addr1 { EAX };
+    m256 addr2 { EBX };
+    instr(XMM0, XMM1, XMM2);
+    instr(XMM0, XMM1, addr1);
+    instr(YMM0, YMM1, YMM2);
+    instr(YMM0, YMM1, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1299,6 +1309,73 @@ try
     gen_Instruction4_Type15(VCVTDQ2PD);
 
     gen_Instruction4_Type16(VCVTPS2PH);
+
+    gen_Instruction4_Type17(VFMADD132PD);
+    gen_Instruction4_Type17(VFMADD213PD);
+    gen_Instruction4_Type17(VFMADD231PD);
+    gen_Instruction4_Type17(VFMADD132PS);
+    gen_Instruction4_Type17(VFMADD213PS);
+    gen_Instruction4_Type17(VFMADD231PS);
+    gen_Instruction4_Type17(VFMADDSUB132PD);
+    gen_Instruction4_Type17(VFMADDSUB213PD);
+    gen_Instruction4_Type17(VFMADDSUB231PD);
+    gen_Instruction4_Type17(VFMADDSUB132PS);
+    gen_Instruction4_Type17(VFMADDSUB213PS);
+    gen_Instruction4_Type17(VFMADDSUB231PS);
+    gen_Instruction4_Type17(VFMSUBADD132PD);
+    gen_Instruction4_Type17(VFMSUBADD213PD);
+    gen_Instruction4_Type17(VFMSUBADD231PD);
+    gen_Instruction4_Type17(VFMSUBADD132PS);
+    gen_Instruction4_Type17(VFMSUBADD213PS);
+    gen_Instruction4_Type17(VFMSUBADD231PS);
+    gen_Instruction4_Type17(VFMSUB132PD);
+    gen_Instruction4_Type17(VFMSUB213PD);
+    gen_Instruction4_Type17(VFMSUB231PD);
+    gen_Instruction4_Type17(VFMSUB132PS);
+    gen_Instruction4_Type17(VFMSUB213PS);
+    gen_Instruction4_Type17(VFMSUB231PS);
+    gen_Instruction4_Type17(VFNMADD132PD);
+    gen_Instruction4_Type17(VFNMADD213PD);
+    gen_Instruction4_Type17(VFNMADD231PD);
+    gen_Instruction4_Type17(VFNMADD132PS);
+    gen_Instruction4_Type17(VFNMADD213PS);
+    gen_Instruction4_Type17(VFNMADD231PS);
+    gen_Instruction4_Type17(VFNMSUB132PD);
+    gen_Instruction4_Type17(VFNMSUB213PD);
+    gen_Instruction4_Type17(VFNMSUB231PD);
+    gen_Instruction4_Type17(VFNMSUB132PS);
+    gen_Instruction4_Type17(VFNMSUB213PS);
+    gen_Instruction4_Type17(VFNMSUB231PS);
+    gen_Instruction4_Type17(VADDPD);
+    gen_Instruction4_Type17(VADDPS);
+    gen_Instruction4_Type17(VSUBPD);
+    gen_Instruction4_Type17(VSUBPS);
+    gen_Instruction4_Type17(VMULPD);
+    gen_Instruction4_Type17(VMULPS);
+    gen_Instruction4_Type17(VDIVPD);
+    gen_Instruction4_Type17(VDIVPS);
+    gen_Instruction4_Type17(VMINPS);
+    gen_Instruction4_Type17(VMINPD);
+    gen_Instruction4_Type17(VMAXPS);
+    gen_Instruction4_Type17(VMAXPD);
+    gen_Instruction4_Type17(VHADDPS);
+    gen_Instruction4_Type17(VHADDPD);
+    gen_Instruction4_Type17(VHSUBPS);
+    gen_Instruction4_Type17(VHSUBPD);
+    gen_Instruction4_Type17(VADDSUBPS);
+    gen_Instruction4_Type17(VADDSUBPD);
+    gen_Instruction4_Type17(VUNPCKHPD);
+    gen_Instruction4_Type17(VUNPCKLPD);
+    gen_Instruction4_Type17(VUNPCKHPS);
+    gen_Instruction4_Type17(VUNPCKLPS);
+    gen_Instruction4_Type17(VXORPS);
+    gen_Instruction4_Type17(VXORPD);
+    gen_Instruction4_Type17(VORPS);
+    gen_Instruction4_Type17(VORPD);
+    gen_Instruction4_Type17(VANDPS);
+    gen_Instruction4_Type17(VANDPD);
+    gen_Instruction4_Type17(VANDNPS);
+    gen_Instruction4_Type17(VANDNPD);
 
     return EXIT_SUCCESS;
 }

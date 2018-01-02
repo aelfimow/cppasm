@@ -1439,3 +1439,9 @@ Instruction1_Type4_Label:
 	vtestpd (%rax), %xmm0
 	vtestpd %ymm1, %ymm0
 	vtestpd (%rbx), %ymm0
+	vcvtpd2ps %xmm1, %xmm0
+	vcvtpd2ps %ymm1, %xmm0
+	vcvttpd2dq %xmm1, %xmm0
+	vcvttpd2dq %ymm1, %xmm0
+	vcvtpd2dq %xmm1, %xmm0
+	vcvtpd2dq %ymm1, %xmm0

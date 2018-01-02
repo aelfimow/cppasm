@@ -635,6 +635,16 @@ static void gen_Instruction4_Type17(Instruction4_Type17 &instr)
     instr(YMM0, YMM1, addr2);
 }
 
+static void gen_Instruction4_Type18(Instruction4_Type18 &instr)
+{
+    m128 addr1 { EAX };
+    m256 addr2 { EBX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr1);
+    instr(YMM0, YMM1);
+    instr(YMM0, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1376,6 +1386,17 @@ try
     gen_Instruction4_Type17(VANDPD);
     gen_Instruction4_Type17(VANDNPS);
     gen_Instruction4_Type17(VANDNPD);
+
+    gen_Instruction4_Type18(VSQRTPD);
+    gen_Instruction4_Type18(VSQRTPS);
+    gen_Instruction4_Type18(VRSQRTPS);
+    gen_Instruction4_Type18(VRCPPS);
+    gen_Instruction4_Type18(VCVTPS2DQ);
+    gen_Instruction4_Type18(VCVTDQ2PS);
+    gen_Instruction4_Type18(VCVTTPS2DQ);
+    gen_Instruction4_Type18(VPTEST);
+    gen_Instruction4_Type18(VTESTPS);
+    gen_Instruction4_Type18(VTESTPD);
 
     return EXIT_SUCCESS;
 }

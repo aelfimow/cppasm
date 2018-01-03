@@ -1445,3 +1445,31 @@ Instruction1_Type4_Label:
 	vcvttpd2dq %ymm1, %xmm0
 	vcvtpd2dq %xmm1, %xmm0
 	vcvtpd2dq %ymm1, %xmm0
+	vcmpps $0xFF, %xmm2, %xmm1, %xmm0
+	vcmpps $0xFF, (%rax), %xmm1, %xmm0
+	vcmpps $0xFF, %ymm2, %ymm1, %ymm0
+	vcmpps $0xFF, (%rbx), %ymm1, %ymm0
+	vcmppd $0xFF, %xmm2, %xmm1, %xmm0
+	vcmppd $0xFF, (%rax), %xmm1, %xmm0
+	vcmppd $0xFF, %ymm2, %ymm1, %ymm0
+	vcmppd $0xFF, (%rbx), %ymm1, %ymm0
+	vdpps $0xFF, %xmm2, %xmm1, %xmm0
+	vdpps $0xFF, (%rax), %xmm1, %xmm0
+	vdpps $0xFF, %ymm2, %ymm1, %ymm0
+	vdpps $0xFF, (%rbx), %ymm1, %ymm0
+	vblendps $0xFF, %xmm2, %xmm1, %xmm0
+	vblendps $0xFF, (%rax), %xmm1, %xmm0
+	vblendps $0xFF, %ymm2, %ymm1, %ymm0
+	vblendps $0xFF, (%rbx), %ymm1, %ymm0
+	vblendpd $0xFF, %xmm2, %xmm1, %xmm0
+	vblendpd $0xFF, (%rax), %xmm1, %xmm0
+	vblendpd $0xFF, %ymm2, %ymm1, %ymm0
+	vblendpd $0xFF, (%rbx), %ymm1, %ymm0
+	vshufps $0xFF, %xmm2, %xmm1, %xmm0
+	vshufps $0xFF, (%rax), %xmm1, %xmm0
+	vshufps $0xFF, %ymm2, %ymm1, %ymm0
+	vshufps $0xFF, (%rbx), %ymm1, %ymm0
+	vshufpd $0xFF, %xmm2, %xmm1, %xmm0
+	vshufpd $0xFF, (%rax), %xmm1, %xmm0
+	vshufpd $0xFF, %ymm2, %ymm1, %ymm0
+	vshufpd $0xFF, (%rbx), %ymm1, %ymm0

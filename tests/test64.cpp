@@ -720,6 +720,15 @@ static void gen_Instruction4_Type22(Instruction4_Type22 &instr)
     instr(RAX, YMM0);
 }
 
+static void gen_Instruction4_Type23(Instruction4_Type23 &instr)
+{
+    m128 addr { RAX };
+    instr(XMM0, XMM1, XMM2, XMM3);
+    instr(XMM0, XMM1, addr, XMM3);
+    instr(YMM0, YMM1, YMM2, YMM3);
+    instr(YMM0, YMM1, addr, YMM3);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1493,6 +1502,9 @@ try
 
     gen_Instruction4_Type22(VMOVMSKPS);
     gen_Instruction4_Type22(VMOVMSKPD);
+
+    gen_Instruction4_Type23(VBLENDVPD);
+    gen_Instruction4_Type23(VBLENDVPS);
 
     return EXIT_SUCCESS;
 }

@@ -1501,3 +1501,11 @@ Instruction1_Type4_Label:
 	vmovmskpd %xmm0, %rax
 	vmovmskpd %ymm0, %eax
 	vmovmskpd %ymm0, %rax
+	vblendvpd %xmm3, %xmm2, %xmm1, %xmm0
+	vblendvpd %xmm3, (%rax), %xmm1, %xmm0
+	vblendvpd %ymm3, %ymm2, %ymm1, %ymm0
+	vblendvpd %ymm3, (%rax), %ymm1, %ymm0
+	vblendvps %xmm3, %xmm2, %xmm1, %xmm0
+	vblendvps %xmm3, (%rax), %xmm1, %xmm0
+	vblendvps %ymm3, %ymm2, %ymm1, %ymm0
+	vblendvps %ymm3, (%rax), %ymm1, %ymm0

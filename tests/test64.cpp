@@ -701,6 +701,17 @@ static void gen_Instruction4_Type20(Instruction4_Type20 &instr)
     instr(YMM0, YMM1, addr2, mask);
 }
 
+static void gen_Instruction4_Type21(Instruction4_Type21 &instr)
+{
+    imm8 mask { 255 };
+    m128 addr1 { RAX };
+    m256 addr2 { RBX };
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr1, mask);
+    instr(YMM0, YMM1, mask);
+    instr(YMM0, addr2, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1465,6 +1476,9 @@ try
     gen_Instruction4_Type20(VBLENDPD);
     gen_Instruction4_Type20(VSHUFPS);
     gen_Instruction4_Type20(VSHUFPD);
+
+    gen_Instruction4_Type21(VROUNDPS);
+    gen_Instruction4_Type21(VROUNDPD);
 
     return EXIT_SUCCESS;
 }

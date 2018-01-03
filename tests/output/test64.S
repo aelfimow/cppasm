@@ -1493,3 +1493,11 @@ Instruction1_Type4_Label:
 	vroundpd $0xFF, (%rax), %xmm0
 	vroundpd $0xFF, %ymm1, %ymm0
 	vroundpd $0xFF, (%rbx), %ymm0
+	vmovmskps %xmm0, %eax
+	vmovmskps %xmm0, %rax
+	vmovmskps %ymm0, %eax
+	vmovmskps %ymm0, %rax
+	vmovmskpd %xmm0, %eax
+	vmovmskpd %xmm0, %rax
+	vmovmskpd %ymm0, %eax
+	vmovmskpd %ymm0, %rax

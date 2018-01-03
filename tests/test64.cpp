@@ -712,6 +712,14 @@ static void gen_Instruction4_Type21(Instruction4_Type21 &instr)
     instr(YMM0, addr2, mask);
 }
 
+static void gen_Instruction4_Type22(Instruction4_Type22 &instr)
+{
+    instr(EAX, XMM0);
+    instr(RAX, XMM0);
+    instr(EAX, YMM0);
+    instr(RAX, YMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1482,6 +1490,9 @@ try
 
     gen_Instruction4_Type21(VROUNDPS);
     gen_Instruction4_Type21(VROUNDPD);
+
+    gen_Instruction4_Type22(VMOVMSKPS);
+    gen_Instruction4_Type22(VMOVMSKPD);
 
     return EXIT_SUCCESS;
 }

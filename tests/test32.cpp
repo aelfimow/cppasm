@@ -1427,6 +1427,9 @@ try
     gen_Instruction4_Type18(VPTEST);
     gen_Instruction4_Type18(VTESTPS);
     gen_Instruction4_Type18(VTESTPD);
+    gen_Instruction4_Type18(VMOVSHDUP);
+    gen_Instruction4_Type18(VMOVSLDUP);
+    gen_Instruction4_Type18(VMOVDDUP);
 
     gen_Instruction4_Type19(VCVTPD2PS);
     gen_Instruction4_Type19(VCVTTPD2DQ);

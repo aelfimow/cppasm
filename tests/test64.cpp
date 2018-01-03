@@ -739,6 +739,16 @@ static void gen_Instruction4_Type24(Instruction4_Type24 &instr)
     instr(addr2, YMM0, YMM1);
 }
 
+static void gen_Instruction4_Type25(Instruction4_Type25 &instr)
+{
+    m32 addr1 { RAX };
+    m64 addr2 { RBX };
+    instr(XMM0, XMM1, EAX);
+    instr(XMM0, XMM1, addr1);
+    instr(XMM0, XMM1, RBX);
+    instr(XMM0, XMM1, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1518,6 +1528,9 @@ try
 
     gen_Instruction4_Type24(VMASKMOVPS);
     gen_Instruction4_Type24(VMASKMOVPD);
+
+    gen_Instruction4_Type25(VCVTSI2SS);
+    gen_Instruction4_Type25(VCVTSI2SD);
 
     return EXIT_SUCCESS;
 }

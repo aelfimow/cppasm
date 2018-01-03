@@ -1517,3 +1517,11 @@ Instruction1_Type4_Label:
 	vmaskmovpd (%rbx), %ymm1, %ymm0
 	vmaskmovpd %xmm1, %xmm0, (%rax)
 	vmaskmovpd %ymm1, %ymm0, (%rbx)
+	vcvtsi2ss %eax, %xmm1, %xmm0
+	vcvtsi2ss (%rax), %xmm1, %xmm0
+	vcvtsi2ss %rbx, %xmm1, %xmm0
+	vcvtsi2ss (%rbx), %xmm1, %xmm0
+	vcvtsi2sd %eax, %xmm1, %xmm0
+	vcvtsi2sd (%rax), %xmm1, %xmm0
+	vcvtsi2sd %rbx, %xmm1, %xmm0
+	vcvtsi2sd (%rbx), %xmm1, %xmm0

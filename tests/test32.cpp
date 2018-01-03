@@ -653,6 +653,17 @@ static void gen_Instruction4_Type19(Instruction4_Type19 &instr)
     //instr(XMM0, addr2);
 }
 
+static void gen_Instruction4_Type20(Instruction4_Type20 &instr)
+{
+    imm8 mask { 255 };
+    m128 addr1 { EAX };
+    m256 addr2 { EBX };
+    instr(XMM0, XMM1, XMM2, mask);
+    instr(XMM0, XMM1, addr1, mask);
+    instr(YMM0, YMM1, YMM2, mask);
+    instr(YMM0, YMM1, addr2, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1409,6 +1420,14 @@ try
     gen_Instruction4_Type19(VCVTPD2PS);
     gen_Instruction4_Type19(VCVTTPD2DQ);
     gen_Instruction4_Type19(VCVTPD2DQ);
+
+    gen_Instruction4_Type20(VCMPPS);
+    gen_Instruction4_Type20(VCMPPD);
+    gen_Instruction4_Type20(VDPPS);
+    gen_Instruction4_Type20(VBLENDPS);
+    gen_Instruction4_Type20(VBLENDPD);
+    gen_Instruction4_Type20(VSHUFPS);
+    gen_Instruction4_Type20(VSHUFPD);
 
     return EXIT_SUCCESS;
 }

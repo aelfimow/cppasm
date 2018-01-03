@@ -690,6 +690,16 @@ static void gen_Instruction4_Type23(Instruction4_Type23 &instr)
     instr(YMM0, YMM1, addr, YMM3);
 }
 
+static void gen_Instruction4_Type24(Instruction4_Type24 &instr)
+{
+    m128 addr1 { EAX };
+    m256 addr2 { EBX };
+    instr(XMM0, XMM1, addr1);
+    instr(YMM0, YMM1, addr2);
+    instr(addr1, XMM0, XMM1);
+    instr(addr2, YMM0, YMM1);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1466,6 +1476,9 @@ try
 
     gen_Instruction4_Type23(VBLENDVPD);
     gen_Instruction4_Type23(VBLENDVPS);
+
+    gen_Instruction4_Type24(VMASKMOVPS);
+    gen_Instruction4_Type24(VMASKMOVPD);
 
     return EXIT_SUCCESS;
 }

@@ -1452,3 +1452,7 @@ Instruction1_Type4_Label:
 	vroundpd $0xFF, (%eax), %xmm0
 	vroundpd $0xFF, %ymm1, %ymm0
 	vroundpd $0xFF, (%ebx), %ymm0
+	vmovmskps %xmm0, %eax
+	vmovmskps %ymm0, %eax
+	vmovmskpd %xmm0, %eax
+	vmovmskpd %ymm0, %eax

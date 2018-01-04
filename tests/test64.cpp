@@ -749,6 +749,17 @@ static void gen_Instruction4_Type25(Instruction4_Type25 &instr)
     instr(XMM0, XMM1, addr2);
 }
 
+static void gen_Instruction5_Type1(Instruction5_Type1 &instr)
+{
+    m16 addr1 { RAX };
+    m32 addr2 { RBX };
+    instr();
+    instr(AX);
+    instr(addr1);
+    instr(EAX);
+    instr(addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1531,6 +1542,8 @@ try
 
     gen_Instruction4_Type25(VCVTSI2SS);
     gen_Instruction4_Type25(VCVTSI2SD);
+
+    gen_Instruction5_Type1(NOP);
 
     return EXIT_SUCCESS;
 }

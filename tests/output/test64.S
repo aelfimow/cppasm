@@ -1525,3 +1525,8 @@ Instruction1_Type4_Label:
 	vcvtsi2sd (%rax), %xmm1, %xmm0
 	vcvtsi2sd %rbx, %xmm1, %xmm0
 	vcvtsi2sd (%rbx), %xmm1, %xmm0
+	nop
+	nop %ax
+	nopw (%rax)
+	nop %eax
+	nopl (%rbx)

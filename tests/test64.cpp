@@ -760,6 +760,17 @@ static void gen_Instruction5_Type1(Instruction5_Type1 &instr)
     instr(addr2);
 }
 
+static void gen_Instruction5_Type2(Instruction5_Type2 &instr)
+{
+    imm8 mask { 255 };
+    m16 addr { EAX };
+    instr(EAX, MM0, mask);
+    instr(RAX, MM0, mask);
+    instr(EAX, XMM0, mask);
+    instr(RAX, XMM0, mask);
+    instr(addr, XMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1544,6 +1555,8 @@ try
     gen_Instruction4_Type25(VCVTSI2SD);
 
     gen_Instruction5_Type1(NOP);
+
+    gen_Instruction5_Type2(PEXTRW);
 
     return EXIT_SUCCESS;
 }

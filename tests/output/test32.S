@@ -1481,3 +1481,6 @@ Instruction1_Type4_Label:
 	nopw (%eax)
 	nop %eax
 	nopl (%ebx)
+	pextrw $0xFF, %mm0, %eax
+	pextrw $0xFF, %xmm0, %eax
+	pextrw $0xFF, %xmm0, (%eax)

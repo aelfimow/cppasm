@@ -727,6 +727,19 @@ static void gen_Instruction5_Type2(Instruction5_Type2 &instr)
     instr(addr, XMM0, mask);
 }
 
+static void gen_Instruction6_Type1(Instruction6_Type1 &instr)
+{
+    m64 addr1 { EAX };
+    m128 addr2 { EBX };
+    imm8 mask { 255 };
+    instr(MM0, MM1);
+    instr(MM0, addr1);
+    instr(XMM0, XMM1);
+    instr(XMM0, addr2);
+    instr(MM0, mask);
+    instr(XMM0, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1513,6 +1526,15 @@ try
     gen_Instruction5_Type1(NOP);
 
     gen_Instruction5_Type2(PEXTRW);
+
+    gen_Instruction6_Type1(PSLLW);
+    gen_Instruction6_Type1(PSLLD);
+    gen_Instruction6_Type1(PSLLQ);
+    gen_Instruction6_Type1(PSRLW);
+    gen_Instruction6_Type1(PSRLD);
+    gen_Instruction6_Type1(PSRLQ);
+    gen_Instruction6_Type1(PSRAW);
+    gen_Instruction6_Type1(PSRAD);
 
     return EXIT_SUCCESS;
 }

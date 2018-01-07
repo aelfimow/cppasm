@@ -784,6 +784,19 @@ static void gen_Instruction6_Type1(Instruction6_Type1 &instr)
     instr(XMM0, mask);
 }
 
+static void gen_Instruction6_Type2(Instruction6_Type2 &instr)
+{
+    m16 addr1 { RAX };
+    m32 addr2 { RBX };
+    m64 addr3 { RCX };
+    instr(AX, BX);
+    instr(AX, addr1);
+    instr(EAX, EBX);
+    instr(EAX, addr2);
+    instr(RAX, RBX);
+    instr(RAX, addr3);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1579,6 +1592,38 @@ try
     gen_Instruction6_Type1(PSRLQ);
     gen_Instruction6_Type1(PSRAW);
     gen_Instruction6_Type1(PSRAD);
+
+    gen_Instruction6_Type2(CMOVA);
+    gen_Instruction6_Type2(CMOVAE);
+    gen_Instruction6_Type2(CMOVB);
+    gen_Instruction6_Type2(CMOVBE);
+    gen_Instruction6_Type2(CMOVC);
+    gen_Instruction6_Type2(CMOVE);
+    gen_Instruction6_Type2(CMOVG);
+    gen_Instruction6_Type2(CMOVGE);
+    gen_Instruction6_Type2(CMOVL);
+    gen_Instruction6_Type2(CMOVLE);
+    gen_Instruction6_Type2(CMOVNA);
+    gen_Instruction6_Type2(CMOVNAE);
+    gen_Instruction6_Type2(CMOVNBE);
+    gen_Instruction6_Type2(CMOVNC);
+    gen_Instruction6_Type2(CMOVNE);
+    gen_Instruction6_Type2(CMOVNG);
+    gen_Instruction6_Type2(CMOVNGE);
+    gen_Instruction6_Type2(CMOVNL);
+    gen_Instruction6_Type2(CMOVNLE);
+    gen_Instruction6_Type2(CMOVNO);
+    gen_Instruction6_Type2(CMOVNP);
+    gen_Instruction6_Type2(CMOVNS);
+    gen_Instruction6_Type2(CMOVNZ);
+    gen_Instruction6_Type2(CMOVO);
+    gen_Instruction6_Type2(CMOVP);
+    gen_Instruction6_Type2(CMOVPE);
+    gen_Instruction6_Type2(CMOVPO);
+    gen_Instruction6_Type2(CMOVS);
+    gen_Instruction6_Type2(CMOVZ);
+    gen_Instruction6_Type2(BSF);
+    gen_Instruction6_Type2(BSR);
 
     return EXIT_SUCCESS;
 }

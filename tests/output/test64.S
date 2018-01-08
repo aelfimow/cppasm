@@ -1769,3 +1769,9 @@ Instruction1_Type4_Label:
 	bsr (%rbx), %eax
 	bsr %rbx, %rax
 	bsr (%rcx), %rax
+	in $0x00, %al
+	in $0x00, %ax
+	in $0x00, %eax
+	in %dx, %al
+	in %dx, %ax
+	in %dx, %eax

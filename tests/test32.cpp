@@ -750,6 +750,17 @@ static void gen_Instruction6_Type2(Instruction6_Type2 &instr)
     instr(EAX, addr2);
 }
 
+static void gen_Instruction6_Type3(Instruction6_Type3 &instr)
+{
+    imm8 addr { 0 };
+    instr(AL, addr);
+    instr(AX, addr);
+    instr(EAX, addr);
+    instr(AL, DX);
+    instr(AX, DX);
+    instr(EAX, DX);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1577,6 +1588,8 @@ try
     gen_Instruction6_Type2(CMOVZ);
     gen_Instruction6_Type2(BSF);
     gen_Instruction6_Type2(BSR);
+
+    gen_Instruction6_Type3(IN);
 
     return EXIT_SUCCESS;
 }

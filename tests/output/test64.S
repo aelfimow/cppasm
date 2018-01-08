@@ -1781,3 +1781,39 @@ Instruction1_Type4_Label:
 	out %al, %dx
 	out %ax, %dx
 	out %eax, %dx
+	vmovaps %xmm1, %xmm0
+	vmovaps (%rax), %xmm0
+	vmovaps %xmm0, (%rax)
+	vmovaps %ymm2, %ymm0
+	vmovaps (%rbx), %ymm0
+	vmovaps %ymm0, (%rbx)
+	vmovapd %xmm1, %xmm0
+	vmovapd (%rax), %xmm0
+	vmovapd %xmm0, (%rax)
+	vmovapd %ymm2, %ymm0
+	vmovapd (%rbx), %ymm0
+	vmovapd %ymm0, (%rbx)
+	vmovdqa %xmm1, %xmm0
+	vmovdqa (%rax), %xmm0
+	vmovdqa %xmm0, (%rax)
+	vmovdqa %ymm2, %ymm0
+	vmovdqa (%rbx), %ymm0
+	vmovdqa %ymm0, (%rbx)
+	vmovups %xmm1, %xmm0
+	vmovups (%rax), %xmm0
+	vmovups %xmm0, (%rax)
+	vmovups %ymm2, %ymm0
+	vmovups (%rbx), %ymm0
+	vmovups %ymm0, (%rbx)
+	vmovupd %xmm1, %xmm0
+	vmovupd (%rax), %xmm0
+	vmovupd %xmm0, (%rax)
+	vmovupd %ymm2, %ymm0
+	vmovupd (%rbx), %ymm0
+	vmovupd %ymm0, (%rbx)
+	vmovdqu %xmm1, %xmm0
+	vmovdqu (%rax), %xmm0
+	vmovdqu %xmm0, (%rax)
+	vmovdqu %ymm2, %ymm0
+	vmovdqu (%rbx), %ymm0
+	vmovdqu %ymm0, (%rbx)

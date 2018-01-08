@@ -819,6 +819,18 @@ static void gen_Instruction6_Type4(Instruction6_Type4 &instr)
     instr(DX, EAX);
 }
 
+static void gen_Instruction6_Type5(Instruction6_Type5 &instr)
+{
+    m128 addr1 { RAX };
+    m256 addr2 { RBX };
+    instr(XMM0, XMM1);
+    instr(XMM0, addr1);
+    instr(addr1, XMM0);
+    instr(YMM0, YMM2);
+    instr(YMM0, addr2);
+    instr(addr2, YMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1650,6 +1662,13 @@ try
     gen_Instruction6_Type3(IN);
 
     gen_Instruction6_Type4(OUT);
+
+    gen_Instruction6_Type5(VMOVAPS);
+    gen_Instruction6_Type5(VMOVAPD);
+    gen_Instruction6_Type5(VMOVDQA);
+    gen_Instruction6_Type5(VMOVUPS);
+    gen_Instruction6_Type5(VMOVUPD);
+    gen_Instruction6_Type5(VMOVDQU);
 
     return EXIT_SUCCESS;
 }

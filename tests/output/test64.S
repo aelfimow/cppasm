@@ -1775,3 +1775,9 @@ Instruction1_Type4_Label:
 	in %dx, %al
 	in %dx, %ax
 	in %dx, %eax
+	out %al, $0x00
+	out %ax, $0x00
+	out %eax, $0x00
+	out %al, %dx
+	out %ax, %dx
+	out %eax, %dx

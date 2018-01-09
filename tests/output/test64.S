@@ -1817,3 +1817,22 @@ Instruction1_Type4_Label:
 	vmovdqu %ymm2, %ymm0
 	vmovdqu (%rbx), %ymm0
 	vmovdqu %ymm0, (%rbx)
+gen_Instruction7_Type1_label:
+	jmp gen_Instruction7_Type1_label
+	jmp %rax
+	jmp (%rax)
+	jmp (%rbx)
+	jmp (%rbx)
+	call gen_Instruction7_Type1_label
+	call %rax
+	call (%rax)
+	call (%rbx)
+	call (%rbx)
+	ljmp gen_Instruction7_Type1_label
+	ljmp (%rax)
+	ljmp (%rbx)
+	ljmp (%rbx)
+	lcall gen_Instruction7_Type1_label
+	lcall (%rax)
+	lcall (%rbx)
+	lcall (%rbx)

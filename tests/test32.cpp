@@ -784,6 +784,21 @@ static void gen_Instruction6_Type5(Instruction6_Type5 &instr)
     instr(addr2, YMM0);
 }
 
+static void gen_Instruction7_Type1(Instruction7_Type1 &instr, bool isFar)
+{
+    m16 addr1 { EAX };
+    m32 addr2 { EBX };
+    std::string loc { "gen_Instruction7_Type1_label" };
+    instr(loc);
+    if (!isFar)
+    {
+        instr(AX);
+        instr(EAX);
+    }
+    instr(addr1);
+    instr(addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1622,6 +1637,12 @@ try
     gen_Instruction6_Type5(VMOVUPS);
     gen_Instruction6_Type5(VMOVUPD);
     gen_Instruction6_Type5(VMOVDQU);
+
+    label("gen_Instruction7_Type1_label");
+    gen_Instruction7_Type1(JMP, false);
+    gen_Instruction7_Type1(CALL, false);
+    gen_Instruction7_Type1(JMP_FAR, true);
+    gen_Instruction7_Type1(CALL_FAR, true);
 
     return EXIT_SUCCESS;
 }

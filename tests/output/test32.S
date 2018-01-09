@@ -1704,3 +1704,20 @@ Instruction1_Type4_Label:
 	vmovdqu %ymm2, %ymm0
 	vmovdqu (%ebx), %ymm0
 	vmovdqu %ymm0, (%ebx)
+gen_Instruction7_Type1_label:
+	jmp gen_Instruction7_Type1_label
+	jmp %ax
+	jmp %eax
+	jmp (%eax)
+	jmp (%ebx)
+	call gen_Instruction7_Type1_label
+	call %ax
+	call %eax
+	call (%eax)
+	call (%ebx)
+	ljmp gen_Instruction7_Type1_label
+	ljmp (%eax)
+	ljmp (%ebx)
+	lcall gen_Instruction7_Type1_label
+	lcall (%eax)
+	lcall (%ebx)

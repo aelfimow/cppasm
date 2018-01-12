@@ -1137,6 +1137,9 @@ Keyword_label label;
 keyword global { ".global" };
 keyword comment { "#" };
 
+const std::string no_prefix { "" };
+const std::string prefix_star { "*" };
+
 const std::string no_suffix { "" };
 const std::string suffix_bw { "bw" };
 const std::string suffix_bl { "bl" };

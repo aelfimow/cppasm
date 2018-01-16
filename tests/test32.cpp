@@ -799,6 +799,17 @@ static void gen_Instruction7_Type1(Instruction7_Type1 &instr, bool isFar)
     instr(addr2);
 }
 
+static void gen_Instruction7_Type2(Instruction7_Type2 &instr)
+{
+    m16 addr1 { EAX };
+    m32 addr2 { EBX };
+    instr(AX);
+    instr(addr1);
+    instr(BX);
+    instr(addr2);
+    instr(DS);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1643,6 +1654,8 @@ try
     gen_Instruction7_Type1(CALL, false);
     gen_Instruction7_Type1(JMP_FAR, true);
     gen_Instruction7_Type1(CALL_FAR, true);
+
+    gen_Instruction7_Type2(POP);
 
     return EXIT_SUCCESS;
 }

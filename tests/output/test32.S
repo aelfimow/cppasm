@@ -1721,3 +1721,8 @@ gen_Instruction7_Type1_label:
 	lcall gen_Instruction7_Type1_label
 	lcall (%eax)
 	lcall (%ebx)
+	pop %ax
+	popw (%eax)
+	pop %bx
+	popl (%ebx)
+	pop %ds

@@ -805,7 +805,7 @@ static void gen_Instruction7_Type2(Instruction7_Type2 &instr)
     m32 addr2 { EBX };
     instr(AX);
     instr(addr1);
-    instr(BX);
+    instr(EBX);
     instr(addr2);
     instr(DS);
 }

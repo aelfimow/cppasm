@@ -1723,6 +1723,6 @@ gen_Instruction7_Type1_label:
 	lcall (%ebx)
 	pop %ax
 	popw (%eax)
-	pop %bx
+	pop %ebx
 	popl (%ebx)
 	pop %ds

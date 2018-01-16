@@ -1836,3 +1836,8 @@ gen_Instruction7_Type1_label:
 	lcall (%rax)
 	lcall (%rbx)
 	lcall (%rbx)
+	pop %ax
+	popw (%rax)
+	pop %rcx
+	popq (%rcx)
+	pop %fs

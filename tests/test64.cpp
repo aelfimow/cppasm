@@ -858,6 +858,19 @@ static void gen_Instruction7_Type2(Instruction7_Type2 &instr)
     instr(FS);
 }
 
+static void gen_Instruction8_Type1(Instruction8_Type1 &instr)
+{
+    m32 addr { EDX };
+    instr(MM0, EAX);
+    instr(MM0, addr);
+    instr(EAX, MM0);
+    instr(addr, MM0);
+    instr(XMM0, EAX);
+    instr(XMM0, addr);
+    instr(EAX, XMM0);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1704,6 +1717,8 @@ try
     gen_Instruction7_Type1(CALL_FAR, true);
 
     gen_Instruction7_Type2(POP);
+
+    gen_Instruction8_Type1(MOVD);
 
     return EXIT_SUCCESS;
 }

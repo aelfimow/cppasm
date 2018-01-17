@@ -1841,3 +1841,11 @@ gen_Instruction7_Type1_label:
 	pop %rcx
 	popq (%rcx)
 	pop %fs
+	movd %eax, %mm0
+	movd (%edx), %mm0
+	movd %mm0, %eax
+	movd %mm0, (%edx)
+	movd %eax, %xmm0
+	movd (%edx), %xmm0
+	movd %xmm0, %eax
+	movd %xmm0, (%edx)

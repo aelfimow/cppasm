@@ -11,11 +11,11 @@ using Instruction8_Type1 = Instruction_8
     Operands_reg_reg<mm, r32, no_suffix>,
     Operands_reg_mem<mm, m32, no_suffix>,
     Operands_reg_reg<r32, mm, no_suffix>,
-    Operands_reg_mem<m32, mm, no_suffix>,
+    Operands_mem_reg<m32, mm, no_suffix>,
     Operands_reg_reg<xmm, r32, no_suffix>,
     Operands_reg_mem<xmm, m32, no_suffix>,
     Operands_reg_reg<r32, xmm, no_suffix>,
-    Operands_reg_mem<m32, xmm, no_suffix>
+    Operands_mem_reg<m32, xmm, no_suffix>
 >;
 
 using Instruction8_Type2 = Instruction_8

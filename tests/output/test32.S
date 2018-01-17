@@ -1734,3 +1734,7 @@ gen_Instruction7_Type1_label:
 	movd (%edx), %xmm0
 	movd %xmm0, %eax
 	movd %xmm0, (%edx)
+	movq (%edx), %mm0
+	movq %mm0, (%edx)
+	movq (%edx), %xmm0
+	movq %xmm0, (%edx)

@@ -871,6 +871,19 @@ static void gen_Instruction8_Type1(Instruction8_Type1 &instr)
     instr(addr, XMM0);
 }
 
+static void gen_Instruction8_Type2(Instruction8_Type2 &instr)
+{
+    m64 addr { RDX };
+    instr(MM0, RAX);
+    instr(MM0, addr);
+    instr(RAX, MM0);
+    instr(addr, MM0);
+    instr(XMM0, RAX);
+    instr(XMM0, addr);
+    instr(RAX, XMM0);
+    instr(addr, XMM0);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1719,6 +1732,8 @@ try
     gen_Instruction7_Type2(POP);
 
     gen_Instruction8_Type1(MOVD);
+
+    gen_Instruction8_Type2(MOVQ);
 
     return EXIT_SUCCESS;
 }

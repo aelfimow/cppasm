@@ -1786,3 +1786,15 @@ gen_Instruction7_Type1_label:
 	notb (%edx)
 	notw (%edx)
 	notl (%edx)
+	xadd %bl, %al
+	xadd %cl, (%edx)
+	xadd %bx, %ax
+	xadd %cx, (%edx)
+	xadd %ebx, %eax
+	xadd %ecx, (%edx)
+	cmpxchg %bl, %al
+	cmpxchg %cl, (%edx)
+	cmpxchg %bx, %ax
+	cmpxchg %cx, (%edx)
+	cmpxchg %ebx, %eax
+	cmpxchg %ecx, (%edx)

@@ -846,6 +846,19 @@ static void gen_Instruction8_Type3(Instruction8_Type3 &instr)
     instr(addr3);
 }
 
+static void gen_Instruction8_Type4(Instruction8_Type4 &instr)
+{
+    m8  addr1 { EDX };
+    m16 addr2 { EDX };
+    m32 addr3 { EDX };
+    instr(AL, BL);
+    instr(addr1, CL);
+    instr(AX, BX);
+    instr(addr2, CX);
+    instr(EAX, EBX);
+    instr(addr3, ECX);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1705,6 +1718,9 @@ try
     gen_Instruction8_Type3(INC);
     gen_Instruction8_Type3(DEC);
     gen_Instruction8_Type3(NOT);
+
+    gen_Instruction8_Type4(XADD);
+    gen_Instruction8_Type4(CMPXCHG);
 
     return EXIT_SUCCESS;
 }

@@ -917,6 +917,21 @@ static void gen_Instruction8_Type4(Instruction8_Type4 &instr)
     instr(addr4, RCX);
 }
 
+static void gen_Instruction8_Type5(Instruction8_Type5 &instr)
+{
+    m128 addr1 { RDX };
+    m256 addr2 { RDX };
+    imm8 mask { 255 };
+    instr(XMM0, XMM1, XMM2);
+    instr(XMM0, XMM1, addr1);
+    instr(YMM0, YMM1, YMM2);
+    instr(YMM0, YMM1, addr2);
+    instr(XMM0, XMM1, mask);
+    instr(XMM0, addr1, mask);
+    instr(YMM0, YMM1, mask);
+    instr(YMM0, addr2, mask);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1779,6 +1794,9 @@ try
 
     gen_Instruction8_Type4(XADD);
     gen_Instruction8_Type4(CMPXCHG);
+
+    gen_Instruction8_Type5(VPERMILPD);
+    gen_Instruction8_Type5(VPERMILPS);
 
     return EXIT_SUCCESS;
 }

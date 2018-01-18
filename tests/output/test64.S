@@ -1937,3 +1937,19 @@ gen_Instruction7_Type1_label:
 	cmpxchg %ecx, (%rdx)
 	cmpxchg %rbx, %rax
 	cmpxchg %rcx, (%rdx)
+	vpermilpd %xmm2, %xmm1, %xmm0
+	vpermilpd (%rdx), %xmm1, %xmm0
+	vpermilpd %ymm2, %ymm1, %ymm0
+	vpermilpd (%rdx), %ymm1, %ymm0
+	vpermilpd $0xFF, %xmm1, %xmm0
+	vpermilpd $0xFF, (%rdx), %xmm0
+	vpermilpd $0xFF, %ymm1, %ymm0
+	vpermilpd $0xFF, (%rdx), %ymm0
+	vpermilps %xmm2, %xmm1, %xmm0
+	vpermilps (%rdx), %xmm1, %xmm0
+	vpermilps %ymm2, %ymm1, %ymm0
+	vpermilps (%rdx), %ymm1, %ymm0
+	vpermilps $0xFF, %xmm1, %xmm0
+	vpermilps $0xFF, (%rdx), %xmm0
+	vpermilps $0xFF, %ymm1, %ymm0
+	vpermilps $0xFF, (%rdx), %ymm0

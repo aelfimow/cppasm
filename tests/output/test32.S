@@ -1798,3 +1798,19 @@ gen_Instruction7_Type1_label:
 	cmpxchg %cx, (%edx)
 	cmpxchg %ebx, %eax
 	cmpxchg %ecx, (%edx)
+	vpermilpd %xmm2, %xmm1, %xmm0
+	vpermilpd (%edx), %xmm1, %xmm0
+	vpermilpd %ymm2, %ymm1, %ymm0
+	vpermilpd (%edx), %ymm1, %ymm0
+	vpermilpd $0xFF, %xmm1, %xmm0
+	vpermilpd $0xFF, (%edx), %xmm0
+	vpermilpd $0xFF, %ymm1, %ymm0
+	vpermilpd $0xFF, (%edx), %ymm0
+	vpermilps %xmm2, %xmm1, %xmm0
+	vpermilps (%edx), %xmm1, %xmm0
+	vpermilps %ymm2, %ymm1, %ymm0
+	vpermilps (%edx), %ymm1, %ymm0
+	vpermilps $0xFF, %xmm1, %xmm0
+	vpermilps $0xFF, (%edx), %xmm0
+	vpermilps $0xFF, %ymm1, %ymm0
+	vpermilps $0xFF, (%edx), %ymm0

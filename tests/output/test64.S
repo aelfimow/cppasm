@@ -1921,3 +1921,19 @@ gen_Instruction7_Type1_label:
 	notw (%rdx)
 	notl (%rdx)
 	notq (%rdx)
+	xadd %bl, %al
+	xadd %cl, (%rdx)
+	xadd %bx, %ax
+	xadd %cx, (%rdx)
+	xadd %ebx, %eax
+	xadd %ecx, (%rdx)
+	xadd %rbx, %rax
+	xadd %rcx, (%rdx)
+	cmpxchg %bl, %al
+	cmpxchg %cl, (%rdx)
+	cmpxchg %bx, %ax
+	cmpxchg %cx, (%rdx)
+	cmpxchg %ebx, %eax
+	cmpxchg %ecx, (%rdx)
+	cmpxchg %rbx, %rax
+	cmpxchg %rcx, (%rdx)

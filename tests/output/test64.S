@@ -1953,3 +1953,10 @@ gen_Instruction7_Type1_label:
 	vpermilps $0xFF, (%rdx), %xmm0
 	vpermilps $0xFF, %ymm1, %ymm0
 	vpermilps $0xFF, (%rdx), %ymm0
+	push %ax
+	push %rax
+	pushw (%rdx)
+	pushq (%rdx)
+	push $0xAA
+	push $0xAABB
+	push %gs

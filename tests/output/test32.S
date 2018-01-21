@@ -1814,3 +1814,11 @@ gen_Instruction7_Type1_label:
 	vpermilps $0xFF, (%edx), %xmm0
 	vpermilps $0xFF, %ymm1, %ymm0
 	vpermilps $0xFF, (%edx), %ymm0
+	push %ax
+	push %eax
+	pushw (%edx)
+	pushl (%edx)
+	push $0xAA
+	push $0xAABB
+	push $0xAABBCCDD
+	push %gs

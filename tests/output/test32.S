@@ -1822,3 +1822,35 @@ gen_Instruction7_Type1_label:
 	push $0xAABB
 	push $0xAABBCCDD
 	push %gs
+	bt %bx, %ax
+	bt %ax, (%edx)
+	bt %ebx, %eax
+	bt %eax, (%edx)
+	bt $0x01, %ax
+	bt $0x01, %eax
+	btw $0x01, (%edx)
+	btl $0x01, (%edx)
+	btc %bx, %ax
+	btc %ax, (%edx)
+	btc %ebx, %eax
+	btc %eax, (%edx)
+	btc $0x01, %ax
+	btc $0x01, %eax
+	btcw $0x01, (%edx)
+	btcl $0x01, (%edx)
+	btr %bx, %ax
+	btr %ax, (%edx)
+	btr %ebx, %eax
+	btr %eax, (%edx)
+	btr $0x01, %ax
+	btr $0x01, %eax
+	btrw $0x01, (%edx)
+	btrl $0x01, (%edx)
+	bts %bx, %ax
+	bts %ax, (%edx)
+	bts %ebx, %eax
+	bts %eax, (%edx)
+	bts $0x01, %ax
+	bts $0x01, %eax
+	btsw $0x01, (%edx)
+	btsl $0x01, (%edx)

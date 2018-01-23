@@ -1854,3 +1854,12 @@ gen_Instruction7_Type1_label:
 	bts $0x01, %eax
 	btsw $0x01, (%edx)
 	btsl $0x01, (%edx)
+	xchg %bl, %al
+	xchg %cl, (%edx)
+	xchg (%edx), %cl
+	xchg %bx, %ax
+	xchg %cx, (%edx)
+	xchg (%edx), %cx
+	xchg %ebx, %eax
+	xchg %ecx, (%edx)
+	xchg (%edx), %ecx

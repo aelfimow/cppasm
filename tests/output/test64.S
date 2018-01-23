@@ -2008,3 +2008,15 @@ gen_Instruction7_Type1_label:
 	btsw $0x01, (%rdx)
 	btsl $0x01, (%rdx)
 	btsq $0x01, (%rdx)
+	xchg %bl, %al
+	xchg %cl, (%rdx)
+	xchg (%rdx), %cl
+	xchg %bx, %ax
+	xchg %cx, (%rdx)
+	xchg (%rdx), %cx
+	xchg %ebx, %eax
+	xchg %ecx, (%rdx)
+	xchg (%rdx), %ecx
+	xchg %rbx, %rax
+	xchg %rcx, (%rdx)
+	xchg (%rdx), %rcx

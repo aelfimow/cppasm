@@ -947,6 +947,26 @@ static void gen_Instruction10_Type1(Instruction10_Type1 &instr)
     instr(GS);
 }
 
+static void gen_Instruction12_Type1(Instruction12_Type1 &instr)
+{
+    m16 addr1 { RDX };
+    m32 addr2 { RDX };
+    m64 addr3 { RDX };
+    imm8 value { 1 };
+    instr(AX, BX);
+    instr(addr1, AX);
+    instr(EAX, EBX);
+    instr(addr2, EAX);
+    instr(RAX, RBX);
+    instr(addr3, RAX);
+    instr(AX, value);
+    instr(EAX, value);
+    instr(RAX, value);
+    instr(addr1, value);
+    instr(addr2, value);
+    instr(addr3, value);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1814,6 +1834,11 @@ try
     gen_Instruction8_Type5(VPERMILPS);
 
     gen_Instruction10_Type1(PUSH);
+
+    gen_Instruction12_Type1(BT);
+    gen_Instruction12_Type1(BTC);
+    gen_Instruction12_Type1(BTR);
+    gen_Instruction12_Type1(BTS);
 
     return EXIT_SUCCESS;
 }

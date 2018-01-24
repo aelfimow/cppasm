@@ -2020,3 +2020,23 @@ gen_Instruction7_Type1_label:
 	xchg %rbx, %rax
 	xchg %rcx, (%rdx)
 	xchg (%rdx), %rcx
+	movsbw %bl, %ax
+	movsbw (%rdx), %ax
+	movsbl %bl, %eax
+	movsbl (%rdx), %eax
+	movsbq %bl, %rax
+	movsbq (%rdx), %rax
+	movswl %ax, %eax
+	movswl (%rdx), %eax
+	movswq %bx, %rax
+	movswq (%rdx), %rax
+	movzbw %bl, %ax
+	movzbw (%rdx), %ax
+	movzbl %bl, %eax
+	movzbl (%rdx), %eax
+	movzbq %bl, %rax
+	movzbq (%rdx), %rax
+	movzwl %ax, %eax
+	movzwl (%rdx), %eax
+	movzwq %bx, %rax
+	movzwq (%rdx), %rax

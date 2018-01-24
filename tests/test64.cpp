@@ -987,6 +987,22 @@ static void gen_Instruction12_Type2(Instruction12_Type2 &instr)
     instr(RCX, addr4);
 }
 
+static void gen_Instruction12_Type3(Instruction12_Type3 &instr)
+{
+    m8 addr1 { RDX };
+    m16 addr2 { RDX };
+    instr(AX, BL);
+    instr(AX, addr1);
+    instr(EAX, BL);
+    instr(EAX, addr1);
+    instr(RAX, BL);
+    instr(RAX, addr1);
+    instr(EAX, AX);
+    instr(EAX, addr2);
+    instr(RAX, BX);
+    instr(RAX, addr2);
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -1861,6 +1877,9 @@ try
     gen_Instruction12_Type1(BTS);
 
     gen_Instruction12_Type2(XCHG);
+
+    gen_Instruction12_Type3(MOVSX);
+    gen_Instruction12_Type3(MOVZX);
 
     return EXIT_SUCCESS;
 }

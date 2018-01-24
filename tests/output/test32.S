@@ -1863,3 +1863,15 @@ gen_Instruction7_Type1_label:
 	xchg %ebx, %eax
 	xchg %ecx, (%edx)
 	xchg (%edx), %ecx
+	movsbw %bl, %ax
+	movsbw (%edx), %ax
+	movsbl %bl, %eax
+	movsbl (%edx), %eax
+	movswl %ax, %eax
+	movswl (%edx), %eax
+	movzbw %bl, %ax
+	movzbw (%edx), %ax
+	movzbl %bl, %eax
+	movzbl (%edx), %eax
+	movzwl %ax, %eax
+	movzwl (%edx), %eax

@@ -2040,3 +2040,27 @@ gen_Instruction7_Type1_label:
 	movzwl (%rdx), %eax
 	movzwq %bx, %rax
 	movzwq (%rdx), %rax
+	shld $0x01, %bx, %ax
+	shld $0x01, %bx, (%rdx)
+	shld %cl, %bx, %ax
+	shld %cl, %bx, (%rdx)
+	shld $0x01, %ebx, %eax
+	shld $0x01, %ebx, (%rdx)
+	shld $0x01, %rbx, %rax
+	shld $0x01, %rbx, (%rdx)
+	shld %cl, %ebx, %eax
+	shld %cl, %ebx, (%rdx)
+	shld %cl, %rbx, %rax
+	shld %cl, %rbx, (%rdx)
+	shrd $0x01, %bx, %ax
+	shrd $0x01, %bx, (%rdx)
+	shrd %cl, %bx, %ax
+	shrd %cl, %bx, (%rdx)
+	shrd $0x01, %ebx, %eax
+	shrd $0x01, %ebx, (%rdx)
+	shrd $0x01, %rbx, %rax
+	shrd $0x01, %rbx, (%rdx)
+	shrd %cl, %ebx, %eax
+	shrd %cl, %ebx, (%rdx)
+	shrd %cl, %rbx, %rax
+	shrd %cl, %rbx, (%rdx)

@@ -1875,3 +1875,19 @@ gen_Instruction7_Type1_label:
 	movzbl (%edx), %eax
 	movzwl %ax, %eax
 	movzwl (%edx), %eax
+	shld $0x01, %bx, %ax
+	shld $0x01, %bx, (%edx)
+	shld %cl, %bx, %ax
+	shld %cl, %bx, (%edx)
+	shld $0x01, %ebx, %eax
+	shld $0x01, %ebx, (%edx)
+	shld %cl, %ebx, %eax
+	shld %cl, %ebx, (%edx)
+	shrd $0x01, %bx, %ax
+	shrd $0x01, %bx, (%edx)
+	shrd %cl, %bx, %ax
+	shrd %cl, %bx, (%edx)
+	shrd $0x01, %ebx, %eax
+	shrd $0x01, %ebx, (%edx)
+	shrd %cl, %ebx, %eax
+	shrd %cl, %ebx, (%edx)

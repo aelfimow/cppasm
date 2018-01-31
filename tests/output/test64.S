@@ -2064,3 +2064,17 @@ gen_Instruction7_Type1_label:
 	shrd %cl, %ebx, (%rdx)
 	shrd %cl, %rbx, %rax
 	shrd %cl, %rbx, (%rdx)
+	test $0xAA, %al
+	testb $0xAA, (%rdx)
+	test $0xAABB, %ax
+	testw $0xAABB, (%rdx)
+	test $0xAABBCCDD, %eax
+	testl $0xAABBCCDD, (%rdx)
+	test %ah, %al
+	test %al, (%rdx)
+	test %bx, %ax
+	test %ax, (%rdx)
+	test %ebx, %eax
+	test %eax, (%rdx)
+	test %rbx, %rax
+	test %rax, (%rdx)

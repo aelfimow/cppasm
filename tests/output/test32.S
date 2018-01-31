@@ -1891,3 +1891,15 @@ gen_Instruction7_Type1_label:
 	shrd $0x01, %ebx, (%edx)
 	shrd %cl, %ebx, %eax
 	shrd %cl, %ebx, (%edx)
+	test $0xAA, %al
+	testb $0xAA, (%edx)
+	test $0xAABB, %ax
+	testw $0xAABB, (%edx)
+	test $0xAABBCCDD, %eax
+	testl $0xAABBCCDD, (%edx)
+	test %ah, %al
+	test %al, (%edx)
+	test %bx, %ax
+	test %ax, (%edx)
+	test %ebx, %eax
+	test %eax, (%edx)

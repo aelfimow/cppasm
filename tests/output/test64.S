@@ -2414,3 +2414,35 @@ gen_Instruction7_Type1_label:
 	xor (%rdx), %ax
 	xor (%rdx), %eax
 	xor (%rdx), %rax
+	mov %cl, %al
+	mov %cl, (%rdx)
+	mov %cx, %ax
+	mov %cx, (%rdx)
+	mov %ecx, %eax
+	mov %ecx, (%rdx)
+	mov %rcx, %rax
+	mov %rcx, (%rdx)
+	mov (%rdx), %al
+	mov (%rdx), %ax
+	mov (%rdx), %eax
+	mov (%rdx), %rax
+	mov %ds, %ax
+	mov %ds, (%rdx)
+	mov %ds, %rax
+	mov %ds, (%rdx)
+	mov %cx, %ds
+	mov (%rdx), %ds
+	mov %rcx, %ds
+	mov (%rdx), %ds
+	mov $0x42, %al
+	mov $0x4242, %ax
+	mov $0x42424242, %eax
+	mov $0x4242424242424242, %rax
+	movb $0x42, (%rdx)
+	movw $0x4242, (%rdx)
+	movl $0x42424242, (%rdx)
+	movq $0x42424242, (%rdx)
+	mov %cr0, %rax
+	mov %rcx, %cr0
+	mov %dr0, %rax
+	mov %rcx, %dr0

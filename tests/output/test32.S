@@ -2151,3 +2151,26 @@ gen_Instruction7_Type1_label:
 	xor (%edx), %al
 	xor (%edx), %ax
 	xor (%edx), %eax
+	mov %cl, %al
+	mov %cl, (%edx)
+	mov %cx, %ax
+	mov %cx, (%edx)
+	mov %ecx, %eax
+	mov %ecx, (%edx)
+	mov (%edx), %al
+	mov (%edx), %ax
+	mov (%edx), %eax
+	mov %ds, %ax
+	mov %ds, (%edx)
+	mov %cx, %ds
+	mov (%edx), %ds
+	mov $0x42, %al
+	mov $0x4242, %ax
+	mov $0x42424242, %eax
+	movb $0x42, (%edx)
+	movw $0x4242, (%edx)
+	movl $0x42424242, (%edx)
+	mov %cr0, %eax
+	mov %ecx, %cr0
+	mov %dr0, %eax
+	mov %ecx, %dr0

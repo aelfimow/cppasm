@@ -1007,4 +1007,34 @@ class Operands_string
         Operands_string &operator=(const Operands_string &&instance) = delete;
 };
 
+class Operands_string_indirect
+{
+    public:
+        Operands_string_indirect(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(std::string &op1)
+        {
+            Instruction instr { m_mnem, op1 };
+            instr.op_prefix("*");
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_string_indirect() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_string_indirect() = delete;
+        Operands_string_indirect(const Operands_string_indirect &instance) = delete;
+        Operands_string_indirect(const Operands_string_indirect &&instance) = delete;
+        Operands_string_indirect &operator=(const Operands_string_indirect &instance) = delete;
+        Operands_string_indirect &operator=(const Operands_string_indirect &&instance) = delete;
+};
+
 #endif

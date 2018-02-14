@@ -1828,19 +1828,19 @@ gen_Instruction7_Type1_label:
 	call *(%rax)
 	call *(%rbx)
 	call *(%rbx)
-	ljmp gen_Instruction7_Type1_label
-	ljmp *(%rax)
-	ljmp *(%rbx)
-	ljmp *(%rbx)
-	lcall gen_Instruction7_Type1_label
-	lcall *(%rax)
-	lcall *(%rbx)
-	lcall *(%rbx)
 	pop %ax
 	popw (%rax)
 	pop %rcx
 	popq (%rcx)
 	pop %fs
+	ljmp *gen_Instruction7_Type3_label
+	ljmp *(%rax)
+	ljmp *(%rbx)
+	ljmp *(%rbx)
+	lcall *gen_Instruction7_Type3_label
+	lcall *(%rax)
+	lcall *(%rbx)
+	lcall *(%rbx)
 	movd %eax, %mm0
 	movd (%edx), %mm0
 	movd %mm0, %eax

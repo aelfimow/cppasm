@@ -1715,17 +1715,17 @@ gen_Instruction7_Type1_label:
 	call *%eax
 	call *(%eax)
 	call *(%ebx)
-	ljmp gen_Instruction7_Type1_label
-	ljmp *(%eax)
-	ljmp *(%ebx)
-	lcall gen_Instruction7_Type1_label
-	lcall *(%eax)
-	lcall *(%ebx)
 	pop %ax
 	popw (%eax)
 	pop %ebx
 	popl (%ebx)
 	pop %ds
+	ljmp *gen_Instruction7_Type3_label
+	ljmp *(%eax)
+	ljmp *(%ebx)
+	lcall *gen_Instruction7_Type3_label
+	lcall *(%eax)
+	lcall *(%ebx)
 	movd %eax, %mm0
 	movd (%edx), %mm0
 	movd %mm0, %eax

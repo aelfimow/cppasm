@@ -365,7 +365,7 @@ extern Instruction16_Type1 TEST;
 
 // Control transfer instructions
 extern Instruction7_Type1 JMP;
-extern Instruction7_Type1 JMP_FAR;
+extern Instruction7_Type3 JMP_FAR;
 extern Instruction1_Type4 JA;
 extern Instruction1_Type4 JAE;
 extern Instruction1_Type4 JB;
@@ -400,7 +400,7 @@ extern Instruction1_Type4 JPO;
 extern Instruction1_Type4 JS;
 extern Instruction1_Type4 JZ;
 extern Instruction7_Type1 CALL;
-extern Instruction7_Type1 CALL_FAR;
+extern Instruction7_Type3 CALL_FAR;
 extern Instruction2_Type2 RET;
 extern Instruction2_Type2 RET_FAR;
 extern Instruction1_Type9 ENTER;

@@ -2011,6 +2011,7 @@ try
 
     gen_Instruction7_Type2(POP);
 
+    label("gen_Instruction7_Type3_label");
     gen_Instruction7_Type3(JMP_FAR);
     gen_Instruction7_Type3(CALL_FAR);
 

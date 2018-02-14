@@ -1720,6 +1720,7 @@ gen_Instruction7_Type1_label:
 	pop %ebx
 	popl (%ebx)
 	pop %ds
+gen_Instruction7_Type3_label:
 	ljmp *gen_Instruction7_Type3_label
 	ljmp *(%eax)
 	ljmp *(%ebx)

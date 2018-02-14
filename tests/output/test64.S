@@ -1833,6 +1833,7 @@ gen_Instruction7_Type1_label:
 	pop %rcx
 	popq (%rcx)
 	pop %fs
+gen_Instruction7_Type3_label:
 	ljmp *gen_Instruction7_Type3_label
 	ljmp *(%rax)
 	ljmp *(%rbx)

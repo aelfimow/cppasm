@@ -908,6 +908,40 @@ class Operands_reg
         Operands_reg &operator=(const Operands_reg &&instance) = delete;
 };
 
+template
+<
+    class RegType
+>
+class Operands_reg_indirect
+{
+    public:
+        Operands_reg_indirect(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(RegType &op1)
+        {
+            Instruction instr { m_mnem, op1.name() };
+            instr.op_prefix("*");
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_reg_indirect() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_reg_indirect() = delete;
+        Operands_reg_indirect(const Operands_reg_indirect &instance) = delete;
+        Operands_reg_indirect(const Operands_reg_indirect &&instance) = delete;
+        Operands_reg_indirect &operator=(const Operands_reg_indirect &instance) = delete;
+        Operands_reg_indirect &operator=(const Operands_reg_indirect &&instance) = delete;
+};
+
 class Operands_string
 {
     public:

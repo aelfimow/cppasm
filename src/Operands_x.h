@@ -842,6 +842,42 @@ class Operands_mem
 template
 <
     class MemType,
+    const std::string &suffix
+>
+class Operands_mem_indirect
+{
+    public:
+        Operands_mem_indirect(asmstream &s, const std::string mnem) :
+            m_asmout { s },
+            m_mnem { mnem }
+        {
+        }
+
+        void operator()(MemType &op1)
+        {
+            Instruction instr { m_mnem, op1.to_str() };
+            instr.suffix(suffix);
+            instr.op_prefix("*");
+            m_asmout << instr;
+        }
+
+        virtual ~Operands_mem_indirect() { }
+
+    private:
+        asmstream &m_asmout;
+        const std::string m_mnem;
+
+    public:
+        Operands_mem_indirect() = delete;
+        Operands_mem_indirect(const Operands_mem_indirect &instance) = delete;
+        Operands_mem_indirect(const Operands_mem_indirect &&instance) = delete;
+        Operands_mem_indirect &operator=(const Operands_mem_indirect &instance) = delete;
+        Operands_mem_indirect &operator=(const Operands_mem_indirect &&instance) = delete;
+};
+
+template
+<
+    class MemType,
     class ImmType,
     const std::string &suffix
 >

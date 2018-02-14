@@ -17,6 +17,7 @@ class Instruction
 
         void suffix(const std::string sfx);
         void keep_args_sequence();
+        void op_prefix(const std::string prefix);
 
         std::string to_str() const;
 
@@ -30,6 +31,7 @@ class Instruction
         const std::string m_op4;
 
         std::string m_suffix;
+        std::string m_op_prefix;
         bool m_keep_args_sequence;
 
     public:

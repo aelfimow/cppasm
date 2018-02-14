@@ -11,6 +11,7 @@ Instruction::Instruction(const std::string &mnem) :
     m_op3 { },
     m_op4 { },
     m_suffix { },
+    m_op_prefix { },
     m_keep_args_sequence { false }
 {
 }
@@ -22,6 +23,7 @@ Instruction::Instruction(const std::string &mnem, const std::string &op) :
     m_op3 { },
     m_op4 { },
     m_suffix { },
+    m_op_prefix { },
     m_keep_args_sequence { false }
 {
 }
@@ -33,6 +35,7 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op3 { },
     m_op4 { },
     m_suffix { },
+    m_op_prefix { },
     m_keep_args_sequence { false }
 {
 }
@@ -44,6 +47,7 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op3 { op3 },
     m_op4 { },
     m_suffix { },
+    m_op_prefix { },
     m_keep_args_sequence { false }
 {
 }
@@ -55,6 +59,7 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
     m_op3 { op3 },
     m_op4 { op4 },
     m_suffix { },
+    m_op_prefix { },
     m_keep_args_sequence { false }
 {
 }
@@ -67,6 +72,11 @@ void Instruction::suffix(const std::string sfx)
 void Instruction::keep_args_sequence()
 {
     m_keep_args_sequence = true;
+}
+
+void Instruction::op_prefix(const std::string prefix)
+{
+    m_op_prefix = prefix;
 }
 
 std::string Instruction::to_str() const
@@ -113,7 +123,7 @@ std::string Instruction::to_str() const
 
     if (0 != m_op1.length())
     {
-        const std::string str { mnem + " " + m_op1 };
+        const std::string str { mnem + " " + m_op_prefix + m_op1 };
         return str;
     }
 

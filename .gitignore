@@ -31,3 +31,5 @@ examples/thousand-nops/*.o
 examples/lea-arithm/*.exe
 examples/lea-arithm/*.o
 examples/thousand-nops/*.exe
+examples/rc4/*.exe
+examples/rc4/*.o

@@ -9,7 +9,7 @@ static void gen_rc4init()
     const std::string func_name { "rc4init" };
     global(func_name);
     label(func_name);
-    comment("ssize_t " + func_name + "(const char key[], size_t L, char sbox[])");
+    comment("void " + func_name + "(const char key[], size_t L, char sbox[])");
 
     r64 &key_reg { RCX };
     r64 &L_reg { RDX };

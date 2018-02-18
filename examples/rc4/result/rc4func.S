@@ -1,7 +1,7 @@
 .section .text
 .global rc4init
 rc4init:
-# ssize_t rc4init(const char key[], size_t L, char sbox[])
+# void rc4init(const char key[], size_t L, char sbox[])
 # key: %rcx
 # L: %rdx
 # sbox: %r8

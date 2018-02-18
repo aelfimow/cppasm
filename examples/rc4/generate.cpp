@@ -13,6 +13,20 @@ try
     section code { ".text" };
     code.start();
 
+    {
+        const std::string func_name { "rc4init" };
+        global(func_name);
+        label(func_name);
+        RET();
+    }
+
+    {
+        const std::string func_name { "rc4run" };
+        global(func_name);
+        label(func_name);
+        RET();
+    }
+
     return EXIT_SUCCESS;
 }
 catch (...)

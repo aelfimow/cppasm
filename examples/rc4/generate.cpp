@@ -34,6 +34,44 @@ static void gen_rc4init()
         ADD(RAX, inc_reg);
     }
 
+    r64 &zero_reg { R9 };
+    XOR(zero_reg, zero_reg);
+
+    r64 &j_reg { R10 };
+    r8 &j_reg_low { R10L };
+    XOR(j_reg, j_reg);
+
+    for (size_t offset = 0; offset < 256; ++offset)
+    {
+        m8 sbox_addr { sbox_reg };
+        r64 &tmp_reg { R11 };
+        r8 &tmp_reg_low { R11L };
+
+        MOVZX(tmp_reg, sbox_addr.disp(offset));
+        ADD(tmp_reg, j_reg);
+
+        imm64 offset_value { offset };
+        MOV(RAX, offset_value);
+        CMP(L_reg, RAX);
+        CMOVE(RAX, zero_reg);
+
+        m8 key_addr { key_reg };
+        MOVZX(RAX, key_addr.index(RAX));
+        ADD(tmp_reg, RAX);
+
+        MOV(j_reg_low, tmp_reg_low);
+
+        comment("swap sbox[i] with sbox[j]");
+        m8 sbox_i_addr { sbox_reg };
+        sbox_i_addr.disp(offset);
+        m8 sbox_j_addr { sbox_reg };
+        sbox_j_addr.index(j_reg);
+        MOVZX(RAX, sbox_j_addr);
+        MOVZX(tmp_reg, sbox_i_addr);
+        MOV(sbox_i_addr, AL);
+        MOV(sbox_j_addr, tmp_reg_low);
+    }
+
     RET();
 }
 

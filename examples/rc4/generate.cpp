@@ -19,6 +19,21 @@ static void gen_rc4init()
     comment("L: " + L_reg.name());
     comment("sbox: " + sbox_reg.name());
 
+    imm64 init_values { 0x0706050403020100 };
+    imm64 inc_values { 0x0808080808080808 };
+
+    r64 &inc_reg { R9 };
+    MOV(inc_reg, inc_values);
+    MOV(RAX, init_values);
+
+    comment("Initialize sbox");
+    for (size_t offset = 0; offset < 256; offset += 8)
+    {
+        m64 sbox_addr { sbox_reg };
+        MOV(sbox_addr.disp(offset), RAX);
+        ADD(RAX, inc_reg);
+    }
+
     RET();
 }
 

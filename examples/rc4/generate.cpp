@@ -19,58 +19,48 @@ static void gen_rc4init()
     comment("L: " + L_reg.name());
     comment("sbox: " + sbox_reg.name());
 
-    imm64 init_values { 0x0706050403020100 };
-    imm64 inc_values { 0x0808080808080808 };
-
-    r64 &inc_reg { R9 };
-    MOV(inc_reg, inc_values);
-    MOV(RAX, init_values);
-
-    comment("Initialize sbox");
-    for (size_t offset = 0; offset < 256; offset += 8)
+    comment("Initialize sbox[]");
+    comment("for i = 0 to 255");
+    comment("   sbox[i] := i");
     {
-        m64 sbox_addr { sbox_reg };
-        MOV(sbox_addr.disp(offset), RAX);
-        ADD(RAX, inc_reg);
+        imm64 init_values { 0x0706050403020100 };
+        imm64 inc_values { 0x0808080808080808 };
+
+        r64 &inc_reg { R9 };
+        r64 &values_reg { R10 };
+        MOV(inc_reg, inc_values);
+        MOV(values_reg, init_values);
+
+        r64 &maxCount_reg { R11 };
+        imm64 maxCount { (256 / 8) };
+        MOV(maxCount_reg, maxCount);
+
+        r64 &count_reg { RAX };
+        XOR(count_reg, count_reg);
+
+        std::string loop_start { "1" };
+        std::string loop_end   { "2" };
+        label(loop_start);
+        {
+            CMP(count_reg, maxCount_reg);
+            JE(loop_end);
+
+            m64 sbox_addr { sbox_reg };
+            sbox_addr.index(count_reg).scale(8);
+
+            MOV(sbox_addr, values_reg);
+            ADD(values_reg, inc_reg);
+            INC(count_reg);
+            JMP(loop_start);
+        }
+        label(loop_end);
     }
 
-    r64 &zero_reg { R9 };
-    XOR(zero_reg, zero_reg);
-
-    r64 &j_reg { R10 };
-    r8 &j_reg_low { R10L };
-    XOR(j_reg, j_reg);
-
-    for (size_t offset = 0; offset < 256; ++offset)
-    {
-        m8 sbox_addr { sbox_reg };
-        r64 &tmp_reg { R11 };
-        r8 &tmp_reg_low { R11L };
-
-        MOVZX(tmp_reg, sbox_addr.disp(offset));
-        ADD(tmp_reg, j_reg);
-
-        imm64 offset_value { offset };
-        MOV(RAX, offset_value);
-        CMP(L_reg, RAX);
-        CMOVE(RAX, zero_reg);
-
-        m8 key_addr { key_reg };
-        MOVZX(RAX, key_addr.index(RAX));
-        ADD(tmp_reg, RAX);
-
-        MOV(j_reg_low, tmp_reg_low);
-
-        comment("swap sbox[i] with sbox[j]");
-        m8 sbox_i_addr { sbox_reg };
-        sbox_i_addr.disp(offset);
-        m8 sbox_j_addr { sbox_reg };
-        sbox_j_addr.index(j_reg);
-        MOVZX(RAX, sbox_j_addr);
-        MOVZX(tmp_reg, sbox_i_addr);
-        MOV(sbox_i_addr, AL);
-        MOV(sbox_j_addr, tmp_reg_low);
-    }
+    comment("Scramble sbox[]");
+    comment("j := 0");
+    comment("for i = 0 to 255");
+    comment("   j := (j + s[i] + k[i mod L]) mod 256");
+    comment("   swap s[i] with s[j]");
 
     RET();
 }

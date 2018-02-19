@@ -61,6 +61,20 @@ static void gen_rc4init()
     comment("for i = 0 to 255");
     comment("   j := (j + s[i] + k[i mod L]) mod 256");
     comment("   swap s[i] with s[j]");
+    {
+        r64 &i_reg { RAX };
+        r8 &ii_reg { AL };
+        XOR(i_reg, i_reg);
+
+        std::string loop_start("3");
+        label(loop_start);
+        {
+
+            INC(i_reg);
+            CMP(ii_reg, ii_reg);
+            JNZ(loop_start);
+        }
+    }
 
     RET();
 }

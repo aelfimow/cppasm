@@ -25,6 +25,11 @@ rc4init:
 # for i = 0 to 255
 #    j := (j + s[i] + k[i mod L]) mod 256
 #    swap s[i] with s[j]
+	xor %rax, %rax
+3:
+	inc %rax
+	cmp %al, %al
+	jnz 3
 	ret
 .global rc4run
 rc4run:

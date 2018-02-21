@@ -8,28 +8,28 @@ rc4init:
 # Initialize sbox[]
 # for i = 0 to 255
 #    sbox[i] := i
+	xor %rax, %rax
+	mov $0x0000000000000020, %r11
 	mov $0x0808080808080808, %r9
 	mov $0x0706050403020100, %r10
-	mov $0x0000000000000020, %r11
-	xor %rax, %rax
-1:
+loop1_s:
 	cmp %r11, %rax
-	je 2
+	je loop1_e
 	mov %r10, (%r8, %rax, 8)
 	add %r9, %r10
 	inc %rax
-	jmp 1
-2:
+	jmp loop1_s
+loop1_e:
 # Scramble sbox[]
 # j := 0
 # for i = 0 to 255
 #    j := (j + s[i] + k[i mod L]) mod 256
 #    swap s[i] with s[j]
 	xor %rax, %rax
-3:
+loop2_s:
 	inc %rax
-	cmp %al, %al
-	jnz 3
+	test %al, %al
+	jnz loop2_s
 	ret
 .global rc4run
 rc4run:

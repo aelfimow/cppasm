@@ -26,7 +26,31 @@ loop1_e:
 #    j := (j + s[i] + k[i mod L]) mod 256
 #    swap s[i] with s[j]
 	xor %rax, %rax
+	xor %r9, %r9
+	xor %r10, %r10
 loop2_s:
+# Compute (j += s[i])
+	movzbq (%r8, %rax), %r11
+	add %r11, %r9
+	movq %r11, %xmm0
+# Compute (j += k[i mod L])
+	movzbq (%rcx, %r10), %r11
+	add %r11, %r9
+# Compute (j mod 256)
+	xor %r11, %r11
+	mov %r9b, %r11b
+	xchg %r11, %r9
+# Swap s[i] with s[j]
+	movzbq (%r8, %r9), %r11
+	mov %r11b, (%r8, %rax)
+	movq %xmm0, %r11
+	mov %r11b, (%r8, %r9)
+# Compute (i mod L)
+	inc %r10
+	xor %r11, %r11
+	cmp %r10, %rdx
+	cmove %r11, %r10
+# Next i
 	inc %rax
 	test %al, %al
 	jnz loop2_s

@@ -66,9 +66,51 @@ static void gen_rc4init()
         r8 &ii_reg { AL };
         XOR(i_reg, i_reg);
 
+        r64 &j_reg { R9 };
+        r8 &jj_reg { R9L };
+        XOR(j_reg, j_reg);
+
+        r64 &ki_reg { R10 };
+        XOR(ki_reg, ki_reg);
+
+        r64 &t_reg { R11 };
+        r8 &tt_reg { R11L };
+
         std::string loop_start("loop2_s");
         label(loop_start);
         {
+            comment("Compute (j += s[i])");
+            m8 si_addr { sbox_reg, i_reg };
+            MOVZX(t_reg, si_addr);
+            ADD(j_reg, t_reg);
+
+            xmm &save_si_reg { XMM0 };
+            MOVQ(save_si_reg, t_reg);
+
+            comment("Compute (j += k[i mod L])");
+            m8 key_addr { key_reg, ki_reg };
+            MOVZX(t_reg, key_addr);
+            ADD(j_reg, t_reg);
+
+            comment("Compute (j mod 256)");
+            XOR(t_reg, t_reg);
+            MOV(tt_reg, jj_reg);
+            XCHG(j_reg, t_reg);
+
+            comment("Swap s[i] with s[j]");
+            m8 sj_addr { sbox_reg, j_reg };
+            MOVZX(t_reg, sj_addr);
+            MOV(si_addr, tt_reg);
+            MOVQ(t_reg, save_si_reg);
+            MOV(sj_addr, tt_reg);
+
+            comment("Compute (i mod L)");
+            INC(ki_reg);
+            XOR(t_reg, t_reg);
+            CMP(L_reg, ki_reg);
+            CMOVE(ki_reg, t_reg);
+
+            comment("Next i");
             INC(i_reg);
             TEST(ii_reg, ii_reg);
             JNZ(loop_start);

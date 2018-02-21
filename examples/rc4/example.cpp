@@ -17,12 +17,22 @@ try
     argc = argc;
     argv = argv;
 
-    const std::string key { "1234" };
+    const std::string key { "12345" };
 
     constexpr size_t SBOX_SIZE = 256;
     std::vector<char> sbox(SBOX_SIZE);
 
     rc4init(key.c_str(), key.length(), sbox.data());
+
+    for (auto c: sbox)
+    {
+        const uint8_t uc { static_cast<uint8_t>(c) };
+        const size_t value { uc };
+
+        std::cout << value << ";";
+    }
+
+    std::cout << std::endl;
 
     return EXIT_SUCCESS;
 }

@@ -62,4 +62,31 @@ rc4run:
 # len: %rdx
 # buf_out: %r8
 # sbox: %r9
+	xor %rax, %rax
+	xor %r10, %r10
+	movq %r10, %xmm0
+	movq %r10, %xmm1
+rc4run_loop1_s:
+	cmp %rax, %rdx
+	je rc4run_loop1_e
+# i := (i + 1) mod 256
+	movq %xmm0, %r10
+	inc %r10
+	xor %r11, %r11
+	mov %r10b, %r11b
+	xchg %r11, %r10
+	movq %r10, %xmm0
+# Load s[i]
+	movzbq (%r9, %r10), %r10
+# j := (j + s[i]) mod 256
+	movq %xmm1, %r11
+	add %r11, %r10
+	xor %r11, %r11
+	mov %r10b, %r11b
+	xchg %r11, %r10
+	movq %r10, %xmm1
+# Next n
+	inc %rax
+	jmp rc4run_loop1_s
+rc4run_loop1_e:
 	ret

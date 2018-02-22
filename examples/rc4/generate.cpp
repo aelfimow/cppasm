@@ -137,6 +137,55 @@ static void gen_rc4run()
     comment("buf_out: " + buf_out_reg.name());
     comment("sbox: " + sbox_reg.name());
 
+    r64 &n_reg { RAX };
+    XOR(n_reg, n_reg);
+
+    xmm &save_i_reg { XMM0 };
+    xmm &save_j_reg { XMM1 };
+
+    r64 &t_reg { R10 };
+    r8 &tt_reg { R10L };
+    r64 &u_reg { R11 };
+    r8 &uu_reg { R11L };
+    XOR(t_reg, t_reg);
+    MOVQ(save_i_reg, t_reg);
+    MOVQ(save_j_reg, t_reg);
+
+    std::string loop_start { "rc4run_loop1_s" };
+    std::string loop_end   { "rc4run_loop1_e" };
+
+    label(loop_start);
+    {
+        CMP(len_reg, n_reg);
+        JE(loop_end);
+
+        comment("i := (i + 1) mod 256");
+        MOVQ(t_reg, save_i_reg);
+        INC(t_reg);
+        XOR(u_reg, u_reg);
+        MOV(uu_reg, tt_reg);
+        XCHG(t_reg, u_reg);
+        MOVQ(save_i_reg, t_reg);
+
+        comment("Load s[i]");
+        m8 sbox_addr { sbox_reg };
+        sbox_addr.index(t_reg);
+        MOVZX(t_reg, sbox_addr);
+
+        comment("j := (j + s[i]) mod 256");
+        MOVQ(u_reg, save_j_reg);
+        ADD(t_reg, u_reg);
+        XOR(u_reg, u_reg);
+        MOV(uu_reg, tt_reg);
+        XCHG(t_reg, u_reg);
+        MOVQ(save_j_reg, t_reg);
+
+        comment("Next n");
+        INC(n_reg);
+        JMP(loop_start);
+    }
+    label(loop_end);
+
     RET();
 }
 

@@ -34,6 +34,11 @@ try
 
     std::cout << std::endl;
 
+    const std::string klartext { "Hallo, Welt!" };
+    std::vector<char> outbuf(klartext.length());
+
+    rc4run(klartext.c_str(), klartext.length(), outbuf.data(), sbox.data());
+
     return EXIT_SUCCESS;
 }
 catch (std::exception &exc)

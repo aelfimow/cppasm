@@ -57,7 +57,7 @@ loop2_s:
 	ret
 .global rc4run
 rc4run:
-# ssize_t rc4run(const char buf_in[], size_t len, char buf_out[], char sbox[])
+# void rc4run(const char buf_in[], size_t len, char buf_out[], char sbox[])
 # buf_in: %rcx
 # len: %rdx
 # buf_out: %r8

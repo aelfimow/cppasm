@@ -125,7 +125,7 @@ static void gen_rc4run()
     const std::string func_name { "rc4run" };
     global(func_name);
     label(func_name);
-    comment("ssize_t " + func_name + "(const char buf_in[], size_t len, char buf_out[], char sbox[])");
+    comment("void " + func_name + "(const char buf_in[], size_t len, char buf_out[], char sbox[])");
 
     r64 &buf_in_reg { RCX };
     r64 &len_reg { RDX };

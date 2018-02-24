@@ -1,15 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdexcept>
-#include <string>
 #include <vector>
 
 static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
 static_assert(sizeof(ssize_t) == 8, "ssize_t expected to be 64 bit");
-static_assert(sizeof(char) == 1, "char expected to be 8 bit");
 
-extern "C" void rc4init(const char key[], size_t L, char sbox[]); 
-extern "C" void rc4run(const char buf_in[], size_t len, char buf_out[], char sbox[]);
+extern "C" void rc4init(const void *key, size_t L, void *sbox);
+extern "C" void rc4run(const void *buf_in, size_t len, void *buf_out, void *sbox);
 
 int main(int argc, char *argv[])
 try
@@ -17,27 +15,26 @@ try
     argc = argc;
     argv = argv;
 
-    const std::string key { "12345" };
+    const std::vector<uint8_t> key { 1, 2, 3, 4, 5 };
 
     constexpr size_t SBOX_SIZE = 256;
-    std::vector<char> sbox(SBOX_SIZE);
+    std::vector<uint8_t> sbox(SBOX_SIZE);
 
-    rc4init(key.c_str(), key.length(), sbox.data());
+    rc4init(key.data(), key.size(), sbox.data());
 
-    for (auto c: sbox)
+    for (auto s: sbox)
     {
-        const uint8_t uc { static_cast<uint8_t>(c) };
-        const size_t value { uc };
+        const size_t value { s };
 
         std::cout << value << ";";
     }
 
     std::cout << std::endl;
 
-    const std::string klartext { "Hallo, Welt!" };
-    std::vector<char> outbuf(klartext.length());
+    const std::vector<uint8_t> klartext { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    std::vector<uint8_t> outbuf(klartext.size());
 
-    rc4run(klartext.c_str(), klartext.length(), outbuf.data(), sbox.data());
+    rc4run(klartext.data(), klartext.size(), outbuf.data(), sbox.data());
 
     return EXIT_SUCCESS;
 }

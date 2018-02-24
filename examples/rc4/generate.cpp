@@ -7,9 +7,9 @@
 static void gen_rc4init()
 {
     const std::string func_name { "rc4init" };
+    comment("void " + func_name + "(const void *key, size_t L, void *sbox)");
     global(func_name);
     label(func_name);
-    comment("void " + func_name + "(const char key[], size_t L, char sbox[])");
 
     r64 &key_reg { RCX };
     r64 &L_reg { RDX };
@@ -123,9 +123,9 @@ static void gen_rc4init()
 static void gen_rc4run()
 {
     const std::string func_name { "rc4run" };
+    comment("void " + func_name + "(const void *buf_in, size_t len, void *buf_out, void *sbox)");
     global(func_name);
     label(func_name);
-    comment("void " + func_name + "(const char buf_in[], size_t len, char buf_out[], char sbox[])");
 
     r64 &buf_in_reg { RCX };
     r64 &len_reg { RDX };

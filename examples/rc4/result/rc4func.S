@@ -1,7 +1,7 @@
 .section .text
+# void rc4init(const void *key, size_t L, void *sbox)
 .global rc4init
 rc4init:
-# void rc4init(const char key[], size_t L, char sbox[])
 # key: %rcx
 # L: %rdx
 # sbox: %r8
@@ -55,9 +55,9 @@ loop2_s:
 	test %al, %al
 	jnz loop2_s
 	ret
+# void rc4run(const void *buf_in, size_t len, void *buf_out, void *sbox)
 .global rc4run
 rc4run:
-# void rc4run(const char buf_in[], size_t len, char buf_out[], char sbox[])
 # buf_in: %rcx
 # len: %rdx
 # buf_out: %r8

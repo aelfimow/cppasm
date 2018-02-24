@@ -74,17 +74,38 @@ rc4run_loop1_s:
 	inc %r10
 	xor %r11, %r11
 	mov %r10b, %r11b
-	xchg %r11, %r10
-	movq %r10, %xmm0
+	movq %r11, %xmm0
 # Load s[i]
 	movzbq (%r9, %r10), %r10
 # j := (j + s[i]) mod 256
 	movq %xmm1, %r11
+	movq %r10, %xmm2
 	add %r11, %r10
 	xor %r11, %r11
 	mov %r10b, %r11b
-	xchg %r11, %r10
-	movq %r10, %xmm1
+	movq %r11, %xmm1
+# Load s[j] and save it in s[i]
+	movzbq (%r9, %r11), %r10
+	movq %r10, %xmm3
+	movq %xmm0, %r11
+	mov %r10b, (%r9, %r11)
+# Save s[i] in s[j]
+	movq %xmm1, %r11
+	movq %xmm2, %r10
+	mov %r10b, (%r9, %r11)
+# Compute (s[i] + s[j]) mod 256
+	movq %xmm3, %r11
+	add %r11, %r10
+	xor %r11, %r11
+	mov %r10b, %r11b
+# Load s[(s[i] + s[j]) mod 256]
+	movzbq (%r9, %r11), %r10
+# Load buf_in[n]
+	movzbq (%rcx, %rax), %r11
+# Encrypt
+	xor %r11, %r10
+# Save encrypted value
+	mov %r10b, (%r8, %rax)
 # Next n
 	inc %rax
 	jmp rc4run_loop1_s

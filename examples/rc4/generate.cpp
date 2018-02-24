@@ -84,8 +84,8 @@ static void gen_rc4init()
             MOVZX(t_reg, si_addr);
             ADD(j_reg, t_reg);
 
-            xmm &save_si_reg { XMM0 };
-            MOVQ(save_si_reg, t_reg);
+            xmm &saved_si_reg { XMM0 };
+            MOVQ(saved_si_reg, t_reg);
 
             comment("Compute (j += k[i mod L])");
             m8 key_addr { key_reg, ki_reg };
@@ -101,7 +101,7 @@ static void gen_rc4init()
             m8 sj_addr { sbox_reg, j_reg };
             MOVZX(t_reg, sj_addr);
             MOV(si_addr, tt_reg);
-            MOVQ(t_reg, save_si_reg);
+            MOVQ(t_reg, saved_si_reg);
             MOV(sj_addr, tt_reg);
 
             comment("Compute (i mod L)");
@@ -140,16 +140,18 @@ static void gen_rc4run()
     r64 &n_reg { RAX };
     XOR(n_reg, n_reg);
 
-    xmm &save_i_reg { XMM0 };
-    xmm &save_j_reg { XMM1 };
+    xmm &saved_i_reg { XMM0 };
+    xmm &saved_j_reg { XMM1 };
+    xmm &saved_si_reg { XMM2 };
+    xmm &saved_sj_reg { XMM3 };
 
     r64 &t_reg { R10 };
     r8 &tt_reg { R10L };
     r64 &u_reg { R11 };
     r8 &uu_reg { R11L };
     XOR(t_reg, t_reg);
-    MOVQ(save_i_reg, t_reg);
-    MOVQ(save_j_reg, t_reg);
+    MOVQ(saved_i_reg, t_reg);
+    MOVQ(saved_j_reg, t_reg);
 
     std::string loop_start { "rc4run_loop1_s" };
     std::string loop_end   { "rc4run_loop1_e" };
@@ -160,12 +162,11 @@ static void gen_rc4run()
         JE(loop_end);
 
         comment("i := (i + 1) mod 256");
-        MOVQ(t_reg, save_i_reg);
+        MOVQ(t_reg, saved_i_reg);
         INC(t_reg);
         XOR(u_reg, u_reg);
         MOV(uu_reg, tt_reg);
-        XCHG(t_reg, u_reg);
-        MOVQ(save_i_reg, t_reg);
+        MOVQ(saved_i_reg, u_reg);
 
         comment("Load s[i]");
         m8 sbox_addr { sbox_reg };
@@ -173,12 +174,49 @@ static void gen_rc4run()
         MOVZX(t_reg, sbox_addr);
 
         comment("j := (j + s[i]) mod 256");
-        MOVQ(u_reg, save_j_reg);
+        MOVQ(u_reg, saved_j_reg);
+        MOVQ(saved_si_reg, t_reg);
         ADD(t_reg, u_reg);
         XOR(u_reg, u_reg);
         MOV(uu_reg, tt_reg);
-        XCHG(t_reg, u_reg);
-        MOVQ(save_j_reg, t_reg);
+        MOVQ(saved_j_reg, u_reg);
+
+        comment("Load s[j] and save it in s[i]");
+        sbox_addr.index(u_reg);
+        MOVZX(t_reg, sbox_addr);
+        MOVQ(saved_sj_reg, t_reg);
+        MOVQ(u_reg, saved_i_reg);
+        sbox_addr.index(u_reg);
+        MOV(sbox_addr, tt_reg);
+
+        comment("Save s[i] in s[j]");
+        MOVQ(u_reg, saved_j_reg);
+        sbox_addr.index(u_reg);
+        MOVQ(t_reg, saved_si_reg);
+        MOV(sbox_addr, tt_reg);
+
+        comment("Compute (s[i] + s[j]) mod 256");
+        MOVQ(u_reg, saved_sj_reg);
+        ADD(t_reg, u_reg);
+        XOR(u_reg, u_reg);
+        MOV(uu_reg, tt_reg);
+
+        comment("Load s[(s[i] + s[j]) mod 256]");
+        sbox_addr.index(u_reg);
+        MOVZX(t_reg, sbox_addr);
+
+        comment("Load buf_in[n]");
+        m8 buf_in_addr { buf_in_reg };
+        buf_in_addr.index(n_reg);
+        MOVZX(u_reg, buf_in_addr);
+
+        comment("Encrypt");
+        XOR(t_reg, u_reg);
+
+        comment("Save encrypted value");
+        m8 buf_out_addr { buf_out_reg };
+        buf_out_addr.index(n_reg);
+        MOV(buf_out_addr, tt_reg);
 
         comment("Next n");
         INC(n_reg);

@@ -20,21 +20,39 @@ try
     constexpr size_t SBOX_SIZE = 256;
     std::vector<uint8_t> sbox(SBOX_SIZE);
 
+    const std::vector<uint8_t> txt { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    std::vector<uint8_t> outbuf(txt.size());
+    std::vector<uint8_t> outbuf2(txt.size());
+
     rc4init(key.data(), key.size(), sbox.data());
+    rc4run(txt.data(), txt.size(), outbuf.data(), sbox.data());
 
-    for (auto s: sbox)
+    std::cout << "Text: ";
+    for (auto k: txt)
     {
-        const size_t value { s };
-
+        const size_t value { k };
         std::cout << value << ";";
     }
-
     std::cout << std::endl;
 
-    const std::vector<uint8_t> klartext { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-    std::vector<uint8_t> outbuf(klartext.size());
+    std::cout << "Encrypted: ";
+    for (auto e: outbuf)
+    {
+        const size_t value { e };
+        std::cout << value << ";";
+    }
+    std::cout << std::endl;
 
-    rc4run(klartext.data(), klartext.size(), outbuf.data(), sbox.data());
+    rc4init(key.data(), key.size(), sbox.data());
+    rc4run(outbuf.data(), outbuf.size(), outbuf2.data(), sbox.data());
+
+    std::cout << "Decrypted: ";
+    for (auto d: outbuf2)
+    {
+        const size_t value { d };
+        std::cout << value << ";";
+    }
+    std::cout << std::endl;
 
     return EXIT_SUCCESS;
 }

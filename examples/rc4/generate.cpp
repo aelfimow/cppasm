@@ -170,7 +170,7 @@ static void gen_rc4run()
 
         comment("Load s[i]");
         m8 sbox_addr { sbox_reg };
-        sbox_addr.index(t_reg);
+        sbox_addr.index(u_reg);
         MOVZX(t_reg, sbox_addr);
 
         comment("j := (j + s[i]) mod 256");

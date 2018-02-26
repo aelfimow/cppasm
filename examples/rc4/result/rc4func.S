@@ -76,7 +76,7 @@ rc4run_loop1_s:
 	mov %r10b, %r11b
 	movq %r11, %xmm0
 # Load s[i]
-	movzbq (%r9, %r10), %r10
+	movzbq (%r9, %r11), %r10
 # j := (j + s[i]) mod 256
 	movq %xmm1, %r11
 	movq %r10, %xmm2

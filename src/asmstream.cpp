@@ -25,7 +25,7 @@ void asmstream::operator<<(const Instruction &instr)
     std::cout << instr.to_str().c_str() << std::endl;
 }
 
-void asmstream::prefix(std::string str)
+void asmstream::prefix(const std::string &str)
 {
     std::cout << "\t" << str.c_str();
     m_prefix = true;

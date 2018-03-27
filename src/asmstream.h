@@ -13,7 +13,7 @@ class asmstream
 
         void operator<<(const Instruction &instr);
 
-        void prefix(std::string str);
+        void prefix(const std::string &str);
 
         ~asmstream();
 

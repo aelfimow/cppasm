@@ -4,7 +4,9 @@
 
 #include "cppasm.h"
 
-asmstream asmout;
+constexpr char indent_char { '\t' };
+
+asmstream asmout { indent_char };
 
 r8 AL { "%al" };
 r8 AH { "%ah" };

@@ -5,7 +5,8 @@
 #include "Instruction.h"
 #include "asmstream.h"
 
-asmstream::asmstream() :
+asmstream::asmstream(char indent) :
+    m_indent { indent },
     m_prefix { false }
 {
 }
@@ -19,7 +20,7 @@ void asmstream::operator<<(const Instruction &instr)
     }
     else
     {
-        std::cout << "\t";
+        std::cout << m_indent;
     }
 
     std::cout << instr.to_str().c_str() << std::endl;
@@ -27,7 +28,7 @@ void asmstream::operator<<(const Instruction &instr)
 
 void asmstream::prefix(const std::string &str)
 {
-    std::cout << "\t" << str.c_str();
+    std::cout << m_indent << str.c_str();
     m_prefix = true;
 }
 

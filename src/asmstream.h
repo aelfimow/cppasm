@@ -6,10 +6,11 @@
 #else
 #define ASM_STREAM_H
 
+/*! \class Assembly stream */
 class asmstream
 {
     public:
-        asmstream();
+        explicit asmstream(char indent);
 
         void operator<<(const Instruction &instr);
 
@@ -18,9 +19,11 @@ class asmstream
         ~asmstream();
 
     private:
+        const char m_indent;
         bool m_prefix;
 
     public:
+        asmstream() = delete;
         asmstream(const asmstream &instance) = delete;
         asmstream(const asmstream &&instance) = delete;
         asmstream &operator=(const asmstream &instance) = delete;

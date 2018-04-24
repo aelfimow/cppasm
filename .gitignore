@@ -27,6 +27,8 @@ examples/rdtsc/*.o
 examples/rdtsc/*.exe
 examples/xorshift-rng/*.o
 examples/xorshift-rng/*.exe
+examples/xorshift-rng-2/*.o
+examples/xorshift-rng-2/*.exe
 examples/thousand-nops/*.o
 examples/lea-arithm/*.exe
 examples/lea-arithm/*.o

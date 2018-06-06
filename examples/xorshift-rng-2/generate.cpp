@@ -61,7 +61,10 @@ try
     section code { ".text" };
     code.start();
 
-    gen_XorshiftFunc("xorshift_func", SHL, SHR, SHL);
+    gen_XorshiftFunc("xorshift_func1", SHL, SHR, SHL);
+    gen_XorshiftFunc("xorshift_func2", SHR, SHL, SHR);
+    gen_XorshiftFunc("xorshift_func3", SHL, SHL, SHR);
+    gen_XorshiftFunc("xorshift_func4", SHR, SHR, SHL);
 
     return EXIT_SUCCESS;
 }

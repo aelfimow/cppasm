@@ -6,7 +6,7 @@
 
 #include "cppasm.h"
 
-static void gen_XorshiftFunc()
+static void gen_XorshiftFunc(Instruction16_Type2 &op1, Instruction16_Type2 &op2, Instruction16_Type2 &op3)
 {
     // Construct function name
     std::ostringstream ss;
@@ -35,19 +35,19 @@ static void gen_XorshiftFunc()
 
     // 1st shift step
     MOV(ret_reg, rng_state_reg);
-    SHL(rng_state_reg, shift_value_reg);
+    op1(rng_state_reg, shift_value_reg);
     XOR(ret_reg, rng_state_reg);
 
     // 2nd shift step
     SHR(triple_reg, step);
     MOV(rng_state_reg, ret_reg);
-    SHR(ret_reg, shift_value_reg);
+    op2(ret_reg, shift_value_reg);
     XOR(rng_state_reg, ret_reg);
 
     // 3thd shift step
     SHR(triple_reg, step);
     MOV(ret_reg, rng_state_reg);
-    SHL(rng_state_reg, shift_value_reg);
+    op3(rng_state_reg, shift_value_reg);
     XOR(ret_reg, rng_state_reg);
 
     RET();
@@ -62,7 +62,7 @@ try
     section code { ".text" };
     code.start();
 
-    gen_XorshiftFunc();
+    gen_XorshiftFunc(SHL, SHR, SHL);
 
     return EXIT_SUCCESS;
 }

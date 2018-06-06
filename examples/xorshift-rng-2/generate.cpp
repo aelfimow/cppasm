@@ -6,13 +6,12 @@
 
 #include "cppasm.h"
 
-static void gen_XorshiftFunc(Instruction16_Type2 &op1, Instruction16_Type2 &op2, Instruction16_Type2 &op3)
+static void gen_XorshiftFunc(
+        const std::string &func_name,
+        Instruction16_Type2 &op1,
+        Instruction16_Type2 &op2,
+        Instruction16_Type2 &op3)
 {
-    // Construct function name
-    std::ostringstream ss;
-    ss << "xorshift_func";
-    const std::string func_name { ss.str() };
-
     // Generate some meaningful comments with function name and argument etc.
     const std::string str1 { "uint64_t " + func_name + "(uint64_t triple, uint64_t rng_state)" };
     comment(str1);
@@ -62,7 +61,7 @@ try
     section code { ".text" };
     code.start();
 
-    gen_XorshiftFunc(SHL, SHR, SHL);
+    gen_XorshiftFunc("xorshift_func", SHL, SHR, SHL);
 
     return EXIT_SUCCESS;
 }

@@ -1509,6 +1509,8 @@ try
     gen_Instruction2_Type12(AESKEYGENASSIST);
     gen_Instruction2_Type12(PCLMULQDQ);
 
+    gen_Instruction2_Type12(SHA1RNDS4);
+
     gen_Instruction2_Type13(CMPSS);
     gen_Instruction2_Type13(ROUNDSS);
     gen_Instruction2_Type13(INSERTPS);

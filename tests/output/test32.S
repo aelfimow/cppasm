@@ -459,6 +459,16 @@ Instruction1_Type4_Label:
 	pcmpeqq (%eax), %xmm0
 	packusdw %xmm1, %xmm0
 	packusdw (%eax), %xmm0
+	sha1msg1 %xmm1, %xmm0
+	sha1msg1 (%eax), %xmm0
+	sha1msg2 %xmm1, %xmm0
+	sha1msg2 (%eax), %xmm0
+	sha1nexte %xmm1, %xmm0
+	sha1nexte (%eax), %xmm0
+	sha256msg1 %xmm1, %xmm0
+	sha256msg1 (%eax), %xmm0
+	sha256msg2 %xmm1, %xmm0
+	sha256msg2 (%eax), %xmm0
 	addss %xmm1, %xmm0
 	addss (%eax), %xmm0
 	subss %xmm1, %xmm0

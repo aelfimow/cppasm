@@ -1143,6 +1143,15 @@ Instruction1_Type4  XBEGIN { asmout, "xbegin" };
 Instruction1_Type1  XEND { asmout, "xend" };
 Instruction1_Type1  XTEST { asmout, "xtest" };
 
+// SHA extensions
+Instruction2_Type10 SHA1MSG1 { asmout, "sha1msg1" };
+Instruction2_Type10 SHA1MSG2 { asmout, "sha1msg2" };
+Instruction2_Type10 SHA1NEXTE { asmout, "sha1nexte" };
+Instruction2_Type12 SHA1RNDS4 { asmout, "sha1rnds4" };
+Instruction2_Type10 SHA256MSG1 { asmout, "sha256msg1" };
+Instruction2_Type10 SHA256MSG2 { asmout, "sha256msg2" };
+Instruction2_Type38 SHA256RNDS2 { asmout, "sha256rnds2" };
+
 Keyword_label label;
 keyword global { ".global" };
 keyword comment { "#" };

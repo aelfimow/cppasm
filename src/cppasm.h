@@ -1191,6 +1191,15 @@ extern Instruction1_Type4  XBEGIN;
 extern Instruction1_Type1  XEND;
 extern Instruction1_Type1  XTEST;
 
+// SHA extensions
+extern Instruction2_Type10 SHA1MSG1;
+extern Instruction2_Type10 SHA1MSG2;
+extern Instruction2_Type10 SHA1NEXTE;
+extern Instruction2_Type12 SHA1RNDS4;
+extern Instruction2_Type10 SHA256MSG1;
+extern Instruction2_Type10 SHA256MSG2;
+extern Instruction2_Type38 SHA256RNDS2;
+
 extern keyword comment;
 extern keyword global;
 extern Keyword_label label;

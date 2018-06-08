@@ -228,4 +228,10 @@ using Instruction2_Type37 = Instruction_2
     Operands_mem_reg_imm<m32, xmm, imm8>
 >;
 
+using Instruction2_Type38 = Instruction_2
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_mem_reg<xmm, m128, xmm>
+>;
+
 #endif

@@ -438,6 +438,13 @@ static void gen_Instruction2_Type37(Instruction2_Type37 &instr)
     instr(addr, XMM0, mask);
 }
 
+static void gen_Instruction2_Type38(Instruction2_Type38 &instr)
+{
+    m128 addr { RDX };
+    instr(XMM2, XMM1, XMM0);
+    instr(XMM1, addr, XMM0);
+}
+
 static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
 {
     m64 addr { RAX };
@@ -1721,6 +1728,8 @@ try
     gen_Instruction2_Type36(VPERM2F128);
 
     gen_Instruction2_Type37(PEXTRD);
+
+    gen_Instruction2_Type38(SHA256RNDS2);
 
     gen_Instruction3_Type1(LFS);
     gen_Instruction3_Type1(LGS);

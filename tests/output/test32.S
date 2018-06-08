@@ -712,6 +712,8 @@ Instruction1_Type4_Label:
 	vperm2f128 $0xFF, (%eax), %ymm1, %ymm0
 	pextrd $0xFF, %xmm0, %eax
 	pextrd $0xFF, %xmm0, (%eax)
+	sha256rnds2 %xmm0, %xmm1, %xmm2
+	sha256rnds2 %xmm0, (%edx), %xmm1
 	lds (%eax), %ax
 	lds (%eax), %eax
 	les (%eax), %ax

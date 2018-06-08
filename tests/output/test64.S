@@ -461,6 +461,16 @@ Instruction1_Type4_Label:
 	pcmpeqq (%rax), %xmm0
 	packusdw %xmm1, %xmm0
 	packusdw (%rax), %xmm0
+	sha1msg1 %xmm1, %xmm0
+	sha1msg1 (%rax), %xmm0
+	sha1msg2 %xmm1, %xmm0
+	sha1msg2 (%rax), %xmm0
+	sha1nexte %xmm1, %xmm0
+	sha1nexte (%rax), %xmm0
+	sha256msg1 %xmm1, %xmm0
+	sha256msg1 (%rax), %xmm0
+	sha256msg2 %xmm1, %xmm0
+	sha256msg2 (%rax), %xmm0
 	addss %xmm1, %xmm0
 	addss (%rax), %xmm0
 	subss %xmm1, %xmm0

@@ -1566,6 +1566,12 @@ try
     gen_Instruction2_Type10(PCMPEQQ);
     gen_Instruction2_Type10(PACKUSDW);
 
+    gen_Instruction2_Type10(SHA1MSG1);
+    gen_Instruction2_Type10(SHA1MSG2);
+    gen_Instruction2_Type10(SHA1NEXTE);
+    gen_Instruction2_Type10(SHA256MSG1);
+    gen_Instruction2_Type10(SHA256MSG2);
+
     gen_Instruction2_Type11(ADDSS);
     gen_Instruction2_Type11(SUBSS);
     gen_Instruction2_Type11(MULSS);

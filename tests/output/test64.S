@@ -110,6 +110,8 @@
 	xsetbv
 	syscall
 	sysret
+	xend
+	xtest
 	clflush (%rax)
 	clflushopt (%rax)
 	xsave (%rax)
@@ -179,6 +181,7 @@ Instruction1_Type4_Label:
 	loopne Instruction1_Type4_Label
 	loopz Instruction1_Type4_Label
 	loopnz Instruction1_Type4_Label
+	xbegin Instruction1_Type4_Label
 	fcmovb %st(1), %st(0)
 	fcmove %st(1), %st(0)
 	fcmovbe %st(1), %st(0)
@@ -198,11 +201,14 @@ Instruction1_Type4_Label:
 	cmpxchg16b (%rax)
 	enter $0xFFFF, $0xFF
 	int $0xFF
+	xabort $0xFF
 	rep stosb
 	repe stosb
 	repz stosb
 	repne stosb
 	repnz stosb
+	xrelease xchg (%rbx), %rax
+	xacquire xchg (%rbx), %rax
 	fbld (%rax)
 	fbstp (%rax)
 	ffree %st(0)

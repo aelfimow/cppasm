@@ -66,10 +66,17 @@ static void gen_Instruction1_Type10(Instruction1_Type10 &instr)
     instr(param1);
 }
 
-static void gen_Instruction1_Type11(Instruction1_Type11 &instr)
+static void gen_Instruction1_Type11_1(Instruction1_Type11 &instr)
 {
     instr();
     STOSB();
+}
+
+static void gen_Instruction1_Type11_2(Instruction1_Type11 &instr)
+{
+    instr();
+    m64 addr { RBX };
+    XCHG(RAX, addr);
 }
 
 static void gen_Instruction1_Type12(Instruction1_Type12 &instr)
@@ -1288,6 +1295,9 @@ try
     gen_Instruction1_Type1(SYSCALL);
     gen_Instruction1_Type1(SYSRET);
 
+    gen_Instruction1_Type1(XEND);
+    gen_Instruction1_Type1(XTEST);
+
     gen_Instruction1_Type2(CLFLUSH);
     gen_Instruction1_Type2(CLFLUSHOPT);
     gen_Instruction1_Type2(XSAVE);
@@ -1360,6 +1370,7 @@ try
     gen_Instruction1_Type4(LOOPNE, L);
     gen_Instruction1_Type4(LOOPZ, L);
     gen_Instruction1_Type4(LOOPNZ, L);
+    gen_Instruction1_Type4(XBEGIN, L);
 
     gen_Instruction1_Type5(FCMOVB);
     gen_Instruction1_Type5(FCMOVE);
@@ -1385,12 +1396,16 @@ try
     gen_Instruction1_Type9(ENTER);
 
     gen_Instruction1_Type10(INT);
+    gen_Instruction1_Type10(XABORT);
 
-    gen_Instruction1_Type11(REP);
-    gen_Instruction1_Type11(REPE);
-    gen_Instruction1_Type11(REPZ);
-    gen_Instruction1_Type11(REPNE);
-    gen_Instruction1_Type11(REPNZ);
+    gen_Instruction1_Type11_1(REP);
+    gen_Instruction1_Type11_1(REPE);
+    gen_Instruction1_Type11_1(REPZ);
+    gen_Instruction1_Type11_1(REPNE);
+    gen_Instruction1_Type11_1(REPNZ);
+
+    gen_Instruction1_Type11_2(XRELEASE);
+    gen_Instruction1_Type11_2(XACQUIRE);
 
     gen_Instruction1_Type12(FBLD);
     gen_Instruction1_Type12(FBSTP);

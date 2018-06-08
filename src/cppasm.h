@@ -1183,6 +1183,14 @@ extern Instruction4_Type6 VMOVQ;
 extern Instruction1_Type14 VLDMXCSR;
 extern Instruction1_Type14 VSTMXCSR;
 
+// Transactional synchronization extension (TSX)
+extern Instruction1_Type10 XABORT;
+extern Instruction1_Type11 XACQUIRE;
+extern Instruction1_Type11 XRELEASE;
+extern Instruction1_Type4  XBEGIN;
+extern Instruction1_Type1  XEND;
+extern Instruction1_Type1  XTEST;
+
 extern keyword comment;
 extern keyword global;
 extern Keyword_label label;

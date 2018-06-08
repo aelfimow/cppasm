@@ -1135,6 +1135,14 @@ Instruction4_Type6 VMOVQ { asmout, "vmovq" };
 Instruction1_Type14 VLDMXCSR { asmout, "vldmxcsr" };
 Instruction1_Type14 VSTMXCSR { asmout, "vstmxcsr" };
 
+// Transactional synchronization extension (TSX)
+Instruction1_Type10 XABORT { asmout, "xabort" };
+Instruction1_Type11 XACQUIRE { asmout, "xacquire" };
+Instruction1_Type11 XRELEASE { asmout, "xrelease" };
+Instruction1_Type4  XBEGIN { asmout, "xbegin" };
+Instruction1_Type1  XEND { asmout, "xend" };
+Instruction1_Type1  XTEST { asmout, "xtest" };
+
 Keyword_label label;
 keyword global { ".global" };
 keyword comment { "#" };

@@ -690,6 +690,7 @@ extern Instruction2_Type10 MAXPS;
 extern Instruction2_Type11 MAXSS;
 extern Instruction2_Type10 MINPS;
 extern Instruction2_Type11 MINSS;
+extern Instruction2_Type10 RSQRTPS;
 
 // SSE comparison instructions
 extern Instruction2_Type12 CMPPS;

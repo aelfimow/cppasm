@@ -642,6 +642,7 @@ Instruction2_Type10 MAXPS { asmout, "maxps" };
 Instruction2_Type11 MAXSS { asmout, "maxss" };
 Instruction2_Type10 MINPS { asmout, "minps" };
 Instruction2_Type11 MINSS { asmout, "minss" };
+Instruction2_Type10 RSQRTPS { asmout, "rsqrtps" };
 
 // SSE comparison instructions
 Instruction2_Type12 CMPPS { asmout, "cmpps" };

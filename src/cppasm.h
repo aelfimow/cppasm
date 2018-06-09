@@ -360,6 +360,7 @@ extern Instruction2_Type7 SETPO;
 extern Instruction2_Type7 SETS;
 extern Instruction2_Type7 SETZ;
 extern Instruction16_Type1 TEST;
+extern Instruction6_Type2 POPCNT;
 
 // Control transfer instructions
 extern Instruction7_Type1 JMP;

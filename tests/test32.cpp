@@ -1609,6 +1609,7 @@ try
     gen_Instruction2_Type29(VFNMSUB132SS);
     gen_Instruction2_Type29(VFNMSUB213SS);
     gen_Instruction2_Type29(VFNMSUB231SS);
+    gen_Instruction2_Type29(VRSQRTSS);
 
     gen_Instruction2_Type30(VDPPD);
 

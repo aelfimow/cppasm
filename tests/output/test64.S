@@ -701,6 +701,8 @@ Instruction1_Type4_Label:
 	vfnmsub213ss (%rax), %xmm1, %xmm0
 	vfnmsub231ss %xmm2, %xmm1, %xmm0
 	vfnmsub231ss (%rax), %xmm1, %xmm0
+	vrsqrtss %xmm2, %xmm1, %xmm0
+	vrsqrtss (%rax), %xmm1, %xmm0
 	vdppd $0xFF, %xmm2, %xmm1, %xmm0
 	vdppd $0xFF, (%rax), %xmm1, %xmm0
 	vlddqu (%rax), %xmm0

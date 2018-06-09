@@ -1494,6 +1494,7 @@ try
     gen_Instruction2_Type11(PMOVSXWQ);
     gen_Instruction2_Type11(PMOVZXBD);
     gen_Instruction2_Type11(PMOVZXWQ);
+    gen_Instruction2_Type11(RSQRTSS);
 
     gen_Instruction2_Type12(CMPPS);
     gen_Instruction2_Type12(SHUFPS);

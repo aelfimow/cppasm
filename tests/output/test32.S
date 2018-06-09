@@ -501,6 +501,8 @@ Instruction1_Type4_Label:
 	pmovzxbd (%eax), %xmm0
 	pmovzxwq %xmm1, %xmm0
 	pmovzxwq (%eax), %xmm0
+	rsqrtss %xmm1, %xmm0
+	rsqrtss (%eax), %xmm0
 	cmpps $0xFF, %xmm1, %xmm0
 	cmpps $0xFF, (%eax), %xmm0
 	shufps $0xFF, %xmm1, %xmm0

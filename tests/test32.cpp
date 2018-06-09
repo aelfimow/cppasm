@@ -1923,6 +1923,7 @@ try
     gen_Instruction6_Type2(CMOVZ);
     gen_Instruction6_Type2(BSF);
     gen_Instruction6_Type2(BSR);
+    gen_Instruction6_Type2(POPCNT);
 
     gen_Instruction6_Type3(IN);
 

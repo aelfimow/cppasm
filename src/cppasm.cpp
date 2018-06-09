@@ -1003,6 +1003,7 @@ Instruction2_Type29 VFNMSUB231SS { asmout, "vfnmsub231ss" };
 Instruction4_Type18 VSQRTPD { asmout, "vsqrtpd" };
 Instruction4_Type18 VSQRTPS { asmout, "vsqrtps" };
 Instruction4_Type18 VRSQRTPS { asmout, "vrsqrtps" };
+Instruction2_Type29 VRSQRTSS { asmout, "vrsqrtss" };
 Instruction4_Type18 VRCPPS { asmout, "vrcpps" };
 Instruction4_Type17 VADDPD { asmout, "vaddpd" };
 Instruction4_Type17 VADDPS { asmout, "vaddps" };

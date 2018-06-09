@@ -1052,6 +1052,7 @@ extern Instruction2_Type29 VFNMSUB231SS;
 extern Instruction4_Type18 VSQRTPD;
 extern Instruction4_Type18 VSQRTPS;
 extern Instruction4_Type18 VRSQRTPS;
+extern Instruction2_Type29 VRSQRTSS;
 extern Instruction4_Type18 VRCPPS;
 extern Instruction4_Type17 VADDPD;
 extern Instruction4_Type17 VADDPS;

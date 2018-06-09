@@ -1572,6 +1572,7 @@ try
     gen_Instruction2_Type10(PTEST);
     gen_Instruction2_Type10(PCMPEQQ);
     gen_Instruction2_Type10(PACKUSDW);
+    gen_Instruction2_Type10(RSQRTPS);
 
     gen_Instruction2_Type10(SHA1MSG1);
     gen_Instruction2_Type10(SHA1MSG2);

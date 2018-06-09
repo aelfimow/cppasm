@@ -503,6 +503,8 @@ Instruction1_Type4_Label:
 	pmovzxbd (%rax), %xmm0
 	pmovzxwq %xmm1, %xmm0
 	pmovzxwq (%rax), %xmm0
+	rsqrtss %xmm1, %xmm0
+	rsqrtss (%rax), %xmm0
 	cmpps $0xFF, %xmm1, %xmm0
 	cmpps $0xFF, (%rax), %xmm0
 	shufps $0xFF, %xmm1, %xmm0

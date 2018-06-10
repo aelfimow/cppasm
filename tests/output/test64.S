@@ -1991,6 +1991,16 @@ gen_Instruction7_Type3_label:
 	push $0xAA
 	push $0xAABB
 	push %gs
+	crc32 %al, %ecx
+	crc32b (%rdx), %ecx
+	crc32 %ax, %ecx
+	crc32w (%rdx), %ecx
+	crc32 %eax, %ecx
+	crc32l (%rdx), %ecx
+	crc32 %al, %rcx
+	crc32b (%rdx), %rcx
+	crc32 %rax, %rcx
+	crc32q (%rdx), %rcx
 	bt %bx, %ax
 	bt %ax, (%rdx)
 	bt %ebx, %eax

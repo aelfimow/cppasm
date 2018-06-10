@@ -1789,6 +1789,7 @@ try
     gen_Instruction3_Type10(EXTRACTPS);
 
     gen_Instruction4_Type1(PACKSSWB);
+    gen_Instruction4_Type1(PACKUSWB);
     gen_Instruction4_Type1(PACKSSDW);
     gen_Instruction4_Type1(PUNPCKHBW);
     gen_Instruction4_Type1(PUNPCKHWD);

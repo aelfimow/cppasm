@@ -807,6 +807,10 @@ Instruction1_Type4_Label:
 	packsswb (%rax), %mm0
 	packsswb %xmm1, %xmm0
 	packsswb (%rbx), %xmm0
+	packuswb %mm1, %mm0
+	packuswb (%rax), %mm0
+	packuswb %xmm1, %xmm0
+	packuswb (%rbx), %xmm0
 	packssdw %mm1, %mm0
 	packssdw (%rax), %mm0
 	packssdw %xmm1, %xmm0

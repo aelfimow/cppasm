@@ -1590,6 +1590,26 @@ Instruction1_Type4_Label:
 	pextrw $0xFF, %xmm0, %eax
 	pextrw $0xFF, %xmm0, %rax
 	pextrw $0xFF, %xmm0, (%eax)
+	kmovb %k2, %k1
+	kmovb (%rdx), %k1
+	kmovb %k1, (%rdx)
+	kmovb %eax, %k1
+	kmovb %k2, %eax
+	kmovw %k2, %k1
+	kmovw (%rdx), %k1
+	kmovw %k1, (%rdx)
+	kmovw %eax, %k1
+	kmovw %k2, %eax
+	kmovd %k2, %k1
+	kmovd (%rdx), %k1
+	kmovd %k1, (%rdx)
+	kmovd %eax, %k1
+	kmovd %k2, %eax
+	kmovq %k2, %k1
+	kmovq (%rdx), %k1
+	kmovq %k1, (%rdx)
+	kmovq %rax, %k1
+	kmovq %k2, %rax
 	psllw %mm1, %mm0
 	psllw (%rax), %mm0
 	psllw %xmm1, %xmm0

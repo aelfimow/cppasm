@@ -236,6 +236,29 @@ Instruction1_Type4_Label:
 	kaddw %k3, %k2, %k1
 	kaddd %k3, %k2, %k1
 	kaddq %k3, %k2, %k1
+	kandb %k3, %k2, %k1
+	kandw %k3, %k2, %k1
+	kandd %k3, %k2, %k1
+	kandq %k3, %k2, %k1
+	kandnb %k3, %k2, %k1
+	kandnw %k3, %k2, %k1
+	kandnd %k3, %k2, %k1
+	kandnq %k3, %k2, %k1
+	korb %k3, %k2, %k1
+	korw %k3, %k2, %k1
+	kord %k3, %k2, %k1
+	korq %k3, %k2, %k1
+	kunpckbw %k3, %k2, %k1
+	kunpckwd %k3, %k2, %k1
+	kunpckdq %k3, %k2, %k1
+	kxnorb %k3, %k2, %k1
+	kxnorw %k3, %k2, %k1
+	kxnord %k3, %k2, %k1
+	kxnorq %k3, %k2, %k1
+	kxorb %k3, %k2, %k1
+	kxorw %k3, %k2, %k1
+	kxord %k3, %k2, %k1
+	kxorq %k3, %k2, %k1
 	aad
 	aad $0x00
 	aam

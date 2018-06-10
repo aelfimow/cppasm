@@ -231,6 +231,15 @@ extern dr DR7;
 
 extern st ST;
 
+extern opmask_reg k0;
+extern opmask_reg k1;
+extern opmask_reg k2;
+extern opmask_reg k3;
+extern opmask_reg k4;
+extern opmask_reg k5;
+extern opmask_reg k6;
+extern opmask_reg k7;
+
 // Data transfer instructions
 extern Instruction36_Type1 MOV;
 extern Instruction6_Type2 CMOVA;

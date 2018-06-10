@@ -183,6 +183,15 @@ dr DR7 { "%dr7" };
 
 st ST;
 
+opmask_reg k0 { "%k0" };
+opmask_reg k1 { "%k1" };
+opmask_reg k2 { "%k2" };
+opmask_reg k3 { "%k3" };
+opmask_reg k4 { "%k4" };
+opmask_reg k5 { "%k5" };
+opmask_reg k6 { "%k6" };
+opmask_reg k7 { "%k7" };
+
 // Data transfer instructions
 Instruction36_Type1 MOV { asmout, "mov" };
 Instruction6_Type2 CMOVA { asmout, "cmova" };

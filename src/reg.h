@@ -48,6 +48,33 @@ class reg_template : public reg
         reg_template &operator=(const reg_template &&instance) = delete;
 };
 
+class opmask_reg : public reg
+{
+    public:
+        explicit opmask_reg(const std::string &name) :
+            reg { },
+            m_name { name }
+        {
+        }
+
+        ~opmask_reg() { }
+
+        std::string name() const override
+        {
+            return m_name;
+        }
+
+    private:
+        const std::string m_name;
+
+    public:
+        opmask_reg() = delete;
+        opmask_reg(const opmask_reg &instance) = delete;
+        opmask_reg(const opmask_reg &&instance) = delete;
+        opmask_reg &operator=(const opmask_reg &instance) = delete;
+        opmask_reg &operator=(const opmask_reg &&instance) = delete;
+};
+
 using r8 = reg_template<8>;
 using r16 = reg_template<16>;
 using r32 = reg_template<32>;

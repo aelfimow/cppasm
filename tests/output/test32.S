@@ -1853,6 +1853,12 @@ gen_Instruction7_Type3_label:
 	push $0xAABB
 	push $0xAABBCCDD
 	push %gs
+	crc32 %al, %ecx
+	crc32b (%edx), %ecx
+	crc32 %ax, %ecx
+	crc32w (%edx), %ecx
+	crc32 %eax, %ecx
+	crc32l (%edx), %ecx
 	bt %bx, %ax
 	bt %ax, (%edx)
 	bt %ebx, %eax

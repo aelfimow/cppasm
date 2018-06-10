@@ -912,6 +912,19 @@ static void gen_Instruction10_Type1(Instruction10_Type1 &instr)
     instr(GS);
 }
 
+static void gen_Instruction10_Type2(Instruction10_Type2 &instr)
+{
+    m8 addr1 { EDX };
+    m16 addr2 { EDX };
+    m32 addr3 { EDX };
+    instr(ECX, AL);
+    instr(ECX, addr1);
+    instr(ECX, AX);
+    instr(ECX, addr2);
+    instr(ECX, EAX);
+    instr(ECX, addr3);
+}
+
 static void gen_Instruction12_Type1(Instruction12_Type1 &instr)
 {
     m16 addr1 { EDX };
@@ -1966,6 +1979,8 @@ try
     gen_Instruction8_Type5(VPERMILPS);
 
     gen_Instruction10_Type1(PUSH);
+
+    gen_Instruction10_Type2(CRC32);
 
     gen_Instruction12_Type1(BT);
     gen_Instruction12_Type1(BTC);

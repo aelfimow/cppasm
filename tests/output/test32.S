@@ -232,6 +232,10 @@ Instruction1_Type4_Label:
 	movntdqa (%eax), %xmm0
 	vbroadcastsd (%eax), %ymm0
 	vbroadcastf128 (%eax), %ymm0
+	kaddb %k3, %k2, %k1
+	kaddw %k3, %k2, %k1
+	kaddd %k3, %k2, %k1
+	kaddq %k3, %k2, %k1
 	aad
 	aad $0x00
 	aam

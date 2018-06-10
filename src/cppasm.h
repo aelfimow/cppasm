@@ -974,6 +974,9 @@ extern Instruction2_Type12 PCMPISTRM;
 // SSE4.2: packed comparison SIMD integer instruction
 extern Instruction2_Type10 PCMPGTQ;
 
+// SSE4.2: CRC
+extern Instruction10_Type2 CRC32;
+
 // AESNI and PCLMULQDQ
 extern Instruction2_Type10 AESDEC;
 extern Instruction2_Type10 AESDECLAST;

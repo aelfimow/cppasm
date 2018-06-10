@@ -925,6 +925,9 @@ Instruction2_Type12 PCMPISTRM { asmout, "pcmpistrm" };
 // SSE4.2: packed comparison SIMD integer instruction
 Instruction2_Type10 PCMPGTQ { asmout, "pcmpgtq" };
 
+// SSE4.2: CRC
+Instruction10_Type2 CRC32 { asmout, "crc32" };
+
 // AESNI and PCLMULQDQ
 Instruction2_Type10 AESDEC { asmout, "aesdec" };
 Instruction2_Type10 AESDECLAST { asmout, "aesdeclast" };

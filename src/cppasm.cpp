@@ -1197,6 +1197,10 @@ Instruction1_Type27 KXORB { asmout, "kxorb" };
 Instruction1_Type27 KXORW { asmout, "kxorw" };
 Instruction1_Type27 KXORD { asmout, "kxord" };
 Instruction1_Type27 KXORQ { asmout, "kxorq" };
+Instruction5_Type3 KMOVB { asmout, "kmovb" };
+Instruction5_Type4 KMOVW { asmout, "kmovw" };
+Instruction5_Type5 KMOVD { asmout, "kmovd" };
+Instruction5_Type6 KMOVQ { asmout, "kmovq" };
 
 Keyword_label label;
 keyword global { ".global" };

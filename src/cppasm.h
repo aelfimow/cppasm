@@ -1245,6 +1245,10 @@ extern Instruction1_Type27 KXORB;
 extern Instruction1_Type27 KXORW;
 extern Instruction1_Type27 KXORD;
 extern Instruction1_Type27 KXORQ;
+extern Instruction5_Type3 KMOVB;
+extern Instruction5_Type4 KMOVW;
+extern Instruction5_Type5 KMOVD;
+extern Instruction5_Type6 KMOVQ;
 
 extern keyword comment;
 extern keyword global;

@@ -1169,6 +1169,12 @@ Instruction2_Type10 SHA256MSG1 { asmout, "sha256msg1" };
 Instruction2_Type10 SHA256MSG2 { asmout, "sha256msg2" };
 Instruction2_Type38 SHA256RNDS2 { asmout, "sha256rnds2" };
 
+// OpMask instructions
+Instruction1_Type27 KADDB { asmout, "kaddb" };
+Instruction1_Type27 KADDW { asmout, "kaddw" };
+Instruction1_Type27 KADDD { asmout, "kaddd" };
+Instruction1_Type27 KADDQ { asmout, "kaddq" };
+
 Keyword_label label;
 keyword global { ".global" };
 keyword comment { "#" };

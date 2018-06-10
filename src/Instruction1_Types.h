@@ -136,4 +136,9 @@ using Instruction1_Type26 = Instruction_1
     Operands_reg_mem<ymm, m128, no_suffix>
 >;
 
+using Instruction1_Type27 = Instruction_1
+<
+    Operands_reg_reg_reg<opmask_reg, opmask_reg, opmask_reg>
+>;
+
 #endif

@@ -1217,6 +1217,12 @@ extern Instruction2_Type10 SHA256MSG1;
 extern Instruction2_Type10 SHA256MSG2;
 extern Instruction2_Type38 SHA256RNDS2;
 
+// OpMask instructions
+extern Instruction1_Type27 KADDB;
+extern Instruction1_Type27 KADDW;
+extern Instruction1_Type27 KADDD;
+extern Instruction1_Type27 KADDQ;
+
 extern keyword comment;
 extern keyword global;
 extern Keyword_label label;

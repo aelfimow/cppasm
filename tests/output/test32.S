@@ -798,6 +798,10 @@ Instruction1_Type4_Label:
 	packsswb (%eax), %mm0
 	packsswb %xmm1, %xmm0
 	packsswb (%ebx), %xmm0
+	packuswb %mm1, %mm0
+	packuswb (%eax), %mm0
+	packuswb %xmm1, %xmm0
+	packuswb (%ebx), %xmm0
 	packssdw %mm1, %mm0
 	packssdw (%eax), %mm0
 	packssdw %xmm1, %xmm0

@@ -1541,6 +1541,21 @@ Instruction1_Type4_Label:
 	pextrw $0xFF, %mm0, %eax
 	pextrw $0xFF, %xmm0, %eax
 	pextrw $0xFF, %xmm0, (%eax)
+	kmovb %k2, %k1
+	kmovb (%edx), %k1
+	kmovb %k1, (%edx)
+	kmovb %eax, %k1
+	kmovb %k2, %eax
+	kmovw %k2, %k1
+	kmovw (%edx), %k1
+	kmovw %k1, (%edx)
+	kmovw %eax, %k1
+	kmovw %k2, %eax
+	kmovd %k2, %k1
+	kmovd (%edx), %k1
+	kmovd %k1, (%edx)
+	kmovd %eax, %k1
+	kmovd %k2, %eax
 	psllw %mm1, %mm0
 	psllw (%eax), %mm0
 	psllw %xmm1, %xmm0

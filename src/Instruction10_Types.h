@@ -20,4 +20,16 @@ using Instruction10_Type1 = Instruction_10
     Operands_reg<Sreg>
 >;
 
+using Instruction10_Type2 = Instruction_10
+<
+    Operands_reg_reg<r32, r8>,
+    Operands_reg_mem<r32, m8>,
+    Operands_reg_reg<r32, r16>,
+    Operands_reg_mem<r32, m16>,
+    Operands_reg_reg<r32, r32>,
+    Operands_reg_mem<r32, m32>,
+    Operands_reg_reg<r32, r64>,
+    Operands_reg_mem<r32, m64>
+>;
+
 #endif

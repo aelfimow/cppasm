@@ -610,6 +610,7 @@ extern Instruction8_Type2 MOVQ;
 
 // MMX conversion instructions
 extern Instruction4_Type1 PACKSSWB;
+extern Instruction4_Type1 PACKUSWB;
 extern Instruction4_Type1 PACKSSDW;
 extern Instruction4_Type1 PUNPCKHBW;
 extern Instruction4_Type1 PUNPCKHWD;

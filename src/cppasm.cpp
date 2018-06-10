@@ -562,6 +562,7 @@ Instruction8_Type2 MOVQ { asmout, "movq" };
 
 // MMX conversion instructions
 Instruction4_Type1 PACKSSWB  { asmout, "packsswb" };
+Instruction4_Type1 PACKUSWB  { asmout, "packuswb" };
 Instruction4_Type1 PACKSSDW  { asmout, "packssdw" };
 Instruction4_Type1 PUNPCKHBW { asmout, "punpckhbw" };
 Instruction4_Type1 PUNPCKHWD { asmout, "punpckhwd" };

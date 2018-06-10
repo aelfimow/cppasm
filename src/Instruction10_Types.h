@@ -22,14 +22,16 @@ using Instruction10_Type1 = Instruction_10
 
 using Instruction10_Type2 = Instruction_10
 <
-    Operands_reg_reg<r32, r8>,
-    Operands_reg_mem<r32, m8>,
-    Operands_reg_reg<r32, r16>,
-    Operands_reg_mem<r32, m16>,
-    Operands_reg_reg<r32, r32>,
-    Operands_reg_mem<r32, m32>,
-    Operands_reg_reg<r32, r64>,
-    Operands_reg_mem<r32, m64>
+    Operands_reg_reg<r32, r8, no_suffix>,
+    Operands_reg_mem<r32, m8, suffix_m8>,
+    Operands_reg_reg<r32, r16, no_suffix>,
+    Operands_reg_mem<r32, m16, suffix_m16>,
+    Operands_reg_reg<r32, r32, no_suffix>,
+    Operands_reg_mem<r32, m32, suffix_m32>,
+    Operands_reg_reg<r64, r8, no_suffix>,
+    Operands_reg_mem<r64, m8, suffix_m8>,
+    Operands_reg_reg<r64, r64, no_suffix>,
+    Operands_reg_mem<r64, m64, suffix_m64>
 >;
 
 #endif

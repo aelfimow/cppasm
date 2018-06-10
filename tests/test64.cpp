@@ -178,6 +178,11 @@ static void gen_Instruction1_Type26(Instruction1_Type26 &instr)
     instr(YMM0, addr);
 }
 
+static void gen_Instruction1_Type27(Instruction1_Type27 &instr)
+{
+    instr(k1, k2, k3);
+}
+
 static void gen_Instruction2_Type2(Instruction2_Type2 &instr)
 {
     imm16 value { 65535 };
@@ -1468,6 +1473,11 @@ try
     gen_Instruction1_Type25(VBROADCASTSD);
 
     gen_Instruction1_Type26(VBROADCASTF128);
+
+    gen_Instruction1_Type27(KADDB);
+    gen_Instruction1_Type27(KADDW);
+    gen_Instruction1_Type27(KADDD);
+    gen_Instruction1_Type27(KADDQ);
 
     gen_Instruction2_Type2(RET);
     gen_Instruction2_Type2(RET_FAR);

@@ -233,6 +233,10 @@ Instruction1_Type4_Label:
 	movntdqa (%rax), %xmm0
 	vbroadcastsd (%rax), %ymm0
 	vbroadcastf128 (%rax), %ymm0
+	kaddb %k3, %k2, %k1
+	kaddw %k3, %k2, %k1
+	kaddd %k3, %k2, %k1
+	kaddq %k3, %k2, %k1
 	ret
 	ret $0xFFFF
 	lret

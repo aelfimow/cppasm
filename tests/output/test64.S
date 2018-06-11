@@ -260,6 +260,18 @@ Instruction1_Type4_Label:
 	kxorw %k3, %k2, %k1
 	kxord %k3, %k2, %k1
 	kxorq %k3, %k2, %k1
+	knotb %k2, %k1
+	knotw %k2, %k1
+	knotd %k2, %k1
+	knotq %k2, %k1
+	kortestb %k2, %k1
+	kortestw %k2, %k1
+	kortestd %k2, %k1
+	kortestq %k2, %k1
+	ktestb %k2, %k1
+	ktestw %k2, %k1
+	ktestd %k2, %k1
+	ktestq %k2, %k1
 	ret
 	ret $0xFFFF
 	lret

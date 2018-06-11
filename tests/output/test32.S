@@ -271,6 +271,14 @@ Instruction1_Type4_Label:
 	ktestw %k2, %k1
 	ktestd %k2, %k1
 	ktestq %k2, %k1
+	kshiftlb $0x00, %k2, %k1
+	kshiftlw $0x00, %k2, %k1
+	kshiftld $0x00, %k2, %k1
+	kshiftlq $0x00, %k2, %k1
+	kshiftrb $0x00, %k2, %k1
+	kshiftrw $0x00, %k2, %k1
+	kshiftrd $0x00, %k2, %k1
+	kshiftrq $0x00, %k2, %k1
 	aad
 	aad $0x00
 	aam

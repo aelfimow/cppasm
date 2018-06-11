@@ -1261,6 +1261,14 @@ extern Instruction1_Type28 KTESTB;
 extern Instruction1_Type28 KTESTW;
 extern Instruction1_Type28 KTESTD;
 extern Instruction1_Type28 KTESTQ;
+extern Instruction1_Type29 KSHIFTLB;
+extern Instruction1_Type29 KSHIFTLW;
+extern Instruction1_Type29 KSHIFTLD;
+extern Instruction1_Type29 KSHIFTLQ;
+extern Instruction1_Type29 KSHIFTRB;
+extern Instruction1_Type29 KSHIFTRW;
+extern Instruction1_Type29 KSHIFTRD;
+extern Instruction1_Type29 KSHIFTRQ;
 
 extern keyword comment;
 extern keyword global;

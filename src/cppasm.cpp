@@ -1213,6 +1213,14 @@ Instruction1_Type28 KTESTB { asmout, "ktestb" };
 Instruction1_Type28 KTESTW { asmout, "ktestw" };
 Instruction1_Type28 KTESTD { asmout, "ktestd" };
 Instruction1_Type28 KTESTQ { asmout, "ktestq" };
+Instruction1_Type29 KSHIFTLB { asmout, "kshiftlb" };
+Instruction1_Type29 KSHIFTLW { asmout, "kshiftlw" };
+Instruction1_Type29 KSHIFTLD { asmout, "kshiftld" };
+Instruction1_Type29 KSHIFTLQ { asmout, "kshiftlq" };
+Instruction1_Type29 KSHIFTRB { asmout, "kshiftrb" };
+Instruction1_Type29 KSHIFTRW { asmout, "kshiftrw" };
+Instruction1_Type29 KSHIFTRD { asmout, "kshiftrd" };
+Instruction1_Type29 KSHIFTRQ { asmout, "kshiftrq" };
 
 Keyword_label label;
 keyword global { ".global" };

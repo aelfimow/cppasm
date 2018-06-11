@@ -1249,6 +1249,18 @@ extern Instruction5_Type3 KMOVB;
 extern Instruction5_Type4 KMOVW;
 extern Instruction5_Type5 KMOVD;
 extern Instruction5_Type6 KMOVQ;
+extern Instruction1_Type28 KNOTB;
+extern Instruction1_Type28 KNOTW;
+extern Instruction1_Type28 KNOTD;
+extern Instruction1_Type28 KNOTQ;
+extern Instruction1_Type28 KORTESTB;
+extern Instruction1_Type28 KORTESTW;
+extern Instruction1_Type28 KORTESTD;
+extern Instruction1_Type28 KORTESTQ;
+extern Instruction1_Type28 KTESTB;
+extern Instruction1_Type28 KTESTW;
+extern Instruction1_Type28 KTESTD;
+extern Instruction1_Type28 KTESTQ;
 
 extern keyword comment;
 extern keyword global;

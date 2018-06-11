@@ -141,4 +141,9 @@ using Instruction1_Type27 = Instruction_1
     Operands_reg_reg_reg<opmask_reg, opmask_reg, opmask_reg>
 >;
 
+using Instruction1_Type28 = Instruction_1
+<
+    Operands_reg_reg<opmask_reg, opmask_reg, no_suffix>
+>;
+
 #endif

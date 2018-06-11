@@ -1201,6 +1201,18 @@ Instruction5_Type3 KMOVB { asmout, "kmovb" };
 Instruction5_Type4 KMOVW { asmout, "kmovw" };
 Instruction5_Type5 KMOVD { asmout, "kmovd" };
 Instruction5_Type6 KMOVQ { asmout, "kmovq" };
+Instruction1_Type28 KNOTB { asmout, "knotb" };
+Instruction1_Type28 KNOTW { asmout, "knotw" };
+Instruction1_Type28 KNOTD { asmout, "knotd" };
+Instruction1_Type28 KNOTQ { asmout, "knotq" };
+Instruction1_Type28 KORTESTB { asmout, "kortestb" };
+Instruction1_Type28 KORTESTW { asmout, "kortestw" };
+Instruction1_Type28 KORTESTD { asmout, "kortestd" };
+Instruction1_Type28 KORTESTQ { asmout, "kortestq" };
+Instruction1_Type28 KTESTB { asmout, "ktestb" };
+Instruction1_Type28 KTESTW { asmout, "ktestw" };
+Instruction1_Type28 KTESTD { asmout, "ktestd" };
+Instruction1_Type28 KTESTQ { asmout, "ktestq" };
 
 Keyword_label label;
 keyword global { ".global" };

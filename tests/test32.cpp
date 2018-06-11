@@ -176,6 +176,11 @@ static void gen_Instruction1_Type27(Instruction1_Type27 &instr)
     instr(k1, k2, k3);
 }
 
+static void gen_Instruction1_Type28(Instruction1_Type28 &instr)
+{
+    instr(k1, k2);
+}
+
 static void gen_Instruction2_Type1(Instruction2_Type1 &instr)
 {
     imm8 value { 0 };
@@ -1420,6 +1425,19 @@ try
     gen_Instruction1_Type27(KXORW);
     gen_Instruction1_Type27(KXORD);
     gen_Instruction1_Type27(KXORQ);
+
+    gen_Instruction1_Type28(KNOTB);
+    gen_Instruction1_Type28(KNOTW);
+    gen_Instruction1_Type28(KNOTD);
+    gen_Instruction1_Type28(KNOTQ);
+    gen_Instruction1_Type28(KORTESTB);
+    gen_Instruction1_Type28(KORTESTW);
+    gen_Instruction1_Type28(KORTESTD);
+    gen_Instruction1_Type28(KORTESTQ);
+    gen_Instruction1_Type28(KTESTB);
+    gen_Instruction1_Type28(KTESTW);
+    gen_Instruction1_Type28(KTESTD);
+    gen_Instruction1_Type28(KTESTQ);
 
     gen_Instruction2_Type1(AAD);
     gen_Instruction2_Type1(AAM);

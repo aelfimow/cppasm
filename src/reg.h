@@ -43,7 +43,7 @@ class evex_z: public reg
         {
             if (m_p == nullptr)
             {
-                m_p = new T { name() };
+                m_p = new T { m_name };
             }
 
             return *m_p;
@@ -98,7 +98,7 @@ class opmask_reg_template : public reg
         {
             if (m_p == nullptr)
             {
-                m_p = new T { name() };
+                m_p = new T { m_name };
             }
 
             return *m_p;

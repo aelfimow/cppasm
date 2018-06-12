@@ -121,6 +121,9 @@ template
 class reg_template : public reg
 {
     public:
+        using reg_template_type = reg_template<bit_width>;
+
+    public:
         explicit reg_template(const std::string &name) :
             reg { },
             k0 { name, "{%k0}" },
@@ -131,6 +134,7 @@ class reg_template : public reg
             k5 { name, "{%k5}" },
             k6 { name, "{%k6}" },
             k7 { name, "{%k7}" },
+            z { name, "{z}" },
             m_name { name },
             m_bit_width { bit_width }
         {
@@ -144,7 +148,6 @@ class reg_template : public reg
         }
 
     public:
-        using reg_template_type = reg_template<bit_width>;
         opmask_reg_template<reg_template_type> k0;
         opmask_reg_template<reg_template_type> k1;
         opmask_reg_template<reg_template_type> k2;
@@ -153,6 +156,8 @@ class reg_template : public reg
         opmask_reg_template<reg_template_type> k5;
         opmask_reg_template<reg_template_type> k6;
         opmask_reg_template<reg_template_type> k7;
+
+        evex_z<reg_template_type> z;
 
     private:
         const std::string m_name;

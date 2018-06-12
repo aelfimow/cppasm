@@ -19,6 +19,52 @@ template
 <
     class T
 >
+class evex_z: public reg
+{
+    public:
+        explicit evex_z(const std::string &base_name, const std::string &name) :
+            reg { },
+            m_name { base_name + name },
+            m_p { nullptr }
+        {
+        }
+
+        ~evex_z()
+        {
+            delete m_p;
+        }
+
+        std::string name() const override
+        {
+            return m_name;
+        }
+
+        operator T&()
+        {
+            if (m_p == nullptr)
+            {
+                m_p = new T { name() };
+            }
+
+            return *m_p;
+        }
+
+    private:
+        const std::string m_name;
+        T *m_p;
+
+    public:
+        evex_z() = delete;
+        evex_z(const evex_z &instance) = delete;
+        evex_z(const evex_z &&instance) = delete;
+        evex_z &operator=(const evex_z &instance) = delete;
+        evex_z &operator=(const evex_z &&instance) = delete;
+};
+
+template
+<
+    class T
+>
 class opmask_reg_template : public reg
 {
     public:

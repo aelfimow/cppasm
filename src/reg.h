@@ -98,14 +98,15 @@ class reg_template : public reg
         }
 
     public:
-        opmask_reg_template<reg_template<bit_width>> k0;
-        opmask_reg_template<reg_template<bit_width>> k1;
-        opmask_reg_template<reg_template<bit_width>> k2;
-        opmask_reg_template<reg_template<bit_width>> k3;
-        opmask_reg_template<reg_template<bit_width>> k4;
-        opmask_reg_template<reg_template<bit_width>> k5;
-        opmask_reg_template<reg_template<bit_width>> k6;
-        opmask_reg_template<reg_template<bit_width>> k7;
+        using reg_template_type = reg_template<bit_width>;
+        opmask_reg_template<reg_template_type> k0;
+        opmask_reg_template<reg_template_type> k1;
+        opmask_reg_template<reg_template_type> k2;
+        opmask_reg_template<reg_template_type> k3;
+        opmask_reg_template<reg_template_type> k4;
+        opmask_reg_template<reg_template_type> k5;
+        opmask_reg_template<reg_template_type> k6;
+        opmask_reg_template<reg_template_type> k7;
 
     private:
         const std::string m_name;

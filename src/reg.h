@@ -55,6 +55,14 @@ class reg_template : public reg
     public:
         explicit reg_template(const std::string &name) :
             reg { },
+            k0 { "%k0" },
+            k1 { "%k1" },
+            k2 { "%k2" },
+            k3 { "%k3" },
+            k4 { "%k4" },
+            k5 { "%k5" },
+            k6 { "%k6" },
+            k7 { "%k7" },
             m_name { name },
             m_bit_width { bit_width }
         {
@@ -66,6 +74,16 @@ class reg_template : public reg
         {
             return m_name;
         }
+
+    public:
+        opmask_reg_template<reg_template<bit_width>> k0;
+        opmask_reg_template<reg_template<bit_width>> k1;
+        opmask_reg_template<reg_template<bit_width>> k2;
+        opmask_reg_template<reg_template<bit_width>> k3;
+        opmask_reg_template<reg_template<bit_width>> k4;
+        opmask_reg_template<reg_template<bit_width>> k5;
+        opmask_reg_template<reg_template<bit_width>> k6;
+        opmask_reg_template<reg_template<bit_width>> k7;
 
     private:
         const std::string m_name;

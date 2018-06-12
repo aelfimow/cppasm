@@ -24,7 +24,15 @@ class opmask_reg_template : public reg
     public:
         explicit opmask_reg_template(const std::string &name) :
             reg { },
-            m_name { name }
+            m_name { name },
+            m_base_reg { }
+        {
+        }
+
+        explicit opmask_reg_template(const std::string &base_reg, const std::string &name) :
+            reg { },
+            m_name { name },
+            m_base_reg { base_reg }
         {
         }
 
@@ -32,11 +40,21 @@ class opmask_reg_template : public reg
 
         std::string name() const override
         {
+            if (0 != m_base_reg.length())
+            {
+                std::string str { m_base_reg };
+
+                str.append(m_name);
+
+                return str;
+            }
+
             return m_name;
         }
 
     private:
         const std::string m_name;
+        const std::string m_base_reg;
 
     public:
         opmask_reg_template() = delete;
@@ -55,14 +73,14 @@ class reg_template : public reg
     public:
         explicit reg_template(const std::string &name) :
             reg { },
-            k0 { "%k0" },
-            k1 { "%k1" },
-            k2 { "%k2" },
-            k3 { "%k3" },
-            k4 { "%k4" },
-            k5 { "%k5" },
-            k6 { "%k6" },
-            k7 { "%k7" },
+            k0 { name, "{%k0}" },
+            k1 { name, "{%k1}" },
+            k2 { name, "{%k2}" },
+            k3 { name, "{%k3}" },
+            k4 { name, "{%k4}" },
+            k5 { name, "{%k5}" },
+            k6 { name, "{%k6}" },
+            k7 { name, "{%k7}" },
             m_name { name },
             m_bit_width { bit_width }
         {

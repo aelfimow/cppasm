@@ -25,26 +25,29 @@ class opmask_reg_template : public reg
         explicit opmask_reg_template(const std::string &name) :
             reg { },
             m_name { name },
-            m_base_reg { }
+            m_base_name { },
+            m_p { nullptr }
         {
         }
 
-        explicit opmask_reg_template(const std::string &base_reg, const std::string &name) :
+        explicit opmask_reg_template(const std::string &base_name, const std::string &name) :
             reg { },
             m_name { name },
-            m_base_reg { base_reg }
+            m_base_name { base_name },
+            m_p { nullptr }
         {
         }
 
-        ~opmask_reg_template() { }
+        ~opmask_reg_template()
+        {
+            delete m_p;
+        }
 
         std::string name() const override
         {
-            if (0 != m_base_reg.length())
+            if (0 != m_base_name.length())
             {
-                std::string str { m_base_reg };
-
-                str.append(m_name);
+                const std::string str = m_base_name + m_name;
 
                 return str;
             }
@@ -52,9 +55,20 @@ class opmask_reg_template : public reg
             return m_name;
         }
 
+        operator T&()
+        {
+            if (m_p == nullptr)
+            {
+                m_p = new T { name() };
+            }
+
+            return *m_p;
+        }
+
     private:
         const std::string m_name;
-        const std::string m_base_reg;
+        const std::string m_base_name;
+        T *m_p;
 
     public:
         opmask_reg_template() = delete;
@@ -122,6 +136,6 @@ using r64 = reg_template<64>;
 using xmm = reg_template<128>;
 using ymm = reg_template<256>;
 using zmm = reg_template<512>;
-using opmask_reg = opmask_reg_template<void>;
+using opmask_reg = opmask_reg_template<std::string>;
 
 #endif

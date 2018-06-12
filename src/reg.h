@@ -70,6 +70,7 @@ class opmask_reg_template : public reg
     public:
         explicit opmask_reg_template(const std::string &name) :
             reg { },
+            z { name, "{z}" },
             m_name { name },
             m_p { nullptr }
         {
@@ -77,6 +78,7 @@ class opmask_reg_template : public reg
 
         explicit opmask_reg_template(const std::string &base_name, const std::string &name) :
             reg { },
+            z { base_name + name, "{z}" },
             m_name { base_name + name },
             m_p { nullptr }
         {
@@ -101,6 +103,9 @@ class opmask_reg_template : public reg
 
             return *m_p;
         }
+
+    public:
+        evex_z<T> z;
 
     private:
         const std::string m_name;

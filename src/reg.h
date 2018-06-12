@@ -25,15 +25,13 @@ class opmask_reg_template : public reg
         explicit opmask_reg_template(const std::string &name) :
             reg { },
             m_name { name },
-            m_base_name { },
             m_p { nullptr }
         {
         }
 
         explicit opmask_reg_template(const std::string &base_name, const std::string &name) :
             reg { },
-            m_name { name },
-            m_base_name { base_name },
+            m_name { base_name + name },
             m_p { nullptr }
         {
         }
@@ -45,13 +43,6 @@ class opmask_reg_template : public reg
 
         std::string name() const override
         {
-            if (0 != m_base_name.length())
-            {
-                const std::string str = m_base_name + m_name;
-
-                return str;
-            }
-
             return m_name;
         }
 
@@ -67,7 +58,6 @@ class opmask_reg_template : public reg
 
     private:
         const std::string m_name;
-        const std::string m_base_name;
         T *m_p;
 
     public:

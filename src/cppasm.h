@@ -30,7 +30,6 @@ extern const std::string suffix_m64int;
 #include "asmstream.h"
 #include "reg.h"
 #include "imm.h"
-#include "Sreg.h"
 #include "m.h"
 #include "cr.h"
 #include "dr.h"

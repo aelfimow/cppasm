@@ -13,7 +13,8 @@ enum RegisterType
     XMM_REG,
     YMM_REG,
     ZMM_REG,
-    SEGMENT_REG
+    SEGMENT_REG,
+    DEBUG_REG
 };
 
 class reg
@@ -199,5 +200,6 @@ using zmm = reg_template<ZMM_REG, 512>;
 using opmask_reg = opmask_reg_template<std::string>;
 using mm = reg_template<MMX_REG, 64>;
 using Sreg = reg_template<SEGMENT_REG, 16>;
+using dr = reg_template<DEBUG_REG, 64>;
 
 #endif

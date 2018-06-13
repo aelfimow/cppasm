@@ -119,7 +119,6 @@
     <ClCompile Include="..\..\src\asmstream.cpp" />
     <ClCompile Include="..\..\src\cppasm.cpp" />
     <ClCompile Include="..\..\src\cr.cpp" />
-    <ClCompile Include="..\..\src\dr.cpp" />
     <ClCompile Include="..\..\src\Instruction.cpp" />
     <ClCompile Include="..\..\src\keyword.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
@@ -131,7 +130,6 @@
     <ClInclude Include="..\..\src\asmstream.h" />
     <ClInclude Include="..\..\src\cppasm.h" />
     <ClInclude Include="..\..\src\cr.h" />
-    <ClInclude Include="..\..\src\dr.h" />
     <ClInclude Include="..\..\src\imm.h" />
     <ClInclude Include="..\..\src\Instruction.h" />
     <ClInclude Include="..\..\src\Instruction10_Types.h" />

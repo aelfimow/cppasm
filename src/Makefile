@@ -11,7 +11,6 @@ all:
 	${CXX} -c asmstream.cpp -o ${OBJDIR}/asmstream.o ${CXXFLAGS}
 	${CXX} -c cppasm.cpp -o ${OBJDIR}/cppasm.o ${CXXFLAGS}
 	${CXX} -c cr.cpp -o ${OBJDIR}/cr.o ${CXXFLAGS}
-	${CXX} -c dr.cpp -o ${OBJDIR}/dr.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	${CXX} -c keyword.cpp -o ${OBJDIR}/keyword.o ${CXXFLAGS}
 	${CXX} -c label.cpp -o ${OBJDIR}/label.o ${CXXFLAGS}

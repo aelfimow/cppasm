@@ -31,7 +31,6 @@ extern const std::string suffix_m64int;
 #include "reg.h"
 #include "imm.h"
 #include "m.h"
-#include "cr.h"
 #include "st.h"
 #include "keyword.h"
 #include "label.h"

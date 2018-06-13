@@ -6,6 +6,16 @@
 #else
 #define REG_H
 
+enum RegisterType
+{
+    GENERAL_PURPOSE_REG,
+    MMX_REG,
+    XMM_REG,
+    YMM_REG,
+    ZMM_REG,
+    SREG_REG
+};
+
 class reg
 {
     public:
@@ -121,12 +131,13 @@ class opmask_reg_template : public reg
 
 template
 <
+    enum RegisterType reg_type,
     int bit_width
 >
 class reg_template : public reg
 {
     public:
-        using reg_template_type = reg_template<bit_width>;
+        using reg_template_type = reg_template<reg_type, bit_width>;
 
     public:
         explicit reg_template(const std::string &name) :
@@ -141,6 +152,7 @@ class reg_template : public reg
             k7 { name, "{%k7}" },
             z { name, "{z}" },
             m_name { name },
+            m_reg_type { reg_type },
             m_bit_width { bit_width }
         {
         }
@@ -166,6 +178,7 @@ class reg_template : public reg
 
     private:
         const std::string m_name;
+        const enum RegisterType m_reg_type;
         const int m_bit_width;
 
     public:
@@ -176,13 +189,14 @@ class reg_template : public reg
         reg_template &operator=(const reg_template &&instance) = delete;
 };
 
-using r8 = reg_template<8>;
-using r16 = reg_template<16>;
-using r32 = reg_template<32>;
-using r64 = reg_template<64>;
-using xmm = reg_template<128>;
-using ymm = reg_template<256>;
-using zmm = reg_template<512>;
+using r8 = reg_template<GENERAL_PURPOSE_REG, 8>;
+using r16 = reg_template<GENERAL_PURPOSE_REG, 16>;
+using r32 = reg_template<GENERAL_PURPOSE_REG, 32>;
+using r64 = reg_template<GENERAL_PURPOSE_REG, 64>;
+using xmm = reg_template<XMM_REG, 128>;
+using ymm = reg_template<YMM_REG, 256>;
+using zmm = reg_template<ZMM_REG, 512>;
 using opmask_reg = opmask_reg_template<std::string>;
+using mm = reg_template<MMX_REG, 64>;
 
 #endif

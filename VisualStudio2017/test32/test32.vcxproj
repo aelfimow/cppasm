@@ -124,7 +124,6 @@
     <ClCompile Include="..\..\src\keyword.cpp" />
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
-    <ClCompile Include="..\..\src\Sreg.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\tests\test32.cpp" />
   </ItemGroup>
@@ -155,7 +154,6 @@
     <ClInclude Include="..\..\src\Operands_x.h" />
     <ClInclude Include="..\..\src\reg.h" />
     <ClInclude Include="..\..\src\section.h" />
-    <ClInclude Include="..\..\src\Sreg.h" />
     <ClInclude Include="..\..\src\st.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

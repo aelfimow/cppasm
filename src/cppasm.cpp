@@ -560,6 +560,8 @@ Instruction1_Type2 FRSTOR { asmout, "frstor" };
 Instruction2_Type6 FSTSW { asmout, "fstsw" };
 Instruction2_Type6 FNSTSW { asmout, "fnstsw" };
 Instruction1_Type1 FNOP { asmout, "fnop" };
+Instruction1_Type1 FWAIT { asmout, "fwait" };
+Instruction1_Type1 WAIT { asmout, "wait" };
 
 // x87 FPU and SIMD state management instructions
 Instruction1_Type2 FXSAVE { asmout, "fxsave" };

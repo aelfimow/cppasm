@@ -604,6 +604,8 @@ extern Instruction1_Type2 FRSTOR;
 extern Instruction2_Type6 FSTSW;
 extern Instruction2_Type6 FNSTSW;
 extern Instruction1_Type1 FNOP;
+extern Instruction1_Type1 FWAIT;
+extern Instruction1_Type1 WAIT;
 
 // x87 FPU and SIMD state management instructions
 extern Instruction1_Type2 FXSAVE;

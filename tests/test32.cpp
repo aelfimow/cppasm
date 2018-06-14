@@ -1232,6 +1232,8 @@ try
     gen_Instruction1_Type1(FCLEX);
     gen_Instruction1_Type1(FNCLEX);
     gen_Instruction1_Type1(FNOP);
+    gen_Instruction1_Type1(FWAIT);
+    gen_Instruction1_Type1(WAIT);
     gen_Instruction1_Type1(EMMS);
     gen_Instruction1_Type1(SFENCE);
     gen_Instruction1_Type1(LFENCE);

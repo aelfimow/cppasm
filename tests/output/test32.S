@@ -86,6 +86,8 @@
 	fclex
 	fnclex
 	fnop
+	fwait
+	wait
 	emms
 	sfence
 	lfence

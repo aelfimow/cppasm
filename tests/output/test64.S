@@ -114,6 +114,11 @@
 	sysret
 	xend
 	xtest
+	vmcall
+	vmfunc
+	vmlaunch
+	vmresume
+	vmxoff
 	clflush (%rax)
 	clflushopt (%rax)
 	xsave (%rax)

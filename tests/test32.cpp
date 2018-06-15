@@ -1270,6 +1270,12 @@ try
     gen_Instruction1_Type1(XEND);
     gen_Instruction1_Type1(XTEST);
 
+    gen_Instruction1_Type1(VMCALL);
+    gen_Instruction1_Type1(VMFUNC);
+    gen_Instruction1_Type1(VMLAUNCH);
+    gen_Instruction1_Type1(VMRESUME);
+    gen_Instruction1_Type1(VMXOFF);
+
     gen_Instruction1_Type2(CLFLUSH);
     gen_Instruction1_Type2(CLFLUSHOPT);
     gen_Instruction1_Type2(XSAVE);

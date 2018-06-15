@@ -774,6 +774,8 @@ Instruction1_Type4_Label:
 	pextrd $0xFF, %xmm0, (%rax)
 	sha256rnds2 %xmm0, %xmm1, %xmm2
 	sha256rnds2 %xmm0, (%rdx), %xmm1
+	invept (%rbx), %rax
+	invvpid (%rbx), %rax
 	lfs (%rax), %ax
 	lfs (%rax), %eax
 	lfs (%rax), %rax

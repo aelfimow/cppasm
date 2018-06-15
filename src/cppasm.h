@@ -1271,11 +1271,11 @@ extern Instruction1_Type29 KSHIFTRQ;
 // VMX instructions
 extern Instruction2_Type39 INVEPT;
 extern Instruction2_Type39 INVVPID;
-extern Instruction5_Type1 VMCALL;
-extern Instruction5_Type1 VMFUNC;
-extern Instruction5_Type1 VMLAUNCH;
-extern Instruction5_Type1 VMRESUME;
-extern Instruction5_Type1 VMXOFF;
+extern Instruction1_Type1 VMCALL;
+extern Instruction1_Type1 VMFUNC;
+extern Instruction1_Type1 VMLAUNCH;
+extern Instruction1_Type1 VMRESUME;
+extern Instruction1_Type1 VMXOFF;
 
 extern keyword comment;
 extern keyword global;

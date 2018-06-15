@@ -234,4 +234,10 @@ using Instruction2_Type38 = Instruction_2
     Operands_reg_mem_reg<xmm, m128, xmm>
 >;
 
+using Instruction2_Type39 = Instruction_2
+<
+    Operands_reg_mem<r32, m128, no_suffix>,
+    Operands_reg_mem<r64, m128, no_suffix>
+>;
+
 #endif

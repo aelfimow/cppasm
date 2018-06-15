@@ -1225,8 +1225,8 @@ Instruction1_Type29 KSHIFTRD { asmout, "kshiftrd" };
 Instruction1_Type29 KSHIFTRQ { asmout, "kshiftrq" };
 
 // VMX instructions
-Instruction1_Type30 INVEPT { asmout, "invept" };
-Instruction1_Type30 INVVPID { asmout, "invvpid" };
+Instruction2_Type39 INVEPT { asmout, "invept" };
+Instruction2_Type39 INVVPID { asmout, "invvpid" };
 
 Keyword_label label;
 keyword global { ".global" };

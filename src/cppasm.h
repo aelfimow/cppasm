@@ -1269,8 +1269,8 @@ extern Instruction1_Type29 KSHIFTRD;
 extern Instruction1_Type29 KSHIFTRQ;
 
 // VMX instructions
-extern Instruction1_Type30 INVEPT;
-extern Instruction1_Type30 INVVPID;
+extern Instruction2_Type39 INVEPT;
+extern Instruction2_Type39 INVVPID;
 
 extern keyword comment;
 extern keyword global;

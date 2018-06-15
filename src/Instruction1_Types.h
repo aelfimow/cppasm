@@ -151,9 +151,4 @@ using Instruction1_Type29 = Instruction_1
     Operands_reg_reg_imm<opmask_reg, opmask_reg, imm8>
 >;
 
-using Instruction1_Type30 = Instruction_1
-<
-    Operands_reg_mem<r64, m128, no_suffix>
->;
-
 #endif

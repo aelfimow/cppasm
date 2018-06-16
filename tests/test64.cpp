@@ -793,6 +793,20 @@ static void gen_Instruction4_Type25(Instruction4_Type25 &instr)
     instr(XMM0, XMM1, addr2);
 }
 
+static void gen_Instruction4_Type26(Instruction4_Type26 &instr)
+{
+    m64 addr2 { RDX };
+    instr(RAX, RBX);
+    instr(addr2, RBX);
+}
+
+static void gen_Instruction4_Type27(Instruction4_Type27 &instr)
+{
+    m64 addr2 { RDX };
+    instr(RAX, RBX);
+    instr(RBX, addr2);
+}
+
 static void gen_Instruction5_Type1(Instruction5_Type1 &instr)
 {
     m16 addr1 { RAX };
@@ -2135,6 +2149,10 @@ try
 
     gen_Instruction4_Type25(VCVTSI2SS);
     gen_Instruction4_Type25(VCVTSI2SD);
+
+    gen_Instruction4_Type26(VMREAD);
+
+    gen_Instruction4_Type27(VMWRITE);
 
     gen_Instruction5_Type1(NOP);
 

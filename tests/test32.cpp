@@ -749,6 +749,20 @@ static void gen_Instruction4_Type25(Instruction4_Type25 &instr)
     instr(XMM0, XMM1, addr);
 }
 
+static void gen_Instruction4_Type26(Instruction4_Type26 &instr)
+{
+    m32 addr { EDX };
+    instr(EAX, EBX);
+    instr(addr, EBX);
+}
+
+static void gen_Instruction4_Type27(Instruction4_Type27 &instr)
+{
+    m32 addr { EDX };
+    instr(EAX, EBX);
+    instr(EBX, addr);
+}
+
 static void gen_Instruction5_Type1(Instruction5_Type1 &instr)
 {
     m16 addr1 { EAX };
@@ -2015,6 +2029,10 @@ try
 
     gen_Instruction4_Type25(VCVTSI2SS);
     gen_Instruction4_Type25(VCVTSI2SD);
+
+    gen_Instruction4_Type26(VMREAD);
+
+    gen_Instruction4_Type27(VMWRITE);
 
     gen_Instruction5_Type1(NOP);
 

@@ -1565,6 +1565,10 @@ Instruction1_Type4_Label:
 	vcvtsi2ss (%eax), %xmm1, %xmm0
 	vcvtsi2sd %eax, %xmm1, %xmm0
 	vcvtsi2sd (%eax), %xmm1, %xmm0
+	vmread %ebx, %eax
+	vmread %ebx, (%edx)
+	vmwrite %ebx, %eax
+	vmwrite (%edx), %ebx
 	nop
 	nop %ax
 	nopw (%eax)

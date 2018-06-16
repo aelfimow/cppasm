@@ -467,6 +467,14 @@ static void gen_Instruction2_Type39(Instruction2_Type39 &instr)
     instr(RAX, addr);
 }
 
+static void gen_Instruction2_Type40(Instruction2_Type40 &instr)
+{
+    m32 addr1 { EBX };
+    m64 addr2 { RBX };
+    instr(addr1);
+    instr(addr2);
+}
+
 static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
 {
     m64 addr { RAX };
@@ -1874,6 +1882,10 @@ try
 
     gen_Instruction2_Type39(INVEPT);
     gen_Instruction2_Type39(INVVPID);
+
+    gen_Instruction2_Type40(VMCLEAR);
+    gen_Instruction2_Type40(VMPTRLD);
+    gen_Instruction2_Type40(VMPTRST);
 
     gen_Instruction3_Type1(LFS);
     gen_Instruction3_Type1(LGS);

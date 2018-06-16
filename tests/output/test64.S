@@ -781,6 +781,12 @@ Instruction1_Type4_Label:
 	sha256rnds2 %xmm0, (%rdx), %xmm1
 	invept (%rbx), %rax
 	invvpid (%rbx), %rax
+	vmclear (%ebx)
+	vmclear (%rbx)
+	vmptrld (%ebx)
+	vmptrld (%rbx)
+	vmptrst (%ebx)
+	vmptrst (%rbx)
 	lfs (%rax), %ax
 	lfs (%rax), %eax
 	lfs (%rax), %rax

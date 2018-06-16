@@ -1232,6 +1232,9 @@ Instruction1_Type1 VMFUNC { asmout, "vmfunc" };
 Instruction1_Type1 VMLAUNCH { asmout, "vmlaunch" };
 Instruction1_Type1 VMRESUME { asmout, "vmresume" };
 Instruction1_Type1 VMXOFF { asmout, "vmxoff" };
+Instruction2_Type40 VMCLEAR { asmout, "vmclear" };
+Instruction2_Type40 VMPTRLD { asmout, "vmptrld" };
+Instruction2_Type40 VMPTRST { asmout, "vmptrst" };
 
 Keyword_label label;
 keyword global { ".global" };

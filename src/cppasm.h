@@ -1276,6 +1276,9 @@ extern Instruction1_Type1 VMFUNC;
 extern Instruction1_Type1 VMLAUNCH;
 extern Instruction1_Type1 VMRESUME;
 extern Instruction1_Type1 VMXOFF;
+extern Instruction2_Type40 VMCLEAR;
+extern Instruction2_Type40 VMPTRLD;
+extern Instruction2_Type40 VMPTRST;
 
 extern keyword comment;
 extern keyword global;

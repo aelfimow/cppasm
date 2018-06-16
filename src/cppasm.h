@@ -1279,6 +1279,8 @@ extern Instruction1_Type1 VMXOFF;
 extern Instruction2_Type40 VMCLEAR;
 extern Instruction2_Type40 VMPTRLD;
 extern Instruction2_Type40 VMPTRST;
+extern Instruction4_Type26 VMREAD;
+extern Instruction4_Type27 VMWRITE;
 
 extern keyword comment;
 extern keyword global;

@@ -200,4 +200,20 @@ using Instruction4_Type25 = Instruction_4
     Operands_reg_reg_mem<xmm, xmm, m64>
 >;
 
+using Instruction4_Type26 = Instruction_4
+<
+    Operands_reg_reg<r32, r32, no_suffix>,
+    Operands_mem_reg<m32, r32, no_suffix>,
+    Operands_reg_reg<r64, r64, no_suffix>,
+    Operands_mem_reg<m64, r64, no_suffix>
+>;
+
+using Instruction4_Type27 = Instruction_4
+<
+    Operands_reg_reg<r32, r32, no_suffix>,
+    Operands_reg_mem<r32, m32, no_suffix>,
+    Operands_reg_reg<r64, r64, no_suffix>,
+    Operands_reg_mem<r64, m64, no_suffix>
+>;
+
 #endif

@@ -1235,6 +1235,8 @@ Instruction1_Type1 VMXOFF { asmout, "vmxoff" };
 Instruction2_Type40 VMCLEAR { asmout, "vmclear" };
 Instruction2_Type40 VMPTRLD { asmout, "vmptrld" };
 Instruction2_Type40 VMPTRST { asmout, "vmptrst" };
+Instruction4_Type26 VMREAD { asmout, "vmread" };
+Instruction4_Type27 VMWRITE { asmout, "vmwrite" };
 
 Keyword_label label;
 keyword global { ".global" };

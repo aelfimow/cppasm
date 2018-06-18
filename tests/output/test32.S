@@ -121,6 +121,7 @@
 	vmlaunch
 	vmresume
 	vmxoff
+	getsec
 	clflush (%eax)
 	clflushopt (%eax)
 	xsave (%eax)

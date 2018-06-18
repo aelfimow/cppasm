@@ -1296,6 +1296,8 @@ try
     gen_Instruction1_Type1(VMRESUME);
     gen_Instruction1_Type1(VMXOFF);
 
+    gen_Instruction1_Type1(GETSEC);
+
     gen_Instruction1_Type2(CLFLUSH);
     gen_Instruction1_Type2(CLFLUSHOPT);
     gen_Instruction1_Type2(XSAVE);

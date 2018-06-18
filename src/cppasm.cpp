@@ -1238,6 +1238,9 @@ Instruction2_Type40 VMPTRST { asmout, "vmptrst" };
 Instruction4_Type26 VMREAD { asmout, "vmread" };
 Instruction4_Type27 VMWRITE { asmout, "vmwrite" };
 
+// SMX instructions
+Instruction1_Type1 GETSEC { asmout, "getsec" };
+
 Keyword_label label;
 keyword global { ".global" };
 keyword comment { "#" };

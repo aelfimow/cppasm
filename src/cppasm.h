@@ -1282,6 +1282,9 @@ extern Instruction2_Type40 VMPTRST;
 extern Instruction4_Type26 VMREAD;
 extern Instruction4_Type27 VMWRITE;
 
+// SMX instructions
+extern Instruction1_Type1 GETSEC;
+
 extern keyword comment;
 extern keyword global;
 extern Keyword_label label;

@@ -2028,6 +2028,7 @@ try
     gen_Instruction4_Type2(FSTP);
 
     gen_Instruction4_Type3(VBROADCASTSD);
+    gen_Instruction4_Type3(VBROADCASTF32X2);
 
     gen_Instruction4_Type4(PALIGNR);
 

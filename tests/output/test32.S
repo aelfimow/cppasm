@@ -1119,6 +1119,18 @@ Instruction1_Type4_Label:
 	vbroadcastsd %xmm0, %ymm0{%k1}{z}
 	vbroadcastsd (%ebx), %zmm0{%k1}{z}
 	vbroadcastsd %xmm0, %zmm0{%k1}{z}
+	vbroadcastf32x2 (%ebx), %ymm0
+	vbroadcastf32x2 %xmm0, %ymm0
+	vbroadcastf32x2 (%ebx), %zmm0
+	vbroadcastf32x2 %xmm0, %zmm0
+	vbroadcastf32x2 (%ebx), %ymm0{%k1}
+	vbroadcastf32x2 %xmm0, %ymm0{%k1}
+	vbroadcastf32x2 (%ebx), %zmm0{%k1}
+	vbroadcastf32x2 %xmm0, %zmm0{%k1}
+	vbroadcastf32x2 (%ebx), %ymm0{%k1}{z}
+	vbroadcastf32x2 %xmm0, %ymm0{%k1}{z}
+	vbroadcastf32x2 (%ebx), %zmm0{%k1}{z}
+	vbroadcastf32x2 %xmm0, %zmm0{%k1}{z}
 	palignr $0xFF, %mm1, %mm0
 	palignr $0xFF, (%eax), %mm0
 	palignr $0xFF, %xmm1, %xmm0

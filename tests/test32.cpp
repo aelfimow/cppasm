@@ -1828,6 +1828,7 @@ try
     gen_Instruction2_Type40(VMPTRST);
 
     gen_Instruction2_Type41(VBROADCASTF32X4);
+    gen_Instruction2_Type41(VBROADCASTF64X2);
 
     gen_Instruction3_Type1(LDS);
     gen_Instruction3_Type1(LES);

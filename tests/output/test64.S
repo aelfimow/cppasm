@@ -239,6 +239,12 @@ Instruction1_Type4_Label:
 	psrldq $0x80, %xmm0
 	lddqu (%rax), %xmm0
 	movntdqa (%rax), %xmm0
+	vbroadcastf32x8 (%rbx), %zmm0
+	vbroadcastf32x8 (%rbx), %zmm0{%k1}
+	vbroadcastf32x8 (%rbx), %zmm0{%k1}{z}
+	vbroadcastf64x4 (%rbx), %zmm0
+	vbroadcastf64x4 (%rbx), %zmm0{%k1}
+	vbroadcastf64x4 (%rbx), %zmm0{%k1}{z}
 	vbroadcastf128 (%rax), %ymm0
 	kaddb %k3, %k2, %k1
 	kaddw %k3, %k2, %k1

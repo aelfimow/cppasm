@@ -164,6 +164,14 @@ static void gen_Instruction1_Type24(Instruction1_Type24 &instr)
     instr(XMM0, addr);
 }
 
+static void gen_Instruction1_Type25(Instruction1_Type25 &instr)
+{
+    m256 addr { RBX };
+    instr(ZMM0, addr);
+    instr(ZMM0.k1, addr);
+    instr(ZMM0.k1.z, addr);
+}
+
 static void gen_Instruction1_Type26(Instruction1_Type26 &instr)
 {
     m128 addr { RAX };
@@ -1595,6 +1603,9 @@ try
     gen_Instruction1_Type23(LDDQU);
 
     gen_Instruction1_Type24(MOVNTDQA);
+
+    gen_Instruction1_Type25(VBROADCASTF32X8);
+    gen_Instruction1_Type25(VBROADCASTF64X4);
 
     gen_Instruction1_Type26(VBROADCASTF128);
 

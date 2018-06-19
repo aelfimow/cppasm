@@ -447,6 +447,17 @@ static void gen_Instruction2_Type40(Instruction2_Type40 &instr)
     instr(addr);
 }
 
+static void gen_Instruction2_Type41(Instruction2_Type41 &instr)
+{
+    m128 addr { EBX };
+    instr(YMM0, addr);
+    instr(ZMM0, addr);
+    instr(YMM0.k1, addr);
+    instr(ZMM0.k1, addr);
+    instr(YMM0.k1.z, addr);
+    instr(ZMM0.k1.z, addr);
+}
+
 static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
 {
     m32 addr { EAX };
@@ -1804,6 +1815,8 @@ try
     gen_Instruction2_Type40(VMCLEAR);
     gen_Instruction2_Type40(VMPTRLD);
     gen_Instruction2_Type40(VMPTRST);
+
+    gen_Instruction2_Type41(VBROADCASTF32X4);
 
     gen_Instruction3_Type1(LDS);
     gen_Instruction3_Type1(LES);

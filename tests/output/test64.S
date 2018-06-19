@@ -785,6 +785,12 @@ Instruction1_Type4_Label:
 	vmptrld (%rbx)
 	vmptrst (%ebx)
 	vmptrst (%rbx)
+	vbroadcastf32x4 (%rbx), %ymm0
+	vbroadcastf32x4 (%rbx), %zmm0
+	vbroadcastf32x4 (%rbx), %ymm0{%k1}
+	vbroadcastf32x4 (%rbx), %zmm0{%k1}
+	vbroadcastf32x4 (%rbx), %ymm0{%k1}{z}
+	vbroadcastf32x4 (%rbx), %zmm0{%k1}{z}
 	lfs (%rax), %ax
 	lfs (%rax), %eax
 	lfs (%rax), %rax

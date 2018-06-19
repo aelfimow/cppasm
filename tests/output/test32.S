@@ -777,6 +777,12 @@ Instruction1_Type4_Label:
 	vmclear (%ebx)
 	vmptrld (%ebx)
 	vmptrst (%ebx)
+	vbroadcastf32x4 (%ebx), %ymm0
+	vbroadcastf32x4 (%ebx), %zmm0
+	vbroadcastf32x4 (%ebx), %ymm0{%k1}
+	vbroadcastf32x4 (%ebx), %zmm0{%k1}
+	vbroadcastf32x4 (%ebx), %ymm0{%k1}{z}
+	vbroadcastf32x4 (%ebx), %zmm0{%k1}{z}
 	lds (%eax), %ax
 	lds (%eax), %eax
 	les (%eax), %ax

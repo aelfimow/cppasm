@@ -126,7 +126,10 @@ using Instruction1_Type24 = Instruction_1
     Operands_reg_mem<xmm, m128, no_suffix>
 >;
 
-/* Instruction1_Type25: free */
+using Instruction1_Type25 = Instruction_1
+<
+    Operands_reg_mem<zmm, m256, no_suffix>
+>;
 
 using Instruction1_Type26 = Instruction_1
 <

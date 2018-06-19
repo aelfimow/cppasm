@@ -1135,7 +1135,7 @@ extern Instruction4_Type17 VANDNPD;
 extern Instruction1_Type1 VZEROALL;
 extern Instruction1_Type1 VZEROUPPER;
 extern Instruction6_Type6 VBROADCASTSS;
-extern Instruction1_Type25 VBROADCASTSD;
+extern Instruction4_Type3 VBROADCASTSD;
 extern Instruction1_Type26 VBROADCASTF128;
 extern Instruction2_Type34 VEXTRACTF128;
 extern Instruction2_Type35 VINSERTF128;

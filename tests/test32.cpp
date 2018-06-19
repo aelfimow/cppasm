@@ -403,13 +403,6 @@ static void gen_Instruction2_Type32(Instruction2_Type32 &instr)
     instr(addr2, YMM0);
 }
 
-static void gen_Instruction2_Type33(Instruction2_Type33 &instr)
-{
-    m32 addr { EAX };
-    instr(XMM0, addr);
-    instr(YMM0, addr);
-}
-
 static void gen_Instruction2_Type34(Instruction2_Type34 &instr)
 {
     imm8 mask { 255 };
@@ -1763,8 +1756,6 @@ try
 
     gen_Instruction2_Type32(VMOVNTPS);
     gen_Instruction2_Type32(VMOVNTDQ);
-
-    gen_Instruction2_Type33(VBROADCASTSS);
 
     gen_Instruction2_Type34(VEXTRACTF128);
 

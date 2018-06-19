@@ -768,8 +768,6 @@ Instruction1_Type4_Label:
 	vmovntps %ymm0, (%rbx)
 	vmovntdq %xmm0, (%rax)
 	vmovntdq %ymm0, (%rbx)
-	vbroadcastss (%rax), %xmm0
-	vbroadcastss (%rax), %ymm0
 	vextractf128 $0xFF, %ymm0, %xmm0
 	vextractf128 $0xFF, %ymm0, (%rax)
 	vinsertf128 $0xFF, %xmm0, %ymm1, %ymm0

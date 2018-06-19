@@ -1815,6 +1815,24 @@ Instruction1_Type4_Label:
 	vmovdqu %ymm2, %ymm0
 	vmovdqu (%ebx), %ymm0
 	vmovdqu %ymm0, (%ebx)
+	vbroadcastss (%ebx), %xmm0
+	vbroadcastss (%ebx), %ymm0
+	vbroadcastss (%ebx), %zmm0
+	vbroadcastss %xmm1, %xmm0
+	vbroadcastss %xmm1, %ymm0
+	vbroadcastss %xmm1, %zmm0
+	vbroadcastss (%ebx), %xmm0{%k1}
+	vbroadcastss (%ebx), %ymm0{%k1}
+	vbroadcastss (%ebx), %zmm0{%k1}
+	vbroadcastss %xmm1, %xmm0{%k1}
+	vbroadcastss %xmm1, %ymm0{%k1}
+	vbroadcastss %xmm1, %zmm0{%k1}
+	vbroadcastss (%ebx), %xmm0{%k1}{z}
+	vbroadcastss (%ebx), %ymm0{%k1}{z}
+	vbroadcastss (%ebx), %zmm0{%k1}{z}
+	vbroadcastss %xmm1, %xmm0{%k1}{z}
+	vbroadcastss %xmm1, %ymm0{%k1}{z}
+	vbroadcastss %xmm1, %zmm0{%k1}{z}
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label
 	jmp *%ax

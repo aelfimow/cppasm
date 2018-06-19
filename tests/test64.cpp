@@ -164,13 +164,6 @@ static void gen_Instruction1_Type24(Instruction1_Type24 &instr)
     instr(XMM0, addr);
 }
 
-static void gen_Instruction1_Type25(Instruction1_Type25 &instr)
-{
-    m64 addr { RAX };
-
-    instr(YMM0, addr);
-}
-
 static void gen_Instruction1_Type26(Instruction1_Type26 &instr)
 {
     m128 addr { RAX };
@@ -1574,8 +1567,6 @@ try
     gen_Instruction1_Type23(LDDQU);
 
     gen_Instruction1_Type24(MOVNTDQA);
-
-    gen_Instruction1_Type25(VBROADCASTSD);
 
     gen_Instruction1_Type26(VBROADCASTF128);
 

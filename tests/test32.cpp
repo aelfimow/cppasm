@@ -549,6 +549,23 @@ static void gen_Instruction4_Type2(Instruction4_Type2 &instr)
     instr(ST(0));
 }
 
+static void gen_Instruction4_Type3(Instruction4_Type3 &instr)
+{
+    m64 addr { EBX };
+    instr(YMM0, addr);
+    instr(YMM0, XMM0);
+    instr(ZMM0, addr);
+    instr(ZMM0, XMM0);
+    instr(YMM0.k1, addr);
+    instr(YMM0.k1, XMM0);
+    instr(ZMM0.k1, addr);
+    instr(ZMM0.k1, XMM0);
+    instr(YMM0.k1.z, addr);
+    instr(YMM0.k1.z, XMM0);
+    instr(ZMM0.k1.z, addr);
+    instr(ZMM0.k1.z, XMM0);
+}
+
 static void gen_Instruction4_Type4(Instruction4_Type4 &instr)
 {
     m64 addr1 { EAX };
@@ -1891,6 +1908,8 @@ try
 
     gen_Instruction4_Type2(FLD);
     gen_Instruction4_Type2(FSTP);
+
+    gen_Instruction4_Type3(VBROADCASTSD);
 
     gen_Instruction4_Type4(PALIGNR);
 

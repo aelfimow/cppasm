@@ -239,7 +239,6 @@ Instruction1_Type4_Label:
 	psrldq $0x80, %xmm0
 	lddqu (%rax), %xmm0
 	movntdqa (%rax), %xmm0
-	vbroadcastsd (%rax), %ymm0
 	vbroadcastf128 (%rax), %ymm0
 	kaddb %k3, %k2, %k1
 	kaddw %k3, %k2, %k1
@@ -1120,6 +1119,18 @@ Instruction1_Type4_Label:
 	fstpl (%ebx)
 	fstpt (%ecx)
 	fstp %st(0)
+	vbroadcastsd (%rbx), %ymm0
+	vbroadcastsd %xmm0, %ymm0
+	vbroadcastsd (%rbx), %zmm0
+	vbroadcastsd %xmm0, %zmm0
+	vbroadcastsd (%rbx), %ymm0{%k1}
+	vbroadcastsd %xmm0, %ymm0{%k1}
+	vbroadcastsd (%rbx), %zmm0{%k1}
+	vbroadcastsd %xmm0, %zmm0{%k1}
+	vbroadcastsd (%rbx), %ymm0{%k1}{z}
+	vbroadcastsd %xmm0, %ymm0{%k1}{z}
+	vbroadcastsd (%rbx), %zmm0{%k1}{z}
+	vbroadcastsd %xmm0, %zmm0{%k1}{z}
 	palignr $0xFF, %mm1, %mm0
 	palignr $0xFF, (%eax), %mm0
 	palignr $0xFF, %xmm1, %xmm0

@@ -810,6 +810,18 @@ Instruction1_Type4_Label:
 	vbroadcastf64x2 (%rbx), %zmm0{%k1}
 	vbroadcastf64x2 (%rbx), %ymm0{%k1}{z}
 	vbroadcastf64x2 (%rbx), %zmm0{%k1}{z}
+	vbroadcasti32x4 (%rbx), %ymm0
+	vbroadcasti32x4 (%rbx), %zmm0
+	vbroadcasti32x4 (%rbx), %ymm0{%k1}
+	vbroadcasti32x4 (%rbx), %zmm0{%k1}
+	vbroadcasti32x4 (%rbx), %ymm0{%k1}{z}
+	vbroadcasti32x4 (%rbx), %zmm0{%k1}{z}
+	vbroadcasti64x2 (%rbx), %ymm0
+	vbroadcasti64x2 (%rbx), %zmm0
+	vbroadcasti64x2 (%rbx), %ymm0{%k1}
+	vbroadcasti64x2 (%rbx), %zmm0{%k1}
+	vbroadcasti64x2 (%rbx), %ymm0{%k1}{z}
+	vbroadcasti64x2 (%rbx), %zmm0{%k1}{z}
 	lfs (%rax), %ax
 	lfs (%rax), %eax
 	lfs (%rax), %rax

@@ -1097,6 +1097,8 @@ Instruction1_Type26 VBROADCASTF128 { asmout, "vbroadcastf128" };
 Instruction1_Type26 VBROADCASTI128 { asmout, "vbroadcasti128" };
 Instruction2_Type41 VBROADCASTF32X4 { asmout, "vbroadcastf32x4" };
 Instruction2_Type41 VBROADCASTF64X2 { asmout, "vbroadcastf64x2" };
+Instruction2_Type41 VBROADCASTI32X4 { asmout, "vbroadcasti32x4" };
+Instruction2_Type41 VBROADCASTI64X2 { asmout, "vbroadcasti64x2" };
 Instruction1_Type25 VBROADCASTF32X8 { asmout, "vbroadcastf32x8" };
 Instruction1_Type25 VBROADCASTI32X8 { asmout, "vbroadcasti32x8" };
 Instruction1_Type25 VBROADCASTF64X4 { asmout, "vbroadcastf64x4" };

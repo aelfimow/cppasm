@@ -1099,6 +1099,7 @@ Instruction2_Type41 VBROADCASTF32X4 { asmout, "vbroadcastf32x4" };
 Instruction2_Type41 VBROADCASTF64X2 { asmout, "vbroadcastf64x2" };
 Instruction1_Type25 VBROADCASTF32X8 { asmout, "vbroadcastf32x8" };
 Instruction1_Type25 VBROADCASTF64X4 { asmout, "vbroadcastf64x4" };
+Instruction1_Type25 VBROADCASTI64X4 { asmout, "vbroadcasti64x4" };
 Instruction2_Type34 VEXTRACTF128 { asmout, "vextractf128" };
 Instruction2_Type35 VINSERTF128 { asmout, "vinsertf128" };
 Instruction4_Type24 VMASKMOVPS { asmout, "vmaskmovps" };

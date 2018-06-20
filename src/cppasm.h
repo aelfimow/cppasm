@@ -1143,6 +1143,7 @@ extern Instruction2_Type41 VBROADCASTF32X4;
 extern Instruction2_Type41 VBROADCASTF64X2;
 extern Instruction1_Type25 VBROADCASTF32X8;
 extern Instruction1_Type25 VBROADCASTF64X4;
+extern Instruction1_Type25 VBROADCASTI64X4;
 extern Instruction2_Type34 VEXTRACTF128;
 extern Instruction2_Type35 VINSERTF128;
 extern Instruction4_Type24 VMASKMOVPS;

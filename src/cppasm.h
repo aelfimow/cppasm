@@ -46,6 +46,7 @@ extern const std::string suffix_m64int;
 #include "Instruction6_Types.h"
 #include "Instruction7_Types.h"
 #include "Instruction8_Types.h"
+#include "Instruction9_Types.h"
 #include "Instruction10_Types.h"
 #include "Instruction12_Types.h"
 #include "Instruction16_Types.h"
@@ -1148,6 +1149,10 @@ extern Instruction1_Type25 VBROADCASTF32X8;
 extern Instruction1_Type25 VBROADCASTI32X8;
 extern Instruction1_Type25 VBROADCASTF64X4;
 extern Instruction1_Type25 VBROADCASTI64X4;
+extern Instruction9_Type1 VPBROADCASTB;
+extern Instruction9_Type2 VPBROADCASTW;
+extern Instruction9_Type3 VPBROADCASTD;
+extern Instruction9_Type4 VPBROADCASTQ;
 extern Instruction2_Type34 VEXTRACTF128;
 extern Instruction2_Type35 VINSERTF128;
 extern Instruction4_Type24 VMASKMOVPS;

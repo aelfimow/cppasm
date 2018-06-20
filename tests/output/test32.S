@@ -244,6 +244,9 @@ Instruction1_Type4_Label:
 	vbroadcastf64x4 (%ebx), %zmm0
 	vbroadcastf64x4 (%ebx), %zmm0{%k1}
 	vbroadcastf64x4 (%ebx), %zmm0{%k1}{z}
+	vbroadcasti64x4 (%ebx), %zmm0
+	vbroadcasti64x4 (%ebx), %zmm0{%k1}
+	vbroadcasti64x4 (%ebx), %zmm0{%k1}{z}
 	vbroadcastf128 (%eax), %ymm0
 	vbroadcasti128 (%eax), %ymm0
 	kaddb %k3, %k2, %k1

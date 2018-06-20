@@ -1608,6 +1608,7 @@ try
     gen_Instruction1_Type25(VBROADCASTF64X4);
 
     gen_Instruction1_Type26(VBROADCASTF128);
+    gen_Instruction1_Type26(VBROADCASTI128);
 
     gen_Instruction1_Type27(KADDB);
     gen_Instruction1_Type27(KADDW);

@@ -2014,6 +2014,24 @@ Instruction1_Type4_Label:
 	vbroadcastss %xmm1, %xmm0{%k1}{z}
 	vbroadcastss %xmm1, %ymm0{%k1}{z}
 	vbroadcastss %xmm1, %zmm0{%k1}{z}
+	vbroadcasti32x2 (%ebx), %xmm0
+	vbroadcasti32x2 (%ebx), %ymm0
+	vbroadcasti32x2 (%ebx), %zmm0
+	vbroadcasti32x2 %xmm1, %xmm0
+	vbroadcasti32x2 %xmm1, %ymm0
+	vbroadcasti32x2 %xmm1, %zmm0
+	vbroadcasti32x2 (%ebx), %xmm0{%k1}
+	vbroadcasti32x2 (%ebx), %ymm0{%k1}
+	vbroadcasti32x2 (%ebx), %zmm0{%k1}
+	vbroadcasti32x2 %xmm1, %xmm0{%k1}
+	vbroadcasti32x2 %xmm1, %ymm0{%k1}
+	vbroadcasti32x2 %xmm1, %zmm0{%k1}
+	vbroadcasti32x2 (%ebx), %xmm0{%k1}{z}
+	vbroadcasti32x2 (%ebx), %ymm0{%k1}{z}
+	vbroadcasti32x2 (%ebx), %zmm0{%k1}{z}
+	vbroadcasti32x2 %xmm1, %xmm0{%k1}{z}
+	vbroadcasti32x2 %xmm1, %ymm0{%k1}{z}
+	vbroadcasti32x2 %xmm1, %zmm0{%k1}{z}
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label
 	jmp *%rax

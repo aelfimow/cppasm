@@ -974,6 +974,29 @@ static void gen_Instruction6_Type6(Instruction6_Type6 &instr)
     instr(ZMM0.k1.z, XMM1);
 }
 
+static void gen_Instruction6_Type7(Instruction6_Type7 &instr)
+{
+    m64 addr { EBX };
+    instr(XMM0, addr);
+    instr(YMM0, addr);
+    instr(ZMM0, addr);
+    instr(XMM0, XMM1);
+    instr(YMM0, XMM1);
+    instr(ZMM0, XMM1);
+    instr(XMM0.k1, addr);
+    instr(YMM0.k1, addr);
+    instr(ZMM0.k1, addr);
+    instr(XMM0.k1, XMM1);
+    instr(YMM0.k1, XMM1);
+    instr(ZMM0.k1, XMM1);
+    instr(XMM0.k1.z, addr);
+    instr(YMM0.k1.z, addr);
+    instr(ZMM0.k1.z, addr);
+    instr(XMM0.k1.z, XMM1);
+    instr(YMM0.k1.z, XMM1);
+    instr(ZMM0.k1.z, XMM1);
+}
+
 static void gen_Instruction7_Type1(Instruction7_Type1 &instr)
 {
     m16 addr1 { RAX };
@@ -2274,6 +2297,8 @@ try
     gen_Instruction6_Type5(VMOVDQU);
 
     gen_Instruction6_Type6(VBROADCASTSS);
+
+    gen_Instruction6_Type7(VBROADCASTI32X2);
 
     label("gen_Instruction7_Type1_label");
     gen_Instruction7_Type1(JMP);

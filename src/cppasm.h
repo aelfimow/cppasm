@@ -1137,6 +1137,7 @@ extern Instruction1_Type1 VZEROUPPER;
 extern Instruction6_Type6 VBROADCASTSS;
 extern Instruction4_Type3 VBROADCASTSD;
 extern Instruction4_Type3 VBROADCASTF32X2;
+extern Instruction6_Type7 VBROADCASTI32X2;
 extern Instruction1_Type26 VBROADCASTF128;
 extern Instruction1_Type26 VBROADCASTI128;
 extern Instruction2_Type41 VBROADCASTF32X4;

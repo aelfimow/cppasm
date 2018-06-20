@@ -1138,6 +1138,7 @@ extern Instruction6_Type6 VBROADCASTSS;
 extern Instruction4_Type3 VBROADCASTSD;
 extern Instruction4_Type3 VBROADCASTF32X2;
 extern Instruction1_Type26 VBROADCASTF128;
+extern Instruction1_Type26 VBROADCASTI128;
 extern Instruction2_Type41 VBROADCASTF32X4;
 extern Instruction2_Type41 VBROADCASTF64X2;
 extern Instruction1_Type25 VBROADCASTF32X8;

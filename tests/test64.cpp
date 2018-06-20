@@ -1605,6 +1605,7 @@ try
     gen_Instruction1_Type24(MOVNTDQA);
 
     gen_Instruction1_Type25(VBROADCASTF32X8);
+    gen_Instruction1_Type25(VBROADCASTI32X8);
     gen_Instruction1_Type25(VBROADCASTF64X4);
     gen_Instruction1_Type25(VBROADCASTI64X4);
 

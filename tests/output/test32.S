@@ -241,6 +241,9 @@ Instruction1_Type4_Label:
 	vbroadcastf32x8 (%ebx), %zmm0
 	vbroadcastf32x8 (%ebx), %zmm0{%k1}
 	vbroadcastf32x8 (%ebx), %zmm0{%k1}{z}
+	vbroadcasti32x8 (%ebx), %zmm0
+	vbroadcasti32x8 (%ebx), %zmm0{%k1}
+	vbroadcasti32x8 (%ebx), %zmm0{%k1}{z}
 	vbroadcastf64x4 (%ebx), %zmm0
 	vbroadcastf64x4 (%ebx), %zmm0{%k1}
 	vbroadcastf64x4 (%ebx), %zmm0{%k1}{z}

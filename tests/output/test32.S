@@ -775,6 +775,22 @@ Instruction1_Type4_Label:
 	vmovntps %ymm0, (%ebx)
 	vmovntdq %xmm0, (%eax)
 	vmovntdq %ymm0, (%ebx)
+	vextractf32x8 $0xFF, %zmm0, %ymm0
+	vextractf32x8 $0xFF, %zmm0, %ymm0{%k1}
+	vextractf32x8 $0xFF, %zmm0, %ymm0{%k1}{z}
+	vextractf32x8 $0xFF, %zmm0, (%ebx)
+	vextractf64x4 $0xFF, %zmm0, %ymm0
+	vextractf64x4 $0xFF, %zmm0, %ymm0{%k1}
+	vextractf64x4 $0xFF, %zmm0, %ymm0{%k1}{z}
+	vextractf64x4 $0xFF, %zmm0, (%ebx)
+	vextracti32x8 $0xFF, %zmm0, %ymm0
+	vextracti32x8 $0xFF, %zmm0, %ymm0{%k1}
+	vextracti32x8 $0xFF, %zmm0, %ymm0{%k1}{z}
+	vextracti32x8 $0xFF, %zmm0, (%ebx)
+	vextracti64x4 $0xFF, %zmm0, %ymm0
+	vextracti64x4 $0xFF, %zmm0, %ymm0{%k1}
+	vextracti64x4 $0xFF, %zmm0, %ymm0{%k1}{z}
+	vextracti64x4 $0xFF, %zmm0, (%ebx)
 	vextractf128 $0xFF, %ymm0, %xmm0
 	vextractf128 $0xFF, %ymm0, (%eax)
 	vextracti128 $0xFF, %ymm0, %xmm0

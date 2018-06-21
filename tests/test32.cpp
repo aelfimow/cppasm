@@ -404,6 +404,16 @@ static void gen_Instruction2_Type32(Instruction2_Type32 &instr)
     instr(addr2, YMM0);
 }
 
+static void gen_Instruction2_Type33(Instruction2_Type33 &instr)
+{
+    imm8 mask { 255 };
+    m256 addr { EBX };
+    instr(YMM0, ZMM0, mask);
+    instr(YMM0.k1, ZMM0, mask);
+    instr(YMM0.k1.z, ZMM0, mask);
+    instr(addr, ZMM0, mask);
+}
+
 static void gen_Instruction2_Type34(Instruction2_Type34 &instr)
 {
     imm8 mask { 255 };
@@ -1931,6 +1941,11 @@ try
 
     gen_Instruction2_Type32(VMOVNTPS);
     gen_Instruction2_Type32(VMOVNTDQ);
+
+    gen_Instruction2_Type33(VEXTRACTF32X8);
+    gen_Instruction2_Type33(VEXTRACTF64X4);
+    gen_Instruction2_Type33(VEXTRACTI32X8);
+    gen_Instruction2_Type33(VEXTRACTI64X4);
 
     gen_Instruction2_Type34(VEXTRACTF128);
     gen_Instruction2_Type34(VEXTRACTI128);

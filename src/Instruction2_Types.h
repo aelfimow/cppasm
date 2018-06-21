@@ -198,7 +198,11 @@ using Instruction2_Type32 = Instruction_2
     Operands_mem_reg<m256, ymm, no_suffix>
 >;
 
-/* Instruction2_Type33 free */
+using Instruction2_Type33 = Instruction_2
+<
+    Operands_reg_reg_imm<ymm, zmm, imm8>,
+    Operands_mem_reg_imm<m256, zmm, imm8>
+>;
 
 using Instruction2_Type34 = Instruction_2
 <

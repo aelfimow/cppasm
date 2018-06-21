@@ -1108,6 +1108,7 @@ Instruction9_Type1 VPBROADCASTB { asmout, "vpbroadcastb" };
 Instruction9_Type2 VPBROADCASTW { asmout, "vpbroadcastw" };
 Instruction9_Type3 VPBROADCASTD { asmout, "vpbroadcastd" };
 Instruction9_Type4 VPBROADCASTQ { asmout, "vpbroadcastq" };
+Instruction3_Type10 VEXTRACTPS { asmout, "vextractps" };
 Instruction2_Type34 VEXTRACTF128 { asmout, "vextractf128" };
 Instruction2_Type35 VINSERTF128 { asmout, "vinsertf128" };
 Instruction4_Type24 VMASKMOVPS { asmout, "vmaskmovps" };

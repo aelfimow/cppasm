@@ -1153,6 +1153,7 @@ extern Instruction9_Type1 VPBROADCASTB;
 extern Instruction9_Type2 VPBROADCASTW;
 extern Instruction9_Type3 VPBROADCASTD;
 extern Instruction9_Type4 VPBROADCASTQ;
+extern Instruction3_Type10 VEXTRACTPS;
 extern Instruction2_Type34 VEXTRACTF128;
 extern Instruction2_Type35 VINSERTF128;
 extern Instruction4_Type24 VMASKMOVPS;

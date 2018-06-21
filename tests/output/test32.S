@@ -888,6 +888,8 @@ Instruction1_Type4_Label:
 	pextrb $0xFF, %xmm0, (%eax)
 	extractps $0xFF, %xmm0, %eax
 	extractps $0xFF, %xmm0, (%eax)
+	vextractps $0xFF, %xmm0, %eax
+	vextractps $0xFF, %xmm0, (%eax)
 	packsswb %mm1, %mm0
 	packsswb (%eax), %mm0
 	packsswb %xmm1, %xmm0

@@ -900,6 +900,9 @@ Instruction1_Type4_Label:
 	extractps $0xFF, %xmm0, %eax
 	extractps $0xFF, %xmm0, %rax
 	extractps $0xFF, %xmm0, (%rax)
+	vextractps $0xFF, %xmm0, %eax
+	vextractps $0xFF, %xmm0, %rax
+	vextractps $0xFF, %xmm0, (%rax)
 	packsswb %mm1, %mm0
 	packsswb (%rax), %mm0
 	packsswb %xmm1, %xmm0

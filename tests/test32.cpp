@@ -1991,6 +1991,7 @@ try
     gen_Instruction3_Type9(PEXTRB);
 
     gen_Instruction3_Type10(EXTRACTPS);
+    gen_Instruction3_Type10(VEXTRACTPS);
 
     gen_Instruction4_Type1(PACKSSWB);
     gen_Instruction4_Type1(PACKUSWB);

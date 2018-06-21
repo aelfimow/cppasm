@@ -1933,6 +1933,7 @@ try
     gen_Instruction2_Type32(VMOVNTDQ);
 
     gen_Instruction2_Type34(VEXTRACTF128);
+    gen_Instruction2_Type34(VEXTRACTI128);
 
     gen_Instruction2_Type35(VINSERTF128);
 

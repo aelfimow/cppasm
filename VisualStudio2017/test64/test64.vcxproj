@@ -123,7 +123,7 @@
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
-    <ClCompile Include="..\..\tests\test64.cpp" />
+    <ClCompile Include="..\..\tests\test64\test64.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\asmstream.h" />

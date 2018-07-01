@@ -8,6 +8,10 @@ tests/output/test32.o
 tests/output/test64.o
 tests/test32.exe
 tests/test64.exe
+tests/test32/output/test32.o
+tests/test64/output/test64.o
+tests/test32/test32.exe
+tests/test64/test64.exe
 VisualStudio2017/test32/.vs
 VisualStudio2017/test32/x64
 VisualStudio2017/test32/test32.vcxproj.filters
@@ -16,6 +20,7 @@ VisualStudio2017/test64/.vs/
 VisualStudio2017/test64/x64
 VisualStudio2017/test64/Debug/
 VisualStudio2017/test64/test64.vcxproj.filters
+VisualStudio2017/test64/test64.vcxproj.user
 VisualStudio2017/test32/Debug
 examples/cpuid/*.o
 examples/cpuid/*.exe

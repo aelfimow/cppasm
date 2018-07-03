@@ -9,6 +9,7 @@ tests/test32/output/test32.o
 tests/test32/output/gen_Instruction1.o
 tests/test32/output/gen_Instruction2.o
 tests/test32/output/gen_Instruction3.o
+tests/test32/output/gen_Instruction4.o
 tests/test64/test64.exe
 tests/test64/output/test64.o
 VisualStudio2017/test32/.vs

@@ -20,6 +20,7 @@ test32:
 	${CXX} -c gen_Instruction1.cpp -o ${OUTDIR}/gen_Instruction1.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction2.cpp -o ${OUTDIR}/gen_Instruction2.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction3.cpp -o ${OUTDIR}/gen_Instruction3.o -I${INCDIR} ${CXXFLAGS}
+	${CXX} -c gen_Instruction4.cpp -o ${OUTDIR}/gen_Instruction4.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c test32.cpp -o ${OUTDIR}/test32.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} ${OUTDIR}/*.o ${CPPASM_OBJ} -o test32.exe ${CXXFLAGS}
 	test32.exe > ${OUTDIR}/test32.S

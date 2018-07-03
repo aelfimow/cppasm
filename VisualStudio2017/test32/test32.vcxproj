@@ -123,6 +123,10 @@
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction1.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction2.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction3.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction4.cpp" />
     <ClCompile Include="..\..\tests\test32\test32.cpp" />
   </ItemGroup>
   <ItemGroup>

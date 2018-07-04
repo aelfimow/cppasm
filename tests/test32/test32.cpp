@@ -12,36 +12,7 @@ extern void gen_Instruction6();
 extern void gen_Instruction7();
 extern void gen_Instruction8();
 extern void gen_Instruction9();
-
-static void gen_Instruction10_Type1(Instruction10_Type1 &instr)
-{
-    instr(AX);
-    instr(EAX);
-    m16 addr1 { EDX };
-    m32 addr2 { EDX };
-    instr(addr1);
-    instr(addr2);
-    imm8 v1 { 0xAA };
-    imm16 v2 { 0xAABB };
-    imm32 v3 { 0xAABBCCDD };
-    instr(v1);
-    instr(v2);
-    instr(v3);
-    instr(GS);
-}
-
-static void gen_Instruction10_Type2(Instruction10_Type2 &instr)
-{
-    m8 addr1 { EDX };
-    m16 addr2 { EDX };
-    m32 addr3 { EDX };
-    instr(ECX, AL);
-    instr(ECX, addr1);
-    instr(ECX, AX);
-    instr(ECX, addr2);
-    instr(ECX, EAX);
-    instr(ECX, addr3);
-}
+extern void gen_Instruction10();
 
 static void gen_Instruction12_Type1(Instruction12_Type1 &instr)
 {
@@ -225,10 +196,7 @@ try
     gen_Instruction7();
     gen_Instruction8();
     gen_Instruction9();
-
-    gen_Instruction10_Type1(PUSH);
-
-    gen_Instruction10_Type2(CRC32);
+    gen_Instruction10();
 
     gen_Instruction12_Type1(BT);
     gen_Instruction12_Type1(BTC);

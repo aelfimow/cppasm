@@ -125,8 +125,12 @@
     <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction1.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction10.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction12.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction16.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction2.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction26.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction3.cpp" />
+    <ClCompile Include="..\..\tests\test32\gen_Instruction36.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction4.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction5.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction6.cpp" />

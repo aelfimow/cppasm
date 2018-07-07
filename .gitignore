@@ -16,6 +16,10 @@ tests/test32/output/gen_Instruction7.o
 tests/test32/output/gen_Instruction8.o
 tests/test32/output/gen_Instruction9.o
 tests/test32/output/gen_Instruction10.o
+tests/test32/output/gen_Instruction12.o
+tests/test32/output/gen_Instruction16.o
+tests/test32/output/gen_Instruction26.o
+tests/test32/output/gen_Instruction36.o
 tests/test64/test64.exe
 tests/test64/output/test64.o
 VisualStudio2017/test32/.vs

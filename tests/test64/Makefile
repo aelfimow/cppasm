@@ -17,7 +17,8 @@ all: test64
 
 .PHONY: test64
 test64:
-	$(CXX) -c test64.cpp -o ${OUTDIR}/test64.o -I${INCDIR} ${CXXFLAGS}
-	$(CXX) ${OUTDIR}/test64.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}
+	${CXX} -c gen_Instruction1.cpp -o ${OUTDIR}/gen_Instruction1.o -I${INCDIR} ${CXXFLAGS}
+	${CXX} -c test64.cpp -o ${OUTDIR}/test64.o -I${INCDIR} ${CXXFLAGS}
+	${CXX} ${OUTDIR}/*.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}
 	test64.exe > ${OUTDIR}/test64.S
-	$(AS) ${OUTDIR}/test64.S ${ASFLAGS64} -o ${OUTDIR}/test64.o
+	${AS} ${OUTDIR}/test64.S ${ASFLAGS64} -o ${OUTDIR}/test64.o

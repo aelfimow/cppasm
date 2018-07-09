@@ -125,6 +125,8 @@
     <ClCompile Include="..\..\src\st.cpp" />
     <ClCompile Include="..\..\tests\test64\gen_Instruction1.cpp" />
     <ClCompile Include="..\..\tests\test64\gen_Instruction2.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction3.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction4.cpp" />
     <ClCompile Include="..\..\tests\test64\test64.cpp" />
   </ItemGroup>
   <ItemGroup>

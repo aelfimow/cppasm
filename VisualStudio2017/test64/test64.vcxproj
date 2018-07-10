@@ -127,6 +127,10 @@
     <ClCompile Include="..\..\tests\test64\gen_Instruction2.cpp" />
     <ClCompile Include="..\..\tests\test64\gen_Instruction3.cpp" />
     <ClCompile Include="..\..\tests\test64\gen_Instruction4.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction5.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction6.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction7.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction8.cpp" />
     <ClCompile Include="..\..\tests\test64\test64.cpp" />
   </ItemGroup>
   <ItemGroup>

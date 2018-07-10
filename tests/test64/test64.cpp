@@ -9,42 +9,7 @@ extern void gen_Instruction3();
 extern void gen_Instruction4();
 extern void gen_Instruction5();
 extern void gen_Instruction6();
-
-static void gen_Instruction7_Type1(Instruction7_Type1 &instr)
-{
-    m16 addr1 { RAX };
-    m32 addr2 { RBX };
-    m64 addr3 { RBX };
-    std::string loc { "gen_Instruction7_Type1_label" };
-    instr(loc);
-    instr(RAX);
-    instr(addr1);
-    instr(addr2);
-    instr(addr3);
-}
-
-static void gen_Instruction7_Type2(Instruction7_Type2 &instr)
-{
-    m16 addr1 { RAX };
-    m64 addr2 { RCX };
-    instr(AX);
-    instr(addr1);
-    instr(RCX);
-    instr(addr2);
-    instr(FS);
-}
-
-static void gen_Instruction7_Type3(Instruction7_Type3 &instr)
-{
-    m16 addr1 { RAX };
-    m32 addr2 { RBX };
-    m64 addr3 { RBX };
-    std::string loc { "gen_Instruction7_Type3_label" };
-    instr(loc);
-    instr(addr1);
-    instr(addr2);
-    instr(addr3);
-}
+extern void gen_Instruction7();
 
 static void gen_Instruction8_Type1(Instruction8_Type1 &instr)
 {
@@ -507,16 +472,7 @@ try
     gen_Instruction4();
     gen_Instruction5();
     gen_Instruction6();
-
-    label("gen_Instruction7_Type1_label");
-    gen_Instruction7_Type1(JMP);
-    gen_Instruction7_Type1(CALL);
-
-    gen_Instruction7_Type2(POP);
-
-    label("gen_Instruction7_Type3_label");
-    gen_Instruction7_Type3(JMP_FAR);
-    gen_Instruction7_Type3(CALL_FAR);
+    gen_Instruction7();
 
     gen_Instruction8_Type1(MOVD);
 

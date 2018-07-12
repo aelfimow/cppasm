@@ -30,6 +30,12 @@ tests/test64/output/gen_Instruction5.o
 tests/test64/output/gen_Instruction6.o
 tests/test64/output/gen_Instruction7.o
 tests/test64/output/gen_Instruction8.o
+tests/test64/output/gen_Instruction9.o
+tests/test64/output/gen_Instruction10.o
+tests/test64/output/gen_Instruction12.o
+tests/test64/output/gen_Instruction16.o
+tests/test64/output/gen_Instruction26.o
+tests/test64/output/gen_Instruction36.o
 VisualStudio2017/test32/.vs
 VisualStudio2017/test32/x64
 VisualStudio2017/test32/test32.vcxproj.filters

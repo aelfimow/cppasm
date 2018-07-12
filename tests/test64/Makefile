@@ -28,6 +28,7 @@ test64:
 	${CXX} -c gen_Instruction9.cpp -o ${OUTDIR}/gen_Instruction9.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction10.cpp -o ${OUTDIR}/gen_Instruction10.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction12.cpp -o ${OUTDIR}/gen_Instruction12.o -I${INCDIR} ${CXXFLAGS}
+	${CXX} -c gen_Instruction16.cpp -o ${OUTDIR}/gen_Instruction16.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c test64.cpp -o ${OUTDIR}/test64.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} ${OUTDIR}/*.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}
 	test64.exe > ${OUTDIR}/test64.S

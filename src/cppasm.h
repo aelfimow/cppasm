@@ -1163,6 +1163,8 @@ extern Instruction2_Type33 VEXTRACTI64X4;
 extern Instruction2_Type35 VINSERTF128;
 extern Instruction4_Type24 VMASKMOVPS;
 extern Instruction4_Type24 VMASKMOVPD;
+extern Instruction4_Type24 VPMASKMOVD;
+extern Instruction4_Type24 VPMASKMOVQ;
 extern Instruction8_Type5 VPERMILPD;
 extern Instruction8_Type5 VPERMILPS;
 extern Instruction2_Type36 VPERM2F128;

@@ -478,6 +478,8 @@ void gen_Instruction4()
 
     gen_Instruction4_Type24(VMASKMOVPS);
     gen_Instruction4_Type24(VMASKMOVPD);
+    gen_Instruction4_Type24(VPMASKMOVD);
+    gen_Instruction4_Type24(VPMASKMOVQ);
 
     gen_Instruction4_Type25(VCVTSI2SS);
     gen_Instruction4_Type25(VCVTSI2SD);

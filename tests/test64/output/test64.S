@@ -1687,6 +1687,14 @@ Instruction1_Type4_Label:
 	vmaskmovpd (%rbx), %ymm1, %ymm0
 	vmaskmovpd %xmm1, %xmm0, (%rax)
 	vmaskmovpd %ymm1, %ymm0, (%rbx)
+	vpmaskmovd (%rax), %xmm1, %xmm0
+	vpmaskmovd (%rbx), %ymm1, %ymm0
+	vpmaskmovd %xmm1, %xmm0, (%rax)
+	vpmaskmovd %ymm1, %ymm0, (%rbx)
+	vpmaskmovq (%rax), %xmm1, %xmm0
+	vpmaskmovq (%rbx), %ymm1, %ymm0
+	vpmaskmovq %xmm1, %xmm0, (%rax)
+	vpmaskmovq %ymm1, %ymm0, (%rbx)
 	vcvtsi2ss %eax, %xmm1, %xmm0
 	vcvtsi2ss (%rax), %xmm1, %xmm0
 	vcvtsi2ss %rbx, %xmm1, %xmm0

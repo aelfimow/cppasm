@@ -1116,6 +1116,7 @@ Instruction2_Type33 VEXTRACTF64X4 { asmout, "vextractf64x4" };
 Instruction2_Type33 VEXTRACTI32X8 { asmout, "vextracti32x8" };
 Instruction2_Type33 VEXTRACTI64X4 { asmout, "vextracti64x4" };
 Instruction2_Type35 VINSERTF128 { asmout, "vinsertf128" };
+Instruction2_Type35 VINSERTI128 { asmout, "vinserti128" };
 Instruction4_Type24 VMASKMOVPS { asmout, "vmaskmovps" };
 Instruction4_Type24 VMASKMOVPD { asmout, "vmaskmovpd" };
 Instruction4_Type24 VPMASKMOVD { asmout, "vpmaskmovd" };

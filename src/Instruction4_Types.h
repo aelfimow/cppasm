@@ -227,7 +227,7 @@ using Instruction4_Type28 = Instruction_4
     Operands_reg_reg_reg_imm<ymm, ymm, xmm, imm8>,
     Operands_reg_reg_mem_imm<ymm, ymm, m128, imm8>,
     Operands_reg_reg_reg_imm<zmm, zmm, xmm, imm8>,
-    Operands_reg_reg_mem_imm<zmm, zmm, m128, imm8>,
+    Operands_reg_reg_mem_imm<zmm, zmm, m128, imm8>
 >;
 
 #endif

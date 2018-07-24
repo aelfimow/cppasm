@@ -238,6 +238,24 @@ static void gen_Instruction4_Type27(Instruction4_Type27 &instr)
     instr(EBX, addr);
 }
 
+static void gen_Instruction4_Type28(Instruction4_Type28 &instr)
+{
+    imm8 mask { 0x0F };
+    m128 addr { EDX };
+    instr(YMM0, YMM1, XMM0, mask);
+    instr(YMM0.k1, YMM1, XMM0, mask);
+    instr(YMM0.k1.z, YMM1, XMM0, mask);
+    instr(YMM0, YMM1, addr, mask);
+    instr(YMM0.k1, YMM1, addr, mask);
+    instr(YMM0.k1.z, YMM1, addr, mask);
+    instr(ZMM0, ZMM1, XMM0, mask);
+    instr(ZMM0.k1, ZMM1, XMM0, mask);
+    instr(ZMM0.k1.z, ZMM1, XMM0, mask);
+    instr(ZMM0, ZMM1, addr, mask);
+    instr(ZMM0.k1, ZMM1, addr, mask);
+    instr(ZMM0.k1.z, ZMM1, addr, mask);
+}
+
 void gen_Instruction4()
 {
     gen_Instruction4_Type1(PACKSSWB);
@@ -459,4 +477,7 @@ void gen_Instruction4()
     gen_Instruction4_Type26(VMREAD);
 
     gen_Instruction4_Type27(VMWRITE);
+
+    gen_Instruction4_Type28(VINSERTI32X4);
+    gen_Instruction4_Type28(VINSERTI64X2);
 }

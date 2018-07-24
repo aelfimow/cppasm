@@ -1709,6 +1709,30 @@ Instruction1_Type4_Label:
 	vmread %rbx, (%rdx)
 	vmwrite %rbx, %rax
 	vmwrite (%rdx), %rbx
+	vinserti32x4 $0x0F, %xmm0, %ymm1, %ymm0
+	vinserti32x4 $0x0F, %xmm0, %ymm1, %ymm0{%k1}
+	vinserti32x4 $0x0F, %xmm0, %ymm1, %ymm0{%k1}{z}
+	vinserti32x4 $0x0F, (%rdx), %ymm1, %ymm0
+	vinserti32x4 $0x0F, (%rdx), %ymm1, %ymm0{%k1}
+	vinserti32x4 $0x0F, (%rdx), %ymm1, %ymm0{%k1}{z}
+	vinserti32x4 $0x0F, %xmm0, %zmm1, %zmm0
+	vinserti32x4 $0x0F, %xmm0, %zmm1, %zmm0{%k1}
+	vinserti32x4 $0x0F, %xmm0, %zmm1, %zmm0{%k1}{z}
+	vinserti32x4 $0x0F, (%rdx), %zmm1, %zmm0
+	vinserti32x4 $0x0F, (%rdx), %zmm1, %zmm0{%k1}
+	vinserti32x4 $0x0F, (%rdx), %zmm1, %zmm0{%k1}{z}
+	vinserti64x2 $0x0F, %xmm0, %ymm1, %ymm0
+	vinserti64x2 $0x0F, %xmm0, %ymm1, %ymm0{%k1}
+	vinserti64x2 $0x0F, %xmm0, %ymm1, %ymm0{%k1}{z}
+	vinserti64x2 $0x0F, (%rdx), %ymm1, %ymm0
+	vinserti64x2 $0x0F, (%rdx), %ymm1, %ymm0{%k1}
+	vinserti64x2 $0x0F, (%rdx), %ymm1, %ymm0{%k1}{z}
+	vinserti64x2 $0x0F, %xmm0, %zmm1, %zmm0
+	vinserti64x2 $0x0F, %xmm0, %zmm1, %zmm0{%k1}
+	vinserti64x2 $0x0F, %xmm0, %zmm1, %zmm0{%k1}{z}
+	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0
+	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0{%k1}
+	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0{%k1}{z}
 	nop
 	nop %ax
 	nopw (%rax)

@@ -797,6 +797,8 @@ Instruction1_Type4_Label:
 	vextracti128 $0xFF, %ymm0, (%eax)
 	vinsertf128 $0xFF, %xmm0, %ymm1, %ymm0
 	vinsertf128 $0xFF, (%eax), %ymm1, %ymm0
+	vinserti128 $0xFF, %xmm0, %ymm1, %ymm0
+	vinserti128 $0xFF, (%eax), %ymm1, %ymm0
 	vperm2f128 $0xFF, %ymm2, %ymm1, %ymm0
 	vperm2f128 $0xFF, (%eax), %ymm1, %ymm0
 	pextrd $0xFF, %xmm0, %eax

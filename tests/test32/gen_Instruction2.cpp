@@ -573,6 +573,7 @@ void gen_Instruction2()
     gen_Instruction2_Type34(VEXTRACTI128);
 
     gen_Instruction2_Type35(VINSERTF128);
+    gen_Instruction2_Type35(VINSERTI128);
 
     gen_Instruction2_Type36(VPERM2F128);
 

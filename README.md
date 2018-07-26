@@ -1,4 +1,4 @@
-[![cppasm logo](cppasm-logo.png)](https://github.com/aelfimow/cppasm/blob/master/cppasm-logo.png)
+[![cppasm logo](cppasm-logo.png)](cppasm-logo.png)
 # cppasm
 This is a C++ generator for x86 assembly code.
 
@@ -35,16 +35,16 @@ generator for some assembly function in the output subdirectory, and an `example
 application using generated assembly function.
 
 ## Source code
-The generator source code files can be found under [src](https://github.com/aelfimow/cppasm/tree/master/src)
-and some test files under [tests](https://github.com/aelfimow/cppasm/tree/master/tests).
+The generator source code files can be found under [src](src)
+and some test files under [tests](tests).
 
 ## Compiler
 I am using [mingw-w64](https://mingw-w64.org) to compile the C++ source files and
 assemble generated assembly files.
 
 ## Tests
-I am compiling the [tests](https://github.com/aelfimow/cppasm/tree/master/tests) also
-with Visual Studio 2017, see [Visual Studio 2017](https://github.com/aelfimow/cppasm/tree/master/VisualStudio2017)
+I am compiling the [tests](tests) also
+with Visual Studio 2017, see [Visual Studio 2017](VisualStudio2017)
 for the project files.
 
 ## Notes

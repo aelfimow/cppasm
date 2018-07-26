@@ -1164,6 +1164,8 @@ extern Instruction2_Type35 VINSERTF128;
 extern Instruction2_Type35 VINSERTI128;
 extern Instruction4_Type28 VINSERTI32X4;
 extern Instruction4_Type28 VINSERTI64X2;
+extern Instruction2_Type42 VINSERTI32X8;
+extern Instruction2_Type42 VINSERTI64X4;
 extern Instruction4_Type24 VMASKMOVPS;
 extern Instruction4_Type24 VMASKMOVPD;
 extern Instruction4_Type24 VPMASKMOVD;

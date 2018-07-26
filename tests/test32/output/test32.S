@@ -834,6 +834,18 @@ Instruction1_Type4_Label:
 	vbroadcasti64x2 (%ebx), %zmm0{%k1}
 	vbroadcasti64x2 (%ebx), %ymm0{%k1}{z}
 	vbroadcasti64x2 (%ebx), %zmm0{%k1}{z}
+	vinserti32x8 $0x0F, %ymm0, %zmm1, %zmm0
+	vinserti32x8 $0x0F, %ymm0, %zmm1, %zmm0{%k1}
+	vinserti32x8 $0x0F, %ymm0, %zmm1, %zmm0{%k1}{z}
+	vinserti32x8 $0x0F, (%ebx), %zmm1, %zmm0
+	vinserti32x8 $0x0F, (%ebx), %zmm1, %zmm0{%k1}
+	vinserti32x8 $0x0F, (%ebx), %zmm1, %zmm0{%k1}{z}
+	vinserti64x4 $0x0F, %ymm0, %zmm1, %zmm0
+	vinserti64x4 $0x0F, %ymm0, %zmm1, %zmm0{%k1}
+	vinserti64x4 $0x0F, %ymm0, %zmm1, %zmm0{%k1}{z}
+	vinserti64x4 $0x0F, (%ebx), %zmm1, %zmm0
+	vinserti64x4 $0x0F, (%ebx), %zmm1, %zmm0{%k1}
+	vinserti64x4 $0x0F, (%ebx), %zmm1, %zmm0{%k1}{z}
 	lds (%eax), %ax
 	lds (%eax), %eax
 	les (%eax), %ax

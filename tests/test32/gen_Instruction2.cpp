@@ -288,6 +288,18 @@ static void gen_Instruction2_Type41(Instruction2_Type41 &instr)
     instr(ZMM0.k1.z, addr);
 }
 
+static void gen_Instruction2_Type42(Instruction2_Type42 &instr)
+{
+    m256 addr { EBX };
+    imm8 mask { 0x0F };
+    instr(ZMM0, ZMM1, YMM0, mask);
+    instr(ZMM0.k1, ZMM1, YMM0, mask);
+    instr(ZMM0.k1.z, ZMM1, YMM0, mask);
+    instr(ZMM0, ZMM1, addr, mask);
+    instr(ZMM0.k1, ZMM1, addr, mask);
+    instr(ZMM0.k1.z, ZMM1, addr, mask);
+}
+
 void gen_Instruction2()
 {
     gen_Instruction2_Type1(AAD);
@@ -592,4 +604,7 @@ void gen_Instruction2()
     gen_Instruction2_Type41(VBROADCASTF64X2);
     gen_Instruction2_Type41(VBROADCASTI32X4);
     gen_Instruction2_Type41(VBROADCASTI64X2);
+
+    gen_Instruction2_Type42(VINSERTI32X8);
+    gen_Instruction2_Type42(VINSERTI64X4);
 }

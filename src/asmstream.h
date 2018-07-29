@@ -6,6 +6,8 @@
 #else
 #define ASM_STREAM_H
 
+class Instruction;
+
 /*! \class Assembly stream */
 class asmstream
 {

@@ -3,14 +3,17 @@
 */
 #include <iostream>
 #include <string>
+#include "asmstream.h"
 #include "keyword.h"
 
-keyword::keyword() :
+keyword::keyword(asmstream &s) :
+    m_asmout { s },
     m_str { }
 {
 }
 
-keyword::keyword(const std::string str) :
+keyword::keyword(asmstream &s, const std::string str) :
+    m_asmout { s },
     m_str { str }
 {
 }

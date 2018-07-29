@@ -1270,8 +1270,8 @@ Instruction4_Type27 VMWRITE { asmout, "vmwrite" };
 Instruction1_Type1 GETSEC { asmout, "getsec" };
 
 Keyword_label label;
-keyword global { ".global" };
-keyword comment { "#" };
+keyword global { asmout, ".global" };
+keyword comment { asmout, "#" };
 
 const std::string no_suffix { "" };
 const std::string suffix_bw { "bw" };

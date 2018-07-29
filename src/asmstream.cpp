@@ -26,6 +26,11 @@ void asmstream::operator<<(const Instruction &instr)
     std::cout << instr.to_str().c_str() << std::endl;
 }
 
+void asmstream::operator<<(const std::string &str)
+{
+    std::cout << str.c_str() << std::endl;
+}
+
 void asmstream::prefix(const std::string &str)
 {
     std::cout << m_indent << str.c_str();

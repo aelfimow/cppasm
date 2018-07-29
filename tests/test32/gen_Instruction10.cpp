@@ -32,6 +32,8 @@ static void gen_Instruction10_Type2(Instruction10_Type2 &instr)
 
 void gen_Instruction10()
 {
+    comment("gen_Instruction10");
+
     gen_Instruction10_Type1(PUSH);
 
     gen_Instruction10_Type2(CRC32);

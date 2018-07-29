@@ -258,6 +258,8 @@ static void gen_Instruction4_Type28(Instruction4_Type28 &instr)
 
 void gen_Instruction4()
 {
+    comment("gen_Instruction4");
+
     gen_Instruction4_Type1(PACKSSWB);
     gen_Instruction4_Type1(PACKUSWB);
     gen_Instruction4_Type1(PACKSSDW);

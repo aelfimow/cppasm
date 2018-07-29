@@ -31,6 +31,8 @@ static void gen_Instruction26_Type1(Instruction26_Type1 &instr)
 
 void gen_Instruction26()
 {
+    comment("gen_Instruction26");
+
     gen_Instruction26_Type1(ADD);
     gen_Instruction26_Type1(ADC);
     gen_Instruction26_Type1(SUB);

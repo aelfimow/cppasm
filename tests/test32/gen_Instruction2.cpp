@@ -302,6 +302,8 @@ static void gen_Instruction2_Type42(Instruction2_Type42 &instr)
 
 void gen_Instruction2()
 {
+    comment("gen_Instruction2");
+
     gen_Instruction2_Type1(AAD);
     gen_Instruction2_Type1(AAM);
 

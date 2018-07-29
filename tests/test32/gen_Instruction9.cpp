@@ -98,6 +98,8 @@ static void gen_Instruction9_Type3(Instruction9_Type3 &instr)
 
 void gen_Instruction9()
 {
+    comment("gen_Instruction9");
+
     gen_Instruction9_Type1(VPBROADCASTB);
     gen_Instruction9_Type2(VPBROADCASTW);
     gen_Instruction9_Type3(VPBROADCASTD);

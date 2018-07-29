@@ -52,6 +52,8 @@ static void gen_Instruction5_Type5(Instruction5_Type5 &instr)
 
 void gen_Instruction5()
 {
+    comment("gen_Instruction5");
+
     gen_Instruction5_Type1(NOP);
 
     gen_Instruction5_Type2(PEXTRW);

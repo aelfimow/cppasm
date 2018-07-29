@@ -187,6 +187,8 @@ static void gen_Instruction1_Type29(Instruction1_Type29 &instr)
 
 void gen_Instruction1()
 {
+    comment("gen_Instruction1");
+
     gen_Instruction1_Type1(PUSHA);
     gen_Instruction1_Type1(PUSHAD);
     gen_Instruction1_Type1(POPA);
@@ -510,5 +512,4 @@ void gen_Instruction1()
     gen_Instruction1_Type29(KSHIFTRW);
     gen_Instruction1_Type29(KSHIFTRD);
     gen_Instruction1_Type29(KSHIFTRQ);
-
 }

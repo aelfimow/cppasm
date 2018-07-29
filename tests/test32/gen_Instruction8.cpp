@@ -66,6 +66,8 @@ static void gen_Instruction8_Type5(Instruction8_Type5 &instr)
 
 void gen_Instruction8()
 {
+    comment("gen_Instruction8");
+
     gen_Instruction8_Type1(MOVD);
 
     gen_Instruction8_Type2(MOVQ);

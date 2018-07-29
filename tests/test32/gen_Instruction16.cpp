@@ -44,6 +44,8 @@ static void gen_Instruction16_Type2(Instruction16_Type2 &instr)
 
 void gen_Instruction16()
 {
+    comment("gen_Instruction16");
+
     gen_Instruction16_Type1(TEST);
 
     gen_Instruction16_Type2(SAL);

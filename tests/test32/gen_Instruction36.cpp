@@ -36,5 +36,7 @@ static void gen_Instruction36_Type1(Instruction36_Type1 &instr)
 
 void gen_Instruction36()
 {
+    comment("gen_Instruction36");
+
     gen_Instruction36_Type1(MOV);
 }

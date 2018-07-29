@@ -11,8 +11,8 @@ class asmstream;
 class keyword
 {
     public:
-        keyword(asmstream &s);
-        keyword(asmstream &s, const std::string str);
+        explicit keyword(asmstream &s);
+        explicit keyword(asmstream &s, const std::string str);
 
         void operator()(const std::string &name);
 

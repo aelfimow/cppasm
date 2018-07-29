@@ -6,16 +6,22 @@
 #else
 #define LABEL_H
 
+class asmstream;
+
 class Keyword_label
 {
     public:
-        Keyword_label();
+        explicit Keyword_label(asmstream &s);
 
         void operator()(const std::string &name);
 
         ~Keyword_label();
 
+    private:
+        asmstream &m_asmout;
+
     public:
+        Keyword_label();
         Keyword_label(const Keyword_label &instance) = delete;
         Keyword_label(const Keyword_label &&instance) = delete;
         Keyword_label &operator=(const Keyword_label &instance) = delete;

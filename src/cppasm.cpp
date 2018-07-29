@@ -1269,7 +1269,7 @@ Instruction4_Type27 VMWRITE { asmout, "vmwrite" };
 // SMX instructions
 Instruction1_Type1 GETSEC { asmout, "getsec" };
 
-Keyword_label label;
+Keyword_label label { asmout };
 keyword global { asmout, ".global" };
 keyword comment { asmout, "#" };
 

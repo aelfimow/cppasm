@@ -13,10 +13,14 @@ OUTDIR = ./output
 
 INCDIR = ../../src
 
-all: test64
+all: compile link generate test64
 
 .PHONY: test64
 test64:
+	${AS} ${OUTDIR}/test64.S ${ASFLAGS64} -o ${OUTDIR}/test64.o
+
+.PHONY: compile
+compile:
 	${CXX} -c gen_Instruction1.cpp -o ${OUTDIR}/gen_Instruction1.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction2.cpp -o ${OUTDIR}/gen_Instruction2.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction3.cpp -o ${OUTDIR}/gen_Instruction3.o -I${INCDIR} ${CXXFLAGS}
@@ -32,6 +36,11 @@ test64:
 	${CXX} -c gen_Instruction26.cpp -o ${OUTDIR}/gen_Instruction26.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c gen_Instruction36.cpp -o ${OUTDIR}/gen_Instruction36.o -I${INCDIR} ${CXXFLAGS}
 	${CXX} -c test64.cpp -o ${OUTDIR}/test64.o -I${INCDIR} ${CXXFLAGS}
+
+.PHONY: link
+link:
 	${CXX} ${OUTDIR}/*.o ${CPPASM_OBJ} -o test64.exe ${CXXFLAGS}
+
+.PHONY: generate
+generate:
 	test64.exe > ${OUTDIR}/test64.S
-	${AS} ${OUTDIR}/test64.S ${ASFLAGS64} -o ${OUTDIR}/test64.o

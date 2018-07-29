@@ -1,7 +1,6 @@
 /*! \file keyword.cpp
     \brief Class for assembler keywords.
 */
-#include <iostream>
 #include <string>
 #include "asmstream.h"
 #include "keyword.h"
@@ -24,11 +23,13 @@ void keyword::operator()(const std::string &name)
 
     if (isEmpty)
     {
-        std::cout << name.c_str() << std::endl;
+        m_asmout << name;
     }
     else
     {
-        std::cout << m_str.c_str() << " " << name.c_str() << std::endl;
+        const std::string str { m_str + " " + name };
+
+        m_asmout << str;
     }
 }
 

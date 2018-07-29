@@ -1,4 +1,5 @@
 .section .text
+# gen_Instruction1
 	cwtd
 	cltd
 	cqto
@@ -300,6 +301,7 @@ Instruction1_Type4_Label:
 	kshiftrw $0x00, %k2, %k1
 	kshiftrd $0x00, %k2, %k1
 	kshiftrq $0x00, %k2, %k1
+# gen_Instruction2
 	ret
 	ret $0xFFFF
 	lret
@@ -854,6 +856,7 @@ Instruction1_Type4_Label:
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0{%k1}
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0{%k1}{z}
+# gen_Instruction3
 	lfs (%rax), %ax
 	lfs (%rax), %eax
 	lfs (%rax), %rax
@@ -935,6 +938,7 @@ Instruction1_Type4_Label:
 	vextractps $0xFF, %xmm0, %eax
 	vextractps $0xFF, %xmm0, %rax
 	vextractps $0xFF, %xmm0, (%rax)
+# gen_Instruction4
 	packsswb %mm1, %mm0
 	packsswb (%rax), %mm0
 	packsswb %xmm1, %xmm0
@@ -1745,6 +1749,7 @@ Instruction1_Type4_Label:
 	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0
 	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0{%k1}
 	vinserti64x2 $0x0F, (%rdx), %zmm1, %zmm0{%k1}{z}
+# gen_Instruction5
 	nop
 	nop %ax
 	nopw (%rax)
@@ -1775,6 +1780,7 @@ Instruction1_Type4_Label:
 	kmovq %k1, (%rdx)
 	kmovq %rax, %k1
 	kmovq %k2, %rax
+# gen_Instruction6
 	psllw %mm1, %mm0
 	psllw (%rax), %mm0
 	psllw %xmm1, %xmm0
@@ -2099,6 +2105,7 @@ Instruction1_Type4_Label:
 	vbroadcasti32x2 %xmm1, %xmm0{%k1}{z}
 	vbroadcasti32x2 %xmm1, %ymm0{%k1}{z}
 	vbroadcasti32x2 %xmm1, %zmm0{%k1}{z}
+# gen_Instruction7
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label
 	jmp *%rax
@@ -2124,6 +2131,7 @@ gen_Instruction7_Type3_label:
 	lcall *(%rax)
 	lcall *(%rbx)
 	lcall *(%rbx)
+# gen_Instruction8
 	movd %eax, %mm0
 	movd (%edx), %mm0
 	movd %mm0, %eax
@@ -2236,6 +2244,7 @@ gen_Instruction7_Type3_label:
 	vpermilps $0xFF, (%rdx), %xmm0
 	vpermilps $0xFF, %ymm1, %ymm0
 	vpermilps $0xFF, (%rdx), %ymm0
+# gen_Instruction9
 	vpbroadcastb %eax, %xmm0
 	vpbroadcastb %eax, %ymm0
 	vpbroadcastb %eax, %zmm0
@@ -2344,6 +2353,7 @@ gen_Instruction7_Type3_label:
 	vpbroadcastq (%rbx), %xmm0{%k1}{z}
 	vpbroadcastq (%rbx), %ymm0{%k1}{z}
 	vpbroadcastq (%rbx), %zmm0{%k1}{z}
+# gen_Instruction10
 	push %ax
 	push %rax
 	pushw (%rdx)
@@ -2361,6 +2371,7 @@ gen_Instruction7_Type3_label:
 	crc32b (%rdx), %rcx
 	crc32 %rax, %rcx
 	crc32q (%rdx), %rcx
+# gen_Instruction12
 	bt %bx, %ax
 	bt %ax, (%rdx)
 	bt %ebx, %eax
@@ -2465,6 +2476,7 @@ gen_Instruction7_Type3_label:
 	shrd %cl, %ebx, (%rdx)
 	shrd %cl, %rbx, %rax
 	shrd %cl, %rbx, (%rdx)
+# gen_Instruction16
 	test $0xAA, %al
 	testb $0xAA, (%rdx)
 	test $0xAABB, %ax
@@ -2607,6 +2619,7 @@ gen_Instruction7_Type3_label:
 	rorq $0x01, (%rdx)
 	ror %cl, %rax
 	rorq %cl, (%rdx)
+# gen_Instruction26
 	add $0x01, %al
 	addb $0x01, (%rdx)
 	add $0x0002, %ax
@@ -2815,6 +2828,7 @@ gen_Instruction7_Type3_label:
 	xor (%rdx), %ax
 	xor (%rdx), %eax
 	xor (%rdx), %rax
+# gen_Instruction36
 	mov %cl, %al
 	mov %cl, (%rdx)
 	mov %cx, %ax

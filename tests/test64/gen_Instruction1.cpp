@@ -194,6 +194,8 @@ static void gen_Instruction1_Type29(Instruction1_Type29 &instr)
 
 void gen_Instruction1()
 {
+    comment("gen_Instruction1");
+
     gen_Instruction1_Type1(CWD);
     gen_Instruction1_Type1(CDQ);
     gen_Instruction1_Type1(CQO);

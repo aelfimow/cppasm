@@ -108,6 +108,8 @@ static void gen_Instruction6_Type7(Instruction6_Type7 &instr)
 
 void gen_Instruction6()
 {
+    comment("gen_Instruction6");
+
     gen_Instruction6_Type1(PSLLW);
     gen_Instruction6_Type1(PSLLD);
     gen_Instruction6_Type1(PSLLQ);

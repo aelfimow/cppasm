@@ -87,6 +87,8 @@ static void gen_Instruction3_Type10(Instruction3_Type10 &instr)
 
 void gen_Instruction3()
 {
+    comment("gen_Instruction3");
+
     gen_Instruction3_Type1(LFS);
     gen_Instruction3_Type1(LGS);
     gen_Instruction3_Type1(LSS);

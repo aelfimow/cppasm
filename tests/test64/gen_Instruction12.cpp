@@ -78,6 +78,8 @@ static void gen_Instruction12_Type4(Instruction12_Type4 &instr)
 
 void gen_Instruction12()
 {
+    comment("gen_Instruction12");
+
     gen_Instruction12_Type1(BT);
     gen_Instruction12_Type1(BTC);
     gen_Instruction12_Type1(BTR);

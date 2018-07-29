@@ -38,6 +38,8 @@ static void gen_Instruction7_Type3(Instruction7_Type3 &instr)
 
 void gen_Instruction7()
 {
+    comment("gen_Instruction7");
+
     label("gen_Instruction7_Type1_label");
     gen_Instruction7_Type1(JMP);
     gen_Instruction7_Type1(CALL);

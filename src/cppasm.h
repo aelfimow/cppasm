@@ -53,6 +53,8 @@ extern const std::string suffix_m64int;
 #include "Instruction26_Types.h"
 #include "Instruction36_Types.h"
 
+extern asmstream asmout;
+
 extern r8 AL;
 extern r8 AH;
 extern r8 BL;

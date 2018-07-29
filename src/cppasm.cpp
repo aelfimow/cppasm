@@ -6,7 +6,7 @@
 
 static constexpr char indent_char { '\t' };
 
-static asmstream asmout { indent_char };
+asmstream asmout { indent_char };
 
 r8 AL { "%al" };
 r8 AH { "%ah" };

@@ -6,6 +6,8 @@
 #else
 #define SECTION_H
 
+class asmstream;
+
 class section
 {
     public:
@@ -15,6 +17,7 @@ class section
         void start();
 
     private:
+        asmstream &m_asmout;
         const std::string m_name;
 
     public:

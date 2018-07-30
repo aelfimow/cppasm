@@ -123,6 +123,7 @@
     <ClCompile Include="..\..\src\label.cpp" />
     <ClCompile Include="..\..\src\section.cpp" />
     <ClCompile Include="..\..\src\st.cpp" />
+    <ClCompile Include="..\..\src\streamdest_cout.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction1.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction10.cpp" />
     <ClCompile Include="..\..\tests\test32\gen_Instruction12.cpp" />
@@ -166,6 +167,8 @@
     <ClInclude Include="..\..\src\reg.h" />
     <ClInclude Include="..\..\src\section.h" />
     <ClInclude Include="..\..\src\st.h" />
+    <ClInclude Include="..\..\src\streamdest.h" />
+    <ClInclude Include="..\..\src\streamdest_cout.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,6 +9,7 @@ OBJDIR = ./obj
 
 all:
 	${CXX} -c asmstream.cpp -o ${OBJDIR}/asmstream.o ${CXXFLAGS}
+	${CXX} -c streamdest_cout.cpp -o ${OBJDIR}/streamdest_cout.o ${CXXFLAGS}
 	${CXX} -c cppasm.cpp -o ${OBJDIR}/cppasm.o ${CXXFLAGS}
 	${CXX} -c Instruction.cpp -o ${OBJDIR}/Instruction.o ${CXXFLAGS}
 	${CXX} -c keyword.cpp -o ${OBJDIR}/keyword.o ${CXXFLAGS}

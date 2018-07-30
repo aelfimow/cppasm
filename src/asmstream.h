@@ -15,6 +15,8 @@ class asmstream
     public:
         asmstream();
 
+        void set(streamdest *p);
+
         void operator<<(const Instruction &instr);
 
         void operator<<(const std::string &str);

@@ -13,6 +13,12 @@ asmstream::asmstream() :
 {
 }
 
+void asmstream::set(streamdest *p)
+{
+    delete m_streamdest;
+    m_streamdest = p;
+}
+
 void asmstream::operator<<(const Instruction &instr)
 {
     if (m_prefix)

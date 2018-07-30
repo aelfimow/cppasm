@@ -15,6 +15,7 @@ class streamdest_cout: public streamdest
 
         void space() override;
         void indent() override;
+        void write(const std::string &str) override;
         void writeln(const std::string &str) override;
 
     public:

@@ -23,6 +23,11 @@ void streamdest_cout::indent()
     std::cout << '\t';
 }
 
+void streamdest_cout::write(const std::string &str)
+{
+    std::cout << str.c_str();
+}
+
 void streamdest_cout::writeln(const std::string &str)
 {
     std::cout << str.c_str() << std::endl;

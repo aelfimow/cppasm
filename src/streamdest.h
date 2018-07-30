@@ -15,6 +15,7 @@ class streamdest
 
         virtual void space() = 0;
         virtual void indent() = 0;
+        virtual void write(const std::string &str) = 0;
         virtual void writeln(const std::string &str) = 0;
 
     public:

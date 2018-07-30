@@ -1,3 +1,6 @@
+/*! \file streamdest_cout.cpp
+    \brief Class for Assembly Stream destination std::cout.
+*/
 #include <iostream>
 #include "streamdest.h"
 #include "streamdest_cout.h"

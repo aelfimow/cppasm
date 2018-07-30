@@ -1,12 +1,14 @@
 /*! \file asmstream.cpp
     \brief Class for Assembly Stream.
 */
-#include <iostream>
+#include <string>
 #include "Instruction.h"
+#include "streamdest.h"
 #include "asmstream.h"
+#include "streamdest_cout.h"
 
-asmstream::asmstream(char indent) :
-    m_indent { indent },
+asmstream::asmstream() :
+    m_streamdest { new streamdest_cout },
     m_prefix { false }
 {
 }
@@ -15,28 +17,30 @@ void asmstream::operator<<(const Instruction &instr)
 {
     if (m_prefix)
     {
-        std::cout << " ";
+        m_streamdest->space();
         m_prefix = false;
     }
     else
     {
-        std::cout << m_indent;
+        m_streamdest->indent();
     }
 
-    std::cout << instr.to_str().c_str() << std::endl;
+    m_streamdest->writeln(instr.to_str());
 }
 
 void asmstream::operator<<(const std::string &str)
 {
-    std::cout << str.c_str() << std::endl;
+    m_streamdest->writeln(str);
 }
 
 void asmstream::prefix(const std::string &str)
 {
-    std::cout << m_indent << str.c_str();
+    m_streamdest->indent();
+    m_streamdest->write(str);
     m_prefix = true;
 }
 
 asmstream::~asmstream()
 {
+    delete m_streamdest;
 }

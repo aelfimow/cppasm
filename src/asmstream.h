@@ -7,12 +7,13 @@
 #define ASM_STREAM_H
 
 class Instruction;
+class streamdest;
 
 /*! \class Assembly stream */
 class asmstream
 {
     public:
-        explicit asmstream(char indent);
+        asmstream();
 
         void operator<<(const Instruction &instr);
 
@@ -23,11 +24,10 @@ class asmstream
         ~asmstream();
 
     private:
-        const char m_indent;
+        streamdest *m_streamdest;
         bool m_prefix;
 
     public:
-        asmstream() = delete;
         asmstream(const asmstream &instance) = delete;
         asmstream(const asmstream &&instance) = delete;
         asmstream &operator=(const asmstream &instance) = delete;

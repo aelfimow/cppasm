@@ -43,13 +43,16 @@ assemble generated assembly files.
 
 ## Tests
 The idea behind testing the generator is to generate as much as possible of supported
-instructions, even the generated code is not functional, and to assemble it using
-GNU assembler. The test is successful, if the assembler does not complain. Additionally,
-the generated assembler code has been reviewed and added to the git repository,
+instructions and to assemble it using GNU assembler.
+The test is successful, if the assembler does not complain.
+Additionally, the generated assembler code has been reviewed and added to the git repository,
 so `git status` output must be checked for any changes.
-The tests are divided into [32-bit](tests/test32) and [64-bit](tests/test64).
+The tests are divided into [32-bit](tests/test32) and [64-bit](tests/test64) tests.
 The test code is also compiled with [Visual Studio 2017](VisualStudio2017), but
-the source code is just compiled and the assembly source code output is ignored.
+the source code is just compiled only and the assembly source code output is ignored.
+
+Currently, improved [tests](https://github.com/aelfimow/cppasm-test)
+have been started using [googletest](https://github.com/google/googletest) framework.
 
 ## Notes
 This C++ generator does not attempt to convince people to write assembly source code.

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
+#include <valarray>
 #include <stdexcept>
+#include <map>
 
 extern "C" uint64_t rdtsc_func(void);
 
@@ -10,16 +12,47 @@ try
     argc = argc;
     argv = argv;
 
-    auto t0 = rdtsc_func();
-    auto t1 = rdtsc_func();
+    std::valarray<uint64_t> diffs(100);
+    std::map<uint64_t, size_t> stat;
 
-    auto diff = (t1 - t0);
+    for (auto it = std::begin(diffs); it != std::end(diffs); ++it)
+    {
+        auto t0 = rdtsc_func();
+        auto t1 = rdtsc_func();
 
-    std::cout << "T0: " << t0 << std::endl;
-    std::cout << "T1: " << t1 << std::endl;
-    std::cout << "Diff: " << diff << std::endl;
+        if (t1 < t0)
+        {
+            throw std::logic_error("t1 < t0");
+        }
+
+        auto d = (t1 - t0);
+
+        *it = d;
+
+        if (auto stat_elem = stat.find(d); stat_elem != stat.end())
+        {
+            stat_elem->second += 1;
+        }
+        else
+        {
+            stat[d] = 1;
+        }
+    }
+
+    std::cout << "Min.: " << diffs.min() << std::endl;
+    std::cout << "Max.: " << diffs.max() << std::endl;
+
+    for (auto stat_elem: stat)
+    {
+        std::cout << stat_elem.first << ": " << stat_elem.second << std::endl;
+    }
 
     return EXIT_SUCCESS;
+}
+catch (std::logic_error &exc)
+{
+    std::cerr << "Error, exception: " << exc.what() << std::endl;
+    return EXIT_FAILURE;
 }
 catch (...)
 {

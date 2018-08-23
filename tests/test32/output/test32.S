@@ -48,7 +48,6 @@
 	sti
 	std
 	.byte 0x0F, 0xFF
-	ud1
 	ud2
 	cpuid
 	xlat
@@ -1983,6 +1982,12 @@ Instruction1_Type4_Label:
 	vbroadcasti32x2 %xmm1, %xmm0{%k1}{z}
 	vbroadcasti32x2 %xmm1, %ymm0{%k1}{z}
 	vbroadcasti32x2 %xmm1, %zmm0{%k1}{z}
+	vpermd %ymm2, %ymm1, %ymm0
+	vpermd (%ebx), %ymm1, %ymm0
+	vpermd (%edx){1to8}, %ymm1, %ymm0
+	vpermd %zmm2, %zmm1, %zmm0
+	vpermd (%ebx), %zmm1, %zmm0
+	vpermd (%edx){1to16}, %zmm1, %zmm0
 # gen_Instruction7
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label

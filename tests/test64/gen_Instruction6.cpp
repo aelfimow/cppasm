@@ -106,6 +106,20 @@ static void gen_Instruction6_Type7(Instruction6_Type7 &instr)
     instr(ZMM0.k1.z, XMM1);
 }
 
+static void gen_Instruction6_Type8(Instruction6_Type8 &instr)
+{
+    m256 addr1 { RBX };
+    m32 addr2 { RDX };
+
+    instr(YMM0, YMM1, YMM2);
+    instr(YMM0, YMM1, addr1);
+    instr(YMM0, YMM1, addr2.broadcast(1, 8));
+
+    instr(ZMM0, ZMM1, ZMM2);
+    instr(ZMM0, ZMM1, addr1);
+    instr(ZMM0, ZMM1, addr2.broadcast(1, 16));
+}
+
 void gen_Instruction6()
 {
     comment("gen_Instruction6");
@@ -166,4 +180,6 @@ void gen_Instruction6()
     gen_Instruction6_Type6(VBROADCASTSS);
 
     gen_Instruction6_Type7(VBROADCASTI32X2);
+
+    gen_Instruction6_Type8(VPERMD);
 }

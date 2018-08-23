@@ -76,4 +76,14 @@ using Instruction6_Type7 = Instruction_6
     Operands_reg_reg<zmm, xmm, no_suffix>
 >;
 
+using Instruction6_Type8 = Instruction_6
+<
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>,
+    Operands_reg_reg_mem<ymm, ymm, m32>,
+    Operands_reg_reg_reg<zmm, zmm, zmm>,
+    Operands_reg_reg_mem<zmm, zmm, m256>,
+    Operands_reg_reg_mem<zmm, zmm, m32>
+>;
+
 #endif

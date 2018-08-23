@@ -37,7 +37,8 @@ class m_template : public m
             m_base { },
             m_index { },
             m_scale { },
-            m_disp { }
+            m_disp { },
+            m_broadcast { }
         {
         }
 
@@ -47,7 +48,8 @@ class m_template : public m
             m_base { base.name() },
             m_index { },
             m_scale { },
-            m_disp { }
+            m_disp { },
+            m_broadcast { }
         {
         }
 
@@ -57,7 +59,8 @@ class m_template : public m
             m_base { base.name() },
             m_index { index.name() },
             m_scale { },
-            m_disp { }
+            m_disp { },
+            m_broadcast { }
         {
         }
 
@@ -67,7 +70,8 @@ class m_template : public m
             m_base { base.name() },
             m_index { index.name() },
             m_scale { },
-            m_disp { }
+            m_disp { },
+            m_broadcast { }
         {
             std::ostringstream ss;
             ss << scale;
@@ -102,6 +106,11 @@ class m_template : public m
             }
 
             str.append(")");
+
+            if (0 != m_broadcast.length())
+            {
+                str.append(m_broadcast);
+            }
 
             return { m_disp + str };
         }
@@ -141,12 +150,26 @@ class m_template : public m
             return *this;
         }
 
+        m_template<bit_width> &broadcast(size_t from, size_t to)
+        {
+            std::ostringstream ss_from;
+            ss_from << from;
+
+            std::ostringstream ss_to;
+            ss_to << to;
+
+            m_broadcast = "{" + ss_from.str() + "to" + ss_to.str() + "}";
+
+            return *this;
+        }
+
     private:
         const int m_bit_width;
         std::string m_base;
         std::string m_index;
         std::string m_scale;
         std::string m_disp;
+        std::string m_broadcast;
 
     public:
         m_template(const m_template &instance) = delete;

@@ -242,7 +242,6 @@ void gen_Instruction1()
     gen_Instruction1_Type1(STI);
     gen_Instruction1_Type1(STD);
     gen_Instruction1_Type1(UD);
-    gen_Instruction1_Type1(UD1);
     gen_Instruction1_Type1(UD2);
     gen_Instruction1_Type1(CPUID);
     gen_Instruction1_Type1(XLAT);

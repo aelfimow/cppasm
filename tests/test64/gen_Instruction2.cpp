@@ -307,6 +307,13 @@ static void gen_Instruction2_Type42(Instruction2_Type42 &instr)
     instr(ZMM0.k1.z, ZMM1, addr, mask);
 }
 
+static void gen_Instruction2_Type43(Instruction2_Type43 &instr)
+{
+    m32 addr { EDX };
+    instr(EAX, EAX);
+    instr(EAX, addr);
+}
+
 void gen_Instruction2()
 {
     comment("gen_Instruction2");
@@ -613,4 +620,6 @@ void gen_Instruction2()
 
     gen_Instruction2_Type42(VINSERTI32X8);
     gen_Instruction2_Type42(VINSERTI64X4);
+
+    gen_Instruction2_Type43(UD1);
 }

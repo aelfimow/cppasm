@@ -855,6 +855,8 @@ Instruction1_Type4_Label:
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0{%k1}
 	vinserti64x4 $0x0F, (%rbx), %zmm1, %zmm0{%k1}{z}
+	ud1 %eax, %eax
+	ud1 (%edx), %eax
 # gen_Instruction3
 	lfs (%rax), %ax
 	lfs (%rax), %eax

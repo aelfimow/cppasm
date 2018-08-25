@@ -487,7 +487,7 @@ extern Instruction3_Type1 LSS;
 extern Instruction3_Type1 LEA;
 extern Instruction5_Type1 NOP;
 extern Instruction1_Type1 UD;
-extern Instruction1_Type1 UD1;
+extern Instruction2_Type43 UD1;
 extern Instruction1_Type1 UD2;
 extern Instruction1_Type1 CPUID;
 extern Instruction1_Type1 XLAT;

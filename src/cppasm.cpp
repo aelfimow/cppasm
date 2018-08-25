@@ -438,7 +438,7 @@ Instruction3_Type1 LSS { asmout, "lss" };
 Instruction3_Type1 LEA { asmout, "lea" };
 Instruction5_Type1 NOP { asmout, "nop" };
 Instruction1_Type1 UD { asmout, ".byte 0x0F, 0xFF" };
-Instruction1_Type1 UD1 { asmout, "ud1" };
+Instruction2_Type43 UD1 { asmout, "ud1" };
 Instruction1_Type1 UD2 { asmout, "ud2" };
 Instruction1_Type1 CPUID { asmout, "cpuid" };
 Instruction1_Type1 XLAT { asmout, "xlat" };

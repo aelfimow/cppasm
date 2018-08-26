@@ -184,6 +184,7 @@ using m32 = m_template<32>;
 using m64 = m_template<64>;
 using m128 = m_template<128>;
 using m256 = m_template<256>;
+using m512 = m_template<512>;
 using m32fp = m_template<32>;
 using m64fp = m_template<64>;
 using m80fp = m_template<80>;

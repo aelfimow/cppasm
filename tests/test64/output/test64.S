@@ -2112,6 +2112,24 @@ Instruction1_Type4_Label:
 	vpermd %zmm2, %zmm1, %zmm0
 	vpermd (%rbx), %zmm1, %zmm0
 	vpermd (%rdx){1to16}, %zmm1, %zmm0
+	vpermw %xmm1, %xmm1, %xmm0
+	vpermw %xmm1, %xmm1, %xmm0{%k1}
+	vpermw %xmm1, %xmm1, %xmm0{%k1}{z}
+	vpermw (%rbx), %xmm1, %xmm0
+	vpermw (%rbx), %xmm1, %xmm0{%k1}
+	vpermw (%rbx), %xmm1, %xmm0{%k1}{z}
+	vpermw %ymm1, %ymm1, %ymm0
+	vpermw %ymm1, %ymm1, %ymm0{%k1}
+	vpermw %ymm1, %ymm1, %ymm0{%k1}{z}
+	vpermw (%rcx), %ymm1, %ymm0
+	vpermw (%rcx), %ymm1, %ymm0{%k1}
+	vpermw (%rcx), %ymm1, %ymm0{%k1}{z}
+	vpermw %zmm1, %zmm1, %zmm0
+	vpermw %zmm1, %zmm1, %zmm0{%k1}
+	vpermw %zmm1, %zmm1, %zmm0{%k1}{z}
+	vpermw (%rdx), %zmm1, %zmm0
+	vpermw (%rdx), %zmm1, %zmm0{%k1}
+	vpermw (%rdx), %zmm1, %zmm0{%k1}{z}
 # gen_Instruction7
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label

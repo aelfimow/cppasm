@@ -120,6 +120,37 @@ static void gen_Instruction6_Type8(Instruction6_Type8 &instr)
     instr(ZMM0, ZMM1, addr2.broadcast(1, 16));
 }
 
+static void gen_Instruction6_Type9(Instruction6_Type9 &instr)
+{
+    m128 addr1 { RBX };
+    m256 addr2 { RCX };
+    m512 addr3 { RDX };
+
+    instr(XMM0, XMM1, XMM1);
+    instr(XMM0.k1, XMM1, XMM1);
+    instr(XMM0.k1.z, XMM1, XMM1);
+
+    instr(XMM0, XMM1, addr1);
+    instr(XMM0.k1, XMM1, addr1);
+    instr(XMM0.k1.z, XMM1, addr1);
+
+    instr(YMM0, YMM1, YMM1);
+    instr(YMM0.k1, YMM1, YMM1);
+    instr(YMM0.k1.z, YMM1, YMM1);
+
+    instr(YMM0, YMM1, addr2);
+    instr(YMM0.k1, YMM1, addr2);
+    instr(YMM0.k1.z, YMM1, addr2);
+
+    instr(ZMM0, ZMM1, ZMM1);
+    instr(ZMM0.k1, ZMM1, ZMM1);
+    instr(ZMM0.k1.z, ZMM1, ZMM1);
+
+    instr(ZMM0, ZMM1, addr3);
+    instr(ZMM0.k1, ZMM1, addr3);
+    instr(ZMM0.k1.z, ZMM1, addr3);
+}
+
 void gen_Instruction6()
 {
     comment("gen_Instruction6");
@@ -182,4 +213,6 @@ void gen_Instruction6()
     gen_Instruction6_Type7(VBROADCASTI32X2);
 
     gen_Instruction6_Type8(VPERMD);
+
+    gen_Instruction6_Type9(VPERMW);
 }

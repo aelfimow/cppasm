@@ -16,22 +16,22 @@ struct fp32_params
 static_assert(sizeof(fp32_t) == 4);
 static_assert(sizeof(struct fp32_params) == (3 * sizeof(fp32_t)));
 
-template <typename T> void gen_fp32_init()
+template <typename T> void gen_fp32_init(r64 &param_reg)
 {
     const std::string func_name { "macheps_fp32_init" };
     comment("void " + func_name + "(void *param)");
-    comment("param is in %rcx");
+    comment("param is in " + param_reg.name());
 
     global(func_name);
     label(func_name);
 
-    m32fp value_addr { RCX };
+    m32fp value_addr { param_reg };
     value_addr.disp(offsetof(T, value));
 
-    m32fp epsilon_addr { RCX };
+    m32fp epsilon_addr { param_reg };
     epsilon_addr.disp(offsetof(T, epsilon));
 
-    m32fp sum_addr { RCX };
+    m32fp sum_addr { param_reg };
     sum_addr.disp(offsetof(T, sum));
 
     FLD1();
@@ -57,7 +57,9 @@ try
     section code { ".text" };
     code.start();
 
-    gen_fp32_init<struct fp32_params>();
+    r64 &param_reg { RCX };
+
+    gen_fp32_init<struct fp32_params>(param_reg);
 
     return EXIT_SUCCESS;
 }

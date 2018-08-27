@@ -64,3 +64,8 @@ examples/lea-arithm/*.o
 examples/thousand-nops/*.exe
 examples/rc4/*.exe
 examples/rc4/*.o
+examples/macheps/example.exe
+examples/macheps/example.o
+examples/macheps/generate.exe
+examples/macheps/generate.o
+examples/macheps/macheps.o

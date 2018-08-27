@@ -55,13 +55,13 @@ template <typename T> void gen_fp32_compute(r64 &param_reg)
     m32fp sum_addr { param_reg };
     sum_addr.disp(offsetof(T, sum));
 
-    comment("Load epsilon");
-    FLD(epsilon_addr);
-
     comment("Compute: 2.0");
     FLD1();
     FLD1();
     FADDP();
+
+    comment("Load epsilon");
+    FLD(epsilon_addr);
 
     comment("Compute: epsilon /= 2.0");
     FDIVP();

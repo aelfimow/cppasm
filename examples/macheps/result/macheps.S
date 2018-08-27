@@ -15,12 +15,12 @@ macheps_fp32_init:
 # param is in %rcx
 .global macheps_fp32_compute
 macheps_fp32_compute:
-# Load epsilon
-	flds 4(%rcx)
 # Compute: 2.0
 	fld1
 	fld1
 	faddp
+# Load epsilon
+	flds 4(%rcx)
 # Compute: epsilon /= 2.0
 	fdivp
 # Save epsilon

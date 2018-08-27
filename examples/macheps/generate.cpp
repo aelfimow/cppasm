@@ -16,15 +16,8 @@ struct fp32_params
 static_assert(sizeof(fp32_t) == 4);
 static_assert(sizeof(fp32_params) == (3 * sizeof(fp32_t)));
 
-int main(int argc, char *argv[])
-try
+static void gen_fp32_init()
 {
-    argc = argc;
-    argv = argv;
-
-    section code { ".text" };
-    code.start();
-
     const std::string func_name { "macheps_fp32_init" };
     comment("void " + func_name + "(void *param)");
     comment("param is in %rcx");
@@ -53,6 +46,18 @@ try
     FSTP(sum);
 
     RET();
+}
+
+int main(int argc, char *argv[])
+try
+{
+    argc = argc;
+    argv = argv;
+
+    section code { ".text" };
+    code.start();
+
+    gen_fp32_init();
 
     return EXIT_SUCCESS;
 }

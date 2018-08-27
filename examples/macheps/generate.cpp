@@ -3,18 +3,7 @@
 #include <stdexcept>
 
 #include "cppasm.h"
-
-using fp32_t = float;
-
-struct fp32_params
-{
-    fp32_t value;
-    fp32_t epsilon;
-    fp32_t sum;
-};
-
-static_assert(sizeof(fp32_t) == 4);
-static_assert(sizeof(struct fp32_params) == (3 * sizeof(fp32_t)));
+#include "macheps.h"
 
 template <typename T> void gen_fp32_init(r64 &param_reg)
 {

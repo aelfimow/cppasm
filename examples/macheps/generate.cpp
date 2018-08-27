@@ -25,25 +25,25 @@ template <typename T> void gen_fp32_init()
     global(func_name);
     label(func_name);
 
-    m32fp value { RCX };
-    value.disp(offsetof(T, value));
+    m32fp value_addr { RCX };
+    value_addr.disp(offsetof(T, value));
 
-    m32fp epsilon { RCX };
-    epsilon.disp(offsetof(T, epsilon));
+    m32fp epsilon_addr { RCX };
+    epsilon_addr.disp(offsetof(T, epsilon));
 
-    m32fp sum { RCX };
-    sum.disp(offsetof(T, sum));
+    m32fp sum_addr { RCX };
+    sum_addr.disp(offsetof(T, sum));
 
     FLD1();
-    FST(value);
-    FSTP(epsilon);
+    FST(value_addr);
+    FSTP(epsilon_addr);
 
-    FLD(value);
-    FLD(epsilon);
+    FLD(value_addr);
+    FLD(epsilon_addr);
 
     FADDP();
 
-    FSTP(sum);
+    FSTP(sum_addr);
 
     RET();
 }

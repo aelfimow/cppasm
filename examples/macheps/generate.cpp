@@ -10,9 +10,8 @@ template
     typename T,
     typename MemAddr
 >
-void gen_fpu_init(r64 &param_reg)
+void gen_fpu_init(r64 &param_reg, const std::string func_name)
 {
-    const std::string func_name { "macheps_fp32_init" };
     comment("void " + func_name + "(void *param)");
     comment("param is in " + param_reg.name());
 
@@ -47,9 +46,8 @@ template
     typename T,
     typename MemAddr
 >
-void gen_fpu_compute(r64 &param_reg)
+void gen_fpu_compute(r64 &param_reg, const std::string func_name)
 {
-    const std::string func_name { "macheps_fp32_compute" };
     comment("void " + func_name + "(void *param)");
     comment("param is in " + param_reg.name());
 
@@ -99,8 +97,8 @@ try
 
     r64 &param_reg { RCX };
 
-    gen_fpu_init<fp32_params, m32fp>(param_reg);
-    gen_fpu_compute<fp32_params, m32fp>(param_reg);
+    gen_fpu_init<fp32_params, m32fp>(param_reg, "macheps_fp32_init");
+    gen_fpu_compute<fp32_params, m32fp>(param_reg, "macheps_fp32_compute");
 
     return EXIT_SUCCESS;
 }

@@ -15,23 +15,55 @@ std::ostream &operator<<(std::ostream &os, const fp32_params &param)
     return os;
 }
 
+std::ostream &operator<<(std::ostream &os, const fp64_params &param)
+{
+    os << "value: " << param.value;
+    os << "; ";
+    os << "epsilon: " << param.epsilon;
+    os << "; ";
+    os << "sum: " << param.sum;
+
+    return os;
+}
+
+static void use_fp32()
+{
+    fp32_params param;
+    macheps_fp32_init(&param);
+
+    std::cout << "Init (fp32): " << param << std::endl;
+
+    for (auto cnt = 0; cnt < 3; ++cnt)
+    {
+        macheps_fp32_compute(&param);
+
+        std::cout << "Compute (fp32): " << param << std::endl;
+    }
+}
+
+static void use_fp64()
+{
+    fp64_params param;
+    macheps_fp64_init(&param);
+
+    std::cout << "Init (fp64): " << param << std::endl;
+
+    for (auto cnt = 0; cnt < 3; ++cnt)
+    {
+        macheps_fp64_compute(&param);
+
+        std::cout << "Compute (fp64): " << param << std::endl;
+    }
+}
+
 int main(int argc, char *argv[])
 try
 {
     argc = argc;
     argv = argv;
 
-    fp32_params param;
-    macheps_fp32_init(&param);
-
-    std::cout << "Init: " << param << std::endl;
-
-    for (auto cnt = 0; cnt < 10; ++cnt)
-    {
-        macheps_fp32_compute(&param);
-
-        std::cout << "Compute: " << param << std::endl;
-    }
+    use_fp32();
+    use_fp64();
 
     return EXIT_SUCCESS;
 }

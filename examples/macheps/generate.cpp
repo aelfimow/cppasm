@@ -100,6 +100,9 @@ try
     gen_fpu_init<fp32_params, m32fp>(param_reg, "macheps_fp32_init");
     gen_fpu_compute<fp32_params, m32fp>(param_reg, "macheps_fp32_compute");
 
+    gen_fpu_init<fp64_params, m64fp>(param_reg, "macheps_fp64_init");
+    gen_fpu_compute<fp64_params, m64fp>(param_reg, "macheps_fp64_compute");
+
     return EXIT_SUCCESS;
 }
 catch (...)

@@ -31,3 +31,35 @@ macheps_fp32_compute:
 	faddp
 	fstps 8(%rcx)
 	ret
+# void macheps_fp64_init(void *param)
+# param is in %rcx
+.global macheps_fp64_init
+macheps_fp64_init:
+	fld1
+	fstl (%rcx)
+	fstpl 8(%rcx)
+	fldl (%rcx)
+	fldl 8(%rcx)
+	faddp
+	fstpl 16(%rcx)
+	ret
+# void macheps_fp64_compute(void *param)
+# param is in %rcx
+.global macheps_fp64_compute
+macheps_fp64_compute:
+# Compute: 2.0
+	fld1
+	fld1
+	faddp
+# Load epsilon
+	fldl 8(%rcx)
+# Compute: epsilon /= 2.0
+	fdivp
+# Save epsilon
+	fstpl 8(%rcx)
+# Compute: sum = value + epsilon
+	fldl (%rcx)
+	fldl 8(%rcx)
+	faddp
+	fstpl 16(%rcx)
+	ret

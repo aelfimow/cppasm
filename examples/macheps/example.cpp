@@ -10,9 +10,9 @@ try
     argc = argc;
     argv = argv;
 
-    struct fp32_params param;
-
+    fp32_params param;
     macheps_fp32_init(&param);
+
     std::cout << "Init: " <<
         "value: " << param.value << "; " <<
         "epsilon: " << param.epsilon << "; " <<

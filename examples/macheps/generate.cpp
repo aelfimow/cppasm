@@ -89,8 +89,8 @@ try
 
     r64 &param_reg { RCX };
 
-    gen_fp32_init<struct fp32_params>(param_reg);
-    gen_fp32_compute<struct fp32_params>(param_reg);
+    gen_fp32_init<fp32_params>(param_reg);
+    gen_fp32_compute<fp32_params>(param_reg);
 
     return EXIT_SUCCESS;
 }

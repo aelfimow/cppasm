@@ -3,9 +3,13 @@
 # param is in %rcx
 .global macheps_fp32_init
 macheps_fp32_init:
+# value = 1.0
 	fld1
-	fsts (%rcx)
+	fstps (%rcx)
+# epsilon = 1.0
+	fld1
 	fstps 4(%rcx)
+# sum = value + epsilon
 	flds (%rcx)
 	flds 4(%rcx)
 	faddp
@@ -19,11 +23,9 @@ macheps_fp32_compute:
 	fld1
 	fld1
 	faddp
-# Load epsilon
-	flds 4(%rcx)
 # Compute: epsilon /= 2.0
+	flds 4(%rcx)
 	fdivp
-# Save epsilon
 	fstps 4(%rcx)
 # Compute: sum = value + epsilon
 	flds (%rcx)
@@ -35,9 +37,13 @@ macheps_fp32_compute:
 # param is in %rcx
 .global macheps_fp64_init
 macheps_fp64_init:
+# value = 1.0
 	fld1
-	fstl (%rcx)
+	fstpl (%rcx)
+# epsilon = 1.0
+	fld1
 	fstpl 8(%rcx)
+# sum = value + epsilon
 	fldl (%rcx)
 	fldl 8(%rcx)
 	faddp
@@ -51,15 +57,47 @@ macheps_fp64_compute:
 	fld1
 	fld1
 	faddp
-# Load epsilon
-	fldl 8(%rcx)
 # Compute: epsilon /= 2.0
+	fldl 8(%rcx)
 	fdivp
-# Save epsilon
 	fstpl 8(%rcx)
 # Compute: sum = value + epsilon
 	fldl (%rcx)
 	fldl 8(%rcx)
 	faddp
 	fstpl 16(%rcx)
+	ret
+# void macheps_fp80_init(void *param)
+# param is in %rcx
+.global macheps_fp80_init
+macheps_fp80_init:
+# value = 1.0
+	fld1
+	fstpt (%rcx)
+# epsilon = 1.0
+	fld1
+	fstpt 16(%rcx)
+# sum = value + epsilon
+	fldt (%rcx)
+	fldt 16(%rcx)
+	faddp
+	fstpt 32(%rcx)
+	ret
+# void macheps_fp80_compute(void *param)
+# param is in %rcx
+.global macheps_fp80_compute
+macheps_fp80_compute:
+# Compute: 2.0
+	fld1
+	fld1
+	faddp
+# Compute: epsilon /= 2.0
+	fldt 16(%rcx)
+	fdivp
+	fstpt 16(%rcx)
+# Compute: sum = value + epsilon
+	fldt (%rcx)
+	fldt 16(%rcx)
+	faddp
+	fstpt 32(%rcx)
 	ret

@@ -27,10 +27,15 @@ void gen_fpu_init(r64 &param_reg, const std::string func_name)
     MemAddr sum_addr { param_reg };
     sum_addr.disp(offsetof(T, sum));
 
+    comment("value = 1.0");
     FLD1();
-    FST(value_addr);
+    FSTP(value_addr);
+
+    comment("epsilon = 1.0");
+    FLD1();
     FSTP(epsilon_addr);
 
+    comment("sum = value + epsilon");
     FLD(value_addr);
     FLD(epsilon_addr);
 
@@ -68,13 +73,9 @@ void gen_fpu_compute(r64 &param_reg, const std::string func_name)
     FLD1();
     FADDP();
 
-    comment("Load epsilon");
-    FLD(epsilon_addr);
-
     comment("Compute: epsilon /= 2.0");
+    FLD(epsilon_addr);
     FDIVP();
-
-    comment("Save epsilon");
     FSTP(epsilon_addr);
 
     comment("Compute: sum = value + epsilon");
@@ -102,6 +103,9 @@ try
 
     gen_fpu_init<fp64_params, m64fp>(param_reg, "macheps_fp64_init");
     gen_fpu_compute<fp64_params, m64fp>(param_reg, "macheps_fp64_compute");
+
+    gen_fpu_init<fp80_params, m80fp>(param_reg, "macheps_fp80_init");
+    gen_fpu_compute<fp80_params, m80fp>(param_reg, "macheps_fp80_compute");
 
     return EXIT_SUCCESS;
 }

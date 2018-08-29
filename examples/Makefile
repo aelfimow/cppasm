@@ -6,6 +6,7 @@ windows:
 	${MAKE} -C cpuid
 	${MAKE} -C fpuconst
 	${MAKE} -C lea-arithm
+	${MAKE} -C macheps
 	${MAKE} -C rc4
 	${MAKE} -C rdtsc
 	${MAKE} -C thousand-nops

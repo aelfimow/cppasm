@@ -26,6 +26,17 @@ std::ostream &operator<<(std::ostream &os, const fp64_params &param)
     return os;
 }
 
+std::ostream &operator<<(std::ostream &os, const fp80_params &param)
+{
+    os << "value: " << param.value;
+    os << "; ";
+    os << "epsilon: " << param.epsilon;
+    os << "; ";
+    os << "sum: " << param.sum;
+
+    return os;
+}
+
 static void use_fp32()
 {
     fp32_params param;
@@ -56,6 +67,21 @@ static void use_fp64()
     }
 }
 
+static void use_fp80()
+{
+    fp80_params param;
+    macheps_fp80_init(&param);
+
+    std::cout << "Init (fp80): " << param << std::endl;
+
+    for (auto cnt = 0; cnt < 3; ++cnt)
+    {
+        macheps_fp80_compute(&param);
+
+        std::cout << "Compute (fp80): " << param << std::endl;
+    }
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -64,6 +90,7 @@ try
 
     use_fp32();
     use_fp64();
+    use_fp80();
 
     return EXIT_SUCCESS;
 }

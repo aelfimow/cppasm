@@ -524,6 +524,7 @@ class Instruction_16 :
         using T16::operator();
 };
 
+#if 0
 template
 <
     class T1,
@@ -642,7 +643,6 @@ class Instruction_26 :
         using T26::operator();
 };
 
-#if 0
 template
 <
     class T1,

@@ -8,6 +8,24 @@
 
 template
 <
+    class ... Ts
+>
+class Instruction_x:
+    public Ts ...
+{
+    public:
+        Instruction_x(asmstream &s, const std::string mnem) :
+            Ts { s, mnem } ...
+        {
+        }
+
+        ~Instruction_x() { }
+
+        using Ts::operator() ...;
+};
+
+template
+<
     class T1
 >
 class Instruction_1 :
@@ -624,6 +642,7 @@ class Instruction_26 :
         using T26::operator();
 };
 
+#if 0
 template
 <
     class T1,
@@ -781,5 +800,6 @@ class Instruction_36 :
         using T35::operator();
         using T36::operator();
 };
+#endif
 
 #endif

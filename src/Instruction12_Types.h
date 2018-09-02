@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION12_TYPES_H
 
-using Instruction12_Type1 = Instruction_12
+using Instruction12_Type1 = Instruction_x
 <
     Operands_reg_reg<r16, r16, no_suffix>,
     Operands_mem_reg<m16, r16, no_suffix>,
@@ -22,7 +22,7 @@ using Instruction12_Type1 = Instruction_12
     Operands_mem_imm<m64, imm8, suffix_m64>
 >;
 
-using Instruction12_Type2 = Instruction_12
+using Instruction12_Type2 = Instruction_x
 <
     Operands_reg_reg<r8, r8, no_suffix>,
     Operands_mem_reg<m8, r8, no_suffix>,
@@ -38,7 +38,7 @@ using Instruction12_Type2 = Instruction_12
     Operands_reg_mem<r64, m64, no_suffix>
 >;
 
-using Instruction12_Type3 = Instruction_12
+using Instruction12_Type3 = Instruction_x
 <
     Operands_reg_reg<r16, r8, suffix_bw>,
     Operands_reg_mem<r16, m8, suffix_bw>,
@@ -54,7 +54,7 @@ using Instruction12_Type3 = Instruction_12
     Operands_reg_mem<r64, m32, suffix_lq>
 >;
 
-using Instruction12_Type4 = Instruction_12
+using Instruction12_Type4 = Instruction_x
 <
     Operands_reg_reg_imm<r16, r16, imm8>,
     Operands_mem_reg_imm<m16, r16, imm8>,

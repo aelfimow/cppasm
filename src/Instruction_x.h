@@ -35,60 +35,6 @@ template
     class T7,
     class T8,
     class T9,
-    class T10
->
-class Instruction_10 :
-    public T1,
-    public T2,
-    public T3,
-    public T4,
-    public T5,
-    public T6,
-    public T7,
-    public T8,
-    public T9,
-    public T10
-{
-    public:
-        Instruction_10(asmstream &s, const std::string mnem) :
-            T1 { s, mnem },
-            T2 { s, mnem },
-            T3 { s, mnem },
-            T4 { s, mnem },
-            T5 { s, mnem },
-            T6 { s, mnem },
-            T7 { s, mnem },
-            T8 { s, mnem },
-            T9 { s, mnem },
-            T10 { s, mnem }
-        {
-        }
-
-        ~Instruction_10() { }
-
-        using T1::operator();
-        using T2::operator();
-        using T3::operator();
-        using T4::operator();
-        using T5::operator();
-        using T6::operator();
-        using T7::operator();
-        using T8::operator();
-        using T9::operator();
-        using T10::operator();
-};
-
-template
-<
-    class T1,
-    class T2,
-    class T3,
-    class T4,
-    class T5,
-    class T6,
-    class T7,
-    class T8,
-    class T9,
     class T10,
     class T11,
     class T12

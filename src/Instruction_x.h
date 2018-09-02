@@ -27,28 +27,6 @@ class Instruction_x:
 template
 <
     class T1,
-    class T2
->
-class Instruction_2 :
-    public T1,
-    public T2
-{
-    public:
-        Instruction_2(asmstream &s, const std::string mnem) :
-            T1 { s, mnem },
-            T2 { s, mnem }
-        {
-        }
-
-        ~Instruction_2() { }
-
-        using T1::operator();
-        using T2::operator();
-};
-
-template
-<
-    class T1,
     class T2,
     class T3
 >

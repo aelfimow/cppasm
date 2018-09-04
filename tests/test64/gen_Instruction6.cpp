@@ -213,6 +213,7 @@ void gen_Instruction6()
     gen_Instruction6_Type7(VBROADCASTI32X2);
 
     gen_Instruction6_Type8(VPERMD);
+    gen_Instruction6_Type8(VPERMPS);
 
     gen_Instruction6_Type9(VPERMW);
 }

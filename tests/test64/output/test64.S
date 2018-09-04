@@ -2112,6 +2112,12 @@ Instruction1_Type4_Label:
 	vpermd %zmm2, %zmm1, %zmm0
 	vpermd (%rbx), %zmm1, %zmm0
 	vpermd (%rdx){1to16}, %zmm1, %zmm0
+	vpermps %ymm2, %ymm1, %ymm0
+	vpermps (%rbx), %ymm1, %ymm0
+	vpermps (%rdx){1to8}, %ymm1, %ymm0
+	vpermps %zmm2, %zmm1, %zmm0
+	vpermps (%rbx), %zmm1, %zmm0
+	vpermps (%rdx){1to16}, %zmm1, %zmm0
 	vpermw %xmm1, %xmm1, %xmm0
 	vpermw %xmm1, %xmm1, %xmm0{%k1}
 	vpermw %xmm1, %xmm1, %xmm0{%k1}{z}

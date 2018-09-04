@@ -70,4 +70,20 @@ using Instruction12_Type4 = Instruction_x
     Operands_mem_reg_reg<m64, r64, r8>
 >;
 
+using Instruction12_Type5 = Instruction_x
+<
+    Operands_reg_reg_imm<ymm, ymm, imm8>,
+    Operands_reg_mem_imm<ymm, m256, imm8>,
+    Operands_reg_mem_imm<ymm, m64, imm8>,
+    Operands_reg_reg_imm<zmm, zmm, imm8>,
+    Operands_reg_mem_imm<zmm, m512, imm8>,
+    Operands_reg_mem_imm<zmm, m64, imm8>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>,
+    Operands_reg_reg_mem<ymm, ymm, m64>,
+    Operands_reg_reg_reg<zmm, zmm, zmm>,
+    Operands_reg_reg_mem<zmm, zmm, m512>,
+    Operands_reg_reg_mem<zmm, zmm, m64>
+>;
+
 #endif

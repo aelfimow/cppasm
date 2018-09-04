@@ -18,6 +18,17 @@ void gen_fpu_init(r64 &param_reg, const std::string func_name)
     global(func_name);
     label(func_name);
 
+    r64 &zero_reg { RAX };
+
+    XOR(zero_reg, zero_reg);
+
+    for (size_t cnt = 0; cnt < sizeof(T); cnt += 8)
+    {
+        m64 addr { param_reg };
+
+        MOV(addr.disp(cnt), zero_reg);
+    }
+
     MemAddr value_addr { param_reg };
     value_addr.disp(offsetof(T, value));
 

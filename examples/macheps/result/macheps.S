@@ -3,6 +3,9 @@
 # param is in %rcx
 .global macheps_fp32_init
 macheps_fp32_init:
+	xor %rax, %rax
+	mov %rax, (%rcx)
+	mov %rax, 8(%rcx)
 # value = 1.0
 	fld1
 	fstps (%rcx)
@@ -37,6 +40,10 @@ macheps_fp32_compute:
 # param is in %rcx
 .global macheps_fp64_init
 macheps_fp64_init:
+	xor %rax, %rax
+	mov %rax, (%rcx)
+	mov %rax, 8(%rcx)
+	mov %rax, 16(%rcx)
 # value = 1.0
 	fld1
 	fstpl (%rcx)
@@ -71,6 +78,13 @@ macheps_fp64_compute:
 # param is in %rcx
 .global macheps_fp80_init
 macheps_fp80_init:
+	xor %rax, %rax
+	mov %rax, (%rcx)
+	mov %rax, 8(%rcx)
+	mov %rax, 16(%rcx)
+	mov %rax, 24(%rcx)
+	mov %rax, 32(%rcx)
+	mov %rax, 40(%rcx)
 # value = 1.0
 	fld1
 	fstpt (%rcx)

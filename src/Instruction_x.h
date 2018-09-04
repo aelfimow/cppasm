@@ -8,20 +8,20 @@
 
 template
 <
-    class ... Ts
+    class ... OperandOps
 >
 class Instruction_x:
-    public Ts ...
+    public OperandOps ...
 {
     public:
         Instruction_x(asmstream &s, const std::string mnem) :
-            Ts { s, mnem } ...
+            OperandOps { s, mnem } ...
         {
         }
 
         ~Instruction_x() { }
 
-        using Ts::operator() ...;
+        using OperandOps::operator() ...;
 };
 
 #endif

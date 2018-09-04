@@ -76,6 +76,27 @@ static void gen_Instruction12_Type4(Instruction12_Type4 &instr)
     instr(addr3, RBX, CL);
 }
 
+static void gen_Instruction12_Type5(Instruction12_Type5 &instr)
+{
+    imm8 mask { 255 };
+    m256 addr1 { RDX };
+    m64 addr2 { RCX };
+    m512 addr3 { RBX };
+
+    instr(YMM2, YMM1, mask);
+    instr(YMM2, addr1, mask);
+    instr(YMM2, addr2.broadcast(1, 4), mask);
+    instr(ZMM2, ZMM1, mask);
+    instr(ZMM2, addr3, mask);
+    instr(ZMM2, addr2.broadcast(1, 8), mask);
+    instr(YMM2, YMM1, YMM7);
+    instr(YMM2, YMM1, addr1);
+    instr(YMM2, YMM1, addr2.broadcast(1, 4));
+    instr(ZMM2, ZMM1, ZMM7);
+    instr(ZMM2, ZMM1, addr3);
+    instr(ZMM2, ZMM1, addr2.broadcast(1, 8));
+}
+
 void gen_Instruction12()
 {
     comment("gen_Instruction12");
@@ -92,4 +113,6 @@ void gen_Instruction12()
 
     gen_Instruction12_Type4(SHLD);
     gen_Instruction12_Type4(SHRD);
+
+    gen_Instruction12_Type5(VPERMPD);
 }

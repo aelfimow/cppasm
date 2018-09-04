@@ -2507,6 +2507,18 @@ gen_Instruction7_Type3_label:
 	shrd %cl, %ebx, (%rdx)
 	shrd %cl, %rbx, %rax
 	shrd %cl, %rbx, (%rdx)
+	vpermpd $0xFF, %ymm1, %ymm2
+	vpermpd $0xFF, (%rdx), %ymm2
+	vpermpd $0xFF, (%rcx){1to4}, %ymm2
+	vpermpd $0xFF, %zmm1, %zmm2
+	vpermpd $0xFF, (%rbx), %zmm2
+	vpermpd $0xFF, (%rcx){1to8}, %zmm2
+	vpermpd %ymm7, %ymm1, %ymm2
+	vpermpd (%rdx), %ymm1, %ymm2
+	vpermpd (%rcx){1to4}, %ymm1, %ymm2
+	vpermpd %zmm7, %zmm1, %zmm2
+	vpermpd (%rbx), %zmm1, %zmm2
+	vpermpd (%rcx){1to8}, %zmm1, %zmm2
 # gen_Instruction16
 	test $0xAA, %al
 	testb $0xAA, (%rdx)

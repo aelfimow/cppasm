@@ -1990,6 +1990,12 @@ Instruction1_Type4_Label:
 	vpermd %zmm2, %zmm1, %zmm0
 	vpermd (%ebx), %zmm1, %zmm0
 	vpermd (%edx){1to16}, %zmm1, %zmm0
+	vpermps %ymm2, %ymm1, %ymm0
+	vpermps (%ebx), %ymm1, %ymm0
+	vpermps (%edx){1to8}, %ymm1, %ymm0
+	vpermps %zmm2, %zmm1, %zmm0
+	vpermps (%ebx), %zmm1, %zmm0
+	vpermps (%edx){1to16}, %zmm1, %zmm0
 	vpermw %xmm1, %xmm1, %xmm0
 	vpermw %xmm1, %xmm1, %xmm0{%k1}
 	vpermw %xmm1, %xmm1, %xmm0{%k1}{z}

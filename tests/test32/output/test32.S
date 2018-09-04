@@ -2294,6 +2294,18 @@ gen_Instruction7_Type3_label:
 	shrd $0x01, %ebx, (%edx)
 	shrd %cl, %ebx, %eax
 	shrd %cl, %ebx, (%edx)
+	vpermpd $0xFF, %ymm1, %ymm2
+	vpermpd $0xFF, (%edx), %ymm2
+	vpermpd $0xFF, (%ecx){1to4}, %ymm2
+	vpermpd $0xFF, %zmm1, %zmm2
+	vpermpd $0xFF, (%ebx), %zmm2
+	vpermpd $0xFF, (%ecx){1to8}, %zmm2
+	vpermpd %ymm7, %ymm1, %ymm2
+	vpermpd (%edx), %ymm1, %ymm2
+	vpermpd (%ecx){1to4}, %ymm1, %ymm2
+	vpermpd %zmm7, %zmm1, %zmm2
+	vpermpd (%ebx), %zmm1, %zmm2
+	vpermpd (%ecx){1to8}, %zmm1, %zmm2
 # gen_Instruction16
 	test $0xAA, %al
 	testb $0xAA, (%edx)

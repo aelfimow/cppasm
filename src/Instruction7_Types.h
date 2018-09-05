@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION7_TYPES_H
 
-using Instruction7_Type1 = Instruction_x
+using Instruction7_Type1 = Instruction_7
 <
     Operands_string,
     Operands_reg_indirect<r16>,
@@ -17,7 +17,7 @@ using Instruction7_Type1 = Instruction_x
     Operands_mem_indirect<m64, no_suffix>
 >;
 
-using Instruction7_Type2 = Instruction_x
+using Instruction7_Type2 = Instruction_7
 <
     Operands_reg<r16>,
     Operands_mem<m16, suffix_m16>,
@@ -28,7 +28,7 @@ using Instruction7_Type2 = Instruction_x
     Operands_reg<Sreg>
 >;
 
-using Instruction7_Type3 = Instruction_x
+using Instruction7_Type3 = Instruction_7
 <
     Operands_string_indirect,
     Operands_reg_indirect<r16>,

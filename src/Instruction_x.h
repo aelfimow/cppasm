@@ -204,4 +204,35 @@ using Instruction_10 = Instruction_x
     Op10
 >;
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4,
+    class Op5,
+    class Op6,
+    class Op7,
+    class Op8,
+    class Op9,
+    class Op10,
+    class Op11,
+    class Op12
+>
+using Instruction_12 = Instruction_x
+<
+    Op1,
+    Op2,
+    Op3,
+    Op4,
+    Op5,
+    Op6,
+    Op7,
+    Op8,
+    Op9,
+    Op10,
+    Op11,
+    Op12
+>;
+
 #endif

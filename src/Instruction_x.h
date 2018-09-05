@@ -24,4 +24,6 @@ class Instruction_x:
         using OperandOps::operator() ...;
 };
 
+template <class Op1> using Instruction_1 = Instruction_x<Op1>;
+
 #endif

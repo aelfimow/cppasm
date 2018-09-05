@@ -444,7 +444,8 @@ template
     class Op2
 >
 class Instruction_2 :
-    public Op1
+    public Op1,
+    public Op2
 {
     public:
         Instruction_2(asmstream &s, const std::string mnem) :
@@ -456,6 +457,57 @@ class Instruction_2 :
 
         using Op1::operator();
         using Op2::operator();
+};
+
+template
+<
+    class Op1,
+    class Op2,
+    class Op3
+>
+class Instruction_3 :
+    public Op1,
+    public Op2,
+    public Op3
+{
+    public:
+        Instruction_3(asmstream &s, const std::string mnem) :
+            OperandOps { s, mnem }
+        {
+        }
+
+        ~Instruction_3() { }
+
+        using Op1::operator();
+        using Op2::operator();
+        using Op3::operator();
+};
+
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4
+>
+class Instruction_4 :
+    public Op1,
+    public Op2,
+    public Op3,
+    public Op4
+{
+    public:
+        Instruction_4(asmstream &s, const std::string mnem) :
+            OperandOps { s, mnem }
+        {
+        }
+
+        ~Instruction_4() { }
+
+        using Op1::operator();
+        using Op2::operator();
+        using Op3::operator();
+        using Op4::operator();
 };
 
 #endif

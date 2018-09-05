@@ -6,6 +6,12 @@
 #else
 #define INSTRUCTION_X_H
 
+
+#define INSTRUCTION_X_WITH_PACK_EXP
+
+
+#ifdef INSTRUCTION_X_WITH_PACK_EXP
+
 template
 <
     class ... OperandOps
@@ -411,5 +417,7 @@ using Instruction_36 = Instruction_x
     Op35,
     Op36
 >;
+
+#endif
 
 #endif

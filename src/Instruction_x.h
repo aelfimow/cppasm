@@ -438,6 +438,26 @@ class Instruction_1 :
         using Op1::operator();
 };
 
+template
+<
+    class Op1,
+    class Op2
+>
+class Instruction_2 :
+    public Op1
+{
+    public:
+        Instruction_2(asmstream &s, const std::string mnem) :
+            OperandOps { s, mnem }
+        {
+        }
+
+        ~Instruction_2() { }
+
+        using Op1::operator();
+        using Op2::operator();
+};
+
 #endif
 
 #endif

@@ -129,4 +129,27 @@ using Instruction_7 = Instruction_x
     Op7
 >;
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4,
+    class Op5,
+    class Op6,
+    class Op7,
+    class Op8
+>
+using Instruction_8 = Instruction_x
+<
+    Op1,
+    Op2,
+    Op3,
+    Op4,
+    Op5,
+    Op6,
+    Op7,
+    Op8
+>;
+
 #endif

@@ -1038,6 +1038,164 @@ class Instruction_26 :
         using Op26::operator();
 };
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4,
+    class Op5,
+    class Op6,
+    class Op7,
+    class Op8,
+    class Op9,
+    class Op10,
+    class Op11,
+    class Op12,
+    class Op13,
+    class Op14,
+    class Op15,
+    class Op16,
+    class Op17,
+    class Op18,
+    class Op19,
+    class Op20,
+    class Op21,
+    class Op22,
+    class Op23,
+    class Op24,
+    class Op25,
+    class Op26,
+    class Op27,
+    class Op28,
+    class Op29,
+    class Op30,
+    class Op31,
+    class Op32,
+    class Op33,
+    class Op34,
+    class Op35,
+    class Op36
+>
+class Instruction_36 :
+    public Op1,
+    public Op2,
+    public Op3,
+    public Op4,
+    public Op5,
+    public Op6,
+    public Op7,
+    public Op8,
+    public Op9,
+    public Op10,
+    public Op11,
+    public Op12,
+    public Op13,
+    public Op14,
+    public Op15,
+    public Op16,
+    public Op17,
+    public Op18,
+    public Op19,
+    public Op20,
+    public Op21,
+    public Op22,
+    public Op23,
+    public Op24,
+    public Op25,
+    public Op26,
+    public Op27,
+    public Op28,
+    public Op29,
+    public Op30,
+    public Op31,
+    public Op32,
+    public Op33,
+    public Op34,
+    public Op35,
+    public Op36
+{
+    public:
+        Instruction_36(asmstream &s, const std::string mnem) :
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem },
+            Op4 { s, mnem },
+            Op5 { s, mnem },
+            Op6 { s, mnem },
+            Op7 { s, mnem },
+            Op8 { s, mnem },
+            Op9 { s, mnem },
+            Op10 { s, mnem },
+            Op11 { s, mnem },
+            Op12 { s, mnem },
+            Op13 { s, mnem },
+            Op14 { s, mnem },
+            Op15 { s, mnem },
+            Op16 { s, mnem },
+            Op17 { s, mnem },
+            Op18 { s, mnem },
+            Op19 { s, mnem },
+            Op20 { s, mnem },
+            Op21 { s, mnem },
+            Op22 { s, mnem },
+            Op23 { s, mnem },
+            Op24 { s, mnem },
+            Op25 { s, mnem },
+            Op26 { s, mnem },
+            Op27 { s, mnem },
+            Op28 { s, mnem },
+            Op29 { s, mnem },
+            Op30 { s, mnem },
+            Op31 { s, mnem },
+            Op32 { s, mnem },
+            Op33 { s, mnem },
+            Op34 { s, mnem },
+            Op35 { s, mnem },
+            Op36 { s, mnem }
+        {
+        }
+
+        ~Instruction_36() { }
+
+        using Op1::operator();
+        using Op2::operator();
+        using Op3::operator();
+        using Op4::operator();
+        using Op5::operator();
+        using Op6::operator();
+        using Op7::operator();
+        using Op8::operator();
+        using Op9::operator();
+        using Op10::operator();
+        using Op11::operator();
+        using Op12::operator();
+        using Op13::operator();
+        using Op14::operator();
+        using Op15::operator();
+        using Op16::operator();
+        using Op17::operator();
+        using Op18::operator();
+        using Op19::operator();
+        using Op20::operator();
+        using Op21::operator();
+        using Op22::operator();
+        using Op23::operator();
+        using Op24::operator();
+        using Op25::operator();
+        using Op26::operator();
+        using Op27::operator();
+        using Op28::operator();
+        using Op29::operator();
+        using Op30::operator();
+        using Op31::operator();
+        using Op32::operator();
+        using Op33::operator();
+        using Op34::operator();
+        using Op35::operator();
+        using Op36::operator();
+};
+
 #endif
 
 #endif

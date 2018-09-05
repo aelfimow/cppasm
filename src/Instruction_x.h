@@ -510,6 +510,36 @@ class Instruction_4 :
         using Op4::operator();
 };
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4,
+    class Op5
+>
+class Instruction_5 :
+    public Op1,
+    public Op2,
+    public Op3,
+    public Op4,
+    public Op5
+{
+    public:
+        Instruction_5(asmstream &s, const std::string mnem) :
+            OperandOps { s, mnem }
+        {
+        }
+
+        ~Instruction_5() { }
+
+        using Op1::operator();
+        using Op2::operator();
+        using Op3::operator();
+        using Op4::operator();
+        using Op5::operator();
+};
+
 #endif
 
 #endif

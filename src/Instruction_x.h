@@ -6,10 +6,6 @@
 #else
 #define INSTRUCTION_X_H
 
-
-#define INSTRUCTION_X_WITH_PACK_EXP
-
-
 #ifdef INSTRUCTION_X_WITH_PACK_EXP
 
 template

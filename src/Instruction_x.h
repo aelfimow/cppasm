@@ -429,7 +429,7 @@ class Instruction_1 :
 {
     public:
         Instruction_1(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem }
         {
         }
 
@@ -449,7 +449,8 @@ class Instruction_2 :
 {
     public:
         Instruction_2(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem },
+            Op2 { s, mnem }
         {
         }
 
@@ -472,7 +473,9 @@ class Instruction_3 :
 {
     public:
         Instruction_3(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem }
         {
         }
 
@@ -498,7 +501,10 @@ class Instruction_4 :
 {
     public:
         Instruction_4(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem },
+            Op4 { s, mnem }
         {
         }
 
@@ -527,7 +533,11 @@ class Instruction_5 :
 {
     public:
         Instruction_5(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem },
+            Op4 { s, mnem },
+            Op5 { s, mnem }
         {
         }
 
@@ -547,7 +557,7 @@ template
     class Op3,
     class Op4,
     class Op5,
-    class Op5
+    class Op6
 >
 class Instruction_6 :
     public Op1,
@@ -559,7 +569,12 @@ class Instruction_6 :
 {
     public:
         Instruction_6(asmstream &s, const std::string mnem) :
-            OperandOps { s, mnem }
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem },
+            Op4 { s, mnem },
+            Op5 { s, mnem },
+            Op6 { s, mnem }
         {
         }
 

@@ -6,7 +6,7 @@
 #else
 #define INSTRUCTION26_TYPES_H
 
-using Instruction26_Type1 = Instruction_x
+using Instruction26_Type1 = Instruction_26
 <
     Operands_reg_imm<r8, imm8>,
     Operands_mem_imm<m8, imm8, suffix_m8>,

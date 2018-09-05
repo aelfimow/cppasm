@@ -418,6 +418,26 @@ using Instruction_36 = Instruction_x
     Op36
 >;
 
+#else
+
+template
+<
+    class Op1
+>
+class Instruction_1 :
+    public Op1
+{
+    public:
+        Instruction_1(asmstream &s, const std::string mnem) :
+            OperandOps { s, mnem }
+        {
+        }
+
+        ~Instruction_1() { }
+
+        using Op1::operator();
+};
+
 #endif
 
 #endif

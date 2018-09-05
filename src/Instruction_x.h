@@ -44,4 +44,17 @@ using Instruction_2 = Instruction_x
     Op2
 >;
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3
+>
+using Instruction_2 = Instruction_x
+<
+    Op1,
+    Op2,
+    Op3
+>;
+
 #endif

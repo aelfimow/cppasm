@@ -676,6 +676,56 @@ class Instruction_8 :
         using Op8::operator();
 };
 
+template
+<
+    class Op1,
+    class Op2,
+    class Op3,
+    class Op4,
+    class Op5,
+    class Op6,
+    class Op7,
+    class Op8,
+    class Op9
+>
+class Instruction_9 :
+    public Op1,
+    public Op2,
+    public Op3,
+    public Op4,
+    public Op5,
+    public Op6,
+    public Op7,
+    public Op8,
+    public Op9
+{
+    public:
+        Instruction_9(asmstream &s, const std::string mnem) :
+            Op1 { s, mnem },
+            Op2 { s, mnem },
+            Op3 { s, mnem },
+            Op4 { s, mnem },
+            Op5 { s, mnem },
+            Op6 { s, mnem },
+            Op7 { s, mnem },
+            Op8 { s, mnem },
+            Op9 { s, mnem }
+        {
+        }
+
+        ~Instruction_9() { }
+
+        using Op1::operator();
+        using Op2::operator();
+        using Op3::operator();
+        using Op4::operator();
+        using Op5::operator();
+        using Op6::operator();
+        using Op7::operator();
+        using Op8::operator();
+        using Op9::operator();
+};
+
 #endif
 
 #endif

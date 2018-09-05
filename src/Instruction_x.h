@@ -303,7 +303,7 @@ template
     class Op25,
     class Op26
 >
-using Instruction_16 = Instruction_x
+using Instruction_26 = Instruction_x
 <
     Op1,
     Op2,

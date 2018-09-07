@@ -2306,6 +2306,18 @@ gen_Instruction7_Type3_label:
 	vpermpd %zmm7, %zmm1, %zmm2
 	vpermpd (%ebx), %zmm1, %zmm2
 	vpermpd (%ecx){1to8}, %zmm1, %zmm2
+	vpermq $0xFF, %ymm1, %ymm2
+	vpermq $0xFF, (%edx), %ymm2
+	vpermq $0xFF, (%ecx){1to4}, %ymm2
+	vpermq $0xFF, %zmm1, %zmm2
+	vpermq $0xFF, (%ebx), %zmm2
+	vpermq $0xFF, (%ecx){1to8}, %zmm2
+	vpermq %ymm7, %ymm1, %ymm2
+	vpermq (%edx), %ymm1, %ymm2
+	vpermq (%ecx){1to4}, %ymm1, %ymm2
+	vpermq %zmm7, %zmm1, %zmm2
+	vpermq (%ebx), %zmm1, %zmm2
+	vpermq (%ecx){1to8}, %zmm1, %zmm2
 # gen_Instruction16
 	test $0xAA, %al
 	testb $0xAA, (%edx)

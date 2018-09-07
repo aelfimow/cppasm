@@ -97,4 +97,5 @@ void gen_Instruction12()
     gen_Instruction12_Type4(SHRD);
 
     gen_Instruction12_Type5(VPERMPD);
+    gen_Instruction12_Type5(VPERMQ);
 }

@@ -1129,6 +1129,7 @@ Instruction2_Type36 VPERM2F128 { asmout, "vperm2f128" };
 Instruction6_Type8 VPERMD { asmout, "vpermd" };
 Instruction6_Type8 VPERMPS { asmout, "vpermps" };
 Instruction12_Type5 VPERMPD { asmout, "vpermpd" };
+Instruction12_Type5 VPERMQ { asmout, "vpermq" };
 Instruction6_Type9 VPERMW { asmout, "vpermw" };
 Instruction4_Type18 VTESTPS { asmout, "vtestps" };
 Instruction4_Type18 VTESTPD { asmout, "vtestpd" };

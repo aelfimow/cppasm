@@ -1178,6 +1178,7 @@ extern Instruction2_Type36 VPERM2F128;
 extern Instruction6_Type8 VPERMD;
 extern Instruction6_Type8 VPERMPS;
 extern Instruction12_Type5 VPERMPD;
+extern Instruction12_Type5 VPERMQ;
 extern Instruction6_Type9 VPERMW;
 extern Instruction4_Type18 VTESTPS;
 extern Instruction4_Type18 VTESTPD;

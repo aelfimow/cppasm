@@ -1175,6 +1175,7 @@ extern Instruction4_Type24 VPMASKMOVQ;
 extern Instruction8_Type5 VPERMILPD;
 extern Instruction8_Type5 VPERMILPS;
 extern Instruction2_Type36 VPERM2F128;
+extern Instruction2_Type36 VPERM2I128;
 extern Instruction6_Type8 VPERMD;
 extern Instruction6_Type8 VPERMPS;
 extern Instruction12_Type5 VPERMPD;

@@ -1126,6 +1126,7 @@ Instruction4_Type24 VPMASKMOVQ { asmout, "vpmaskmovq" };
 Instruction8_Type5 VPERMILPD { asmout, "vpermilpd" };
 Instruction8_Type5 VPERMILPS { asmout, "vpermilps" };
 Instruction2_Type36 VPERM2F128 { asmout, "vperm2f128" };
+Instruction2_Type36 VPERM2I128 { asmout, "vperm2i128" };
 Instruction6_Type8 VPERMD { asmout, "vpermd" };
 Instruction6_Type8 VPERMPS { asmout, "vpermps" };
 Instruction12_Type5 VPERMPD { asmout, "vpermpd" };

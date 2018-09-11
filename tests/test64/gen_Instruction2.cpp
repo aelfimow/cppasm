@@ -601,6 +601,7 @@ void gen_Instruction2()
     gen_Instruction2_Type35(VINSERTI128);
 
     gen_Instruction2_Type36(VPERM2F128);
+    gen_Instruction2_Type36(VPERM2I128);
 
     gen_Instruction2_Type37(PEXTRD);
 

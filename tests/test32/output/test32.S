@@ -802,6 +802,8 @@ Instruction1_Type4_Label:
 	vinserti128 $0xFF, (%eax), %ymm1, %ymm0
 	vperm2f128 $0xFF, %ymm2, %ymm1, %ymm0
 	vperm2f128 $0xFF, (%eax), %ymm1, %ymm0
+	vperm2i128 $0xFF, %ymm2, %ymm1, %ymm0
+	vperm2i128 $0xFF, (%eax), %ymm1, %ymm0
 	pextrd $0xFF, %xmm0, %eax
 	pextrd $0xFF, %xmm0, (%eax)
 	sha256rnds2 %xmm0, %xmm1, %xmm2

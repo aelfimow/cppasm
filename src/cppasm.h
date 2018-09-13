@@ -1189,6 +1189,8 @@ extern Instruction4_Type13 VCVTSD2SI;
 extern Instruction4_Type9 VCVTTSS2SI;
 extern Instruction4_Type13 VCVTTSD2SI;
 extern Instruction4_Type9 VCVTSS2SI;
+extern Instruction9_Type5 VALIGND;
+extern Instruction9_Type6 VALIGNQ;
 
 // System instructions
 extern Instruction1_Type1 CLAC;

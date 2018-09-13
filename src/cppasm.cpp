@@ -1140,6 +1140,8 @@ Instruction4_Type13 VCVTSD2SI { asmout, "vcvtsd2si" };
 Instruction4_Type9 VCVTTSS2SI { asmout, "vcvttss2si" };
 Instruction4_Type13 VCVTTSD2SI { asmout, "vcvttsd2si" };
 Instruction4_Type9 VCVTSS2SI { asmout, "vcvtss2si" };
+Instruction9_Type5 VALIGND { asmout, "valignd" };
+Instruction9_Type6 VALIGNQ { asmout, "valignq" };
 
 // System instructions
 Instruction1_Type1 CLAC { asmout, "clac" };

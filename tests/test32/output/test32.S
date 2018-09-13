@@ -2211,6 +2211,24 @@ gen_Instruction7_Type3_label:
 	vpbroadcastd (%ebx), %xmm0{%k1}{z}
 	vpbroadcastd (%ebx), %ymm0{%k1}{z}
 	vpbroadcastd (%ebx), %zmm0{%k1}{z}
+	valignd $0x01, %xmm3, %xmm2, %xmm1
+	valignd $0x01, (%eax), %xmm2, %xmm1
+	valignd $0x01, (%edx){1to4}, %xmm2, %xmm1
+	valignd $0x01, %ymm3, %ymm2, %ymm1
+	valignd $0x01, (%ebx), %ymm2, %ymm1
+	valignd $0x01, (%edx){1to8}, %ymm2, %ymm1
+	valignd $0x01, %zmm3, %zmm2, %zmm1
+	valignd $0x01, (%ecx), %zmm2, %zmm1
+	valignd $0x01, (%edx){1to16}, %zmm2, %zmm1
+	valignq $0x01, %xmm3, %xmm2, %xmm1
+	valignq $0x01, (%eax), %xmm2, %xmm1
+	valignq $0x01, (%edx){1to2}, %xmm2, %xmm1
+	valignq $0x01, %ymm3, %ymm2, %ymm1
+	valignq $0x01, (%ebx), %ymm2, %ymm1
+	valignq $0x01, (%edx){1to4}, %ymm2, %ymm1
+	valignq $0x01, %zmm3, %zmm2, %zmm1
+	valignq $0x01, (%ecx), %zmm2, %zmm1
+	valignq $0x01, (%edx){1to8}, %zmm2, %zmm1
 # gen_Instruction10
 	push %ax
 	push %eax

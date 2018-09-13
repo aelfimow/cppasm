@@ -58,4 +58,30 @@ using Instruction9_Type4 = Instruction_9
     Operands_reg_mem<zmm, m64, no_suffix>
 >;
 
+using Instruction9_Type5 = Instruction_9
+<
+    Operands_reg_reg_reg_imm<xmm, xmm, xmm, imm8>,
+    Operands_reg_reg_mem_imm<xmm, xmm, m128, imm8>,
+    Operands_reg_reg_mem_imm<xmm, xmm, m32, imm8>,
+    Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m32, imm8>,
+    Operands_reg_reg_reg_imm<zmm, zmm, zmm, imm8>,
+    Operands_reg_reg_mem_imm<zmm, zmm, m512, imm8>,
+    Operands_reg_reg_mem_imm<zmm, zmm, m32, imm8>
+>;
+
+using Instruction9_Type6 = Instruction_9
+<
+    Operands_reg_reg_reg_imm<xmm, xmm, xmm, imm8>,
+    Operands_reg_reg_mem_imm<xmm, xmm, m128, imm8>,
+    Operands_reg_reg_mem_imm<xmm, xmm, m64, imm8>,
+    Operands_reg_reg_reg_imm<ymm, ymm, ymm, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m256, imm8>,
+    Operands_reg_reg_mem_imm<ymm, ymm, m64, imm8>,
+    Operands_reg_reg_reg_imm<zmm, zmm, zmm, imm8>,
+    Operands_reg_reg_mem_imm<zmm, zmm, m512, imm8>,
+    Operands_reg_reg_mem_imm<zmm, zmm, m64, imm8>
+>;
+
 #endif

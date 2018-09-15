@@ -1077,6 +1077,8 @@ Instruction4_Type20 VSHUFPS { asmout, "vshufps" };
 Instruction4_Type20 VSHUFPD { asmout, "vshufpd" };
 Instruction4_Type23 VBLENDVPD { asmout, "vblendvpd" };
 Instruction4_Type23 VBLENDVPS { asmout, "vblendvps" };
+Instruction9_Type8 VBLENDMPD { asmout, "vblendmpd" };
+Instruction9_Type7 VBLENDMPS { asmout, "vblendmps" };
 Instruction4_Type18 VPTEST { asmout, "vptest" };
 Instruction4_Type17 VXORPS { asmout, "vxorps" };
 Instruction4_Type17 VXORPD { asmout, "vxorpd" };

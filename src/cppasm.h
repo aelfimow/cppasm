@@ -1126,6 +1126,8 @@ extern Instruction4_Type20 VSHUFPS;
 extern Instruction4_Type20 VSHUFPD;
 extern Instruction4_Type23 VBLENDVPD;
 extern Instruction4_Type23 VBLENDVPS;
+extern Instruction9_Type8 VBLENDMPD;
+extern Instruction9_Type7 VBLENDMPS;
 extern Instruction4_Type18 VPTEST;
 extern Instruction4_Type17 VXORPS;
 extern Instruction4_Type17 VXORPD;

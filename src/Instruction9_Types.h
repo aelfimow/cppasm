@@ -97,4 +97,17 @@ using Instruction9_Type7 = Instruction_9
     Operands_reg_reg_mem<zmm, zmm, m32>
 >;
 
+using Instruction9_Type8 = Instruction_9
+<
+    Operands_reg_reg_reg<xmm, xmm, xmm>,
+    Operands_reg_reg_mem<xmm, xmm, m128>,
+    Operands_reg_reg_mem<xmm, xmm, m64>,
+    Operands_reg_reg_reg<ymm, ymm, ymm>,
+    Operands_reg_reg_mem<ymm, ymm, m256>,
+    Operands_reg_reg_mem<ymm, ymm, m64>,
+    Operands_reg_reg_reg<zmm, zmm, zmm>,
+    Operands_reg_reg_mem<zmm, zmm, m512>,
+    Operands_reg_reg_mem<zmm, zmm, m64>
+>;
+
 #endif

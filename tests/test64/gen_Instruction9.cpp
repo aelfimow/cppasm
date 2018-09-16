@@ -166,6 +166,42 @@ static void gen_Instruction9_Type6(Instruction9_Type6 &instr)
     instr(ZMM1, ZMM2, addr4.broadcast(1, 8), value);
 }
 
+static void gen_Instruction9_Type7(Instruction9_Type7 &instr)
+{
+    m32 addr1 { RAX };
+    m128 addr2 { RBX };
+    m256 addr3 { RCX };
+    m512 addr4 { RDX };
+
+    instr(XMM2, XMM1, XMM0);
+    instr(XMM2, XMM1, addr2);
+    instr(XMM2, XMM1, addr1.broadcast(1, 4));
+    instr(YMM2, YMM1, YMM0);
+    instr(YMM2, YMM1, addr3);
+    instr(YMM2, YMM1, addr1.broadcast(1, 8));
+    instr(ZMM2, ZMM1, ZMM0);
+    instr(ZMM2, ZMM1, addr4);
+    instr(ZMM2, ZMM1, addr1.broadcast(1, 16));
+}
+
+static void gen_Instruction9_Type8(Instruction9_Type8 &instr)
+{
+    m64 addr1 { RAX };
+    m128 addr2 { RBX };
+    m256 addr3 { RCX };
+    m512 addr4 { RDX };
+
+    instr(XMM2, XMM1, XMM0);
+    instr(XMM2, XMM1, addr2);
+    instr(XMM2, XMM1, addr1.broadcast(1, 2));
+    instr(YMM2, YMM1, YMM0);
+    instr(YMM2, YMM1, addr3);
+    instr(YMM2, YMM1, addr1.broadcast(1, 4));
+    instr(ZMM2, ZMM1, ZMM0);
+    instr(ZMM2, ZMM1, addr4);
+    instr(ZMM2, ZMM1, addr1.broadcast(1, 8));
+}
+
 
 void gen_Instruction9()
 {
@@ -177,4 +213,6 @@ void gen_Instruction9()
     gen_Instruction9_Type4(VPBROADCASTQ);
     gen_Instruction9_Type5(VALIGND);
     gen_Instruction9_Type6(VALIGNQ);
+    gen_Instruction9_Type7(VBLENDMPS);
+    gen_Instruction9_Type8(VBLENDMPD);
 }

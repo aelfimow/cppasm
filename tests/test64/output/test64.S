@@ -2404,6 +2404,24 @@ gen_Instruction7_Type3_label:
 	valignq $0x01, %zmm3, %zmm2, %zmm1
 	valignq $0x01, (%rcx), %zmm2, %zmm1
 	valignq $0x01, (%rdx){1to8}, %zmm2, %zmm1
+	vblendmps %xmm0, %xmm1, %xmm2
+	vblendmps (%rbx), %xmm1, %xmm2
+	vblendmps (%rax){1to4}, %xmm1, %xmm2
+	vblendmps %ymm0, %ymm1, %ymm2
+	vblendmps (%rcx), %ymm1, %ymm2
+	vblendmps (%rax){1to8}, %ymm1, %ymm2
+	vblendmps %zmm0, %zmm1, %zmm2
+	vblendmps (%rdx), %zmm1, %zmm2
+	vblendmps (%rax){1to16}, %zmm1, %zmm2
+	vblendmpd %xmm0, %xmm1, %xmm2
+	vblendmpd (%rbx), %xmm1, %xmm2
+	vblendmpd (%rax){1to2}, %xmm1, %xmm2
+	vblendmpd %ymm0, %ymm1, %ymm2
+	vblendmpd (%rcx), %ymm1, %ymm2
+	vblendmpd (%rax){1to4}, %ymm1, %ymm2
+	vblendmpd %zmm0, %zmm1, %zmm2
+	vblendmpd (%rdx), %zmm1, %zmm2
+	vblendmpd (%rax){1to8}, %zmm1, %zmm2
 # gen_Instruction10
 	push %ax
 	push %rax

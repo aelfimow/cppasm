@@ -1194,6 +1194,7 @@ extern Instruction4_Type9 VCVTSS2SI;
 extern Instruction9_Type5 VALIGND;
 extern Instruction9_Type6 VALIGNQ;
 extern Instruction6_Type10 VCOMPRESSPD;
+extern Instruction6_Type10 VCOMPRESSPS;
 
 // System instructions
 extern Instruction1_Type1 CLAC;

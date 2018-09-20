@@ -1193,7 +1193,7 @@ extern Instruction4_Type13 VCVTTSD2SI;
 extern Instruction4_Type9 VCVTSS2SI;
 extern Instruction9_Type5 VALIGND;
 extern Instruction9_Type6 VALIGNQ;
-extern Instruction6_Type10 VCOMPRESSD;
+extern Instruction6_Type10 VCOMPRESSPD;
 
 // System instructions
 extern Instruction1_Type1 CLAC;

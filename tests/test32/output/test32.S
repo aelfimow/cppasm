@@ -2016,6 +2016,18 @@ Instruction1_Type4_Label:
 	vpermw (%edx), %zmm1, %zmm0
 	vpermw (%edx), %zmm1, %zmm0{%k1}
 	vpermw (%edx), %zmm1, %zmm0{%k1}{z}
+	vcompressps %xmm0, %xmm1
+	vcompressps %xmm0, (%eax)
+	vcompressps %ymm0, %ymm1
+	vcompressps %ymm0, (%ebx)
+	vcompressps %zmm0, %zmm1
+	vcompressps %zmm0, (%ecx)
+	vcompresspd %xmm0, %xmm1
+	vcompresspd %xmm0, (%eax)
+	vcompresspd %ymm0, %ymm1
+	vcompresspd %ymm0, (%ebx)
+	vcompresspd %zmm0, %zmm1
+	vcompresspd %zmm0, (%ecx)
 # gen_Instruction7
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label

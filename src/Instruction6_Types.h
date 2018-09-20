@@ -98,12 +98,12 @@ using Instruction6_Type9 = Instruction_6
 
 using Instruction6_Type10 = Instruction_6
 <
-    Operands_reg_reg<xmm, xmm>,
-    Operands_mem_reg<m128, xmm>,
-    Operands_reg_reg<ymm, ymm>,
-    Operands_mem_reg<m256, ymm>,
-    Operands_reg_reg<zmm, zmm>,
-    Operands_mem_reg<m512, zmm>
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_mem_reg<m128, xmm, no_suffix>,
+    Operands_reg_reg<ymm, ymm, no_suffix>,
+    Operands_mem_reg<m256, ymm, no_suffix>,
+    Operands_reg_reg<zmm, zmm, no_suffix>,
+    Operands_mem_reg<m512, zmm, no_suffix>
 >;
 
 #endif

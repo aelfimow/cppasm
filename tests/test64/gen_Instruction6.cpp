@@ -151,6 +151,20 @@ static void gen_Instruction6_Type9(Instruction6_Type9 &instr)
     instr(ZMM0.k1.z, ZMM1, addr3);
 }
 
+static void gen_Instruction6_Type10(Instruction6_Type10 &instr)
+{
+    m128 addr1 { RAX };
+    m256 addr2 { RBX };
+    m512 addr3 { RCX };
+
+    instr(XMM1, XMM0);
+    instr(addr1, XMM0);
+    instr(YMM1, YMM0);
+    instr(addr2, YMM0);
+    instr(ZMM1, ZMM0);
+    instr(addr3, ZMM0);
+}
+
 void gen_Instruction6()
 {
     comment("gen_Instruction6");
@@ -216,4 +230,7 @@ void gen_Instruction6()
     gen_Instruction6_Type8(VPERMPS);
 
     gen_Instruction6_Type9(VPERMW);
+
+    gen_Instruction6_Type10(VCOMPRESSPS);
+    gen_Instruction6_Type10(VCOMPRESSPD);
 }

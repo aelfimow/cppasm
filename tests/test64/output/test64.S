@@ -2138,6 +2138,18 @@ Instruction1_Type4_Label:
 	vpermw (%rdx), %zmm1, %zmm0
 	vpermw (%rdx), %zmm1, %zmm0{%k1}
 	vpermw (%rdx), %zmm1, %zmm0{%k1}{z}
+	vcompressps %xmm0, %xmm1
+	vcompressps %xmm0, (%rax)
+	vcompressps %ymm0, %ymm1
+	vcompressps %ymm0, (%rbx)
+	vcompressps %zmm0, %zmm1
+	vcompressps %zmm0, (%rcx)
+	vcompresspd %xmm0, %xmm1
+	vcompresspd %xmm0, (%rax)
+	vcompresspd %ymm0, %ymm1
+	vcompresspd %ymm0, (%rbx)
+	vcompresspd %zmm0, %zmm1
+	vcompresspd %zmm0, (%rcx)
 # gen_Instruction7
 gen_Instruction7_Type1_label:
 	jmp gen_Instruction7_Type1_label

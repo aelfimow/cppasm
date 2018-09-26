@@ -66,4 +66,16 @@ using Instruction8_Type5 = Instruction_8
     Operands_reg_mem_imm<ymm, m256, imm8>
 >;
 
+using Instruction8_Type6 = Instruction_8
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_reg<xmm, ymm, no_suffix>,
+    Operands_reg_reg<ymm, zmm, no_suffix>,
+    Operands_reg_mem<xmm, m64, no_suffix>,
+    Operands_reg_mem<ymm, m64, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_mem<xmm, m256, no_suffix>,
+    Operands_reg_mem<ymm, m512, no_suffix>
+>;
+
 #endif

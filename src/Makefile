@@ -37,3 +37,6 @@ s:
 	${CXX} -c streamdest_cout.cpp -o ${OBJDIR}/streamdest_cout.o ${CXXFLAGS}
 	${CXX} -c section.cpp -o ${OBJDIR}/section.o ${CXXFLAGS}
 	${CXX} -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}
+
+syntax:
+	${CXX} -fsyntax-only *.cpp ${CXXFLAGS}

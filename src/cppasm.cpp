@@ -1146,6 +1146,7 @@ Instruction9_Type5 VALIGND { asmout, "valignd" };
 Instruction9_Type6 VALIGNQ { asmout, "valignq" };
 Instruction6_Type10 VCOMPRESSPD { asmout, "vcompresspd" };
 Instruction6_Type10 VCOMPRESSPS { asmout, "vcompressps" };
+Instruction8_Type6 VCVTPD2UDQ { asmout, "vcvtpd2udq" };
 
 // System instructions
 Instruction1_Type1 CLAC { asmout, "clac" };

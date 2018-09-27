@@ -64,6 +64,23 @@ static void gen_Instruction8_Type5(Instruction8_Type5 &instr)
     instr(YMM0, addr2, mask);
 }
 
+static void gen_Instruction8_Type6(Instruction8_Type6 &instr)
+{
+    m64 addr1 { EAX };
+    m128 addr2 { EBX };
+    m256 addr3 { ECX };
+    m512 addr4 { EDX };
+
+    instr(XMM2, XMM1);
+    instr(XMM2, YMM1);
+    instr(YMM1, ZMM0);
+    instr(XMM2, addr1.broadcast(1, 4));
+    instr(YMM1, addr1.broadcast(1, 8));
+    instr(XMM2, addr2);
+    instr(XMM2, addr3);
+    instr(YMM1, addr4);
+}
+
 void gen_Instruction8()
 {
     comment("gen_Instruction8");
@@ -86,4 +103,7 @@ void gen_Instruction8()
 
     gen_Instruction8_Type5(VPERMILPD);
     gen_Instruction8_Type5(VPERMILPS);
+
+    gen_Instruction8_Type6(VCVTPD2UDQ);
+    gen_Instruction8_Type6(VCVTTPD2UDQ);
 }

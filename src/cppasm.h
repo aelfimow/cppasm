@@ -19,6 +19,8 @@ extern const std::string suffix_m8;
 extern const std::string suffix_m16;
 extern const std::string suffix_m32;
 extern const std::string suffix_m64;
+extern const std::string suffix_m128;
+extern const std::string suffix_m256;
 extern const std::string suffix_m32fp;
 extern const std::string suffix_m64fp;
 extern const std::string suffix_m80fp;

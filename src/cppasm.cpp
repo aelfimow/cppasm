@@ -1296,6 +1296,8 @@ const std::string suffix_m8 { "b" };
 const std::string suffix_m16 { "w" };
 const std::string suffix_m32 { "l" };
 const std::string suffix_m64 { "q" };
+const std::string suffix_m128 { "x" };
+const std::string suffix_m256 { "y" };
 const std::string suffix_m32fp { "s" };
 const std::string suffix_m64fp { "l" };
 const std::string suffix_m80fp { "t" };

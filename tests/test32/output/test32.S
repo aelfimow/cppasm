@@ -2146,16 +2146,16 @@ gen_Instruction7_Type3_label:
 	vcvtpd2udq %zmm0, %ymm1
 	vcvtpd2udq (%eax){1to4}, %xmm2
 	vcvtpd2udq (%eax){1to8}, %ymm1
-	vcvtpd2udq (%ebx), %xmm2
-	vcvtpd2udq (%ecx), %xmm2
+	vcvtpd2udqx (%ebx), %xmm2
+	vcvtpd2udqy (%ecx), %xmm2
 	vcvtpd2udq (%edx), %ymm1
 	vcvttpd2udq %xmm1, %xmm2
 	vcvttpd2udq %ymm1, %xmm2
 	vcvttpd2udq %zmm0, %ymm1
 	vcvttpd2udq (%eax){1to4}, %xmm2
 	vcvttpd2udq (%eax){1to8}, %ymm1
-	vcvttpd2udq (%ebx), %xmm2
-	vcvttpd2udq (%ecx), %xmm2
+	vcvttpd2udqx (%ebx), %xmm2
+	vcvttpd2udqy (%ecx), %xmm2
 	vcvttpd2udq (%edx), %ymm1
 # gen_Instruction9
 	vpbroadcastb %eax, %xmm0

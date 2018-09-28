@@ -1199,6 +1199,7 @@ extern Instruction6_Type10 VCOMPRESSPD;
 extern Instruction6_Type10 VCOMPRESSPS;
 extern Instruction8_Type6 VCVTPD2UDQ;
 extern Instruction8_Type6 VCVTTPD2UDQ;
+extern Instruction9_Type9 VCVTPS2UDQ;
 
 // System instructions
 extern Instruction1_Type1 CLAC;

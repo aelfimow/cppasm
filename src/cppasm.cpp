@@ -1148,6 +1148,7 @@ Instruction6_Type10 VCOMPRESSPD { asmout, "vcompresspd" };
 Instruction6_Type10 VCOMPRESSPS { asmout, "vcompressps" };
 Instruction8_Type6 VCVTPD2UDQ { asmout, "vcvtpd2udq" };
 Instruction8_Type6 VCVTTPD2UDQ { asmout, "vcvttpd2udq" };
+Instruction9_Type9 VCVTPS2UDQ { asmout, "vcvtps2udq" };
 
 // System instructions
 Instruction1_Type1 CLAC { asmout, "clac" };

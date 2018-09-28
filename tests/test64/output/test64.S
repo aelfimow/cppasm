@@ -2289,6 +2289,22 @@ gen_Instruction7_Type3_label:
 	vpermilps $0xFF, (%rdx), %xmm0
 	vpermilps $0xFF, %ymm1, %ymm0
 	vpermilps $0xFF, (%rdx), %ymm0
+	vcvtpd2udq %xmm1, %xmm2
+	vcvtpd2udq %ymm1, %xmm2
+	vcvtpd2udq %zmm0, %ymm1
+	vcvtpd2udq (%rax){1to4}, %xmm2
+	vcvtpd2udq (%rax){1to8}, %ymm1
+	vcvtpd2udqx (%rbx), %xmm2
+	vcvtpd2udqy (%rcx), %xmm2
+	vcvtpd2udq (%rdx), %ymm1
+	vcvttpd2udq %xmm1, %xmm2
+	vcvttpd2udq %ymm1, %xmm2
+	vcvttpd2udq %zmm0, %ymm1
+	vcvttpd2udq (%rax){1to4}, %xmm2
+	vcvttpd2udq (%rax){1to8}, %ymm1
+	vcvttpd2udqx (%rbx), %xmm2
+	vcvttpd2udqy (%rcx), %xmm2
+	vcvttpd2udq (%rdx), %ymm1
 # gen_Instruction9
 	vpbroadcastb %eax, %xmm0
 	vpbroadcastb %eax, %ymm0

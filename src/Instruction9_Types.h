@@ -110,4 +110,17 @@ using Instruction9_Type8 = Instruction_9
     Operands_reg_reg_mem<zmm, zmm, m64>
 >;
 
+using Instruction9_Type9 = Instruction_9
+<
+    Operands_reg_reg<xmm, xmm, no_suffix>,
+    Operands_reg_mem<xmm, m128, no_suffix>,
+    Operands_reg_mem<xmm, m32, no_suffix>,
+    Operands_reg_reg<ymm, ymm, no_suffix>,
+    Operands_reg_mem<ymm, m256, no_suffix>,
+    Operands_reg_mem<ymm, m32, no_suffix>,
+    Operands_reg_reg<zmm, zmm, no_suffix>,
+    Operands_reg_mem<zmm, m512, no_suffix>,
+    Operands_reg_mem<zmm, m32, no_suffix>
+>;
+
 #endif

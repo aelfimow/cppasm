@@ -170,6 +170,24 @@ static void gen_Instruction9_Type8(Instruction9_Type8 &instr)
     instr(ZMM2, ZMM1, addr1.broadcast(1, 8));
 }
 
+static void gen_Instruction9_Type9(Instruction9_Type9 &instr)
+{
+    m32 addr1 { EAX };
+    m128 addr2 { EBX };
+    m256 addr3 { ECX };
+    m512 addr4 { EDX };
+
+    instr(XMM1, XMM0);
+    instr(XMM1, addr2);
+    instr(XMM1, addr1.broadcast(1, 4));
+    instr(YMM1, YMM0);
+    instr(YMM1, addr3);
+    instr(YMM1, addr1.broadcast(1, 8));
+    instr(ZMM1, ZMM0);
+    instr(ZMM1, addr4);
+    instr(ZMM1, addr1.broadcast(1, 16));
+}
+
 void gen_Instruction9()
 {
     comment("gen_Instruction9");
@@ -181,4 +199,5 @@ void gen_Instruction9()
     gen_Instruction9_Type6(VALIGNQ);
     gen_Instruction9_Type7(VBLENDMPS);
     gen_Instruction9_Type8(VBLENDMPD);
+    gen_Instruction9_Type9(VCVTPS2UDQ);
 }

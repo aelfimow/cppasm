@@ -2275,6 +2275,15 @@ gen_Instruction7_Type3_label:
 	vblendmpd %zmm0, %zmm1, %zmm2
 	vblendmpd (%edx), %zmm1, %zmm2
 	vblendmpd (%eax){1to8}, %zmm1, %zmm2
+	vcvtps2udq %xmm0, %xmm1
+	vcvtps2udq (%ebx), %xmm1
+	vcvtps2udq (%eax){1to4}, %xmm1
+	vcvtps2udq %ymm0, %ymm1
+	vcvtps2udq (%ecx), %ymm1
+	vcvtps2udq (%eax){1to8}, %ymm1
+	vcvtps2udq %zmm0, %zmm1
+	vcvtps2udq (%edx), %zmm1
+	vcvtps2udq (%eax){1to16}, %zmm1
 # gen_Instruction10
 	push %ax
 	push %eax

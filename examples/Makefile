@@ -11,6 +11,7 @@ windows:
 	${MAKE} -C rdtsc
 	${MAKE} -C thousand-nops
 	${MAKE} -C xorshift-rng windows
+	${MAKE} -C isbn-10
 	@echo "No errors"
 
 linux:

@@ -69,3 +69,8 @@ examples/macheps/example.o
 examples/macheps/generate.exe
 examples/macheps/generate.o
 examples/macheps/macheps.o
+examples/isbn-10/example.exe
+examples/isbn-10/example.o
+examples/isbn-10/generate.exe
+examples/isbn-10/generate.o
+examples/isbn-10/isbn-10.o

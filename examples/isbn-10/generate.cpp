@@ -22,10 +22,55 @@ try
 
     label(func_name);
 
-    m64 p { RCX };
+    r64 &param_reg { RCX };
+
+    m64 p { param_reg };
     r64 &outreg { RAX };
 
-    XOR(outreg, outreg);
+    m8 p_rest { param_reg };
+    p_rest.disp(8);
+
+    r64 &num8_reg { R8 };
+    r8 &num8_reg_byte { R8L };
+    r64 &rest_reg { R9 };
+    r64 &count_reg { R10 };
+    r64 &sum_reg { param_reg };
+
+    comment("Load numbers of ISBN");
+    MOV(num8_reg, p);
+    MOVZX(rest_reg, p_rest);
+
+    comment("Index to be incremented from 1 to 9");
+    XOR(count_reg, count_reg);
+    INC(count_reg);
+
+    comment("Initial value for sum is 0");
+    XOR(sum_reg, sum_reg);
+
+    comment("Compute sum for first 8 numbers");
+    for (size_t i = 0; i < 8; ++i)
+    {
+        MOVZX(outreg, num8_reg_byte);
+        MUL(count_reg);
+        imm8 bits_to_shif { 8 };
+        SHR(num8_reg, bits_to_shif);
+        INC(count_reg);
+        ADD(sum_reg, outreg);
+    }
+
+    comment("Compute sum for remaining 9-th number");
+    MOV(outreg, rest_reg);
+    MUL(count_reg);
+    ADD(sum_reg, outreg);
+
+    comment("Update counter twice to get 11");
+    INC(count_reg);
+    INC(count_reg);
+
+    comment("Compute ISBN");
+    MOV(outreg, sum_reg);
+    DIV(count_reg);
+    MOV(outreg, RDX);
 
     RET();
 

@@ -22,8 +22,8 @@ try
 
     label(func_name);
 
-    m64 p(RCX);
-    r64 outreg(RAX);
+    m64 p { RCX };
+    r64 &outreg { RAX };
 
     XOR(outreg, outreg);
 

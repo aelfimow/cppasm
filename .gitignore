@@ -74,3 +74,8 @@ examples/isbn-10/example.o
 examples/isbn-10/generate.exe
 examples/isbn-10/generate.o
 examples/isbn-10/isbn-10.o
+examples/isbn-13/example.exe
+examples/isbn-13/example.o
+examples/isbn-13/generate.exe
+examples/isbn-13/generate.o
+examples/isbn-13/isbn-13.o

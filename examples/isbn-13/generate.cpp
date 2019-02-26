@@ -79,8 +79,11 @@ try
     comment("Compute ISBN");
     imm64 div_number { 10 };
     MOV(tmp_reg, div_number);
+    XOR(RDX, RDX);
     DIV(tmp_reg);
-    MOV(RAX, RDX);
+    MOV(RAX, tmp_reg);
+    SUB(RAX, RDX);
+    XOR(RDX, RDX);
     DIV(tmp_reg);
     MOV(RAX, RDX);
 

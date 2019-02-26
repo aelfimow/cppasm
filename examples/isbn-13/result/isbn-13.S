@@ -76,8 +76,11 @@ isbn13:
 	add %r10, %rax
 # Compute ISBN
 	mov $0x000000000000000A, %r10
+	xor %rdx, %rdx
 	div %r10
-	mov %rdx, %rax
+	mov %r10, %rax
+	sub %rdx, %rax
+	xor %rdx, %rdx
 	div %r10
 	mov %rdx, %rax
 	ret

@@ -12,6 +12,7 @@ windows:
 	${MAKE} -C thousand-nops
 	${MAKE} -C xorshift-rng windows
 	${MAKE} -C isbn-10
+	${MAKE} -C isbn-13
 	@echo "No errors"
 
 linux:

@@ -10,18 +10,6 @@ try
     argc = argc;
     argv = argv;
 
-    // Function name to be generated
-    const std::string func_name { "isbn10" };
-    comment("uint8_t isbn10(const void *p)");
-    comment("p is in %rcx");
-
-    global(func_name);
-
-    section code { ".text" };
-    code.start();
-
-    label(func_name);
-
     struct regs_usage
     {
         r64 &param;
@@ -43,6 +31,17 @@ try
         R10
     };
 
+    // Function name to be generated
+    const std::string func_name { "isbn10" };
+    comment("uint8_t isbn10(const void *p)");
+    comment("p is in " + regs.param.name());
+
+    global(func_name);
+
+    section code { ".text" };
+    code.start();
+
+    label(func_name);
     m64 p { regs.param };
 
     m8 p_rest { regs.param };

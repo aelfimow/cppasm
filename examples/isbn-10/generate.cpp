@@ -19,6 +19,7 @@ try
         r8 &num8_byte;
         r64 &rest;
         r64 &count;
+        r64 &modulo_result;
     }
     regs =
     {
@@ -28,7 +29,8 @@ try
         R8,
         R8L,
         R9,
-        R10
+        R10,
+        RDX
     };
 
     // Function name to be generated
@@ -81,7 +83,7 @@ try
     comment("Compute ISBN");
     MOV(regs.outreg, regs.sum);
     DIV(regs.count);
-    MOV(regs.outreg, RDX);
+    MOV(regs.outreg, regs.modulo_result);
 
     RET();
 

@@ -7,6 +7,8 @@ CXXFLAGS += -std=c++17
 
 OBJDIR = ./obj
 
+FILES = $(wildcard *.cpp)
+
 .PHONY: all
 .PHONY: a
 .PHONY: c
@@ -39,4 +41,4 @@ s:
 	${CXX} -c st.cpp -o ${OBJDIR}/st.o ${CXXFLAGS}
 
 syntax:
-	${CXX} -fsyntax-only *.cpp ${CXXFLAGS}
+	${CXX} -fsyntax-only ${FILES} ${CXXFLAGS}

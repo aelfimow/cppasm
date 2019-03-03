@@ -22,19 +22,26 @@ try
 
     label(func_name);
 
-    r64 &param_reg { RCX };
+    struct regs_usage
+    {
+        r64 &param;
+    }
+    regs =
+    {
+        RCX
+    };
 
-    m64 p { param_reg };
+    m64 p { regs.param };
     r64 &outreg { RAX };
 
-    m8 p_rest { param_reg };
+    m8 p_rest { regs.param };
     p_rest.disp(8);
 
     r64 &num8_reg { R8 };
     r8 &num8_reg_byte { R8L };
     r64 &rest_reg { R9 };
     r64 &count_reg { R10 };
-    r64 &sum_reg { param_reg };
+    r64 &sum_reg { regs.param };
 
     comment("Load numbers of ISBN");
     MOV(num8_reg, p);

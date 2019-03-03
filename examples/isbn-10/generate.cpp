@@ -25,59 +25,64 @@ try
     struct regs_usage
     {
         r64 &param;
+        r64 &sum;
+        r64 &outreg;
+        r64 &num8;
+        r8 &num8_byte;
+        r64 &rest;
+        r64 &count;
     }
     regs =
     {
-        RCX
+        RCX,
+        RCX,
+        RAX,
+        R8,
+        R8L,
+        R9,
+        R10
     };
 
     m64 p { regs.param };
-    r64 &outreg { RAX };
 
     m8 p_rest { regs.param };
     p_rest.disp(8);
 
-    r64 &num8_reg { R8 };
-    r8 &num8_reg_byte { R8L };
-    r64 &rest_reg { R9 };
-    r64 &count_reg { R10 };
-    r64 &sum_reg { regs.param };
-
     comment("Load numbers of ISBN");
-    MOV(num8_reg, p);
-    MOVZX(rest_reg, p_rest);
+    MOV(regs.num8, p);
+    MOVZX(regs.rest, p_rest);
 
     comment("Index to be incremented from 1 to 9");
-    XOR(count_reg, count_reg);
-    INC(count_reg);
+    XOR(regs.count, regs.count);
+    INC(regs.count);
 
     comment("Initial value for sum is 0");
-    XOR(sum_reg, sum_reg);
+    XOR(regs.sum, regs.sum);
 
     comment("Compute sum for first 8 numbers");
     for (size_t i = 0; i < 8; ++i)
     {
-        MOVZX(outreg, num8_reg_byte);
-        MUL(count_reg);
+        MOVZX(regs.outreg, regs.num8_byte);
+        MUL(regs.count);
         imm8 bits_to_shif { 8 };
-        SHR(num8_reg, bits_to_shif);
-        INC(count_reg);
-        ADD(sum_reg, outreg);
+        SHR(regs.num8, bits_to_shif);
+        INC(regs.count);
+        ADD(regs.sum, regs.outreg);
     }
 
     comment("Compute sum for remaining 9-th number");
-    MOV(outreg, rest_reg);
-    MUL(count_reg);
-    ADD(sum_reg, outreg);
+    MOV(regs.outreg, regs.rest);
+    MUL(regs.count);
+    ADD(regs.sum, regs.outreg);
 
     comment("Update counter twice to get 11");
-    INC(count_reg);
-    INC(count_reg);
+    INC(regs.count);
+    INC(regs.count);
 
     comment("Compute ISBN");
-    MOV(outreg, sum_reg);
-    DIV(count_reg);
-    MOV(outreg, RDX);
+    MOV(regs.outreg, regs.sum);
+    DIV(regs.count);
+    MOV(regs.outreg, RDX);
 
     RET();
 

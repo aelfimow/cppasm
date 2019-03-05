@@ -10,6 +10,31 @@ try
     argc = argc;
     argv = argv;
 
+    struct regs_usage
+    {
+        r64 &param;
+        r64 &sum;
+        r64 &data;
+        r8 &data_byte;
+        r64 &rest_full;
+        r32 &rest_half;
+        r8 &rest_byte;
+        r64 &tmp;
+        r64 &tmp2;
+    }
+    regs =
+    {
+        RCX,
+        RAX,
+        R8,
+        R8L,
+        R9,
+        R9D,
+        R9L,
+        R10,
+        R11
+    };
+
     // Function name to be generated
     const std::string func_name { "isbn13" };
     comment("uint8_t isbn13(const void *p)");
@@ -22,69 +47,55 @@ try
 
     label(func_name);
 
-    r64 &sum_reg { RAX };
-
-    r64 &param_reg { RCX };
-
-    r64 &data_reg { R8 };
-    r8 &data_byte_reg { R8L };
-
-    r64 &rest_full_reg { R9 };
-    r32 &rest_reg { R9D };
-    r8 &rest_byte_reg { R9L };
-
-    r64 &tmp_reg { R10 };
-    r64 &tmp2_reg { R11 };
-
-    m64 p { param_reg };
-    m32 p_rest { param_reg };
+    m64 p { regs.param };
+    m32 p_rest { regs.param };
     p_rest.disp(8);
 
     comment("Initialize total sum");
-    XOR(sum_reg, sum_reg);
+    XOR(regs.sum, regs.sum);
     comment("Load 12 ISBN numbers");
-    MOV(data_reg, p);
-    MOV(rest_reg, p_rest);
+    MOV(regs.data, p);
+    MOV(regs.rest_half, p_rest);
 
     comment("Sum up first 8 numbers");
     for (size_t i = 0; i < 4; ++i)
     {
-        MOVZX(tmp_reg, data_byte_reg);
-        ADD(sum_reg, tmp_reg);
+        MOVZX(regs.tmp, regs.data_byte);
+        ADD(regs.sum, regs.tmp);
         imm8 bits_to_shift { 8 };
-        SHR(data_reg, bits_to_shift);
-        MOVZX(tmp_reg, data_byte_reg);
-        MOVZX(tmp2_reg, data_byte_reg);
+        SHR(regs.data, bits_to_shift);
+        MOVZX(regs.tmp, regs.data_byte);
+        MOVZX(regs.tmp2, regs.data_byte);
         imm8 bits_to_shift2 { 1 };
-        SHL(tmp_reg, bits_to_shift2);
-        ADD(tmp_reg, tmp2_reg);
-        ADD(sum_reg, tmp_reg);
+        SHL(regs.tmp, bits_to_shift2);
+        ADD(regs.tmp, regs.tmp2);
+        ADD(regs.sum, regs.tmp);
     }
 
     comment("Sum up next 4 numbers");
     for (size_t i = 0; i < 4; ++i)
     {
-        MOVZX(tmp_reg, rest_byte_reg);
-        ADD(sum_reg, tmp_reg);
+        MOVZX(regs.tmp, regs.rest_byte);
+        ADD(regs.sum, regs.tmp);
         imm8 bits_to_shift { 8 };
-        SHR(rest_full_reg, bits_to_shift);
-        MOVZX(tmp_reg, rest_byte_reg);
-        MOVZX(tmp2_reg, rest_byte_reg);
+        SHR(regs.rest_full, bits_to_shift);
+        MOVZX(regs.tmp, regs.rest_byte);
+        MOVZX(regs.tmp2, regs.rest_byte);
         imm8 bits_to_shift2 { 1 };
-        SHL(tmp_reg, bits_to_shift2);
-        ADD(tmp_reg, tmp2_reg);
-        ADD(sum_reg, tmp_reg);
+        SHL(regs.tmp, bits_to_shift2);
+        ADD(regs.tmp, regs.tmp2);
+        ADD(regs.sum, regs.tmp);
     }
 
     comment("Compute ISBN");
     imm64 div_number { 10 };
-    MOV(tmp_reg, div_number);
+    MOV(regs.tmp, div_number);
     XOR(RDX, RDX);
-    DIV(tmp_reg);
-    MOV(RAX, tmp_reg);
+    DIV(regs.tmp);
+    MOV(RAX, regs.tmp);
     SUB(RAX, RDX);
     XOR(RDX, RDX);
-    DIV(tmp_reg);
+    DIV(regs.tmp);
     MOV(RAX, RDX);
 
     RET();

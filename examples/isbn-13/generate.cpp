@@ -21,6 +21,7 @@ try
         r8 &rest_byte;
         r64 &tmp;
         r64 &tmp2;
+        r64 &modulo_result;
     }
     regs =
     {
@@ -32,7 +33,8 @@ try
         R9D,
         R9L,
         R10,
-        R11
+        R11,
+        RDX
     };
 
     // Function name to be generated
@@ -90,13 +92,13 @@ try
     comment("Compute ISBN");
     imm64 div_number { 10 };
     MOV(regs.tmp, div_number);
-    XOR(RDX, RDX);
+    XOR(regs.modulo_result, regs.modulo_result);
     DIV(regs.tmp);
     MOV(RAX, regs.tmp);
-    SUB(RAX, RDX);
-    XOR(RDX, RDX);
+    SUB(RAX, regs.modulo_result);
+    XOR(regs.modulo_result, regs.modulo_result);
     DIV(regs.tmp);
-    MOV(RAX, RDX);
+    MOV(RAX, regs.modulo_result);
 
     RET();
 

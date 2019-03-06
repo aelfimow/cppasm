@@ -12,9 +12,9 @@ try
 
     const uint8_t numbers[] = { 9, 7, 8, 3, 7, 6, 5, 7, 2, 7, 8, 1 };
 
-    const uint8_t checksum = isbn13(&numbers);
+    const uint8_t checksum = isbn13(numbers);
 
-    if (checksum != 2)
+    if (checksum != 8)
     {
         std::cerr << "Wrong checksum: " << static_cast<size_t>(checksum) << std::endl;
         return EXIT_FAILURE;

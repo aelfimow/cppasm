@@ -72,6 +72,7 @@ try
         SHL(regs.tmp, bits_to_shift2);
         ADD(regs.tmp, regs.tmp2);
         ADD(regs.sum, regs.tmp);
+        SHR(regs.data, bits_to_shift);
     }
 
     comment("Sum up next 4 numbers");
@@ -87,6 +88,7 @@ try
         SHL(regs.tmp, bits_to_shift2);
         ADD(regs.tmp, regs.tmp2);
         ADD(regs.sum, regs.tmp);
+        SHR(regs.rest_full, bits_to_shift);
     }
 
     comment("Compute ISBN");

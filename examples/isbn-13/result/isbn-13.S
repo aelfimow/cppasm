@@ -58,22 +58,6 @@ isbn13:
 	shl $0x01, %r10
 	add %r11, %r10
 	add %r10, %rax
-	movzbq %r9b, %r10
-	add %r10, %rax
-	shr $0x08, %r9
-	movzbq %r9b, %r10
-	movzbq %r9b, %r11
-	shl $0x01, %r10
-	add %r11, %r10
-	add %r10, %rax
-	movzbq %r9b, %r10
-	add %r10, %rax
-	shr $0x08, %r9
-	movzbq %r9b, %r10
-	movzbq %r9b, %r11
-	shl $0x01, %r10
-	add %r11, %r10
-	add %r10, %rax
 # Compute ISBN
 	mov $0x000000000000000A, %r10
 	xor %rdx, %rdx

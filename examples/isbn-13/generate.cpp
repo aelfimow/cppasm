@@ -75,7 +75,7 @@ try
     }
 
     comment("Sum up next 4 numbers");
-    for (size_t i = 0; i < 4; ++i)
+    for (size_t i = 0; i < 2; ++i)
     {
         MOVZX(regs.tmp, regs.rest_byte);
         ADD(regs.sum, regs.tmp);

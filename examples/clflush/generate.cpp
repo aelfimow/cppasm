@@ -4,6 +4,12 @@
 
 #include "cppasm.h"
 
+struct reg_usage
+{
+    r64 &param1;
+    r64 &param2;
+};
+
 int main(int argc, char *argv[])
 try
 {
@@ -11,10 +17,17 @@ try
     argv = argv;
 
     // Function name to be generated
-    const std::string func_name { "clflush_func" };
-    comment("void clflush_func(void *p1, void *p2)");
-    comment("p1 is in %rcx");
-    comment("p2 is in %rdx");
+    std::string const func_name { "clflush_func" };
+    comment("void " + func_name + "(void *p1, void *p2)");
+
+    struct reg_usage regs =
+    {
+        RCX,
+        RDX
+    };
+
+    comment("p1 is in " + regs.param1.name());
+    comment("p2 is in " + regs.param2.name());
 
     global(func_name);
 
@@ -23,8 +36,8 @@ try
 
     label(func_name);
 
-    m64 p1(RCX);
-    m64 p2(RDX);
+    m64 p1(regs.param1);
+    m64 p2(regs.param2);
 
     MOV(RAX, p1);
     MOV(RAX, p1);

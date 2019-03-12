@@ -8,6 +8,7 @@ struct reg_usage
 {
     r64 &param1;
     r64 &param2;
+    r64 &tmp;
 };
 
 int main(int argc, char *argv[])
@@ -23,7 +24,8 @@ try
     struct reg_usage regs =
     {
         RCX,
-        RDX
+        RDX,
+        RAX
     };
 
     comment("p1 is in " + regs.param1.name());
@@ -39,13 +41,13 @@ try
     m64 p1(regs.param1);
     m64 p2(regs.param2);
 
-    MOV(RAX, p1);
-    MOV(RAX, p1);
-    MOV(RAX, p1);
+    MOV(regs.tmp, p1);
+    MOV(regs.tmp, p1);
+    MOV(regs.tmp, p1);
 
-    MOV(RAX, p2);
-    MOV(RAX, p2);
-    MOV(RAX, p2);
+    MOV(regs.tmp, p2);
+    MOV(regs.tmp, p2);
+    MOV(regs.tmp, p2);
 
     CLFLUSH(p1);
     CLFLUSH(p2);

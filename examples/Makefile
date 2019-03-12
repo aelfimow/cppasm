@@ -1,8 +1,8 @@
 all:
-	@echo "Specify: windows or linux"
+	$(error Specify: windows or linux)
 
 windows:
-	${MAKE} -C clflush
+	${MAKE} -C clflush windows
 	${MAKE} -C cpuid
 	${MAKE} -C fpuconst
 	${MAKE} -C lea-arithm
@@ -16,5 +16,6 @@ windows:
 	@echo "No errors"
 
 linux:
+	${MAKE} -C clflush linux
 	${MAKE} -C xorshift-rng linux
 	@echo "No errors"

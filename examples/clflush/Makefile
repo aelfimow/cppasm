@@ -10,31 +10,62 @@ ASFLAGS64 += -march=corei7
 
 CPPASM_OBJ = ../../src/obj/*.o
 
+.PHONY: windows
+.PHONY: linux
 .PHONY: compile
-.PHONY: link
-.PHONY: generate
-.PHONY: check
-.PHONY: link_example
-.PHONY: run_example
 
-all: compile link generate check link_example run_example
+.PHONY: link_windows
+.PHONY: generate_windows
+.PHONY: asm_windows
+.PHONY: link_example_windows
+.PHONY: run_example_windows
+
+.PHONY: link_linux
+.PHONY: generate_linux
+.PHONY: asm_linux
+.PHONY: link_example_linux
+.PHONY: run_example_linux
+
+all:
+	$(error Specify: windows or linux)
+
+windows: compile link_windows generate_windows asm_windows link_example_windows run_example_windows
+	@echo "No errors"
+
+linux: compile link_linux generate_linux asm_linux link_example_linux run_example_linux
 	@echo "No errors"
 
 compile:
-	$(CXX) -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
-	$(CXX) -c example.cpp -o example.o ${CXXFLAGS}
+	${CXX} -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
+	${CXX} -c example.cpp -o example.o ${CXXFLAGS}
 
-link:
-	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
+link_windows:
+	${CXX} generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
-generate:
-	generate.exe > result/clflush_func.S
+generate_windows:
+	generate.exe windows > result/clflush_func_windows.S
 
-check:
-	$(AS) result/clflush_func.S ${ASFLAGS64} -o clflush_func.o
+asm_windows:
+	${AS} result/clflush_func_windows.S ${ASFLAGS64} -o clflush_func_windows.o
 
-link_example:
-	$(CXX) example.o clflush_func.o -o example.exe ${CXXFLAGS}
+link_example_windows:
+	${CXX} example.o clflush_func_windows.o -o example.exe ${CXXFLAGS}
 
-run_example:
+run_example_windows:
 	example.exe
+
+
+link_linux:
+	${CXX} generate.o ${CPPASM_OBJ} -o generate ${CXXFLAGS}
+
+generate_linux:
+	generate linux > result/clflush_func_linux.S
+
+asm_linux:
+	${AS} result/clflush_func_linux.S ${ASFLAGS64} -o clflush_func_linux.o
+
+link_example_linux:
+	${CXX} example.o clflush_func_linux.o -o example ${CXXFLAGS}
+
+run_example_linux:
+	./example

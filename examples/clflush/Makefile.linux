@@ -1,0 +1,40 @@
+CXXFLAGS += -O2
+CXXFLAGS += -Wall
+CXXFLAGS += -Wextra
+CXXFLAGS += -pedantic
+CXXFLAGS += -Weffc++
+CXXFLAGS += -std=c++17
+
+ASFLAGS64  = --64
+ASFLAGS64 += -march=corei7
+
+CPPASM_OBJ = ../../src/obj/*.o
+
+.PHONY: compile
+.PHONY: link
+.PHONY: generate
+.PHONY: asm
+.PHONY: link_example
+.PHONY: run_example
+
+all: compile link generate asm link_example run_example
+	@echo "No errors"
+
+compile:
+	${CXX} -c generate.cpp -o generate.o -I../../src ${CXXFLAGS}
+	${CXX} -c example.cpp -o example.o ${CXXFLAGS}
+
+link:
+	${CXX} generate.o ${CPPASM_OBJ} -o generate ${CXXFLAGS}
+
+generate:
+	generate linux > result/clflush_func_linux.S
+
+asm:
+	${AS} result/clflush_func_linux.S ${ASFLAGS64} -o clflush_func_linux.o
+
+link_example:
+	${CXX} example.o clflush_func_linux.o -o example ${CXXFLAGS}
+
+run_example:
+	./example

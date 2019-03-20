@@ -9,7 +9,7 @@ windows:
 	${MAKE} -C macheps
 	${MAKE} -C rc4
 	${MAKE} -C rdtsc
-	${MAKE} -C thousand-nops
+	${MAKE} -C thousand-nops windows
 	${MAKE} -C xorshift-rng windows
 	${MAKE} -C isbn-10
 	${MAKE} -C isbn-13
@@ -18,4 +18,5 @@ windows:
 linux:
 	${MAKE} -C clflush linux
 	${MAKE} -C xorshift-rng linux
+	${MAKE} -C thousand-nops linux
 	@echo "No errors"

@@ -79,3 +79,9 @@ examples/isbn-13/example.o
 examples/isbn-13/generate.exe
 examples/isbn-13/generate.o
 examples/isbn-13/isbn-13.o
+examples/collatz/example.exe
+examples/collatz/example.o
+examples/collatz/generate.exe
+examples/collatz/generate.o
+examples/collatz/collatz_length_windows.o
+examples/collatz/collatz_length_linux.o

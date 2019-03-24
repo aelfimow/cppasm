@@ -120,7 +120,16 @@ try
 
     if (forLinux)
     {
-        gen_LinuxFunc();
+        struct regs_usage regs =
+        {
+            RDI,
+            RAX,
+            R9,
+            RDX,
+            R8
+        };
+
+        generate(regs);
     }
 
     return EXIT_SUCCESS;

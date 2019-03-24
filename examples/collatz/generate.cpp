@@ -4,6 +4,15 @@
 
 #include "cppasm.h"
 
+struct regs_usage
+{
+    r64 &value_reg;
+    r64 &result_reg;
+    r64 &end_value_reg;
+    r64 &tmp_reg;
+    r64 &tmp2_reg;
+};
+
 static void gen_WindowsFunc()
 {
     const std::string func_name { "collatz_length" };

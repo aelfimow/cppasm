@@ -13,15 +13,12 @@ struct regs_usage
     r64 &tmp2_reg;
 };
 
-static void gen_WindowsFunc()
+static void generate(struct regs_usage &regs)
 {
     const std::string func_name { "collatz_length" };
     comment("size_t " + func_name + "(size_t value)");
 
-    r64 &value_reg = RCX;
-    comment("value is in " + value_reg.name());
-
-    r64 &result_reg = RAX;
+    comment("value is in " + regs.value_reg.name());
 
     global(func_name);
 
@@ -30,40 +27,37 @@ static void gen_WindowsFunc()
 
     label(func_name);
 
-    XOR(result_reg, result_reg);
+    XOR(regs.result_reg, regs.result_reg);
 
-    r64 &end_value_reg = R9;
     imm64 end_value { 1 };
-    MOV(end_value_reg, end_value);
+    MOV(regs.end_value_reg, end_value);
 
     std::string start("start");
     std::string end("end");
     label(start);
 
-    CMP(value_reg, end_value_reg);
+    CMP(regs.value_reg, regs.end_value_reg);
     JE(end);
     {
-        r64 &tmp_reg = RDX;
 
         comment("Compute (3n + 1) using LEA");
         m64 addr;
-        addr.base(value_reg).index(value_reg).scale(2).disp(1);
-        LEA(tmp_reg, addr);
+        addr.base(regs.value_reg).index(regs.value_reg).scale(2).disp(1);
+        LEA(regs.tmp_reg, addr);
 
         comment("Compute (n / 2)");
         imm8 shift_value { 1 };
-        r64 &tmp2_reg = R8;
-        MOV(tmp2_reg, value_reg);
-        SHR(tmp2_reg, shift_value);
+        MOV(regs.tmp2_reg, regs.value_reg);
+        SHR(regs.tmp2_reg, shift_value);
 
         imm8 lsb_bit { 0 };
-        BT(value_reg, lsb_bit);
+        BT(regs.value_reg, lsb_bit);
 
-        CMOVC(value_reg, tmp_reg);
-        CMOVNC(value_reg, tmp2_reg);
+        CMOVC(regs.value_reg, regs.tmp_reg);
+        CMOVNC(regs.value_reg, regs.tmp2_reg);
 
         comment("Computation performed - count it");
-        INC(result_reg);
+        INC(regs.result_reg);
 
         JMP(start);
     }
@@ -112,7 +106,16 @@ try
 
     if (forWindows)
     {
-        gen_WindowsFunc();
+        struct regs_usage regs =
+        {
+            RCX,
+            RAX,
+            R9,
+            RDX,
+            R8
+        };
+
+        generate(regs);
     }
 
     if (forLinux)

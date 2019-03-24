@@ -13,10 +13,12 @@ windows:
 	${MAKE} -C xorshift-rng windows
 	${MAKE} -C isbn-10
 	${MAKE} -C isbn-13
+	${MAKE} -C collatz windows
 	@echo "No errors"
 
 linux:
 	${MAKE} -C clflush linux
 	${MAKE} -C xorshift-rng linux
 	${MAKE} -C thousand-nops linux
+	${MAKE} -C collatz linux
 	@echo "No errors"

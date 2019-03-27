@@ -61,24 +61,6 @@ static void generate(struct regs_usage &regs)
     RET();
 }
 
-static void gen_LinuxFunc()
-{
-    const std::string func_name { "collatz_length" };
-    comment("size_t " + func_name + "(size_t value)");
-    comment("value is in %rdi");
-
-    global(func_name);
-
-    section code { ".text" };
-    code.start();
-
-    label(func_name);
-
-    XOR(RAX, RAX);
-
-    RET();
-}
-
 int main(int argc, char *argv[])
 try
 {

@@ -10,7 +10,6 @@ struct regs_usage
     r64 &result_reg;
     r64 &end_value_reg;
     r64 &tmp_reg;
-    r64 &tmp2_reg;
 };
 
 static void generate(struct regs_usage &regs)
@@ -47,16 +46,12 @@ static void generate(struct regs_usage &regs)
 
         comment("Compute (n / 2)");
         imm8 shift_value { 1 };
-        MOV(regs.tmp2_reg, regs.value_reg);
-        SHR(regs.tmp2_reg, shift_value);
+        SHR(regs.value_reg, shift_value);
 
-        imm8 lsb_bit { 0 };
-        BT(regs.value_reg, lsb_bit);
-
+        comment("Overwrite value, if it was odd");
         CMOVC(regs.value_reg, regs.tmp_reg);
-        CMOVNC(regs.value_reg, regs.tmp2_reg);
 
-        comment("Computation performed - count it");
+        comment("Computation step performed - count it");
         INC(regs.result_reg);
 
         JMP(start);
@@ -106,29 +101,13 @@ try
 
     if (forWindows)
     {
-        struct regs_usage regs =
-        {
-            RCX,
-            RAX,
-            R9,
-            RDX,
-            R8
-        };
-
+        struct regs_usage regs = { RCX, RAX, R9, RDX };
         generate(regs);
     }
 
     if (forLinux)
     {
-        struct regs_usage regs =
-        {
-            RDI,
-            RAX,
-            R9,
-            RDX,
-            R8
-        };
-
+        struct regs_usage regs = { RDI, RAX, R9, RDX };
         generate(regs);
     }
 

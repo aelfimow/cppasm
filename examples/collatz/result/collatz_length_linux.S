@@ -11,12 +11,10 @@ start:
 # Compute (3n + 1) using LEA
 	lea 1(%rdi, %rdi, 2), %rdx
 # Compute (n / 2)
-	mov %rdi, %r8
-	shr $0x01, %r8
-	bt $0x00, %rdi
+	shr $0x01, %rdi
+# Overwrite value, if it was odd
 	cmovc %rdx, %rdi
-	cmovnc %r8, %rdi
-# Computation performed - count it
+# Computation step performed - count it
 	inc %rax
 	jmp start
 end:

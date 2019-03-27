@@ -12,7 +12,7 @@ struct regs_usage
     r64 &tmp_reg;
 };
 
-static void generate(struct regs_usage &regs)
+static void generate_collatz_length(struct regs_usage &regs)
 {
     const std::string func_name { "collatz_length" };
     comment("size_t " + func_name + "(size_t value)");
@@ -61,6 +61,35 @@ static void generate(struct regs_usage &regs)
     RET();
 }
 
+static void generate_collatz_calc(struct regs_usage &regs)
+{
+    const std::string func_name { "collatz_calc" };
+    comment("size_t " + func_name + "(size_t value)");
+
+    comment("value is in " + regs.value_reg.name());
+
+    global(func_name);
+
+    section code { ".text" };
+    code.start();
+
+    label(func_name);
+
+    comment("Compute (3n + 1) using LEA");
+    m64 addr;
+    addr.base(regs.value_reg).index(regs.value_reg).scale(2).disp(1);
+    LEA(regs.result_reg, addr);
+
+    comment("Compute (n / 2)");
+    imm8 shift_value { 1 };
+    SHR(regs.value_reg, shift_value);
+
+    comment("Overwrite result, if value was odd");
+    CMOVNC(regs.result_reg, regs.value_reg);
+
+    RET();
+}
+
 int main(int argc, char *argv[])
 try
 {
@@ -84,13 +113,15 @@ try
     if (forWindows)
     {
         struct regs_usage regs = { RCX, RAX, R9, RDX };
-        generate(regs);
+        generate_collatz_length(regs);
+        generate_collatz_calc(regs);
     }
 
     if (forLinux)
     {
         struct regs_usage regs = { RDI, RAX, R9, RDX };
-        generate(regs);
+        generate_collatz_length(regs);
+        generate_collatz_calc(regs);
     }
 
     return EXIT_SUCCESS;

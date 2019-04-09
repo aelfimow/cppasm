@@ -85,3 +85,8 @@ examples/collatz/generate.exe
 examples/collatz/generate.o
 examples/collatz/collatz_length_windows.o
 examples/collatz/collatz_length_linux.o
+examples/div-arithm/example.exe
+examples/div-arithm/example.o
+examples/div-arithm/generate.exe
+examples/div-arithm/generate.o
+examples/div-arithm/div_arithm.o

@@ -3,10 +3,9 @@
 #include <cstdlib>
 #include <stdexcept>
 
-static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
+#include "div_arithm.h"
 
-struct div_param;
-extern "C" void div_arithm(struct div_param *p);
+static_assert(sizeof(size_t) == 8, "size_t expected to be 64 bit");
 
 int main(int argc, char *argv[])
 try

@@ -43,11 +43,13 @@ try
 
     dp.with_Z1(Z1).with_Z2(Z2).with_N(N);
 
-    std::cout << "Z1 = " << Z1 << std::endl;
-    std::cout << "Z2 = " << Z2 << std::endl;
-    std::cout << "N = " << N << std::endl;
-
     div_arithm(&dp);
+
+    if ((dp.div_result != 3) || (dp.mod_result != 1))
+    {
+        std::cerr << "Wrong result: " << dp.div_result << ", " << dp.mod_result << std::endl;
+        return EXIT_FAILURE;
+    }
 
     return EXIT_SUCCESS;
 }

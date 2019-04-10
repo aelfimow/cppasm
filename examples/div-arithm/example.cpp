@@ -15,33 +15,39 @@ try
 
     if (argc != 4)
     {
-        throw std::invalid_argument("Usage: example a b c");
+        throw std::invalid_argument("Usage: example Z1 Z2 N");
     }
 
-    size_t a = 0;
+    size_t Z1 = 0;
     {
         std::stringstream ss;
         ss << std::dec << argv[1];
-        ss >> a;
+        ss >> Z1;
     }
 
-    size_t b = 0;
+    size_t Z2 = 0;
     {
         std::stringstream ss;
         ss << std::dec << argv[2];
-        ss >> b;
+        ss >> Z2;
     }
 
-    size_t c = 0;
+    size_t N = 0;
     {
         std::stringstream ss;
         ss << std::dec << argv[3];
-        ss >> c;
+        ss >> N;
     }
 
-    std::cout << "a = " << a << std::endl;
-    std::cout << "b = " << b << std::endl;
-    std::cout << "c = " << c << std::endl;
+    div_param dp;
+
+    dp.with_Z1(Z1).with_Z2(Z2).with_N(N);
+
+    std::cout << "Z1 = " << Z1 << std::endl;
+    std::cout << "Z2 = " << Z2 << std::endl;
+    std::cout << "N = " << N << std::endl;
+
+    div_arithm(&dp);
 
     return EXIT_SUCCESS;
 }

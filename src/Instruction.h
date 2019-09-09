@@ -16,6 +16,7 @@ class Instruction
         explicit Instruction(const std::string &mnem, const std::string &op1, const std::string &op2, const std::string &op3, const std::string &op4);
 
         void suffix(const std::string sfx);
+        void suffix(const std::string_view sfx);
         void keep_args_sequence();
         void op_prefix(const std::string prefix);
 

@@ -2,6 +2,7 @@
     \brief Class representing Instruction.
 */
 #include <string>
+#include <string_view>
 #include "Instruction.h"
 
 Instruction::Instruction(const std::string &mnem) :
@@ -65,6 +66,11 @@ Instruction::Instruction(const std::string &mnem, const std::string &op1, const 
 }
 
 void Instruction::suffix(const std::string sfx)
+{
+    m_suffix = sfx;
+}
+
+void Instruction::suffix(const std::string_view sfx)
 {
     m_suffix = sfx;
 }

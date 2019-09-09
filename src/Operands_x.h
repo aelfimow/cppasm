@@ -67,7 +67,7 @@ template
 <
     class RegType1,
     class RegType2,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_reg_reg
 {
@@ -701,7 +701,7 @@ template
 <
     class RegType,
     class MemType,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_reg_mem
 {
@@ -772,7 +772,7 @@ template
 <
     class MemType,
     class RegType,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_mem_reg
 {
@@ -807,7 +807,7 @@ class Operands_mem_reg
 template
 <
     class MemType,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_mem
 {
@@ -842,7 +842,7 @@ class Operands_mem
 template
 <
     class MemType,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_mem_indirect
 {
@@ -879,7 +879,7 @@ template
 <
     class MemType,
     class ImmType,
-    const std::string &suffix
+    const std::string_view &suffix
 >
 class Operands_mem_imm
 {

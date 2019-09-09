@@ -7,26 +7,27 @@
 #define CPPASM_H
 
 #include <string>
+#include <string_view>
 
-extern const std::string no_suffix;
-extern const std::string suffix_bw;
-extern const std::string suffix_bl;
-extern const std::string suffix_bq;
-extern const std::string suffix_wl;
-extern const std::string suffix_wq;
-extern const std::string suffix_lq;
-extern const std::string suffix_m8;
-extern const std::string suffix_m16;
-extern const std::string suffix_m32;
-extern const std::string suffix_m64;
-extern const std::string suffix_m128;
-extern const std::string suffix_m256;
-extern const std::string suffix_m32fp;
-extern const std::string suffix_m64fp;
-extern const std::string suffix_m80fp;
-extern const std::string suffix_m16int;
-extern const std::string suffix_m32int;
-extern const std::string suffix_m64int;
+extern const std::string_view no_suffix;
+extern const std::string_view suffix_bw;
+extern const std::string_view suffix_bl;
+extern const std::string_view suffix_bq;
+extern const std::string_view suffix_wl;
+extern const std::string_view suffix_wq;
+extern const std::string_view suffix_lq;
+extern const std::string_view suffix_m8;
+extern const std::string_view suffix_m16;
+extern const std::string_view suffix_m32;
+extern const std::string_view suffix_m64;
+extern const std::string_view suffix_m128;
+extern const std::string_view suffix_m256;
+extern const std::string_view suffix_m32fp;
+extern const std::string_view suffix_m64fp;
+extern const std::string_view suffix_m80fp;
+extern const std::string_view suffix_m16int;
+extern const std::string_view suffix_m32int;
+extern const std::string_view suffix_m64int;
 
 #include "Instruction.h"
 #include "asmstream.h"

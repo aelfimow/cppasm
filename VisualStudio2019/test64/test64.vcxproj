@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E4E50CEF-F9B9-48FA-827A-0DD6787578A7}</ProjectGuid>
+    <RootNamespace>test64</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)\..\..\src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)\..\..\src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\asmstream.cpp" />
+    <ClCompile Include="..\..\src\cppasm.cpp" />
+    <ClCompile Include="..\..\src\Instruction.cpp" />
+    <ClCompile Include="..\..\src\keyword.cpp" />
+    <ClCompile Include="..\..\src\label.cpp" />
+    <ClCompile Include="..\..\src\section.cpp" />
+    <ClCompile Include="..\..\src\st.cpp" />
+    <ClCompile Include="..\..\src\streamdest_cout.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction1.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction10.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction12.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction16.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction2.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction26.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction3.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction36.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction4.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction5.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction6.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction7.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction8.cpp" />
+    <ClCompile Include="..\..\tests\test64\gen_Instruction9.cpp" />
+    <ClCompile Include="..\..\tests\test64\test64.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\asmstream.h" />
+    <ClInclude Include="..\..\src\cppasm.h" />
+    <ClInclude Include="..\..\src\imm.h" />
+    <ClInclude Include="..\..\src\Instruction.h" />
+    <ClInclude Include="..\..\src\Instruction10_Types.h" />
+    <ClInclude Include="..\..\src\Instruction12_Types.h" />
+    <ClInclude Include="..\..\src\Instruction16_Types.h" />
+    <ClInclude Include="..\..\src\Instruction1_Types.h" />
+    <ClInclude Include="..\..\src\Instruction26_Types.h" />
+    <ClInclude Include="..\..\src\Instruction2_Types.h" />
+    <ClInclude Include="..\..\src\Instruction36_Types.h" />
+    <ClInclude Include="..\..\src\Instruction3_Types.h" />
+    <ClInclude Include="..\..\src\Instruction4_Types.h" />
+    <ClInclude Include="..\..\src\Instruction5_Types.h" />
+    <ClInclude Include="..\..\src\Instruction6_Types.h" />
+    <ClInclude Include="..\..\src\Instruction7_Types.h" />
+    <ClInclude Include="..\..\src\Instruction8_Types.h" />
+    <ClInclude Include="..\..\src\Instruction9_Types.h" />
+    <ClInclude Include="..\..\src\Instruction_x.h" />
+    <ClInclude Include="..\..\src\keyword.h" />
+    <ClInclude Include="..\..\src\label.h" />
+    <ClInclude Include="..\..\src\m.h" />
+    <ClInclude Include="..\..\src\Operands_x.h" />
+    <ClInclude Include="..\..\src\reg.h" />
+    <ClInclude Include="..\..\src\section.h" />
+    <ClInclude Include="..\..\src\st.h" />
+    <ClInclude Include="..\..\src\streamdest.h" />
+    <ClInclude Include="..\..\src\streamdest_cout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\Makefile" />
+    <None Include="..\..\tests\test64\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

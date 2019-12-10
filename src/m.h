@@ -13,7 +13,7 @@ class m
 {
     public:
         m() { }
-        virtual ~m() { }
+        virtual ~m() = default;
 
         virtual std::string to_str() const = 0;
 
@@ -78,7 +78,7 @@ class m_template : public m
             m_scale = ss.str();
         }
 
-        ~m_template() { }
+        ~m_template() = default;
 
         std::string to_str() const override
         {

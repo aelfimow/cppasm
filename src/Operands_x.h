@@ -21,7 +21,7 @@ class Operands_none
             m_asmout << instr;
         }
 
-        virtual ~Operands_none() { }
+        virtual ~Operands_none() = default;
 
     private:
         asmstream &m_asmout;
@@ -49,7 +49,7 @@ class Operands_prefix
             m_asmout.prefix(m_mnem);
         }
 
-        virtual ~Operands_prefix() { }
+        virtual ~Operands_prefix() = default;
 
     private:
         asmstream &m_asmout;
@@ -85,7 +85,7 @@ class Operands_reg_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg() { }
+        virtual ~Operands_reg_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -120,7 +120,7 @@ class Operands_reg_reg_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_reg() { }
+        virtual ~Operands_reg_reg_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -156,7 +156,7 @@ class Operands_reg_reg_reg2
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_reg2() { }
+        virtual ~Operands_reg_reg_reg2() = default;
 
     private:
         asmstream &m_asmout;
@@ -192,7 +192,7 @@ class Operands_reg_reg_reg_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_reg_reg() { }
+        virtual ~Operands_reg_reg_reg_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -228,7 +228,7 @@ class Operands_reg_reg_reg_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_reg_imm() { }
+        virtual ~Operands_reg_reg_reg_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -263,7 +263,7 @@ class Operands_reg_reg_mem
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_mem() { }
+        virtual ~Operands_reg_reg_mem() = default;
 
     private:
         asmstream &m_asmout;
@@ -299,7 +299,7 @@ class Operands_reg_reg_mem_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_mem_reg() { }
+        virtual ~Operands_reg_reg_mem_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -335,7 +335,7 @@ class Operands_reg_reg_mem_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_mem_imm() { }
+        virtual ~Operands_reg_reg_mem_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -370,7 +370,7 @@ class Operands_reg_reg_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_reg_imm() { }
+        virtual ~Operands_reg_reg_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -405,7 +405,7 @@ class Operands_mem_reg_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_reg_imm() { }
+        virtual ~Operands_mem_reg_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -440,7 +440,7 @@ class Operands_mem_reg_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_reg_reg() { }
+        virtual ~Operands_mem_reg_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -473,7 +473,7 @@ class Operands_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_imm() { }
+        virtual ~Operands_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -507,7 +507,7 @@ class Operands_imm_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_imm_reg() { }
+        virtual ~Operands_imm_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -543,7 +543,7 @@ class Operands_imm_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_imm_imm() { }
+        virtual ~Operands_imm_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -577,7 +577,7 @@ class Operands_reg_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_imm() { }
+        virtual ~Operands_reg_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -612,7 +612,7 @@ class Operands_reg_mem_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_mem_reg() { }
+        virtual ~Operands_reg_mem_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -648,7 +648,7 @@ class Operands_reg_mem_reg2
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_mem_reg2() { }
+        virtual ~Operands_reg_mem_reg2() = default;
 
     private:
         asmstream &m_asmout;
@@ -683,7 +683,7 @@ class Operands_reg_mem_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_mem_imm() { }
+        virtual ~Operands_reg_mem_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -719,7 +719,7 @@ class Operands_reg_mem
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_mem() { }
+        virtual ~Operands_reg_mem() = default;
 
     private:
         asmstream &m_asmout;
@@ -754,7 +754,7 @@ class Operands_reg_mem2
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_mem2() { }
+        virtual ~Operands_reg_mem2() = default;
 
     private:
         asmstream &m_asmout;
@@ -790,7 +790,7 @@ class Operands_mem_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_reg() { }
+        virtual ~Operands_mem_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -825,7 +825,7 @@ class Operands_mem
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem() { }
+        virtual ~Operands_mem() = default;
 
     private:
         asmstream &m_asmout;
@@ -861,7 +861,7 @@ class Operands_mem_indirect
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_indirect() { }
+        virtual ~Operands_mem_indirect() = default;
 
     private:
         asmstream &m_asmout;
@@ -897,7 +897,7 @@ class Operands_mem_imm
             m_asmout << instr;
         }
 
-        virtual ~Operands_mem_imm() { }
+        virtual ~Operands_mem_imm() = default;
 
     private:
         asmstream &m_asmout;
@@ -930,7 +930,7 @@ class Operands_reg
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg() { }
+        virtual ~Operands_reg() = default;
 
     private:
         asmstream &m_asmout;
@@ -964,7 +964,7 @@ class Operands_reg_indirect
             m_asmout << instr;
         }
 
-        virtual ~Operands_reg_indirect() { }
+        virtual ~Operands_reg_indirect() = default;
 
     private:
         asmstream &m_asmout;
@@ -993,7 +993,7 @@ class Operands_string
             m_asmout << instr;
         }
 
-        virtual ~Operands_string() { }
+        virtual ~Operands_string() = default;
 
     private:
         asmstream &m_asmout;
@@ -1023,7 +1023,7 @@ class Operands_string_indirect
             m_asmout << instr;
         }
 
-        virtual ~Operands_string_indirect() { }
+        virtual ~Operands_string_indirect() = default;
 
     private:
         asmstream &m_asmout;

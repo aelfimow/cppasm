@@ -10,8 +10,8 @@
 class streamdest
 {
     public:
-        streamdest() { }
-        virtual ~streamdest() { }
+        streamdest() = default;
+        virtual ~streamdest() = default;
 
         virtual void space() = 0;
         virtual void indent() = 0;

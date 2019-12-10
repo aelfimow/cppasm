@@ -23,9 +23,7 @@ class imm
         {
         }
 
-        ~imm()
-        {
-        }
+        ~imm() = default;
 
         std::string to_str() const
         {

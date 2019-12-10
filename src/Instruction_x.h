@@ -21,7 +21,7 @@ class Instruction_x:
         {
         }
 
-        ~Instruction_x() { }
+        ~Instruction_x() = default;
 
         using OperandOps::operator() ...;
 };
@@ -429,7 +429,7 @@ class Instruction_1 :
         {
         }
 
-        ~Instruction_1() { }
+        ~Instruction_1() = default;
 
         using Op1::operator();
 };
@@ -450,7 +450,7 @@ class Instruction_2 :
         {
         }
 
-        ~Instruction_2() { }
+        ~Instruction_2() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -475,7 +475,7 @@ class Instruction_3 :
         {
         }
 
-        ~Instruction_3() { }
+        ~Instruction_3() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -504,7 +504,7 @@ class Instruction_4 :
         {
         }
 
-        ~Instruction_4() { }
+        ~Instruction_4() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -537,7 +537,7 @@ class Instruction_5 :
         {
         }
 
-        ~Instruction_5() { }
+        ~Instruction_5() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -574,7 +574,7 @@ class Instruction_6 :
         {
         }
 
-        ~Instruction_6() { }
+        ~Instruction_6() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -615,7 +615,7 @@ class Instruction_7 :
         {
         }
 
-        ~Instruction_7() { }
+        ~Instruction_7() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -660,7 +660,7 @@ class Instruction_8 :
         {
         }
 
-        ~Instruction_8() { }
+        ~Instruction_8() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -709,7 +709,7 @@ class Instruction_9 :
         {
         }
 
-        ~Instruction_9() { }
+        ~Instruction_9() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -762,7 +762,7 @@ class Instruction_10 :
         {
         }
 
-        ~Instruction_10() { }
+        ~Instruction_10() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -822,7 +822,7 @@ class Instruction_12 :
         {
         }
 
-        ~Instruction_12() { }
+        ~Instruction_12() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -896,7 +896,7 @@ class Instruction_16 :
         {
         }
 
-        ~Instruction_16() { }
+        ~Instruction_16() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -1004,7 +1004,7 @@ class Instruction_26 :
         {
         }
 
-        ~Instruction_26() { }
+        ~Instruction_26() = default;
 
         using Op1::operator();
         using Op2::operator();
@@ -1152,7 +1152,7 @@ class Instruction_36 :
         {
         }
 
-        ~Instruction_36() { }
+        ~Instruction_36() = default;
 
         using Op1::operator();
         using Op2::operator();

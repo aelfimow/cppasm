@@ -22,7 +22,7 @@ class reg
 {
     public:
         reg() { }
-        virtual ~reg() { }
+        virtual ~reg() = default;
 
         virtual std::string name() const = 0;
 };
@@ -159,7 +159,7 @@ class reg_template : public reg
         {
         }
 
-        ~reg_template() { }
+        ~reg_template() = default;
 
         std::string name() const override
         {

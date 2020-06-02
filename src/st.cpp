@@ -28,6 +28,11 @@ st::st() :
     ST7.set(7);
 }
 
+st::st(std::string const &name) :
+    m_name { name }
+{
+}
+
 void st::set(size_t i)
 {
     std::ostringstream ss;

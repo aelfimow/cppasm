@@ -10,6 +10,7 @@ class st: public reg
 {
     public:
         st();
+        st(std::string const &name);
         ~st();
 
         st &operator()(size_t i);

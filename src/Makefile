@@ -18,7 +18,6 @@ FILES = $(wildcard *.cpp)
 .PHONY: s
 
 all: a c i k l s
-	@echo No errors
 
 a:
 	${CXX} -c asmstream.cpp -o ${OBJDIR}/asmstream.o ${CXXFLAGS}

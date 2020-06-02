@@ -2,7 +2,7 @@
     \brief Class representing FPU's ST register.
 */
 #include <string>
-#include <sstream>
+#include <map>
 #include "reg.h"
 #include "st.h"
 
@@ -31,47 +31,26 @@ st::~st()
 
 st &st::operator()(size_t i)
 {
-    if (i > 7)
+    static std::map<size_t, st&> const st_regs
+    {
+        { 0, ST0 },
+        { 1, ST1 },
+        { 2, ST2 },
+        { 3, ST3 },
+        { 4, ST4 },
+        { 5, ST5 },
+        { 6, ST6 },
+        { 7, ST7 }
+    };
+
+    auto it = st_regs.find(i);
+
+    if (it == st_regs.end())
     {
         throw std::invalid_argument("Invalid ST register index");
     }
 
-    if (i == 0)
-    {
-        return ST0;
-    }
-
-    if (i == 1)
-    {
-        return ST1;
-    }
-
-    if (i == 2)
-    {
-        return ST2;
-    }
-
-    if (i == 3)
-    {
-        return ST3;
-    }
-
-    if (i == 4)
-    {
-        return ST4;
-    }
-
-    if (i == 5)
-    {
-        return ST5;
-    }
-
-    if (i == 6)
-    {
-        return ST6;
-    }
-
-    return ST7;
+    return it->second;
 }
 
 std::string st::name() const

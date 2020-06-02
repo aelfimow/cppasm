@@ -6,40 +6,23 @@
 #include "reg.h"
 #include "st.h"
 
-static st ST0;
-static st ST1;
-static st ST2;
-static st ST3;
-static st ST4;
-static st ST5;
-static st ST6;
-static st ST7;
+static st ST0 { "%st(0)" };
+static st ST1 { "%st(1)" };
+static st ST2 { "%st(2)" };
+static st ST3 { "%st(3)" };
+static st ST4 { "%st(4)" };
+static st ST5 { "%st(5)" };
+static st ST6 { "%st(6)" };
+static st ST7 { "%st(7)" };
 
 st::st() :
     m_name { "%st(0)" }
 {
-    ST0.set(0);
-    ST1.set(1);
-    ST2.set(2);
-    ST3.set(3);
-    ST4.set(4);
-    ST5.set(5);
-    ST6.set(6);
-    ST7.set(7);
 }
 
 st::st(std::string const &name) :
     m_name { name }
 {
-}
-
-void st::set(size_t i)
-{
-    std::ostringstream ss;
-
-    ss << "%st(" << i << ")";
-
-    m_name = ss.str();
 }
 
 st::~st()

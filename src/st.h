@@ -18,9 +18,7 @@ class st: public reg
         std::string name() const override;
 
     private:
-        void set(size_t i);
-
-        std::string m_name;
+        std::string const m_name;
 
     public:
         st(const st &instance) = default;

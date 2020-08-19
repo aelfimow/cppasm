@@ -32,7 +32,7 @@ link_windows:
 	${CXX} generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate_windows:
-	generate.exe windows > result/xorshift_func_windows.S
+	./generate.exe windows > result/xorshift_func_windows.S
 
 asm_windows:
 	${AS} result/xorshift_func_windows.S ${ASFLAGS64} -o xorshift_func_windows.o
@@ -41,4 +41,4 @@ link_example_windows:
 	${CXX} example.o xorshift_func_windows.o -o example.exe ${CXXFLAGS}
 
 run_example_windows:
-	example.exe
+	./example.exe

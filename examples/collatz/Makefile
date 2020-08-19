@@ -28,8 +28,8 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe windows > result/collatz_length_windows.S
-	generate.exe linux > result/collatz_length_linux.S
+	./generate.exe windows > result/collatz_length_windows.S
+	./generate.exe linux > result/collatz_length_linux.S
 
 check:
 	$(AS) result/collatz_length_windows.S ${ASFLAGS64} -o collatz_length_windows.o
@@ -38,4 +38,4 @@ link_example:
 	$(CXX) example.o collatz_length_windows.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	./example.exe

@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/rc4func.S
+	./generate.exe > result/rc4func.S
 
 check:
 	$(AS) result/rc4func.S ${ASFLAGS64} -o rc4func.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o rc4func.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe 1 2
+	./example.exe 1 2

@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/rdtsc_func.S
+	./generate.exe > result/rdtsc_func.S
 
 check:
 	$(AS) result/rdtsc_func.S ${ASFLAGS64} -o rdtsc_func.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o rdtsc_func.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	./example.exe

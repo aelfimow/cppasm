@@ -28,7 +28,7 @@ link:
 	${CXX} generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe windows > result/thousand_nops_windows.S
+	./generate.exe windows > result/thousand_nops_windows.S
 
 asm:
 	${AS} result/thousand_nops_windows.S ${ASFLAGS64} -o thousand_nops_windows.o
@@ -37,4 +37,4 @@ link_example:
 	${CXX} example.o thousand_nops_windows.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	./example.exe

@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/macheps.S
+	./generate.exe > result/macheps.S
 
 check:
 	$(AS) result/macheps.S ${ASFLAGS64} -o macheps.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o macheps.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	./example.exe

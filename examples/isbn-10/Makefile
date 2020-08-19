@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/isbn-10.S
+	./generate.exe > result/isbn-10.S
 
 check:
 	$(AS) result/isbn-10.S ${ASFLAGS64} -o isbn-10.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o isbn-10.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe
+	./example.exe

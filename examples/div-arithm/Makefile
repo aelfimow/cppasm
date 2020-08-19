@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/div_arithm.S
+	./generate.exe > result/div_arithm.S
 
 check:
 	$(AS) result/div_arithm.S ${ASFLAGS64} -o div_arithm.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o div_arithm.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe 10 0 3
+	./example.exe 10 0 3

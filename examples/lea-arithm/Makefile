@@ -28,7 +28,7 @@ link:
 	$(CXX) generate.o ${CPPASM_OBJ} -o generate.exe ${CXXFLAGS}
 
 generate:
-	generate.exe > result/lea_arithm.S
+	./generate.exe > result/lea_arithm.S
 
 check:
 	$(AS) result/lea_arithm.S ${ASFLAGS64} -o lea_arithm.o
@@ -37,4 +37,4 @@ link_example:
 	$(CXX) example.o lea_arithm.o -o example.exe ${CXXFLAGS}
 
 run_example:
-	example.exe 1 2
+	./example.exe 1 2

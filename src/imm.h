@@ -19,7 +19,8 @@ class imm
 {
     public:
         explicit imm(T value) :
-            m_value { value }
+            m_value { value },
+            m_hex { true }
         {
         }
 
@@ -29,7 +30,14 @@ class imm
         {
             std::ostringstream ss;
 
-            ss << "$0x" << std::setfill('0') << std::setw(total_chars) << std::hex << std::uppercase;
+            if (m_hex)
+            {
+                ss << "$0x" << std::setfill('0') << std::setw(total_chars) << std::hex << std::uppercase;
+            }
+            else
+            {
+                ss << "$" << std::dec;
+            }
 
             if (sizeof(T) == sizeof(uint8_t))
             {
@@ -45,6 +53,7 @@ class imm
 
     private:
         const T m_value;
+        bool m_hex;
 
     public:
         imm() = delete;

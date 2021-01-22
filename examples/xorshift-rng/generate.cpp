@@ -328,8 +328,13 @@ static void gen_XorshiftFunc(const xorshift_triple &triple, r64 &arg_reg)
     label(func_name);
 
     imm8 steps1 { triple.steps1 };
+    steps1.dec();
+
     imm8 steps2 { triple.steps2 };
+    steps2.dec();
+
     imm8 steps3 { triple.steps3 };
+    steps3.dec();
 
     // 1st shift step
     MOV(ret_reg, arg_reg);

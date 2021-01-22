@@ -26,6 +26,16 @@ class imm
 
         ~imm() = default;
 
+        void dec()
+        {
+            m_hex = false;
+        }
+
+        void hex()
+        {
+            m_hex = true;
+        }
+
         std::string to_str() const
         {
             std::ostringstream ss;

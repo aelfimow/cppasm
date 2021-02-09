@@ -109,7 +109,7 @@ std::string Instruction::to_str() const
     if (0 != m_op3.length())
     {
         const std::string &op1 = m_keep_args_sequence ? m_op1 : m_op3;
-        const std::string &op2 = m_keep_args_sequence ? m_op2 : m_op2;
+        const std::string &op2 = m_op2;
         const std::string &op3 = m_keep_args_sequence ? m_op3 : m_op1;
 
         const std::string str { mnem + " " + op1 + ", " + op2 + ", " + op3 };

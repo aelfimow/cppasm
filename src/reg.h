@@ -136,7 +136,7 @@ template
     enum RegisterType reg_type,
     int bit_width
 >
-class reg_template : public reg
+class reg_template final: public reg
 {
     public:
         using reg_template_type = reg_template<reg_type, bit_width>;

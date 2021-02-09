@@ -4,7 +4,7 @@ CXXFLAGS += -Wextra
 CXXFLAGS += -pedantic
 CXXFLAGS += -Weffc++
 CXXFLAGS += -std=c++17
-#CXXFLAGS += -Werror
+CXXFLAGS += -Werror
 CXXFLAGS += --all-warnings
 CXXFLAGS += --extra-warnings
 CXXFLAGS += -W

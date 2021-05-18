@@ -43,4 +43,4 @@ link:
 
 .PHONY: generate
 generate:
-	test32.exe > ${OUTDIR}/test32.S
+	./test32.exe > ${OUTDIR}/test32.S

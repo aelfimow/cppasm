@@ -862,16 +862,12 @@ Instruction1_Type4_Label:
 # gen_Instruction3
 	lfs (%rax), %ax
 	lfs (%rax), %eax
-	lfs (%rax), %rax
 	lgs (%rax), %ax
 	lgs (%rax), %eax
-	lgs (%rax), %rax
 	lss (%rax), %ax
 	lss (%rax), %eax
-	lss (%rax), %rax
 	lea (%rax), %ax
 	lea (%rax), %eax
-	lea (%rax), %rax
 	rdrand %ax
 	rdrand %eax
 	rdrand %rax

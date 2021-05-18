@@ -5,7 +5,6 @@ static void gen_Instruction3_Type1(Instruction3_Type1 &instr)
     m64 addr { RAX };
     instr(AX, addr);
     instr(EAX, addr);
-    instr(RAX, addr);
 }
 
 static void gen_Instruction3_Type2(Instruction3_Type2 &instr)
